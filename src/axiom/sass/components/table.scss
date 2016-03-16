@@ -1,0 +1,90 @@
+@import '../core/mixins';
+@import './_vars/icon';
+@import './_mixins/icon';
+@import './_mixins/scheme';
+
+/**
+ * Standard table
+ */
+.ax-table {
+  width: 100%;
+  text-align: left;
+
+  th,
+  td {
+    padding: $component-padding-v-base $component-padding-h-sm;
+    vertical-align: middle;
+    font-weight: normal;
+  }
+
+  th {
+    font-size: $font-size-md;
+    font-weight: $font-weight-strong;
+  }
+}
+
+
+/**
+ * Stripy rows
+ */
+.ax-table--striped {
+  @include forEachScheme {
+    tbody {
+      tr {
+        &:nth-child(odd)  { background-color: schemeProp(table-row-odd-color); }
+        &:nth-child(even) { background-color: schemeProp(table-row-even-color); }
+      }
+    }
+  }
+}
+
+
+/**
+ * Borders
+ */
+@include forEachScheme {
+  .ax-table--borders,
+  .ax-table--borders--v {
+    th:not(:first-child),
+    td:not(:first-child) {
+      border-left: $component-border-width-base solid schemeProp(table-border-color);
+    }
+  }
+}
+
+@include forEachScheme {
+  .ax-table--borders,
+  .ax-table--borders--h {
+   tr {
+      border-bottom: $component-border-width-base solid schemeProp(table-border-color);
+    }
+  }
+}
+
+
+/**
+ * Cell alignment depending on format
+ */
+.ax-table__cell--number {
+  text-align: right;
+  white-space: nowrap;
+}
+
+
+/**
+ * Sorting
+ */
+.ax-table--sortable {
+  .ax-table__sort--asc,
+  .ax-table__sort--desc {
+    cursor: pointer;
+    white-space: nowrap;
+
+    &::after {
+      margin: 0 0 0 $component-padding-h-sm;
+    }
+  }
+
+  .ax-table__sort--asc::after  { @include icon($fa-var-sort-asc); }
+  .ax-table__sort--desc::after { @include icon($fa-var-sort-desc); }
+}

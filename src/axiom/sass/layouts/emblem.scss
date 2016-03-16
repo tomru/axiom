@@ -1,0 +1,94 @@
+@import '../core/mixins';
+@import '../components/_mixins/scheme';
+@import './_mixins';
+
+$logo-aspect-ratio:     0.9;
+$logo-height:           120px;
+$logo-width:            $logo-height * $logo-aspect-ratio;
+
+
+@include forLayout(layout-emblem) {
+  .ax-layout__body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .ax-layout__container,
+  .ax-layout {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .ax-layout__header {
+    display: flex;
+    flex-direction: column;
+    min-height: $logo-height;
+
+    @include blockSpace($page-padding-v);
+  }
+
+  .ax-layout__nav-container {
+    @include forEachScheme {
+      background-color: layoutProp(header-background-color);
+      color: schemeText(layoutProp(header-background-color));
+    }
+  }
+
+  .ax-layout__nav {
+    padding: $component-padding-v-base 0;
+  }
+
+  .ax-layout__title-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: $container-padding-v-sm 0;
+  }
+
+
+  .ax-layout__nav,
+  .ax-layout__title {
+    margin: 0 0 0 $logo-width + $page-padding-h;
+  }
+
+  .ax-layout__main {
+    flex: 1;
+  }
+
+  .ax-layout__footer {
+    padding: $container-padding-v-base $container-padding-h-base;
+    text-align: center;
+
+    @include blockSpace($page-padding-v);
+    @include forEachScheme {
+      background-color: layoutProp(footer-background-color);
+      color: schemeTextColor(layoutProp(footer-background-color));
+    }
+  }
+
+  .ax-layout__logo {
+    position: absolute;
+    top: 0;
+    width: $logo-width;
+    height: $logo-height;
+
+    @include forEachScheme {
+      background-color: layoutProp(logo-background-color);
+      color: schemeTextColor(layoutProp(logo-background-color));
+    }
+  }
+
+  .ax-layout__content {
+    margin: 0 auto;
+    padding: 0 $page-padding-h;
+    width: 100%;
+
+    @include forEachBreakpoint {
+      @include screenMoreThan {
+        max-width: breakpointProp(width);
+      }
+    }
+  }
+}

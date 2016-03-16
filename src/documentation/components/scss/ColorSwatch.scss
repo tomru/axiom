@@ -1,0 +1,41 @@
+@import "~axiom/sass/core/mixins";
+@import "~axiom/sass/components/_mixins/scheme";
+
+.dm-color-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: $component-padding-v-base $component-padding-h-base;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:first-child { border-radius: $border-radius-base $border-radius-base 0 0; }
+  &:last-child  { border-radius: 0 0 $border-radius-base $border-radius-base; }
+}
+
+.dm-color-box--base {
+  padding: $component-padding-v-lg $component-padding-h-base;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.dm-color-box--accent {
+  margin: $component-margin-v-sm 0 0;
+}
+
+.dm-color-box--base__stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+@include forEachColor {
+  @each $variation, $hex in colorProp(color) {
+    .dm-color--#{colorProp(name)}--#{$variation} {
+      @include forEachScheme {
+        background-color: $hex;
+        color: schemeTextColor($hex);
+      }
+    }
+  }
+}

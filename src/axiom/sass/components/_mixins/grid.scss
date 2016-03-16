@@ -1,0 +1,103 @@
+@import '../../core/mixins';
+
+/// Default grid gutter
+/// @returns {Number}
+@function gridGutterDefault() {
+  @each $grid-gutter in $grid-gutters {
+    @if (map-get($grid-gutter, default) == true) {
+      @return map-get($grid-gutter, size);
+    }
+  }
+}
+
+
+/// Grid gutter ID
+/// @param {Map} $grid-gutter
+/// @returns {String}
+@function gridGutterId($grid-gutter) {
+  @return map-get($grid-gutter, id);
+}
+
+
+/// Grid gutter size
+/// @param {Map} $grid-gutter
+/// @returns {Number}
+@function gridGutterWidth($grid-gutter) {
+  @return map-get($grid-gutter, size);
+}
+
+
+/// Creates the gutters sizing variants.
+@mixin gridGutter($size) {
+  $vertical-gutter: gridGutterDefault();
+  $horizontal-gutter: $size;
+
+  margin: $vertical-gutter 0 (-$vertical-gutter) (-$horizontal-gutter);
+
+  > .ax-grid__cell {
+    padding: 0 0 $vertical-gutter $horizontal-gutter;
+  }
+
+  &[class^="grid-full"],
+  &[class*=" grid-full"] {
+    > .ax-grid__cell {
+      padding-bottom: $vertical-gutter;
+    }
+  }
+
+  @include screenLessThan(breakpointProp(width, firstBreakpoint())) {
+    &:not(.ax-grid--gutters-none),
+    &:not(.ax-grid--gutters-none-v) {
+      > .grid-cell {
+        padding-bottom: $vertical-gutter;
+      }
+    }
+  }
+}
+
+
+/// Create the responsive grid
+@mixin makeResponsiveGrid($responsive) {
+  $breakpoint-id: false;
+  $breakpoint-width: false;
+  $size-class: "";
+
+  @if ($responsive == true) {
+    $breakpoint-id: breakpointProp(id);
+    $breakpoint-width: breakpointProp(width);
+    $size-class: "--#{$breakpoint-id}";
+  }
+
+  @include gridBreakpoint($breakpoint-width) {
+    .ax-grid {
+      > .ax-grid__cell--sixth#{$size-class}   { flex: 0 0 (100% / 6); }
+      > .ax-grid__cell--fifth#{$size-class}   { flex: 0 0 (100% / 5); }
+      > .ax-grid__cell--quarter#{$size-class} { flex: 0 0 (100% / 4); }
+      > .ax-grid__cell--third#{$size-class}   { flex: 0 0 (100% / 3); }
+      > .ax-grid__cell--half#{$size-class}    { flex: 0 0 (100% / 2); }
+      > .ax-grid__cell--fit#{$size-class}     { flex: 1; }
+      > .ax-grid__cell--full#{$size-class}    { flex: 0 0 100%; }
+      > .ax-grid__cell--shrink#{$size-class}  { flex: 0 1 auto; }
+
+      &.ax-grid--fit#{$size-class} > .ax-grid__cell {
+        flex: 1;
+      }
+
+      &.ax-grid--full#{$size-class} > .ax-grid__cell {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}
+
+/// Simple mixin to breakpoint for anything
+/// below the highest breakpoint.
+@mixin gridBreakpoint($width) {
+  @if ($width == false) {
+    @content;
+  } @else {
+    @include screenMoreThan($width) {
+      @content;
+    }
+  }
+}

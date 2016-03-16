@@ -1,0 +1,11 @@
+@mixin overlay($opacity: 0.5, $color: map-get($color-black, _)) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($color, $opacity);
+  }
+}

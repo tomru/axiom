@@ -1,0 +1,26 @@
+@import '../core/mixins';
+@import './_mixins/scheme';
+
+.ax-jumbotron--spaced {
+  padding: $container-padding-v-lg 0;
+}
+
+.ax-jumbotron--image {
+  background-size: cover;
+}
+
+.ax-jumbotron--overlay {
+  position: relative;
+  @include overlay();
+}
+
+@include forEachColor {
+  @each $variation, $hex in colorProp(color) {
+    .ax-jumbotron--#{colorProp(name)}--#{$variation} {
+      @include forEachScheme {
+        background-color: $hex;
+        color: schemeTextColor($hex);
+      }
+    }
+  }
+}

@@ -1,0 +1,248 @@
+@import '../core/mixins';
+@import './_mixins/scheme';
+@import './_mixins/typography';
+
+html,
+body {
+  font-family: $font-family-body;
+  font-size: $font-size-base;
+  line-height: $line-height;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: $line-height-dyn;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol {
+  &:first-child { margin-top: 0; }
+  &:last-child  { margin-bottom: 0; }
+
+  //
+  &.ax-text--no-space {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+h1 { @include heading(h1) }
+h2 { @include heading(h2) }
+h3 { @include heading(h3) }
+h4 { @include heading(h4) }
+h5 { @include heading(h5) }
+
+h1 {
+  margin: $spacing-base 0 $spacing-base;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  margin: $spacing-base 0 $spacing-sm;
+}
+
+ul,
+ol,
+p {
+  margin: $spacing-base 0;
+}
+
+
+// Misc
+blockquote {
+  margin: $spacing-xl;
+}
+
+strong {
+  font-weight: $font-weight-strong;
+}
+
+.ax-text--weak {
+  font-weight: $font-weight-weak;
+}
+
+small {
+  // font-size: floor((100% * $font-size-sm / $font-size-base));
+}
+
+
+// Links
+a {
+  color: inherit;
+  position: relative;
+  font-style: inherit;
+  text-decoration: inherit;
+
+  &:hover {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: pointer;
+  }
+}
+
+
+a.ax-link {
+  // Color links but this will need to be
+  // suppressed for things like menu.
+  @include forEachScheme() {
+    &:not(.ax-link--inherit-color) {
+      color: getColor(schemeProp(primary));
+
+      &:hover {
+        color: getColor(schemeProp(primary), 600);
+      }
+    }
+  }
+
+  // Underline for main links but this will need to be
+  // suppressed for things like menu links and icons.
+  &:not(.ax-link--no-decoration) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// Alignment Modifiers
+@mixin textAlign($align) {
+  .ax-text--#{$align} {
+    text-align: $align;
+  }
+
+  @include forEachBreakpoint() {
+    @include screenLessThan() {
+      .ax-text--#{$align}-#{breakpointProp(id)} {
+        text-align: $align;
+      }
+    }
+  }
+}
+
+@include textAlign(left);
+@include textAlign(center);
+@include textAlign(right);
+
+
+// Case Modifiers
+.ax-text--uppercase   { text-transform: uppercase; }
+.ax-text--capitalize  { text-transform: capitalize; }
+.ax-text--lowercase   { text-transform: lowercase; }
+
+
+// Breaking
+.ax-text--break-none { white-space: nowrap; }
+.ax-text--break-all  { white-space: initial; word-break: break-all; }
+.ax-text--break-word { white-space: initial; word-wrap: break-word; }
+
+
+//
+.ax-text--ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+// List styling
+ul,
+ol {
+  @include blockSpace();
+  padding: 0;
+
+  > li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+ul.ax-list--aligned,
+ol.ax-list--aligned {
+  &,
+  & > ul,
+  & > ol {
+    display: table;
+
+    > li {
+      display: table-row;
+
+      &::before {
+        display: table-cell;
+        padding-right: $spacing-base;
+        text-align: right;
+      }
+    }
+  }
+}
+
+ul.ax-list--aligned {
+  > li {
+    &::before {
+      content: "\2022";
+    }
+  }
+
+  ul {
+    margin: 0;
+  }
+}
+
+ol.ax-list--aligned {
+  counter-reset: list;
+
+  > li {
+    counter-increment: list;
+
+    &::before {
+      content: counter(list) ".";
+    }
+  }
+}
+
+
+ul.ax-list--inline,
+ol.ax-list--inline {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--start  { justify-content: flex-start; }
+  &--center { justify-content: center; }
+  &--end    { justify-content: flex-end; }
+
+  > li {
+    padding: 0 $spacing-sm 0 0;
+
+    &::after {
+      margin: 0 0 0 $spacing-sm;
+      content: "|";
+    }
+
+    &:last-child, {
+      padding-right: 0;
+
+      &::after {
+        margin-left: 0;
+        content: "";
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import '../core/mixins';
+
+.ax-tabs {
+  @include blockSpace();
+}
+
+.ax-tabs__nav {
+  display: flex;
+  margin: 0;
+  overflow: auto;
+}
+
+.ax-tabs__nav-item {
+  margin: 0 $component-margin-h-base 0 0;
+  white-space: nowrap;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.ax-tabs__nav-link {
+  display: flex;
+  padding: $component-padding-v-base $component-padding-h-base;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  border-bottom: $component-border-width-lg solid transparent;
+  font-size: $font-size-md;
+  font-weight: $font-weight-strong;
+  text-transform: uppercase;
+
+  @include transition((border-bottom-color));
+
+  .ax-tabs__nav-item--active & {
+    @include forEachScheme {
+      border-bottom-color: getAccentColor(schemeProp(accent));
+    }
+  }
+}
+
+.ax-tabs__content {
+  padding: $component-padding-v-base 0 0;
+}

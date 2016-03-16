@@ -1,0 +1,34 @@
+@import '../core/mixins';
+@import './_mixins/scheme';
+@import './_mixins/typography';
+
+$card-padding-v: $container-padding-v-base;
+$card-padding-h: $container-padding-h-base;
+$card-border: $component-border-width-base solid transparent;
+
+/**
+ * Standard card styling
+ */
+.ax-card {
+  @include blockSpace($container-margin-v-base);
+
+  &:not(.ax-card--transparent) {
+    @include forEachScheme() {
+      color: schemeTextColor(schemeProp(card-color));
+      background-color: schemeProp(card-color);
+
+      @if schemeHasProp(card-border) {
+        box-shadow: schemeProp(card-border);
+        border-radius: $border-radius-base;
+      }
+    }
+  }
+}
+
+.ax-card__title {
+  padding: $card-padding-v $card-padding-h 0;
+}
+
+.ax-card__content {
+  padding: $card-padding-v $card-padding-h;
+}

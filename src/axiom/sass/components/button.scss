@@ -1,0 +1,142 @@
+@import '../core/mixins';
+@import './_mixins/scheme';
+
+/**
+ * Standard button styling
+ */
+button {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  background: none;
+  border: none;
+}
+
+.ax-button {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-width: $component-border-width-base;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: $border-radius-base;
+  background-color: transparent;
+  font-weight: $font-weight-strong;
+  text-align: center;
+  cursor: pointer;
+
+  @include inlineBlockSpace($component-margin-h-sm);
+  @include transition(( background-color, border-color, color ), $transition-time-fast);
+}
+
+
+/**
+ * Size buttons
+ */
+.ax-button {
+  padding: $component-padding-v-sm $component-padding-h-sm;
+  font-size: $font-size-md;
+}
+
+.ax-button--sm {
+  padding: 0 $component-padding-h-sm;
+  font-size: $font-size-sm;
+}
+
+.ax-button--lg {
+  padding: $component-padding-v-base $component-padding-h-base;
+  font-size: $font-size-base;
+}
+
+/**
+ * Full width buttons
+ */
+@mixin fullWidthButton {
+  display: block;
+  width: 100%;
+  @include blockSpace($component-margin-v-sm);
+}
+
+.ax-button--full {
+  @include fullWidthButton;
+}
+
+@include forEachBreakpoint {
+  @include screenLessThan {
+    .ax-button--full--#{breakpointProp(id)} {
+      @include fullWidthButton;
+    }
+  }
+}
+
+
+/**
+ * Button Colours
+ */
+@mixin buttonColor($color) {
+  border-color: getColor($color, 500);
+  background-color: getColor($color, 400);
+  color: schemeTextColor(getColor($color, 400));
+
+  &:hover {
+    cursor: pointer;
+    border-color: getColor($color, 600);
+    background-color: getColor($color, 500);
+    color: schemeTextColor(getColor($color, 500));
+  }
+
+  &:active,
+  &.active {
+    border-color: getColor($color, 700);
+    background-color: getColor($color, 600);
+    color: schemeTextColor(getColor($color, 600));
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    cursor: default;
+    border-color: getColor($color, 100);
+    background-color: getColor($color, 50);
+    color: getColor($color, 100);
+  }
+}
+
+@include forEachScheme {
+  @include forEachColor {
+    .ax-button--#{colorProp(name)} {
+      @include buttonColor(colorProp(color));
+    }
+  }
+
+  .ax-button--primary {
+    @include buttonColor(schemeProp(primary));
+  }
+}
+
+
+/**
+ * Button icon
+ */
+.ax-button__icon {
+  margin-right: $component-margin-h-sm;
+}
+
+
+/**
+ * Button group
+ * Trick to allow buttons to vertically space themselves
+ * when stacked when going responsive.
+ */
+.ax-button__group {
+  @include blockSpace($component-margin-v-base);
+
+  &:last-child {
+    margin-bottom: -$component-margin-h-sm;
+  }
+
+  > .ax-button {
+    margin-top: 0!important;
+    margin-bottom: $component-margin-v-sm !important;
+  }
+}

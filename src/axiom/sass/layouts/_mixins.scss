@@ -1,0 +1,19 @@
+@import '../components/_mixins/scheme';
+
+$_layout:  false;
+@mixin forLayout($layout-name) {
+  $_layout: $layout-name !global;
+  @content;
+  $_layout: false !global;
+}
+
+@function layoutProp($prop, $layout: $_layout) {
+  $layout-props: schemeProp($layout);
+
+  @if (map-has-key($layout-props, $prop)) {
+    @return map-get($layout-props, $prop);
+  } @else {
+    @error "Layout property `#{$prop}` does not exists";
+    @return false;
+  }
+}

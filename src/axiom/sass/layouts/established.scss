@@ -1,0 +1,204 @@
+@import '../core/mixins';
+@import '../components/_mixins/scheme';
+@import './_mixins';
+
+$layout-header-height-sm: 50px;
+$layout-header-height-lg: 100px;
+$layout-sidebar-width: 240px;
+
+$logo-aspect-ratio:     0.9;
+$logo-height:           120px;
+$logo-width:            $logo-height * $logo-aspect-ratio;
+
+
+@include forLayout(layout-established) {
+  .ax-layout__body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .ax-layout__container,
+  .ax-layout {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .ax-layout--open {
+    @include screenLessThan($layout-change-point) {
+      overflow-x: hidden;
+    }
+  }
+
+  .ax-layout__header {
+    display: flex;
+    position: fixed;
+    padding: 0 $page-padding-h;
+    top: 0;
+    left: 0;
+    width: $layout-sidebar-width;
+    height: $layout-header-height-lg;
+    flex-direction: column;
+    justify-content: center;
+    z-index: $z-index-layout-header;
+    border-right: $component-border-width-base solid transparent;
+    border-bottom: $component-border-width-base solid transparent;
+    text-align: center;
+
+    @include screenLessThan($layout-change-point) {
+      height: $layout-header-height-sm;
+      width: 100%;
+      border-right: none;
+      text-align: left;
+
+      @include forEachScheme {
+        border-bottom-color: layoutProp(sidebar-border-color);
+      }
+    }
+
+    @include forEachScheme {
+      color: schemeTextColor(layoutProp(header-background-color));
+      background-color: getColor(layoutProp(header-background-color));
+      border-right-color: layoutProp(sidebar-border-color);
+    }
+
+    ~ .ax-layout__main {
+      @include screenLessThan($layout-change-point) {
+        margin-top: $layout-header-height-sm;
+      }
+    }
+
+    ~ .ax-layout__sidebar {
+      @include screenLessThan($layout-change-point) {
+        top: $layout-header-height-sm;
+      }
+    }
+  }
+
+  .ax-layout__footer-container {
+    position: relative;
+    min-height: $logo-height + $page-padding-v;
+
+    @include forEachScheme {
+      color: schemeTextColor(layoutProp(footer-background-color));
+      background-color: getColor(layoutProp(footer-background-color));
+    }
+  }
+
+  .ax-layout__footer {
+    margin: 0 0 0 $logo-width + $page-padding-h;
+  }
+
+  .ax-layout__main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .ax-layout__sidebar {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: $layout-header-height-lg;
+    left: 0;
+    bottom: 0;
+    width: $layout-sidebar-width;
+    border-right: $component-border-width-base solid transparent;
+
+    @include screenLessThan($layout-change-point) {
+      top: $layout-header-height-sm;
+      transform: translateX(-100%);
+
+      @include transition((transform));
+
+      .ax-layout--open & {
+        transform: translateX(-0%);
+      }
+    }
+
+    @include forEachScheme {
+      color: schemeTextColor(layoutProp(sidebar-background-color));
+      background-color: getColor(layoutProp(sidebar-background-color));
+      border-color: layoutProp(sidebar-border-color);
+    }
+
+    ~ .ax-layout__main,
+    ~ .ax-layout__footer-container {
+      margin-left: $layout-sidebar-width;
+
+      @include screenLessThan($layout-change-point) {
+        margin-left: 0;
+
+        @include transition((transform));
+
+        .ax-layout--open & {
+          transform: translateX($layout-sidebar-width);
+        }
+      }
+    }
+  }
+
+  .ax-layout__sidebar-header {
+    padding: $component-padding-v-base $component-padding-h-base;
+    flex: 0 1 auto;
+
+    @include forEachScheme {
+      color: schemeTextColor(layoutProp(sidebar-header-background-color));
+      background-color: getColor(layoutProp(sidebar-header-background-color));
+    }
+  }
+
+  .ax-layout__sidebar-content {
+    flex: 1 1 auto;
+  }
+
+  .ax-layout__sidebar-footer {
+    padding: $component-padding-v-base $component-padding-h-base;
+    flex: 0 1 auto;
+  }
+
+  .ax-layout__logo {
+    position: absolute;
+    top: 0;
+    width: $logo-width;
+    height: $logo-height;
+
+    @include forEachScheme {
+      background-color: layoutProp(logo-background-color);
+      color: schemeTextColor(layoutProp(logo-background-color));
+    }
+  }
+
+  .ax-layout__full-height {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+  .ax-layout__full-height--top    { align-items: flex-start; }
+  .ax-layout__full-height--middle { align-items: center; }
+  .ax-layout__full-height--bottom { align-items: flex-end; }
+  .ax-layout__full-height--left   { justify-content: flex-start; }
+  .ax-layout__full-height--center { justify-content: center; }
+  .ax-layout__full-height--right  { justify-content: flex-end; }
+
+  .ax-layout__content {
+    position: relative;
+    margin: 0 auto;
+    padding: $page-padding-v $page-padding-h;
+    width: 100%;
+
+    @include forEachBreakpoint {
+      @include screenMoreThan {
+        width: breakpointProp(width) - $layout-sidebar-width;
+      }
+    }
+
+    @include screenLessThan($layout-change-point) {
+      width: 100%;
+    }
+  }
+}
+
+

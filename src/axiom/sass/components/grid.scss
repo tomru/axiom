@@ -1,0 +1,119 @@
+@import '../core/mixins';
+@import './_mixins/grid';
+
+/**
+ * Base grid
+ */
+.ax-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+
+/**
+ * Base grid cell
+ */
+.ax-grid__cell {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/**
+ * Horizontal and Vertical alignment of cells.
+ */
+// Vertical alignment of all cells within a grid.
+.ax-grid--top    { align-items: flex-start; }
+.ax-grid--middle { align-items: center; }
+.ax-grid--bottom { align-items: flex-end; }
+
+// Horizontal align of all cells within a grid.
+.ax-grid--left       { justify-content: flex-start; }
+.ax-grid--center     { justify-content: center; }
+.ax-grid--right      { justify-content: flex-end; }
+.ax-grid--around     { justify-content: space-around; }
+.ax-grid--between    { justify-content: space-between; }
+
+// Vertical alignment per cell of a grid.
+.ax-grid__cell--top    { align-self: flex-start; }
+.ax-grid__cell--middle { align-self: center; }
+.ax-grid__cell--bottom { align-self: flex-end; }
+
+
+/**
+ * Guttering
+ */
+// The default grid spacing, applied with the basic grid class.
+.ax-grid {
+  @include gridGutter(gridGutterDefault());
+}
+
+/// Create the gutter variants with the suffix by the given ID.
+@each $grid-gutter in $grid-gutters {
+  .ax-grid--gutters--#{gridGutterId($grid-gutter)} {
+    @include gridGutter(gridGutterWidth($grid-gutter));
+  }
+}
+
+// No gutters
+.ax-grid--gutters-none-v {
+  margin-bottom: 0;
+
+  > .ax-grid__cell {
+    padding-bottom: 0;
+  }
+}
+
+.ax-grid--gutters-none-h {
+  margin-left: 0;
+
+  > .ax-grid__cell {
+    padding-left: 0;
+  }
+}
+
+.ax-grid--gutters-none {
+  @extend .ax-grid--gutters-none-v;
+  @extend .ax-grid--gutters-none-h;
+}
+
+
+/**
+ * Cell heights
+ */
+/// Stretching all cells to the same height.
+.ax-grid--full-height {
+  > .ax-grid__cell {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/**
+ * Cell widths and responsiveness
+ */
+/// When below the lowest given breakpoint cells
+/// will flex to 100%. Can be suppressed with with the
+/// --unresponsive modifier.
+@include screenLessThan($grid-change-point) {
+  .ax-grid {
+    &:not(.ax-grid--unresponsive) {
+      > .ax-grid__cell{
+        flex: 0 0 100%;
+      }
+    }
+  }
+}
+
+// Create the grid sizing classes to span all breakpoints
+@include makeResponsiveGrid(false);
+
+/// Create the responsive grid!
+@include forEachBreakpoint() {
+  @include makeResponsiveGrid(true);
+}

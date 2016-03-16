@@ -1,0 +1,107 @@
+@import '../core/mixins';
+@import './_mixins/scheme';
+
+.ax-label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-width: $component-border-width-base;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: $border-radius-base;
+  background-color: transparent;
+  font-weight: $font-weight-strong;
+  text-align: center;
+
+  @include inlineBlockSpace($component-margin-h-sm);
+}
+
+
+/**
+ * Size labels
+ */
+.ax-label {
+  padding: $component-padding-v-sm $component-padding-h-sm;
+  font-size: $font-size-md;
+}
+
+.ax-label--sm {
+  padding: 0 $component-padding-h-sm;
+  font-size: $font-size-sm;
+}
+
+.ax-label--lg {
+  padding: $component-padding-v-base $component-padding-h-base;
+  font-size: $font-size-base;
+}
+
+
+/**
+ * Full width labels
+ */
+@mixin fullWidthLabel {
+  display: block;
+  width: 100%;
+  @include blockSpace($component-margin-v-sm);
+}
+
+.ax-label--full {
+  @include fullWidthLabel;
+}
+
+@include forEachBreakpoint {
+  @include screenLessThan {
+    .ax-label--full--#{breakpointProp(id)} {
+      @include fullWidthLabel;
+    }
+  }
+}
+
+
+/**
+ * Label Colours
+ */
+@mixin labelColor($color) {
+  border-color: getColor($color, 300);
+  background-color: getColor($color, 50);
+  color: getColor($color, 900);
+}
+
+@include forEachScheme {
+  @include forEachColor {
+    .ax-label--#{colorProp(name)} {
+      @include labelColor(colorProp(color));
+    }
+  }
+
+  .ax-label--primary {
+    @include labelColor(schemeProp(primary));
+  }
+}
+
+
+/**
+ * Label icon
+ */
+.ax-label__icon {
+  margin-right: $component-margin-h-sm;
+}
+
+
+/**
+ * Label group
+ * Trick to allow buttons to vertically space themselves
+ * when stacked when going responsive.
+ */
+.ax-label__group {
+  @include blockSpace($component-margin-v-base);
+
+  &:last-child {
+    margin-bottom: -$component-margin-h-sm;
+  }
+
+  > .ax-label {
+    margin-top: 0!important;
+    margin-bottom: $component-margin-v-sm !important;
+  }
+}

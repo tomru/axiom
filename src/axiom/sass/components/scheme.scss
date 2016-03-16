@@ -1,0 +1,11 @@
+@import '../core/mixins';
+@import './_mixins/scheme';
+
+/**
+ * Sets the background colour and
+ * text colour for each scheme.
+ */
+@include forEachScheme {
+  background-color: schemeProp(background-color);
+  color: schemeTextColor(schemeProp(background-color));
+}

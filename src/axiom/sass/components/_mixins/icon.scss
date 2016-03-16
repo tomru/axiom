@@ -1,0 +1,6 @@
+@import '~font-awesome/scss/_mixins';
+
+@mixin icon($icon) {
+  @include fa-icon();
+  content: $icon;
+}

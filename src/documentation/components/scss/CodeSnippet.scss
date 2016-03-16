@@ -1,0 +1,12 @@
+@import "~axiom/sass/core/mixins";
+@import "~axiom/sass/components/_mixins/scheme";
+
+pre[class*="language-"] {
+  padding: $component-padding-v-lg $component-padding-h-base;
+  border: $component-border-width-base solid getColor($color-grey, 100);
+  border-radius: $border-radius-base;
+  background-color: getColor($color-grey, 50);
+
+  @include blockSpace();
+}
+

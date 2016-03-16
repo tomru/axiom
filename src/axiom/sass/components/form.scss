@@ -1,0 +1,331 @@
+@import '../core/mixins';
+@import './_vars/icon';
+@import './_mixins/icon';
+@import './_mixins/scheme';
+
+$form-input-v-padding: $component-padding-v-base;
+$form-input-h-padding: $component-padding-h-sm;
+$form-input-border-width: $component-border-width-base;
+$form-input-border-radius: $border-radius-base;
+$form-textarea: 200px;
+$form-checkbox-size: $line-height + ($form-input-border-width * 2);
+
+/**
+ * Forms
+ */
+.ax-form {
+  @include blockSpace();
+}
+
+
+/**
+ * Text input
+ */
+.ax-input__group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include blockSpace();
+}
+
+.ax-input__button-container {
+  display: flex;
+
+  @include screenLessThan(breakpointProp(width, firstBreakpoint())) {
+    flex-direction: column;
+  }
+}
+
+.ax-input__icon {
+  position: absolute;
+  top: 50%;
+  right: $form-input-h-padding;
+  transform: translate3d(0, -50%, 0);
+
+  @include transition(( color ), $transition-time-fast);
+}
+
+.ax-input__button {
+  margin: 0 0 0 $form-input-h-padding;
+
+  @include screenLessThan(breakpointProp(width, firstBreakpoint())) {
+    margin: $component-margin-v-sm 0 0;
+  }
+}
+
+.ax-input__icon-container {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.ax-input,
+.ax-textarea, {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: $form-input-v-padding $form-input-h-padding;
+  width: 100%;
+  min-width: 0;
+  line-height: inherit;
+  background-color: transparent;
+  border-style: solid;
+  border-width: $form-input-border-width;
+  border-radius: $form-input-border-radius;
+  appearance: none;
+
+  @include transition((
+    border-color,
+    color
+  ), $transition-time-fast);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+/**
+ * Text input colouring
+ */
+@include forEachScheme {
+  $input-border-color: schemeProp(input-border-color);
+  $input-background-color: schemeProp(input-background-color);
+  $input-text-color: schemeTextColor($input-background-color);
+  $input-placeholder-color: schemeProp(input-placeholder-color);
+  $input-focus-color: schemeProp(input-focus-color);
+  $input-disabled-color: schemeProp(input-disabled-color);
+  $input-valid-color: schemeProp(input-valid-color);
+  $input-invalid-color: schemeProp(input-invalid-color);
+
+  .ax-input__icon {
+    color: $input-placeholder-color;
+  }
+
+  .ax-input,
+  .ax-textarea {
+    border-color: $input-border-color;
+    background-color: $input-background-color;
+    color: $input-text-color;
+
+    &::placeholder {
+      color: $input-placeholder-color;
+    }
+
+    &:disabled {
+      background-color: $input-disabled-color;
+    }
+
+    &:focus {
+      border-color: $input-focus-color;
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      + .ax-input__icon {
+        color: $input-focus-color;
+      }
+    }
+  }
+
+  .ax-input--valid {
+    .ax-input,
+    .ax-textarea {
+      border-color: $input-valid-color;
+
+      + .ax-input__icon {
+        color: $input-valid-color;
+      }
+    }
+  }
+
+  .ax-input--invalid {
+    .ax-input,
+    .ax-textarea {
+      border-color: $input-invalid-color;
+
+      + .ax-input__icon {
+        color: $input-invalid-color;
+      }
+    }
+  }
+}
+
+
+/**
+ * Text area
+ */
+.ax-textarea {
+  min-height: $form-textarea;
+  background-color: transparent;
+  border-style: solid;
+  border-width: $form-input-border-width;
+  border-radius: $border-radius-base;
+  resize: none;
+}
+
+
+/**
+ * Text area colouring
+ */
+@include forEachScheme {
+  $input-border-color: schemeProp(input-border-color);
+
+  .ax-textarea {
+    border-color: $input-border-color;
+  }
+}
+
+
+/**
+ * Radio buttons and Check boxes
+ */
+.ax-radio__group,
+.ax-checkbox__group {
+  display: flex;
+  vertical-align: middle;
+
+  @include blockSpace();
+}
+
+.ax-radio__group--inline,
+.ax-checkbox__group--inline {
+  display: inline-flex;
+
+  @include inlineBlockSpace();
+}
+
+.ax-radio__group--space,
+.ax-checkbox__group--space {
+  .ax-radio__label,
+  .ax-checkbox__label {
+    &::before {
+      margin: 0 $component-margin-h-sm 0 0;
+    }
+  }
+}
+
+.ax-radio,
+.ax-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  &:disabled {
+    + .ax-radio__label,
+    + .ax-checkbox__label {
+      cursor: default;
+    }
+  }
+
+  + .ax-checkbox__label {
+    &:before {
+      @include icon($fa-var-check);
+      border-radius: $form-input-border-radius;
+    }
+  }
+
+  + .ax-radio__label {
+    &:before {
+      @include icon($fa-var-circle);
+      border-radius: 50%;
+    }
+  }
+
+  + .ax-radio__label,
+  + .ax-checkbox__label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    line-height: $form-checkbox-size;
+
+    @include transition((
+      background-color,
+      border-color,
+      color
+    ), $transition-time-fast);
+
+    &::before {
+      display: flex;
+      flex: none;
+      justify-content: center;
+      align-items: center;
+      height: $form-checkbox-size;
+      width: $form-checkbox-size;
+      border-style: solid;
+      border-width: $form-input-border-width;
+      font-size: $font-size-sm;
+
+      @include transition((
+        background-color,
+        border-color,
+        color
+      ), $transition-time-fast);
+    }
+  }
+}
+
+/**
+ * Radio button and check box colouring
+ */
+@include forEachScheme {
+  $input-background-color: schemeProp(input-background-color);
+  $input-checked-color: schemeProp(input-checked-color);
+  $input-focus-color: schemeProp(input-focus-color);
+  $input-placeholder-color: schemeProp(input-placeholder-color);
+  $input-border-color: schemeProp(input-border-color);
+  $input-disabled-color: schemeProp(input-disabled-color);
+
+  .ax-radio,
+  .ax-checkbox {
+    + .ax-radio__label,
+    + .ax-checkbox__label {
+      &::before {
+        background-color: $input-background-color;
+        border-color: $input-border-color;
+        color: transparent;
+      }
+    }
+
+    &:hover {
+      + .ax-radio__label,
+      + .ax-checkbox__label {
+        &::before {
+          color: $input-placeholder-color;
+        }
+      }
+    }
+
+    &:focus {
+      + .ax-radio__label,
+      + .ax-checkbox__label {
+        &::before {
+          border-color: $input-focus-color;
+        }
+      }
+    }
+
+    &:checked {
+      + .ax-radio__label,
+      + .ax-checkbox__label {
+        &::before {
+          color: $input-checked-color;
+        }
+      }
+    }
+
+    &:disabled {
+      + .ax-radio__label,
+      + .ax-checkbox__label {
+        cursor: default;
+
+        &::before {
+          background-color: $input-disabled-color;
+          color: transparent;
+        }
+      }
+    }
+  }
+}
