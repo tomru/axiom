@@ -3,8 +3,8 @@ import del from 'del';
 import * as config from '../config';
 
 export default function clean() {
-  console.log('WEBACK -> Cleaning: started...');
+  console.log('Ax:: Clean [1/2]');
 
   return del([`${config.paths.output}/**`, `!${config.paths.output}`])
-    .then(() => console.log('WEBACK -> Cleaning: complete'));
+    .then(() => console.log('Ax:: Clean [2/2]'));
 }

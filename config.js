@@ -1,11 +1,10 @@
 import path from 'path';
-import { createAlias } from './lib/webpack-utils';
+import { createAlias } from './utils/webpack';
 import { version } from './package.json';
 
-const outputFolderName = 'dist';
+const outputFolderName = 'lib';
 
 export const paths = {
-  libs: path.resolve(__dirname, 'lib'),
   nodeModules: path.resolve(__dirname, 'node_modules'),
   output: path.resolve(__dirname, outputFolderName),
   source: path.resolve(__dirname, 'src'),

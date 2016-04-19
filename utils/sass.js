@@ -38,8 +38,8 @@ function clearCachedFiles(file) {
   }
 }
 
-export default function sassVariableInjectorCreator(config, importName) {
-  return function sassVariabeInjector(url, prev) {
+export function variableImporter(config, importName) {
+  return function variableInjector(url) {
     if (url !== importName) {
       return nodeSass.NULL;
     }

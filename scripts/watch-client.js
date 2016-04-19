@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import q from 'q';
 import webpack from 'webpack';
 import webpackConfig from '../webpack/client.development.config';
 import WebpackDevServer from 'webpack-dev-server';
@@ -17,27 +16,26 @@ const statOptions = {
 };
 
 export default function watchClient() {
-  const compiler = webpack(webpackConfig);
-  const deferred = q.defer();
+  return new Promise((resolve, reject) => {
+    const compiler = webpack(webpackConfig);
 
-  console.log('WEBACK -> Client: started...');
+    console.log('Ax:: Watch Client [1/2]');
 
-  const webpackDevServer = new WebpackDevServer(compiler, {
-    host: config.webpack.devServerHostname,
-    publicPath: webpackConfig.output.publicPath,
-    hot: true,
-    inline: false,
-    lazy: false,
-    quiet: false,
-    noInfo: false,
-    headers: { 'Access-Control-Allow-Origin': '*' },
-    stats: statOptions,
+    const webpackDevServer = new WebpackDevServer(compiler, {
+      host: config.webpack.devServerHostname,
+      publicPath: webpackConfig.output.publicPath,
+      hot: true,
+      inline: false,
+      lazy: false,
+      quiet: false,
+      noInfo: false,
+      headers: { 'Access-Control-Allow-Origin': '*' },
+      stats: statOptions,
+    });
+
+    webpackDevServer.listen(config.webpack.devServerPort, () => {
+      console.log('Ax:: Watch Client [2/2]');
+      resolve();
+    });
   });
-
-  webpackDevServer.listen(config.webpack.devServerPort, () => {
-    console.log('WEBACK -> Client: completed');
-    deferred.resolve();
-  });
-
-  return deferred.promise;
 }

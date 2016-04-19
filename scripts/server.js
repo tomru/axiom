@@ -4,7 +4,7 @@ import forever from 'forever';
 import * as config from '../config';
 
 export default function server(filename) {
-  console.log('WEBPACK -> Server: starting...');
+  console.log('Ax:: Starting server...');
 
   return forever.start(path.join(config.output.path, filename), {
     minUptime: 1000,

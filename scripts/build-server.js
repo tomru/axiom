@@ -1,33 +1,31 @@
 /* eslint-disable no-console */
-import q from 'q';
 import webpack from 'webpack';
 import webpackConfig from '../webpack/server.config';
 
 export default function buildClient() {
-  const compiler = webpack(webpackConfig);
-  const deferred = q.defer();
+  return new Promise((resolve, reject) => {
+    const compiler = webpack(webpackConfig);
 
-  console.log('WEBACK -> Server: started...');
+    console.log('Ax:: Build Server [1/2]');
 
-  compiler.run((error, stats) => {
-    if (error) {
-      console.log(error);
-    }
+    compiler.run((error, stats) => {
+      if (error) {
+        reject(error);
+      }
 
-    console.log(stats.toString({
-      assets: false,
-      colors: true,
-      version: false,
-      hash: false,
-      timings: false,
-      chunks: false,
-      chunkModules: false,
-    }));
+      console.log(stats.toString({
+        assets: false,
+        colors: true,
+        version: false,
+        hash: false,
+        timings: false,
+        chunks: false,
+        chunkModules: false,
+      }));
 
-    console.log('WEBACK -> Server: complete');
+      console.log('Ax:: Build Server [2/2]');
 
-    deferred.resolve();
+      resolve();
+    });
   });
-
-  return deferred.promise;
 }

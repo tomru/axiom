@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as config from '../config';
-import variableImporter from '../lib/sass-variable-importer';
+import { variableImporter } from '../utils/sass';
 
 export default {
   target: 'web',

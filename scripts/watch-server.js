@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import q from 'q';
 import webpack from 'webpack';
 import webpackConfig from '../webpack/server.development.config';
 
@@ -15,23 +14,20 @@ const statOptions = {
 };
 
 export default function watchServer() {
-  const deferred = q.defer();
-  const compiler = webpack(webpackConfig);
+  return new Promise((resolve, reject) => {
+    const compiler = webpack(webpackConfig);
 
-  console.log('WEBACK -> Server: started...');
+    console.log('Ax:: Watch Server [1/2]');
 
-  compiler.watch({}, (error, stats) => {
-    if (error) {
-      console.log(error);
-    }
+    compiler.watch({}, (error, stats) => {
+      if (error) {
+        reject(error);
+      }
 
-    console.log(stats.toString(statOptions));
-    console.log('WEBACK -> Server: complete');
+      console.log(stats.toString(statOptions));
+      console.log('Ax:: Watch Server [2/2]');
 
-    if (deferred.promise.state !== 'fulfilled') {
-      deferred.resolve();
-    }
+      resolve();
+    });
   });
-
-  return deferred.promise;
 }
