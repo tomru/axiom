@@ -5,6 +5,7 @@ import { Button } from 'axiom/react';
 import { Card, CardContent, CardTitle} from 'axiom/react';
 import { Form, CheckBox, RadioButton, TextArea, TextInput } from 'axiom/react';
 import { Grid, GridCell } from 'axiom/react';
+import { Heading } from 'axiom/react';
 
 export default class FormDocs extends Component {
   static imports = {
@@ -24,24 +25,24 @@ export default class FormDocs extends Component {
           <CardContent>
             <Grid>
               <GridCell>
-                <h5>Standard text input</h5>
+                <Heading level={5}>Standard text input</Heading>
                 <TextInput placeholder="Standard input..." />
               </GridCell>
 
               <GridCell>
-                <h5>Disabled text input</h5>
+                <Heading level={5}>Disabled text input</Heading>
                 <TextInput placeholder="Disabled input..." disabled={true} />
               </GridCell>
             </Grid>
 
             <Grid>
               <GridCell>
-                <h5>Success validation</h5>
+                <Heading level={5}>Success validation</Heading>
                 <TextInput placeholder="Valid input..." valid={true} />
               </GridCell>
 
               <GridCell>
-                <h5>Failed validation</h5>
+                <Heading level={5}>Failed validation</Heading>
                 <TextInput placeholder="Invalid input..." invalid={true} />
               </GridCell>
             </Grid>
@@ -61,15 +62,15 @@ export default class FormDocs extends Component {
               `}</CodeSnippet>
             </CodeTabset>
 
-            <h5>Text input with an icon</h5>
+            <Heading level={5}>Text input with an icon</Heading>
             <TextInput placeholder="Icon input..." icon="calendar" />
 
-            <h5>Text input with a button</h5>
+            <Heading level={5}>Text input with a button</Heading>
             <TextInput placeholder="Button input...">
               <Button color="primary">Submit</Button>
             </TextInput>
 
-            <h5>Text input with an icon and button</h5>
+            <Heading level={5}>Text input with an icon and button</Heading>
             <TextInput placeholder="Icon & Button input..." icon="calendar">
               <Button color="primary">Submit</Button>
             </TextInput>
@@ -108,18 +109,18 @@ export default class FormDocs extends Component {
         <Card>
           <CardTitle title="Radio buttons and Check boxes" />
           <CardContent>
-            <CheckBox checked={false}>Unchecked check box</CheckBox>
-            <CheckBox checked={true}>Checked check box</CheckBox>
-            <CheckBox disabled={true}>Disabled chec box</CheckBox>
+            <CheckBox defaultChecked={false}>Unchecked check box</CheckBox>
+            <CheckBox defaultChecked={true}>Checked check box</CheckBox>
+            <CheckBox defaultChecked={false} disabled={true}>Disabled chec box</CheckBox>
 
-            <RadioButton checked={false}>Unchecked radio button</RadioButton>
-            <RadioButton checked={true}>Checked radio button</RadioButton>
-            <RadioButton disabled={true}>Disabled radio button</RadioButton>
+            <RadioButton defaultChecked={false}>Unchecked radio button</RadioButton>
+            <RadioButton defaultChecked={true}>Checked radio button</RadioButton>
+            <RadioButton defaultChecked={false} disabled={true}>Disabled radio button</RadioButton>
 
             <CodeTabset>
               <CodeSnippet language="html">
-                <CheckBox checked={true} disabled={true}>Text here</CheckBox>
-                <RadioButton checked={true} disabled={true}>Text here</RadioButton>
+                <CheckBox defaultChecked={true} disabled={true}>Text here</CheckBox>
+                <RadioButton defaultChecked={true} disabled={true}>Text here</RadioButton>
               </CodeSnippet>
               <CodeSnippet language="jsx">{`
                 <CheckBox checked={true} disabled={true}>

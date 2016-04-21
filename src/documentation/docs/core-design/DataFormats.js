@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CodeTabset from 'documentation/components/CodeTabset';
 import CodeSnippet from 'documentation/components/CodeSnippet';
 import { Card, CardTitle, CardContent } from 'axiom/react';
+import { Heading } from 'axiom/react';
 import { formatNumber, formatDateShort, formatDateMedium, formatDateLong } from 'axiom/common/format-utils';
 
 export default class DataFormatsDocs extends Component {
@@ -19,7 +20,7 @@ export default class DataFormatsDocs extends Component {
         <Card>
           <CardTitle title="Numbers" />
           <CardContent>
-            <h5>{formatNumber(71029384)}</h5>
+            <Heading level={5}>{formatNumber(71029384)}</Heading>
 
             <CodeSnippet language="js">
               formatNumber(Number);
@@ -30,21 +31,21 @@ export default class DataFormatsDocs extends Component {
         <Card>
           <CardTitle title="Dates" />
           <CardContent>
-            <h5>Short date</h5>
+            <Heading level={5}>Short date</Heading>
             <p>{formatDateShort(new Date())}</p>
 
             <CodeSnippet language="js">
               formatDateShort(Date);
             </CodeSnippet>
 
-            <h5>Medium date</h5>
+            <Heading level={5}>Medium date</Heading>
             <p>{formatDateMedium(new Date())}</p>
 
             <CodeSnippet language="js">
               formatDateMedium(Date);
             </CodeSnippet>
 
-            <h5>Long date</h5>
+            <Heading level={5}>Long date</Heading>
             <p>{formatDateLong(new Date())}</p>
 
             <CodeSnippet language="js">

@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import classnames from 'classnames';
+import React, { Component, PropTypes } from 'react';
+import { blacklist } from '../../utils';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class TextArea extends Component {
-  render() {
-    const { placeholder, value, disabled } = this.props;
-    const classes = classnames('ax-textarea', {
+  static propTypes = {
+    ...defaultPropTypes,
+  };
 
-    });
+  render() {
+    const className = mergeDefaultClassName(this.props, 'ax-input__group');
 
     return (
-      <label className="ax-input__group">
+      <label className={className}>
         <textarea
-          className={classes}
-          placeholder={placeholder}
-          value={value}
-          disabled={disabled} />
+          className="ax-textarea"
+          {...blacklist(this.props, 'className')} />
       </label>
     );
   }

@@ -1,12 +1,12 @@
 import React, { PropTypes, Component } from 'react';
-import classnames from 'classnames';
 import { breakpoints, gridGutters } from 'sass-vars';
 import { classHelper } from '../../utils';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class Grid extends Component {
   static propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.any,
+    ...defaultPropTypes,
+    children: PropTypes.node,
     responsive: PropTypes.bool,
     gutters: PropTypes.oneOf([false, ...gridGutters.map(({id}) => id)]),
     vGutters: PropTypes.bool,
@@ -19,7 +19,6 @@ export default class Grid extends Component {
 
   render() {
     const {
-      className,
       children,
       responsive = true,
       gutters = true,
@@ -31,7 +30,7 @@ export default class Grid extends Component {
       hAlign,
     } = this.props;
 
-    const classes = classnames(className,
+    const className = mergeDefaultClassName(this.props,
       'ax-grid', {
         'ax-grid--unresponsive': responsive === false,
         'ax-grid--gutters-none': gutters === false,
@@ -54,7 +53,7 @@ export default class Grid extends Component {
     );
 
     return (
-      <div className={classes}>
+      <div {...this.props} className={className}>
         {children}
       </div>
     );

@@ -2,9 +2,6 @@
 @import "~axiom/sass/components/_mixins/scheme";
 
 .dm-color-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   padding: $component-padding-v-base $component-padding-h-base;
   overflow: hidden;
   text-overflow: ellipsis;

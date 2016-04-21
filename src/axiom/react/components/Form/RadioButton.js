@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
-import classnames from 'classnames';
+import React, { Component, PropTypes } from 'react';
+import { blacklist } from '../../utils';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class RadioButton extends Component {
-  render() {
-    const {
-      children,
-      inline,
-      checked,
-      disabled,
-      onChange = () => {},
-    } = this.props;
+  static propTypes = {
+    ...defaultPropTypes,
+    children: PropTypes.node,
+    inline: PropTypes.bool,
+  };
 
-    const classes = classnames('ax-radio__group', {
-      'ax-radio__group--inline': inline === true,
-      'ax-radio__group--space': !!children,
-    });
+  render() {
+    const { children, inline } = this.props;
+    const className = mergeDefaultClassName(this.props,
+      'ax-radio__group', {
+        'ax-radio__group--inline': inline === true,
+        'ax-radio__group--space': !!children,
+      }
+    );
 
     return (
-      <label className={classes}>
+      <label className={className}>
         <input className="ax-radio"
                type="radio"
-               checked={checked}
-               disabled={disabled}
-               onChange={onChange} />
+               {...blacklist(this.props, ['children', 'className'])} />
         <span className="ax-radio__label">{children}</span>
       </label>
     );

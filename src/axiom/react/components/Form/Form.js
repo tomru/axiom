@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
-import classnames from 'classnames';
+import React, { Component, PropTypes } from 'react';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class Form extends Component {
-  render() {
-    const classes = classnames({
+  static propTypes = {
+    ...defaultPropTypes,
+    children: PropTypes.node,
+  };
 
-    });
+  render() {
+    const { children } = this.props;
+    const className = mergeDefaultClassName(this.props, 'ax-form');
 
     return (
-      <form className={classes}>
+      <form {...this.props} className={className}>
         {children}
       </form>
     );

@@ -1,10 +1,11 @@
 import React, { PropTypes, Component } from 'react';
-import classnames from 'classnames';
 import { breakpoints } from 'sass-vars';
 import { classHelper } from '../../utils';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class GridCell extends Component {
   static propTypes = {
+    ...defaultPropTypes,
     children: PropTypes.any,
     full: PropTypes.oneOf([true, ...breakpoints.map(({id}) => id)]),
     fit: PropTypes.oneOf([true, ...breakpoints.map(({id}) => id)]),
@@ -19,7 +20,6 @@ export default class GridCell extends Component {
 
   render() {
     const {
-      className,
       children,
       full,
       fit,
@@ -32,7 +32,7 @@ export default class GridCell extends Component {
       vAlign,
     } = this.props;
 
-    const classes = classnames(className,
+    const className = mergeDefaultClassName(this.props,
       'ax-grid__cell', {
         'ax-grid__cell--top': vAlign === 'top',
         'ax-grid__cell--middle': vAlign === 'middle',
@@ -57,7 +57,7 @@ export default class GridCell extends Component {
     );
 
     return (
-      <div className={classes}>
+      <div {...this.props} className={className}>
         {children}
       </div>
     );

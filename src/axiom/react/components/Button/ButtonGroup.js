@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
-import classnames from 'classnames';
+import React, { Component, PropTypes } from 'react';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class ButtonGroup extends Component {
+  static propTypes = {
+    ...defaultPropTypes,
+    children: PropTypes.node,
+  };
 
   render() {
-    const {children} = this.props
-    const classes = classnames('ax-button__group', {
-      //
-    });
+    const { children } = this.props;
+    const className = mergeDefaultClassName(this.props, 'ax-button__group');
 
     return (
-      <div className={classes}>
+      <div {...this.props} className={className}>
         {children}
       </div>
     );

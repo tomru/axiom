@@ -6,6 +6,7 @@ import DemoBox from 'documentation/components/DemoBox';
 import { Card, CardContent, CardTitle } from 'axiom/react';
 import { Label, LabelGroup } from 'axiom/react';
 import { Tabset, Tab } from 'axiom/react';
+import { Heading } from 'axiom/react';
 
 export default class LabelDocs extends Component {
   static imports = {
@@ -23,7 +24,7 @@ export default class LabelDocs extends Component {
         <Card>
           <CardTitle title="Colored Labels" />
           <CardContent>
-            <h5>Palette Colors</h5>
+            <Heading level={5}>Palette Colors</Heading>
             <LabelGroup>
               {colorPalette.map((colors) => {
                 return colors.map(({ name }, bIndex) => {
@@ -34,7 +35,7 @@ export default class LabelDocs extends Component {
               })}
             </LabelGroup>
 
-            <h5>UI Colors</h5>
+            <Heading level={5}>UI Colors</Heading>
             {colorAliases.map(({heading, colors}) => {
               return [
                 <p key="heading">{heading}</p>,
@@ -50,7 +51,7 @@ export default class LabelDocs extends Component {
               ];
             })}
 
-            <h5>Primary</h5>
+            <Heading level={5}>Primary</Heading>
             <LabelGroup>
               <Label color="primary">Primary</Label>
             </LabelGroup>

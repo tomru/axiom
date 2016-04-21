@@ -4,6 +4,7 @@ import CodeTabset from 'documentation/components/CodeTabset';
 import { formatNumber } from 'axiom/common/format-utils';
 import { Card, CardContent, CardTitle } from 'axiom/react';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'axiom/react';
+import { Heading } from 'axiom/react';
 
 export default class TableDocs extends Component {
   static imports = {
@@ -125,7 +126,7 @@ export default class TableDocs extends Component {
         <Card>
           <CardTitle title="Bordered tables" />
           <CardContent>
-            <h5>Horizontal borders</h5>
+            <Heading level={5}>Horizontal borders</Heading>
             <Table borders="h" striped={true}>
               {tableContent()}
             </Table>
@@ -140,7 +141,7 @@ export default class TableDocs extends Component {
               </CodeSnippet>
             </CodeTabset>
 
-            <h5>Vertical borders</h5>
+            <Heading level={5}>Vertical borders</Heading>
             <Table borders="v" striped={true}>
               {tableContent()}
             </Table>
@@ -155,7 +156,7 @@ export default class TableDocs extends Component {
               </CodeSnippet>
             </CodeTabset>
 
-            <h5>Vertical and Horizontal borders</h5>
+            <Heading level={5}>Vertical and Horizontal borders</Heading>
             <Table borders={true} striped={true}>
               {tableContent()}
             </Table>

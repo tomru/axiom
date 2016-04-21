@@ -1,23 +1,23 @@
 import React, { Component, PropTypes } from 'react';
 import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
-export default class TableCell extends Component {
+export default class Paragraph extends Component {
   static propTypes = {
     ...defaultPropTypes,
     children: PropTypes.node,
-    isNumber: PropTypes.bool,
+    space: PropTypes.bool,
   };
 
   render() {
-    const {children, isNumber} = this.props;
+    const {children, space} = this.props;
     const className = mergeDefaultClassName(this.props, {
-      'ax-table__cell--number': isNumber === true,
+      'ax-text--no-space': space === false,
     });
 
     return (
-      <td {...this.props} className={className}>
+      <p {...this.props} className={className}>
         {children}
-      </td>
+      </p>
     );
   }
 }

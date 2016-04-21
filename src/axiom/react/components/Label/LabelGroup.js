@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
-import classnames from 'classnames';
+import React, { Component, PropTypes } from 'react';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class LabelGroup extends Component {
+   static propTypes = {
+    ...defaultPropTypes,
+    children: PropTypes.node,
+  };
 
   render() {
-    const {children} = this.props
-    const classes = classnames('ax-label__group', {
-      //
-    });
+    const { children } = this.props
+    const className = mergeDefaultClassName(this.props, 'ax-label__group');
 
     return (
-      <div className={classes}>
+      <div {...this.props} className={className}>
         {children}
       </div>
     );

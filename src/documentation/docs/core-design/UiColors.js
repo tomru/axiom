@@ -4,6 +4,7 @@ import { colorAliases } from 'sass-vars';
 import ColorSwatch from 'documentation/components/ColorSwatch';
 import { Card, CardContent, CardTitle } from 'axiom/react';
 import { Grid, GridCell } from 'axiom/react';
+import { Heading } from 'axiom/react';
 
 export default class UiColorsDocs extends Component {
   static imports = {
@@ -27,7 +28,7 @@ export default class UiColorsDocs extends Component {
                   <Grid key={bIndex}>
                     {group.map(({name, color}, cIndex) =>
                       <GridCell key={cIndex}>
-                        <h5>{humanize(name)}</h5>
+                        <Heading level={5}>{humanize(name)}</Heading>
                         <ColorSwatch name={name} color={color} />
                       </GridCell>
                     )}

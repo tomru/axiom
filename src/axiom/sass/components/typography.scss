@@ -70,7 +70,8 @@ blockquote {
   margin: $spacing-xl;
 }
 
-strong {
+strong,
+.ax-text--bold {
   font-weight: $font-weight-strong;
 }
 
@@ -129,7 +130,7 @@ a.ax-link {
 
   @include forEachBreakpoint() {
     @include screenLessThan() {
-      .ax-text--#{$align}-#{breakpointProp(id)} {
+      .ax-text--#{$align}--#{breakpointProp(id)} {
         text-align: $align;
       }
     }

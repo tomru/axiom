@@ -1,32 +1,40 @@
-import React, { Component } from 'react';
-import classnames from 'classnames';
+import React, { Component, PropTypes } from 'react';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class List extends Component {
+  static propTypes = {
+    ...defaultPropTypes,
+    children: PropTypes.node,
+    ordered: PropTypes.bool,
+    inline: PropTypes.bool,
+    aligned: PropTypes.bool,
+  };
+
   render() {
     const {
-      className,
       children,
       ordered,
       inline,
       aligned = !inline,
     } = this.props;
 
-    const classes = classnames(className,
+    const className = mergeDefaultClassName(this.props,
       'ax-list', {
-      'ax-list--aligned': aligned === true,
-      'ax-list--inline': inline === true,
-    });
+        'ax-list--aligned': aligned === true,
+        'ax-list--inline': inline === true,
+      }
+    );
 
     if (ordered === true) {
       return (
-        <ol className={classes}>
+        <ol {...this.props} className={className}>
           {children}
         </ol>
       );
     }
 
     return (
-      <ul className={classes}>
+      <ul {...this.props} className={className}>
         {children}
       </ul>
     );

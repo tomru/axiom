@@ -1,7 +1,15 @@
-import React, { Component } from 'react';
-import classnames from 'classnames';
+import React, { Component, PropTypes } from 'react';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class Table extends Component {
+  static propTypes = {
+    ...defaultPropTypes,
+    children: PropTypes.node,
+    sortable: PropTypes.bool,
+    striped: PropTypes.bool,
+    borders: PropTypes.oneOf([true, 'v', 'h']),
+  };
+
   render() {
     const {
       children,
@@ -10,16 +18,18 @@ export default class Table extends Component {
       borders,
     } = this.props;
 
-    const classes = classnames('ax-table', {
-      'ax-table--sortable': sortable,
-      'ax-table--striped': striped,
-      'ax-table--borders': borders === true,
-      'ax-table--borders--v': borders === 'v',
-      'ax-table--borders--h': borders === 'h',
-    });
+    const className = mergeDefaultClassName(this.props,
+      'ax-table', {
+        'ax-table--sortable': sortable === true,
+        'ax-table--striped': striped === true,
+        'ax-table--borders': borders === true,
+        'ax-table--borders--v': borders === 'v',
+        'ax-table--borders--h': borders === 'h',
+      }
+    );
 
     return (
-      <table className={classes}>
+      <table {...this.props} className={className}>
         {children}
       </table>
     );

@@ -1,10 +1,13 @@
 import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames';
+import { blacklist } from '../../utils';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 import Link from '../Typography/Link';
 
 export default class Tabset extends Component {
   static propTypes = {
-    children: PropTypes.any,
+    ...defaultPropTypes,
+    children: PropTypes.node,
     activeTabIndex: PropTypes.number,
   };
 
@@ -31,17 +34,18 @@ export default class Tabset extends Component {
     const tabs = Array.isArray(children) ? children : [children];
     const tabTitles = tabs.map(({props: {title}}) => title);
     const activeTab = tabs.find((tab, index) => isActive(index));
+    const className = mergeDefaultClassName(this.props, 'ax-tabs');
 
     return (
-      <div className="ax-tabs">
+      <div {...blacklist(this.props, ['children'])} className={className}>
         <ul className="ax-tabs__nav">
           {tabTitles.map((title, index) => {
-            const classes = classnames('ax-tabs__nav-item', {
+            const tabClassName = classnames('ax-tabs__nav-item', {
               'ax-tabs__nav-item--active': isActive(index),
             });
 
             return (
-              <li className={classes} key={index} onClick={() => this.activateTab(index)}>
+              <li className={tabClassName} key={index} onClick={() => this.activateTab(index)}>
                 <Link className="ax-tabs__nav-link" supressStyle={true}>
                   {title}
                 </Link>

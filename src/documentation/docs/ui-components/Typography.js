@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CodeTabset from 'documentation/components/CodeTabset';
 import CodeSnippet from 'documentation/components/CodeSnippet';
 import { Card, CardTitle, CardContent } from 'axiom/react';
-import { Link, List, ListItem } from 'axiom/react';
+import { Heading, Italic, Link, List, ListItem, Paragraph, Strong, Weak } from 'axiom/react';
 
 export default class TypographyDocs extends Component {
   static imports = {
@@ -20,34 +20,46 @@ export default class TypographyDocs extends Component {
         <Card>
           <CardTitle title="Sizing" />
           <CardContent>
-            <h1>h1. <strong>Strong</strong> Standard <span className="ax-text--weak">Weak</span></h1>
-            <h2>h2. <strong>Strong</strong> Standard <span className="ax-text--weak">Weak</span></h2>
-            <h3>h3. <strong>Strong</strong> Standard <span className="ax-text--weak">Weak</span></h3>
-            <h4>h4. <strong>Strong</strong> Standard <span className="ax-text--weak">Weak</span></h4>
-            <h5>h5. <strong>Strong</strong> Standard <span className="ax-text--weak">Weak</span></h5>
-            <p>p. <strong>Strong</strong> Standard <span className="ax-text--weak">Weak</span></p>
-            <p><small>small. <strong>Strong</strong> Standard <span className="ax-text--weak">Weak</span></small></p>
+            <Heading level={1}>h1. <Strong>Strong</Strong> Standard <Weak>Weak</Weak></Heading>
+            <Heading level={2}>h2. <Strong>Strong</Strong> Standard <Weak>Weak</Weak></Heading>
+            <Heading level={3}>h3. <Strong>Strong</Strong> Standard <Weak>Weak</Weak></Heading>
+            <Heading level={4}>h4. <Strong>Strong</Strong> Standard <Weak>Weak</Weak></Heading>
+            <Heading level={5}>h5. <Strong>Strong</Strong> Standard <Weak>Weak</Weak></Heading>
+            <Paragraph>p. <Strong>Strong</Strong> Standard <Weak>Weak</Weak></Paragraph>
+            <Paragraph><small>small. <Strong>Strong</Strong> Standard <Weak>Weak</Weak></small></Paragraph>
 
-            <CodeSnippet language="html">
-              <h1 />
-              <h2 />
-              <h3 />
-              <h4 />
-              <h5 />
-              <p />
-              <small />
-            </CodeSnippet>
+            <CodeTabset>
+              <CodeSnippet language="html">
+                <Heading level={1} />
+                <Heading level={2} />
+                <Heading level={3} />
+                <Heading level={4} />
+                <Heading level={5} />
+                <Paragraph />
+                <small />
+              </CodeSnippet>
+              <CodeSnippet language="jsx">{`
+                <Heading level={1} />
+                <Heading level={2} />
+                <Heading level={3} />
+                <Heading level={4} />
+                <Heading level={5} />
+                <Paragraph />
+                <small />
+              `}</CodeSnippet>
+            </CodeTabset>
           </CardContent>
         </Card>
 
         <Card>
           <CardTitle title="Links" />
           <CardContent>
-            <h1>Lorem ipsum dolor sit amet, <Link>consectetur</Link> adipiscing
-                elit. Donec tempus ut felis vitae hendrerit.</h1>
+            <Heading level={1}>Lorem ipsum dolor sit amet, <Link>consectetur</Link> adipiscing
+                elit. Donec tempus ut felis vitae hendrerit.</Heading>
 
-            <p>Lorem ipsum dolor sit amet, <Link>consectetur</Link> adipiscing
-               elit. Donec tempus ut felis vitae hendrerit.</p>
+            <Paragraph>
+              Lorem ipsum dolor sit amet, <Link>consectetur</Link> adipiscing elit. Donec tempus ut felis vitae hendrerit.
+            </Paragraph>
 
             <CodeTabset>
               <CodeSnippet language="html">
@@ -63,57 +75,79 @@ export default class TypographyDocs extends Component {
         <Card>
           <CardTitle title="Decoration and style modifiers" />
           <CardContent>
-            <p>This text is <strong>Bold</strong></p>
-            <p>This text is <em>Italicized</em></p>
-            <p>This text is <u>Underlined</u></p>
-            <p>This text is <del>Strike Through</del></p>
+            <Paragraph>This text is <Strong>Bold</Strong></Paragraph>
+            <Paragraph>This text is <Italic>Italicized</Italic></Paragraph>
+            <Paragraph>This text is <u>Underlined</u></Paragraph>
+            <Paragraph>This text is <del>Strike Through</del></Paragraph>
 
-            <CodeSnippet language="html">
-              <strong />
-              <em />
-              <u />
-              <del />
-            </CodeSnippet>
+            <CodeTabset>
+              <CodeSnippet language="html">
+                <Strong />
+                <Italic />
+                <u />
+                <del />
+              </CodeSnippet>
+              <CodeSnippet language="jsx">{`
+                <Strong />
+                <Italic />
+                <u />
+                <del />
+              `}</CodeSnippet>
+            </CodeTabset>
           </CardContent>
         </Card>
 
         <Card>
           <CardTitle title="Alignment modifiers" />
           <CardContent>
-            <p className="ax-text--left">This text is left aligned.</p>
-            <p className="ax-text--center">This text is center aligned.</p>
-            <p className="ax-text--right">This text is right aligned.</p>
+            <Paragraph textLeft={true}>This text is left aligned.</Paragraph>
+            <Paragraph textCenter={true}>This text is center aligned.</Paragraph>
+            <Paragraph textRight={true}>This text is right aligned.</Paragraph>
 
-            <CodeSnippet language="html">
-              <p className="ax-text--left" />
-              <p className="ax-text--center" />
-              <p className="ax-text--right" />
-            </CodeSnippet>
+            <CodeTabset>
+              <CodeSnippet language="html">
+                <Paragraph textLeft={true} />
+                <Paragraph textCenter={true} />
+                <Paragraph textRight={true} />
+              </CodeSnippet>
+              <CodeSnippet language="jsx">{`
+                <Paragraph textLeft={true} />
+                <Paragraph textCenter={true} />
+                <Paragraph textRight={true} />
+              `}</CodeSnippet>
+            </CodeTabset>
           </CardContent>
         </Card>
 
         <Card>
           <CardTitle title="Case modifiers" />
           <CardContent>
-            <p className="ax-text--uppercase">Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Donec tempus ut felis vitae hendrerit.</p>
-            <p className="ax-text--capitalize">Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Donec tempus ut felis vitae hendrerit.</p>
-            <p className="ax-text--lowercase">Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Donec tempus ut felis vitae hendrerit.</p>
+            <Paragraph textCase="upper">Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Donec tempus ut felis vitae hendrerit.</Paragraph>
+            <Paragraph textCase="capital">Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Donec tempus ut felis vitae hendrerit.</Paragraph>
+            <Paragraph textCase="lower">Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Donec tempus ut felis vitae hendrerit.</Paragraph>
 
-            <CodeSnippet language="html">
-              <p className="ax-text--uppercase" />
-              <p className="ax-text--capitalize" />
-              <p className="ax-text--lowercase" />
-            </CodeSnippet>
+            <CodeTabset>
+              <CodeSnippet language="html">
+                <Paragraph textCase="upper" />
+                <Paragraph textCase="capital" />
+                <Paragraph textCase="lower" />
+              </CodeSnippet>
+              <CodeSnippet language="jsx">{`
+                <Paragraph textCase="upper" />
+                <Paragraph textCase="capital" />
+                <Paragraph textCase="lower" />
+              `}</CodeSnippet>
+            </CodeTabset>
           </CardContent>
         </Card>
 
         <Card>
           <CardTitle title="Lists" />
           <CardContent>
-            <h5>Ordered List</h5>
+            <Heading level={5}>Ordered List</Heading>
             <List ordered={true}>
               <ListItem>Lorem ipsum dolor sit amet</ListItem>
               <ListItem>Consectetur adipiscing elit</ListItem>
@@ -134,7 +168,7 @@ export default class TypographyDocs extends Component {
               `}</CodeSnippet>
             </CodeTabset>
 
-            <h5>Unordered List</h5>
+            <Heading level={5}>Unordered List</Heading>
             <List ordered={false}>
               <ListItem>Lorem ipsum dolor sit amet</ListItem>
               <ListItem>Consectetur adipiscing elit</ListItem>
@@ -155,7 +189,7 @@ export default class TypographyDocs extends Component {
               `}</CodeSnippet>
             </CodeTabset>
 
-            <h5>Inline list</h5>
+            <Heading level={5}>Inline list</Heading>
             <List inline={true}>
               <ListItem>Lorem ipsum dolor sit amet</ListItem>
               <ListItem>Consectetur adipiscing elit</ListItem>

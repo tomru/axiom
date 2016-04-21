@@ -35,6 +35,11 @@ export { default as Tr } from './components/Table/TableRow';
 export { default as Th } from './components/Table/TableHeaderCell';
 export { default as Td } from './components/Table/TableCell';
 
+export { default as Heading } from './components/Typography/Heading';
+export { default as Italic } from './components/Typography/Italic';
 export { default as Link } from './components/Typography/Link';
 export { default as List } from './components/Typography/List';
 export { default as ListItem } from './components/Typography/ListItem';
+export { default as Paragraph } from './components/Typography/Paragraph';
+export { default as Strong } from './components/Typography/Strong';
+export { default as Weak } from './components/Typography/Weak';

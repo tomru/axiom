@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import classnames from 'classnames';
 import { Card, CardContent } from 'axiom/react';
 import { Jumbotron } from 'axiom/react';
+import { Heading } from 'axiom/react';
 import { LayoutContent, LayoutFooter } from 'axiom/react/layouts/established';
 import { findByActive } from 'documentation/utils/navigation';
 import ImportPanel from 'documentation/components/ImportPanel';
@@ -27,8 +28,8 @@ export class Docs extends Component {
           <LayoutContent>
             <Card transparent={true}>
               <CardContent>
-                <h4>{activeNavItems[0].name}</h4>
-                <h2>{activeNavItems[1].name}</h2>
+                <Heading level={4}>{activeNavItems[0].name}</Heading>
+                <Heading level={2}>{activeNavItems[1].name}</Heading>
               </CardContent>
             </Card>
 

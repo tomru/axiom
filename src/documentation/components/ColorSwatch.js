@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import { colorAccentBaseVariation, colorBaseVariation } from 'sass-vars';
+import { Grid, GridCell } from 'axiom/react';
+import { Strong } from 'axiom/react';
 
 export default class ColorSwatch extends Component {
   render() {
@@ -11,17 +13,31 @@ export default class ColorSwatch extends Component {
     return (
       <div className="dm-color-box__container">
         <div className={`dm-color-box dm-color-box--base dm-color--${name}--${colorBaseVariation}`}>
-          <strong className="ax-text--ellipsis">$color-{name}</strong>
-          <p className="dm-color-box--base__stats">
-            {colorBaseVariation}
-            {color[colorBaseVariation]}
-          </p>
+          <Strong textEllipsis={true}>$color-{name}</Strong>
+          <div className="dm-color-box--base__stats">
+            <Grid>
+              <GridCell>
+                {colorBaseVariation}
+              </GridCell>
+
+              <GridCell shrink={true}>
+                {color[colorBaseVariation]}
+              </GridCell>
+            </Grid>
+          </div>
         </div>
 
         {nonAccents.map((variation) =>
           <div className={`dm-color-box dm-color--${name}--${variation}`} key={variation}>
-            {variation}
-            {color[variation]}
+            <Grid>
+              <GridCell>
+                {variation}
+              </GridCell>
+
+              <GridCell shrink={true}>
+                {color[variation]}
+              </GridCell>
+            </Grid>
           </div>
         )}
 
@@ -37,8 +53,15 @@ export default class ColorSwatch extends Component {
 
               return (
                 <div className={classes} key={variation}>
-                  {variation}
-                  {color[variation]}
+                  <Grid>
+                    <GridCell>
+                      {variation}
+                    </GridCell>
+
+                    <GridCell shrink={true}>
+                      {color[variation]}
+                    </GridCell>
+                  </Grid>
                 </div>
               );
             });

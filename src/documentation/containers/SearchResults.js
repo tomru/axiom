@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Card, CardTitle, CardContent } from 'axiom/react';
 import { Icon } from 'axiom/react';
-import { Link } from 'axiom/react';
+import { Heading, Italic, Link, Paragraph } from 'axiom/react';
 import { Indicator } from 'axiom/react';
 import { formatNumber } from 'axiom/common/format-utils';
 import { LayoutContent, LayoutFullHeightContainer } from 'axiom/react/layouts/established';
@@ -24,7 +24,7 @@ export class SearchResults extends Component {
         <LayoutFullHeightContainer vAlign="middle" hAlign="center">
           <LayoutContent>
             <Card transparent={true}>
-              <CardContent  className="ax-text--center">
+              <CardContent textCenter={true}>
                 <Indicator />
               </CardContent>
             </Card>
@@ -38,9 +38,9 @@ export class SearchResults extends Component {
         <LayoutFullHeightContainer vAlign="middle" hAlign="center">
           <LayoutContent>
             <Card transparent={true}>
-              <CardContent  className="ax-text--center">
+              <CardContent textCenter={true}>
                 <Icon name="binoculars" size="5x" />
-                <h4>There's no results, but don't give up keep looking.</h4>
+                <Heading level={4}>There's no results, but don't give up keep looking.</Heading>
               </CardContent>
             </Card>
           </LayoutContent>
@@ -54,10 +54,10 @@ export class SearchResults extends Component {
           <CardTitle title="Search Results" />
           {results.map(({name, text, to, meta}, index) =>
             <CardContent key={index}>
-              <h5 className="ax-text--no-space">
-                <Link to={to}>{name} - <em className="ax-text--weak">{to}</em></Link>
-              </h5>
-              <p className="ax-text--no-space">{meta.description}</p>
+              <Heading level={5} space={false}>
+                <Link to={to}>{name} - <Italic textWeak={true}>{to}</Italic></Link>
+              </Heading>
+              <Paragraph space={false}>{meta.description}</Paragraph>
             </CardContent>
           )}
         </Card>

@@ -4,6 +4,7 @@ import CodeSnippet from 'documentation/components/CodeSnippet';
 import CodeTabset from 'documentation/components/CodeTabset';
 import { Button, ButtonGroup } from 'axiom/react';
 import { Card, CardContent, CardTitle } from 'axiom/react';
+import { Heading } from 'axiom/react';
 
 export default class ButtonDocs extends Component {
   static imports = {
@@ -22,7 +23,7 @@ export default class ButtonDocs extends Component {
         <Card>
           <CardTitle title="Colored Buttons" />
           <CardContent>
-            <h5>Palette Colors</h5>
+            <Heading level={5}>Palette Colors</Heading>
             <ButtonGroup>
               {colorPalette.map((colors) => {
                 return colors.map(({ name }, bIndex) => {
@@ -33,7 +34,7 @@ export default class ButtonDocs extends Component {
               })}
             </ButtonGroup>
 
-            <h5>UI Colors</h5>
+            <Heading level={5}>UI Colors</Heading>
             {colorAliases.map(({heading, colors}) => {
               return [
                 <p key="heading">{heading}</p>,
@@ -49,7 +50,7 @@ export default class ButtonDocs extends Component {
               ];
             })}
 
-            <h5>Primary</h5>
+            <Heading level={5}>Primary</Heading>
             <ButtonGroup>
               <Button color="primary">Primary</Button>
             </ButtonGroup>

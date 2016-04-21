@@ -1,13 +1,18 @@
-import React, { Component } from 'react';
-import classnames from 'classnames';
+import React, { Component, PropTypes } from 'react';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class CardContent extends Component {
+  static propTypes = {
+    ...defaultPropTypes,
+    children: PropTypes.node,
+  };
+
   render() {
-    const {children, className} = this.props;
-    const classes = classnames(className, 'ax-card__content');
+    const { children } = this.props;
+    const className = mergeDefaultClassName(this.props, 'ax-card__content');
 
     return (
-      <div className={classes}>
+      <div {...this.props} className={className}>
         {children}
       </div>
     );

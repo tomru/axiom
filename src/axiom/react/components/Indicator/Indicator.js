@@ -1,17 +1,18 @@
 import React, { PropTypes, Component } from 'react';
-import classnames from 'classnames';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class Indicator extends Component {
   static propTypes = {
-    children: PropTypes.string,
+    ...defaultPropTypes,
+    children: PropTypes.node,
   };
 
   render() {
     const { children } = this.props;
-    const classes = classnames('ax-indicator__container');
+    const className = mergeDefaultClassName(this.props, 'ax-indicator__container');
 
     return (
-      <div className={classes}>
+      <div {...this.props} className={className}>
         <div className="ax-indicator" />
         {children}
       </div>

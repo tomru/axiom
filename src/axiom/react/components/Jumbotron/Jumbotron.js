@@ -1,12 +1,20 @@
 import React, { PropTypes, Component } from 'react';
-import classnames from 'classnames';
 import { colorBaseVariation } from 'sass-vars';
+import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class Jumbotron extends Component {
+  static propTypes = {
+    ...defaultPropTypes,
+    children: PropTypes.node,
+    image: PropTypes.string,
+    color: PropTypes.string,
+    overlay: PropTypes.bool,
+    spaced: PropTypes.bool,
+  };
+
   render() {
     const {
       children,
-      className,
       image,
       color,
       overlay,
@@ -14,8 +22,7 @@ export default class Jumbotron extends Component {
       variation = colorBaseVariation,
     } = this.props;
 
-    const classes = classnames(
-      className,
+    const className = mergeDefaultClassName(this.props,
       'ax-jumbotron', {
         [`ax-jumbotron--${color}--${variation}`]: color,
         'ax-jumbotron--image': image,
@@ -29,7 +36,7 @@ export default class Jumbotron extends Component {
     };
 
     return (
-      <div className={classes} style={style}>
+      <div {...this.props} className={className} style={style}>
         {children}
       </div>
     );
