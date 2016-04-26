@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
+import { PROP_TYPES_GLOBAL, mergeDefaultClassName } from '../../defaults';
 import { blacklist } from '../../utils';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class CheckBox extends Component {
   static propTypes = {
-    ...defaultPropTypes,
+    ...PROP_TYPES_GLOBAL,
     children: PropTypes.node,
     inline: PropTypes.bool,
   };

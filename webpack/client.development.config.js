@@ -10,11 +10,11 @@ export default {
   entry: [
     `webpack-dev-server/client?http://${config.webpack.devServerHostname}:${config.webpack.devServerPort}`,
     'webpack/hot/only-dev-server',
-    config.entries.documentation.client,
+    config.entries.styleGuide.client,
   ],
   output: {
     ...webpackConfig.output,
-    filename: config.output.documentation.clientDevJSFilename,
+    filename: config.output.styleGuide.clientDevJSFilename,
     chunkFilename: '[name].[id].js',
     publicPath: `http://${config.webpack.devServerHostname}:${config.webpack.devServerPort}/${config.output.folderName}/`,
     hotUpdateMainFilename: 'update/[hash]/update.json',
@@ -47,11 +47,6 @@ export default {
         'css',
         'autoprefixer',
         'sass',
-      ],
-      include: [
-        config.paths.documentation,
-        config.paths.axiomSass,
-        config.paths.nodeModules,
       ],
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,

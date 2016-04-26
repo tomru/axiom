@@ -9,11 +9,11 @@ export default {
   debug: false,
   devtool: 'source-map',
   entry: [
-    config.entries.documentation.server,
+    config.entries.styleGuide.server,
   ],
   output: {
     path: config.output.path,
-    filename: config.output.documentation.serverDevJSFilename,
+    filename: config.output.styleGuide.serverDevJSFilename,
   },
   plugins: [
     ...config.webpack.aliases,
@@ -29,11 +29,6 @@ export default {
     }),
   ],
   externals: [webpackNodeExternals()],
-  resolve: {
-    alias: {
-      'sass-vars': config.paths.sassConfig,
-    },
-  },
   module: {
     loaders: [{
       test: /\.json$/,

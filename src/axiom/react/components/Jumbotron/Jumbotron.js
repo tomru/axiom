@@ -1,10 +1,11 @@
 import React, { PropTypes, Component } from 'react';
-import { colorBaseVariation } from 'sass-vars';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
+import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import { colorBaseVariation } from '../../../sass';
 
 export default class Jumbotron extends Component {
   static propTypes = {
-    ...defaultPropTypes,
+    ...PROP_TYPES_GLOBAL,
+    ...PROP_TYPES_TEXT,
     children: PropTypes.node,
     image: PropTypes.string,
     color: PropTypes.string,

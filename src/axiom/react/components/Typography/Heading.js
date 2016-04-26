@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from 'react';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
+import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
 
 export default class Heading extends Component {
   static propTypes = {
-    ...defaultPropTypes,
+    ...PROP_TYPES_GLOBAL,
+    ...PROP_TYPES_TEXT,
     level: PropTypes.oneOf([1, 2, 3, 4, 5]).isRequired,
     space: PropTypes.bool,
   };

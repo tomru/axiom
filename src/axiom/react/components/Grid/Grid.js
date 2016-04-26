@@ -1,13 +1,17 @@
 import React, { PropTypes, Component } from 'react';
-import { breakpoints, gridGutters } from 'sass-vars';
+import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
 import { classHelper } from '../../utils';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
+import { breakpoints, gridGutters } from '../../../sass';
 
+/**
+ * Grid
+ */
 export default class Grid extends Component {
   static propTypes = {
-    ...defaultPropTypes,
-    children: PropTypes.node,
-    responsive: PropTypes.bool,
+    ...PROP_TYPES_GLOBAL,
+    ...PROP_TYPES_TEXT,
+    children: PropTypes.node.isRequired,
+    responsive: PropTypes.oneOf([false]),
     gutters: PropTypes.oneOf([false, ...gridGutters.map(({id}) => id)]),
     vGutters: PropTypes.bool,
     hGutters: PropTypes.bool,

@@ -1,22 +1,25 @@
 import { PropTypes } from 'react';
 import classnames from 'classnames';
-import { breakpoints } from 'sass-vars';
+import { breakpoints } from '../sass';
 import { classHelper } from './utils';
 
-export const defaultPropTypes = {
+export const PROP_TYPES_GLOBAL = {
   className: PropTypes.string,
   contain: PropTypes.bool,
+  hiddenUntil: PropTypes.oneOf(breakpoints.map(({id}) => id)),
+  visibleUntil: PropTypes.oneOf(breakpoints.map(({id}) => id)),
+};
+
+export const PROP_TYPES_TEXT = {
   textLeft: PropTypes.oneOf([true, ...breakpoints.map(({id}) => id)]),
   textCenter: PropTypes.oneOf([true, ...breakpoints.map(({id}) => id)]),
   textRight: PropTypes.oneOf([true, ...breakpoints.map(({id}) => id)]),
   textBreak: PropTypes.oneOf(['none', 'all', 'word']),
   textCase: PropTypes.oneOf(['upper', 'capital', 'lower']),
   textEllipsis: PropTypes.bool,
-  hiddenUntil: PropTypes.oneOf(breakpoints.map(({id}) => id)),
-  visibleUntil: PropTypes.oneOf(breakpoints.map(({id}) => id)),
 };
 
-export function defaultClassName(props = {}) {
+function defaultClassName(props = {}) {
   return classnames(props.className, {
     'ax-text--left': props.textLeft === true,
     'ax-text--center': props.textCenter === true,

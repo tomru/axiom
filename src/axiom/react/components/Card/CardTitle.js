@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
+import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
 import Grid from '../Grid/Grid';
 import GridCell from '../Grid/GridCell';
 
 export default class CardTitle extends Component {
   static propTypes = {
-    ...defaultPropTypes,
+    ...PROP_TYPES_GLOBAL,
+    ...PROP_TYPES_TEXT,
     title: PropTypes.string,
   };
 

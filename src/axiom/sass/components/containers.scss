@@ -1,0 +1,5 @@
+@import '../core/mixins';
+
+.ax-container--block {
+  @include blockSpace();
+}

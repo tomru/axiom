@@ -1,12 +1,13 @@
 import React, { Component, PropTypes } from 'react';
-import { breakpoints } from 'sass-vars';
+import { breakpoints } from '../../../sass';
+import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
 import { classHelper } from '../../utils';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 import Icon from '../Icon/Icon';
 
 export default class Label extends Component {
   static propTypes = {
-    ...defaultPropTypes,
+    ...PROP_TYPES_GLOBAL,
+    ...PROP_TYPES_TEXT,
     children: PropTypes.node,
     color: PropTypes.string,
     size: PropTypes.oneOf(['sm', 'lg']),

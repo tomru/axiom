@@ -35,7 +35,6 @@ export default {
     { id: 'sm', width: layoutWidthSm },
     { id: 'md', width: layoutWidthMd },
     { id: 'lg', width: layoutWidthLg },
-    { id: 'xl', width: '1400px' },
   ],
 
   borderWidthSm,

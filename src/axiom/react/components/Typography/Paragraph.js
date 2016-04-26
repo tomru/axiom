@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from 'react';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
+import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
 
 export default class Paragraph extends Component {
   static propTypes = {
-    ...defaultPropTypes,
+    ...PROP_TYPES_GLOBAL,
+    ...PROP_TYPES_TEXT,
     children: PropTypes.node,
     space: PropTypes.bool,
   };

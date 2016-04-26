@@ -1,45 +1,52 @@
-export { default as Avatar } from './components/Avatar/Avatar';
+export { Avatar as Avatar } from './components/Avatar';
 
-export { default as Button } from './components/Button/Button';
-export { default as ButtonGroup } from './components/Button/ButtonGroup';
+export { Button as Button } from './components/Button';
+export { ButtonGroup as ButtonGroup } from './components/Button';
 
-export { default as Card } from './components/Card/Card';
-export { default as CardContent } from './components/Card/CardContent';
-export { default as CardTitle } from './components/Card/CardTitle';
+export { Card as Card } from './components/Card';
+export { CardContent as CardContent } from './components/Card';
+export { CardTitle as CardTitle } from './components/Card';
 
-export { default as CheckBox } from './components/Form/CheckBox';
-export { default as Form } from './components/Form/Form';
-export { default as RadioButton } from './components/Form/RadioButton';
-export { default as TextArea } from './components/Form/TextArea';
-export { default as TextInput } from './components/Form/TextInput';
+export { BlockContainer as BlockContainer } from './components/Containers';
 
-export { default as Grid } from './components/Grid/Grid';
-export { default as GridCell } from './components/Grid/GridCell';
+export { CheckBox as CheckBox } from './components/Form';
+export { Form as Form } from './components/Form';
+export { RadioButton as RadioButton } from './components/Form';
+export { TextArea as TextArea } from './components/Form';
+export { TextInput as TextInput } from './components/Form';
 
-export { default as Icon } from './components/Icon/Icon';
+export { Grid as Grid } from './components/Grid';
+export { GridCell as GridCell } from './components/Grid';
 
-export { default as Jumbotron } from './components/Jumbotron/Jumbotron';
+export { Icon as Icon } from './components/Icon';
 
-export { default as Label } from './components/Label/Label';
-export { default as LabelGroup } from './components/Label/LabelGroup';
+export { Image as Image } from './components/Image';
 
-export { default as Indicator } from './components/Indicator/Indicator';
+export { Jumbotron as Jumbotron } from './components/Jumbotron';
 
-export { default as Tab } from './components/Tabset/Tab';
-export { default as Tabset } from './components/Tabset/Tabset';
+export { Label as Label } from './components/Label';
+export { LabelGroup as LabelGroup } from './components/Label';
 
-export { default as Table } from './components/Table/Table';
-export { default as Thead } from './components/Table/TableHead';
-export { default as Tbody } from './components/Table/TableBody';
-export { default as Tr } from './components/Table/TableRow';
-export { default as Th } from './components/Table/TableHeaderCell';
-export { default as Td } from './components/Table/TableCell';
+export { Indicator as Indicator } from './components/Indicator';
 
-export { default as Heading } from './components/Typography/Heading';
-export { default as Italic } from './components/Typography/Italic';
-export { default as Link } from './components/Typography/Link';
-export { default as List } from './components/Typography/List';
-export { default as ListItem } from './components/Typography/ListItem';
-export { default as Paragraph } from './components/Typography/Paragraph';
-export { default as Strong } from './components/Typography/Strong';
-export { default as Weak } from './components/Typography/Weak';
+export { Tab as Tab } from './components/Tabset';
+export { Tabset as Tabset } from './components/Tabset';
+
+export { Table as Table } from './components/Table';
+export { Thead as Thead } from './components/Table';
+export { Tbody as Tbody } from './components/Table';
+export { Tr as Tr } from './components/Table';
+export { Th as Th } from './components/Table';
+export { Td as Td } from './components/Table';
+
+export { Heading as Heading } from './components/Typography';
+export { Italic as Italic } from './components/Typography';
+export { Link as Link } from './components/Typography';
+export { List as List } from './components/Typography';
+export { ListItem as ListItem } from './components/Typography';
+export { Paragraph as Paragraph } from './components/Typography';
+export { Small as Small } from './components/Typography';
+export { Strike as Strike } from './components/Typography';
+export { Strong as Strong } from './components/Typography';
+export { Underline as Underline } from './components/Typography';
+export { Weak as Weak } from './components/Typography';

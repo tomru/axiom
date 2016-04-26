@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
+import { PROP_TYPES_GLOBAL, mergeDefaultClassName } from '../../defaults';
 
 export default class Icon extends Component {
   static propTypes = {
-    ...defaultPropTypes,
+    ...PROP_TYPES_GLOBAL,
     name: PropTypes.string.isRequired,
     size: PropTypes.string,
     fixedWidth: PropTypes.bool,

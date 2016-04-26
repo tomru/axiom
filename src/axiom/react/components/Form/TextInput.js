@@ -1,13 +1,13 @@
 import React, { Component, Children, cloneElement, PropTypes } from 'react';
 import classnames from 'classnames';
+import { PROP_TYPES_GLOBAL, mergeDefaultClassName } from '../../defaults';
 import { blacklist, findComponent } from '../../utils';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 
 export default class TextInput extends Component {
   static propTypes = {
-    ...defaultPropTypes,
+    ...PROP_TYPES_GLOBAL,
     children: PropTypes.node,
     icon: PropTypes.string,
     valid: PropTypes.bool,

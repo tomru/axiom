@@ -1,6 +1,6 @@
 import path from 'path';
 import { createAlias } from './utils/webpack';
-import { version } from './package.json';
+import { name, version } from './package.json';
 
 const outputFolderName = 'lib';
 
@@ -15,18 +15,20 @@ paths.axiom = path.join(paths.source, 'axiom');
 paths.axiomSass = path.join(paths.axiom, 'sass');
 paths.axiomReact = path.join(paths.axiom, 'react');
 
-paths.documentation = path.join(paths.source, 'documentation');
-paths.sassConfig = path.join(paths.documentation, 'style', 'index.js');
+paths.styleGuide = path.join(paths.source, 'style-guide');
+paths.sassConfig = path.join(paths.styleGuide, 'style', 'index.js');
 
 export const webpack = {
   devServerHostname: 'localhost',
   devServerPort: 8080,
   globals: {
+    __PACKAGE_NAME__: `"${name}"`,
     __VERSION__: `"${version}"`,
+    __OUTPUT_DIR__: `"${outputFolderName}"`,
   },
   aliases: [
     createAlias('axiom', paths.axiom),
-    createAlias('documentation', paths.documentation),
+    createAlias('style-guide', paths.styleGuide),
   ]
 };
 
@@ -42,18 +44,18 @@ export const nodeModules = {
 export const output = {
   folderName: outputFolderName,
   path: paths.output,
-  documentation: {
-    clientDevJSFilename: 'documentation.client.js',
-    clientProdJSFilename: 'documentation.client.min.js',
-    clientProdCSSFilename: 'documentation.client.min.css',
-    serverDevJSFilename: 'documentation.server.js',
-    serverProdJSFilename: 'documentation.server.js',
+  styleGuide: {
+    clientDevJSFilename: 'style-guide.client.js',
+    clientProdJSFilename: 'style-guide.client.min.js',
+    clientProdCSSFilename: 'style-guide.client.min.css',
+    serverDevJSFilename: 'style-guide.server.js',
+    serverProdJSFilename: 'style-guide.server.js',
   },
 };
 
 export const entries = {
-  documentation: {
-    client: path.join(paths.documentation, 'client.js'),
-    server: path.join(paths.documentation, 'server.js'),
+  styleGuide: {
+    client: path.join(paths.styleGuide, 'client.js'),
+    server: path.join(paths.styleGuide, 'server.js'),
   }
 };

@@ -1,12 +1,13 @@
 import React, { PropTypes, Component } from 'react';
-import { breakpoints } from 'sass-vars';
-import { classHelper } from '../../utils';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
+import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import { blacklist, classHelper } from '../../utils';
+import { breakpoints } from '../../../sass';
 import Icon from '../Icon/Icon';
 
 export default class Button extends Component {
   static propTypes = {
-    ...defaultPropTypes,
+    ...PROP_TYPES_GLOBAL,
+    ...PROP_TYPES_TEXT,
     children: PropTypes.node,
     color: PropTypes.string,
     size: PropTypes.oneOf(['sm', 'lg']),
@@ -27,7 +28,7 @@ export default class Button extends Component {
     );
 
     return (
-      <button {...this.props} className={className}>
+      <button {...blacklist(this.props, ['color'])} className={className}>
         {do {
           if (icon) {
             <Icon className="ax-button__icon" name={icon} />

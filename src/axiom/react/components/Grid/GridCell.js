@@ -1,11 +1,12 @@
 import React, { PropTypes, Component } from 'react';
-import { breakpoints } from 'sass-vars';
+import { breakpoints } from '../../../sass';
+import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
 import { classHelper } from '../../utils';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 
 export default class GridCell extends Component {
   static propTypes = {
-    ...defaultPropTypes,
+    ...PROP_TYPES_GLOBAL,
+    ...PROP_TYPES_TEXT,
     children: PropTypes.any,
     full: PropTypes.oneOf([true, ...breakpoints.map(({id}) => id)]),
     fit: PropTypes.oneOf([true, ...breakpoints.map(({id}) => id)]),

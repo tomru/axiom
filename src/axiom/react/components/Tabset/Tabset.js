@@ -1,12 +1,13 @@
 import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames';
+import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
 import { blacklist } from '../../utils';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
 import Link from '../Typography/Link';
 
 export default class Tabset extends Component {
   static propTypes = {
-    ...defaultPropTypes,
+    ...PROP_TYPES_GLOBAL,
+    ...PROP_TYPES_TEXT,
     children: PropTypes.node,
     activeTabIndex: PropTypes.number,
   };

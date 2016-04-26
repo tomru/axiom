@@ -23,7 +23,7 @@ export default class LayoutNavList extends Component {
 
     return (
       <ul className={classes}>
-        {items.map((item, index) =>
+        {items.filter(({hidden}) => !hidden).map((item, index) =>
           <LayoutNavListItem item={item} key={index} onClick={onItemClick} />
         )}
       </ul>

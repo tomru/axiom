@@ -1,11 +1,11 @@
 import moment from 'moment';
 
-const delimiter = ' ';
+const NUMBER_DELIMETER = ' ';
 
 export function formatNumber(n) {
   return n
     .toString()
-    .replace(/(\d)(?=(\d{3})+(?!\d))/g, `$1${delimiter}`);
+    .replace(/(\d)(?=(\d{3})+(?!\d))/g, `$1${NUMBER_DELIMETER}`);
 }
 
 

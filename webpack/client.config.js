@@ -9,16 +9,15 @@ export default {
   cache: false,
   debug: false,
   devtool: false,
-  entry: config.entries.documentation.client,
+  entry: config.entries.styleGuide.client,
   output: {
     path: config.output.path,
-    filename: config.output.documentation.clientProdJSFilename,
+    filename: config.output.styleGuide.clientProdJSFilename,
   },
   resolve: {
     alias: {
       axiom: config.paths.axiom,
-      'documentation': config.paths.documentation,
-      'sass-vars': config.paths.sassConfig,
+      'style-guide': config.paths.styleGuide,
     },
   },
   plugins: [
@@ -40,7 +39,7 @@ export default {
         NODE_ENV: '"production"',
       },
     }),
-    new ExtractTextPlugin(config.output.documentation.clientProdCSSFilename, {
+    new ExtractTextPlugin(config.output.styleGuide.clientProdCSSFilename, {
       allChunks: true,
     }),
   ],
@@ -57,11 +56,6 @@ export default {
         'style',
         `css!autoprefixer!sass`,
       ),
-      include: [
-        config.paths.documentation,
-        config.paths.axiom,
-        config.paths.nodeModules,
-      ],
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       loader: 'file-loader?name=fonts/font-awesome.[hash].[ext]',
@@ -72,10 +66,7 @@ export default {
     postLoaders: [{
       test: /\.js$/,
       loader: 'babel',
-      include: [
-        config.paths.documentation,
-        config.paths.axiom,
-      ],
+      exclude: /node_modules/,
     }],
   },
   sassLoader: {

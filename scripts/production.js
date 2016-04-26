@@ -8,5 +8,5 @@ export default function production() {
   clean()
     .then(() => buildServer())
     .then(() => buildClient())
-    .then(() => server(config.output.documentation.serverProdJSFilename));
+    .then(() => server(config.output.styleGuide.serverProdJSFilename));
 }

@@ -1,10 +1,9 @@
 import React, { PropTypes, Component } from 'react';
-import { defaultPropTypes, mergeDefaultClassName } from '../../defaults';
+import { PROP_TYPES_GLOBAL, mergeDefaultClassName } from '../../defaults';
 
 export default class Indicator extends Component {
   static propTypes = {
-    ...defaultPropTypes,
-    children: PropTypes.node,
+    ...PROP_TYPES_GLOBAL,
   };
 
   render() {

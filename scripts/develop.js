@@ -8,5 +8,5 @@ export default function develop() {
   clean()
     .then(() => watchServer())
     .then(() => watchClient())
-    .then(() => server(config.output.documentation.serverDevJSFilename));
+    .then(() => server(config.output.styleGuide.serverDevJSFilename));
 }
