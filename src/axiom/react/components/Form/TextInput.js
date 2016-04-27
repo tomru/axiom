@@ -1,18 +1,17 @@
-import React, { Component, Children, cloneElement, PropTypes } from 'react';
+import React, { Component, cloneElement } from 'react';
 import classnames from 'classnames';
-import { PROP_TYPES_GLOBAL, mergeDefaultClassName } from '../../defaults';
-import { blacklist, findComponent } from '../../utils';
+import { enhance, addDisplayName, addPropTypes, addClassName, findComponent } from '../../utils/components';
+import { blacklist } from '../../utils/props';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 
-export default class TextInput extends Component {
+export class TextInput extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    children: PropTypes.node,
-    icon: PropTypes.string,
-    valid: PropTypes.bool,
-    invalid: PropTypes.bool,
-    thinking: PropTypes.bool,
+    children: { node: true },
+    icon: { string: true },
+    valid: { bool: true },
+    invalid: { bool: true },
+    thinking: { bool: true },
   };
 
   getIcon() {
@@ -26,10 +25,10 @@ export default class TextInput extends Component {
   }
 
   render() {
-    const { children, icon, valid, invalid, thinking } = this.props;
+    const { className, children, icon, valid, invalid, thinking } = this.props;
     const button = findComponent(children, Button);
     const iconClasses = classnames({'ax-icon-spin': thinking});
-    const className = mergeDefaultClassName(this.props,
+    const classes = classnames(className,
       'ax-input__group', {
         'ax-input--valid': valid === true,
         'ax-input--invalid': invalid === true,
@@ -37,7 +36,7 @@ export default class TextInput extends Component {
     );
 
     return (
-      <label className={className}>
+      <label className={classes}>
         <div className="ax-input__button-container">
           <div className="ax-input__icon-container">
             <input className="ax-input" {...blacklist(this.props, ['children', 'className'])} />
@@ -63,3 +62,10 @@ export default class TextInput extends Component {
     );
   }
 }
+
+export default enhance(
+  TextInput,
+  addDisplayName('TextInput'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

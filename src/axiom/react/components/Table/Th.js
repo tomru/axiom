@@ -1,27 +1,33 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Th extends Component {
+export class Th extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
-    isNumber: PropTypes.bool,
-    sorting: PropTypes.oneOf([1, -1]),
+    children: { node: true },
+    isNumber: { bool: true },
+    sorting: { oneOf: [1, -1] },
   };
 
   render() {
-    const {children, isNumber, sorting} = this.props;
-    const className = mergeDefaultClassName(this.props, {
+    const { className, children, isNumber, sorting } = this.props;
+    const classes = classnames(className, {
       'ax-table__cell--number': isNumber === true,
       'ax-table__sort--asc': sorting === 1,
       'ax-table__sort--desc': sorting === -1,
     });
 
     return (
-      <th {...this.props} className={className}>
+      <th {...this.props} className={classes}>
         {children}
       </th>
     );
   }
 }
+
+export default enhance(
+  Th,
+  addDisplayName('Th'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

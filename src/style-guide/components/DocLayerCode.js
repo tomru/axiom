@@ -5,7 +5,7 @@ import {
   getLayersHtmlSnippets,
   getLayersJsxSnippets,
   getLayersJsSnippets,
-} from 'style-guide/utils/docs';
+} from 'style-guide/utils/docs-examples';
 
 export default class DocLayerCode extends Component {
   render()  {

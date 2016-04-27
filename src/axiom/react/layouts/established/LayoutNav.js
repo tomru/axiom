@@ -1,12 +1,13 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 import LayoutNavList from './LayoutNavList';
 
-export default class LayoutNav extends Component {
+export class LayoutNav extends Component {
   static propTypes = {
-    className: PropTypes.string,
-    items: PropTypes.array.isRequired,
-    onItemClick: PropTypes.func,
+    className: { string: true },
+    items: { array: true, isRequired: true },
+    onItemClick: { func: true },
   };
 
   render() {
@@ -23,3 +24,11 @@ export default class LayoutNav extends Component {
     );
   }
 }
+
+export default enhance(
+  LayoutNav,
+  addDisplayName('LayoutNav'),
+  addPropTypes('global'),
+  addClassName('global'),
+);
+

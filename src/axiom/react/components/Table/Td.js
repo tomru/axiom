@@ -1,24 +1,30 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Td extends Component {
+export class Td extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
-    isNumber: PropTypes.bool,
+    children: { node: true },
+    isNumber: { bool: true },
   };
 
   render() {
-    const {children, isNumber} = this.props;
-    const className = mergeDefaultClassName(this.props, {
+    const { className, children, isNumber } = this.props;
+    const classes = classnames(className, {
       'ax-table__cell--number': isNumber === true,
     });
 
     return (
-      <td {...this.props} className={className}>
+      <td {...this.props} className={classes}>
         {children}
       </td>
     );
   }
 }
+
+export default enhance(
+  Td,
+  addDisplayName('Td'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

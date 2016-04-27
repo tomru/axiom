@@ -1,17 +1,15 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, mergeDefaultClassName } from '../../defaults';
-import { blacklist } from '../../utils';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { blacklist } from '../../utils/props';
 
-export default class TextArea extends Component {
-  static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-  };
-
+export class TextArea extends Component {
   render() {
-    const className = mergeDefaultClassName(this.props, 'ax-input__group');
+    const { className } = this.props;
+    const classes = classnames(className, 'ax-input__group');
 
     return (
-      <label className={className}>
+      <label className={classes}>
         <textarea
           className="ax-textarea"
           {...blacklist(this.props, 'className')} />
@@ -19,3 +17,10 @@ export default class TextArea extends Component {
     );
   }
 }
+
+export default enhance(
+  TextArea,
+  addDisplayName('TextArea'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

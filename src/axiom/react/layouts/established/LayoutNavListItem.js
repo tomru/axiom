@@ -1,17 +1,19 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 import Link from '../../components/Typography/Link';
 import LayoutNavList from './LayoutNavList';
 
-export default class LayoutNavListItem extends Component {
+export class LayoutNavListItem extends Component {
   static propTypes = {
-    className: PropTypes.string,
-    item: PropTypes.object.isRequired,
-    onItemClick: PropTypes.func,
+    className: { string: true },
+    item: { object: true, isRequired: true },
+    onItemClick: { func: true },
   };
 
   render() {
     const {
+      className,
       onClick,
       item,
       item: {
@@ -30,11 +32,13 @@ export default class LayoutNavListItem extends Component {
       };
     }
 
-    const classes = classnames('ax-layout-nav__list-item', {
-      'ax-layout-nav__list-item--open': hasChildren && isOpen,
-      'ax-layout-nav__list-item--active': isActive,
-      'ax-layout-nav__list-item--has-submenu': hasChildren,
-    });
+    const classes = classnames(className,
+      'ax-layout-nav__list-item', {
+        'ax-layout-nav__list-item--open': hasChildren && isOpen,
+        'ax-layout-nav__list-item--active': isActive,
+        'ax-layout-nav__list-item--has-submenu': hasChildren,
+      }
+    );
 
     return (
       <li className={classes}>
@@ -56,3 +60,10 @@ export default class LayoutNavListItem extends Component {
     );
   }
 }
+
+export default enhance(
+  LayoutNavListItem,
+  addDisplayName('LayoutNavListItem'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

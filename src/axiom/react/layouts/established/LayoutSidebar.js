@@ -1,13 +1,24 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class LayoutSidebar extends Component {
+export class LayoutSidebar extends Component {
   render() {
-    const { children } = this.props;
+    const { children, className } = this.props;
+    const classes = classnames(className, 'ax-layout__sidebar');
 
     return (
-      <div className="ax-layout__sidebar">
+      <div className={classes}>
         {children}
       </div>
     );
   }
 }
+
+export default enhance(
+  LayoutSidebar,
+  addDisplayName('LayoutSidebar'),
+  addPropTypes('global'),
+  addClassName('global'),
+);
+

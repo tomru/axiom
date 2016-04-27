@@ -1,21 +1,26 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Tbody extends Component {
+export class Tbody extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
+    children: { node: true },
   };
 
   render() {
-    const {children} = this.props;
-    const className = mergeDefaultClassName(this.props);
+    const { children } = this.props;
 
     return (
-      <tbody {...this.props} className={className}>
+      <tbody {...this.props}>
         {children}
       </tbody>
     );
   }
 }
+
+export default enhance(
+  Tbody,
+  addDisplayName('Tbody'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

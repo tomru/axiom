@@ -1,17 +1,18 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { blacklist } from '../../utils/props';
 
-export default class Icon extends Component {
+export class Icon extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    name: PropTypes.string.isRequired,
-    size: PropTypes.string,
-    fixedWidth: PropTypes.bool,
+    name: { string: true, isRequired: true },
+    size: { string: true },
+    fixedWidth: { bool: true },
   };
 
   render() {
-    const { name, size, fixedWidth } = this.props;
-    const className = mergeDefaultClassName(this.props,
+    const { className, name, size, fixedWidth } = this.props;
+    const classes = classnames(className,
       'ax-icon',
       `ax-icon-${name}`, {
         'ax-icon-lg': size === 'lg',
@@ -24,7 +25,14 @@ export default class Icon extends Component {
     );
 
     return (
-      <i {...this.props} className={className} />
+      <i {...blacklist(this.props, ['name'])} className={classes} />
     );
   }
 }
+
+export default enhance(
+  Icon,
+  addDisplayName('Icon'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

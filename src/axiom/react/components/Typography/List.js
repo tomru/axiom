@@ -1,25 +1,25 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class List extends Component {
+export class List extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
-    ordered: PropTypes.bool,
-    inline: PropTypes.bool,
-    aligned: PropTypes.bool,
+    children: { node: true },
+    ordered: { bool: true },
+    inline: { bool: true },
+    aligned: { bool: true },
   };
 
   render() {
     const {
+      className,
       children,
       ordered,
       inline,
       aligned = !inline,
     } = this.props;
 
-    const className = mergeDefaultClassName(this.props,
+    const classes = classnames(className,
       'ax-list', {
         'ax-list--aligned': aligned === true,
         'ax-list--inline': inline === true,
@@ -28,16 +28,23 @@ export default class List extends Component {
 
     if (ordered === true) {
       return (
-        <ol {...this.props} className={className}>
+        <ol {...this.props} className={classes}>
           {children}
         </ol>
       );
     }
 
     return (
-      <ul {...this.props} className={className}>
+      <ul {...this.props} className={classes}>
         {children}
       </ul>
     );
   }
 }
+
+export default enhance(
+  List,
+  addDisplayName('List'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

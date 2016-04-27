@@ -67,7 +67,7 @@ export default {
     children: [{
       Container: ButtonGroup,
       snippetContent: true,
-      children: ['sm', '', 'lg'].map((size) => {
+      children: ['sm', 'md', 'lg'].map((size) => {
         return {
           Component: Button,
           props: {

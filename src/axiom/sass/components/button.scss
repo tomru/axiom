@@ -33,14 +33,14 @@ button {
 /**
  * Size buttons
  */
-.ax-button {
-  padding: $component-padding-v-sm $component-padding-h-sm;
-  font-size: $font-size-md;
-}
-
 .ax-button--sm {
   padding: 0 $component-padding-h-sm;
   font-size: $font-size-sm;
+}
+
+.ax-button--md {
+  padding: $component-padding-v-sm $component-padding-h-sm;
+  font-size: $font-size-md;
 }
 
 .ax-button--lg {

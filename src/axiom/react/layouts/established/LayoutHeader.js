@@ -1,27 +1,30 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 import { Grid, GridCell, Icon, Link } from '../../';
 
-export default class LayoutHeader extends Component {
+export class LayoutHeader extends Component {
   static contextTypes = {
     toggleSidebar: PropTypes.func,
   };
 
   render() {
-    const { children } = this.props;
+    const { className, children } = this.props;
     const { toggleSidebar } = this.context;
+    const classes = classnames(className, 'ax-layout__header');
 
     return (
-      <header className="ax-layout__header">
+      <header className={classes}>
         <Grid responsive={false} vAlign="middle">
-          <GridCell className="ax-visible-until--sm">
+          <GridCell visibleUntil="sm">
             <h3>{children}</h3>
           </GridCell>
 
-          <GridCell className="ax-hidden-until--sm">
+          <GridCell hiddenUntil="sm">
             <h2>{children}</h2>
           </GridCell>
 
-          <GridCell className="ax-visible-until--sm" shrink={true}>
+          <GridCell visibleUntil="sm" shrink={true}>
             <Link onClick={toggleSidebar}
                   inheritColor={true}
                   noDecoration={true}>
@@ -33,3 +36,10 @@ export default class LayoutHeader extends Component {
     );
   }
 }
+
+export default enhance(
+  LayoutHeader,
+  addDisplayName('LayoutHeader'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

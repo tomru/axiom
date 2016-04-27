@@ -1,21 +1,27 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class CardContent extends Component {
+export class CardContent extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
+    children: { node: true },
   };
 
   render() {
-    const { children } = this.props;
-    const className = mergeDefaultClassName(this.props, 'ax-card__content');
+    const { className, children } = this.props;
+    const classes = classnames(className, 'ax-card__content');
 
     return (
-      <div {...this.props} className={className}>
+      <div {...this.props} className={classes}>
         {children}
       </div>
     );
   }
 }
+
+export default enhance(
+  CardContent,
+  addDisplayName('CardContent'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

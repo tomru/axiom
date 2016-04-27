@@ -20,14 +20,14 @@
 /**
  * Size labels
  */
-.ax-label {
-  padding: $component-padding-v-sm $component-padding-h-sm;
-  font-size: $font-size-md;
-}
-
 .ax-label--sm {
   padding: 0 $component-padding-h-sm;
   font-size: $font-size-sm;
+}
+
+.ax-label--md {
+  padding: $component-padding-v-sm $component-padding-h-sm;
+  font-size: $font-size-md;
 }
 
 .ax-label--lg {

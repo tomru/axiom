@@ -1,7 +1,8 @@
-import React, { PropTypes, Component } from 'react';
-import classnames from 'classnames'
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class LayoutContent extends Component {
+export class LayoutContent extends Component {
   render() {
     const { children, className } = this.props;
     const classes = classnames(className, 'ax-layout__content');
@@ -13,3 +14,11 @@ export default class LayoutContent extends Component {
     );
   }
 }
+
+export default enhance(
+  LayoutContent,
+  addDisplayName('LayoutContent'),
+  addPropTypes('global'),
+  addClassName('global'),
+);
+

@@ -1,34 +1,35 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { blacklist } from '../../utils/props';
+import { addDynamicClass } from '../../utils/class-name';
 import { breakpoints } from '../../../sass';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
-import { classHelper } from '../../utils';
 import Icon from '../Icon/Icon';
 
-export default class Label extends Component {
+export class Label extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
-    color: PropTypes.string,
-    size: PropTypes.oneOf(['sm', 'lg']),
-    full: PropTypes.oneOf([true, ...breakpoints.map(({id}) => id)]),
-    icon: PropTypes.string,
+    children: { node: true },
+    color: { string: true },
+    size: { oneOf: ['sm', 'md', 'lg'] },
+    full: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
+    icon: { string: true, },
   };
 
   render() {
-    const { children, color, full, size, icon } = this.props;
-    const className = mergeDefaultClassName(this.props,
+    const { className, children, color, full, size = 'md', icon } = this.props;
+    const classes = classnames(className,
       'ax-label', {
         [`ax-label--${color}`]: color,
         'ax-label--sm': size === 'sm',
+        'ax-label--md': size === 'md',
         'ax-label--lg': size === 'lg',
         'ax-label--full': full === true,
       },
-      classHelper(breakpoints, ({id}) => full === id, ({id}) => `ax-label--full--${id}`),
+      addDynamicClass(breakpoints, ({id}) => full === id, ({id}) => `ax-label--full--${id}`),
     );
 
     return (
-      <span {...this.props} className={className}>
+      <span {...blacklist(this.props, ['color'])} className={classes}>
         {do {
           if (icon) {
             <Icon className="ax-label__icon" name={icon} />
@@ -40,3 +41,11 @@ export default class Label extends Component {
     );
   }
 }
+
+export default enhance(
+  Label,
+  addDisplayName('Label'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);
+

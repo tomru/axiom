@@ -1,21 +1,27 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class BlockContainer extends Component {
+export class BlockContainer extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
+    children: { node: true },
   };
 
   render() {
-    const { children } = this.props;
-    const className = mergeDefaultClassName(this.props, 'ax-container--block');
+    const { className, children } = this.props;
+    const classes = classnames(className, 'ax-container--block');
 
     return (
-      <div {...this.props} className={className}>
+      <div {...this.props} className={classes}>
         {children}
       </div>
     );
   }
 }
+
+export default enhance(
+  BlockContainer,
+  addDisplayName('BlockContainer'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

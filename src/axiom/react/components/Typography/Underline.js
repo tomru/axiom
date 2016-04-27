@@ -1,21 +1,25 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Underline extends Component {
+export class Underline extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
+    children: { node: true },
   };
 
   render() {
     const {children} = this.props;
-    const className = mergeDefaultClassName(this.props);
 
     return (
-      <u {...this.props} className={className}>
+      <u {...this.props}>
         {children}
       </u>
     );
   }
 }
+
+export default enhance(
+  Underline,
+  addDisplayName('Underline'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

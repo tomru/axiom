@@ -57,7 +57,7 @@ function buildJsxSnippet(layer, snippet = '') {
   }
 
   const { Component, props = {}, children, demoContent } = layer;
-  snippet += `<${Component.name} ${propsString(props)}`;
+  snippet += `<${Component.__ax_displayName} ${propsString(props)}`;
 
   if (children) {
     snippet += '>';
@@ -70,7 +70,7 @@ function buildJsxSnippet(layer, snippet = '') {
       snippet += children;
     }
 
-    snippet += `</${Component.name}>`;
+    snippet += `</${Component.__ax_displayName}>`;
   } else {
     snippet += '/>';
   }
@@ -103,4 +103,22 @@ export function getLayersJsSnippets(layer) {
     .filter((layer) => layer.code && layer.code.js)
     .map((layer) => buildJsSnippet(layer))
     .join('\n');
+}
+
+export function getModuleComponents(components = []) {
+  function extractComponents({children = [], Component}, extracted = []) {
+    if (!extracted.includes(Component)) {
+      extracted.push(Component);
+    }
+
+    children.forEach((child) => {
+      extractComponents(child, extracted);
+    });
+
+    return extracted;
+  }
+
+  const extractedComponents = []
+  components.forEach((c) => extractComponents(c, extractedComponents));
+  return extractedComponents;
 }

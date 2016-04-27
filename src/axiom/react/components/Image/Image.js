@@ -1,17 +1,22 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Image extends Component {
+export class Image extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
+    src: { string: true, isRequired: true },
   };
 
   render() {
-    const {children} = this.props;
-    const className = mergeDefaultClassName(this.props);
-
     return (
-      <img {...this.props} className={className} />
+      <img {...this.props} />
     );
   }
 }
+
+export default enhance(
+  Image,
+  addDisplayName('Image'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

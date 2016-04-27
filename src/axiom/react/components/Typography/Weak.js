@@ -1,21 +1,27 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Weak extends Component {
+export class Weak extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
+    children: { node: true },
   };
 
   render() {
-    const {children} = this.props;
-    const className = mergeDefaultClassName(this.props, 'ax-text--weak');
+    const {className, children} = this.props;
+    const classes = classnames(className, 'ax-text--weak');
 
     return (
-      <span {...this.props} className={className}>
+      <span {...this.props} className={classes}>
         {children}
       </span>
     );
   }
 }
+
+export default enhance(
+  Weak,
+  addDisplayName('Weak'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

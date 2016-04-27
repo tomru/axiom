@@ -1,33 +1,39 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Heading extends Component {
+export class Heading extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    level: PropTypes.oneOf([1, 2, 3, 4, 5]).isRequired,
-    space: PropTypes.bool,
+    level: { oneOf: [1, 2, 3, 4, 5], isRequired: true },
+    space: { bool: true },
   };
 
   render() {
-    const {level, space} = this.props;
-    const className = mergeDefaultClassName(this.props, {
+    const {className, level, space} = this.props;
+    const classes = classnames(className, {
       'ax-text--no-space': space === false,
     });
 
     switch (level) {
     case 1:
-      return <h1 {...this.props} className={className} />
+      return <h1 {...this.props} className={classes} />
     case 2:
-      return <h2 {...this.props} className={className} />
+      return <h2 {...this.props} className={classes} />
     case 3:
-      return <h3 {...this.props} className={className} />
+      return <h3 {...this.props} className={classes} />
     case 4:
-      return <h4 {...this.props} className={className} />
+      return <h4 {...this.props} className={classes} />
     case 5:
-      return <h5 {...this.props} className={className} />
+      return <h5 {...this.props} className={classes} />
     default:
       return null;
     }
   }
 }
+
+export default enhance(
+  Heading,
+  addDisplayName('Heading'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

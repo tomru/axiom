@@ -1,13 +1,23 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class LayoutMain extends Component {
+export class LayoutMain extends Component {
   render() {
-    const { children } = this.props;
+    const { className, children } = this.props;
+    const classes = classnames(className, 'ax-layout__main');
 
     return (
-      <main className="ax-layout__main">
+      <main className={classes}>
         { children }
       </main>
     );
   }
 }
+
+export default enhance(
+  LayoutMain,
+  addDisplayName('LayoutMain'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

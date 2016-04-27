@@ -1,26 +1,32 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Avatar extends Component {
+export class Avatar extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    src: PropTypes.string.isRequired,
-    size: PropTypes.oneOf(['sm', 'md', 'lg']),
+    src: { string: true, isRequired: true },
+    size: { oneOf: ['sm', 'md', 'lg'] },
   };
 
   render() {
-    const { size } = this.props;
-    const className = mergeDefaultClassName(this.props,
+    const { className, size = 'md' } = this.props;
+    const classes = classnames(className,
       'ax-avatar', {
         'ax-avatar--sm': size === 'sm',
-        'ax-avatar--md': size === 'md' || !size,
+        'ax-avatar--md': size === 'md',
         'ax-avatar--lg': size === 'lg',
       }
     );
 
     return (
-      <img {...this.props} className={className} />
+      <img {...this.props} className={classes} />
     );
   }
 }
+
+export default enhance(
+  Avatar,
+  addDisplayName('Avatar'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

@@ -1,13 +1,16 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 import LayoutContent from './LayoutContent';
 import LayoutLogo from './LayoutLogo';
 
-export default class LayoutTitle extends Component {
+export class LayoutTitle extends Component {
   render() {
-    const { children } = this.props;
+    const { children, className } = this.props;
+    const classes = classnames(className, 'ax-layout__title-container');
 
     return (
-      <div className="ax-layout__title-container">
+      <div className={classes}>
         <LayoutContent>
           <div className="ax-layout__logo">
             <LayoutLogo />
@@ -21,3 +24,10 @@ export default class LayoutTitle extends Component {
     );
   }
 }
+
+export default enhance(
+  LayoutTitle,
+  addDisplayName('LayoutTitle'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

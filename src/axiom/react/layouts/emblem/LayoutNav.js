@@ -1,12 +1,15 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 import LayoutContent from './LayoutContent';
 
-export default class LayoutNav extends Component {
+export class LayoutNav extends Component {
   render() {
-    const { children } = this.props;
+    const { children, className } = this.props;
+    const classes = classnames(className, 'ax-layout__nav-container');
 
     return (
-      <div className="ax-layout__nav-container">
+      <div className={classes}>
         <LayoutContent>
           <div className="ax-layout__nav">
             { children }
@@ -16,3 +19,10 @@ export default class LayoutNav extends Component {
     );
   }
 }
+
+export default enhance(
+  LayoutNav,
+  addDisplayName('LayoutNav'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

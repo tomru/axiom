@@ -1,15 +1,13 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
-import { blacklist } from '../../utils';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { blacklist } from '../../utils/props';
 import Link from '../Typography/Link';
 
-export default class Tabset extends Component {
+export class Tabset extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
-    activeTabIndex: PropTypes.number,
+    children: { node: true },
+    activeTabIndex: { number: true },
   };
 
   componentWillMount() {
@@ -29,16 +27,16 @@ export default class Tabset extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { className, children } = this.props;
     const { activeTabIndex } = this.state;
     const isActive = (index) => index === activeTabIndex;
     const tabs = Array.isArray(children) ? children : [children];
     const tabTitles = tabs.map(({props: {title}}) => title);
     const activeTab = tabs.find((tab, index) => isActive(index));
-    const className = mergeDefaultClassName(this.props, 'ax-tabs');
+    const classes = classnames(className, 'ax-tabs');
 
     return (
-      <div {...blacklist(this.props, ['children'])} className={className}>
+      <div {...blacklist(this.props, ['children'])} className={classes}>
         <ul className="ax-tabs__nav">
           {tabTitles.map((title, index) => {
             const tabClassName = classnames('ax-tabs__nav-item', {
@@ -60,3 +58,11 @@ export default class Tabset extends Component {
     );
   }
 }
+
+export default enhance(
+  Tabset,
+  addDisplayName('Tabset'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);
+

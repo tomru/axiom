@@ -1,18 +1,28 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class LayoutMain extends Component {
+export class LayoutMain extends Component {
   static contextTypes = {
     hideSidebar: PropTypes.func,
   };
 
   render() {
-    const { children, sidebarHide } = this.props;
+    const { className, children, sidebarHide } = this.props;
     const { hideSidebar } = this.context;
+    const classes = classnames(className, 'ax-layout__main');
 
     return (
-      <div className="ax-layout__main" onClick={hideSidebar}>
+      <div className={classes} onClick={hideSidebar}>
         {children}
       </div>
     );
   }
 }
+
+export default enhance(
+  LayoutMain,
+  addDisplayName('LayoutMain'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

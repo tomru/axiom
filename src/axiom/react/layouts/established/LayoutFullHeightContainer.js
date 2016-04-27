@@ -1,8 +1,12 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class LayoutFullHeightContainer extends Component {
-  static propTypes = {};
+export class LayoutFullHeightContainer extends Component {
+  static propTypes = {
+    vAlign: { oneOf: ['top', 'middle', 'bottom'] },
+    hAlign: { oneOf: ['left', 'center', 'right'] },
+  };
 
   render() {
     const { children, className, vAlign, hAlign } = this.props;
@@ -24,3 +28,10 @@ export default class LayoutFullHeightContainer extends Component {
     );
   }
 }
+
+export default enhance(
+  LayoutFullHeightContainer,
+  addDisplayName('LayoutFullHeightContainer'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

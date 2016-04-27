@@ -1,34 +1,35 @@
-import React, { PropTypes, Component } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
-import { blacklist, classHelper } from '../../utils';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { blacklist } from '../../utils/props';
+import { addDynamicClass } from '../../utils/class-name';
 import { breakpoints } from '../../../sass';
 import Icon from '../Icon/Icon';
 
-export default class Button extends Component {
+export class Button extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
-    color: PropTypes.string,
-    size: PropTypes.oneOf(['sm', 'lg']),
-    full: PropTypes.oneOf([true, ...breakpoints.map(({id}) => id)]),
-    icon: PropTypes.string,
+    children: { node: true },
+    color: { string: true },
+    size: { oneOf: ['sm', 'md', 'lg'] },
+    full: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
+    icon: { string: true, },
   };
 
   render() {
-    const { children, color, size, full, icon } = this.props;
-    const className = mergeDefaultClassName(this.props,
+    const { className, children, color, size = 'md', full, icon } = this.props;
+    const classes = classnames(className,
       'ax-button', {
         [`ax-button--${color}`]: color,
         'ax-button--sm': size === 'sm',
+        'ax-button--md': size === 'md',
         'ax-button--lg': size === 'lg',
         'ax-button--full': full === true,
       },
-      classHelper(breakpoints, ({id}) => full === id, ({id}) => `ax-button--full--${id}`),
+      addDynamicClass(breakpoints, ({id}) => full === id, ({id}) => `ax-button--full--${id}`),
     );
 
     return (
-      <button {...blacklist(this.props, ['color'])} className={className}>
+      <button {...blacklist(this.props, ['color'])} className={classes}>
         {do {
           if (icon) {
             <Icon className="ax-button__icon" name={icon} />
@@ -40,3 +41,10 @@ export default class Button extends Component {
     );
   }
 }
+
+export default enhance(
+  Button,
+  addDisplayName('Button'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

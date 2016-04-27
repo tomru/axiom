@@ -1,25 +1,25 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Table extends Component {
+export class Table extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
-    sortable: PropTypes.bool,
-    striped: PropTypes.bool,
-    borders: PropTypes.oneOf([true, 'v', 'h']),
+    children: { node: true },
+    sortable: { bool: true },
+    striped: { bool: true },
+    borders: { oneOf: [true, 'v', 'h'] },
   };
 
   render() {
     const {
+      className,
       children,
       sortable,
       striped,
       borders,
     } = this.props;
 
-    const className = mergeDefaultClassName(this.props,
+    const classes = classnames(className,
       'ax-table', {
         'ax-table--sortable': sortable === true,
         'ax-table--striped': striped === true,
@@ -30,9 +30,16 @@ export default class Table extends Component {
     );
 
     return (
-      <table {...this.props} className={className}>
+      <table {...this.props} className={classes}>
         {children}
       </table>
     );
   }
 }
+
+export default enhance(
+  Table,
+  addDisplayName('Table'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

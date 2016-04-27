@@ -1,20 +1,20 @@
-import React, { PropTypes, Component } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 import { colorBaseVariation } from '../../../sass';
 
-export default class Jumbotron extends Component {
+export class Jumbotron extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
-    image: PropTypes.string,
-    color: PropTypes.string,
-    overlay: PropTypes.bool,
-    spaced: PropTypes.bool,
+    children: { node: true },
+    image: { string: true },
+    color: { string: true },
+    overlay: { bool: true },
+    spaced: { bool: true },
   };
 
   render() {
     const {
+      className,
       children,
       image,
       color,
@@ -23,7 +23,7 @@ export default class Jumbotron extends Component {
       variation = colorBaseVariation,
     } = this.props;
 
-    const className = mergeDefaultClassName(this.props,
+    const classes = classnames(className,
       'ax-jumbotron', {
         [`ax-jumbotron--${color}--${variation}`]: color,
         'ax-jumbotron--image': image,
@@ -37,9 +37,16 @@ export default class Jumbotron extends Component {
     };
 
     return (
-      <div {...this.props} className={className} style={style}>
+      <div {...this.props} className={classes} style={style}>
         {children}
       </div>
     );
   }
 }
+
+export default enhance(
+  Jumbotron,
+  addDisplayName('Jumbotron'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

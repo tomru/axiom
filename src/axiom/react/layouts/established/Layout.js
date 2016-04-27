@@ -1,7 +1,8 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Layout extends Component {
+export class Layout extends Component {
   static childContextTypes = {
     showSidebar: PropTypes.func,
     hideSidebar: PropTypes.func,
@@ -35,8 +36,7 @@ export default class Layout extends Component {
   render() {
     const { className, children } = this.props;
     const { open } = this.state;
-    const classes = classnames(
-      className,
+    const classes = classnames(className,
       'ax-layout', {
         'ax-layout--open': open,
       }
@@ -49,3 +49,11 @@ export default class Layout extends Component {
     );
   }
 }
+
+export default enhance(
+  Layout,
+  addDisplayName('Layout'),
+  addPropTypes('global'),
+  addClassName('global'),
+);
+

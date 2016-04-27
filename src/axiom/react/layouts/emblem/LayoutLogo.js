@@ -1,4 +1,6 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
 export default class LayoutLogo extends Component {
   render() {
@@ -35,3 +37,8 @@ export default class LayoutLogo extends Component {
     );
   }
 };
+
+export default enhance(
+  LayoutLogo,
+  addDisplayName('LayoutLogo'),
+);

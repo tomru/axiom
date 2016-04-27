@@ -1,17 +1,17 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, mergeDefaultClassName } from '../../defaults';
-import { blacklist } from '../../utils';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { blacklist } from '../../utils/props';
 
-export default class CheckBox extends Component {
+export class CheckBox extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    children: PropTypes.node,
-    inline: PropTypes.bool,
+    children: { node: true },
+    inline: { bool: true },
   };
 
   render() {
-    const { children, inline } = this.props;
-    const className = mergeDefaultClassName(this.props,
+    const { className, children, inline } = this.props;
+    const classes = classnames(className,
       'ax-checkbox__group', {
         'ax-checkbox__group--inline': inline === true,
         'ax-checkbox__group--space': !!children,
@@ -19,12 +19,19 @@ export default class CheckBox extends Component {
     );
 
     return (
-      <label className={className}>
+      <label className={classes}>
         <input className="ax-checkbox"
                type="checkbox"
-               {...blacklist(this.props, ['children'])} />
+               {...blacklist(this.props, ['children', 'className'])} />
         <span className="ax-checkbox__label">{children}</span>
       </label>
     );
   }
 }
+
+export default enhance(
+  CheckBox,
+  addDisplayName('CheckBox'),
+  addPropTypes('global'),
+  addClassName('global'),
+);

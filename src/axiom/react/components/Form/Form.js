@@ -1,21 +1,27 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Form extends Component {
+export class Form extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
+    children: { node: true },
   };
 
   render() {
-    const { children } = this.props;
-    const className = mergeDefaultClassName(this.props, 'ax-form');
+    const { className, children } = this.props;
+    const classes = classnames(className, 'ax-form');
 
     return (
-      <form {...this.props} className={className}>
+      <form {...this.props} className={classes}>
         {children}
       </form>
     );
   }
 }
+
+export default enhance(
+  Form,
+  addDisplayName('Form'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

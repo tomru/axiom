@@ -1,24 +1,30 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Paragraph extends Component {
+export class Paragraph extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
-    space: PropTypes.bool,
+    children: { node: true },
+    space: { bool: true },
   };
 
   render() {
-    const {children, space} = this.props;
-    const className = mergeDefaultClassName(this.props, {
+    const {className, children, space} = this.props;
+    const classes = classnames(className, {
       'ax-text--no-space': space === false,
     });
 
     return (
-      <p {...this.props} className={className}>
+      <p {...this.props} className={classes}>
         {children}
       </p>
     );
   }
 }
+
+export default enhance(
+  Paragraph,
+  addDisplayName('Paragraph'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

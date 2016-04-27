@@ -1,7 +1,5 @@
 import { Avatar } from 'axiom/react';
 
-console.log(Avatar);
-
 export default {
   id: 'avatar',
   path: 'avatar',

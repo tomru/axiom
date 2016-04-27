@@ -4,7 +4,8 @@ import { Card, CardContent } from 'axiom/react';
 import { Jumbotron } from 'axiom/react';
 import { Heading } from 'axiom/react';
 import { LayoutContent } from 'axiom/react/layouts/established';
-import { getImportDocs } from 'style-guide/utils/imports';
+import { getApiDocs } from 'style-guide/utils/docs-api';
+import { getImportDocs } from 'style-guide/utils/docs-imports';
 import { flattenParents } from 'style-guide/utils/navigation';
 import DocLayer from 'style-guide/components/DocLayer';
 import ImportPanel from 'style-guide/components/ImportPanel';
@@ -29,11 +30,12 @@ export class DocPage extends Component {
         docData: {
           id,
           name,
-          structure,
           examples,
         },
       }
     } = this.props;
+
+    getApiDocs(docs[id].components);
 
     return (
       <div>

@@ -1,17 +1,17 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, mergeDefaultClassName } from '../../defaults';
-import { blacklist } from '../../utils';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { blacklist } from '../../utils/props';
 
-export default class RadioButton extends Component {
+export class RadioButton extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    children: PropTypes.node,
-    inline: PropTypes.bool,
+    children: { node: true },
+    inline: { bool: true },
   };
 
   render() {
-    const { children, inline } = this.props;
-    const className = mergeDefaultClassName(this.props,
+    const { className, children, inline } = this.props;
+    const classes = classnames(className,
       'ax-radio__group', {
         'ax-radio__group--inline': inline === true,
         'ax-radio__group--space': !!children,
@@ -19,7 +19,7 @@ export default class RadioButton extends Component {
     );
 
     return (
-      <label className={className}>
+      <label className={classes}>
         <input className="ax-radio"
                type="radio"
                {...blacklist(this.props, ['children', 'className'])} />
@@ -28,3 +28,11 @@ export default class RadioButton extends Component {
     );
   }
 }
+
+export default enhance(
+  RadioButton,
+  addDisplayName('RadioButton'),
+  addPropTypes('global'),
+  addClassName('global'),
+);
+

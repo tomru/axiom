@@ -1,21 +1,25 @@
-import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import React, { Component } from 'react';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class ListItem extends Component {
+export class ListItem extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
+    children: { node: true },
   };
 
   render() {
     const {children} = this.props;
-    const className = mergeDefaultClassName(this.props);
 
     return (
-      <li {...this.props} className={className}>
+      <li {...this.props}>
         {children}
       </li>
     );
   }
 }
+
+export default enhance(
+  ListItem,
+  addDisplayName('ListItem'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

@@ -1,21 +1,20 @@
 import React, { Component, PropTypes } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 import Grid from '../Grid/Grid';
 import GridCell from '../Grid/GridCell';
 
 export default class CardTitle extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    title: PropTypes.string,
+    title: { string: true },
   };
 
   render() {
-    const {title, children} = this.props;
-    const className = mergeDefaultClassName(this.props, 'ax-card__title');
+    const { className, title, children } = this.props;
+    const classes = classnames(className, 'ax-card__title');
 
     return (
-      <div {...this.props} className={className}>
+      <div {...this.props} className={classes}>
         <Grid vAlign="middle">
           <GridCell>
             <h4>{title}</h4>
@@ -33,3 +32,10 @@ export default class CardTitle extends Component {
     );
   }
 }
+
+export default enhance(
+  CardTitle,
+  addDisplayName('CardTitle'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

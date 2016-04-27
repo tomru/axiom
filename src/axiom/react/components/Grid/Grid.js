@@ -1,28 +1,25 @@
-import React, { PropTypes, Component } from 'react';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
-import { classHelper } from '../../utils';
+import React, { Component } from 'react';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { addDynamicClass } from '../../utils/class-name';
 import { breakpoints, gridGutters } from '../../../sass';
 
-/**
- * Grid
- */
-export default class Grid extends Component {
+export class Grid extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node.isRequired,
-    responsive: PropTypes.oneOf([false]),
-    gutters: PropTypes.oneOf([false, ...gridGutters.map(({id}) => id)]),
-    vGutters: PropTypes.bool,
-    hGutters: PropTypes.bool,
-    full: PropTypes.oneOf([true, ...breakpoints.map(({id}) => id)]),
-    fit: PropTypes.oneOf([true, ...breakpoints.map(({id}) => id)]),
-    vAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
-    hAlign: PropTypes.oneOf(['left', 'center', 'right', 'around', 'between']),
+    children: { node: true, isRequired: true },
+    responsive: { oneOf: [false] },
+    gutters: { oneOf: [false, ...gridGutters.map(({id}) => id)] },
+    vGutters: { bool: true },
+    hGutters: { bool: true },
+    full: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
+    fit: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
+    vAlign: { oneOf: ['top', 'middle', 'bottom'] },
+    hAlign: { oneOf: ['left', 'center', 'right', 'around', 'between'] },
   };
 
   render() {
     const {
+      className,
       children,
       responsive = true,
       gutters = true,
@@ -34,7 +31,7 @@ export default class Grid extends Component {
       hAlign,
     } = this.props;
 
-    const className = mergeDefaultClassName(this.props,
+    const classes = classnames(className,
       'ax-grid', {
         'ax-grid--unresponsive': responsive === false,
         'ax-grid--gutters-none': gutters === false,
@@ -51,15 +48,22 @@ export default class Grid extends Component {
         'ax-grid--around': hAlign === 'around',
         'ax-grid--between': hAlign === 'between',
       },
-      classHelper(gridGutters, ({id}) => gutters === id, ({id}) => `ax-grid--gutters--${id}`),
-      classHelper(breakpoints, ({id}) => full === id, ({id}) => `ax-grid--full--${id}`),
-      classHelper(breakpoints, ({id}) => fit === id, ({id}) => `ax-grid--fit--${id}`),
+      addDynamicClass(gridGutters, ({id}) => gutters === id, ({id}) => `ax-grid--gutters--${id}`),
+      addDynamicClass(breakpoints, ({id}) => full === id, ({id}) => `ax-grid--full--${id}`),
+      addDynamicClass(breakpoints, ({id}) => fit === id, ({id}) => `ax-grid--fit--${id}`),
     );
 
     return (
-      <div {...this.props} className={className}>
+      <div {...this.props} className={classes}>
         {children}
       </div>
     );
   }
 }
+
+export default enhance(
+  Grid,
+  addDisplayName('Grid'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);

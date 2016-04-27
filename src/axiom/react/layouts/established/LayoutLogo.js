@@ -1,6 +1,7 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import { enhance, addDisplayName } from '../../utils/components';
 
-export default class LayoutLogo extends Component {
+export class LayoutLogo extends Component {
   render() {
     return (
       <svg x="0px" y="0px" viewBox="0 0 120 143" width="100%" height="100%">
@@ -35,3 +36,8 @@ export default class LayoutLogo extends Component {
     );
   }
 };
+
+export default enhance(
+  LayoutLogo,
+  addDisplayName('LayoutLogo'),
+);

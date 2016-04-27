@@ -1,19 +1,19 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { Link as RouterLink } from 'react-router';
-import { PROP_TYPES_GLOBAL, PROP_TYPES_TEXT, mergeDefaultClassName } from '../../defaults';
+import classnames from 'classnames';
+import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
-export default class Link extends Component {
+export class Link extends Component {
   static propTypes = {
-    ...PROP_TYPES_GLOBAL,
-    ...PROP_TYPES_TEXT,
-    children: PropTypes.node,
-    to: PropTypes.string,
-    inheritColor: PropTypes.bool,
-    noDecoration: PropTypes.bool,
+    children: { node: true },
+    to: { string: true },
+    inheritColor: { bool: true },
+    noDecoration: { bool: true },
   };
 
   render() {
     const {
+      className,
       children,
       to,
       inheritColor,
@@ -21,7 +21,7 @@ export default class Link extends Component {
       supressStyle,
     } = this.props;
 
-    const className = mergeDefaultClassName(this.props, {
+    const classes = classnames(className, {
       'ax-link': supressStyle !== true,
       'ax-link--inherit-color': inheritColor,
       'ax-link--no-decoration': noDecoration,
@@ -29,16 +29,23 @@ export default class Link extends Component {
 
     if (to) {
       return (
-        <RouterLink {...this.props} className={className}>
+        <RouterLink {...this.props} className={classes}>
           {children}
         </RouterLink>
       );
     }
 
     return (
-      <a {...this.props} className={className}>
+      <a {...this.props} className={classes}>
         {children}
       </a>
     );
   }
 };
+
+export default enhance(
+  Link,
+  addDisplayName('Link'),
+  addPropTypes('global', 'text'),
+  addClassName('global', 'text'),
+);
