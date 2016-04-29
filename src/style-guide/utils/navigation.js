@@ -8,7 +8,7 @@ export function createToPath(paths) {
 }
 
 export function createRoute(id, route, parentId = null, parentPaths = []) {
-  const { path, hidden = false, searchable = true, examples } = route;
+  const { path, hidden = false, searchable = true } = route;
 
   return {
     id,
@@ -16,7 +16,6 @@ export function createRoute(id, route, parentId = null, parentPaths = []) {
     parentId,
     hidden,
     searchable,
-    examples,
     name: humanize(path),
     to: createToPath([...parentPaths, path]),
     children: [],
@@ -43,15 +42,7 @@ export function createDocStructure(docs) {
 }
 
 export function createNavStructure(docStructure) {
-  function removeProperties(doc) {
-    return {
-      ...doc,
-      examples: undefined,
-      children: doc.children.map(removeProperties),
-    };
-  }
-
-  return docStructure.map(removeProperties);
+  return docStructure;
 }
 
 export function findById(items, id) {
