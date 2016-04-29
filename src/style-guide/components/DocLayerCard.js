@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardContent, CardTitle } from 'axiom/react';
 import DocLayer from 'style-guide/components/DocLayer';
+import DocStatus from 'style-guide/components/DocStatus';
 
 export default class DocLayerCard extends Component {
   render() {
@@ -13,8 +14,8 @@ export default class DocLayerCard extends Component {
           if (layer.title) {
             <CardTitle title={layer.title}>
               {do {
-                if (hasTitleContent) {
-                  layer.container.title.children();
+                if (layer.status) {
+                  <DocStatus status={layer.status} />
                 }
               }}
             </CardTitle>

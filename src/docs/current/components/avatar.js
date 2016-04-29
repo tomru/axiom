@@ -1,17 +1,17 @@
+import { statuses } from '../../';
 import { Avatar } from 'axiom/react';
 
 export default {
   id: 'avatar',
   path: 'avatar',
   group: 'components',
+  sass: ['/components/avatar'],
   components: [{
     Component: Avatar,
   }],
-  sass: [
-    '/components/avatar'
-  ],
   examples: () => [{
     title: 'Sized avatars',
+    status: statuses.STABLE,
     snippetLocation: true,
     children: [{
       type: 'grid',

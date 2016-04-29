@@ -1,3 +1,4 @@
+import { statuses } from '../../';
 import { breakpoints, colorPalette, colorAliases } from 'axiom/sass';
 import { Button, ButtonGroup } from 'axiom/react';
 
@@ -11,12 +12,12 @@ export default {
       Component: Button,
     }],
   }],
-
   sass: [
     '/components/button'
   ],
   examples: () => [{
     title: 'Colored Buttons',
+    status: statuses.BETA,
     children: [{
       title: 'Palette Colors',
       snippetLocation: true,
@@ -63,6 +64,7 @@ export default {
     }],
   }, {
     title: 'Sizes',
+    status: statuses.STABLE,
     snippetLocation: true,
     children: [{
       Container: ButtonGroup,
@@ -83,6 +85,7 @@ export default {
     }],
   }, {
     title: 'Full width',
+    status: statuses.EXPERIMENTAL,
     snippetLocation: true,
     children: [{
       Container: ButtonGroup,
@@ -114,6 +117,7 @@ export default {
     }]
   }, {
     title: 'Button with an Icon',
+    status: statuses.NEEDS_REVISION,
     snippetLocation: true,
     children: [{
       Container: ButtonGroup,
