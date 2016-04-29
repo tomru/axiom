@@ -176,12 +176,12 @@ $logo-width:            $logo-height * $logo-aspect-ratio;
     flex-direction: column;
   }
 
-  .ax-layout__full-height--top    { align-items: flex-start; }
-  .ax-layout__full-height--middle { align-items: center; }
-  .ax-layout__full-height--bottom { align-items: flex-end; }
-  .ax-layout__full-height--left   { justify-content: flex-start; }
-  .ax-layout__full-height--center { justify-content: center; }
-  .ax-layout__full-height--right  { justify-content: flex-end; }
+  .ax-layout__full-height--top    { justify-content: flex-start; }
+  .ax-layout__full-height--middle { justify-content: center; }
+  .ax-layout__full-height--bottom { justify-content: flex-end; }
+  .ax-layout__full-height--left   { align-items: flex-start; }
+  .ax-layout__full-height--center { align-items: center; }
+  .ax-layout__full-height--right  { align-items: flex-end; }
 
   .ax-layout__content {
     position: relative;
