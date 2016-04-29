@@ -8,7 +8,7 @@ import Icon from '../Icon/Icon';
 
 export class Button extends Component {
   static propTypes = {
-    children: { node: true },
+    children: { string: true },
     color: { string: true },
     size: { oneOf: ['sm', 'md', 'lg'] },
     full: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
@@ -29,7 +29,7 @@ export class Button extends Component {
     );
 
     return (
-      <button {...blacklist(this.props, ['color'])} className={classes}>
+      <button {...blacklist(this.props, ['color'])} className={classes} title={children}>
         {do {
           if (icon) {
             <Icon className="ax-button__icon" name={icon} />

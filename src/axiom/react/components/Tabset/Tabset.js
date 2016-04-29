@@ -44,7 +44,7 @@ export class Tabset extends Component {
             });
 
             return (
-              <li className={tabClassName} key={index} onClick={() => this.activateTab(index)}>
+              <li className={tabClassName} key={index} onClick={() => this.activateTab(index)} title={title}>
                 <Link className="ax-tabs__nav-link" supressStyle={true}>
                   {title}
                 </Link>

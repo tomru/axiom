@@ -8,7 +8,7 @@ import Icon from '../Icon/Icon';
 
 export class Label extends Component {
   static propTypes = {
-    children: { node: true },
+    children: { string: true },
     color: { string: true },
     size: { oneOf: ['sm', 'md', 'lg'] },
     full: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
@@ -29,7 +29,7 @@ export class Label extends Component {
     );
 
     return (
-      <span {...blacklist(this.props, ['color'])} className={classes}>
+      <span {...blacklist(this.props, ['color'])} className={classes} title={children}>
         {do {
           if (icon) {
             <Icon className="ax-label__icon" name={icon} />
