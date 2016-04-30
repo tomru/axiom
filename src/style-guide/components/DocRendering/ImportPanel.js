@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import CodeTabset from './CodeTabset';
-import CodeSnippet from './CodeSnippet';
+import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
+import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 
 export default class ImportPanel extends Component {
   render() {

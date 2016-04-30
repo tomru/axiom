@@ -1,6 +1,6 @@
-import DemoBox from 'style-guide/components/DemoBox';
 import { breakpoints, gridGutters } from 'axiom/sass';
 import { Grid, GridCell } from 'axiom/react';
+import DemoBox from 'style-guide/components/DemoBox/DemoBox';
 
 export default {
   id: 'grid',

@@ -7,8 +7,8 @@ import { LayoutContent } from 'axiom/react/layouts/established';
 import { getApiDocs } from 'style-guide/utils/docs-api';
 import { getImportDocs } from 'style-guide/utils/docs-imports';
 import { flattenParents } from 'style-guide/utils/navigation';
-import DocLayer from 'style-guide/components/DocLayer';
-import ImportPanel from 'style-guide/components/ImportPanel';
+import DocLayer from 'style-guide/components/DocRendering/DocLayer';
+import ImportPanel from 'style-guide/components/DocRendering/ImportPanel';
 import * as docs from '../../docs/current';
 
 export class DocPage extends Component {
@@ -27,15 +27,14 @@ export class DocPage extends Component {
       },
       route: {
         docData: navItem,
-        docData: {
-          id,
-          name,
-          examples,
-        },
+        docData: {id, name},
       }
     } = this.props;
 
     getApiDocs(docs[id].components);
+
+    const Example = docs[id].example;
+    const examples = docs[id].examples;
 
     return (
       <div>
@@ -58,12 +57,18 @@ export class DocPage extends Component {
         </Jumbotron>
 
         <LayoutContent>
-          {docs[id].examples(routeParams, queryParams).map((example, index) =>
-            <DocLayer
-              topLevel={true}
-              layer={example}
-              key={index} />
-          )}
+          {do {
+            if (Example) {
+              <Example />
+            } else {
+              {examples(routeParams, queryParams).map((example, index) =>
+                <DocLayer
+                  topLevel={true}
+                  layer={example}
+                  key={index} />
+              )}
+            }
+          }}
         </LayoutContent>
       </div>
     );

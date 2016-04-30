@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import { BlockContainer, Button } from 'axiom/react';
 import { Heading } from 'axiom/react';
-import DocLayerCard from 'style-guide/components/DocLayerCard';
-import DocLayerGrid from 'style-guide/components/DocLayerGrid';
-import DocLayerTabset from 'style-guide/components/DocLayerTabset';
-import DocLayerCode from 'style-guide/components/DocLayerCode';
+import DocLayerCard from 'style-guide/components/DocRendering/DocLayerCard';
+import DocLayerGrid from 'style-guide/components/DocRendering/DocLayerGrid';
+import DocLayerTabset from 'style-guide/components/DocRendering/DocLayerTabset';
+import DocLayerCode from 'style-guide/components/DocRendering/DocLayerCode';
 
 const renderMap = {
   card: DocLayerCard,

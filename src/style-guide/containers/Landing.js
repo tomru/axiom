@@ -8,7 +8,7 @@ import { Card, CardTitle, CardContent } from 'axiom/react';
 import { Jumbotron } from 'axiom/react';
 import { Layout, LayoutHeader, LayoutSidebar, LayoutMain, LayoutContent, LayoutFooter } from 'axiom/react/layouts/established';
 import { Heading, Strong } from 'axiom/react';
-import CodeSnippet from 'style-guide/components/CodeSnippet';
+import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 
 export class Landing extends Component {
   render() {

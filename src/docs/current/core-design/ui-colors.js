@@ -1,6 +1,6 @@
 import humanize from 'humanize-string';
 import { colorAliases } from 'axiom/sass';
-import ColorSwatch from 'style-guide/components/ColorSwatch';
+import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
 
 export default {
   id: 'ui-colors',

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardContent, CardTitle } from 'axiom/react';
-import DocLayer from 'style-guide/components/DocLayer';
-import DocStatus from 'style-guide/components/DocStatus';
+import DocLayer from 'style-guide/components/DocRendering/DocLayer';
+import DocStatus from 'style-guide/components/DocRendering/DocStatus';
 
 export default class DocLayerCard extends Component {
   render() {

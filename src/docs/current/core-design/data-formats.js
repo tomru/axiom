@@ -1,6 +1,5 @@
 import { formatNumber, formatDateShort, formatDateMedium, formatDateLong } from 'axiom/common/format-utils';
 import { Paragraph } from 'axiom/react';
-import { ColorSwatch } from 'style-guide/components/ColorSwatch';
 
 export default {
   id: 'data-formats',

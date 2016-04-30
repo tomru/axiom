@@ -1,6 +1,5 @@
 import { Icon } from 'axiom/react';
-import { iconList, iconCategories } from 'style-guide/utils/icons';
-import IconGrid from 'style-guide/components/IconGrid';
+import IconExample from 'style-guide/components/Icons/IconExample';
 
 export default {
   id: 'icons',
@@ -9,19 +8,8 @@ export default {
   components: [{
     Component: Icon,
   }],
-
   sass: [
     '/components/icon'
   ],
-  examples: () => Object.keys(iconCategories).map((category) => {
-    return {
-      title: category,
-      children: [{
-        Component: IconGrid,
-        props: {
-          icons: iconCategories[category],
-        },
-      }],
-    };
-  }),
+  example: IconExample,
 };

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import CodeSnippet from 'style-guide/components/CodeSnippet';
-import CodeTabset from 'style-guide/components/CodeTabset';
+import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
+import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
 import {
   getLayersHtmlSnippets,
   getLayersJsxSnippets,
