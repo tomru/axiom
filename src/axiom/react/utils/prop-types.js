@@ -19,18 +19,6 @@ const PROP_TYPE_MAP = {
   oneOfType: PropTypes.oneOfType,
 };
 
-const NONPARAMETRIC_PROP_TYPES = [
-  PropTypes.any,
-  PropTypes.string,
-  PropTypes.bool,
-  PropTypes.func,
-  PropTypes.number,
-  PropTypes.array,
-  PropTypes.object,
-  PropTypes.node,
-  PropTypes.element,
-];
-
 const PROP_TYPES_SETS = {
   global: {
     className: { string: true },
@@ -68,24 +56,32 @@ function createPropType(prop, isRequired) {
     throw new Error(`No matching PropType found: ${JSON.stringify(prop)}`);
   }
 
-  if (NONPARAMETRIC_PROP_TYPES.includes(type)) {
+  switch (type) {
+  case PropTypes.any:
+  case PropTypes.string:
+  case PropTypes.bool:
+  case PropTypes.func:
+  case PropTypes.number:
+  case PropTypes.array:
+  case PropTypes.object:
+  case PropTypes.node:
+  case PropTypes.element:
     propType = type;
-  }
-
-  if (type === PropTypes.instaneOf || type === PropTypes.oneOf) {
+    break;
+  case PropTypes.instanceOf:
+  case PropTypes.oneOf:
     propType = type(prop[typeKey]);
-  }
-
-  if (type === PropTypes.oneOfType) {
+    break;
+  case PropTypes.oneOfType:
     propType = type(prop[typeKey].map((p) => createPropType(p, false)));
-  }
-
-  if (type === PropTypes.arrayOf || type === PropTypes.objectOf) {
+    break;
+  case PropTypes.arrayOf:
+  case PropTypes.objectOf:
     propType = type(getPropType(prop[typeKey]));
-  }
-
-  if (type === PropTypes.shape) {
+    break;
+  case PropTypes.shape:
     propType = type(mapToPropTypes(prop[typeKey]));
+    break;
   }
 
   return isRequired

@@ -22,8 +22,7 @@ export class Td extends Component {
   }
 }
 
-export default enhance(
-  Td,
+export default enhance(Td)(
   addDisplayName('Td'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

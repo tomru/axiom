@@ -29,8 +29,7 @@ export class RadioButton extends Component {
   }
 }
 
-export default enhance(
-  RadioButton,
+export default enhance(RadioButton)(
   addDisplayName('RadioButton'),
   addPropTypes('global'),
   addClassName('global'),

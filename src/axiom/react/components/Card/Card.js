@@ -24,8 +24,7 @@ export class Card extends Component {
   }
 }
 
-export default enhance(
-  Card,
+export default enhance(Card)(
   addDisplayName('Card'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

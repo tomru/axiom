@@ -44,8 +44,7 @@ export class Jumbotron extends Component {
   }
 }
 
-export default enhance(
-  Jumbotron,
+export default enhance(Jumbotron)(
   addDisplayName('Jumbotron'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

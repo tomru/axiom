@@ -24,8 +24,7 @@ export class Avatar extends Component {
   }
 }
 
-export default enhance(
-  Avatar,
+export default enhance(Avatar)(
   addDisplayName('Avatar'),
   addPropTypes('global'),
   addClassName('global'),

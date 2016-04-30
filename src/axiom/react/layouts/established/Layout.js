@@ -50,8 +50,7 @@ export class Layout extends Component {
   }
 }
 
-export default enhance(
-  Layout,
+export default enhance(Layout)(
   addDisplayName('Layout'),
   addPropTypes('global'),
   addClassName('global'),

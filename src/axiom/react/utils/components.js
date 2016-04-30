@@ -10,10 +10,12 @@ export function findComponents(components, Component) {
   return Children.toArray(components).filter(({type}) => type === Component);
 }
 
-export function enhance(Component, ...transforms) {
-  return transforms.reduce((result, transform) => {
-    return transform(result);
-  }, Component);
+export function enhance(Component) {
+  return (...transforms) => {
+    return transforms.reduce((result, transform) => {
+      return transform(result);
+    }, Component);
+  };
 }
 
 export function addDisplayName(name) {

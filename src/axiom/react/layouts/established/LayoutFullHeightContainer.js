@@ -29,8 +29,7 @@ export class LayoutFullHeightContainer extends Component {
   }
 }
 
-export default enhance(
-  LayoutFullHeightContainer,
+export default enhance(LayoutFullHeightContainer)(
   addDisplayName('LayoutFullHeightContainer'),
   addPropTypes('global'),
   addClassName('global'),

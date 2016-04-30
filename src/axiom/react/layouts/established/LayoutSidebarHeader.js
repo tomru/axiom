@@ -15,8 +15,7 @@ export class LayoutSidebarHeader extends Component {
   }
 }
 
-export default enhance(
-  LayoutSidebarHeader,
+export default enhance(LayoutSidebarHeader)(
   addDisplayName('LayoutSidebarHeader'),
   addPropTypes('global'),
   addClassName('global'),

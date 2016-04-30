@@ -42,8 +42,7 @@ export class Button extends Component {
   }
 }
 
-export default enhance(
-  Button,
+export default enhance(Button)(
   addDisplayName('Button'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

@@ -17,8 +17,7 @@ export class Strike extends Component {
   }
 }
 
-export default enhance(
-  Strike,
+export default enhance(Strike)(
   addDisplayName('Strike'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

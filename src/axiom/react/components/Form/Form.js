@@ -19,8 +19,7 @@ export class Form extends Component {
   }
 }
 
-export default enhance(
-  Form,
+export default enhance(Form)(
   addDisplayName('Form'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

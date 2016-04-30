@@ -14,8 +14,7 @@ export class Image extends Component {
   }
 }
 
-export default enhance(
-  Image,
+export default enhance(Image)(
   addDisplayName('Image'),
   addPropTypes('global'),
   addClassName('global'),

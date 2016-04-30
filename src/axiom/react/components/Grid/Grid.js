@@ -61,8 +61,7 @@ export class Grid extends Component {
   }
 }
 
-export default enhance(
-  Grid,
+export default enhance(Grid)(
   addDisplayName('Grid'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

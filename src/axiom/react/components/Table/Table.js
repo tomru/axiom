@@ -37,8 +37,7 @@ export class Table extends Component {
   }
 }
 
-export default enhance(
-  Table,
+export default enhance(Table)(
   addDisplayName('Table'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

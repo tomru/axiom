@@ -17,8 +17,7 @@ export class Tr extends Component {
   }
 }
 
-export default enhance(
-  Tr,
+export default enhance(Tr)(
   addDisplayName('Tr'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

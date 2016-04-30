@@ -31,8 +31,7 @@ export class Heading extends Component {
   }
 }
 
-export default enhance(
-  Heading,
+export default enhance(Heading)(
   addDisplayName('Heading'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

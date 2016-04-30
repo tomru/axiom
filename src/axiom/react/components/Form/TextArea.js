@@ -18,8 +18,7 @@ export class TextArea extends Component {
   }
 }
 
-export default enhance(
-  TextArea,
+export default enhance(TextArea)(
   addDisplayName('TextArea'),
   addPropTypes('global'),
   addClassName('global'),

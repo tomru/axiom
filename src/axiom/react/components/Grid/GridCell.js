@@ -66,8 +66,7 @@ export class GridCell extends Component {
   }
 };
 
-export default enhance(
-  GridCell,
+export default enhance(GridCell)(
   addDisplayName('GridCell'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

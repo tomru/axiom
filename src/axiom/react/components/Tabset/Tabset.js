@@ -59,8 +59,7 @@ export class Tabset extends Component {
   }
 }
 
-export default enhance(
-  Tabset,
+export default enhance(Tabset)(
   addDisplayName('Tabset'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

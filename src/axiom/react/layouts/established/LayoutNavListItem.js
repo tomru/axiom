@@ -61,8 +61,7 @@ export class LayoutNavListItem extends Component {
   }
 }
 
-export default enhance(
-  LayoutNavListItem,
+export default enhance(LayoutNavListItem)(
   addDisplayName('LayoutNavListItem'),
   addPropTypes('global'),
   addClassName('global'),

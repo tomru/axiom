@@ -45,8 +45,7 @@ export class LayoutFooter extends Component {
   }
 }
 
-export default enhance(
-  LayoutFooter,
+export default enhance(LayoutFooter)(
   addDisplayName('LayoutFooter'),
   addPropTypes('global'),
   addClassName('global'),

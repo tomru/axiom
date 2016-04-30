@@ -15,8 +15,7 @@ export class LayoutSidebarFooter extends Component {
   }
 }
 
-export default enhance(
-  LayoutSidebarFooter,
+export default enhance(LayoutSidebarFooter)(
   addDisplayName('LayoutSidebarFooter'),
   addPropTypes('global'),
   addClassName('global'),

@@ -15,8 +15,7 @@ export class LayoutContent extends Component {
   }
 }
 
-export default enhance(
-  LayoutContent,
+export default enhance(LayoutContent)(
   addDisplayName('LayoutContent'),
   addPropTypes('global'),
   addClassName('global'),

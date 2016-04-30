@@ -22,8 +22,7 @@ export class Paragraph extends Component {
   }
 }
 
-export default enhance(
-  Paragraph,
+export default enhance(Paragraph)(
   addDisplayName('Paragraph'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

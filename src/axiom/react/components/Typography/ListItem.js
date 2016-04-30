@@ -17,8 +17,7 @@ export class ListItem extends Component {
   }
 }
 
-export default enhance(
-  ListItem,
+export default enhance(ListItem)(
   addDisplayName('ListItem'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

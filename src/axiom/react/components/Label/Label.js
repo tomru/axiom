@@ -42,8 +42,7 @@ export class Label extends Component {
   }
 }
 
-export default enhance(
-  Label,
+export default enhance(Label)(
   addDisplayName('Label'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),

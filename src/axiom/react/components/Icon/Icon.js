@@ -30,8 +30,7 @@ export class Icon extends Component {
   }
 }
 
-export default enhance(
-  Icon,
+export default enhance(Icon)(
   addDisplayName('Icon'),
   addPropTypes('global'),
   addClassName('global'),
