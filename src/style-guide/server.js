@@ -11,7 +11,6 @@ import createStore from './redux/createStore';
 import createRoutes from './redux/createRoutes';
 import { initialState as searchInitialState } from './reducers/search';
 import { initialState as navigationInitialState } from './reducers/navigation';
-import { createNavStructure } from './utils/navigation';
 import { searchRoutesForText } from './utils/search';
 import { DOC_STRUCTURE } from './constants/DocStructure';
 import Html from './components/Html';
@@ -32,7 +31,7 @@ try {
     const initialState = {
       navigation: {
         ...navigationInitialState,
-        items: createNavStructure(DOC_STRUCTURE),
+        items: DOC_STRUCTURE,
       },
       search: {
         ...searchInitialState,

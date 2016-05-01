@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { TextInput } from 'axiom/react';
 import { debounce } from 'style-guide/utils/function';
 
-export default class DocSearch extends Component {
+export default class SearchInput extends Component {
   static propTypes = {
     locationState: PropTypes.shape({
       query: PropTypes.object.isRequired,

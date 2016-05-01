@@ -3,10 +3,10 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Card, CardTitle, CardContent } from 'axiom/react';
 import { Icon } from 'axiom/react';
-import { Heading, Italic, Link, Paragraph } from 'axiom/react';
+import { Heading } from 'axiom/react';
 import { Indicator } from 'axiom/react';
-import { formatNumber } from 'axiom/common/format-utils';
 import { LayoutContent, LayoutFullHeightContainer } from 'axiom/react/layouts/established';
+import SearchResult from 'style-guide/components/DocSearch/SearchResult';
 
 export class SearchResults extends Component {
   static propTypes = {
@@ -18,10 +18,6 @@ export class SearchResults extends Component {
 
   render() {
     const {searchState: {results, isSearching}} = this.props;
-
-    console.log(results);
-
-    return null;
 
     if (isSearching) {
       return (
@@ -56,13 +52,8 @@ export class SearchResults extends Component {
       <LayoutContent>
         <Card>
           <CardTitle title="Search Results" />
-          {results.map(({name, text, to, meta}, index) =>
-            <CardContent key={index}>
-              <Heading level={5} space={false}>
-                <Link to={to}>{name} - <Italic textWeak={true}>{to}</Italic></Link>
-              </Heading>
-              {/*<Paragraph space={false}>{meta.description}</Paragraph>*/}
-            </CardContent>
+          {results.map((result, index) =>
+            <SearchResult key={index} result={result} />
           )}
         </Card>
       </LayoutContent>

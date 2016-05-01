@@ -6,10 +6,9 @@ import { Heading } from 'axiom/react';
 import { LayoutContent } from 'axiom/react/layouts/established';
 import { getApiDocs } from 'style-guide/utils/docs-api';
 import { getImportDocs } from 'style-guide/utils/docs-imports';
-import { flattenParents } from 'style-guide/utils/navigation';
+import { findDocById, flattenParents } from 'style-guide/utils/navigation';
 import DocLayer from 'style-guide/components/DocRendering/DocLayer';
 import ImportPanel from 'style-guide/components/DocRendering/ImportPanel';
-import * as docs from '../../docs/current';
 
 export class DocPage extends Component {
   static propTypes = {
@@ -31,10 +30,11 @@ export class DocPage extends Component {
       }
     } = this.props;
 
-    getApiDocs(docs[id].components);
+    const doc = findDocById(id);
+    const Example = doc.example;
+    const examples = doc.examples;
 
-    const Example = docs[id].example;
-    const examples = docs[id].examples;
+    // getApiDocs(docs[id].components);
 
     return (
       <div>
@@ -52,7 +52,7 @@ export class DocPage extends Component {
               </CardContent>
             </Card>
 
-            <ImportPanel content={getImportDocs(docs[id])} />
+            <ImportPanel content={getImportDocs(doc)} />
           </LayoutContent>
         </Jumbotron>
 

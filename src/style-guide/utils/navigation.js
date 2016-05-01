@@ -1,5 +1,6 @@
 import humanize from 'humanize-string';
 import { ROUTE_DOCS } from 'style-guide/constants/Routing';
+import * as docs from '../../docs/current';
 
 export function createToPath(paths) {
   return paths.reduce((acc, path) => {
@@ -34,20 +35,24 @@ export function createDocStructure(docs) {
       groups.push(docGroup);
     }
 
-    docGroup.children.push(createRoute(key, doc, docGroup.id, [docGroup.path]));
+    docGroup.children.push(createRoute(doc.id, doc, docGroup.id, [docGroup.path]));
     docGroup.hasChildren = hasVisibleChildren(docGroup);
 
     return groups;
   }, []);
 }
 
-export function createNavStructure(docStructure) {
-  return docStructure;
-}
-
 export function findById(items, id) {
   return flattenStructure(items)
     .find((item) => item.id === id);
+}
+
+export function findDocById(id) {
+  for (let key in docs) {
+    if (docs[key].id === id) {
+      return docs[key];
+    }
+  }
 }
 
 export function findByActive(items) {

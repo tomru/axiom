@@ -27,6 +27,11 @@ export default class IconExample extends Component {
     this.setState({search: value});
   }
 
+  resetSearchValue() {
+    this.setSearchValue('');
+    this.refs.search.refs.original.refs.input.value = '';
+  }
+
   onChangeHandler(event) {
     const {target: {value}} = event;
     event.persist();
@@ -35,13 +40,18 @@ export default class IconExample extends Component {
 
   render() {
     const {search} = this.state;
-    const foundIcons = this.searchIconList(search);
+    let foundIcons;
+
+    if (search) {
+      foundIcons = this.searchIconList(search);
+    }
 
     return (
       <div>
         <Card>
           <CardContent>
             <TextInput
+              ref="search"
               placeholder="Got a specific icon in mind?"
               icon="search"
               onChange={::this.onChangeHandler} />
@@ -66,8 +76,8 @@ export default class IconExample extends Component {
 
               <CardContent>
                 <Paragraph textCenter={true}>
-                  <Link onClick={() => this.setSearchValue('')}>
-                    View all icons
+                  <Link onClick={::this.resetSearchValue}>
+                    Not there? Clear the search...
                   </Link>
                 </Paragraph>
               </CardContent>

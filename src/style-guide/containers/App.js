@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import classnames from 'classnames';
 import * as navigationActions from 'style-guide/actions/navigation';
 import * as searchActions from 'style-guide/actions/search';
-import DocSearch from 'style-guide/components/DocSearch';
+import SearchInput from 'style-guide/components/DocSearch/SearchInput';
 import {
   Layout,
   LayoutHeader,
@@ -49,7 +49,7 @@ export class Docs extends Component {
 
         <LayoutSidebar>
           <LayoutSidebarHeader>
-            <DocSearch
+            <SearchInput
               locationState={location}
               searchState={searchState}
               searchActions={this.boundSearchActions} />

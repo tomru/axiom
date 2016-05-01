@@ -1,38 +1,56 @@
-import uuid from 'uuid';
 import Fuse from 'fuse.js';
-import * as docs from '../../docs/current';
+import { DOC_STRUCTURE } from 'style-guide/constants/DocStructure';
+import { findDocById, flattenStructure } from 'style-guide/utils/navigation';
 
-function routeToText({id, path, group, examples}) {
-  return {
-    id,
-    path,
-    group,
-    examples: examples({}, {}),
-  };
+function extractReducer(acc, example) {
+  const extractedText = extractText(example);
+
+  if (extractedText) {
+    return `${acc} ${extractedText}`;
+  }
+
+  return acc;
+}
+
+function extractText(example) {
+  if (typeof example === 'string') {
+    return example;
+  }
+
+  let exampleText = `${example.title || ''}`;
+
+  if (Array.isArray(example.children)) {
+    exampleText = example.children.reduce(extractReducer, exampleText);
+  }
+
+  return exampleText || '';
+}
+
+function extractExamples(examples) {
+  if (!examples || typeof examples !== 'function') {
+    return '';
+  }
+
+  return examples({}, {}).reduce(extractReducer, '');
 }
 
 function buildFuse(routes) {
-  const routesText = routes.map(routeToText);
-  const fuseConfig = {
-    keys: ['id', 'path', 'group', 'examples.title'],
+  return new Fuse(routes, {
+    keys: ['name', 'to', 'text'],
+    threshold: 0.0,
     tokenize: true,
-    threshold: 0.2,
-    getFn: (obj, path) => {
-      return JSON.stringify(obj);
-    },
-  };
-
-  return new Fuse(routesText, fuseConfig);;
+  });
 }
 
 export function searchRoutesForText(text) {
-  const routes = Object.keys(docs).reduce((acc, key) => {
-    if (docs[key].searchable !== false) {
-      acc.push(docs[key]);
-    }
-
-    return acc;
-  }, []);
+  const routes = flattenStructure(DOC_STRUCTURE)
+    .filter((doc) => doc.searchable && doc.children.length === 0)
+    .map((doc) => {
+      return {
+        ...doc,
+        text: extractExamples(findDocById(doc.id).examples),
+      };
+    });
 
   return buildFuse(routes).search(text);
 }

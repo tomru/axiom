@@ -15,6 +15,10 @@ export default {
     '/components/icon'
   ],
   examples: (routeParams, {iconId}) => {
+    if (!iconId) {
+      return [];
+    }
+
     const { name: iconName } = iconList.find(({id}) => id === iconId);
 
     return [{
