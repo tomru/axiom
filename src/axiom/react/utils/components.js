@@ -43,6 +43,7 @@ export function addClassName(...classNameSets) {
     class Wrapped extends Component {
       render() {
         return <Component {...this.props}
+          ref="original"
           className={mergeClassNameSets(this.props, classNameSets)} />
       }
     }
