@@ -16,7 +16,6 @@ export class LayoutSidebar extends Component {
 }
 
 export default enhance(LayoutSidebar)(
-  addDisplayName('LayoutSidebar'),
   addPropTypes('global'),
   addClassName('global'),
 );

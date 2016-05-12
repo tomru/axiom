@@ -43,7 +43,6 @@ export class List extends Component {
 }
 
 export default enhance(List)(
-  addDisplayName('List'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

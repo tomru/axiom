@@ -26,7 +26,6 @@ export class LayoutTitle extends Component {
 }
 
 export default enhance(LayoutTitle)(
-  addDisplayName('LayoutTitle'),
   addPropTypes('global'),
   addClassName('global'),
 );

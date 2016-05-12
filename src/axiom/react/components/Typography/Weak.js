@@ -20,7 +20,6 @@ export class Weak extends Component {
 }
 
 export default enhance(Weak)(
-  addDisplayName('Weak'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

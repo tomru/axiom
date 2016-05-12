@@ -38,5 +38,4 @@ export class LayoutLogo extends Component {
 };
 
 export default enhance(LayoutLogo)(
-  addDisplayName('LayoutLogo'),
 );

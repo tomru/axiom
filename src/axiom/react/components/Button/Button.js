@@ -7,26 +7,28 @@ import { breakpointClassName } from '../../utils/class-name';
 import { breakpointIds, colorIds } from '../../../sass';
 import Icon from '../Icon/Icon';
 
+const propsTypes = {
+  children: { node: true },
+  color: {
+    oneOf: [...colorIds],
+    default: 'primary',
+  },
+  size: {
+    oneOf: ['sm', 'md', 'lg'],
+    default: 'md',
+  },
+  full: { oneOf: [true, ...breakpointIds] },
+};
+
 export class Button extends Component {
-  static propTypes = {
-    children: { node: true },
-    color: {
-      oneOf: [...colorIds],
-      default: 'primary',
-    },
-    size: {
-      oneOf: ['sm', 'md', 'lg'],
-      default: 'md',
-    },
-    full: { oneOf: [true, ...breakpointIds] },
-  };
+  static propTypes = propsTypes;
 
   render() {
     const {
       className,
       children,
-      color = Button.propTypes.color.default,
-      size = Button.propTypes.size.default,
+      color = propsTypes.color.default,
+      size = propsTypes.size.default,
       full,
     } = this.props;
 
@@ -59,7 +61,6 @@ export class Button extends Component {
 }
 
 export default enhance(Button)(
-  addDisplayName('Button'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

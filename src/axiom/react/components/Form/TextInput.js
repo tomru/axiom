@@ -67,7 +67,6 @@ export class TextInput extends Component {
 }
 
 export default enhance(TextInput)(
-  addDisplayName('TextInput'),
   addPropTypes('global'),
   addClassName('global'),
 );

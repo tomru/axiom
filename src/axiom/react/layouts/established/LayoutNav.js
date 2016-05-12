@@ -26,7 +26,6 @@ export class LayoutNav extends Component {
 }
 
 export default enhance(LayoutNav)(
-  addDisplayName('LayoutNav'),
   addPropTypes('global'),
   addClassName('global'),
 );

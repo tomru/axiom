@@ -19,7 +19,6 @@ export class Tbody extends Component {
 }
 
 export default enhance(Tbody)(
-  addDisplayName('Tbody'),
   addPropTypes('global'),
   addClassName('global'),
 );

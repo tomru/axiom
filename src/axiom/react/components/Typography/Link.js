@@ -44,7 +44,6 @@ export class Link extends Component {
 };
 
 export default enhance(Link)(
-  addDisplayName('Link'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

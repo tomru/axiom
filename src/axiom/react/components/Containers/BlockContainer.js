@@ -20,7 +20,6 @@ export class BlockContainer extends Component {
 }
 
 export default enhance(BlockContainer)(
-  addDisplayName('BlockContainer'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

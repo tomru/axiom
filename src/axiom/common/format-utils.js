@@ -9,7 +9,7 @@ export function formatNumber(n) {
 }
 
 
-export function formatDate(d, format) {
+function formatDate(d, format) {
   return moment(d).format(format)
 }
 

@@ -38,6 +38,8 @@ function jsImports({imports: {js = []} = {}}) {
 }
 
 export function renderImports(doc) {
+  console.log(doc);
+
   return {
     js: jsImports(doc),
     jsx: jsxImports(doc),

@@ -18,7 +18,6 @@ export class Small extends Component {
 }
 
 export default enhance(Small)(
-  addDisplayName('Small'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

@@ -17,7 +17,6 @@ export class Indicator extends Component {
 }
 
 export default enhance(Indicator)(
-  addDisplayName('Indicator'),
   addPropTypes('global'),
   addClassName('global'),
 );

@@ -2,22 +2,24 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 
+const propTypes = {
+  src: {
+    string: true,
+    isRequired: true,
+  },
+  size: {
+    oneOf: ['sm', 'md', 'lg'],
+    default: 'md',
+  },
+};
+
 export class Avatar extends Component {
-  static propTypes = {
-    src: {
-      string: true,
-      isRequired: true,
-    },
-    size: {
-      oneOf: ['sm', 'md', 'lg'],
-      default: 'md',
-    },
-  };
+  static propTypes = propTypes;
 
   render() {
     const {
       className,
-      size = Avatar.propTypes.size.default,
+      size = propTypes.size.default,
     } = this.props;
 
     const classes = classnames(className,
@@ -35,7 +37,6 @@ export class Avatar extends Component {
 }
 
 export default enhance(Avatar)(
-  addDisplayName('Avatar'),
   addPropTypes('global'),
   addClassName('global'),
 );

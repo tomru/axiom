@@ -34,7 +34,6 @@ export default class CardTitle extends Component {
 }
 
 export default enhance(CardTitle)(
-  addDisplayName('CardTitle'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

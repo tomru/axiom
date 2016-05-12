@@ -38,7 +38,6 @@ export class LayoutHeader extends Component {
 }
 
 export default enhance(LayoutHeader)(
-  addDisplayName('LayoutHeader'),
   addPropTypes('global'),
   addClassName('global'),
 );

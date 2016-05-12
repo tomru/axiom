@@ -18,7 +18,6 @@ export class Strong extends Component {
 }
 
 export default enhance(Strong)(
-  addDisplayName('Strong'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

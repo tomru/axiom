@@ -18,13 +18,6 @@ export function enhance(Component) {
   };
 }
 
-export function addDisplayName(name) {
-  return (Component) => {
-    Component.__ax_displayName = name;
-    return Component;
-  };
-}
-
 export function addPropTypes(...propSets) {
   return (Component) => {
     Component.__ax_propTypes = addReactPropTypes(Component.propTypes);
@@ -38,20 +31,26 @@ export function addPropTypes(...propSets) {
   }
 }
 
+function extendClass(Component, Wrapped) {
+  for (let staticProp in Component) {
+    Wrapped[staticProp] = Component[staticProp];
+  }
+
+  Wrapped.__ax_displayName = Component.__ax_displayName || Component.name;
+
+  return Wrapped;
+}
+
 export function addClassName(...classNameSets) {
   return (Component) => {
-    class Wrapped extends Component {
-      render() {
-        return <Component {...this.props}
-          ref="original"
-          className={mergeClassNameSets(this.props, classNameSets)} />
+    return extendClass(Component,
+      class Wrapped extends Component {
+        render() {
+          return <Component {...this.props}
+            ref="original"
+            className={mergeClassNameSets(this.props, classNameSets)} />
+        }
       }
-    }
-
-    for (let staticProp in Component) {
-      Wrapped[staticProp] = Component[staticProp];
-    }
-
-    return Wrapped;
+    );
   };
 }

@@ -20,7 +20,6 @@ export class Tab extends Component {
 }
 
 export default enhance(Tab)(
-  addDisplayName('Tab'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

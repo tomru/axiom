@@ -18,7 +18,6 @@ export class Thead extends Component {
 }
 
 export default enhance(Thead)(
-  addDisplayName('Thead'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

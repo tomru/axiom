@@ -18,7 +18,6 @@ export class Italic extends Component {
 }
 
 export default enhance(Italic)(
-  addDisplayName('Italic'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

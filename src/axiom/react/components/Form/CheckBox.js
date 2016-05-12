@@ -30,7 +30,6 @@ export class CheckBox extends Component {
 }
 
 export default enhance(CheckBox)(
-  addDisplayName('CheckBox'),
   addPropTypes('global'),
   addClassName('global'),
 );

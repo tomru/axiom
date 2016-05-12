@@ -7,30 +7,32 @@ import { breakpointClassName } from '../../utils/class-name';
 import { breakpointIds, colorIds } from '../../../sass';
 import Icon from '../Icon/Icon';
 
+const propTypes = {
+  children: {
+    node: true,
+  },
+  color: {
+    oneOf: [...colorIds],
+    default: 'primary',
+  },
+  size: {
+    oneOf: ['sm', 'md', 'lg'],
+    default: 'md',
+  },
+  full: {
+    oneOf: [true, ...breakpointIds],
+  },
+};
+
 export class Label extends Component {
-  static propTypes = {
-    children: {
-      node: true,
-    },
-    color: {
-      oneOf: [...colorIds],
-      default: 'primary',
-    },
-    size: {
-      oneOf: ['sm', 'md', 'lg'],
-      default: 'md',
-    },
-    full: {
-      oneOf: [true, ...breakpointIds],
-    },
-  };
+  static propTypes = propTypes;
 
   render() {
     const {
       className,
       children,
-      color = Label.propTypes.color.default,
-      size = Label.propTypes.size.default,
+      color = propTypes.color.default,
+      size = propTypes.size.default,
       full,
     } = this.props;
 
@@ -63,7 +65,6 @@ export class Label extends Component {
 }
 
 export default enhance(Label)(
-  addDisplayName('Label'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

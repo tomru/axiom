@@ -18,7 +18,6 @@ export class Underline extends Component {
 }
 
 export default enhance(Underline)(
-  addDisplayName('Underline'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

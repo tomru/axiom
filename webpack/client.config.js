@@ -24,11 +24,14 @@ export default {
     ...config.webpack.aliases,
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-      },
-    }),
+    // TODO: Can't enable this until UglifyJS2 Harmony is released
+    // new webpack.optimize.UglifyJsPlugin({
+      // compress: {
+        // keep_fnames: true,
+        // keep_classnames: true,
+        // warnings: false,
+      // },
+    // }),
     new webpack.DefinePlugin({
       ...config.webpack.globals,
       __CLIENT__: true,

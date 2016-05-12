@@ -26,7 +26,6 @@ export class Th extends Component {
 }
 
 export default enhance(Th)(
-  addDisplayName('Th'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

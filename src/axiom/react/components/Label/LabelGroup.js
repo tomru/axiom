@@ -20,7 +20,6 @@ export class LabelGroup extends Component {
 }
 
 export default enhance(LabelGroup)(
-  addDisplayName('LabelGroup'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

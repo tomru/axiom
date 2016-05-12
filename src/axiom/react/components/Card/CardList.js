@@ -20,7 +20,6 @@ export class CardList extends Component {
 }
 
 export default enhance(CardList)(
-  addDisplayName('CardList'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

@@ -3,14 +3,16 @@ import classnames from 'classnames';
 import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
 import { colorIds, colorBaseVariation } from '../../../sass';
 
+const propTypes = {
+  children: { node: true },
+  image: { string: true },
+  color: { oneOf: [...colorIds] },
+  overlay: { bool: true },
+  size: { oneOf: ['sm', 'md', 'lg'], default: 'md' },
+};
+
 export class Billboard extends Component {
-  static propTypes = {
-    children: { node: true },
-    image: { string: true },
-    color: { oneOf: [...colorIds] },
-    overlay: { bool: true },
-    size: { oneOf: ['sm', 'md', 'lg'], default: 'md' },
-  };
+  static propTypes = propTypes;
 
   render() {
     const {
@@ -19,7 +21,7 @@ export class Billboard extends Component {
       image,
       color,
       overlay,
-      size = Billboard.propTypes.size.default,
+      size = propTypes.size.default,
       variation = colorBaseVariation,
     } = this.props;
 
@@ -47,7 +49,6 @@ export class Billboard extends Component {
 }
 
 export default enhance(Billboard)(
-  addDisplayName('Billboard'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

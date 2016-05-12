@@ -20,7 +20,6 @@ export class ButtonGroup extends Component {
 }
 
 export default enhance(ButtonGroup)(
-  addDisplayName('ButtonGroup'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );
