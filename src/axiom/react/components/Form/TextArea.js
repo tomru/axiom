@@ -4,6 +4,8 @@ import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils
 import { blacklist } from '../../utils/props';
 
 export class TextArea extends Component {
+  static propTypes = {};
+
   render() {
     const { className } = this.props;
     const classes = classnames(className, 'ax-input__group');

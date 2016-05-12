@@ -1,22 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { findComponent } from '../../utils/components';
 import { blacklist } from '../../utils/props';
-import { addDynamicClass } from '../../utils/class-name';
-import { breakpoints } from '../../../sass';
+import { breakpointClassName } from '../../utils/class-name';
+import { breakpointIds, colorIds } from '../../../sass';
 import Icon from '../Icon/Icon';
 
 export class Button extends Component {
   static propTypes = {
-    children: { string: true },
-    color: { string: true },
-    size: { oneOf: ['sm', 'md', 'lg'] },
-    full: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
-    icon: { string: true, },
+    children: { node: true },
+    color: {
+      oneOf: [...colorIds],
+      default: 'primary',
+    },
+    size: {
+      oneOf: ['sm', 'md', 'lg'],
+      default: 'md',
+    },
+    full: { oneOf: [true, ...breakpointIds] },
   };
 
   render() {
-    const { className, children, color, size = 'md', full, icon } = this.props;
+    const {
+      className,
+      children,
+      color = Button.propTypes.color.default,
+      size = Button.propTypes.size.default,
+      full,
+    } = this.props;
+
+    const icon = findComponent(children, Icon);
     const classes = classnames(className,
       'ax-button', {
         [`ax-button--${color}`]: color,
@@ -25,18 +39,20 @@ export class Button extends Component {
         'ax-button--lg': size === 'lg',
         'ax-button--full': full === true,
       },
-      addDynamicClass(breakpoints, ({id}) => full === id, ({id}) => `ax-button--full--${id}`),
+      breakpointClassName(full, ({id}) => `ax-button--full--${id}`),
     );
 
     return (
-      <button {...blacklist(this.props, ['color'])} className={classes} title={children}>
+      <button {...blacklist(this.props, ['color'])} className={classes}>
         {do {
           if (icon) {
-            <Icon className="ax-button__icon" name={icon} />
+            {cloneElement(icon, {
+              className: 'ax-button__icon',
+            })}
           }
         }}
 
-        {children}
+        {Children.toArray(children).filter((component) => component.type !== Icon)}
       </button>
     );
   }

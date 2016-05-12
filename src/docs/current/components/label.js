@@ -11,9 +11,9 @@ export default {
       Component: Label
     }],
   }],
-  sass: [
-    '/components/label'
-  ],
+  imports: {
+    sass: ['components/label'],
+  },
   examples: () => [{
     title: 'Colored Labels',
     children: [{
@@ -120,7 +120,6 @@ export default {
       children: [{
         Component: Label,
         children: 'Small',
-        demoContent: true,
         demoProps: {
           color: 'red',
           size: 'sm',
@@ -131,7 +130,6 @@ export default {
       }, {
         Component: Label,
         children: 'Regular',
-        demoContent: true,
         demoProps: {
           color: 'yellow',
         },
@@ -141,7 +139,6 @@ export default {
       }, {
         Component: Label,
         children: 'Large',
-        demoContent: true,
         demoProps: {
           color: 'green',
           size: 'lg',

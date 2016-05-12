@@ -1,5 +1,4 @@
 import 'babel-polyfill';
-import { jsdom } from 'jsdom';
 import path from 'path';
 import express from 'express';
 import React from 'react';
@@ -11,11 +10,10 @@ import createStore from './redux/createStore';
 import createRoutes from './redux/createRoutes';
 import { initialState as searchInitialState } from './reducers/search';
 import { initialState as navigationInitialState } from './reducers/navigation';
+import { createNavStructure } from './utils/navigation';
 import { searchRoutesForText } from './utils/search';
-import { DOC_STRUCTURE } from './constants/DocStructure';
+import { versions } from '../docs';
 import Html from './components/Html';
-
-global.document = jsdom();
 
 try {
   const server = express();
@@ -24,18 +22,25 @@ try {
   server.use('/assets', express.static('static/assets'));
   server.use('/favicon.ico', express.static('static/favicon.ico'));
   server.use('/api/search', (req, res) => {
-    res.status(200).json(searchRoutesForText(req.query.q));
+    res.status(200).json({
+      version: req.query.v,
+      results: searchRoutesForText(
+        req.query.q,
+        req.query.v,
+      ),
+    });
   });
 
   server.get('*', (req, res) => {
     const initialState = {
       navigation: {
         ...navigationInitialState,
-        items: DOC_STRUCTURE,
+        versions: createNavStructure(versions),
       },
       search: {
         ...searchInitialState,
-        results: req.query.q ? searchRoutesForText(req.query.q) : [],
+        results: req.query.q ? searchRoutesForText(req.query.q, req.query.v) : [],
+        version: req.query.v || navigationInitialState.activeVersion,
       },
     };
 

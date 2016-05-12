@@ -1,22 +1,40 @@
-import React, { Component } from 'react';
+import React, { Component, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { findComponent } from '../../utils/components';
 import { blacklist } from '../../utils/props';
-import { addDynamicClass } from '../../utils/class-name';
-import { breakpoints } from '../../../sass';
+import { breakpointClassName } from '../../utils/class-name';
+import { breakpointIds, colorIds } from '../../../sass';
 import Icon from '../Icon/Icon';
 
 export class Label extends Component {
   static propTypes = {
-    children: { string: true },
-    color: { string: true },
-    size: { oneOf: ['sm', 'md', 'lg'] },
-    full: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
-    icon: { string: true, },
+    children: {
+      node: true,
+    },
+    color: {
+      oneOf: [...colorIds],
+      default: 'primary',
+    },
+    size: {
+      oneOf: ['sm', 'md', 'lg'],
+      default: 'md',
+    },
+    full: {
+      oneOf: [true, ...breakpointIds],
+    },
   };
 
   render() {
-    const { className, children, color, full, size = 'md', icon } = this.props;
+    const {
+      className,
+      children,
+      color = Label.propTypes.color.default,
+      size = Label.propTypes.size.default,
+      full,
+    } = this.props;
+
+    const icon = findComponent(children, Icon);
     const classes = classnames(className,
       'ax-label', {
         [`ax-label--${color}`]: color,
@@ -25,18 +43,20 @@ export class Label extends Component {
         'ax-label--lg': size === 'lg',
         'ax-label--full': full === true,
       },
-      addDynamicClass(breakpoints, ({id}) => full === id, ({id}) => `ax-label--full--${id}`),
+      breakpointClassName(full, ({id}) => `ax-button--full--${id}`),
     );
 
     return (
-      <span {...blacklist(this.props, ['color'])} className={classes} title={children}>
+      <span {...blacklist(this.props, ['color'])} className={classes}>
         {do {
           if (icon) {
-            <Icon className="ax-label__icon" name={icon} />
+            {cloneElement(icon, {
+              className: 'ax-label__icon',
+            })}
           }
         }}
 
-        {children}
+        {Children.toArray(children).filter((component) => component.type !== Icon)}
       </span>
     );
   }

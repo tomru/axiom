@@ -1,43 +1,50 @@
 import * as types from 'style-guide/constants/ActionTypes';
-import { hasVisibleChildren, flattenParents } from 'style-guide/utils/navigation';
+import { hasVisibleChildren, getParentIds } from 'style-guide/utils/navigation';
 
 export function navigationRouteEnter(route) {
   return (dispatch, getState) => {
-    dispatch(navigationSetActive(route));
-    dispatch(navigationSetOpen(route));
+    dispatch(navigationSetActiveItem(route));
+    dispatch(navigationSetOpenItem(route));
   };
 }
 
 export function navigationItemClick(item) {
   return (dispatch, getState) => {
     if (hasVisibleChildren(item)) {
-      dispatch(navigationSetOpen(item));
+      dispatch(navigationSetOpenItem(item));
     } else {
-      dispatch(navigationSetActive(item));
+      dispatch(navigationSetActiveItem(item));
     }
   };
 }
 
-export function navigationSetOpen(item) {
-  return (dispatch, getState) => {
-    const {navigation: {items}} = getState();
-    const ids = flattenParents(items, item).map(({id}) => id);
-
-    dispatch({
-      type: types.NAVIGATION_SET_OPEN,
-      payload: { ids },
-    });
-  }
+export function navigationSetActiveVersion(version) {
+  return {
+    type: types.NAVIGATION_SET_ACTIVE_VERSION,
+    payload: { version },
+  };
 }
 
-export function navigationSetActive(item) {
+export function navigationSetActiveItem(item) {
   return (dispatch, getState) => {
-    const {navigation: {items}} = getState();
-    const ids = flattenParents(items, item).map(({id}) => id);
+    const {navigation: {activeVersion, versions}} = getState();
+    const ids = getParentIds(versions[activeVersion], item);
 
     dispatch({
-      type: types.NAVIGATION_SET_ACTIVE,
+      type: types.NAVIGATION_SET_ACTIVE_ITEM,
       payload: { ids },
     });
-  }
+  };
+}
+
+export function navigationSetOpenItem(item) {
+  return (dispatch, getState) => {
+    const {navigation: {activeVersion, versions}} = getState();
+    const ids = getParentIds(versions[activeVersion], item);
+
+    dispatch({
+      type: types.NAVIGATION_SET_OPEN_ITEM,
+      payload: { ids },
+    });
+  };
 }

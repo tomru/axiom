@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames';
-import { TextInput } from 'axiom/react';
+import { Icon, TextInput } from 'axiom/react';
 import { debounce } from 'style-guide/utils/function';
 
 export default class SearchInput extends Component {
@@ -44,9 +44,10 @@ export default class SearchInput extends Component {
       <TextInput
         placeholder="Looking for something?"
         defaultValue={q}
-        icon="search"
         thinking={isSearching}
-        onChange={::this.onChangeHandler} />
+        onChange={::this.onChangeHandler}>
+        <Icon name="search" />
+      </TextInput>
     );
   }
 };

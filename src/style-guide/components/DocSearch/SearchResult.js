@@ -1,12 +1,13 @@
 import React, { PropTypes, Component } from 'react';
-import classnames from 'classnames';
 import { Card, CardTitle, CardContent } from 'axiom/react';
 import { Heading, Italic, Link, Paragraph } from 'axiom/react';
 
 export default class SearchResult extends Component {
   render() {
     const {
-      result: {to, name, text},
+      version,
+      text,
+      result: {to, name},
     } = this.props;
 
     return (

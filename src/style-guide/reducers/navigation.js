@@ -22,20 +22,34 @@ function setOpenStates(ids) {
 
 export const initialState = {
   visible: false,
-  items: [],
+  activeVersion: 'current',
+  versions: {},
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-  case types.NAVIGATION_SET_ACTIVE:
+  case types.NAVIGATION_SET_ACTIVE_VERSION:
     return {
       ...state,
-      items: state.items.map(setActiveStates(action.payload.ids))
+      activeVersion: action.payload.version,
     };
-  case types.NAVIGATION_SET_OPEN:
+  case types.NAVIGATION_SET_ACTIVE_ITEM:
     return {
       ...state,
-      items: state.items.map(setOpenStates(action.payload.ids)),
+      versions: {
+        ...state.versions,
+        [state.activeVersion]: state.versions[state.activeVersion]
+          .map(setActiveStates(action.payload.ids)),
+      },
+    };
+  case types.NAVIGATION_SET_OPEN_ITEM:
+    return {
+      ...state,
+      versions: {
+        ...state.versions,
+        [state.activeVersion]: state.versions[state.activeVersion]
+          .map(setOpenStates(action.payload.ids)),
+      },
     };
   case types.NAVIGATION_TOGGLE:
     return {

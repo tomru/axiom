@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
-import { colorBaseVariation } from '../../../sass';
+import { colorIds, colorBaseVariation } from '../../../sass';
 
-export class Jumbotron extends Component {
+export class Billboard extends Component {
   static propTypes = {
     children: { node: true },
     image: { string: true },
-    color: { string: true },
+    color: { oneOf: [...colorIds] },
     overlay: { bool: true },
-    spaced: { bool: true },
+    size: { oneOf: ['sm', 'md', 'lg'], default: 'md' },
   };
 
   render() {
@@ -19,16 +19,18 @@ export class Jumbotron extends Component {
       image,
       color,
       overlay,
-      spaced,
+      size = Billboard.propTypes.size.default,
       variation = colorBaseVariation,
     } = this.props;
 
     const classes = classnames(className,
-      'ax-jumbotron', {
-        [`ax-jumbotron--${color}--${variation}`]: color,
-        'ax-jumbotron--image': image,
-        'ax-jumbotron--overlay': overlay === true,
-        'ax-jumbotron--spaced': spaced === true,
+      'ax-billboard', {
+        [`ax-billboard--${color}--${variation}`]: color,
+        'ax-billboard--image': image,
+        'ax-billboard--overlay': overlay === true,
+        'ax-billboard--sm': size === 'sm',
+        'ax-billboard--md': size === 'md',
+        'ax-billboard--lg': size === 'lg',
       }
     );
 
@@ -44,8 +46,8 @@ export class Jumbotron extends Component {
   }
 }
 
-export default enhance(Jumbotron)(
-  addDisplayName('Jumbotron'),
+export default enhance(Billboard)(
+  addDisplayName('Billboard'),
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

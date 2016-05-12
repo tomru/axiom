@@ -22,7 +22,8 @@ export class Docs extends Component {
     children: PropTypes.any,
     location: PropTypes.object.isRequired,
     navigationState: PropTypes.shape({
-      items: PropTypes.array.isRequired,
+      activeVersion: PropTypes.string.isRequired,
+      versions: PropTypes.object.isRequired,
     }).isRequired,
     schemesState: PropTypes.shape({
       active: PropTypes.string.isRequired,
@@ -39,6 +40,7 @@ export class Docs extends Component {
   render() {
     const {children, navigationState, schemesState, searchState, location} = this.props;
     const {navigationItemClick} = this.boundNavigationActions;
+    const {activeVersion, versions} = navigationState;
     const {active: activeScheme} = schemesState;
 
     return (
@@ -56,7 +58,7 @@ export class Docs extends Component {
           </LayoutSidebarHeader>
 
           <LayoutSidebarContent>
-            <LayoutNav items={navigationState.items} onItemClick={navigationItemClick} />
+            <LayoutNav items={versions[activeVersion]} onItemClick={navigationItemClick} />
           </LayoutSidebarContent>
         </LayoutSidebar>
 

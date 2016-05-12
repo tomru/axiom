@@ -53,8 +53,9 @@ export default class IconExample extends Component {
             <TextInput
               ref="search"
               placeholder="Got a specific icon in mind?"
-              icon="search"
-              onChange={::this.onChangeHandler} />
+              onChange={::this.onChangeHandler}>
+              <Icon name="search" />
+            </TextInput>
           </CardContent>
         </Card>
 

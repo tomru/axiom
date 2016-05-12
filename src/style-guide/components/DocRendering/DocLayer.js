@@ -61,7 +61,7 @@ export default class DocLayer extends Component {
 
     if (!demoRender) {
       if (snippetLocation) {
-        return <DocLayerCode layer={layer}></DocLayerCode>;
+        return <DocLayerCode layer={layer} />;
       }
     }
 
@@ -70,7 +70,7 @@ export default class DocLayer extends Component {
         <PredefinedContainer layer={layer}>
           {do {
             if (snippetLocation) {
-              <DocLayerCode layer={layer}></DocLayerCode>;
+              <DocLayerCode layer={layer} />;
             }
           }}
         </PredefinedContainer>
@@ -88,7 +88,7 @@ export default class DocLayer extends Component {
           {children.map((child, index) => <DocLayer layer={child} key={index} />)}
           {do {
             if (snippetLocation) {
-              <DocLayerCode layer={layer}></DocLayerCode>;
+              <DocLayerCode layer={layer} />;
             }
           }}
         </Container>

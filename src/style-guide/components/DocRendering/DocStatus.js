@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { LabelGroup, Label } from 'axiom/react';
-import { statuses } from '../../../docs';
+import { statuses } from 'docs';
 
 export default class DocStatus extends Component {
   render() {

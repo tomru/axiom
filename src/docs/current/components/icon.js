@@ -10,10 +10,9 @@ export default {
   components: [{
     Component: Icon,
   }],
-
-  sass: [
-    '/components/icon'
-  ],
+  imports: {
+    sass: ['components/icon'],
+  },
   examples: (routeParams, {iconId}) => {
     if (!iconId) {
       return [];

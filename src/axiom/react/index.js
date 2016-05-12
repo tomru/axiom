@@ -1,11 +1,15 @@
 export { Avatar as Avatar } from './components/Avatar';
 
+export { Billboard as Billboard } from './components/Billboard';
+
 export { Button as Button } from './components/Button';
 export { ButtonGroup as ButtonGroup } from './components/Button';
 
 export { Card as Card } from './components/Card';
-export { CardContent as CardContent } from './components/Card';
 export { CardTitle as CardTitle } from './components/Card';
+export { CardContent as CardContent } from './components/Card';
+export { CardList as CardList } from './components/Card';
+export { CardListItem as CardListItem } from './components/Card';
 
 export { BlockContainer as BlockContainer } from './components/Containers';
 
@@ -21,8 +25,6 @@ export { GridCell as GridCell } from './components/Grid';
 export { Icon as Icon } from './components/Icon';
 
 export { Image as Image } from './components/Image';
-
-export { Jumbotron as Jumbotron } from './components/Jumbotron';
 
 export { Label as Label } from './components/Label';
 export { LabelGroup as LabelGroup } from './components/Label';

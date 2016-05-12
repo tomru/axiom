@@ -6,9 +6,9 @@ export default {
   id: 'ui-colors',
   path: 'ui-colors',
   group: 'core-design',
-  sass: [
-    '/core/core',
-  ],
+  imports: {
+    sass: ['core/core'],
+  },
   examples: () => colorAliases.map(({heading, colors}) => {
     return {
       title: heading,

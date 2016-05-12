@@ -2,6 +2,7 @@ import * as types from 'style-guide/constants/ActionTypes';
 
 export const initialState = {
   results: [],
+  version: null,
   modified: false,
   isSearching: false,
 };
@@ -19,6 +20,7 @@ export default (state = initialState, action) => {
     return {
       ...state,
       results: action.payload.results,
+      version: action.payload.version,
       isSearching: false,
     };
   default:

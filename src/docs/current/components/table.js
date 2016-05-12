@@ -73,9 +73,9 @@ export default {
       }],
     }],
   }],
-  sass: [
-    '/components/table'
-  ],
+  imports: {
+    sass: ['components/table'],
+  },
   examples: () => [{
     title: 'Standard table',
     snippetLocation: true,

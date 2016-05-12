@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js';
-import { DOC_STRUCTURE } from 'style-guide/constants/DocStructure';
+import { versions } from 'docs';
 import { findDocById, flattenStructure } from 'style-guide/utils/navigation';
 
 function extractReducer(acc, example) {
@@ -36,21 +36,27 @@ function extractExamples(examples) {
 
 function buildFuse(routes) {
   return new Fuse(routes, {
-    keys: ['name', 'to', 'text'],
+    keys: ['path', 'group', 'imports', 'text'],
     threshold: 0.0,
     tokenize: true,
   });
 }
 
-export function searchRoutesForText(text) {
-  const routes = flattenStructure(DOC_STRUCTURE)
-    .filter((doc) => doc.searchable && doc.children.length === 0)
-    .map((doc) => {
-      return {
-        ...doc,
-        text: extractExamples(findDocById(doc.id).examples),
-      };
-    });
+export function searchRoutesForText(text, version = 'current') {
+  const routes = Object.keys(versions[version]).reduce((acc, key) => {
+    const {path, group, imports, examples, searchable = true} = versions[version][key];
+
+    if (searchable) {
+      acc.push({
+        path,
+        group,
+        imports,
+        text: extractExamples(examples),
+      });
+    }
+
+    return acc;
+  }, []);
 
   return buildFuse(routes).search(text);
 }

@@ -12,9 +12,9 @@ export default {
       Component: GridCell,
     }],
   }],
-  sass: [
-    '/components/grid'
-  ],
+  imports: {
+    sass: ['components/grid'],
+  },
   examples: () => [{
     title: 'Basic grid',
     snippetLocation: true,
@@ -125,13 +125,13 @@ export default {
           Component: GridCell,
           children: [{
             Component: DemoBox,
-            children: 'Fit / Full',
+            children: `${id.toUpperCase()} Gutters`,
           }],
         }, {
           Component: GridCell,
           children: [{
             Component: DemoBox,
-            children: 'Fit / Full',
+            children: `${id.toUpperCase()} Gutters`,
           }],
         }],
       };
@@ -464,7 +464,7 @@ export default {
     title: 'Vertical cell alignment modifiers (Grid level)',
     snippetLocation: true,
     snippetContent: true,
-    children: ['top', 'middle', 'bottom'].map((vAlign) => {
+    children: Grid.__ax_propTypes.vAlign.oneOf.map((vAlign) => {
       return {
         Component: Grid,
         demoContent: true,
@@ -498,7 +498,7 @@ export default {
       demoProps: {
         className: 'dm-demo-container',
       },
-      children: ['top', 'middle', 'bottom'].map((vAlign) => {
+      children: GridCell.__ax_propTypes.vAlign.oneOf.map((vAlign) => {
         return {
           Component: GridCell,
           demoContent: true,
@@ -516,7 +516,7 @@ export default {
     title: 'Horizontal cell alignment modifiers',
     snippetLocation: true,
     snippetContent: true,
-    children: ['left', 'center', 'right', 'around', 'between'].map((hAlign) => {
+    children: Grid.__ax_propTypes.hAlign.oneOf.map((hAlign) => {
       return {
         Component: Grid,
         demoContent: true,

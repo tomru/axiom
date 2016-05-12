@@ -23,9 +23,9 @@ export default {
       Component: LayoutFooter,
     }],
   }],
-  sass: [
-    '/layouts/emblem',
-  ],
+  imports: {
+    sass: ['layouts/emblem'],
+  },
   examples: () => [{
     children: [{
       Component: Image,

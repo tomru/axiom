@@ -10,8 +10,7 @@ import {
   prepareHTMLSnippet,
   prepareJSXSnippet,
   prepareJSSnippet,
-  prepareAPISnippet,
-} from 'style-guide/utils/markup';
+} from 'style-guide/utils/code-formatting';
 
 if (__CLIENT__) {
   require('prismjs/themes/prism.css');
@@ -23,7 +22,6 @@ const prepareMap = {
   html: prepareHTMLSnippet,
   jsx: prepareJSXSnippet,
   js: prepareJSSnippet,
-  api: prepareAPISnippet,
 };
 
 export default class CodeSnippet extends Component {
@@ -90,7 +88,7 @@ export default class CodeSnippet extends Component {
     const classes = classnames({
       'language-bash': language === 'bash',
       'language-markup': language === 'html',
-      'language-javascript': language === 'js' || language === 'api',
+      'language-javascript': language === 'js',
       'language-jsx': language === 'jsx',
       'language-scss': language === 'sass',
     });

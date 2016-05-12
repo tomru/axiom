@@ -29,15 +29,15 @@ export default {
     { Component: Underline },
     { Component: Weak },
   ],
-  sass: [
-    '/components/typography'
-  ],
+  imports: {
+    sass: ['components/typography'],
+  },
   examples: () => [{
     title: 'Sizing',
     snippetLocation: true,
     snippetContent: true,
     children: [
-      ...[1, 2, 3, 4, 5].map((level) => {
+      ...Heading.__ax_propTypes.level.oneOf.map((level) => {
         return {
           Component: Heading,
           children: `h${level}. Lorem ipsum...`,
@@ -65,7 +65,7 @@ export default {
       snippetLocation: true,
       snippetContent: true,
       children: [
-        ...[1, 2, 3, 4, 5].map((level) => {
+        ...Heading.__ax_propTypes.level.oneOf.map((level) => {
           return {
             Component: Heading,
             props: {
@@ -101,7 +101,7 @@ export default {
       snippetLocation: true,
       snippetContent: true,
       children: [
-        ...[1, 2, 3, 4, 5].map((level) => {
+        ...Heading.__ax_propTypes.level.oneOf.map((level) => {
           return {
             Component: Heading,
             props: {

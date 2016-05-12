@@ -30,7 +30,7 @@ export class Tabset extends Component {
     const { className, children } = this.props;
     const { activeTabIndex } = this.state;
     const isActive = (index) => index === activeTabIndex;
-    const tabs = Array.isArray(children) ? children : [children];
+    const tabs = (Array.isArray(children) ? children : [children]).filter((tab) => tab !== undefined);
     const tabTitles = tabs.map(({props: {title}}) => title);
     const activeTab = tabs.find((tab, index) => isActive(index));
     const classes = classnames(className, 'ax-tabs');

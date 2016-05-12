@@ -7,17 +7,25 @@ import { Heading } from 'axiom/react';
 import { Indicator } from 'axiom/react';
 import { LayoutContent, LayoutFullHeightContainer } from 'axiom/react/layouts/established';
 import SearchResult from 'style-guide/components/DocSearch/SearchResult';
+import { findById } from 'style-guide/utils/navigation';
 
 export class SearchResults extends Component {
   static propTypes = {
     searchState: PropTypes.shape({
-      results: PropTypes.array.isRequired,
       isSearching: PropTypes.bool.isRequired,
+      results: PropTypes.array.isRequired,
+      version: PropTypes.string.isRequired,
+    }).isRequired,
+    navigationState: PropTypes.shape({
+      versions: PropTypes.object.isRequired,
     }).isRequired,
   };
 
   render() {
-    const {searchState: {results, isSearching}} = this.props;
+    const {isSearching, results, version} = this.props.searchState;
+    const {versions} = this.props.navigationState;
+
+    console.log(version);
 
     if (isSearching) {
       return (
@@ -52,8 +60,11 @@ export class SearchResults extends Component {
       <LayoutContent>
         <Card>
           <CardTitle title="Search Results" />
-          {results.map((result, index) =>
-            <SearchResult key={index} result={result} />
+          {results.map(({path, text}, index) =>
+            <SearchResult
+                key={index}
+                result={findById(versions[version], path)}
+                text={text} />
           )}
         </Card>
       </LayoutContent>
@@ -64,6 +75,7 @@ export class SearchResults extends Component {
 function select(state) {
   return {
     searchState: state.search,
+    navigationState: state.navigation,
   };
 }
 

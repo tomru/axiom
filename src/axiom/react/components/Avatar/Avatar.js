@@ -4,12 +4,22 @@ import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils
 
 export class Avatar extends Component {
   static propTypes = {
-    src: { string: true, isRequired: true },
-    size: { oneOf: ['sm', 'md', 'lg'] },
+    src: {
+      string: true,
+      isRequired: true,
+    },
+    size: {
+      oneOf: ['sm', 'md', 'lg'],
+      default: 'md',
+    },
   };
 
   render() {
-    const { className, size = 'md' } = this.props;
+    const {
+      className,
+      size = Avatar.propTypes.size.default,
+    } = this.props;
+
     const classes = classnames(className,
       'ax-avatar', {
         'ax-avatar--sm': size === 'sm',

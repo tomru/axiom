@@ -1,18 +1,28 @@
 import React from 'react';
 import { Route, IndexRoute, IndexRedirect } from 'react-router';
-import { navigationRouteEnter } from 'style-guide/actions/navigation';
+import { navigationRouteEnter, navigationSetActiveVersion } from 'style-guide/actions/navigation';
 import App from 'style-guide/containers/App';
-import DocPage from 'style-guide/containers/DocPage';
+import Doc from 'style-guide/containers/Doc';
+import DocApi from 'style-guide/containers/DocApi';
+import DocExample from 'style-guide/containers/DocExample';
 import Landing from 'style-guide/containers/Landing';
 import SearchResults from 'style-guide/containers/SearchResults';
+import { findDocById } from 'style-guide/utils/navigation';
+import { renderApiDocs } from 'style-guide/utils/rendering/rendering-api';
 
-function onEnter(dispatch, route) {
+function onEnterVersionRoute(dispatch, version) {
+  return () => {
+    dispatch(navigationSetActiveVersion(version));
+  };
+}
+
+function onEnterDocRoute(dispatch, route) {
   return () => {
     dispatch(navigationRouteEnter(route));
   };
 }
 
-function createRoute(dispatch) {
+function createRoute(dispatch, version) {
   return (item, index) => {
     if (item.children && item.children.length) {
       return (
@@ -23,44 +33,44 @@ function createRoute(dispatch) {
             }
           }}
 
-          { item.children.map(createRoute(dispatch)) }
+          { item.children.map(createRoute(dispatch, version)) }
         </Route>
       );
     }
 
-    if (item.path) {
-      return (
-        <Route
-          path={item.path}
-          component={DocPage}
-          key={index}
-          onEnter={onEnter(dispatch, item)}
-          docData={item} />
-      );
-    }
+    const doc = findDocById(version, item.id);
 
     return (
-      <IndexRoute
-        component={DocPage}
-        key={index}
-        onEnter={onEnter(dispatch, item)}
-        docData={item} />
+      <Route
+          component={Doc}
+          path={item.path}
+          key={index}
+          onEnter={onEnterDocRoute(dispatch, item)}
+          doc={doc}
+          navItem={item}>
+        <IndexRoute component={DocExample} doc={doc} />
+      </Route>
     );
   };
 }
 
 export default function createRoutes(store) {
   const { dispatch, getState } = store;
-  const { navigation: {items} } = getState();
+  const { navigation: { versions } } = getState();
 
   return (
     <Route path="/">
       <IndexRoute component={Landing} />
       <Route component={App}>
-        <route path="search" component={SearchResults} />
+        <Route path="search" component={SearchResults} />
         <Route path="docs">
-          <IndexRedirect to={items[0].path} />
-          { items.map(createRoute(dispatch)) }
+          <IndexRedirect to={`current/${versions.current[0].path}`} />
+          {Object.keys(versions).map((version) =>
+            <Route path={version} onEnter={onEnterVersionRoute(dispatch, version)}>
+              <IndexRedirect to={versions[version][0].path} />
+              { versions[version].map(createRoute(dispatch, version)) }
+            </Route>
+          )}
         </Route>
       </Route>
     </Route>

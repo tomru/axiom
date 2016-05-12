@@ -1,14 +1,14 @@
 import humanize from 'humanize-string';
 import { ROUTE_DOCS } from 'style-guide/constants/Routing';
-import * as docs from '../../docs/current';
+import { versions } from 'docs';
 
-export function createToPath(paths) {
+function createToPath(paths) {
   return paths.reduce((acc, path) => {
     return `${acc}/${path}`;
   }, `/${ROUTE_DOCS}`);
 }
 
-export function createRoute(id, route, parentId = null, parentPaths = []) {
+function createRoute(version, id, route, parentId = null, parentPaths = []) {
   const { path, hidden = false, searchable = true } = route;
 
   return {
@@ -25,46 +25,43 @@ export function createRoute(id, route, parentId = null, parentPaths = []) {
   };
 }
 
-export function createDocStructure(docs) {
+export function hasVisibleChildren({children = []}) {
+  return children.filter(({hidden = false}) => !hidden).length > 0;
+}
+
+function createRoutes(docs, version) {
   return Object.keys(docs).reduce((groups, key) => {
     const doc = docs[key];
-    let docGroup = groups.find(({path}) => path === doc.group);
+    let docGroup = groups.find(({id}) => id === doc.group);
 
     if (!docGroup) {
-      docGroup = createRoute(doc.group, { path: doc.group });
+      docGroup = createRoute(version, doc.group, { path: doc.group }, null, [version]);
       groups.push(docGroup);
     }
 
-    docGroup.children.push(createRoute(doc.id, doc, docGroup.id, [docGroup.path]));
+    docGroup.children.push(createRoute(version, doc.id, doc, docGroup.id, [version, docGroup.path]));
     docGroup.hasChildren = hasVisibleChildren(docGroup);
 
     return groups;
   }, []);
 }
 
-export function findById(items, id) {
-  return flattenStructure(items)
-    .find((item) => item.id === id);
+export function createNavStructure(versions) {
+  return Object.keys(versions).reduce((structure, version) => {
+    structure[version] = createRoutes(versions[version], version);
+    return structure;
+  }, {});
 }
 
-export function findDocById(id) {
-  for (let key in docs) {
-    if (docs[key].id === id) {
-      return docs[key];
+export function findDocById(version, id) {
+  for (let key in versions[version]) {
+    if (versions[version][key].id === id) {
+      return versions[version][key];
     }
   }
 }
 
-export function findByActive(items) {
-  return flattenStructure(items)
-    .filter((item) => item.isActive);
-}
-
-export function hasVisibleChildren({children = []}) {
-  return children.filter(({hidden = false}) => !hidden).length > 0;
-}
-
-export function flattenChildren(item, children = [item]) {
+function flattenChildren(item, children = [item]) {
   if (item.children && item.children.length) {
     item.children.forEach((child) => {
       children.push(child);
@@ -75,7 +72,21 @@ export function flattenChildren(item, children = [item]) {
   return children;
 }
 
-export function flattenParents(items, item, parents = [item]) {
+export function flattenStructure(items) {
+  return [].concat.apply([], items.map((item) => flattenChildren(item)));
+}
+
+export function findById(items, id) {
+  return flattenStructure(items)
+    .find((item) => item.id === id);
+}
+
+export function findByActive(items) {
+  return flattenStructure(items)
+    .filter((item) => item.isActive);
+}
+
+function flattenParents(items, item, parents = [item]) {
   if (item.parentId) {
     const parent = findById(items, item.parentId);
 
@@ -88,6 +99,10 @@ export function flattenParents(items, item, parents = [item]) {
   return parents;
 }
 
-export function flattenStructure(items) {
-  return [].concat.apply([], items.map((item) => flattenChildren(item)));
+export function getParentIds(items, item) {
+  return flattenParents(items, item).map(({id}) => id);
+}
+
+export function getParentNames(items, item) {
+  return flattenParents(items, item).map(({name}) => name);
 }

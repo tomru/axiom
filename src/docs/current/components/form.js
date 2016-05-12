@@ -1,4 +1,4 @@
-import { Button } from 'axiom/react';
+import { Button, Icon } from 'axiom/react';
 import { Form, CheckBox, RadioButton, TextArea, TextInput } from 'axiom/react';
 
 export default {
@@ -12,10 +12,9 @@ export default {
     { Component: TextArea },
     { Component: TextInput }
   ],
-
-  sass: [
-    '/components/form'
-  ],
+  imports: {
+    sass: ['components/form'],
+  },
   examples: () => [{
     title: 'Text inputs',
     snippetLocation: true,
@@ -74,25 +73,27 @@ export default {
       snippetContent: true,
       children: [{
         Component: TextInput,
-        props: {
+        demoProps: {
           placeholder: 'Icon input...',
-          icon: 'calendar',
-        }
+        },
+        children: [{
+          Component: Icon,
+          props: {
+            name: 'calendar',
+          },
+        }],
       }]
     }, {
       title: 'Text input with a Button',
       snippetContent: true,
       children: [{
         Component: TextInput,
-        props: {
+        demoProps: {
           placeholder: 'Button input...',
         },
         children: [{
           Component: Button,
           children: 'Submit',
-          props: {
-            color: 'primary',
-          },
         }],
       }],
     }, {
@@ -100,15 +101,16 @@ export default {
       snippetContent: true,
       children: [{
         Component: TextInput,
-        props: {
+        demoProps: {
           placeholder: 'Button input...',
-          icon: 'calendar',
         },
         children: [{
           Component: Button,
           children: 'Submit',
+        }, {
+          Component: Icon,
           props: {
-            color: 'primary',
+            name: 'calendar',
           },
         }],
       }],

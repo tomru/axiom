@@ -32,6 +32,14 @@ function formatJs(js) {
   });
 }
 
+function formatJsx(jsx) {
+  return beautifyHtml(jsx, {
+    indent_size: 2,
+    preserve_newlines: true,
+    unformatted: [],
+  });
+}
+
 function prepareSnippet(snippet, transforms) {
   return transforms.reduce((transformedContent, transform) => transform(transformedContent), snippet);
 }
@@ -45,7 +53,7 @@ export function prepareHTMLSnippet(snippet) {
 
 export function prepareJSXSnippet(snippet) {
   return prepareSnippet(snippet, [
-    formatHtml,
+    formatJsx,
     encodeHTML,
   ]);
 }
@@ -62,10 +70,4 @@ export function prepareBashSnippet(snippet) {
 
 export function prepareJSSnippet(snippet) {
   return prepareSnippet(snippet, []);
-}
-
-export function prepareAPISnippet(snippet) {
-  return prepareSnippet(snippet, [
-    formatJs,
-  ]);
 }

@@ -20,10 +20,12 @@ export default {
       Component: LayoutFooter,
     }],
   }],
-  sass: [
-    '/layouts/established',
-    '/layouts/established-nav',
-  ],
+  imports: {
+    sass: [
+      'layouts/established',
+      'layouts/established-nav',
+    ],
+  },
   examples: () => [{
     children: [{
       Component: Image,

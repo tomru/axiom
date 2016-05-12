@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
-import { addDynamicClass } from '../../utils/class-name';
-import { breakpoints, gridGutters } from '../../../sass';
+import { addDynamicClass, breakpointClassName } from '../../utils/class-name';
+import { breakpointIds, gridGutters } from '../../../sass';
 
 export class Grid extends Component {
   static propTypes = {
@@ -11,8 +11,8 @@ export class Grid extends Component {
     gutters: { oneOf: [false, ...gridGutters.map(({id}) => id)] },
     vGutters: { bool: true },
     hGutters: { bool: true },
-    full: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
-    fit: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
+    full: { oneOf: [true, ...breakpointIds] },
+    fit: { oneOf: [true, ...breakpointIds] },
     vAlign: { oneOf: ['top', 'middle', 'bottom'] },
     hAlign: { oneOf: ['left', 'center', 'right', 'around', 'between'] },
   };
@@ -49,8 +49,8 @@ export class Grid extends Component {
         'ax-grid--between': hAlign === 'between',
       },
       addDynamicClass(gridGutters, ({id}) => gutters === id, ({id}) => `ax-grid--gutters--${id}`),
-      addDynamicClass(breakpoints, ({id}) => full === id, ({id}) => `ax-grid--full--${id}`),
-      addDynamicClass(breakpoints, ({id}) => fit === id, ({id}) => `ax-grid--fit--${id}`),
+      breakpointClassName(full, ({id}) => `ax-grid--full--${id}`),
+      breakpointClassName(fit, ({id}) => `ax-grid--fit--${id}`),
     );
 
     return (

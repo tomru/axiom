@@ -1,42 +1,23 @@
 import React, { Component, PropTypes } from 'react';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
-import {
-  getLayersHtmlSnippets,
-  getLayersJsxSnippets,
-  getLayersJsSnippets,
-} from 'style-guide/utils/docs-examples';
+import { renderSnippets } from 'style-guide/utils/rendering/rendering-snippets';
 
 export default class DocLayerCode extends Component {
   render()  {
     const { layer } = this.props;
-    const htmlSnippet = getLayersHtmlSnippets(layer);
-    const jsxSnippet = getLayersJsxSnippets(layer);
-    const jsSnippet = getLayersJsSnippets(layer);
+    const snippets = renderSnippets(layer);
 
     return (
       <CodeTabset>
-        {do {
-          if (htmlSnippet.length) {
-            <CodeSnippet language="html">
-              {htmlSnippet}
+        {Object.keys(snippets)
+          .filter((key) => snippets[key].length)
+          .map((key, index) =>
+            <CodeSnippet language={key} key={index}>
+              {snippets[key]}
             </CodeSnippet>
-          }
-        }}
-        {do {
-          if (jsxSnippet.length) {
-            <CodeSnippet language="jsx">
-              {jsxSnippet}
-            </CodeSnippet>
-          }
-        }}
-        {do {
-          if (jsSnippet.length) {
-            <CodeSnippet language="js">
-              {jsSnippet}
-            </CodeSnippet>
-          }
-        }}
+          )
+        }
       </CodeTabset>
     );
   }

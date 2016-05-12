@@ -1,0 +1,12 @@
+@import "~axiom/sass/core/mixins";
+
+.dm-doc-api__pre {
+  @include blockSpace();
+}
+
+.dm-doc-api__code {
+  border: $component-border-width-base solid getColor($color-grey, 100);
+  background-color: getColor($color-grey, 50);
+  white-space: normal;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}

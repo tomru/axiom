@@ -8,8 +8,8 @@ export default {
   components: [{
     Component: Icon,
   }],
-  sass: [
-    '/components/icon'
-  ],
-  example: IconExample,
+  imports: {
+    sass: ['components/icon'],
+  },
+  Example: IconExample,
 };

@@ -16,9 +16,10 @@ $card-border: $component-border-width-base solid transparent;
     @include forEachScheme() {
       color: schemeTextColor(schemeProp(card-color));
       background-color: schemeProp(card-color);
+      border: $card-border;
 
       @if schemeHasProp(card-border) {
-        box-shadow: schemeProp(card-border);
+        border-color: schemeProp(card-border);
         border-radius: $border-radius-base;
       }
     }
@@ -31,4 +32,30 @@ $card-border: $component-border-width-base solid transparent;
 
 .ax-card__content {
   padding: $card-padding-v $card-padding-h;
+}
+
+.ax-card__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ax-card__list-item {
+  padding: ($card-padding-v / 2) $card-padding-h;
+  border-bottom: $card-border;
+
+  @include forEachScheme() {
+    @if schemeHasProp(card-border) {
+      border-color: schemeProp(card-border);
+    }
+  }
+
+  &:first-child  {
+    padding-top: $card-padding-v;
+  }
+
+  &:last-child  {
+    padding-bottom: $card-padding-v;
+    border-bottom: none;
+  }
 }

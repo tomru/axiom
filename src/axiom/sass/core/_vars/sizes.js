@@ -1,22 +1,28 @@
-export const spacingXs = '3px';
-export const spacingSm = '7px';
-export const spacingBase = '15px';
-export const spacingLg = '30px';
-export const spacingXl = '45px';
-export const spacingXxl = '60px';
+const spacingXs = '3px';
+const spacingSm = '7px';
+const spacingBase = '15px';
+const spacingLg = '30px';
+const spacingXl = '45px';
+const spacingXxl = '60px';
 
-export const layoutWidthSm = '768px';
-export const layoutWidthMd = '992px';
-export const layoutWidthLg = '1200px';
+const layoutWidthSm = '768px';
+const layoutWidthMd = '992px';
+const layoutWidthLg = '1200px';
 
-export const borderWidthSm = '1px';
-export const borderWidthBase = '2px';
-export const borderWidthLg = '3px';
+const borderWidthSm = '1px';
+const borderWidthBase = '2px';
+const borderWidthLg = '3px';
 
-export const borderRadiusSm = '2px;'
-export const borderRadiusBase = '3px';
-export const borderRadiusLg = '5px';
-export const borderRadiusXl = '10px';
+const borderRadiusSm = '2px;'
+const borderRadiusBase = '3px';
+const borderRadiusLg = '5px';
+const borderRadiusXl = '10px';
+
+const breakpoints = [
+  { id: 'sm', width: layoutWidthSm },
+  { id: 'md', width: layoutWidthMd },
+  { id: 'lg', width: layoutWidthLg },
+];
 
 export default {
   spacingXs,
@@ -31,11 +37,8 @@ export default {
   layoutWidthLg,
   layoutChangePoint: layoutWidthSm,
 
-  breakpoints: [
-    { id: 'sm', width: layoutWidthSm },
-    { id: 'md', width: layoutWidthMd },
-    { id: 'lg', width: layoutWidthLg },
-  ],
+  breakpoints,
+  breakpointIds: breakpoints.map(({id}) => id),
 
   borderWidthSm,
   borderWidthBase,

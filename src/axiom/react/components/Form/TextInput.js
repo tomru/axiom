@@ -8,26 +8,25 @@ import Icon from '../Icon/Icon';
 export class TextInput extends Component {
   static propTypes = {
     children: { node: true },
-    icon: { string: true },
     valid: { bool: true },
     invalid: { bool: true },
     thinking: { bool: true },
   };
 
-  getIcon() {
-    const {icon, valid, invalid, thinking} = this.props;
+  getIcon(defaultIcon) {
+    const {valid, invalid, thinking} = this.props;
 
     if (valid) return 'check';
     if (invalid) return 'times';
     if (thinking) return 'circle-o-notch';
 
-    return icon;
+    return defaultIcon;
   }
 
   render() {
-    const { className, children, icon, valid, invalid, thinking } = this.props;
+    const { className, children, valid, invalid, thinking } = this.props;
     const button = findComponent(children, Button);
-    const iconClasses = classnames({'ax-icon-spin': thinking});
+    const icon = findComponent(children, Icon);
     const classes = classnames(className,
       'ax-input__group', {
         'ax-input--valid': valid === true,
@@ -44,7 +43,11 @@ export class TextInput extends Component {
             {do {
               if (icon) {
                 <div className="ax-input__icon">
-                  <Icon className={iconClasses} name={this.getIcon(icon)} size="lg" />
+                  {cloneElement(icon, {
+                    className: classnames({'ax-icon-spin': thinking}),
+                    name: this.getIcon(icon.props.name),
+                    size: 'lg',
+                  })}
                 </div>
               }
             }}

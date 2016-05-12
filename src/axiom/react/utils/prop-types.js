@@ -1,5 +1,5 @@
 import { PropTypes } from 'react';
-import { breakpoints } from '../../sass';
+import { breakpointIds } from '../../sass';
 
 const PROP_TYPE_MAP = {
   any: PropTypes.any,
@@ -12,7 +12,7 @@ const PROP_TYPE_MAP = {
   node: PropTypes.node,
   element: PropTypes.element,
   shape: PropTypes.shape,
-  instaneOf: PropTypes.instaneOf,
+  instanceOf: PropTypes.instanceOf,
   arrayOf: PropTypes.arrayOf,
   objectOf: PropTypes.objectOf,
   oneOf: PropTypes.oneOf,
@@ -22,13 +22,13 @@ const PROP_TYPE_MAP = {
 const PROP_TYPES_SETS = {
   global: {
     className: { string: true },
-    hiddenUntil: { oneOf: breakpoints.map(({id}) => id) },
-    visibleUntil: { oneOf: breakpoints.map(({id}) => id) },
+    hiddenUntil: { oneOf: breakpointIds },
+    visibleUntil: { oneOf: breakpointIds },
   },
   text: {
-    textLeft: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
-    textCenter: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
-    textRight: { oneOf: [true, ...breakpoints.map(({id}) => id)] },
+    textLeft: { oneOf: [true, ...breakpointIds] },
+    textCenter: { oneOf: [true, ...breakpointIds] },
+    textRight: { oneOf: [true, ...breakpointIds] },
     textBreak: { oneOf: ['none', 'all', 'word'] },
     textCase: { oneOf: ['upper', 'capital', 'lower'] },
     textEllipsis: { bool: true },
@@ -36,11 +36,11 @@ const PROP_TYPES_SETS = {
 };
 
 function getPropType(prop) {
-  for (let typeKey in prop) {
-    if (PROP_TYPE_MAP[typeKey]) {
+  for (let key in prop) {
+    if (PROP_TYPE_MAP[key]) {
       return {
-        typeKey,
-        type: PROP_TYPE_MAP[typeKey],
+        type: key,
+        propType: PROP_TYPE_MAP[key],
       };
     }
   }
@@ -49,14 +49,13 @@ function getPropType(prop) {
 }
 
 function createPropType(prop, isRequired) {
-  const {typeKey, type} = getPropType(prop);
-  let propType;
+  let finalPropType;
+  const {propType, type} = prop;
 
-  if (!type) {
+  if (!propType) {
     throw new Error(`No matching PropType found: ${JSON.stringify(prop)}`);
   }
-
-  switch (type) {
+  switch (propType) {
   case PropTypes.any:
   case PropTypes.string:
   case PropTypes.bool:
@@ -66,33 +65,42 @@ function createPropType(prop, isRequired) {
   case PropTypes.object:
   case PropTypes.node:
   case PropTypes.element:
-    propType = type;
+    finalPropType = propType;
     break;
   case PropTypes.instanceOf:
   case PropTypes.oneOf:
-    propType = type(prop[typeKey]);
+    finalPropType = propType(prop[type]);
     break;
   case PropTypes.oneOfType:
-    propType = type(prop[typeKey].map((p) => createPropType(p, false)));
+    finalPropType = propType(prop[type].map((p) => createPropType(p, false)));
     break;
   case PropTypes.arrayOf:
   case PropTypes.objectOf:
-    propType = type(getPropType(prop[typeKey]));
+    finalPropType = propType(getPropType(prop[type]));
     break;
   case PropTypes.shape:
-    propType = type(mapToPropTypes(prop[typeKey]));
+    finalPropType = propType(mapToPropTypes(prop[type]));
     break;
   }
 
   return isRequired
-    ? propType.isRequired
-    : propType;
+    ? finalPropType.isRequired
+    : finalPropType;
 }
 
-export function mapToPropTypes(props) {
-  return Object.keys(props).reduce((propTypes, key) => {
-    propTypes[key] = createPropType(props[key], props[key].isRequired);
-    return propTypes;
+export function addReactPropTypes(props = {}) {
+  return Object.keys(props).reduce((acc, key) => {
+    const {type, propType} = getPropType(props[key]);
+
+    if (type && propType) {
+      acc[key] = {
+        ...props[key],
+        type,
+        propType,
+      };
+    }
+
+    return acc;
   }, {});
 }
 
@@ -101,10 +109,17 @@ export function mergePropTypeSets(propSets) {
     if (PROP_TYPES_SETS[set]) {
       return {
         ...acc,
-        ...PROP_TYPES_SETS[set],
+        ...addReactPropTypes(PROP_TYPES_SETS[set]),
       };
     }
 
     return acc;
+  }, {});
+}
+
+export function mapToPropTypes(props) {
+  return Object.keys(props).reduce((propTypes, key) => {
+    propTypes[key] = createPropType(props[key], props[key].isRequired);
+    return propTypes;
   }, {});
 }

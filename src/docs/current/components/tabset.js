@@ -10,9 +10,9 @@ export default {
       Component: Tab,
     }],
   }],
-  sass: [
-    '/components/tabset'
-  ],
+  imports: {
+    sass: ['components/tabset'],
+  },
   examples: () => [{
     title: 'Standard',
     snippetLocation: true,

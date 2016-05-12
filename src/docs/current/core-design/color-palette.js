@@ -5,9 +5,9 @@ export default {
   id: 'color-palette',
   path: 'color-palette',
   group: 'core-design',
-  sass: [
-    '/core/core',
-  ],
+  imports: {
+    sass: ['core/core'],
+  },
   examples: () => colorPalette.map((colors) => {
     return {
       children: [{

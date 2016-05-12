@@ -1,6 +1,6 @@
-import { statuses } from '../../';
+import { statuses } from 'docs';
 import { breakpoints, colorPalette, colorAliases } from 'axiom/sass';
-import { Button, ButtonGroup } from 'axiom/react';
+import { Button, ButtonGroup, Icon } from 'axiom/react';
 
 export default {
   id: 'button',
@@ -12,9 +12,9 @@ export default {
       Component: Button,
     }],
   }],
-  sass: [
-    '/components/button'
-  ],
+  imports: {
+    sass: ['components/button'],
+  },
   examples: () => [{
     title: 'Colored Buttons',
     status: statuses.BETA,
@@ -40,27 +40,42 @@ export default {
     }, {
       title: 'UI Colors',
       snippetLocation: true,
-      children: colorAliases.map(({heading, colors}) => {
-        return {
-          title: heading,
+      children: [
+        ...colorAliases.map(({heading, colors}) => {
+          return {
+            title: heading,
+            Container: ButtonGroup,
+            snippetContent: true,
+            children: colors.reduce((acc, colors) => {
+              colors.forEach(({name}) => {
+                acc.push({
+                  Component: Button,
+                  children: name,
+                  demoContent: true,
+                  props: {
+                    color: name,
+                  },
+                });
+              });
+
+              return acc;
+            }, []),
+          };
+        }),
+        {
+          title: 'Scheme Primary',
           Container: ButtonGroup,
           snippetContent: true,
-          children: colors.reduce((acc, colors) => {
-            colors.forEach(({name}) => {
-              acc.push({
-                Component: Button,
-                children: name,
-                demoContent: true,
-                props: {
-                  color: name,
-                },
-              });
-            });
-
-            return acc;
-          }, []),
-        };
-      }),
+          children: [{
+            Component: Button,
+            children: 'Scheme Primary',
+            demoContent: true,
+            props: {
+              color: 'primary',
+            },
+          }],
+        },
+      ],
     }],
   }, {
     title: 'Sizes',
@@ -69,14 +84,11 @@ export default {
     children: [{
       Container: ButtonGroup,
       snippetContent: true,
-      children: ['sm', 'md', 'lg'].map((size) => {
+      children: Button.__ax_propTypes.size.oneOf.map((size) => {
         return {
           Component: Button,
           props: {
             size: size,
-          },
-          demoProps: {
-            color: 'primary',
           },
           demoContent: true,
           children: `Button (${size.toUpperCase()})`,
@@ -90,30 +102,16 @@ export default {
     children: [{
       Container: ButtonGroup,
       snippetContent: true,
-      children: [{
-        Component: Button,
-        demoContent: true,
-        children: 'Always full width',
-        demoProps: {
-          color: 'primary',
-        },
-        props: {
-          full: true,
-        },
-      },
-      ...breakpoints.map(({id}) => {
+      children: Button.__ax_propTypes.full.oneOf.map((at) => {
         return {
           Component: Button,
           demoContent: true,
-          children: `Full width < ${id}`,
-          demoProps: {
-            color: 'primary',
-          },
+          children: at === true ? 'Always full width' : `Full width < ${at}`,
           props: {
-            full: id,
+            full: at,
           },
         };
-      })],
+      }),
     }]
   }, {
     title: 'Button with an Icon',
@@ -124,36 +122,48 @@ export default {
       snippetContent: true,
       children: [{
         Component: Button,
-        children: 'Small',
-        demoContent: true,
         demoProps: {
           color: 'red',
           size: 'sm',
         },
-        props: {
-          icon: 'trash',
-        },
+        children: [
+          'Small',
+          {
+            Component: Icon,
+            props: {
+              name: 'trash'
+            },
+          }
+        ],
       }, {
         Component: Button,
-        children: 'Regular',
-        demoContent: true,
         demoProps: {
           color: 'yellow',
         },
-        props: {
-          icon: 'warning',
-        },
+        children: [
+          'Regular',
+          {
+            Component: Icon,
+            props: {
+              name: 'warning'
+            },
+          }
+        ],
       }, {
         Component: Button,
-        children: 'Large',
-        demoContent: true,
         demoProps: {
           color: 'green',
           size: 'lg',
         },
-        props: {
-          icon: 'check',
-        },
+        children: [
+          'Large',
+          {
+            Component: Icon,
+            props: {
+              name: 'check'
+            },
+          }
+        ],
       }],
     }],
   }],

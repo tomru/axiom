@@ -32,11 +32,11 @@ const CLASS_NAMES_SETS = {
   },
 };
 
-export function addDynamicClass(array, findPredicate, classPredicate) {
-  const element = array.find(findPredicate);
+export function addDynamicClass(array, predicate, classCb) {
+  const element = array.find(predicate);
 
   if (element) {
-    return classPredicate(element);
+    return classCb(element);
   }
 }
 
@@ -45,4 +45,8 @@ export function mergeClassNameSets(props = {}, classNameSets) {
     props.className,
     ...classNameSets.map((set) => CLASS_NAMES_SETS[set](props)),
   );
+}
+
+export function breakpointClassName(value, classCb) {
+  return addDynamicClass(breakpoints, ({id}) => value === id, classCb);
 }

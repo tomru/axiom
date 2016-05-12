@@ -5,7 +5,7 @@ import { browserHistory } from 'react-router';
 import classnames from 'classnames';
 import { Button, ButtonGroup } from 'axiom/react';
 import { Card, CardTitle, CardContent } from 'axiom/react';
-import { Jumbotron } from 'axiom/react';
+import { Billboard } from 'axiom/react';
 import { Layout, LayoutHeader, LayoutSidebar, LayoutMain, LayoutContent, LayoutFooter } from 'axiom/react/layouts/established';
 import { Heading, Strong } from 'axiom/react';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
@@ -18,7 +18,7 @@ export class Landing extends Component {
     return (
       <Layout className={activeScheme}>
         <LayoutMain>
-          <Jumbotron image="/assets/axiom-bg.jpg" color="blue-grey" overlay={true} spaced={true} textCenter={true}>
+          <Billboard image="/assets/axiom-bg.jpg" color="blue-grey" overlay={true} textCenter={true} size="lg">
             <LayoutContent>
               <Heading level={1}><Strong>Brandwatch</Strong> Axiom</Heading>
               <ButtonGroup>
@@ -27,7 +27,7 @@ export class Landing extends Component {
                 </Button>
               </ButtonGroup>
             </LayoutContent>
-          </Jumbotron>
+          </Billboard>
 
           <LayoutContent>
             <Card>
