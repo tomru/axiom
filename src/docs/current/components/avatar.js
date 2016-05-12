@@ -6,7 +6,7 @@ export default {
   path: 'avatar',
   group: 'components',
   imports: {
-    sass: ['components/avatar']
+    sass: ['components/avatar'],
   },
   components: [{
     Component: Avatar,

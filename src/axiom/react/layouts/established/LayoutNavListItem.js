@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import Link from '../../components/Typography/Link';
 import LayoutNavList from './LayoutNavList';
 
@@ -8,7 +8,7 @@ export class LayoutNavListItem extends Component {
   static propTypes = {
     className: { string: true },
     item: { object: true, isRequired: true },
-    onItemClick: { func: true },
+    onClick: { func: true },
   };
 
   render() {
@@ -27,9 +27,7 @@ export class LayoutNavListItem extends Component {
     } = this.props;
 
     function createOnItemClickHandler() {
-      return (event) => {
-        onClick(item);
-      };
+      return () => onClick(item);
     }
 
     const classes = classnames(className,
@@ -41,21 +39,21 @@ export class LayoutNavListItem extends Component {
     );
 
     return (
-      <li className={classes}>
+      <li className={ classes }>
         <Link
-          className="ax-layout-nav__link"
-          to={to}
-          supressStyle={true}
-          onClick={createOnItemClickHandler()}>{name}</Link>
+            className="ax-layout-nav__link"
+            onClick={ createOnItemClickHandler() }
+            supressStyle={ true }
+            to={ to }>{ name }</Link>
 
-        {do {
+        { do {
           if (hasChildren) {
             <LayoutNavList
-              isOpen={isOpen}
-              items={children.filter(({name}) => name)}
-              onItemClick={onClick} />
+                isOpen={ isOpen }
+                items={ children.filter(({ name }) => name) }
+                onItemClick={ onClick } />
           }
-        }}
+        } }
       </li>
     );
   }

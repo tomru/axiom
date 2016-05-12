@@ -1,6 +1,6 @@
 import React, { Component, Children, cloneElement } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import { findComponent } from '../../utils/components';
 import { blacklist } from '../../utils/props';
 import { breakpointClassName } from '../../utils/class-name';
@@ -45,20 +45,20 @@ export class Label extends Component {
         'ax-label--lg': size === 'lg',
         'ax-label--full': full === true,
       },
-      breakpointClassName(full, ({id}) => `ax-button--full--${id}`),
+      breakpointClassName(full, ({ id }) => `ax-button--full--${id}`),
     );
 
     return (
-      <span {...blacklist(this.props, ['color'])} className={classes}>
-        {do {
+      <span {...blacklist(this.props, ['color'])} className={ classes }>
+        { do {
           if (icon) {
             {cloneElement(icon, {
               className: 'ax-label__icon',
             })}
           }
-        }}
+        } }
 
-        {Children.toArray(children).filter((component) => component.type !== Icon)}
+        { Children.toArray(children).filter((component) => component.type !== Icon) }
       </span>
     );
   }

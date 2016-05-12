@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import LayoutNavListItem from './LayoutNavListItem';
 
 export class LayoutNavList extends Component {
   static propTypes = {
     className: { string: true },
+    isActive: { bool: true },
+    isOpen: { bool: true },
     items: { array: true, isRequired: true },
     onItemClick: { func: true },
   };
@@ -26,10 +28,10 @@ export class LayoutNavList extends Component {
     );
 
     return (
-      <ul className={classes}>
-        {items.filter(({hidden}) => !hidden).map((item, index) =>
-          <LayoutNavListItem item={item} key={index} onClick={onItemClick} />
-        )}
+      <ul className={ classes }>
+        { items.filter(({ hidden }) => !hidden).map((item, index) =>
+          <LayoutNavListItem item={ item } key={ index } onClick={ onItemClick } />
+        ) }
       </ul>
     );
   }

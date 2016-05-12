@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Weak extends Component {
   static propTypes = {
@@ -8,12 +8,12 @@ export class Weak extends Component {
   };
 
   render() {
-    const {className, children} = this.props;
+    const { className, children } = this.props;
     const classes = classnames(className, 'ax-text--weak');
 
     return (
-      <span {...this.props} className={classes}>
-        {children}
+      <span {...this.props} className={ classes }>
+        { children }
       </span>
     );
   }

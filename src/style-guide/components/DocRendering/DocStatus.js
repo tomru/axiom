@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { LabelGroup, Label } from 'axiom/react';
 import { statuses } from 'docs';
 
 export default class DocStatus extends Component {
+  static propTypes = {
+    status: PropTypes.string.isRequired,
+  };
+
   render() {
     const { status } = this.props;
     const statusColors = {
@@ -21,8 +25,8 @@ export default class DocStatus extends Component {
 
     return (
       <LabelGroup>
-        <Label textCase="upper" color={statusColors[status]} size="sm">
-          {statusText[status]}
+        <Label color={ statusColors[status] } size="sm" textCase="upper">
+          { statusText[status] }
         </Label>
       </LabelGroup>
     );

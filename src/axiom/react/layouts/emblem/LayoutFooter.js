@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import { Grid, GridCell } from '../../';
 import { Icon } from '../../';
 
 export class LayoutFooter extends Component {
   render() {
-    const { className, children } = this.props;
+    const { className } = this.props;
     const classes = classnames(className, 'ax-layout__footer');
     const socials = [
       { icon: 'linkedin', link: 'http://www.linkedin.com/company/brandwatch' },
@@ -21,13 +21,13 @@ export class LayoutFooter extends Component {
 
 
     return (
-      <div className={classes}>
-        <Grid hAlign="center" responsive={false}>
-          {socials.map((social, index) =>
-            <GridCell key={index} shrink={true}>
-              <Icon name={social.icon} size="lg" />
+      <div className={ classes }>
+        <Grid hAlign="center" responsive={ false }>
+          { socials.map((social, index) =>
+            <GridCell key={ index } shrink={ true }>
+              <Icon name={ social.icon } size="lg" />
             </GridCell>
-          )}
+          ) }
         </Grid>
 
         <p>Copyright © 2016 Brandwatch. All Rights Reserved.</p>

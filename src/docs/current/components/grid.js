@@ -114,7 +114,7 @@ export default {
     title: 'Gutter sizing modifiers',
     snippetLocation: true,
     snippetContent: true,
-    children: gridGutters.map(({id}) => {
+    children: gridGutters.map(({ id }) => {
       return {
         Component: Grid,
         demoContent: true,
@@ -207,7 +207,7 @@ export default {
     title: 'Responsive flex sizing (grid level)',
     children: [{
       type: 'tabset',
-      children: breakpoints.map(({id}) => {
+      children: breakpoints.map(({ id }) => {
         return {
           snippetLocation: true,
           props: {
@@ -326,7 +326,7 @@ export default {
     title: 'Responsive flex sizing (cell level)',
     children: [{
       type: 'tabset',
-      children: breakpoints.map(({id}) => {
+      children: breakpoints.map(({ id }) => {
         return {
           snippetLocation: true,
           props: {
@@ -348,7 +348,7 @@ export default {
                   children: `Full (> ${id})`,
                   props: {
                     attention: true,
-                  }
+                  },
                 }],
               }, {
                 Component: GridCell,
@@ -375,7 +375,7 @@ export default {
                   children: `Shrink (> ${id})`,
                   props: {
                     attention: true,
-                  }
+                  },
                 }],
               }, {
                 Component: GridCell,
@@ -424,7 +424,7 @@ export default {
     title: 'Responsive 12 base cell sizing',
     children: [{
       type: 'tabset',
-      children: breakpoints.map(({id}) => {
+      children: breakpoints.map(({ id }) => {
         return {
           snippetLocation: true,
           snippetContent: true,

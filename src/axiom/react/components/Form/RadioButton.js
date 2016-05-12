@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import { blacklist } from '../../utils/props';
 
 export class RadioButton extends Component {
@@ -19,11 +19,11 @@ export class RadioButton extends Component {
     );
 
     return (
-      <label className={classes}>
+      <label className={ classes }>
         <input className="ax-radio"
-               type="radio"
-               {...blacklist(this.props, ['children', 'className'])} />
-        <span className="ax-radio__label">{children}</span>
+            type="radio"
+            {...blacklist(this.props, ['children', 'className'])} />
+        <span className="ax-radio__label">{ children }</span>
       </label>
     );
   }

@@ -20,7 +20,7 @@ const demoTableContent = [{
   Component: Thead,
   children: [{
     Component: Tr,
-    children: demoHeaders.map(({name, isNumber, sorting}) => {
+    children: demoHeaders.map(({ name, isNumber, sorting }) => {
       return {
         Component: Th,
         children: name,
@@ -62,7 +62,7 @@ export default {
         children: [{
           Component: Th,
         }],
-      }]
+      }],
     }, {
       Component: Tbody,
       children: [{
@@ -95,7 +95,7 @@ export default {
       demoContent: true,
       props: {
         striped: true,
-      }
+      },
     }],
   }, {
     title: 'Bordered table',

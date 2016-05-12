@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class ListItem extends Component {
   static propTypes = {
@@ -7,11 +7,11 @@ export class ListItem extends Component {
   };
 
   render() {
-    const {children} = this.props;
+    const { children } = this.props;
 
     return (
       <li {...this.props}>
-        {children}
+        { children }
       </li>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Heading extends Component {
   static propTypes = {
@@ -9,22 +9,22 @@ export class Heading extends Component {
   };
 
   render() {
-    const {className, level, space} = this.props;
+    const { className, level, space } = this.props;
     const classes = classnames(className, {
       'ax-text--no-space': space === false,
     });
 
     switch (level) {
     case 1:
-      return <h1 {...this.props} className={classes} />
+      return <h1 {...this.props} className={ classes } />
     case 2:
-      return <h2 {...this.props} className={classes} />
+      return <h2 {...this.props} className={ classes } />
     case 3:
-      return <h3 {...this.props} className={classes} />
+      return <h3 {...this.props} className={ classes } />
     case 4:
-      return <h4 {...this.props} className={classes} />
+      return <h4 {...this.props} className={ classes } />
     case 5:
-      return <h5 {...this.props} className={classes} />
+      return <h5 {...this.props} className={ classes } />
     default:
       return null;
     }

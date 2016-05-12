@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class List extends Component {
   static propTypes = {
-    children: { node: true },
-    ordered: { bool: true },
-    inline: { bool: true },
     aligned: { bool: true },
+    children: { node: true },
+    inline: { bool: true },
+    ordered: { bool: true },
   };
 
   render() {
@@ -28,15 +28,15 @@ export class List extends Component {
 
     if (ordered === true) {
       return (
-        <ol {...this.props} className={classes}>
-          {children}
+        <ol {...this.props} className={ classes }>
+          { children }
         </ol>
       );
     }
 
     return (
-      <ul {...this.props} className={classes}>
-        {children}
+      <ul {...this.props} className={ classes }>
+        { children }
       </ul>
     );
   }

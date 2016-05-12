@@ -4,7 +4,6 @@ import {
   colorWhite,
   colorGreen,
   colorRed,
-  dropShadowLight,
 } from '../../../core/vars';
 
 const schemePrimaryColor = colorBlue;

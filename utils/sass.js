@@ -1,6 +1,5 @@
 import nodeSass from 'node-sass';
 import decamelize from 'decamelize';
-import { parseQuery } from 'loader-utils';
 
 function formatKey(key) {
   const decamelized = decamelize(key, '-');

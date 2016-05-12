@@ -37,7 +37,7 @@ export const webpack = {
     createAlias('axiom', paths.axiom),
     createAlias('docs', paths.docs),
     createAlias('style-guide', paths.styleGuide),
-  ]
+  ],
 };
 
 export const server = {
@@ -65,5 +65,5 @@ export const entries = {
   styleGuide: {
     client: path.join(paths.styleGuide, 'client.js'),
     server: path.join(paths.styleGuide, 'server.js'),
-  }
+  },
 };

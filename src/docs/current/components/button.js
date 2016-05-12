@@ -1,5 +1,5 @@
 import { statuses } from 'docs';
-import { breakpoints, colorPalette, colorAliases } from 'axiom/sass';
+import { colorPalette, colorAliases } from 'axiom/sass';
 import { Button, ButtonGroup, Icon } from 'axiom/react';
 
 export default {
@@ -24,7 +24,7 @@ export default {
       snippetContent: true,
       Container: ButtonGroup,
       children: colorPalette.reduce((acc, colors) => {
-        colors.forEach(({name}) => {
+        colors.forEach(({ name }) => {
           acc.push({
             Component: Button,
             demoContent: true,
@@ -41,13 +41,13 @@ export default {
       title: 'UI Colors',
       snippetLocation: true,
       children: [
-        ...colorAliases.map(({heading, colors}) => {
+        ...colorAliases.map(({ heading, colors }) => {
           return {
             title: heading,
             Container: ButtonGroup,
             snippetContent: true,
             children: colors.reduce((acc, colors) => {
-              colors.forEach(({name}) => {
+              colors.forEach(({ name }) => {
                 acc.push({
                   Component: Button,
                   children: name,
@@ -112,7 +112,7 @@ export default {
           },
         };
       }),
-    }]
+    }],
   }, {
     title: 'Button with an Icon',
     status: statuses.NEEDS_REVISION,
@@ -131,9 +131,9 @@ export default {
           {
             Component: Icon,
             props: {
-              name: 'trash'
+              name: 'trash',
             },
-          }
+          },
         ],
       }, {
         Component: Button,
@@ -145,9 +145,9 @@ export default {
           {
             Component: Icon,
             props: {
-              name: 'warning'
+              name: 'warning',
             },
-          }
+          },
         ],
       }, {
         Component: Button,
@@ -160,9 +160,9 @@ export default {
           {
             Component: Icon,
             props: {
-              name: 'check'
+              name: 'check',
             },
-          }
+          },
         ],
       }],
     }],

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Th extends Component {
   static propTypes = {
@@ -18,8 +18,8 @@ export class Th extends Component {
     });
 
     return (
-      <th {...this.props} className={classes}>
-        {children}
+      <th {...this.props} className={ classes }>
+        { children }
       </th>
     );
   }

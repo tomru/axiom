@@ -25,14 +25,14 @@ function createRoute(version, id, route, parentId = null, parentPaths = []) {
   };
 }
 
-export function hasVisibleChildren({children = []}) {
-  return children.filter(({hidden = false}) => !hidden).length > 0;
+export function hasVisibleChildren({ children = [] }) {
+  return children.filter(({ hidden = false }) => !hidden).length > 0;
 }
 
 function createRoutes(docs, version) {
   return Object.keys(docs).reduce((groups, key) => {
     const doc = docs[key];
-    let docGroup = groups.find(({id}) => id === doc.group);
+    let docGroup = groups.find(({ id }) => id === doc.group);
 
     if (!docGroup) {
       docGroup = createRoute(version, doc.group, { path: doc.group }, null, [version]);
@@ -100,9 +100,9 @@ function flattenParents(items, item, parents = [item]) {
 }
 
 export function getParentIds(items, item) {
-  return flattenParents(items, item).map(({id}) => id);
+  return flattenParents(items, item).map(({ id }) => id);
 }
 
 export function getParentNames(items, item) {
-  return flattenParents(items, item).map(({name}) => name);
+  return flattenParents(items, item).map(({ name }) => name);
 }

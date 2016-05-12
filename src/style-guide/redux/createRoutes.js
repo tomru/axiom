@@ -3,12 +3,10 @@ import { Route, IndexRoute, IndexRedirect } from 'react-router';
 import { navigationRouteEnter, navigationSetActiveVersion } from 'style-guide/actions/navigation';
 import App from 'style-guide/containers/App';
 import Doc from 'style-guide/containers/Doc';
-import DocApi from 'style-guide/containers/DocApi';
 import DocExample from 'style-guide/containers/DocExample';
 import Landing from 'style-guide/containers/Landing';
 import SearchResults from 'style-guide/containers/SearchResults';
 import { findDocById } from 'style-guide/utils/navigation';
-import { renderApiDocs } from 'style-guide/utils/rendering/rendering-api';
 
 function onEnterVersionRoute(dispatch, version) {
   return () => {
@@ -23,15 +21,17 @@ function onEnterDocRoute(dispatch, route) {
 }
 
 function createRoute(dispatch, version) {
+  /* eslint-disable react/display-name */
   return (item, index) => {
+  /* eslint-enable react/display-name */
     if (item.children && item.children.length) {
       return (
-        <Route path={item.path} key={index}>
-          {do {
+        <Route key={ index } path={ item.path }>
+          { do {
             if (item.children[0].path) {
-              <IndexRedirect to={item.children[0].path} />
+              <IndexRedirect to={ item.children[0].path } />
             }
-          }}
+          } }
 
           { item.children.map(createRoute(dispatch, version)) }
         </Route>
@@ -42,13 +42,13 @@ function createRoute(dispatch, version) {
 
     return (
       <Route
-          component={Doc}
-          path={item.path}
-          key={index}
-          onEnter={onEnterDocRoute(dispatch, item)}
-          doc={doc}
-          navItem={item}>
-        <IndexRoute component={DocExample} doc={doc} />
+          component={ Doc }
+          doc={ doc }
+          key={ index }
+          navItem={ item }
+          onEnter={ onEnterDocRoute(dispatch, item) }
+          path={ item.path }>
+        <IndexRoute component={ DocExample } doc={ doc } />
       </Route>
     );
   };
@@ -60,17 +60,17 @@ export default function createRoutes(store) {
 
   return (
     <Route path="/">
-      <IndexRoute component={Landing} />
-      <Route component={App}>
-        <Route path="search" component={SearchResults} />
+      <IndexRoute component={ Landing } />
+      <Route component={ App }>
+        <Route component={ SearchResults } path="search"/>
         <Route path="docs">
-          <IndexRedirect to={`current/${versions.current[0].path}`} />
-          {Object.keys(versions).map((version, index) =>
-            <Route path={version} onEnter={onEnterVersionRoute(dispatch, version)} key={index}>
-              <IndexRedirect to={versions[version][0].path} />
+          <IndexRedirect to={ `current/${versions.current[0].path}` } />
+          { Object.keys(versions).map((version, index) =>
+            <Route key={ index } onEnter={ onEnterVersionRoute(dispatch, version) } path={ version }>
+              <IndexRedirect to={ versions[version][0].path } />
               { versions[version].map(createRoute(dispatch, version)) }
             </Route>
-          )}
+          ) }
         </Route>
       </Route>
     </Route>

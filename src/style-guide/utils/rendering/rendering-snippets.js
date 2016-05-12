@@ -27,8 +27,8 @@ function renderHtml(layer, key) {
   const { Component, props = {}, children, demoContent } = layer;
 
   return (
-    <Component {...props} key={key}>
-      {do {
+    <Component {...props} key={ key }>
+      { do {
         if (demoContent) {
           '...';
         } else if (Array.isArray(children)) {
@@ -36,7 +36,7 @@ function renderHtml(layer, key) {
         } else if (typeof children === 'string') {
           children;
         }
-      }}
+      } }
     </Component>
   );
 }

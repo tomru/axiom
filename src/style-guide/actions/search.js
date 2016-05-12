@@ -2,10 +2,10 @@ import * as types from 'style-guide/constants/ActionTypes';
 import { apiSearchRoutes } from 'style-guide/actions/api';
 import { goToSearchPage } from 'style-guide/actions/route';
 
-export function searchReceiveSearch({results, version = 'current'}) {
+export function searchReceiveSearch({ results, version = 'current' }) {
   return {
     type: types.SEARCH_RECEIVE_SEARCH,
-    payload: {results, version},
+    payload: { results, version },
   };
 }
 

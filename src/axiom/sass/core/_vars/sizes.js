@@ -38,7 +38,7 @@ export default {
   layoutChangePoint: layoutWidthSm,
 
   breakpoints,
-  breakpointIds: breakpoints.map(({id}) => id),
+  breakpointIds: breakpoints.map(({ id }) => id),
 
   borderWidthSm,
   borderWidthBase,

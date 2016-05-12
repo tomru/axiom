@@ -29,7 +29,7 @@ export default {
       __CLIENT__: true,
       __SERVER__: false,
       __PRODUCTION__: false,
-      __DEVELOPMENT__: true
+      __DEVELOPMENT__: true,
     }),
   ],
   module: {
@@ -39,7 +39,7 @@ export default {
       loader: 'json',
     }, {
       test: /\.yml$/,
-      loader: 'json!yaml'
+      loader: 'json!yaml',
     }, {
       test: /\.(scss|css)$/,
       loaders: [

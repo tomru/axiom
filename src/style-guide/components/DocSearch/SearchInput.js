@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import classnames from 'classnames';
 import { Icon, TextInput } from 'axiom/react';
 import { debounce } from 'style-guide/utils/function';
 
@@ -8,11 +7,11 @@ export default class SearchInput extends Component {
     locationState: PropTypes.shape({
       query: PropTypes.object.isRequired,
     }).isRequired,
-    searchState: PropTypes.shape({
-      isSearching: PropTypes.bool.isRequired,
-    }).isRequired,
     searchActions: PropTypes.shape({
       searchRoutes: PropTypes.func.isRequired,
+    }).isRequired,
+    searchState: PropTypes.shape({
+      isSearching: PropTypes.bool.isRequired,
     }).isRequired,
   };
 
@@ -26,8 +25,8 @@ export default class SearchInput extends Component {
   }
 
   updateSearchText(event) {
-    const {target: {value}} = event;
-    const {searchActions: {searchRoutes}} = this.props;
+    const { target: { value } } = event;
+    const { searchActions: { searchRoutes } } = this.props;
 
     if (value) {
       searchRoutes(value);
@@ -36,18 +35,18 @@ export default class SearchInput extends Component {
 
   render() {
     const {
-      locationState: {query: {q}},
-      searchState: {isSearching},
+      locationState: { query: { q } },
+      searchState: { isSearching },
     } = this.props;
 
     return (
       <TextInput
-        placeholder="Looking for something?"
-        defaultValue={q}
-        thinking={isSearching}
-        onChange={::this.onChangeHandler}>
+          defaultValue={ q }
+          onChange={ ::this.onChangeHandler }
+          placeholder="Looking for something?"
+          thinking={ isSearching }>
         <Icon name="search" />
       </TextInput>
     );
   }
-};
+}

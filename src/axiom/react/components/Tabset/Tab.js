@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Tab extends Component {
   static propTypes = {
@@ -8,12 +8,12 @@ export class Tab extends Component {
   };
 
   render() {
-    const {className, children} = this.props;
+    const { className, children } = this.props;
     const classes = classnames(className, 'ax-tabs__content');
 
     return (
-      <div {...this.props} className={classes}>
-        {children}
+      <div {...this.props} className={ classes }>
+        { children }
       </div>
     );
   }

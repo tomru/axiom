@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
-import { enhance, addDisplayName } from '../../utils/components';
+import { enhance } from '../../utils/components';
 
-export class LayoutLogo extends Component {
+export default class LayoutLogo extends Component {
   render() {
     return (
-      <svg x="0px" y="0px" viewBox="0 0 120 143" width="100%" height="100%">
+      <svg height="100%" viewBox="0 0 120 143" width="100%" x="0px" y="0px">
         <g>
-          <circle fill="#FF8F00" cx="75.9" cy="56.2" r="6.4"/>
-          <circle fill="#F46B00" cx="57.4" cy="59.7" r="9.8"/>
-          <circle fill="#FF586F" cx="73.5" cy="72.5" r="8.2"/>
-          <circle fill="#8EA53C" cx="95.1" cy="64.2" r="5.3"/>
-          <circle fill="#F6BE00" cx="47.3" cy="78.6" r="4.6"/>
-          <circle fill="#F6BE00" cx="66.7" cy="46" r="4.2"/>
-          <circle fill="#9C7CB6" cx="40.4" cy="27.6" r="2.5"/>
-          <circle fill="#969C9E" cx="18.3" cy="88.1" r="2.3"/>
-          <circle fill="#008EB4" cx="64.4" cy="96.3" r="3.3"/>
-          <circle fill="#5FC3E6" cx="37" cy="60.7" r="3.3"/>
-          <circle fill="#F46B00" cx="59.6" cy="74.4" r="3"/>
-          <circle fill="#5FC3E6" cx="89.8" cy="38" r="3.4"/>
-          <circle fill="#FF8F00" cx="89.8" cy="83.5" r="2.7"/>
+          <circle cx="75.9" cy="56.2" fill="#FF8F00" r="6.4"/>
+          <circle cx="57.4" cy="59.7" fill="#F46B00" r="9.8"/>
+          <circle cx="73.5" cy="72.5" fill="#FF586F" r="8.2"/>
+          <circle cx="95.1" cy="64.2" fill="#8EA53C" r="5.3"/>
+          <circle cx="47.3" cy="78.6" fill="#F6BE00" r="4.6"/>
+          <circle cx="66.7" cy="46" fill="#F6BE00" r="4.2"/>
+          <circle cx="40.4" cy="27.6" fill="#9C7CB6" r="2.5"/>
+          <circle cx="18.3" cy="88.1" fill="#969C9E" r="2.3"/>
+          <circle cx="64.4" cy="96.3" fill="#008EB4" r="3.3"/>
+          <circle cx="37" cy="60.7" fill="#5FC3E6" r="3.3"/>
+          <circle cx="59.6" cy="74.4" fill="#F46B00" r="3"/>
+          <circle cx="89.8" cy="38" fill="#5FC3E6" r="3.4"/>
+          <circle cx="89.8" cy="83.5" fill="#FF8F00" r="2.7"/>
           <g fill="currentColor">
             <path d="M21.1,118.6L21.1,118.6c-0.7,0-1.4,0.2-2.1,0.7l0-3.9l-1.6,0v9.1c0,2.3,1.5,3.9,3.6,3.9h0h0     c1.2,0,2.2-0.5,2.9-1.4c0.7-0.9,1-2,1-3.5c0-1.5-0.3-2.6-1-3.4C23.3,119.1,22.3,118.6,21.1,118.6z M23.4,123.4     c0,1.1-0.2,1.9-0.6,2.5c-0.4,0.5-0.9,0.8-1.7,0.8c-1.4,0-2-1.2-2-2.3v-2.3c0-1.1,1.2-1.9,2-1.9c0.8,0,1.3,0.3,1.7,0.8     C23.2,121.6,23.4,122.4,23.4,123.4z"/>
             <path d="M44.6,118.6c-2.2,0-3.6,1.4-3.6,3.8v5.7h1.6v-5.7c0-2,1.4-2.2,2-2.2s2,0.2,2,2.2v5.7h1.6v-5.7     C48.1,120.1,46.8,118.6,44.6,118.6z"/>
@@ -35,7 +35,6 @@ export class LayoutLogo extends Component {
       </svg>
     );
   }
-};
+}
 
-export default enhance(LayoutLogo)(
-);
+export default enhance(LayoutLogo)();

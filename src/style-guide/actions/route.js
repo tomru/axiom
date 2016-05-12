@@ -1,12 +1,10 @@
 import { browserHistory } from 'react-router';
 
 export function goToSearchPage(q) {
-  return (disaptch, getState) => {
-    const {search: {text}} = getState();
-
+  return () => {
     browserHistory.push({
       pathname: '/search',
-      query: {q},
+      query: { q },
     });
   };
 }

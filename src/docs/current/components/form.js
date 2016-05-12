@@ -10,7 +10,7 @@ export default {
     { Component: CheckBox },
     { Component: RadioButton },
     { Component: TextArea },
-    { Component: TextInput }
+    { Component: TextInput },
   ],
   imports: {
     sass: ['components/form'],
@@ -27,8 +27,8 @@ export default {
           Component: TextInput,
           props: {
             placeholder: 'Standard input...',
-          }
-        }]
+          },
+        }],
       }, {
         title: 'Disabled text input',
         snippetContent: true,
@@ -63,7 +63,7 @@ export default {
             invalid: true,
           },
         }],
-      }]
+      }],
     }],
   }, {
     title: 'Text inputs with additional Components',
@@ -82,7 +82,7 @@ export default {
             name: 'calendar',
           },
         }],
-      }]
+      }],
     }, {
       title: 'Text input with a Button',
       snippetContent: true,

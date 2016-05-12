@@ -8,40 +8,52 @@ import { getParentNames } from 'style-guide/utils/navigation';
 import DocImports from 'style-guide/components/DocRendering/DocImports';
 
 export class Doc extends Component {
+  static propTypes = {
+    children: PropTypes.node,
+    navigationState: PropTypes.shape({
+      activeVersion: PropTypes.string.isRequired,
+      versions: PropTypes.object.isRequired,
+    }).isRequired,
+    route: PropTypes.shape({
+      doc: PropTypes.object.isRequired,
+      navItem: PropTypes.object.isRequired,
+    }).isRequired,
+  };
+
   render() {
     const {
       children,
       navigationState: {
         activeVersion,
-        versions
+        versions,
       },
       route: {
         doc,
         navItem,
-      }
+      },
     } = this.props;
 
     return (
       <div>
-        <Billboard image="/assets/axiom-bg.jpg" color="blue-grey" overlay={true}>
+        <Billboard color="blue-grey" image="/assets/axiom-bg.jpg" overlay={ true }>
           <LayoutContent>
-            <Card transparent={true}>
+            <Card transparent={ true }>
               <CardContent>
-                <Heading level={4}>{
+                <Heading level={ 4 }>{
                   getParentNames(versions[activeVersion], navItem)
                     .slice(-1)
                     .reverse()
                     .join(' / ')
                 }</Heading>
-                <Heading level={2}>{navItem.name}</Heading>
+                <Heading level={ 2 }>{ navItem.name }</Heading>
               </CardContent>
             </Card>
 
-            <DocImports doc={doc} />
+            <DocImports doc={ doc } />
           </LayoutContent>
         </Billboard>
 
-        {children}
+        { children }
       </div>
     );
   }

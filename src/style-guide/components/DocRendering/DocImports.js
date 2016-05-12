@@ -4,17 +4,21 @@ import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 import { renderImports } from 'style-guide/utils/rendering/rendering-imports';
 
 export default class DocImports extends Component {
+  static propTypes = {
+    doc: PropTypes.object.isRequired,
+  };
+
   render() {
     const { doc } = this.props;
     const importDocs = renderImports(doc);
 
     return (
       <CodeTabset>
-        {Object.keys(importDocs)
+        { Object.keys(importDocs)
           .filter((key) => importDocs[key])
           .map((key, index) =>
-            <CodeSnippet language={key} key={index}>
-              {importDocs[key]}
+            <CodeSnippet key={ index } language={ key }>
+              { importDocs[key] }
             </CodeSnippet>
           )
         }

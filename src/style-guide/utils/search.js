@@ -1,6 +1,5 @@
 import Fuse from 'fuse.js';
 import { versions } from 'docs';
-import { findDocById, flattenStructure } from 'style-guide/utils/navigation';
 
 function extractReducer(acc, example) {
   const extractedText = extractText(example);
@@ -44,7 +43,7 @@ function buildFuse(routes) {
 
 export function searchRoutesForText(text, version = 'current') {
   const routes = Object.keys(versions[version]).reduce((acc, key) => {
-    const {path, group, imports, examples, searchable = true} = versions[version][key];
+    const { path, group, imports, examples, searchable = true } = versions[version][key];
 
     if (searchable) {
       acc.push({

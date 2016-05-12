@@ -1,4 +1,3 @@
-import humanize from 'humanize-string';
 import { colorAliases } from 'axiom/sass';
 import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
 
@@ -9,13 +8,13 @@ export default {
   imports: {
     sass: ['core/core'],
   },
-  examples: () => colorAliases.map(({heading, colors}) => {
+  examples: () => colorAliases.map(({ heading, colors }) => {
     return {
       title: heading,
       children: colors.map((group) => {
         return {
           type: 'grid',
-          children: group.map(({name, color}) => {
+          children: group.map(({ name, color }) => {
             return {
               Component: ColorSwatch,
               props: { name, color },

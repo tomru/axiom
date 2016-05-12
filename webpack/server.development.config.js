@@ -15,7 +15,7 @@ export default {
     whitelist: ['webpack/hot/poll?1000'],
   })],
   plugins: [
-  ...config.webpack.aliases,
+    ...config.webpack.aliases,
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({

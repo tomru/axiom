@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import Fuse from 'fuse.js';
 import { Card, CardTitle, CardContent } from 'axiom/react';
 import { TextInput } from 'axiom/react';
@@ -10,7 +10,7 @@ import IconGrid from 'style-guide/components/Icons/IconGrid';
 
 export default class IconExample extends Component {
   componentWillMount() {
-    this.setState({search: ''});
+    this.setState({ search: '' });
     this.setSearchValueDebounced = debounce(::this.setSearchValue, 250);
   }
 
@@ -24,7 +24,7 @@ export default class IconExample extends Component {
   }
 
   setSearchValue(value) {
-    this.setState({search: value});
+    this.setState({ search: value });
   }
 
   resetSearchValue() {
@@ -33,13 +33,13 @@ export default class IconExample extends Component {
   }
 
   onChangeHandler(event) {
-    const {target: {value}} = event;
+    const { target: { value } } = event;
     event.persist();
     this.setSearchValueDebounced(value);
   }
 
   render() {
-    const {search} = this.state;
+    const { search } = this.state;
     let foundIcons;
 
     if (search) {
@@ -51,33 +51,33 @@ export default class IconExample extends Component {
         <Card>
           <CardContent>
             <TextInput
-              ref="search"
-              placeholder="Got a specific icon in mind?"
-              onChange={::this.onChangeHandler}>
+                onChange={ ::this.onChangeHandler }
+                placeholder="Got a specific icon in mind?"
+                ref="search">
               <Icon name="search" />
             </TextInput>
           </CardContent>
         </Card>
 
-        {do {
+        { do {
           if (search) {
             <Card>
-              <CardTitle title={`Search for "${search}"`} />
+              <CardTitle title={ `Search for "${search}"` } />
               <CardContent>
-                {do {
+                { do {
                   if (foundIcons.length) {
-                    <IconGrid icons={foundIcons} />
+                    <IconGrid icons={ foundIcons } />
                   } else {
-                    <Paragraph textCenter={true}>
-                      Sorry no icons found matching "{search}"
+                    <Paragraph textCenter={ true }>
+                      Sorry no icons found matching "{ search }"
                     </Paragraph>
                   }
-                }}
+                } }
               </CardContent>
 
               <CardContent>
-                <Paragraph textCenter={true}>
-                  <Link onClick={::this.resetSearchValue}>
+                <Paragraph textCenter={ true }>
+                  <Link onClick={ ::this.resetSearchValue }>
                     Not there? Clear the search...
                   </Link>
                 </Paragraph>
@@ -85,16 +85,16 @@ export default class IconExample extends Component {
             </Card>
           } else {
             {Object.keys(iconCategories).map((category, index) =>
-              <Card key={index}>
-                <CardTitle title={category} />
+              <Card key={ index }>
+                <CardTitle title={ category } />
                 <CardContent>
-                  <IconGrid icons={iconCategories[category]} />
+                  <IconGrid icons={ iconCategories[category] } />
                 </CardContent>
               </Card>
             )}
           }
-        }}
+        } }
       </div>
     );
   }
-};
+}

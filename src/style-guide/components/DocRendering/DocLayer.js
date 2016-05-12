@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { BlockContainer, Button } from 'axiom/react';
+import { BlockContainer } from 'axiom/react';
 import { Heading } from 'axiom/react';
 import DocLayerCard from 'style-guide/components/DocRendering/DocLayerCard';
 import DocLayerGrid from 'style-guide/components/DocRendering/DocLayerGrid';
@@ -20,13 +20,13 @@ function renderComponentTree(layer, key) {
   const { Component, props, demoProps } = layer;
 
   return (
-    <Component {...props} {...demoProps} key={key}>
-      {renderChildren(layer)}
+    <Component {...props} {...demoProps} key={ key }>
+      { renderChildren(layer) }
     </Component>
   );
 }
 
-function renderChildren({children}) {
+function renderChildren({ children }) {
   if (Array.isArray(children)) {
     return children.map((child, index) => renderComponentTree(child, index))
   }
@@ -38,12 +38,15 @@ function renderChildren({children}) {
 
 export default class DocLayer extends Component {
   static propTypes = {
-    layer: PropTypes.object.isRequired,
+    layer: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object,
+    ]).isRequired,
     topLevel: PropTypes.bool,
   };
 
   render() {
-    const {topLevel = false, layer} = this.props;
+    const { topLevel = false, layer } = this.props;
 
     if (typeof layer === 'string') {
       return layer;
@@ -61,18 +64,18 @@ export default class DocLayer extends Component {
 
     if (!demoRender) {
       if (snippetLocation) {
-        return <DocLayerCode layer={layer} />;
+        return <DocLayerCode layer={ layer } />;
       }
     }
 
     if (PredefinedContainer) {
       return (
-        <PredefinedContainer layer={layer}>
-          {do {
+        <PredefinedContainer layer={ layer }>
+          { do {
             if (snippetLocation) {
-              <DocLayerCode layer={layer} />;
+              <DocLayerCode layer={ layer } />;
             }
-          }}
+          } }
         </PredefinedContainer>
       );
     }
@@ -80,17 +83,17 @@ export default class DocLayer extends Component {
     if (Container) {
       return (
         <Container {...layer.props}>
-          {do {
+          { do {
             if (layer.title) {
-              <Heading level={5}>{layer.title}</Heading>
+              <Heading level={ 5 }>{ layer.title }</Heading>
             }
-          }}
-          {children.map((child, index) => <DocLayer layer={child} key={index} />)}
-          {do {
+          } }
+          { children.map((child, index) => <DocLayer key={ index } layer={ child } />) }
+          { do {
             if (snippetLocation) {
-              <DocLayerCode layer={layer} />;
+              <DocLayerCode layer={ layer } />;
             }
-          }}
+          } }
         </Container>
       );
     }

@@ -1,5 +1,5 @@
 import { Icon } from 'axiom/react';
-import { iconList, iconCategories } from 'style-guide/utils/icons';
+import { iconList } from 'style-guide/utils/icons';
 
 export default {
   id: 'icon',
@@ -13,12 +13,12 @@ export default {
   imports: {
     sass: ['components/icon'],
   },
-  examples: (routeParams, {iconId}) => {
+  examples: (routeParams, { iconId }) => {
     if (!iconId) {
       return [];
     }
 
-    const { name: iconName } = iconList.find(({id}) => id === iconId);
+    const { name: iconName } = iconList.find(({ id }) => id === iconId);
 
     return [{
       title: `Icon - ${iconName}`,
@@ -56,7 +56,7 @@ export default {
             }],
           };
         }),
-      }]
+      }],
     }];
   },
 };

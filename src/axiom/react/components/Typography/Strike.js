@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Strike extends Component {
   static propTypes = {
@@ -7,11 +7,11 @@ export class Strike extends Component {
   };
 
   render() {
-    const {children} = this.props;
+    const { children } = this.props;
 
     return (
       <del {...this.props}>
-        {children}
+        { children }
       </del>
     );
   }

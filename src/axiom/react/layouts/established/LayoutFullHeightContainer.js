@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class LayoutFullHeightContainer extends Component {
   static propTypes = {
-    vAlign: { oneOf: ['top', 'middle', 'bottom'] },
+    children: { node: true, isRequired: true },
     hAlign: { oneOf: ['left', 'center', 'right'] },
+    vAlign: { oneOf: ['top', 'middle', 'bottom'] },
   };
 
   render() {
@@ -22,8 +23,8 @@ export class LayoutFullHeightContainer extends Component {
     );
 
     return (
-      <div className={classes}>
-        {children}
+      <div className={ classes }>
+        { children }
       </div>
     );
   }

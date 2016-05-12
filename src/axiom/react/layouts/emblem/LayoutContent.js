@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class LayoutContent extends Component {
+  static propTypes = {
+    children: { node: true, isRequired: true },
+  };
+
   render() {
     const { className, children } = this.props;
     const classes = classnames(className, 'ax-layout__content');
 
     return (
-      <div className={classes}>
+      <div className={ classes }>
         { children }
       </div>
     );

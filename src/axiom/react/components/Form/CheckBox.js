@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import { blacklist } from '../../utils/props';
 
-export class CheckBox extends Component {
+export class CheckBox extends Component {
   static propTypes = {
     children: { node: true },
     inline: { bool: true },
@@ -19,11 +19,11 @@ export class CheckBox extends Component {
     );
 
     return (
-      <label className={classes}>
+      <label className={ classes }>
         <input className="ax-checkbox"
-               type="checkbox"
-               {...blacklist(this.props, ['children', 'className'])} />
-        <span className="ax-checkbox__label">{children}</span>
+            type="checkbox"
+            {...blacklist(this.props, ['children', 'className'])} />
+        <span className="ax-checkbox__label">{ children }</span>
       </label>
     );
   }

@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import { addDynamicClass, breakpointClassName } from '../../utils/class-name';
 import { breakpointIds, gridGutters } from '../../../sass';
 
 export class Grid extends Component {
   static propTypes = {
     children: { node: true, isRequired: true },
-    responsive: { oneOf: [false] },
-    gutters: { oneOf: [false, ...gridGutters.map(({id}) => id)] },
-    vGutters: { bool: true },
-    hGutters: { bool: true },
-    full: { oneOf: [true, ...breakpointIds] },
     fit: { oneOf: [true, ...breakpointIds] },
-    vAlign: { oneOf: ['top', 'middle', 'bottom'] },
+    full: { oneOf: [true, ...breakpointIds] },
+    gutters: { oneOf: [false, ...gridGutters.map(({ id }) => id)] },
     hAlign: { oneOf: ['left', 'center', 'right', 'around', 'between'] },
+    hGutters: { bool: true },
+    responsive: { oneOf: [false] },
+    vAlign: { oneOf: ['top', 'middle', 'bottom'] },
+    vGutters: { bool: true },
   };
 
   render() {
@@ -48,14 +48,14 @@ export class Grid extends Component {
         'ax-grid--around': hAlign === 'around',
         'ax-grid--between': hAlign === 'between',
       },
-      addDynamicClass(gridGutters, ({id}) => gutters === id, ({id}) => `ax-grid--gutters--${id}`),
-      breakpointClassName(full, ({id}) => `ax-grid--full--${id}`),
-      breakpointClassName(fit, ({id}) => `ax-grid--fit--${id}`),
+      addDynamicClass(gridGutters, ({ id }) => gutters === id, ({ id }) => `ax-grid--gutters--${id}`),
+      breakpointClassName(full, ({ id }) => `ax-grid--full--${id}`),
+      breakpointClassName(fit, ({ id }) => `ax-grid--fit--${id}`),
     );
 
     return (
-      <div {...this.props} className={classes}>
-        {children}
+      <div {...this.props} className={ classes }>
+        { children }
       </div>
     );
   }

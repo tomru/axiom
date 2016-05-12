@@ -18,13 +18,13 @@ const routes = createRoutes(store);
 
 if (__DEVELOPMENT__) {
   render(
-    <DevTools store={store} />,
+    <DevTools store={ store } />,
     document.getElementById('dev-tools')
   );
 }
 
 render((
-  <Provider store={store} key="provider">
-    <Router routes={routes} history={history} />
+  <Provider key="provider" store={ store } >
+    <Router history={ history } routes={ routes } />
   </Provider>
 ), document.getElementById('react-root'));

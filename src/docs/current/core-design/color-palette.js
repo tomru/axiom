@@ -12,7 +12,7 @@ export default {
     return {
       children: [{
         type: 'grid',
-        children: colors.map(({name, color}) => {
+        children: colors.map(({ name, color }) => {
           return {
             Component: ColorSwatch,
             props: { name, color },

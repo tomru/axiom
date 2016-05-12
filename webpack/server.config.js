@@ -35,12 +35,12 @@ export default {
       loader: 'json',
     }, {
       test: /\.yml$/,
-      loader: 'json!yaml'
+      loader: 'json!yaml',
     }],
     postLoaders: [{
       test: /\.js$/,
       loader: 'babel',
       exclude: /node_modules/,
     }],
-  }
+  },
 };

@@ -8,7 +8,7 @@ export default {
   components: [{
     Component: LabelGroup,
     children: [{
-      Component: Label
+      Component: Label,
     }],
   }],
   imports: {
@@ -22,7 +22,7 @@ export default {
       snippetContent: true,
       Container: LabelGroup,
       children: colorPalette.reduce((acc, colors) => {
-        colors.forEach(({name}) => {
+        colors.forEach(({ name }) => {
           acc.push({
             Component: Label,
             demoContent: true,
@@ -38,13 +38,13 @@ export default {
     }, {
       title: 'UI Colors',
       snippetLocation: true,
-      children: colorAliases.map(({heading, colors}) => {
+      children: colorAliases.map(({ heading, colors }) => {
         return {
           title: heading,
           Container: LabelGroup,
           snippetContent: true,
           children: colors.reduce((acc, colors) => {
-            colors.forEach(({name}) => {
+            colors.forEach(({ name }) => {
               acc.push({
                 Component: Label,
                 children: name,
@@ -97,7 +97,7 @@ export default {
           full: true,
         },
       },
-      ...breakpoints.map(({id}) => {
+      ...breakpoints.map(({ id }) => {
         return {
           Component: Label,
           demoContent: true,
@@ -110,7 +110,7 @@ export default {
           },
         };
       })],
-    }]
+    }],
   }, {
     title: 'Label with an Icon',
     snippetLocation: true,

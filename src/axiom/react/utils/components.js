@@ -3,11 +3,11 @@ import { mergeClassNameSets } from './class-name';
 import { addReactPropTypes, mergePropTypeSets, mapToPropTypes } from './prop-types';
 
 export function findComponent(components, Component) {
-  return Children.toArray(components).find(({type}) => type === Component);
+  return Children.toArray(components).find(({ type }) => type === Component);
 }
 
 export function findComponents(components, Component) {
-  return Children.toArray(components).filter(({type}) => type === Component);
+  return Children.toArray(components).filter(({ type }) => type === Component);
 }
 
 export function enhance(Component) {
@@ -47,8 +47,8 @@ export function addClassName(...classNameSets) {
       class Wrapped extends Component {
         render() {
           return <Component {...this.props}
-            ref="original"
-            className={mergeClassNameSets(this.props, classNameSets)} />
+              className={ mergeClassNameSets(this.props, classNameSets) }
+              ref="original" />
         }
       }
     );

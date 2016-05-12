@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class ButtonGroup extends Component {
   static propTypes = {
@@ -12,8 +12,8 @@ export class ButtonGroup extends Component {
     const classes = classnames(className, 'ax-button__group');
 
     return (
-      <div {...this.props} className={classes}>
-        {children}
+      <div {...this.props} className={ classes }>
+        { children }
       </div>
     );
   }

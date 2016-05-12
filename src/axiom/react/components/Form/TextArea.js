@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import { blacklist } from '../../utils/props';
 
 export class TextArea extends Component {
@@ -11,10 +11,10 @@ export class TextArea extends Component {
     const classes = classnames(className, 'ax-input__group');
 
     return (
-      <label className={classes}>
+      <label className={ classes }>
         <textarea
-          className="ax-textarea"
-          {...blacklist(this.props, 'className')} />
+            className="ax-textarea"
+            {...blacklist(this.props, 'className')} />
       </label>
     );
   }

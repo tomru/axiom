@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Link as RouterLink } from 'react-router';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Link extends Component {
   static propTypes = {
     children: { node: true },
-    to: { string: true },
     inheritColor: { bool: true },
     noDecoration: { bool: true },
+    supressStyle: { bool: true },
+    to: { string: true },
   };
 
   render() {
@@ -29,19 +30,19 @@ export class Link extends Component {
 
     if (to) {
       return (
-        <RouterLink {...this.props} className={classes}>
-          {children}
+        <RouterLink {...this.props} className={ classes }>
+          { children }
         </RouterLink>
       );
     }
 
     return (
-      <a {...this.props} className={classes}>
-        {children}
+      <a {...this.props} className={ classes }>
+        { children }
       </a>
     );
   }
-};
+}
 
 export default enhance(Link)(
   addPropTypes('global', 'text'),

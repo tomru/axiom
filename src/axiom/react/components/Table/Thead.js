@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Thead extends Component {
   static propTypes = {
@@ -7,11 +7,11 @@ export class Thead extends Component {
   };
 
   render() {
-    const {children} = this.props;
+    const { children } = this.props;
 
     return (
       <thead {...this.props}>
-        {children}
+        { children }
       </thead>
     );
   }

@@ -1,24 +1,28 @@
 import React, { PropTypes, Component } from 'react';
-import { Card, CardTitle, CardContent } from 'axiom/react';
+import { CardListItem } from 'axiom/react';
 import { Heading, Italic, Link, Paragraph } from 'axiom/react';
 
 export default class SearchResult extends Component {
+  static propTypes = {
+    result: PropTypes.shape({
+      to: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired,
+    text: PropTypes.string,
+  };
+
   render() {
-    const {
-      version,
-      text,
-      result: {to, name},
-    } = this.props;
+    const { text, result: { to, name } } = this.props;
 
     return (
-      <CardContent>
-        <Heading level={5} space={false}>
-          <Link to={to}>
-            {name} - <Italic textWeak={true}>{to}</Italic>
+      <CardListItem>
+        <Heading level={ 5 } space={ false }>
+          <Link to={ to }>
+            { name } - <Italic textWeak={ true }>{ to }</Italic>
           </Link>
         </Heading>
-        <Paragraph space={false}>{text}</Paragraph>
-      </CardContent>
+        <Paragraph space={ false }>{ text }</Paragraph>
+      </CardListItem>
     );
   }
-};
+}

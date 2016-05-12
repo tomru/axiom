@@ -64,18 +64,18 @@ export default class CodeSnippet extends Component {
     return renderToStaticMarkup(element);
   }
 
-  setCode({children}) {
+  setCode({ children }) {
     if (__CLIENT__) {
       const code = this.getStaticMarkup(children);
 
       if (code) {
-        this.setState({code});
+        this.setState({ code });
       }
     }
   }
 
   highlightElement() {
-    const {language} = this.props;
+    const { language } = this.props;
 
     if (this.state && this.state.code) {
       this.refs.code.innerHTML = prepareMap[language](this.state.code);
@@ -84,7 +84,7 @@ export default class CodeSnippet extends Component {
   }
 
   render() {
-    const {language} = this.props;
+    const { language } = this.props;
     const classes = classnames({
       'language-bash': language === 'bash',
       'language-markup': language === 'html',
@@ -95,7 +95,7 @@ export default class CodeSnippet extends Component {
 
     return (
       <pre>
-        <code className={classes} ref="code" />
+        <code className={ classes } ref="code" />
       </pre>
     );
   }

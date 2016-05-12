@@ -16,7 +16,7 @@ const statOptions = {
 };
 
 export default function watchClient() {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const compiler = webpack(webpackConfig);
 
     console.log('Ax:: Watch Client [1/2]');

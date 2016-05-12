@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Card, CardTitle, CardContent } from 'axiom/react';
+import { Card, CardTitle, CardContent, CardList } from 'axiom/react';
 import { Icon } from 'axiom/react';
 import { Heading } from 'axiom/react';
 import { Indicator } from 'axiom/react';
@@ -11,28 +10,26 @@ import { findById } from 'style-guide/utils/navigation';
 
 export class SearchResults extends Component {
   static propTypes = {
+    navigationState: PropTypes.shape({
+      versions: PropTypes.object.isRequired,
+    }).isRequired,
     searchState: PropTypes.shape({
       isSearching: PropTypes.bool.isRequired,
       results: PropTypes.array.isRequired,
       version: PropTypes.string.isRequired,
     }).isRequired,
-    navigationState: PropTypes.shape({
-      versions: PropTypes.object.isRequired,
-    }).isRequired,
   };
 
   render() {
-    const {isSearching, results, version} = this.props.searchState;
-    const {versions} = this.props.navigationState;
-
-    console.log(version);
+    const { isSearching, results, version } = this.props.searchState;
+    const { versions } = this.props.navigationState;
 
     if (isSearching) {
       return (
-        <LayoutFullHeightContainer vAlign="middle" hAlign="center">
+        <LayoutFullHeightContainer hAlign="center" vAlign="middle">
           <LayoutContent>
-            <Card transparent={true}>
-              <CardContent textCenter={true}>
+            <Card transparent={ true }>
+              <CardContent textCenter={ true }>
                 <Indicator />
               </CardContent>
             </Card>
@@ -43,12 +40,12 @@ export class SearchResults extends Component {
 
     if (results.length === 0) {
       return (
-        <LayoutFullHeightContainer vAlign="middle" hAlign="center">
+        <LayoutFullHeightContainer hAlign="center" vAlign="middle">
           <LayoutContent>
-            <Card transparent={true}>
-              <CardContent textCenter={true}>
+            <Card transparent={ true }>
+              <CardContent textCenter={ true }>
                 <Icon name="binoculars" size="5x" />
-                <Heading level={4}>There's no results, but don't give up keep looking.</Heading>
+                <Heading level={ 4 }>There's no results, but don't give up keep looking.</Heading>
               </CardContent>
             </Card>
           </LayoutContent>
@@ -60,12 +57,14 @@ export class SearchResults extends Component {
       <LayoutContent>
         <Card>
           <CardTitle title="Search Results" />
-          {results.map(({path, text}, index) =>
-            <SearchResult
-                key={index}
-                result={findById(versions[version], path)}
-                text={text} />
-          )}
+          <CardList>
+            { results.map(({ path, text }, index) =>
+              <SearchResult
+                  key={ index }
+                  result={ findById(versions[version], path) }
+                  text={ text } />
+            ) }
+          </CardList>
         </Card>
       </LayoutContent>
     );

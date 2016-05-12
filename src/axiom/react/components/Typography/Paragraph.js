@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Paragraph extends Component {
   static propTypes = {
@@ -9,14 +9,14 @@ export class Paragraph extends Component {
   };
 
   render() {
-    const {className, children, space} = this.props;
+    const { className, children, space } = this.props;
     const classes = classnames(className, {
       'ax-text--no-space': space === false,
     });
 
     return (
-      <p {...this.props} className={classes}>
-        {children}
+      <p {...this.props} className={ classes }>
+        { children }
       </p>
     );
   }

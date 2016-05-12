@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Strong extends Component {
   static propTypes = {
@@ -7,11 +7,11 @@ export class Strong extends Component {
   };
 
   render() {
-    const {children} = this.props;
+    const { children } = this.props;
 
     return (
       <strong {...this.props}>
-        {children}
+        { children }
       </strong>
     );
   }

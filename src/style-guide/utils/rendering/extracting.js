@@ -1,5 +1,5 @@
-export function extractComponents({components = []}) {
-  function extract({children = [], Component}, extracted = []) {
+export function extractComponents({ components = [] }) {
+  function extract({ children = [], Component }, extracted = []) {
     if (!extracted.includes(Component)) {
       extracted.push(Component);
     }

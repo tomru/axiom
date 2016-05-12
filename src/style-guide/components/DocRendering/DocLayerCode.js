@@ -4,17 +4,21 @@ import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
 import { renderSnippets } from 'style-guide/utils/rendering/rendering-snippets';
 
 export default class DocLayerCode extends Component {
+  static propTypes = {
+    layer: PropTypes.object.isRequired,
+  };
+
   render()  {
     const { layer } = this.props;
     const snippets = renderSnippets(layer);
 
     return (
       <CodeTabset>
-        {Object.keys(snippets)
+        { Object.keys(snippets)
           .filter((key) => snippets[key].length)
           .map((key, index) =>
-            <CodeSnippet language={key} key={index}>
-              {snippets[key]}
+            <CodeSnippet key={ index } language={ key } >
+              { snippets[key] }
             </CodeSnippet>
           )
         }

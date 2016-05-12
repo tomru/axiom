@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import { blacklist } from '../../utils/props';
 
 export class Icon extends Component {
   static propTypes = {
+    fixedWidth: { bool: true },
     name: { string: true, isRequired: true },
     size: { string: true },
-    fixedWidth: { bool: true },
   };
 
   render() {
@@ -25,7 +25,7 @@ export class Icon extends Component {
     );
 
     return (
-      <i {...blacklist(this.props, ['name'])} className={classes} />
+      <i {...blacklist(this.props, ['name'])} className={ classes } />
     );
   }
 }

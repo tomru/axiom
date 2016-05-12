@@ -1,9 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import { Grid, GridCell, Icon, Link } from '../../';
 
 export class LayoutHeader extends Component {
+  static propTypes = {
+    children: { node: true, isRequired: true },
+  };
+
   static contextTypes = {
     toggleSidebar: PropTypes.func,
   };
@@ -14,21 +18,19 @@ export class LayoutHeader extends Component {
     const classes = classnames(className, 'ax-layout__header');
 
     return (
-      <header className={classes}>
-        <Grid responsive={false} vAlign="middle">
+      <header className={ classes }>
+        <Grid responsive={ false } vAlign="middle">
           <GridCell visibleUntil="sm">
-            <h3>{children}</h3>
+            <h3>{ children }</h3>
           </GridCell>
 
           <GridCell hiddenUntil="sm">
-            <h2>{children}</h2>
+            <h2>{ children }</h2>
           </GridCell>
 
-          <GridCell visibleUntil="sm" shrink={true}>
-            <Link onClick={toggleSidebar}
-                  inheritColor={true}
-                  noDecoration={true}>
-              <Icon size="lg" name="bars" />
+          <GridCell shrink={ true } visibleUntil="sm">
+            <Link inheritColor={ true } noDecoration={ true } onClick={ toggleSidebar } >
+              <Icon name="bars" size="lg" />
             </Link>
           </GridCell>
         </Grid>

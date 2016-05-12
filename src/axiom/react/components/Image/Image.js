@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Image extends Component {
   static propTypes = {

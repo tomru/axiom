@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 const propTypes = {
-  src: {
-    string: true,
-    isRequired: true,
-  },
   size: {
     oneOf: ['sm', 'md', 'lg'],
     default: 'md',
+  },
+  src: {
+    string: true,
+    isRequired: true,
   },
 };
 
@@ -31,7 +31,7 @@ export class Avatar extends Component {
     );
 
     return (
-      <img {...this.props} className={classes} />
+      <img {...this.props} className={ classes } />
     );
   }
 }

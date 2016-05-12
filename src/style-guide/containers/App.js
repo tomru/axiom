@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import classnames from 'classnames';
 import * as navigationActions from 'style-guide/actions/navigation';
 import * as searchActions from 'style-guide/actions/search';
 import SearchInput from 'style-guide/components/DocSearch/SearchInput';
@@ -11,7 +10,6 @@ import {
   LayoutSidebar,
   LayoutSidebarHeader,
   LayoutSidebarContent,
-  LayoutSidebarFooter,
   LayoutMain,
   LayoutNav,
   LayoutFooter,
@@ -20,6 +18,7 @@ import {
 export class Docs extends Component {
   static propTypes = {
     children: PropTypes.any,
+    dispatch: PropTypes.func.isRequired,
     location: PropTypes.object.isRequired,
     navigationState: PropTypes.shape({
       activeVersion: PropTypes.string.isRequired,
@@ -32,19 +31,19 @@ export class Docs extends Component {
   };
 
   componentWillMount() {
-    const {dispatch} = this.props;
+    const { dispatch } = this.props;
     this.boundNavigationActions = bindActionCreators(navigationActions, dispatch);
     this.boundSearchActions = bindActionCreators(searchActions, dispatch);
   }
 
   render() {
-    const {children, navigationState, schemesState, searchState, location} = this.props;
-    const {navigationItemClick} = this.boundNavigationActions;
-    const {activeVersion, versions} = navigationState;
-    const {active: activeScheme} = schemesState;
+    const { children, navigationState, schemesState, searchState, location } = this.props;
+    const { navigationItemClick } = this.boundNavigationActions;
+    const { activeVersion, versions } = navigationState;
+    const { active: activeScheme } = schemesState;
 
     return (
-      <Layout className={activeScheme}>
+      <Layout className={ activeScheme }>
         <LayoutHeader>
           Axiom
         </LayoutHeader>
@@ -52,13 +51,13 @@ export class Docs extends Component {
         <LayoutSidebar>
           <LayoutSidebarHeader>
             <SearchInput
-              locationState={location}
-              searchState={searchState}
-              searchActions={this.boundSearchActions} />
+                locationState={ location }
+                searchActions={ this.boundSearchActions }
+                searchState={ searchState } />
           </LayoutSidebarHeader>
 
           <LayoutSidebarContent>
-            <LayoutNav items={versions[activeVersion]} onItemClick={navigationItemClick} />
+            <LayoutNav items={ versions[activeVersion] } onItemClick={ navigationItemClick } />
           </LayoutSidebarContent>
         </LayoutSidebar>
 

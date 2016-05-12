@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Form extends Component {
   static propTypes = {
@@ -12,8 +12,8 @@ export class Form extends Component {
     const classes = classnames(className, 'ax-form');
 
     return (
-      <form {...this.props} className={classes}>
-        {children}
+      <form {...this.props} className={ classes }>
+        { children }
       </form>
     );
   }

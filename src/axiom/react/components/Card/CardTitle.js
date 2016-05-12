@@ -1,11 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import Grid from '../Grid/Grid';
 import GridCell from '../Grid/GridCell';
 
 export default class CardTitle extends Component {
   static propTypes = {
+    children: { node: true },
     title: { string: true },
   };
 
@@ -14,19 +15,19 @@ export default class CardTitle extends Component {
     const classes = classnames(className, 'ax-card__title');
 
     return (
-      <div {...this.props} className={classes}>
+      <div {...this.props} className={ classes }>
         <Grid vAlign="middle">
           <GridCell>
-            <h4>{title}</h4>
+            <h4>{ title }</h4>
           </GridCell>
 
-          {do {
+          { do {
             if (children) {
-              <GridCell shrink={true}>
-                {children}
+              <GridCell shrink={ true }>
+                { children }
               </GridCell>
             }
-          }}
+          } }
         </Grid>
       </div>
     );

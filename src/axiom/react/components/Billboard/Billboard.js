@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
-import { colorIds, colorBaseVariation } from '../../../sass';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
+import { colorIds, colorVariations, colorBaseVariation } from '../../../sass';
 
 const propTypes = {
   children: { node: true },
-  image: { string: true },
   color: { oneOf: [...colorIds] },
+  image: { string: true },
   overlay: { bool: true },
   size: { oneOf: ['sm', 'md', 'lg'], default: 'md' },
+  variation: { oneOf: [...colorVariations], default: colorBaseVariation },
 };
 
 export class Billboard extends Component {
@@ -20,9 +21,9 @@ export class Billboard extends Component {
       children,
       image,
       color,
+      variation = propTypes.variation.default,
       overlay,
       size = propTypes.size.default,
-      variation = colorBaseVariation,
     } = this.props;
 
     const classes = classnames(className,
@@ -41,8 +42,8 @@ export class Billboard extends Component {
     };
 
     return (
-      <div {...this.props} className={classes} style={style}>
-        {children}
+      <div {...this.props} className={ classes } style={ style }>
+        { children }
       </div>
     );
   }

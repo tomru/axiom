@@ -9,26 +9,26 @@ export default class IconGrid extends Component {
   };
 
   render() {
-    const {icons} = this.props;
+    const { icons } = this.props;
 
     return (
       <Grid>
-        {icons.map(({id, name}, index) =>
-          <GridCell half="sm" third="md" quarter="lg" key={index}>
-            <Link to={`/docs/current/components/icon?iconId=${id}`} inheritColor={true} title={name}>
-              <Grid responsive={false}>
-                <GridCell shrink={true}>
-                  <Icon name={id} fixedWidth={true} />
+        { icons.map(({ id, name }, index) =>
+          <GridCell half="sm" key={ index } quarter="lg" third="md">
+            <Link inheritColor={ true } title={ name } to={ `/docs/current/components/icon?iconId=${id}` }>
+              <Grid responsive={ false }>
+                <GridCell shrink={ true }>
+                  <Icon fixedWidth={ true } name={ id } />
                 </GridCell>
 
                 <GridCell>
-                  <Paragraph textEllipsis={true}>{id}</Paragraph>
+                  <Paragraph textEllipsis={ true }>{ id }</Paragraph>
                 </GridCell>
               </Grid>
             </Link>
           </GridCell>
-        )}
+        ) }
       </Grid>
     );
   }
-};
+}

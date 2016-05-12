@@ -32,7 +32,7 @@ const PROP_TYPES_SETS = {
     textBreak: { oneOf: ['none', 'all', 'word'] },
     textCase: { oneOf: ['upper', 'capital', 'lower'] },
     textEllipsis: { bool: true },
-  }
+  },
 };
 
 function getPropType(prop) {
@@ -50,7 +50,7 @@ function getPropType(prop) {
 
 function createPropType(prop, isRequired) {
   let finalPropType;
-  const {propType, type} = prop;
+  const { propType, type } = prop;
 
   if (!propType) {
     throw new Error(`No matching PropType found: ${JSON.stringify(prop)}`);
@@ -90,7 +90,7 @@ function createPropType(prop, isRequired) {
 
 export function addReactPropTypes(props = {}) {
   return Object.keys(props).reduce((acc, key) => {
-    const {type, propType} = getPropType(props[key]);
+    const { type, propType } = getPropType(props[key]);
 
     if (type && propType) {
       acc[key] = {

@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
+
 import 'babel-polyfill';
-import path from 'path';
 import express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -47,7 +48,7 @@ try {
     const store = createStore(initialState);
     const routes = createRoutes(store);
 
-    match({routes, location: req.url}, (error, redirectLocation, renderProps) => {
+    match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
       if (error) {
         res.status(500).send({ error: error.message });
       } else if (redirectLocation) {
@@ -56,9 +57,9 @@ try {
         res.status(200).send(`
           <!doctype html>
           ${renderToString(
-            <Html store={store}>
-              <Provider store={store} key='provider'>
-                <RouterContext {...renderProps} store={store} />
+            <Html store={ store }>
+              <Provider key="provider" store={ store }>
+                <RouterContext {...renderProps} store={ store } />
               </Provider>
             </Html>
           )}

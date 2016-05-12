@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Table extends Component {
   static propTypes = {
+    borders: { oneOf: [true, 'v', 'h'] },
     children: { node: true },
     sortable: { bool: true },
     striped: { bool: true },
-    borders: { oneOf: [true, 'v', 'h'] },
   };
 
   render() {
@@ -30,8 +30,8 @@ export class Table extends Component {
     );
 
     return (
-      <table {...this.props} className={classes}>
-        {children}
+      <table {...this.props} className={ classes }>
+        { children }
       </table>
     );
   }

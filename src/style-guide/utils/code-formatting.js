@@ -69,5 +69,7 @@ export function prepareBashSnippet(snippet) {
 }
 
 export function prepareJSSnippet(snippet) {
-  return prepareSnippet(snippet, []);
+  return prepareSnippet(snippet, [
+    formatJs,
+  ]);
 }

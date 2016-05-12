@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { Strong } from 'axiom/react';
 
 function oneOf(list) {
   return `enum(${
@@ -30,8 +29,12 @@ const PROP_TYPE_MAP = {
 };
 
 export default class DocApiPropType extends Component {
+  static propTypes = {
+    propType: PropTypes.object.isRequired,
+  };
+
   render()  {
-    const {propType} = this.props;
+    const { propType } = this.props;
 
     return (
       <code className="dm-doc-api__code">

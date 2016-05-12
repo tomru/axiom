@@ -52,7 +52,7 @@ export default {
       loader: 'json',
     }, {
       test: /\.yml$/,
-      loader: 'json!yaml'
+      loader: 'json!yaml',
     }, {
       test: /\.(scss|css)$/,
       loader: ExtractTextPlugin.extract(
@@ -74,5 +74,5 @@ export default {
   },
   sassLoader: {
     importer: variableImporter(config.paths.sassConfig, 'axiom-vars'),
-  }
+  },
 };

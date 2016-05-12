@@ -1,7 +1,7 @@
 import * as types from 'style-guide/constants/ActionTypes';
 
 function setActiveStates(ids) {
-  return (stateItem, index) => {
+  return (stateItem) => {
     return {
       ...stateItem,
       isActive: !!ids.find((id) => stateItem.id === id),
@@ -11,7 +11,7 @@ function setActiveStates(ids) {
 }
 
 function setOpenStates(ids) {
-  return (stateItem, index) => {
+  return (stateItem) => {
     return {
       ...stateItem,
       isOpen: !!ids.find((id) => stateItem.id === id),

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
-import { enhance, addDisplayName, addPropTypes, addClassName } from '../../utils/components';
+import { enhance, addPropTypes, addClassName } from '../../utils/components';
 
 export class Tbody extends Component {
   static propTypes = {
@@ -12,7 +11,7 @@ export class Tbody extends Component {
 
     return (
       <tbody {...this.props}>
-        {children}
+        { children }
       </tbody>
     );
   }

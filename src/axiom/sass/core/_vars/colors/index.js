@@ -4,28 +4,28 @@ import aliases from './_aliases';
 const colorPalette = [[
   { name: 'red', color: palette.colorRed },
   { name: 'pink', color: palette.colorPink },
-  { name: 'purple', color: palette.colorPurple }
+  { name: 'purple', color: palette.colorPurple },
 ], [
   { name: 'deep-purple', color: palette.colorDeepPurple },
   { name: 'indigo', color: palette.colorIndigo },
-  { name: 'blue', color: palette.colorBlue }
+  { name: 'blue', color: palette.colorBlue },
 ], [
   { name: 'light-blue', color: palette.colorLightBlue },
   { name: 'cyan', color: palette.colorCyan },
-  { name: 'teal', color: palette.colorTeal }
+  { name: 'teal', color: palette.colorTeal },
 ], [
   { name: 'green', color: palette.colorGreen },
   { name: 'light-green', color: palette.colorLightGreen },
-  { name: 'lime', color: palette.colorLime }
+  { name: 'lime', color: palette.colorLime },
 ], [
   { name: 'yellow', color: palette.colorYellow },
   { name: 'amber', color: palette.colorAmber },
   { name: 'orange', color: palette.colorOrange },
-  { name: 'deep-orange', color: palette.colorDeepOrange }
+  { name: 'deep-orange', color: palette.colorDeepOrange },
 ], [
   { name: 'brown', color: palette.colorBrown },
   { name: 'grey', color: palette.colorGrey },
-  { name: 'blue-grey', color: palette.colorBlueGrey }
+  { name: 'blue-grey', color: palette.colorBlueGrey },
 ]];
 
 const colorAliases = [{
@@ -36,7 +36,7 @@ const colorAliases = [{
   ], [
     { name: 'feedback-danger', color: aliases.colorFeedbackDanger },
     { name: 'feedback-error', color: aliases.colorFeedbackError },
-  ]]
+  ]],
 }, {
   heading: 'Sentiment',
   colors: [[
@@ -83,6 +83,16 @@ const colors = [
   ...colorAliasesFlattened,
 ];
 
+const colorVariations = colors.reduce((acc, { color }) => {
+  Object.keys(color).forEach((variation) => {
+    if (!acc.includes(variation)) {
+      acc.push(variation);
+    }
+  });
+
+  return acc;
+}, []);
+
 export default {
   ...palette,
   ...aliases,
@@ -101,8 +111,9 @@ export default {
   colorAliasesFlattened,
 
   colors,
+  colorVariations,
   colorIds: [
     'primary',
-    ...colors.map(({name}) => name),
+    ...colors.map(({ name }) => name),
   ],
 };

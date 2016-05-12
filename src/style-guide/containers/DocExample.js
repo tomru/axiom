@@ -6,6 +6,16 @@ import DocLayer from 'style-guide/components/DocRendering/DocLayer';
 export class DocExample extends Component {
   static propTypes = {
     children: PropTypes.node,
+    location: PropTypes.shape({
+      query: PropTypes.object.isRequired,
+    }).isRequired,
+    route: PropTypes.shape({
+      doc: PropTypes.shape({
+        examples: PropTypes.func,
+        Example: PropTypes.element,
+      }).isRequired,
+    }).isRequired,
+    routeParams: PropTypes.object.isRequired,
   };
 
   render() {
@@ -24,24 +34,24 @@ export class DocExample extends Component {
 
     return (
       <LayoutContent>
-        {do {
+        { do {
           if (Example) {
             <Example />
           } else {
             {examples(routeParams, queryParams).map((example, index) =>
               <DocLayer
-                topLevel={true}
-                layer={example}
-                key={index} />
+                  key={ index }
+                  layer={ example }
+                  topLevel={ true } />
             )}
           }
-        }}
+        } }
       </LayoutContent>
     );
   }
 }
 
-function select(state) {
+function select() {
   return {};
 }
 
