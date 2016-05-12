@@ -65,8 +65,8 @@ export default function createRoutes(store) {
         <Route path="search" component={SearchResults} />
         <Route path="docs">
           <IndexRedirect to={`current/${versions.current[0].path}`} />
-          {Object.keys(versions).map((version) =>
-            <Route path={version} onEnter={onEnterVersionRoute(dispatch, version)}>
+          {Object.keys(versions).map((version, index) =>
+            <Route path={version} onEnter={onEnterVersionRoute(dispatch, version)} key={index}>
               <IndexRedirect to={versions[version][0].path} />
               { versions[version].map(createRoute(dispatch, version)) }
             </Route>
