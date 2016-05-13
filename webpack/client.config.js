@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import autoprefixer from 'autoprefixer';
 import * as config from '../config';
 import { variableImporter } from '../utils/sass';
 
@@ -57,7 +58,7 @@ export default {
       test: /\.(scss|css)$/,
       loader: ExtractTextPlugin.extract(
         'style',
-        `css!autoprefixer!sass`,
+        `css!postcss!sass`,
       ),
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -75,4 +76,5 @@ export default {
   sassLoader: {
     importer: variableImporter(config.paths.sassConfig, 'axiom-vars'),
   },
+  postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],
 };

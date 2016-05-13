@@ -45,7 +45,7 @@ export default {
       loaders: [
         'style',
         'css',
-        'autoprefixer',
+        'postcss',
         'sass',
       ],
     }, {
