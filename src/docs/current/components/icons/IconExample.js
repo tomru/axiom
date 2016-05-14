@@ -5,8 +5,8 @@ import { TextInput } from 'axiom/react';
 import { Icon } from 'axiom/react';
 import { Link, Paragraph } from 'axiom/react';
 import { debounce } from 'style-guide/utils/function';
-import { iconList, iconCategories } from 'style-guide/utils/icons';
-import IconGrid from 'style-guide/components/Icons/IconGrid';
+import { iconList, iconCategories } from './utils';
+import IconGrid from './IconGrid';
 
 export default class IconExample extends Component {
   componentWillMount() {

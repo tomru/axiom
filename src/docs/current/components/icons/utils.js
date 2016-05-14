@@ -1,4 +1,4 @@
-import { icons } from 'style-guide/constants/icons.yml';
+import { icons } from './icons.yml';
 
 function iconSort(a, b) {
   return a.id.localeCompare(b.id);
@@ -15,3 +15,5 @@ export const iconCategories = [...icons].reduce((categories, icon) => {
 
   return categories;
 }, {});
+
+

@@ -1,5 +1,5 @@
 import { Icon } from 'axiom/react';
-import { iconList } from 'style-guide/utils/icons';
+import { iconList } from './utils';
 
 export default {
   id: 'icon',
