@@ -2,10 +2,13 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import { Card, CardContent } from 'axiom/react';
 import { Billboard } from 'axiom/react';
+import { Grid, GridCell } from 'axiom/react';
 import { Heading } from 'axiom/react';
 import { LayoutContent } from 'axiom/react/layouts/established';
-import { getParentNames } from 'style-guide/utils/navigation';
 import DocImports from 'style-guide/components/DocRendering/DocImports';
+import DocApiDialogTrigger from 'style-guide/components/DocApi/DocApiDialogTrigger';
+import { getParentNames } from 'style-guide/utils/navigation';
+import { renderApiDocs } from 'style-guide/utils/rendering/rendering-api';
 
 export class Doc extends Component {
   static propTypes = {
@@ -33,19 +36,35 @@ export class Doc extends Component {
       },
     } = this.props;
 
+    const apiDocs = renderApiDocs(doc);
+
     return (
       <div>
         <Billboard color="blue-grey" image="/assets/axiom-bg.jpg" overlay={ true }>
           <LayoutContent>
             <Card transparent={ true }>
               <CardContent>
-                <Heading level={ 4 }>{
-                  getParentNames(versions[activeVersion], navItem)
-                    .slice(-1)
-                    .reverse()
-                    .join(' / ')
-                }</Heading>
-                <Heading level={ 2 }>{ navItem.name }</Heading>
+                <Grid vAlign="bottom">
+                  <GridCell>
+                    <Heading level={ 4 }>{
+                      getParentNames(versions[activeVersion], navItem)
+                        .slice(-1)
+                        .reverse()
+                        .join(' / ')
+                    }</Heading>
+                    <Heading level={ 2 }>{ navItem.name }</Heading>
+                  </GridCell>
+
+                  {
+                    do {
+                      if (apiDocs.length) {
+                        <GridCell shrink={ true }>
+                          <DocApiDialogTrigger apiDocs={ apiDocs } title={ navItem.name }/>
+                        </GridCell>
+                      }
+                    }
+                  }
+                </Grid>
               </CardContent>
             </Card>
 

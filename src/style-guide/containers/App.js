@@ -43,7 +43,7 @@ export class Docs extends Component {
     const { active: activeScheme } = schemesState;
 
     return (
-      <Layout className={ activeScheme }>
+      <Layout>
         <LayoutHeader>
           Axiom
         </LayoutHeader>

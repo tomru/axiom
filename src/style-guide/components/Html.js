@@ -24,7 +24,7 @@ export default class Html extends Component {
           { __PRODUCTION__ && <link href={ `/${config.output.folderName}/${config.output.styleGuide.clientProdCSSFilename}` } rel="stylesheet" /> }
         </head>
 
-        <body className="ax-layout__body">
+        <body className="ax-layout__body scheme-axiom">
           <div className="ax-layout__container" dangerouslySetInnerHTML={ { __html: renderToString(children) } } id="react-root"></div>
           <script dangerouslySetInnerHTML={ { __html: `window.__data=${serialize(store.getState())};` } } />
           { __DEVELOPMENT__ && <aside id="dev-tools" /> }
