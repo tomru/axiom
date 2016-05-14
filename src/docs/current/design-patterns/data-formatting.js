@@ -2,9 +2,9 @@ import { formatNumber, formatDateShort, formatDateMedium, formatDateLong } from 
 import { Paragraph } from 'axiom/react';
 
 export default {
-  id: 'data-formats',
-  path: 'data-formats',
-  group: 'core-design',
+  id: 'data-formatting',
+  path: 'data-formatting',
+  group: 'design-patterns',
   imports: {
     js: [
       'formatNumber',

@@ -4,7 +4,7 @@ import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
 export default {
   id: 'ui-colors',
   path: 'ui-colors',
-  group: 'core-design',
+  group: 'design-patterns',
   imports: {
     sass: ['core/core'],
   },

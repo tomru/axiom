@@ -1,6 +1,6 @@
-export { default as colorPalette } from './core-design/color-palette';
-export { default as uiColors } from './core-design/ui-colors';
-export { default as dataFormats } from './core-design/data-formats';
+export { default as colorPalette } from './design-patterns/color-palette';
+export { default as uiColors } from './design-patterns/ui-colors';
+export { default as dataFormatting } from './design-patterns/data-formatting';
 
 export { default as avatar } from './components/avatar';
 export { default as button } from './components/button';
