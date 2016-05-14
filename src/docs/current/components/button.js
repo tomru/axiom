@@ -21,22 +21,24 @@ export default {
     children: [{
       title: 'Palette Colors',
       snippetLocation: true,
-      snippetContent: true,
-      Container: ButtonGroup,
-      children: colorPalette.reduce((acc, colors) => {
-        colors.forEach(({ name }) => {
-          acc.push({
-            Component: Button,
-            demoContent: true,
-            children: name,
-            props: {
-              color: name,
-            },
+      children: [{
+        snippetContent: true,
+        Container: ButtonGroup,
+        children: colorPalette.reduce((acc, colors) => {
+          colors.forEach(({ name }) => {
+            acc.push({
+              Component: Button,
+              demoContent: true,
+              children: name,
+              props: {
+                color: name,
+              },
+            });
           });
-        });
 
-        return acc;
-      }, []),
+          return acc;
+        }, []),
+      }],
     }, {
       title: 'UI Colors',
       snippetLocation: true,
@@ -44,22 +46,24 @@ export default {
         ...colorAliases.map(({ heading, colors }) => {
           return {
             title: heading,
-            Container: ButtonGroup,
-            snippetContent: true,
-            children: colors.reduce((acc, colors) => {
-              colors.forEach(({ name }) => {
-                acc.push({
-                  Component: Button,
-                  children: name,
-                  demoContent: true,
-                  props: {
-                    color: name,
-                  },
+            children: [{
+              Container: ButtonGroup,
+              snippetContent: true,
+              children: colors.reduce((acc, colors) => {
+                colors.forEach(({ name }) => {
+                  acc.push({
+                    Component: Button,
+                    children: name,
+                    demoContent: true,
+                    props: {
+                      color: name,
+                    },
+                  });
                 });
-              });
 
-              return acc;
-            }, []),
+                return acc;
+              }, []),
+            }],
           };
         }),
         {

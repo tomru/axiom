@@ -1,10 +1,7 @@
 @import '../core/mixins';
 @import './_mixins/scheme';
 @import './_mixins/typography';
-
-$card-padding-v: $container-padding-v-base;
-$card-padding-h: $container-padding-h-base;
-$card-border: $component-border-width-base solid transparent;
+@import './_vars/card';
 
 /**
  * Standard card styling
@@ -26,12 +23,16 @@ $card-border: $component-border-width-base solid transparent;
   }
 }
 
-.ax-card__title {
-  padding: $card-padding-v $card-padding-h 0;
-}
-
-.ax-card__content {
+.ax-card__title,
+.ax-card__content,
+.ax-card__footer, {
   padding: $card-padding-v $card-padding-h;
+
+  + .ax-card__title,
+  + .ax-card__content,
+  + .ax-card__footer {
+    padding-top: 0;
+  }
 }
 
 .ax-card__list {

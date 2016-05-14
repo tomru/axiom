@@ -4,6 +4,7 @@ export { default as dataFormats } from './core-design/data-formats';
 
 export { default as avatar } from './components/avatar';
 export { default as button } from './components/button';
+export { default as dialog } from './components/dialog/dialog';
 export { default as form } from './components/form';
 export { default as grid } from './components/grid';
 export { default as icon } from './components/icon';

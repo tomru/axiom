@@ -8,10 +8,16 @@ export { ButtonGroup as ButtonGroup } from './components/Button';
 export { Card as Card } from './components/Card';
 export { CardTitle as CardTitle } from './components/Card';
 export { CardContent as CardContent } from './components/Card';
+export { CardFooter as CardFooter } from './components/Card';
 export { CardList as CardList } from './components/Card';
 export { CardListItem as CardListItem } from './components/Card';
 
 export { BlockContainer as BlockContainer } from './components/Containers';
+
+export { Dialog as Dialog } from './components/Dialog';
+export { DialogBody as DialogBody } from './components/Dialog';
+export { DialogFooter as DialogFooter } from './components/Dialog';
+export { DialogTitle as DialogTitle } from './components/Dialog';
 
 export { CheckBox as CheckBox } from './components/Form';
 export { Form as Form } from './components/Form';
