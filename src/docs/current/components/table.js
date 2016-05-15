@@ -1,7 +1,7 @@
-import { formatNumber } from 'axiom/common/format-utils';
+import { shortNumber } from 'axiom/common';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'axiom/react';
 
-const randomNumber = () => ~~(Math.random() * 10 * 100000);
+const randomNumber = () => Math.floor(Math.random() * 10 * 100000);
 
 const demoHeaders = [
   { name: 'Lorem', isNumber: false },
@@ -9,6 +9,7 @@ const demoHeaders = [
   { name: 'Dolar', isNumber: true, sorting: 1 },
   { name: 'Sit Amet', isNumber: true, sorting: -1 },
 ];
+
 const demoRows = [
   ['Consectetur adipiscing elit', randomNumber(), randomNumber(), randomNumber()],
   ['Fusce auctor dapibus', randomNumber(), randomNumber(), randomNumber()],
@@ -39,7 +40,7 @@ const demoTableContent = [{
       children: cells.map((cell, cIndex) => {
         return {
           Component: Td,
-          children: demoHeaders[cIndex].isNumber ? formatNumber(cell) : cell,
+          children: demoHeaders[cIndex].isNumber ? shortNumber(cell) : cell,
           props: {
             isNumber: demoHeaders[cIndex].isNumber,
           },

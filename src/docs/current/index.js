@@ -1,6 +1,7 @@
 export { default as colorPalette } from './design-patterns/color-palette';
 export { default as uiColors } from './design-patterns/ui-colors';
-export { default as dataFormatting } from './design-patterns/data-formatting';
+export { default as dateAndTime } from './design-patterns/date-and-time/date-and-time';
+export { default as numbers } from './design-patterns/numbers/numbers';
 
 export { default as avatar } from './components/avatar';
 export { default as button } from './components/button';
