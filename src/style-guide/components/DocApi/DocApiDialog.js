@@ -4,24 +4,46 @@ import { CardContent } from 'axiom/react';
 import { Dialog, DialogBody, DialogFooter, DialogTitle } from 'axiom/react';
 import { Heading } from 'axiom/react';
 import DocApiList from 'style-guide/components/DocApi/DocApiList';
+import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
+import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 
 export default class DocApiDialog extends Component {
   static propTypes = {
     apiDocs: PropTypes.array.isRequired,
+    importDocs: PropTypes.object.isRequired,
     isOpen: PropTypes.bool.isRequired,
     title: PropTypes.string.isRequired,
     onRequestClose: PropTypes.func.isRequired,
   };
 
   render() {
-    const { apiDocs, isOpen, onRequestClose, title } = this.props;
+    const { apiDocs = [], importDocs = {}, isOpen, onRequestClose, title } = this.props;
+    const importDocKeys = Object.keys(importDocs).filter((key) => importDocs[key]);
 
     return (
-      <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose }>
+      <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="lg">
         <DialogTitle onRequestClose={ onRequestClose }>
           { `API Docs - ${title}` }
         </DialogTitle>
         <DialogBody>
+          {
+            do {
+              if (importDocKeys.length) {
+                <CardContent>
+                  <CodeTabset>
+                    {
+                      importDocKeys.map((key, index) =>
+                        <CodeSnippet key={ index } language={ key }>
+                          { importDocs[key] }
+                        </CodeSnippet>
+                      )
+                    }
+                  </CodeTabset>
+                </CardContent>
+              }
+            }
+          }
+
           {
             apiDocs
               .filter(({ propTypes }) => Object.keys(propTypes).length)

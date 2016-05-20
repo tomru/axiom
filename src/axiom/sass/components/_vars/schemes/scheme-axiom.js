@@ -71,8 +71,8 @@ export default {
   inputCheckedColor: schemeAccentColor['A400'],
 
   // Tabs
-  tabsBackgroundColor: 'transparent',
-  tabsHoverBackgroundColor: colorGrey[50],
-  tabsActiveBorderColor: schemeAccentColor['A400'],
-  tabsActiveBackgroundColor: 'transparent',
+  tabsBorderColor: colorGrey[200],
+  tabsActiveBackgroundColor: colorWhite['_'],
+  tabsInactiveBackgroundColor: colorGrey[200],
+  tabsHoverBackgroundColor: colorGrey[100],
 };

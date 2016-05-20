@@ -5,7 +5,6 @@ import { Billboard } from 'axiom/react';
 import { Grid, GridCell } from 'axiom/react';
 import { Heading } from 'axiom/react';
 import { LayoutContent } from 'axiom/react/layouts/established';
-import DocImports from 'style-guide/components/DocRendering/DocImports';
 import DocApiDialogTrigger from 'style-guide/components/DocApi/DocApiDialogTrigger';
 import { getParentNames } from 'style-guide/utils/navigation';
 import { renderApiDocs } from 'style-guide/utils/rendering/rendering-api';
@@ -61,7 +60,10 @@ export class Doc extends Component {
                     do {
                       if (apiDocs.length) {
                         <GridCell shrink={ true }>
-                          <DocApiDialogTrigger apiDocs={ apiDocs } title={ navItem.name }/>
+                          <DocApiDialogTrigger
+                            apiDocs={ apiDocs }
+                            importDocs={ importDocs }
+                            title={ navItem.name }/>
                         </GridCell>
                       }
                     }
@@ -69,14 +71,6 @@ export class Doc extends Component {
                 </Grid>
               </CardContent>
             </Card>
-
-            {
-              do {
-                if (Object.keys(importDocs).filter((key) => importDocs[key]).length) {
-                  <DocImports importDocs={ importDocs } />
-                }
-              }
-            }
           </LayoutContent>
         </Billboard>
 

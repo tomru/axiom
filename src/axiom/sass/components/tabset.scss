@@ -5,17 +5,60 @@
 }
 
 .ax-tabs__nav {
+  position: relative;
   display: flex;
   margin: 0;
   overflow: auto;
+  z-index: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: $component-border-width-base;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+    @include forEachScheme {
+      background-color: schemeProp(tabs-border-color);
+    }
+  }
 }
 
 .ax-tabs__nav-item {
-  margin: 0 $component-margin-h-base 0 0;
+  margin: 0 $component-margin-h-sm 0 0;
   white-space: nowrap;
+  border: $component-border-width-base solid transparent;
+  border-bottom: none;
+  border-radius: $border-radius-base $border-radius-base 0 0;
+
+  @include transition((background-color, border-color));
+  @include forEachScheme {
+    background-color: schemeProp(tabs-inactive-background-color);
+    color: schemeTextColor(schemeProp(tabs-inactive-background-color));
+    border-color: schemeProp(tabs-border-color);
+  }
+
+  &:hover {
+    @include forEachScheme {
+      background-color: schemeProp(tabs-hover-background-color);
+      color: schemeTextColor(schemeProp(tabs-hover-background-color));
+    }
+  }
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.ax-tabs__nav-item--active {
+  @include forEachScheme {
+    &,
+    &:hover {
+      background-color: schemeProp(tabs-active-background-color);
+      color: schemeTextColor(schemeProp(tabs-active-background-color));
+    }
   }
 }
 
@@ -25,18 +68,9 @@
   flex: 0 1 auto;
   align-items: center;
   justify-content: center;
-  border-bottom: $component-border-width-lg solid transparent;
   font-size: $font-size-md;
   font-weight: $font-weight-strong;
   text-transform: uppercase;
-
-  @include transition((border-bottom-color));
-
-  .ax-tabs__nav-item--active & {
-    @include forEachScheme {
-      border-bottom-color: getAccentColor(schemeProp(accent));
-    }
-  }
 }
 
 .ax-tabs__content {
