@@ -9,6 +9,7 @@ import DocImports from 'style-guide/components/DocRendering/DocImports';
 import DocApiDialogTrigger from 'style-guide/components/DocApi/DocApiDialogTrigger';
 import { getParentNames } from 'style-guide/utils/navigation';
 import { renderApiDocs } from 'style-guide/utils/rendering/rendering-api';
+import { renderImports } from 'style-guide/utils/rendering/rendering-imports';
 
 export class Doc extends Component {
   static propTypes = {
@@ -37,6 +38,7 @@ export class Doc extends Component {
     } = this.props;
 
     const apiDocs = renderApiDocs(doc);
+    const importDocs = renderImports(doc);
 
     return (
       <div>
@@ -68,7 +70,13 @@ export class Doc extends Component {
               </CardContent>
             </Card>
 
-            <DocImports doc={ doc } />
+            {
+              do {
+                if (Object.keys(importDocs).filter((key) => importDocs[key]).length) {
+                  <DocImports importDocs={ importDocs } />
+                }
+              }
+            }
           </LayoutContent>
         </Billboard>
 

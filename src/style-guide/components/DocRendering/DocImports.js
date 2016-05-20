@@ -1,16 +1,15 @@
 import React, { PropTypes, Component } from 'react';
 import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
-import { renderImports } from 'style-guide/utils/rendering/rendering-imports';
 
 export default class DocImports extends Component {
   static propTypes = {
-    doc: PropTypes.object.isRequired,
+    importDocs: PropTypes.object.isRequired,
   };
 
   render() {
-    const { doc } = this.props;
-    const importDocs = renderImports(doc);
+    const { importDocs } = this.props;
+
 
     return (
       <CodeTabset>

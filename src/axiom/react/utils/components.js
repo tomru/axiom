@@ -10,9 +10,18 @@ export function findComponents(components, Component) {
   return Children.toArray(components).filter(({ type }) => type === Component);
 }
 
+function addDisplayName(Component) {
+  Component.__ax_displayName = Component.name;
+
+  return Component;
+}
+
 export function enhance(Component) {
   return (...transforms) => {
-    return transforms.reduce((result, transform) => {
+    return [
+      addDisplayName,
+      ...transforms,
+    ].reduce((result, transform) => {
       return transform(result);
     }, Component);
   };
@@ -35,8 +44,6 @@ function extendClass(Component, Wrapped) {
   for (let staticProp in Component) {
     Wrapped[staticProp] = Component[staticProp];
   }
-
-  Wrapped.__ax_displayName = Component.__ax_displayName || Component.name;
 
   return Wrapped;
 }

@@ -38,7 +38,7 @@ export class Landing extends Component {
               <CardTitle title="Install" />
               <CardContent>
                 <CodeSnippet language="bash">
-                  npm install brandwatch/axiom --save
+                  npm install bw-axiom --save
                 </CodeSnippet>
               </CardContent>
             </Card>

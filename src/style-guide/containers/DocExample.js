@@ -12,7 +12,7 @@ export class DocExample extends Component {
     route: PropTypes.shape({
       doc: PropTypes.shape({
         examples: PropTypes.func,
-        Example: PropTypes.element,
+        Example: PropTypes.func,
       }).isRequired,
     }).isRequired,
     routeParams: PropTypes.object.isRequired,

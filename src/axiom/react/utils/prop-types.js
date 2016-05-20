@@ -19,7 +19,7 @@ const PROP_TYPE_MAP = {
   oneOfType: PropTypes.oneOfType,
 };
 
-const PROP_TYPES_SETS = {
+export const PROP_TYPES_SETS = {
   global: {
     className: { string: true },
     hiddenUntil: { oneOf: breakpointIds },

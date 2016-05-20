@@ -1,7 +1,11 @@
 export { default as colorPalette } from './design-patterns/color-palette';
 export { default as uiColors } from './design-patterns/ui-colors';
+export { default as branding } from './design-patterns/branding';
 export { default as dateAndTime } from './design-patterns/date-and-time/date-and-time';
 export { default as numbers } from './design-patterns/numbers/numbers';
+
+export { default as character } from './writing-and-voice/character';
+export { default as text } from './writing-and-voice/text';
 
 export { default as avatar } from './components/avatar';
 export { default as button } from './components/button';
@@ -15,5 +19,5 @@ export { default as table } from './components/table';
 export { default as tabset } from './components/tabset';
 export { default as typography } from './components/typography';
 
-export { default as emblem } from './layouts/emblem';
+export { default as emblem } from './layouts/emblem/emblem';
 export { default as established } from './layouts/established';
