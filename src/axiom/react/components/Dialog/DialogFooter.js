@@ -13,7 +13,7 @@ export class DialogFooter extends Component {
     const classes = classnames(className, 'ax-dialog__card-footer');
 
     return (
-      <CardFooter className={ classes } textRight={ true }>
+      <CardFooter className={ classes }>
         { children }
       </CardFooter>
     );

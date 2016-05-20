@@ -40,18 +40,6 @@
   flex: 0 0 auto;
 }
 
-.ax-dialog__card-title  { border-bottom: $card-border; }
-.ax-dialog__card-footer { border-top: $card-border; }
-
-@include forEachScheme() {
-  .ax-dialog__card-title,
-  .ax-dialog__card-footer, {
-    @if schemeHasProp(card-border) {
-      border-color: schemeProp(card-border);
-    }
-  }
-}
-
 .ax-dialog__body {
   flex: 1;
   overflow: auto;

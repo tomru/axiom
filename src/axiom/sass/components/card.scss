@@ -13,12 +13,6 @@
     @include forEachScheme() {
       color: schemeTextColor(schemeProp(card-color));
       background-color: schemeProp(card-color);
-      border: $card-border;
-
-      @if schemeHasProp(card-border) {
-        border-color: schemeProp(card-border);
-        border-radius: $border-radius-base;
-      }
     }
   }
 }
