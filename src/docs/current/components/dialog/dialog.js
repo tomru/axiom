@@ -1,4 +1,5 @@
 import { Dialog, DialogBody, DialogFooter, DialogTitle } from 'axiom/react';
+import DialogFullscreen from './DialogFullscreen';
 import DialogSizes from './DialogSizes';
 
 export default {
@@ -20,6 +21,11 @@ export default {
     title: 'Dialog sizes',
     children: [{
       Component: DialogSizes,
+    }],
+  }, {
+    title: 'Dialog fullscreen',
+    children: [{
+      Component: DialogFullscreen,
     }],
   }],
 };

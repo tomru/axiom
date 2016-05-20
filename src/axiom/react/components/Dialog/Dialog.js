@@ -8,6 +8,7 @@ import { breakpointClassName } from '../../utils/class-name';
 
 const propTypes = {
   children: { node: true, isRequired: true  },
+  fullscreen: { bool: true },
   size: { oneOf: [...breakpointIds], default: 'sm' },
 };
 
@@ -19,10 +20,13 @@ export class Dialog extends Component {
       children,
       className,
       size = propTypes.size.default,
+      fullscreen,
     } = this.props;
 
     const classes = classnames(className,
-      'ax-dialog',
+      'ax-dialog', {
+        'ax-dialog--fullscreen': fullscreen,
+      },
       breakpointClassName(size, ({ id }) => `ax-dialog--${id}`),
     );
 

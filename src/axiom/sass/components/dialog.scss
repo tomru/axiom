@@ -45,14 +45,19 @@
   overflow: auto;
 }
 
-@include forEachBreakpoint {
-  @include screenMoreThan {
-    .ax-dialog--#{breakpointProp(id)} {
-      width: breakpointProp(width) - $container-padding-h-base;
-    }
+@each $dialog-size in $dialog-sizes {
+  $dialog-id: map-get($dialog-size, id);
+  $dialog-width: map-get($dialog-size, width);
+
+  .ax-dialog--#{$dialog-id} {
+    max-width: $dialog-width;
   }
 }
 
+.ax-dialog--fullscreen {
+  min-width: 100%;
+  min-height: 100%;
+}
 
 /**
  * Animations
