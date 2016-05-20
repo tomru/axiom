@@ -36,6 +36,8 @@ const colorAliases = [{
   ], [
     { name: 'feedback-danger', color: aliases.colorFeedbackDanger },
     { name: 'feedback-error', color: aliases.colorFeedbackError },
+  ], [
+    { name: 'feedback-neutral', color: aliases.colorFeedbackNeutral },
   ]],
 }, {
   heading: 'Sentiment',

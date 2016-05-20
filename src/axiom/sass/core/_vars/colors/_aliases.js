@@ -5,6 +5,7 @@ export default {
   colorFeedbackInfo: palette.colorBlue,
   colorFeedbackDanger: palette.colorRed,
   colorFeedbackError: palette.colorOrange,
+  colorFeedbackNeutral: palette.colorGrey,
 
   colorSentimentPositive: palette.colorGreen,
   colorSentimentNeutral: palette.colorGrey,
