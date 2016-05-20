@@ -9,6 +9,8 @@ import Icon from '../Icon/Icon';
 
 const propsTypes = {
   children: { node: true },
+  circular: { bool: true },
+  outlined: { bool: true },
   color: { oneOf: [...colorIds], default: 'primary' },
   full: { oneOf: [true, ...breakpointIds] },
   size: { oneOf: ['sm', 'md', 'lg'], default: 'md' },
@@ -20,16 +22,20 @@ export class Button extends Component {
   render() {
     const {
       className,
+      circular,
       children,
       color = propsTypes.color.default,
       size = propsTypes.size.default,
       full,
+      outlined,
     } = this.props;
 
     const icon = findComponent(children, Icon);
     const classes = classnames(className,
       'ax-button', {
         [`ax-button--${color}`]: color,
+        'ax-button--outlined': outlined,
+        'ax-button--circular': circular,
         'ax-button--sm': size === 'sm',
         'ax-button--md': size === 'md',
         'ax-button--lg': size === 'lg',
@@ -43,7 +49,9 @@ export class Button extends Component {
         { do {
           if (icon) {
             {cloneElement(icon, {
-              className: 'ax-button__icon',
+              className: classnames('ax-button__icon', {
+                'ax-button__icon--circular': circular,
+              }),
             })}
           }
         } }

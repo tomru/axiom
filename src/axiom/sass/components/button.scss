@@ -1,6 +1,18 @@
 @import '../core/mixins';
 @import './_mixins/scheme';
 
+$button-padding-v-sm: 0;
+$button-padding-h-sm: $component-padding-h-sm;
+$button-font-size-sm: $font-size-sm;
+
+$button-padding-v-md: $component-padding-v-sm;
+$button-padding-h-md: $component-padding-h-sm;
+$button-font-size-md: $font-size-md;
+
+$button-padding-v-lg: $component-padding-v-base;
+$button-padding-h-lg: $component-padding-h-base;
+$button-font-size-lg: $font-size-base;
+
 /**
  * Standard button styling
  */
@@ -25,6 +37,16 @@ button {
   text-align: center;
   cursor: pointer;
 
+  &:hover {
+    cursor: pointer;
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    cursor: default;
+  }
+
   @include inlineBlockSpace($component-margin-h-sm);
   @include transition(( background-color, border-color, color ), $transition-time-fast);
 }
@@ -34,18 +56,18 @@ button {
  * Size buttons
  */
 .ax-button--sm {
-  padding: 0 $component-padding-h-sm;
-  font-size: $font-size-sm;
+  padding: $button-padding-v-sm $button-padding-h-sm;
+  font-size: $button-font-size-sm;
 }
 
 .ax-button--md {
-  padding: $component-padding-v-sm $component-padding-h-sm;
-  font-size: $font-size-md;
+  padding: $button-padding-v-md $button-padding-h-md;
+  font-size: $button-font-size-md;
 }
 
 .ax-button--lg {
-  padding: $component-padding-v-base $component-padding-h-base;
-  font-size: $font-size-base;
+  padding: $button-padding-v-lg $button-padding-h-lg;
+  font-size: $button-font-size-lg;
 }
 
 /**
@@ -73,13 +95,12 @@ button {
 /**
  * Button Colours
  */
-@mixin buttonColor($color) {
+@mixin buttonFilledColor($color) {
   border-color: getColor($color, 500);
   background-color: getColor($color, 400);
   color: schemeTextColor(getColor($color, 400));
 
   &:hover {
-    cursor: pointer;
     border-color: getColor($color, 600);
     background-color: getColor($color, 500);
     color: schemeTextColor(getColor($color, 500));
@@ -95,9 +116,32 @@ button {
   &[disabled],
   &[disabled]:hover,
   &[disabled]:active {
-    cursor: default;
     border-color: getColor($color, 100);
     background-color: getColor($color, 50);
+    color: getColor($color, 100);
+  }
+}
+
+@mixin buttonOutlinedColor($color) {
+  border-color: getColor($color, 500);
+  color: getColor($color, 500);
+
+  &:hover {
+    border-color: getColor($color, 600);
+    color: getColor($color, 600);
+  }
+
+  &:active,
+  &.active {
+    border-color: getColor($color, 700);
+    background-color: getColor($color, 600);
+    color: schemeTextColor(getColor($color, 600));
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    border-color: getColor($color, 100);
     color: getColor($color, 100);
   }
 }
@@ -105,12 +149,48 @@ button {
 @include forEachScheme {
   @include forEachColor {
     .ax-button--#{colorProp(name)} {
-      @include buttonColor(colorProp(color));
+      &:not(.ax-button--outlined) {
+        @include buttonFilledColor(colorProp(color));
+      }
+
+      &.ax-button--outlined {
+        @include buttonOutlinedColor(colorProp(color));
+      }
     }
   }
 
   .ax-button--primary {
-    @include buttonColor(schemeProp(primary));
+    &:not(.ax-button--outlined) {
+      @include buttonFilledColor(schemeProp(primary));
+    }
+
+    &.ax-button--outlined {
+      @include buttonOutlinedColor(schemeProp(primary));
+    }
+  }
+}
+
+
+/**
+ * Circular buttons
+ */
+.ax-button--circular {
+  padding: 0;
+  border-radius: 50%;
+
+  &.ax-button--sm {
+    height: $line-height + ($button-padding-v-sm * 2);
+    width: $line-height + ($button-padding-v-sm * 2);
+  }
+
+  &.ax-button--md {
+    height: $line-height + ($button-padding-v-md * 2);
+    width: $line-height + ($button-padding-v-md * 2);
+  }
+
+  &.ax-button--lg {
+    height: $line-height + ($button-padding-v-lg * 2);
+    width: $line-height + ($button-padding-v-lg * 2);
   }
 }
 
@@ -119,7 +199,9 @@ button {
  * Button icon
  */
 .ax-button__icon {
-  margin-right: $component-margin-h-sm;
+  &:not(.ax-button__icon--circular) {
+    margin-right: $component-margin-h-sm;
+  }
 }
 
 

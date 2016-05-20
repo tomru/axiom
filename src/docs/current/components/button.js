@@ -82,6 +82,38 @@ export default {
       ],
     }],
   }, {
+    title: 'Outlined',
+    children: [{
+      Container: ButtonGroup,
+      children: colorPalette.reduce((acc, colors) => {
+        colors.forEach(({ name }) => {
+          acc.push({
+            Component: Button,
+            demoContent: true,
+            children: name,
+            props: {
+              outlined: true,
+            },
+            demoProps: {
+              color: name,
+            },
+          });
+        });
+
+        return acc;
+      }, []),
+    }, {
+      snippetLocation: true,
+      snippetContent: true,
+      demoRender: false,
+      children: [{
+        Component: Button,
+        props: {
+          outlined: true,
+        },
+      }],
+    }],
+  }, {
     title: 'Sizes',
     status: statuses.STABLE,
     snippetLocation: true,
@@ -98,6 +130,49 @@ export default {
           children: `Button (${size.toUpperCase()})`,
         };
       }),
+    }],
+  }, {
+    title: 'Circular',
+    status: statuses.STABLE,
+    snippetLocation: true,
+    children: [{
+      Container: ButtonGroup,
+      snippetContent: true,
+      children: [
+        ...Button.__ax_propTypes.size.oneOf.map((size) => {
+          return {
+            Component: Button,
+            props: {
+              size: size,
+              circular: true,
+            },
+            demoContent: true,
+            children: [{
+              Component: Icon,
+              props: {
+                name: 'bolt',
+              },
+            }],
+          };
+        }),
+        ...Button.__ax_propTypes.size.oneOf.map((size) => {
+          return {
+            Component: Button,
+            props: {
+              size: size,
+              circular: true,
+              outlined: true,
+            },
+            demoContent: true,
+            children: [{
+              Component: Icon,
+              props: {
+                name: 'bolt',
+              },
+            }],
+          };
+        }),
+      ],
     }],
   }, {
     title: 'Full width',
