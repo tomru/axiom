@@ -31,17 +31,17 @@ export class LayoutNavListItem extends Component {
     }
 
     const classes = classnames(className,
-      'ax-layout-nav__list-item', {
-        'ax-layout-nav__list-item--open': hasChildren && isOpen,
-        'ax-layout-nav__list-item--active': isActive,
-        'ax-layout-nav__list-item--has-submenu': hasChildren,
+      'ax-layout--established-nav__list-item', {
+        'ax-layout--established-nav__list-item--open': hasChildren && isOpen,
+        'ax-layout--established-nav__list-item--active': isActive,
+        'ax-layout--established-nav__list-item--has-submenu': hasChildren,
       }
     );
 
     return (
       <li className={ classes }>
         <Link
-            className="ax-layout-nav__link"
+            className="ax-layout--established-nav__link"
             onClick={ createOnItemClickHandler() }
             supressStyle={ true }
             to={ to }>{ name }</Link>

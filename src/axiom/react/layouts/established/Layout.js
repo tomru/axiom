@@ -41,8 +41,8 @@ export class Layout extends Component {
     const { className, children } = this.props;
     const { open } = this.state;
     const classes = classnames(className,
-      'ax-layout', {
-        'ax-layout--open': open,
+      'ax-layout--established', {
+        'ax-layout--established--open': open,
       }
     );
 

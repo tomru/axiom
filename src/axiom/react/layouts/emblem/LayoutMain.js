@@ -9,7 +9,7 @@ export class LayoutMain extends Component {
 
   render() {
     const { className, children } = this.props;
-    const classes = classnames(className, 'ax-layout__main');
+    const classes = classnames(className, 'ax-layout--emblem__main');
 
     return (
       <main className={ classes }>

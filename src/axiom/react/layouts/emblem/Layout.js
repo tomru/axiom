@@ -9,7 +9,7 @@ export class Layout extends Component {
 
   render() {
     const { children, className } = this.props;
-    const classes = classnames(className, 'ax-layout');
+    const classes = classnames(className, 'ax-layout--emblem');
 
     return (
       <div className={ classes }>

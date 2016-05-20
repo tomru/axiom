@@ -7,7 +7,7 @@ import { Icon } from '../../';
 export class LayoutFooter extends Component {
   render() {
     const { className } = this.props;
-    const classes = classnames(className, 'ax-layout__footer');
+    const classes = classnames(className, 'ax-layout--emblem__footer');
     const socials = [
       { icon: 'linkedin', link: 'http://www.linkedin.com/company/brandwatch' },
       { icon: 'google-plus' },

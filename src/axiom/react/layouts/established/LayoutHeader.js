@@ -15,7 +15,7 @@ export class LayoutHeader extends Component {
   render() {
     const { className, children } = this.props;
     const { toggleSidebar } = this.context;
-    const classes = classnames(className, 'ax-layout__header');
+    const classes = classnames(className, 'ax-layout--established__header');
 
     return (
       <header className={ classes }>

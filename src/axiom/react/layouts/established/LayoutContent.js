@@ -9,7 +9,7 @@ export class LayoutContent extends Component {
 
   render() {
     const { children, className } = this.props;
-    const classes = classnames(className, 'ax-layout__content');
+    const classes = classnames(className, 'ax-layout--established__content');
 
     return (
       <div className={ classes }>

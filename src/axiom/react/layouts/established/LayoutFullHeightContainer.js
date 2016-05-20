@@ -12,13 +12,13 @@ export class LayoutFullHeightContainer extends Component {
   render() {
     const { children, className, vAlign, hAlign } = this.props;
     const classes = classnames(className,
-      'ax-layout__full-height', {
-        'ax-layout__full-height--top': vAlign === 'top',
-        'ax-layout__full-height--middle': vAlign === 'middle',
-        'ax-layout__full-height--bottom': vAlign === 'bottom',
-        'ax-layout__full-height--left': hAlign === 'left',
-        'ax-layout__full-height--center': hAlign === 'center',
-        'ax-layout__full-height--right': hAlign === 'right',
+      'ax-layout--established__full-height', {
+        'ax-layout--established__full-height--top': vAlign === 'top',
+        'ax-layout--established__full-height--middle': vAlign === 'middle',
+        'ax-layout--established__full-height--bottom': vAlign === 'bottom',
+        'ax-layout--established__full-height--left': hAlign === 'left',
+        'ax-layout--established__full-height--center': hAlign === 'center',
+        'ax-layout--established__full-height--right': hAlign === 'right',
       }
     );
 

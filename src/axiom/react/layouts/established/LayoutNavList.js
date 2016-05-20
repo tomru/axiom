@@ -22,8 +22,8 @@ export class LayoutNavList extends Component {
     } = this.props;
 
     const classes = classnames(className,
-      'ax-layout-nav__list', {
-        'ax-layout-nav__list--open': isOpen || isActive,
+      'ax-layout--established-nav__list', {
+        'ax-layout--established-nav__list--open': isOpen || isActive,
       }
     );
 

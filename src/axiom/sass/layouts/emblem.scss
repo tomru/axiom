@@ -2,45 +2,40 @@
 @import '../components/_mixins/scheme';
 @import './_mixins';
 
-$logo-aspect-ratio:     0.9;
-$logo-height:           120px;
-$logo-width:            $logo-height * $logo-aspect-ratio;
-
-
 @include forLayout(layout-emblem) {
-  .ax-layout__body {
+  .ax-layout--emblem__body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
   }
 
-  .ax-layout__container,
-  .ax-layout {
+  .ax-layout--emblem__container,
+  .ax-layout--emblem {
     display: flex;
     flex-direction: column;
     flex: 1;
   }
 
-  .ax-layout__header {
+  .ax-layout--emblem__header {
     display: flex;
     flex-direction: column;
-    min-height: $logo-height;
+    min-height: $logo-vertical-height-sm;
 
     @include blockSpace($page-padding-v);
   }
 
-  .ax-layout__nav-container {
+  .ax-layout--emblem__nav-container {
     @include forEachScheme {
       background-color: layoutProp(header-background-color);
       color: schemeText(layoutProp(header-background-color));
     }
   }
 
-  .ax-layout__nav {
+  .ax-layout--emblem__nav {
     padding: $component-padding-v-base 0;
   }
 
-  .ax-layout__title-container {
+  .ax-layout--emblem__title-container {
     display: flex;
     flex: 1;
     align-items: center;
@@ -48,16 +43,16 @@ $logo-width:            $logo-height * $logo-aspect-ratio;
   }
 
 
-  .ax-layout__nav,
-  .ax-layout__title {
-    margin: 0 0 0 $logo-width + $page-padding-h;
+  .ax-layout--emblem__nav,
+  .ax-layout--emblem__title {
+    margin: 0 0 0 $logo-vertical-width-sm + $page-padding-h;
   }
 
-  .ax-layout__main {
+  .ax-layout--emblem__main {
     flex: 1;
   }
 
-  .ax-layout__footer {
+  .ax-layout--emblem__footer {
     padding: $container-padding-v-base $container-padding-h-base;
     text-align: center;
 
@@ -68,11 +63,11 @@ $logo-width:            $logo-height * $logo-aspect-ratio;
     }
   }
 
-  .ax-layout__logo {
+  .ax-layout--emblem__logo {
     position: absolute;
     top: 0;
-    width: $logo-width;
-    height: $logo-height;
+    width: $logo-vertical-width-sm;
+    height: $logo-vertical-height-sm;
 
     @include forEachScheme {
       background-color: layoutProp(logo-background-color);
@@ -80,7 +75,7 @@ $logo-width:            $logo-height * $logo-aspect-ratio;
     }
   }
 
-  .ax-layout__content {
+  .ax-layout--emblem__content {
     margin: 0 auto;
     padding: 0 $page-padding-h;
     width: 100%;

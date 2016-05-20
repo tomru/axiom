@@ -1,11 +1,7 @@
 import core from './core/vars';
-import grid from './components/_vars/grid';
-import scheme from './components/_vars/scheme';
-import typography from './components/_vars/typography';
+import components from './components/_vars';
 
 export default {
   ...core,
-  ...grid,
-  ...scheme,
-  ...typography,
+  ...components,
 };

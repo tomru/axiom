@@ -5,18 +5,18 @@
 @import './_mixins';
 
 @include forLayout(layout-established) {
-  .ax-layout-nav {
+  .ax-layout--established-nav {
     margin: 0;
     padding: 0;
   }
 
-  .ax-layout-nav__link {
+  .ax-layout--established-nav__link {
     display: block;
     padding: $component-padding-v-base $component-padding-h-base;
     font-size: $font-size-md;
     font-weight: $font-weight-strong;
 
-    .ax-layout-nav__list-item--has-submenu > &::after {
+    .ax-layout--established-nav__list-item--has-submenu > &::after {
       @include icon($fa-var-chevron-right);
 
       position: absolute;
@@ -26,7 +26,7 @@
       font-size: $font-size-sm;
     }
 
-    .ax-layout-nav__list-item--open > &::after {
+    .ax-layout--established-nav__list-item--open > &::after {
       @include icon($fa-var-chevron-down);
 
       font-size: $font-size-sm;
@@ -34,10 +34,10 @@
   }
 
   // First level
-  .ax-layout-nav {
-    > .ax-layout-nav__list {
-      > .ax-layout-nav__list-item:not(.ax-layout-nav__list-item--active) {
-        > .ax-layout-nav__link:hover {
+  .ax-layout--established-nav {
+    > .ax-layout--established-nav__list {
+      > .ax-layout--established-nav__list-item:not(.ax-layout--established-nav__list-item--active) {
+        > .ax-layout--established-nav__link:hover {
           @include forEachScheme {
             background-color: layoutProp(nav-first-item-hover-background-color);
             color: schemeTextColor(layoutProp(nav-first-item-hover-background-color));
@@ -45,15 +45,15 @@
         }
       }
 
-      > .ax-layout-nav__list-item--active {
-        > .ax-layout-nav__link {
+      > .ax-layout--established-nav__list-item--active {
+        > .ax-layout--established-nav__link {
           @include forEachScheme {
             color: layoutProp(nav-first-item-active-color);
           }
         }
       }
 
-      > .ax-layout-nav__list-item--open {
+      > .ax-layout--established-nav__list-item--open {
         @include forEachScheme {
           background-color: layoutProp(nav-first-item-active-background-color);
           color: schemeTextColor(layoutProp(nav-first-item-active-background-color));
@@ -63,19 +63,19 @@
   }
 
   // Second level
-  .ax-layout-nav > .ax-layout-nav__list > .ax-layout-nav__list-item {
-    > .ax-layout-nav__list {
+  .ax-layout--established-nav > .ax-layout--established-nav__list > .ax-layout--established-nav__list-item {
+    > .ax-layout--established-nav__list {
       display: none;
       margin: 0;
 
-      > .ax-layout-nav__list-item {
-        > .ax-layout-nav__link {
+      > .ax-layout--established-nav__list-item {
+        > .ax-layout--established-nav__link {
           padding-left: $component-padding-h-lg;
         }
       }
 
-      > .ax-layout-nav__list-item:not(.ax-layout-nav__list-item--active) {
-        > .ax-layout-nav__link:hover {
+      > .ax-layout--established-nav__list-item:not(.ax-layout--established-nav__list-item--active) {
+        > .ax-layout--established-nav__link:hover {
           @include forEachScheme {
             background-color: layoutProp(nav-second-item-hover-background-color);
             color: schemeTextColor(layoutProp(nav-second-item-hover-background-color));
@@ -84,8 +84,8 @@
       }
 
 
-      > .ax-layout-nav__list-item--active {
-        > .ax-layout-nav__link {
+      > .ax-layout--established-nav__list-item--active {
+        > .ax-layout--established-nav__link {
           @include forEachScheme {
             color: layoutProp(nav-second-item-active-color);
             background-color: layoutProp(nav-second-item-active-background-color);
@@ -94,7 +94,7 @@
       }
     }
 
-    > .ax-layout-nav__list--open {
+    > .ax-layout--established-nav__list--open {
       display: block;
     }
   }

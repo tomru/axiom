@@ -6,32 +6,27 @@ $layout-header-height-sm: 50px;
 $layout-header-height-lg: 100px;
 $layout-sidebar-width: 240px;
 
-$logo-aspect-ratio:     0.9;
-$logo-height:           120px;
-$logo-width:            $logo-height * $logo-aspect-ratio;
-
-
 @include forLayout(layout-established) {
-  .ax-layout__body {
+  .ax-layout--established__body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
   }
 
-  .ax-layout__container,
-  .ax-layout {
+  .ax-layout--established__container,
+  .ax-layout--established {
     display: flex;
     flex-direction: column;
     flex: 1;
   }
 
-  .ax-layout--open {
+  .ax-layout--established--open {
     @include screenLessThan($layout-change-point) {
       overflow-x: hidden;
     }
   }
 
-  .ax-layout__header {
+  .ax-layout--established__header {
     display: flex;
     position: fixed;
     padding: 0 $page-padding-h;
@@ -63,22 +58,22 @@ $logo-width:            $logo-height * $logo-aspect-ratio;
       border-right-color: layoutProp(sidebar-border-color);
     }
 
-    ~ .ax-layout__main {
+    ~ .ax-layout--established__main {
       @include screenLessThan($layout-change-point) {
         margin-top: $layout-header-height-sm;
       }
     }
 
-    ~ .ax-layout__sidebar {
+    ~ .ax-layout--established__sidebar {
       @include screenLessThan($layout-change-point) {
         top: $layout-header-height-sm;
       }
     }
   }
 
-  .ax-layout__footer-container {
+  .ax-layout--established__footer-container {
     position: relative;
-    min-height: $logo-height + $page-padding-v;
+    min-height: $logo-vertical-height-sm + $page-padding-v;
 
     @include forEachScheme {
       color: schemeTextColor(layoutProp(footer-background-color));
@@ -86,17 +81,17 @@ $logo-width:            $logo-height * $logo-aspect-ratio;
     }
   }
 
-  .ax-layout__footer {
-    margin: 0 0 0 $logo-width + $page-padding-h;
+  .ax-layout--established__footer {
+    margin: 0 0 0 $logo-vertical-width-sm + $page-padding-h;
   }
 
-  .ax-layout__main {
+  .ax-layout--established__main {
     display: flex;
     flex: 1;
     flex-direction: column;
   }
 
-  .ax-layout__sidebar {
+  .ax-layout--established__sidebar {
     display: flex;
     position: fixed;
     flex-direction: column;
@@ -112,7 +107,7 @@ $logo-width:            $logo-height * $logo-aspect-ratio;
 
       @include transition((transform));
 
-      .ax-layout--open & {
+      .ax-layout--established--open & {
         transform: translateX(-0%);
       }
     }
@@ -123,8 +118,8 @@ $logo-width:            $logo-height * $logo-aspect-ratio;
       border-color: layoutProp(sidebar-border-color);
     }
 
-    ~ .ax-layout__main,
-    ~ .ax-layout__footer-container {
+    ~ .ax-layout--established__main,
+    ~ .ax-layout--established__footer-container {
       margin-left: $layout-sidebar-width;
 
       @include screenLessThan($layout-change-point) {
@@ -132,14 +127,14 @@ $logo-width:            $logo-height * $logo-aspect-ratio;
 
         @include transition((transform));
 
-        .ax-layout--open & {
+        .ax-layout--established--open & {
           transform: translateX($layout-sidebar-width);
         }
       }
     }
   }
 
-  .ax-layout__sidebar-header {
+  .ax-layout--established__sidebar-header {
     padding: $component-padding-v-base $component-padding-h-base;
     flex: 0 1 auto;
 
@@ -149,20 +144,20 @@ $logo-width:            $logo-height * $logo-aspect-ratio;
     }
   }
 
-  .ax-layout__sidebar-content {
+  .ax-layout--established__sidebar-content {
     flex: 1 1 auto;
   }
 
-  .ax-layout__sidebar-footer {
+  .ax-layout--established__sidebar-footer {
     padding: $component-padding-v-base $component-padding-h-base;
     flex: 0 1 auto;
   }
 
-  .ax-layout__logo {
+  .ax-layout--established__logo {
     position: absolute;
     top: 0;
-    width: $logo-width;
-    height: $logo-height;
+    width: $logo-vertical-width-sm;
+    height: $logo-vertical-height-sm;
 
     @include forEachScheme {
       background-color: layoutProp(logo-background-color);
@@ -170,20 +165,20 @@ $logo-width:            $logo-height * $logo-aspect-ratio;
     }
   }
 
-  .ax-layout__full-height {
+  .ax-layout--established__full-height {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
   }
 
-  .ax-layout__full-height--top    { justify-content: flex-start; }
-  .ax-layout__full-height--middle { justify-content: center; }
-  .ax-layout__full-height--bottom { justify-content: flex-end; }
-  .ax-layout__full-height--left   { align-items: flex-start; }
-  .ax-layout__full-height--center { align-items: center; }
-  .ax-layout__full-height--right  { align-items: flex-end; }
+  .ax-layout--established__full-height--top    { justify-content: flex-start; }
+  .ax-layout--established__full-height--middle { justify-content: center; }
+  .ax-layout--established__full-height--bottom { justify-content: flex-end; }
+  .ax-layout--established__full-height--left   { align-items: flex-start; }
+  .ax-layout--established__full-height--center { align-items: center; }
+  .ax-layout--established__full-height--right  { align-items: flex-end; }
 
-  .ax-layout__content {
+  .ax-layout--established__content {
     position: relative;
     margin: 0 auto;
     padding: $page-padding-v $page-padding-h;

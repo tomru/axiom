@@ -18,7 +18,7 @@ export class LayoutNav extends Component {
     } = this.props;
 
     return (
-      <nav className={ classnames(className, 'ax-layout-nav') }>
+      <nav className={ classnames(className, 'ax-layout--established-nav') }>
         <LayoutNavList items={ items } onItemClick={ onItemClick } />
       </nav>
     );

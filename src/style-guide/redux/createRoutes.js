@@ -6,7 +6,7 @@ import Doc from 'style-guide/containers/Doc';
 import DocExample from 'style-guide/containers/DocExample';
 import Landing from 'style-guide/containers/Landing';
 import SearchResults from 'style-guide/containers/SearchResults';
-import { findDocById } from 'style-guide/utils/navigation';
+import { findDocById, flattenStructure } from 'style-guide/utils/navigation';
 
 function onEnterVersionRoute(dispatch, version) {
   return () => {
@@ -27,11 +27,13 @@ function createRoute(dispatch, version) {
     if (item.children && item.children.length) {
       return (
         <Route key={ index } path={ item.path }>
-          { do {
-            if (item.children[0].path) {
-              <IndexRedirect to={ item.children[0].path } />
+          {
+            do {
+              if (item.children[0].path) {
+                <IndexRedirect to={ item.children[0].path } />
+              }
             }
-          } }
+          }
 
           { item.children.map(createRoute(dispatch, version)) }
         </Route>
@@ -73,6 +75,25 @@ export default function createRoutes(store) {
           ) }
         </Route>
       </Route>
+
+      {
+        Object.keys(versions).reduce((routes, version) => {
+          flattenStructure(versions[version]).forEach((route) => {
+            const doc = findDocById(version, route.id);
+
+            if (doc && doc.RouteComponent) {
+              routes.push({
+                path: `${route.to}/example`,
+                Component: doc.RouteComponent,
+              });
+            }
+          });
+
+          return routes;
+        }, []).map(({ path, Component }, index) =>
+          <Route component={ Component } key={ index } path={ path } />
+        )
+      }
     </Route>
   );
 }

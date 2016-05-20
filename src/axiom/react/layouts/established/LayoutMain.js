@@ -14,7 +14,7 @@ export class LayoutMain extends Component {
   render() {
     const { className, children } = this.props;
     const { hideSidebar } = this.context;
-    const classes = classnames(className, 'ax-layout__main');
+    const classes = classnames(className, 'ax-layout--established__main');
 
     return (
       <div className={ classes } onClick={ hideSidebar }>

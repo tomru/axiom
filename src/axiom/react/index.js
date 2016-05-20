@@ -35,6 +35,9 @@ export { Image as Image } from './components/Image';
 export { Label as Label } from './components/Label';
 export { LabelGroup as LabelGroup } from './components/Label';
 
+export { LogoVertical as LogoVertical } from './components/Logo';
+export { LogoHorizontal as LogoHorizontal } from './components/Logo';
+
 export { Indicator as Indicator } from './components/Indicator';
 
 export { Tab as Tab } from './components/Tabset';

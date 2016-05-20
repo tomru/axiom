@@ -10,12 +10,12 @@ export class LayoutNav extends Component {
 
   render() {
     const { children, className } = this.props;
-    const classes = classnames(className, 'ax-layout__nav-container');
+    const classes = classnames(className, 'ax-layout--emblem__nav-container');
 
     return (
       <div className={ classes }>
         <LayoutContent>
-          <div className="ax-layout__nav">
+          <div className="ax-layout--emblem__nav">
             { children }
           </div>
         </LayoutContent>

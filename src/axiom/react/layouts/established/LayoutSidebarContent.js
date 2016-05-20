@@ -9,7 +9,7 @@ export class LayoutSidebarContent extends Component {
 
   render() {
     const { children, className } = this.props;
-    const classes = classnames(className, 'ax-layout__sidebar-content');
+    const classes = classnames(className, 'ax-layout--established__sidebar-content');
 
     return (
       <div className={ classes }>

@@ -26,6 +26,9 @@ export default {
       'layouts/established-nav',
     ],
   },
+  routeRender: {
+
+  },
   examples: () => [{
     children: [{
       Component: Image,

@@ -1,5 +1,8 @@
+import { browserHistory } from 'react-router';
 import { Image } from 'axiom/react';
 import { Layout, LayoutHeader, LayoutNav, LayoutTitle, LayoutMain, LayoutContent, LayoutFooter } from 'axiom/react/layouts/emblem';
+import { ButtonGroup, Button } from 'axiom/react';
+import EmblemLayout from './EmblemLayout';
 
 export default {
   id: 'emblem',
@@ -26,6 +29,7 @@ export default {
   imports: {
     sass: ['layouts/emblem'],
   },
+  RouteComponent: EmblemLayout,
   examples: () => [{
     children: [{
       Component: Image,
@@ -33,6 +37,19 @@ export default {
         width: '100%',
         src: '/assets/emblem.svg',
       },
+    }, {
+      Component: ButtonGroup,
+      props: {
+        textCenter: true,
+      },
+      children: [{
+        Component: Button,
+        children: 'View this layout',
+        props: {
+          onClick: () =>
+            browserHistory.push(`${window.location.pathname}/example`),
+        },
+      }],
     }],
   }, {
     children: [{
