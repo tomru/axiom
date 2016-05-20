@@ -129,7 +129,7 @@ a.ax-link {
   }
 
   @include forEachBreakpoint() {
-    @include screenLessThan() {
+    @include screenMoreThan() {
       .ax-text--#{$align}--#{breakpointProp(id)} {
         text-align: $align;
       }
