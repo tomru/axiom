@@ -199,9 +199,7 @@ button {
  * Button icon
  */
 .ax-button__icon {
-  &:not(.ax-button__icon--circular) {
-    margin-right: $component-margin-h-sm;
-  }
+  margin-right: $component-margin-h-sm;
 }
 
 
@@ -218,7 +216,24 @@ button {
   }
 
   > .ax-button {
-    margin-top: 0!important;
-    margin-bottom: $component-margin-v-sm !important;
+    margin-top: 0;
+    margin-bottom: $component-margin-v-sm ;
+  }
+}
+
+.ax-button__group--joined {
+  > .ax-button {
+    margin: 0;
+    border-radius: 0;
+    border-right-width: 0;
+
+    &:first-child {
+      border-radius: $border-radius-base 0 0 $border-radius-base;
+    }
+
+    &:last-child  {
+      border-right-width: $component-border-width-base;
+      border-radius: 0 $border-radius-base $border-radius-base 0;
+    }
   }
 }

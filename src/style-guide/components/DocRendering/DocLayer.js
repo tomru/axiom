@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { BlockContainer } from 'axiom/react';
-import { Heading } from 'axiom/react';
+import { Heading, Paragraph } from 'axiom/react';
 import DocLayerCard from 'style-guide/components/DocRendering/DocLayerCard';
 import DocLayerGrid from 'style-guide/components/DocRendering/DocLayerGrid';
 import DocLayerTabset from 'style-guide/components/DocRendering/DocLayerTabset';
@@ -56,6 +56,7 @@ export default class DocLayer extends Component {
       type,
       children = [],
       snippetLocation,
+      description,
       demoRender = true,
       Component,
       Container = !Component && BlockContainer,
@@ -71,11 +72,13 @@ export default class DocLayer extends Component {
     if (PredefinedContainer) {
       return (
         <PredefinedContainer layer={ layer }>
-          { do {
-            if (snippetLocation) {
-              <DocLayerCode layer={ layer } />;
+          {
+            do {
+              if (snippetLocation) {
+                <DocLayerCode layer={ layer } />;
+              }
             }
-          } }
+          }
         </PredefinedContainer>
       );
     }
@@ -83,17 +86,32 @@ export default class DocLayer extends Component {
     if (Container) {
       return (
         <Container {...layer.props}>
-          { do {
-            if (layer.title) {
-              <Heading level={ 5 }>{ layer.title }</Heading>
+          {
+            do {
+              if (layer.title) {
+                <Heading level={ 5 }>{ layer.title }</Heading>
+              }
             }
-          } }
-          { children.map((child, index) => <DocLayer key={ index } layer={ child } />) }
-          { do {
-            if (snippetLocation) {
-              <DocLayerCode layer={ layer } />;
+          }
+          {
+            do {
+              if (description) {
+                <Paragraph>{ description }</Paragraph>
+              }
             }
-          } }
+          }
+          {
+            children.map((child, index) =>
+              <DocLayer key={ index } layer={ child } />
+            )
+          }
+          {
+            do {
+              if (snippetLocation) {
+                <DocLayerCode layer={ layer } />;
+              }
+            }
+          }
         </Container>
       );
     }

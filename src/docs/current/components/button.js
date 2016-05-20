@@ -17,13 +17,12 @@ export default {
   },
   examples: () => [{
     title: 'Colored Buttons',
-    status: statuses.BETA,
     children: [{
       title: 'Palette Colors',
       snippetLocation: true,
+      snippetContent: true,
       children: [{
-        snippetContent: true,
-        Container: ButtonGroup,
+        Component: ButtonGroup,
         children: colorPalette.reduce((acc, colors) => {
           colors.forEach(({ name }) => {
             acc.push({
@@ -46,9 +45,9 @@ export default {
         ...colorAliases.map(({ heading, colors }) => {
           return {
             title: heading,
+            snippetContent: true,
             children: [{
-              Container: ButtonGroup,
-              snippetContent: true,
+              Component: ButtonGroup,
               children: colors.reduce((acc, colors) => {
                 colors.forEach(({ name }) => {
                   acc.push({
@@ -68,7 +67,7 @@ export default {
         }),
         {
           title: 'Scheme Primary',
-          Container: ButtonGroup,
+          Component: ButtonGroup,
           snippetContent: true,
           children: [{
             Component: Button,
@@ -84,7 +83,7 @@ export default {
   }, {
     title: 'Outlined',
     children: [{
-      Container: ButtonGroup,
+      Component: ButtonGroup,
       children: colorPalette.reduce((acc, colors) => {
         colors.forEach(({ name }) => {
           acc.push({
@@ -115,10 +114,9 @@ export default {
     }],
   }, {
     title: 'Sizes',
-    status: statuses.STABLE,
     snippetLocation: true,
     children: [{
-      Container: ButtonGroup,
+      Component: ButtonGroup,
       snippetContent: true,
       children: Button.__ax_propTypes.size.oneOf.map((size) => {
         return {
@@ -133,10 +131,9 @@ export default {
     }],
   }, {
     title: 'Circular',
-    status: statuses.STABLE,
     snippetLocation: true,
     children: [{
-      Container: ButtonGroup,
+      Component: ButtonGroup,
       snippetContent: true,
       children: [
         ...Button.__ax_propTypes.size.oneOf.map((size) => {
@@ -176,10 +173,9 @@ export default {
     }],
   }, {
     title: 'Full width',
-    status: statuses.EXPERIMENTAL,
     snippetLocation: true,
     children: [{
-      Container: ButtonGroup,
+      Component: ButtonGroup,
       snippetContent: true,
       children: Button.__ax_propTypes.full.oneOf.map((at) => {
         return {
@@ -194,10 +190,9 @@ export default {
     }],
   }, {
     title: 'Button with an Icon',
-    status: statuses.NEEDS_REVISION,
     snippetLocation: true,
     children: [{
-      Container: ButtonGroup,
+      Component: ButtonGroup,
       snippetContent: true,
       children: [{
         Component: Button,
@@ -243,6 +238,96 @@ export default {
             },
           },
         ],
+      }],
+    }],
+  }, {
+    title: 'Button Group',
+    snippetLocation: true,
+    snippetContent: true,
+    description: 'Button Group handles spacing buttons that may overflow to a new line. All buttons should be wrapped inside a button group.',
+    children: [{
+      Component: ButtonGroup,
+      children: [{
+        Component: Button,
+        children: 'A Button',
+      }, {
+        Component: Button,
+        children: 'A Button',
+      }, {
+        Component: Button,
+        children: 'A Button',
+      }],
+    }],
+  }, {
+    title: 'Button Group - Joined',
+    snippetLocation: true,
+    snippetContent: true,
+    description: 'Button Group handles spacing buttons that may overflow to a new line. All buttons should be wrapped inside a button group.',
+    children: [{
+      Component: ButtonGroup,
+      props: {
+        joined: true,
+      },
+      children: [{
+        Component: Button,
+        children: [{
+          Component: Icon,
+          props: { name: 'pencil' },
+        }],
+      }, {
+        Component: Button,
+        children: 'Button',
+      }, {
+        Component: Button,
+        children: [{
+          Component: Icon,
+          props: { name: 'floppy-o' },
+        }],
+      }],
+    }, {
+      Component: ButtonGroup,
+      props: {
+        joined: true,
+      },
+      children: [{
+        Component: Button,
+        props: {
+          outlined: true,
+          size: 'lg',
+        },
+        children: [{
+          Component: Icon,
+          props: {
+            name: 'pencil',
+            size: 'lg',
+          },
+        }],
+      }, {
+        Component: Button,
+        props: {
+          outlined: true,
+          size: 'lg',
+        },
+        children: [{
+          Component: Icon,
+          props: {
+            name: 'trash',
+            size: 'lg',
+          },
+        }],
+      }, {
+        Component: Button,
+        props: {
+          outlined: true,
+          size: 'lg',
+        },
+        children: [{
+          Component: Icon,
+          props: {
+            name: 'floppy-o',
+            size: 'lg',
+          },
+        }],
       }],
     }],
   }],

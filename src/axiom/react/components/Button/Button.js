@@ -31,6 +31,10 @@ export class Button extends Component {
     } = this.props;
 
     const icon = findComponent(children, Icon);
+    const filteredChildren = Children.toArray(children).filter((component) =>
+      component.type !== Icon
+    );
+
     const classes = classnames(className,
       'ax-button', {
         [`ax-button--${color}`]: color,
@@ -46,17 +50,21 @@ export class Button extends Component {
 
     return (
       <button {...blacklist(this.props, ['color'])} className={ classes }>
-        { do {
-          if (icon) {
-            {cloneElement(icon, {
-              className: classnames('ax-button__icon', {
-                'ax-button__icon--circular': circular,
-              }),
-            })}
+        {
+          do {
+            if (icon) {
+              {
+                cloneElement(icon, {
+                  className: classnames({
+                    'ax-button__icon': filteredChildren.length,
+                  }),
+                })
+              }
+            }
           }
-        } }
+        }
 
-        { Children.toArray(children).filter((component) => component.type !== Icon) }
+        { filteredChildren }
       </button>
     );
   }
