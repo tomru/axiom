@@ -52,6 +52,7 @@ export default {
 
   // Card
   cardColor: colorWhite['_'],
+  cardHoverColor: colorGrey[50],
   cardBorder: colorGrey[100],
 
   // Table

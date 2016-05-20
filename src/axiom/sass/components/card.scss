@@ -60,3 +60,16 @@
     border-bottom: none;
   }
 }
+
+.ax-card__list-item--clickable {
+  cursor: pointer;
+
+  @include forEachScheme() {
+    @if schemeHasProp(card-border) {
+      &:hover {
+        color: schemeTextColor(schemeProp(card-hover-color));
+        background-color: schemeProp(card-hover-color);
+      }
+    }
+  }
+}

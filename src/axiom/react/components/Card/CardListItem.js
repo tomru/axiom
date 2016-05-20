@@ -5,11 +5,14 @@ import { enhance, addPropTypes, addClassName } from '../../utils/components';
 export class CardListItem extends Component {
   static propTypes = {
     children: { node: true },
+    clickable: { boolean: true },
   };
 
   render() {
-    const { className, children } = this.props;
-    const classes = classnames(className, 'ax-card__list-item');
+    const { className, children, clickable } = this.props;
+    const classes = classnames(className, 'ax-card__list-item', {
+      'ax-card__list-item--clickable': clickable,
+    });
 
     return (
       <li {...this.props} className={ classes }>
