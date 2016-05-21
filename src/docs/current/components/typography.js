@@ -1,4 +1,4 @@
-import { breakpointIds } from 'axiom/sass';
+import { breakpointIds, colorPalette, colorAliases } from 'axiom/sass';
 import {
   Heading,
   Italic,
@@ -204,7 +204,7 @@ export default {
           },
           demoProps: {
             textRight: true,
-          }
+          },
         };
       }),
     }, {
@@ -261,6 +261,64 @@ export default {
       props: {
         textCase: 'lower',
       },
+    }],
+  }, {
+    title: 'Colored text',
+    children: [{
+      title: 'Palette Colors',
+      snippetLocation: true,
+      snippetContent: true,
+      children: colorPalette.reduce((acc, colors) => {
+        colors.forEach(({ name }) => {
+          acc.push({
+            Component: Paragraph,
+            demoContent: true,
+            children: name,
+            props: {
+              textColor: name,
+            },
+          });
+        });
+
+        return acc;
+      }, []),
+    }, {
+      title: 'UI Colors',
+      snippetLocation: true,
+      children: [
+        ...colorAliases.map(({ heading, colors }) => {
+          return {
+            title: heading,
+            snippetContent: true,
+            children: colors.reduce((acc, colors) => {
+              colors.forEach(({ name }) => {
+                acc.push({
+                  Component: Paragraph,
+                  children: name,
+                  demoContent: true,
+                  props: {
+                    textColor: name,
+                  },
+                });
+              });
+
+              return acc;
+            }, []),
+          };
+        }),
+        {
+          title: 'Scheme Primary',
+          snippetContent: true,
+          children: [{
+            Component: Paragraph,
+            children: 'Scheme Primary',
+            demoContent: true,
+            props: {
+              textColor: 'primary',
+            },
+          }],
+        },
+      ],
     }],
   }, {
     title: 'Links',

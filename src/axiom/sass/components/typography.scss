@@ -136,8 +136,6 @@ a.ax-link {
 }
 
 
-
-
 // Case Modifiers
 .ax-text--uppercase   { text-transform: uppercase; }
 .ax-text--capitalize  { text-transform: capitalize; }
@@ -148,6 +146,20 @@ a.ax-link {
 .ax-text--break-none { white-space: nowrap; }
 .ax-text--break-all  { white-space: initial; word-break: break-all; }
 .ax-text--break-word { white-space: initial; word-wrap: break-word; }
+
+
+// Color variations
+@include forEachColor {
+  .ax-text--#{colorProp(name)} {
+    color: getColor(colorProp(color), 500);
+  }
+}
+
+@include forEachScheme {
+  .ax-text--primary {
+    color: getColor(schemeProp(primary), 500);
+  }
+}
 
 
 //

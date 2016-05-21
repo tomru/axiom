@@ -1,5 +1,5 @@
 import { PropTypes } from 'react';
-import { breakpointIds } from '../../sass';
+import { breakpointIds, colorIds } from '../../sass';
 
 const PROP_TYPE_MAP = {
   any: PropTypes.any,
@@ -32,6 +32,7 @@ export const PROP_TYPES_SETS = {
     textBreak: { oneOf: ['none', 'all', 'word'] },
     textCase: { oneOf: ['upper', 'capital', 'lower'] },
     textEllipsis: { bool: true },
+    textColor: { oneOf: [...colorIds], default: 'primary' },
   },
 };
 

@@ -4,8 +4,8 @@ import { breakpoints } from '../../sass';
 const CLASS_NAMES_SETS = {
   global: (props) => {
     return classnames(
-      addDynamicClass(breakpoints, ({ id }) => props.hiddenUntil === id, ({ id }) => `ax-hidden-until--${id}`),
-      addDynamicClass(breakpoints, ({ id }) => props.visibleUntil === id, ({ id }) => `ax-visible-until--${id}`),
+      breakpointClassName(props.hiddenUntil, ({ id }) => `ax-hidden-until--${id}`),
+      breakpointClassName(props.visibleUntil, ({ id }) => `ax-visible-until--${id}`),
     );
   },
   text: (props) => {
@@ -23,10 +23,11 @@ const CLASS_NAMES_SETS = {
         'ax-text--capitalize': props.textCase === 'capital',
         'ax-text--lowercase': props.textCase === 'lower',
         'ax-text--ellipsis': props.textEllipsis === true,
+        [`ax-text--${props.textColor}`]: props.textColor,
       },
-      addDynamicClass(breakpoints, ({ id }) => props.textLeft === id, ({ id }) => `ax-text--left--${id}`),
-      addDynamicClass(breakpoints, ({ id }) => props.textCenter === id, ({ id }) => `ax-text--center--${id}`),
-      addDynamicClass(breakpoints, ({ id }) => props.textRight === id, ({ id }) => `ax-text--right--${id}`),
+      breakpointClassName(props.textLeft, ({ id }) => `ax-text--left--${id}`),
+      breakpointClassName(props.textCenter, ({ id }) => `ax-text--center--${id}`),
+      breakpointClassName(props.textRight, ({ id }) => `ax-text--right--${id}`),
     );
   },
 };
