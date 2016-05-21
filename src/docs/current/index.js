@@ -15,6 +15,7 @@ export { default as grid } from './components/grid';
 export { default as icon } from './components/icons/icon';
 export { default as icons } from './components/icons/icons';
 export { default as label } from './components/label';
+export { default as statusIndicator } from './components/status-indicator';
 export { default as table } from './components/table';
 export { default as tabset } from './components/tabset';
 export { default as typography } from './components/typography';

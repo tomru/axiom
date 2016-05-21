@@ -1,4 +1,3 @@
-import { statuses } from 'docs';
 import { colorPalette, colorAliases } from 'axiom/sass';
 import { Button, ButtonGroup, Icon } from 'axiom/react';
 

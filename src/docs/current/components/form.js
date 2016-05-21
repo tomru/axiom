@@ -28,6 +28,7 @@ export default {
           props: {
             placeholder: 'Standard input...',
           },
+          children: ' ',
         }],
       }, {
         title: 'Disabled text input',
@@ -38,6 +39,7 @@ export default {
             placeholder: 'Disabled input...',
             disabled: true,
           },
+          children: ' ',
         }],
       }],
     }, {
@@ -52,6 +54,7 @@ export default {
             placeholder: 'Valid input',
             valid: true,
           },
+          children: ' ',
         }],
       }, {
         title: 'Failed validation',
@@ -62,6 +65,7 @@ export default {
             placeholder: 'Invalid input',
             invalid: true,
           },
+          children: ' ',
         }],
       }],
     }],
@@ -126,53 +130,50 @@ export default {
       },
     }],
   }, {
-    title: 'Radio buttons and Check boxes',
+    title: 'Check boxes',
+    snippetLocation: true,
+    snippetContent: true,
     children: [{
-      title: 'Check boxes',
-      snippetLocation: true,
-      snippetContent: true,
-      children: [{
-        Component: CheckBox,
-        children: 'Unchecked check box',
-        props: {
-          defaultChecked: false,
-        },
-      }, {
-        Component: CheckBox,
-        children: 'Checked check box',
-        props: {
-          defaultChecked: true,
-        },
-      }, {
-        Component: CheckBox,
-        children: 'Disabled check box',
-        props: {
-          disabled: true,
-        },
-      }],
+      Component: CheckBox,
+      children: 'Unchecked check box',
+      props: {
+        defaultChecked: false,
+      },
     }, {
-      title: 'Radio buttons',
-      snippetLocation: true,
-      snippetContent: true,
-      children: [{
-        Component: RadioButton,
-        children: 'Unchecked radio button',
-        props: {
-          defaultChecked: false,
-        },
-      }, {
-        Component: RadioButton,
-        children: 'Checked radio button',
-        props: {
-          defaultChecked: true,
-        },
-      }, {
-        Component: RadioButton,
-        children: 'Disabled radio button',
-        props: {
-          disabled: true,
-        },
-      }],
+      Component: CheckBox,
+      children: 'Checked check box',
+      props: {
+        defaultChecked: true,
+      },
+    }, {
+      Component: CheckBox,
+      children: 'Disabled check box',
+      props: {
+        disabled: true,
+      },
+    }],
+  }, {
+    title: 'Radio buttons',
+    snippetLocation: true,
+    snippetContent: true,
+    children: [{
+      Component: RadioButton,
+      children: 'Unchecked radio button',
+      props: {
+        defaultChecked: false,
+      },
+    }, {
+      Component: RadioButton,
+      children: 'Checked radio button',
+      props: {
+        defaultChecked: true,
+      },
+    }, {
+      Component: RadioButton,
+      children: 'Disabled radio button',
+      props: {
+        disabled: true,
+      },
     }],
   }],
 };

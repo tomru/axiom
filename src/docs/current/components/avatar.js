@@ -1,4 +1,3 @@
-import { statuses } from 'docs';
 import { Avatar } from 'axiom/react';
 
 export default {
@@ -13,7 +12,6 @@ export default {
   }],
   examples: () => [{
     title: 'Sized avatars',
-    status: statuses.BETA,
     snippetLocation: true,
     children: [{
       type: 'grid',

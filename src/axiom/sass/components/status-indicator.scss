@@ -1,0 +1,64 @@
+@import '../core/mixins';
+
+.ax-status-indicator {
+  @include blockSpace();
+
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.ax-status-indicator__dot {
+  display: inline-flex;
+  margin: 0 $component-margin-h-sm 0 0;
+  padding: $component-border-width-base;
+  border: $component-border-width-base solid getColor($color-grey, 300);
+  border-radius: 50%;
+
+  &::after {
+    display: inline-block;
+    content: "";
+    border-radius: 50%;
+  }
+}
+
+/**
+ * Size variations
+ */
+@mixin statusIndicatorSize($size) {
+  font-size: $size;
+
+  .ax-status-indicator__dot::after {
+    width: $size;
+    height: $size;
+  }
+}
+
+.ax-status-indicator--sm { @include statusIndicatorSize($font-size-md) }
+.ax-status-indicator--md { @include statusIndicatorSize($font-size-base) }
+.ax-status-indicator--lg { @include statusIndicatorSize($font-size-h4) }
+
+/**
+ * Color variations
+ */
+@mixin statusIndicatorColor($color) {
+  color: getColor($color, 600);
+
+  .ax-status-indicator__dot {
+    &::after {
+      background-color: getColor($color, 400);
+    }
+  }
+}
+
+@include forEachColor {
+  .ax-status-indicator--#{colorProp(name)} {
+    @include statusIndicatorColor(colorProp(color));
+  }
+}
+
+@include forEachScheme {
+  .ax-status-indicator--primary {
+    @include statusIndicatorColor(schemeProp(primary));
+  }
+}

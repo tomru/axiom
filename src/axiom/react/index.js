@@ -40,6 +40,8 @@ export { LogoHorizontal as LogoHorizontal } from './components/Logo';
 
 export { Indicator as Indicator } from './components/Indicator';
 
+export { StatusIndicator as StatusIndicator } from './components/StatusIndicator';
+
 export { Tab as Tab } from './components/Tabset';
 export { Tabset as Tabset } from './components/Tabset';
 
