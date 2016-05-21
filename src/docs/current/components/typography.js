@@ -1,3 +1,4 @@
+import { breakpointIds } from 'axiom/sass';
 import {
   Heading,
   Italic,
@@ -186,6 +187,54 @@ export default {
       props: {
         textRight: true,
       },
+    }],
+  }, {
+    title: 'Alignment modifiers (responsive)',
+    children: [{
+      title: 'Text left',
+      snippetContent: true,
+      snippetLocation: true,
+      children: breakpointIds.map((id) => {
+        return {
+          Component: Paragraph,
+          demoContent: true,
+          children: `This text is left aligned > ${id.toUpperCase()}`,
+          props: {
+            textLeft: id,
+          },
+          demoProps: {
+            textRight: true,
+          }
+        };
+      }),
+    }, {
+      title: 'Text center',
+      snippetContent: true,
+      snippetLocation: true,
+      children: breakpointIds.map((id) => {
+        return {
+          Component: Paragraph,
+          demoContent: true,
+          children: `This text is center aligned > ${id.toUpperCase()}`,
+          props: {
+            textCenter: id,
+          },
+        };
+      }),
+    }, {
+      title: 'Text right',
+      snippetContent: true,
+      snippetLocation: true,
+      children: breakpointIds.map((id) => {
+        return {
+          Component: Paragraph,
+          demoContent: true,
+          children: `This text is right aligned > ${id.toUpperCase()}`,
+          props: {
+            textRight: id,
+          },
+        };
+      }),
     }],
   }, {
     title: 'Case modifiers',

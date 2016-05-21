@@ -123,23 +123,19 @@ a.ax-link {
 
 
 // Alignment Modifiers
-@mixin textAlign($align) {
-  .ax-text--#{$align} {
-    text-align: $align;
-  }
+.ax-text--left { text-align: left; }
+.ax-text--center { text-align: center; }
+.ax-text--right { text-align: right; }
 
-  @include forEachBreakpoint() {
-    @include screenMoreThan() {
-      .ax-text--#{$align}--#{breakpointProp(id)} {
-        text-align: $align;
-      }
-    }
+@include forEachBreakpoint() {
+  @include screenMoreThan() {
+    .ax-text--left--#{breakpointProp(id)} { text-align: left; }
+    .ax-text--center--#{breakpointProp(id)} { text-align: center; }
+    .ax-text--right--#{breakpointProp(id)} { text-align: right; }
   }
 }
 
-@include textAlign(left);
-@include textAlign(center);
-@include textAlign(right);
+
 
 
 // Case Modifiers
