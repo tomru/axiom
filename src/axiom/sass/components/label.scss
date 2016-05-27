@@ -13,7 +13,7 @@
   font-weight: $font-weight-strong;
   text-align: center;
 
-  @include inlineBlockSpace($component-margin-h-sm);
+  @include space-inline($component-margin-h-sm);
 }
 
 
@@ -39,20 +39,20 @@
 /**
  * Full width labels
  */
-@mixin fullWidthLabel {
+@mixin label-full-width {
   display: block;
   width: 100%;
-  @include blockSpace($component-margin-v-sm);
+  @include space-block($component-margin-v-sm);
 }
 
 .ax-label--full {
-  @include fullWidthLabel;
+  @include label-full-width;
 }
 
-@include forEachBreakpoint {
-  @include screenLessThan {
-    .ax-label--full--#{breakpointProp(id)} {
-      @include fullWidthLabel;
+@include for-each-breakpoint {
+  @include screen-less-than {
+    .ax-label--full--#{breakpoint-prop(id)} {
+      @include label-full-width;
     }
   }
 }
@@ -61,21 +61,21 @@
 /**
  * Label Colours
  */
-@mixin labelColor($color) {
-  border-color: getColor($color, 300);
-  background-color: getColor($color, 50);
-  color: getColor($color, 900);
+@mixin label-color-filled($color) {
+  border-color: get-color($color, 300);
+  background-color: get-color($color, 50);
+  color: get-color($color, 900);
 }
 
-@include forEachScheme {
-  @include forEachColor {
-    .ax-label--#{colorProp(name)} {
-      @include labelColor(colorProp(color));
+@include for-each-scheme {
+  @include for-each-color {
+    .ax-label--#{color-prop(name)} {
+      @include label-color-filled(color-prop(color));
     }
   }
 
   .ax-label--primary {
-    @include labelColor(schemeProp(primary));
+    @include label-color-filled(scheme-prop(primary));
   }
 }
 
@@ -94,7 +94,7 @@
  * when stacked when going responsive.
  */
 .ax-label__group {
-  @include blockSpace($component-margin-v-base);
+  @include space-block($component-margin-v-base);
 
   &:last-child {
     margin-bottom: -$component-margin-h-sm;

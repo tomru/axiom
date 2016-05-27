@@ -16,12 +16,12 @@
 .ax-billboard--md { padding: $container-padding-v-base 0; }
 .ax-billboard--lg { padding: $container-padding-v-lg 0; }
 
-@include forEachColor {
-  @each $variation, $hex in colorProp(color) {
-    .ax-billboard--#{colorProp(name)}--#{$variation} {
-      @include forEachScheme {
+@include for-each-color {
+  @each $variation, $hex in color-prop(color) {
+    .ax-billboard--#{color-prop(name)}--#{$variation} {
+      @include for-each-scheme {
         background-color: $hex;
-        color: schemeTextColor($hex);
+        color: scheme-text-color($hex);
       }
     }
   }

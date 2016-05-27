@@ -14,20 +14,20 @@
   font-size: $font-size-sm;
   text-transform: uppercase;
 
-  @include forEachScheme {
-    $primary-color: schemeProp(primary);
-    border-color: getColor($primary-color, 100);
-    background-color: getColor($primary-color, 50);
-    color: schemeTextColor(getColor($primary-color, 50));
+  @include for-each-scheme {
+    $primary-color: scheme-prop(primary);
+    border-color: get-color($primary-color, 100);
+    background-color: get-color($primary-color, 50);
+    color: scheme-text-color(get-color($primary-color, 50));
   }
 }
 
 .dm-demo-box--attention {
-  @include forEachScheme {
-    $primary-color: schemeProp(primary);
-    border-color: getColor($primary-color, 500);
-    background-color: getColor($primary-color, 300);
-    color: schemeTextColor(getColor($primary-color, 300));
+  @include for-each-scheme {
+    $primary-color: scheme-prop(primary);
+    border-color: get-color($primary-color, 500);
+    background-color: get-color($primary-color, 300);
+    color: scheme-text-color(get-color($primary-color, 300));
   }
 }
 

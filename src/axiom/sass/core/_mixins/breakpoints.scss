@@ -1,7 +1,7 @@
 ///
 $_breakpoint: false;
 
-@mixin forEachBreakpoint() {
+@mixin for-each-breakpoint() {
   @each $breakpoint in $breakpoints {
     $_breakpoint: $breakpoint !global;
     @content;
@@ -10,7 +10,7 @@ $_breakpoint: false;
   $_breakpoint: false !global;
 }
 
-@function breakpointProp($prop, $breakpoint: $_breakpoint) {
+@function breakpoint-prop($prop, $breakpoint: $_breakpoint) {
   @if (map-has-key($breakpoint, $prop)) {
     @return map-get($breakpoint, $prop);
   } @else {
@@ -20,7 +20,7 @@ $_breakpoint: false;
 
 /// Screen less than
 /// @param {Number} $max - Breakpoint
-@mixin screenLessThan($max: breakpointProp(width)) {
+@mixin screen-less-than($max: breakpoint-prop(width)) {
   @media (max-width: $max - 1px) {
     @content;
   }
@@ -29,18 +29,18 @@ $_breakpoint: false;
 
 /// Screen more than
 /// @param {Number} $min - Breakpoint
-@mixin screenMoreThan($min: breakpointProp(width)) {
+@mixin screen-more-than($min: breakpoint-prop(width)) {
   @media (min-width: $min) {
     @content;
   }
 }
 
 ///
-@function firstBreakpoint() {
+@function breakpoint-first() {
   @return nth($breakpoints, 1);
 }
 
 ///
-@function lastBreakpoint() {
+@function breakpoint-last() {
   @return nth($breakpoints, length($breakpoints));
 }

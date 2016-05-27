@@ -47,7 +47,7 @@ button {
     cursor: default;
   }
 
-  @include inlineBlockSpace($component-margin-h-sm);
+  @include space-inline($component-margin-h-sm);
   @include transition(( background-color, border-color, color ), $transition-time-fast);
 }
 
@@ -73,20 +73,20 @@ button {
 /**
  * Full width buttons
  */
-@mixin fullWidthButton {
+@mixin button-full-width {
   display: block;
   width: 100%;
-  @include blockSpace($component-margin-v-sm);
+  @include space-block($component-margin-v-sm);
 }
 
 .ax-button--full {
-  @include fullWidthButton;
+  @include button-full-width;
 }
 
-@include forEachBreakpoint {
-  @include screenLessThan {
-    .ax-button--full--#{breakpointProp(id)} {
-      @include fullWidthButton;
+@include for-each-breakpoint {
+  @include screen-less-than {
+    .ax-button--full--#{breakpoint-prop(id)} {
+      @include button-full-width;
     }
   }
 }
@@ -95,77 +95,77 @@ button {
 /**
  * Button Colours
  */
-@mixin buttonFilledColor($color) {
-  border-color: getColor($color, 500);
-  background-color: getColor($color, 400);
-  color: schemeTextColor(getColor($color, 400));
+@mixin button-color-filled($color) {
+  border-color: get-color($color, 500);
+  background-color: get-color($color, 400);
+  color: scheme-text-color(get-color($color, 400));
 
   &:hover {
-    border-color: getColor($color, 600);
-    background-color: getColor($color, 500);
-    color: schemeTextColor(getColor($color, 500));
+    border-color: get-color($color, 600);
+    background-color: get-color($color, 500);
+    color: scheme-text-color(get-color($color, 500));
   }
 
   &:active,
   &.active {
-    border-color: getColor($color, 700);
-    background-color: getColor($color, 600);
-    color: schemeTextColor(getColor($color, 600));
+    border-color: get-color($color, 700);
+    background-color: get-color($color, 600);
+    color: scheme-text-color(get-color($color, 600));
   }
 
   &[disabled],
   &[disabled]:hover,
   &[disabled]:active {
-    border-color: getColor($color, 100);
-    background-color: getColor($color, 50);
-    color: getColor($color, 100);
+    border-color: get-color($color, 100);
+    background-color: get-color($color, 50);
+    color: get-color($color, 100);
   }
 }
 
-@mixin buttonOutlinedColor($color) {
-  border-color: getColor($color, 500);
-  color: getColor($color, 500);
+@mixin button-color-outlined($color) {
+  border-color: get-color($color, 500);
+  color: get-color($color, 500);
 
   &:hover {
-    border-color: getColor($color, 600);
-    color: getColor($color, 600);
+    border-color: get-color($color, 600);
+    color: get-color($color, 600);
   }
 
   &:active,
   &.active {
-    border-color: getColor($color, 700);
-    background-color: getColor($color, 600);
-    color: schemeTextColor(getColor($color, 600));
+    border-color: get-color($color, 700);
+    background-color: get-color($color, 600);
+    color: scheme-text-color(get-color($color, 600));
   }
 
   &[disabled],
   &[disabled]:hover,
   &[disabled]:active {
-    border-color: getColor($color, 100);
-    color: getColor($color, 100);
+    border-color: get-color($color, 100);
+    color: get-color($color, 100);
   }
 }
 
-@include forEachScheme {
-  @include forEachColor {
-    .ax-button--#{colorProp(name)} {
+@include for-each-scheme {
+  @include for-each-color {
+    .ax-button--#{color-prop(name)} {
       &:not(.ax-button--outlined) {
-        @include buttonFilledColor(colorProp(color));
+        @include button-color-filled(color-prop(color));
       }
 
       &.ax-button--outlined {
-        @include buttonOutlinedColor(colorProp(color));
+        @include button-color-outlined(color-prop(color));
       }
     }
   }
 
   .ax-button--primary {
     &:not(.ax-button--outlined) {
-      @include buttonFilledColor(schemeProp(primary));
+      @include button-color-filled(scheme-prop(primary));
     }
 
     &.ax-button--outlined {
-      @include buttonOutlinedColor(schemeProp(primary));
+      @include button-color-outlined(scheme-prop(primary));
     }
   }
 }
@@ -209,7 +209,7 @@ button {
  * when stacked when going responsive.
  */
 .ax-button__group {
-  @include blockSpace($component-margin-v-base);
+  @include space-block($component-margin-v-base);
 
   &:last-child {
     margin-bottom: -$component-margin-h-sm;
@@ -231,7 +231,7 @@ button {
       border-radius: $border-radius-base 0 0 $border-radius-base;
     }
 
-    &:last-child  {
+    &:last-child {
       border-right-width: $component-border-width-base;
       border-radius: 0 $border-radius-base $border-radius-base 0;
     }

@@ -2,9 +2,9 @@
 @import '../components/_vars/icon';
 @import '../components/_mixins/icon';
 @import '../components/_mixins/scheme';
-@import './_mixins';
+@import './mixins';
 
-@include forLayout(layout-established) {
+@include for-layout(layout-established) {
   .ax-layout--established-nav {
     margin: 0;
     padding: 0;
@@ -38,25 +38,25 @@
     > .ax-layout--established-nav__list {
       > .ax-layout--established-nav__list-item:not(.ax-layout--established-nav__list-item--active) {
         > .ax-layout--established-nav__link:hover {
-          @include forEachScheme {
-            background-color: layoutProp(nav-first-item-hover-background-color);
-            color: schemeTextColor(layoutProp(nav-first-item-hover-background-color));
+          @include for-each-scheme {
+            background-color: layout-prop(nav-first-item-hover-background-color);
+            color: scheme-text-color(layout-prop(nav-first-item-hover-background-color));
           }
         }
       }
 
       > .ax-layout--established-nav__list-item--active {
         > .ax-layout--established-nav__link {
-          @include forEachScheme {
-            color: layoutProp(nav-first-item-active-color);
+          @include for-each-scheme {
+            color: layout-prop(nav-first-item-active-color);
           }
         }
       }
 
       > .ax-layout--established-nav__list-item--open {
-        @include forEachScheme {
-          background-color: layoutProp(nav-first-item-active-background-color);
-          color: schemeTextColor(layoutProp(nav-first-item-active-background-color));
+        @include for-each-scheme {
+          background-color: layout-prop(nav-first-item-active-background-color);
+          color: scheme-text-color(layout-prop(nav-first-item-active-background-color));
         }
       }
     }
@@ -76,9 +76,9 @@
 
       > .ax-layout--established-nav__list-item:not(.ax-layout--established-nav__list-item--active) {
         > .ax-layout--established-nav__link:hover {
-          @include forEachScheme {
-            background-color: layoutProp(nav-second-item-hover-background-color);
-            color: schemeTextColor(layoutProp(nav-second-item-hover-background-color));
+          @include for-each-scheme {
+            background-color: layout-prop(nav-second-item-hover-background-color);
+            color: scheme-text-color(layout-prop(nav-second-item-hover-background-color));
           }
         }
       }
@@ -86,9 +86,9 @@
 
       > .ax-layout--established-nav__list-item--active {
         > .ax-layout--established-nav__link {
-          @include forEachScheme {
-            color: layoutProp(nav-second-item-active-color);
-            background-color: layoutProp(nav-second-item-active-background-color);
+          @include for-each-scheme {
+            color: layout-prop(nav-second-item-active-color);
+            background-color: layout-prop(nav-second-item-active-background-color);
           }
         }
       }

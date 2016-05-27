@@ -68,11 +68,11 @@
   animation-fill-mode: forwards;
 }
 
-.ReactModal__Overlay--after-open   { animation-name: fadeAppear; }
-.ReactModal__Overlay--before-close { animation-name: fadeDisappear; }
+.ReactModal__Overlay--after-open   { animation-name: appear-fade; }
+.ReactModal__Overlay--before-close { animation-name: disappear-fade; }
 
-.ReactModal__Content--after-open   { animation-name: standardAppear; }
-.ReactModal__Content--before-close { animation-name: standardDisappear; }
+.ReactModal__Content--after-open   { animation-name: appear-standard; }
+.ReactModal__Content--before-close { animation-name: disappear-standard; }
 
 
 /**

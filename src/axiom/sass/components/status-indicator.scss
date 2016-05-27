@@ -1,7 +1,7 @@
 @import '../core/mixins';
 
 .ax-status-indicator {
-  @include blockSpace();
+  @include space-block();
 
   display: flex;
   align-items: center;
@@ -12,7 +12,7 @@
   display: inline-flex;
   margin: 0 $component-margin-h-sm 0 0;
   padding: $component-border-width-base;
-  border: $component-border-width-base solid getColor($color-grey, 300);
+  border: $component-border-width-base solid get-color($color-grey, 300);
   border-radius: 50%;
 
   &::after {
@@ -25,7 +25,7 @@
 /**
  * Size variations
  */
-@mixin statusIndicatorSize($size) {
+@mixin status-indicator-size($size) {
   font-size: $size;
 
   .ax-status-indicator__dot::after {
@@ -34,31 +34,31 @@
   }
 }
 
-.ax-status-indicator--sm { @include statusIndicatorSize($font-size-md) }
-.ax-status-indicator--md { @include statusIndicatorSize($font-size-base) }
-.ax-status-indicator--lg { @include statusIndicatorSize($font-size-h4) }
+.ax-status-indicator--sm { @include status-indicator-size($font-size-md) }
+.ax-status-indicator--md { @include status-indicator-size($font-size-base) }
+.ax-status-indicator--lg { @include status-indicator-size($font-size-h4) }
 
 /**
  * Color variations
  */
-@mixin statusIndicatorColor($color) {
-  color: getColor($color, 600);
+@mixin status-indicator-color($color) {
+  color: get-color($color, 600);
 
   .ax-status-indicator__dot {
     &::after {
-      background-color: getColor($color, 400);
+      background-color: get-color($color, 400);
     }
   }
 }
 
-@include forEachColor {
-  .ax-status-indicator--#{colorProp(name)} {
-    @include statusIndicatorColor(colorProp(color));
+@include for-each-color {
+  .ax-status-indicator--#{color-prop(name)} {
+    @include status-indicator-color(color-prop(color));
   }
 }
 
-@include forEachScheme {
+@include for-each-scheme {
   .ax-status-indicator--primary {
-    @include statusIndicatorColor(schemeProp(primary));
+    @include status-indicator-color(scheme-prop(primary));
   }
 }

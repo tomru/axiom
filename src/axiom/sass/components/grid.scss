@@ -49,13 +49,13 @@
  */
 // The default grid spacing, applied with the basic grid class.
 .ax-grid {
-  @include gridGutter(gridGutterDefault());
+  @include grid-gutter(grid-gutter-default());
 }
 
 /// Create the gutter variants with the suffix by the given ID.
 @each $grid-gutter in $grid-gutters {
-  .ax-grid--gutters--#{gridGutterId($grid-gutter)} {
-    @include gridGutter(gridGutterWidth($grid-gutter));
+  .ax-grid--gutters--#{grid-gutter-id($grid-gutter)} {
+    @include grid-gutter(grid-gutter-width($grid-gutter));
   }
 }
 
@@ -100,7 +100,7 @@
 /// When below the lowest given breakpoint cells
 /// will flex to 100%. Can be suppressed with with the
 /// --unresponsive modifier.
-@include screenLessThan($grid-change-point) {
+@include screen-less-than($grid-change-point) {
   .ax-grid {
     &:not(.ax-grid--unresponsive) {
       > .ax-grid__cell{
@@ -111,9 +111,9 @@
 }
 
 // Create the grid sizing classes to span all breakpoints
-@include makeResponsiveGrid(false);
+@include make-responsive-grid(false);
 
 /// Create the responsive grid!
-@include forEachBreakpoint() {
-  @include makeResponsiveGrid(true);
+@include for-each-breakpoint() {
+  @include make-responsive-grid(true);
 }

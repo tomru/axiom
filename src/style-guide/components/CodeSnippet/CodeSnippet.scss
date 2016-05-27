@@ -3,9 +3,9 @@
 
 pre[class*="language-"] {
   padding: $component-padding-v-lg $component-padding-h-base;
-  border: $component-border-width-base solid getColor($color-grey, 100);
+  border: $component-border-width-base solid get-color($color-grey, 100);
   border-radius: $border-radius-base;
-  background-color: getColor($color-grey, 50);
+  background-color: get-color($color-grey, 50);
 
-  @include blockSpace();
+  @include space-block();
 }

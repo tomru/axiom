@@ -1,8 +1,6 @@
 @import '../../core/mixins';
 
-/// Default grid gutter
-/// @returns {Number}
-@function gridGutterDefault() {
+@function grid-gutter-default() {
   @each $grid-gutter in $grid-gutters {
     @if (map-get($grid-gutter, default) == true) {
       @return map-get($grid-gutter, size);
@@ -10,26 +8,16 @@
   }
 }
 
-
-/// Grid gutter ID
-/// @param {Map} $grid-gutter
-/// @returns {String}
-@function gridGutterId($grid-gutter) {
+@function grid-gutter-id($grid-gutter) {
   @return map-get($grid-gutter, id);
 }
 
-
-/// Grid gutter size
-/// @param {Map} $grid-gutter
-/// @returns {Number}
-@function gridGutterWidth($grid-gutter) {
+@function grid-gutter-width($grid-gutter) {
   @return map-get($grid-gutter, size);
 }
 
-
-/// Creates the gutters sizing variants.
-@mixin gridGutter($size) {
-  $vertical-gutter: gridGutterDefault();
+@mixin grid-gutter($size) {
+  $vertical-gutter: grid-gutter-default();
   $horizontal-gutter: $size;
 
   margin: $vertical-gutter 0 (-$vertical-gutter) (-$horizontal-gutter);
@@ -45,7 +33,7 @@
     }
   }
 
-  @include screenLessThan(breakpointProp(width, firstBreakpoint())) {
+  @include screen-less-than(breakpoint-prop(width, breakpoint-first())) {
     &:not(.ax-grid--gutters-none),
     &:not(.ax-grid--gutters-none-v) {
       > .grid-cell {
@@ -55,20 +43,18 @@
   }
 }
 
-
-/// Create the responsive grid
-@mixin makeResponsiveGrid($responsive) {
+@mixin make-responsive-grid($responsive) {
   $breakpoint-id: false;
   $breakpoint-width: false;
   $size-class: "";
 
   @if ($responsive == true) {
-    $breakpoint-id: breakpointProp(id);
-    $breakpoint-width: breakpointProp(width);
+    $breakpoint-id: breakpoint-prop(id);
+    $breakpoint-width: breakpoint-prop(width);
     $size-class: "--#{$breakpoint-id}";
   }
 
-  @include gridBreakpoint($breakpoint-width) {
+  @include grid-breakpoint($breakpoint-width) {
     .ax-grid {
       > .ax-grid__cell--sixth#{$size-class}   { flex: 0 0 (100% / 6); }
       > .ax-grid__cell--fifth#{$size-class}   { flex: 0 0 (100% / 5); }
@@ -92,11 +78,11 @@
 
 /// Simple mixin to breakpoint for anything
 /// below the highest breakpoint.
-@mixin gridBreakpoint($width) {
+@mixin grid-breakpoint($width) {
   @if ($width == false) {
     @content;
   } @else {
-    @include screenMoreThan($width) {
+    @include screen-more-than($width) {
       @content;
     }
   }

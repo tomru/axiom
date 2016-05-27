@@ -29,11 +29,11 @@
  * Stripy rows
  */
 .ax-table--striped {
-  @include forEachScheme {
+  @include for-each-scheme {
     tbody {
       tr {
-        &:nth-child(odd)  { background-color: schemeProp(table-row-odd-color); }
-        &:nth-child(even) { background-color: schemeProp(table-row-even-color); }
+        &:nth-child(odd)  { background-color: scheme-prop(table-row-odd-color); }
+        &:nth-child(even) { background-color: scheme-prop(table-row-even-color); }
       }
     }
   }
@@ -43,21 +43,21 @@
 /**
  * Borders
  */
-@include forEachScheme {
+@include for-each-scheme {
   .ax-table--borders,
   .ax-table--borders--v {
     th:not(:first-child),
     td:not(:first-child) {
-      border-left: $component-border-width-base solid schemeProp(table-border-color);
+      border-left: $component-border-width-base solid scheme-prop(table-border-color);
     }
   }
 }
 
-@include forEachScheme {
+@include for-each-scheme {
   .ax-table--borders,
   .ax-table--borders--h {
    tr {
-      border-bottom: $component-border-width-base solid schemeProp(table-border-color);
+      border-bottom: $component-border-width-base solid scheme-prop(table-border-color);
     }
   }
 }

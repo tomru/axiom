@@ -14,7 +14,7 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
  * Forms
  */
 .ax-form {
-  @include blockSpace();
+  @include space-block();
 }
 
 
@@ -26,13 +26,13 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
   display: flex;
   flex-direction: column;
 
-  @include blockSpace();
+  @include space-block();
 }
 
 .ax-input__button-container {
   display: flex;
 
-  @include screenLessThan(breakpointProp(width, firstBreakpoint())) {
+  @include screen-less-than(breakpoint-prop(width, breakpoint-first())) {
     flex-direction: column;
   }
 }
@@ -49,7 +49,7 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 .ax-input__button {
   margin: 0 0 0 $form-input-h-padding;
 
-  @include screenLessThan(breakpointProp(width, firstBreakpoint())) {
+  @include screen-less-than(breakpoint-prop(width, breakpoint-first())) {
     margin: $component-margin-v-sm 0 0;
   }
 }
@@ -89,15 +89,15 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 /**
  * Text input colouring
  */
-@include forEachScheme {
-  $input-border-color: schemeProp(input-border-color);
-  $input-background-color: schemeProp(input-background-color);
-  $input-text-color: schemeTextColor($input-background-color);
-  $input-placeholder-color: schemeProp(input-placeholder-color);
-  $input-focus-color: schemeProp(input-focus-color);
-  $input-disabled-color: schemeProp(input-disabled-color);
-  $input-valid-color: schemeProp(input-valid-color);
-  $input-invalid-color: schemeProp(input-invalid-color);
+@include for-each-scheme {
+  $input-border-color: scheme-prop(input-border-color);
+  $input-background-color: scheme-prop(input-background-color);
+  $input-text-color: scheme-text-color($input-background-color);
+  $input-placeholder-color: scheme-prop(input-placeholder-color);
+  $input-focus-color: scheme-prop(input-focus-color);
+  $input-disabled-color: scheme-prop(input-disabled-color);
+  $input-valid-color: scheme-prop(input-valid-color);
+  $input-invalid-color: scheme-prop(input-invalid-color);
 
   .ax-input__icon {
     color: $input-placeholder-color;
@@ -170,8 +170,8 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 /**
  * Text area colouring
  */
-@include forEachScheme {
-  $input-border-color: schemeProp(input-border-color);
+@include for-each-scheme {
+  $input-border-color: scheme-prop(input-border-color);
 
   .ax-textarea {
     border-color: $input-border-color;
@@ -187,14 +187,14 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
   display: flex;
   vertical-align: middle;
 
-  @include blockSpace();
+  @include space-block();
 }
 
 .ax-radio__group--inline,
 .ax-checkbox__group--inline {
   display: inline-flex;
 
-  @include inlineBlockSpace();
+  @include space-inline();
 }
 
 .ax-radio__group--space,
@@ -270,13 +270,13 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 /**
  * Radio button and check box colouring
  */
-@include forEachScheme {
-  $input-background-color: schemeProp(input-background-color);
-  $input-checked-color: schemeProp(input-checked-color);
-  $input-focus-color: schemeProp(input-focus-color);
-  $input-placeholder-color: schemeProp(input-placeholder-color);
-  $input-border-color: schemeProp(input-border-color);
-  $input-disabled-color: schemeProp(input-disabled-color);
+@include for-each-scheme {
+  $input-background-color: scheme-prop(input-background-color);
+  $input-checked-color: scheme-prop(input-checked-color);
+  $input-focus-color: scheme-prop(input-focus-color);
+  $input-placeholder-color: scheme-prop(input-placeholder-color);
+  $input-border-color: scheme-prop(input-border-color);
+  $input-disabled-color: scheme-prop(input-disabled-color);
 
   .ax-radio,
   .ax-checkbox {

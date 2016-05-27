@@ -21,16 +21,12 @@
   margin: $component-margin-v-sm 0 0;
 }
 
-.dm-color-box--base__stats {
-
-}
-
-@include forEachColor {
-  @each $variation, $hex in colorProp(color) {
-    .dm-color--#{colorProp(name)}--#{$variation} {
-      @include forEachScheme {
+@include for-each-color {
+  @each $variation, $hex in color-prop(color) {
+    .dm-color--#{color-prop(name)}--#{$variation} {
+      @include for-each-scheme {
         background-color: $hex;
-        color: schemeTextColor($hex);
+        color: scheme-text-color($hex);
       }
     }
   }

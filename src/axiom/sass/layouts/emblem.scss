@@ -2,7 +2,7 @@
 @import '../components/_mixins/scheme';
 @import './_mixins';
 
-@include forLayout(layout-emblem) {
+@include for-layout(layout-emblem) {
   .ax-layout--emblem__body {
     display: flex;
     flex-direction: column;
@@ -21,13 +21,13 @@
     flex-direction: column;
     min-height: $logo-vertical-height-sm;
 
-    @include blockSpace($page-padding-v);
+    @include space-block($page-padding-v);
   }
 
   .ax-layout--emblem__nav-container {
-    @include forEachScheme {
-      background-color: layoutProp(header-background-color);
-      color: schemeText(layoutProp(header-background-color));
+    @include for-each-scheme {
+      background-color: layout-prop(header-background-color);
+      color: scheme-text-color(layout-prop(header-background-color));
     }
   }
 
@@ -56,10 +56,10 @@
     padding: $container-padding-v-base $container-padding-h-base;
     text-align: center;
 
-    @include blockSpace($page-padding-v);
-    @include forEachScheme {
-      background-color: layoutProp(footer-background-color);
-      color: schemeTextColor(layoutProp(footer-background-color));
+    @include space-block($page-padding-v);
+    @include for-each-scheme {
+      background-color: layout-prop(footer-background-color);
+      color: scheme-text-color(layout-prop(footer-background-color));
     }
   }
 
@@ -69,9 +69,9 @@
     width: $logo-vertical-width-sm;
     height: $logo-vertical-height-sm;
 
-    @include forEachScheme {
-      background-color: layoutProp(logo-background-color);
-      color: schemeTextColor(layoutProp(logo-background-color));
+    @include for-each-scheme {
+      background-color: layout-prop(logo-background-color);
+      color: scheme-text-color(layout-prop(logo-background-color));
     }
   }
 
@@ -80,9 +80,9 @@
     padding: 0 $page-padding-h;
     width: 100%;
 
-    @include forEachBreakpoint {
-      @include screenMoreThan {
-        max-width: breakpointProp(width);
+    @include for-each-breakpoint {
+      @include screen-more-than {
+        max-width: breakpoint-prop(width);
       }
     }
   }

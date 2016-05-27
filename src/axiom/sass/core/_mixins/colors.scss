@@ -1,5 +1,5 @@
 //
-@function getColor($color-set, $variation: $color-base-variation) {
+@function get-color($color-set, $variation: $color-base-variation) {
   @if (type-of($color-set) == color) {
     @return $color-set;
   }
@@ -14,12 +14,12 @@
 }
 
 //
-@function getAccentColor($color-set, $variation: $color-accent-base-variation) {
-  @return getColor($color-set, $variation);
+@function get-accent-color($color-set, $variation: $color-accent-base-variation) {
+  @return get-color($color-set, $variation);
 }
 
 //
-@function getColorSet($color) {
+@function get-color-set($color) {
   @if (type-of($color-set) == map) {
     @return $color;
   }
@@ -69,7 +69,7 @@
 
 
 //
-@function getContrastingColor($color, $light, $dark) {
+@function get-contrasting-color($color, $light, $dark) {
   @if (luminance($color) > $color-luminance-point) {
     @return $dark;
   } @else {
@@ -81,7 +81,7 @@
 ///
 $_color: false;
 
-@mixin forEachPaletteColor {
+@mixin for-each-palette-color {
   @each $color-palette-group in $color-palette {
     @each $color-item in $color-palette-group {
       $_color: $color-item !global;
@@ -92,7 +92,7 @@ $_color: false;
   $_color: false !global;
 }
 
-@mixin forEachAliasColor {
+@mixin for-each-alias-color {
   @each $color-alias-group in $color-aliases {
     $colors: map-get($color-alias-group, colors);
 
@@ -107,17 +107,17 @@ $_color: false;
   $_color: false !global;
 }
 
-@mixin forEachColor {
-  @include forEachPaletteColor {
+@mixin for-each-color {
+  @include for-each-palette-color {
     @content;
   }
 
-  @include forEachAliasColor {
+  @include for-each-alias-color {
     @content;
   }
 }
 
-@function colorProp($prop, $color: $_color) {
+@function color-prop($prop, $color: $_color) {
   @if (map-has-key($color, $prop)) {
     @return map-get($color, $prop);
   } @else {

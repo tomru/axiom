@@ -1,12 +1,12 @@
 @import '../core/mixins';
 @import '../components/_mixins/scheme';
-@import './_mixins';
+@import './mixins';
 
 $layout-header-height-sm: 50px;
 $layout-header-height-lg: 100px;
 $layout-sidebar-width: 240px;
 
-@include forLayout(layout-established) {
+@include for-layout(layout-established) {
   .ax-layout--established__body {
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ $layout-sidebar-width: 240px;
   }
 
   .ax-layout--established--open {
-    @include screenLessThan($layout-change-point) {
+    @include screen-less-than($layout-change-point) {
       overflow-x: hidden;
     }
   }
@@ -41,31 +41,31 @@ $layout-sidebar-width: 240px;
     border-bottom: $component-border-width-base solid transparent;
     text-align: center;
 
-    @include screenLessThan($layout-change-point) {
+    @include screen-less-than($layout-change-point) {
       height: $layout-header-height-sm;
       width: 100%;
       border-right: none;
       text-align: left;
 
-      @include forEachScheme {
-        border-bottom-color: layoutProp(sidebar-border-color);
+      @include for-each-scheme {
+        border-bottom-color: layout-prop(sidebar-border-color);
       }
     }
 
-    @include forEachScheme {
-      color: schemeTextColor(layoutProp(header-background-color));
-      background-color: getColor(layoutProp(header-background-color));
-      border-right-color: layoutProp(sidebar-border-color);
+    @include for-each-scheme {
+      color: scheme-text-color(layout-prop(header-background-color));
+      background-color: get-color(layout-prop(header-background-color));
+      border-right-color: layout-prop(sidebar-border-color);
     }
 
     ~ .ax-layout--established__main {
-      @include screenLessThan($layout-change-point) {
+      @include screen-less-than($layout-change-point) {
         margin-top: $layout-header-height-sm;
       }
     }
 
     ~ .ax-layout--established__sidebar {
-      @include screenLessThan($layout-change-point) {
+      @include screen-less-than($layout-change-point) {
         top: $layout-header-height-sm;
       }
     }
@@ -75,9 +75,9 @@ $layout-sidebar-width: 240px;
     position: relative;
     min-height: $logo-vertical-height-sm + $page-padding-v;
 
-    @include forEachScheme {
-      color: schemeTextColor(layoutProp(footer-background-color));
-      background-color: getColor(layoutProp(footer-background-color));
+    @include for-each-scheme {
+      color: scheme-text-color(layout-prop(footer-background-color));
+      background-color: get-color(layout-prop(footer-background-color));
     }
   }
 
@@ -101,7 +101,7 @@ $layout-sidebar-width: 240px;
     width: $layout-sidebar-width;
     border-right: $component-border-width-base solid transparent;
 
-    @include screenLessThan($layout-change-point) {
+    @include screen-less-than($layout-change-point) {
       top: $layout-header-height-sm;
       transform: translateX(-100%);
 
@@ -112,17 +112,17 @@ $layout-sidebar-width: 240px;
       }
     }
 
-    @include forEachScheme {
-      color: schemeTextColor(layoutProp(sidebar-background-color));
-      background-color: getColor(layoutProp(sidebar-background-color));
-      border-color: layoutProp(sidebar-border-color);
+    @include for-each-scheme {
+      color: scheme-text-color(layout-prop(sidebar-background-color));
+      background-color: get-color(layout-prop(sidebar-background-color));
+      border-color: layout-prop(sidebar-border-color);
     }
 
     ~ .ax-layout--established__main,
     ~ .ax-layout--established__footer-container {
       margin-left: $layout-sidebar-width;
 
-      @include screenLessThan($layout-change-point) {
+      @include screen-less-than($layout-change-point) {
         margin-left: 0;
 
         @include transition((transform));
@@ -138,9 +138,9 @@ $layout-sidebar-width: 240px;
     padding: $component-padding-v-base $component-padding-h-base;
     flex: 0 1 auto;
 
-    @include forEachScheme {
-      color: schemeTextColor(layoutProp(sidebar-header-background-color));
-      background-color: getColor(layoutProp(sidebar-header-background-color));
+    @include for-each-scheme {
+      color: scheme-text-color(layout-prop(sidebar-header-background-color));
+      background-color: get-color(layout-prop(sidebar-header-background-color));
     }
   }
 
@@ -159,9 +159,9 @@ $layout-sidebar-width: 240px;
     width: $logo-vertical-width-sm;
     height: $logo-vertical-height-sm;
 
-    @include forEachScheme {
-      background-color: layoutProp(logo-background-color);
-      color: schemeTextColor(layoutProp(logo-background-color));
+    @include for-each-scheme {
+      background-color: layout-prop(logo-background-color);
+      color: scheme-text-color(layout-prop(logo-background-color));
     }
   }
 
@@ -184,13 +184,13 @@ $layout-sidebar-width: 240px;
     padding: $page-padding-v $page-padding-h;
     width: 100%;
 
-    @include forEachBreakpoint {
-      @include screenMoreThan {
-        width: breakpointProp(width) - $layout-sidebar-width;
+    @include for-each-breakpoint {
+      @include screen-more-than {
+        width: breakpoint-prop(width) - $layout-sidebar-width;
       }
     }
 
-    @include screenLessThan($layout-change-point) {
+    @include screen-less-than($layout-change-point) {
       width: 100%;
     }
   }

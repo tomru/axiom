@@ -102,12 +102,12 @@ a {
 a.ax-link {
   // Color links but this will need to be
   // suppressed for things like menu.
-  @include forEachScheme() {
+  @include for-each-scheme() {
     &:not(.ax-link--inherit-color) {
-      color: getColor(schemeProp(primary));
+      color: get-color(scheme-prop(primary));
 
       &:hover {
-        color: getColor(schemeProp(primary), 600);
+        color: get-color(scheme-prop(primary), 600);
       }
     }
   }
@@ -127,11 +127,11 @@ a.ax-link {
 .ax-text--center { text-align: center; }
 .ax-text--right { text-align: right; }
 
-@include forEachBreakpoint() {
-  @include screenMoreThan() {
-    .ax-text--left--#{breakpointProp(id)} { text-align: left; }
-    .ax-text--center--#{breakpointProp(id)} { text-align: center; }
-    .ax-text--right--#{breakpointProp(id)} { text-align: right; }
+@include for-each-breakpoint() {
+  @include screen-more-than() {
+    .ax-text--left--#{breakpoint-prop(id)} { text-align: left; }
+    .ax-text--center--#{breakpoint-prop(id)} { text-align: center; }
+    .ax-text--right--#{breakpoint-prop(id)} { text-align: right; }
   }
 }
 
@@ -149,15 +149,15 @@ a.ax-link {
 
 
 // Color variations
-@include forEachColor {
-  .ax-text--#{colorProp(name)} {
-    color: getColor(colorProp(color), 500);
+@include for-each-color {
+  .ax-text--#{color-prop(name)} {
+    color: get-color(color-prop(color), 500);
   }
 }
 
-@include forEachScheme {
+@include for-each-scheme {
   .ax-text--primary {
-    color: getColor(schemeProp(primary), 500);
+    color: get-color(scheme-prop(primary), 500);
   }
 }
 
@@ -174,7 +174,7 @@ a.ax-link {
 // List styling
 ul,
 ol {
-  @include blockSpace();
+  @include space-block();
   padding: 0;
 
   > li {

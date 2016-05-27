@@ -1,7 +1,7 @@
 @import '../core/mixins';
 
 .ax-tabs {
-  @include blockSpace();
+  @include space-block();
 }
 
 .ax-tabs__nav {
@@ -20,8 +20,8 @@
     bottom: 0;
     z-index: -1;
 
-    @include forEachScheme {
-      background-color: schemeProp(tabs-border-color);
+    @include for-each-scheme {
+      background-color: scheme-prop(tabs-border-color);
     }
   }
 }
@@ -34,16 +34,16 @@
   border-radius: $border-radius-base $border-radius-base 0 0;
 
   @include transition((background-color, border-color));
-  @include forEachScheme {
-    background-color: schemeProp(tabs-inactive-background-color);
-    color: schemeTextColor(schemeProp(tabs-inactive-background-color));
-    border-color: schemeProp(tabs-border-color);
+  @include for-each-scheme {
+    background-color: scheme-prop(tabs-inactive-background-color);
+    color: scheme-text-color(scheme-prop(tabs-inactive-background-color));
+    border-color: scheme-prop(tabs-border-color);
   }
 
   &:hover {
-    @include forEachScheme {
-      background-color: schemeProp(tabs-hover-background-color);
-      color: schemeTextColor(schemeProp(tabs-hover-background-color));
+    @include for-each-scheme {
+      background-color: scheme-prop(tabs-hover-background-color);
+      color: scheme-text-color(scheme-prop(tabs-hover-background-color));
     }
   }
 
@@ -53,11 +53,11 @@
 }
 
 .ax-tabs__nav-item--active {
-  @include forEachScheme {
+  @include for-each-scheme {
     &,
     &:hover {
-      background-color: schemeProp(tabs-active-background-color);
-      color: schemeTextColor(schemeProp(tabs-active-background-color));
+      background-color: scheme-prop(tabs-active-background-color);
+      color: scheme-text-color(scheme-prop(tabs-active-background-color));
     }
   }
 }

@@ -5,7 +5,7 @@
  * Sets the background colour and
  * text colour for each scheme.
  */
-@include forEachScheme {
-  background-color: schemeProp(background-color);
-  color: schemeTextColor(schemeProp(background-color));
+@include for-each-scheme {
+  background-color: scheme-prop(background-color);
+  color: scheme-text-color(scheme-prop(background-color));
 }

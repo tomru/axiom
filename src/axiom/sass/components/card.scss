@@ -7,12 +7,12 @@
  * Standard card styling
  */
 .ax-card {
-  @include blockSpace($container-margin-v-base);
+  @include space-block($container-margin-v-base);
 
   &:not(.ax-card--transparent) {
-    @include forEachScheme() {
-      color: schemeTextColor(schemeProp(card-color));
-      background-color: schemeProp(card-color);
+    @include for-each-scheme() {
+      color: scheme-text-color(scheme-prop(card-color));
+      background-color: scheme-prop(card-color);
     }
   }
 }
@@ -39,9 +39,9 @@
   padding: ($card-padding-v / 2) $card-padding-h;
   border-bottom: $card-border;
 
-  @include forEachScheme() {
-    @if schemeHasProp(card-border) {
-      border-color: schemeProp(card-border);
+  @include for-each-scheme() {
+    @if scheme-has-prop(card-border) {
+      border-color: scheme-prop(card-border);
     }
   }
 
@@ -58,11 +58,11 @@
 .ax-card__list-item--clickable {
   cursor: pointer;
 
-  @include forEachScheme() {
-    @if schemeHasProp(card-border) {
+  @include for-each-scheme() {
+    @if scheme-has-prop(card-border) {
       &:hover {
-        color: schemeTextColor(schemeProp(card-hover-color));
-        background-color: schemeProp(card-hover-color);
+        color: scheme-text-color(scheme-prop(card-hover-color));
+        background-color: scheme-prop(card-hover-color);
       }
     }
   }

@@ -1,14 +1,14 @@
 @import '../mixins';
 
-@include forEachBreakpoint {
-  .ax-hidden-until--#{breakpointProp(id)}  {
-    @include screenLessThan {
+@include for-each-breakpoint {
+  .ax-hidden-until--#{breakpoint-prop(id)}  {
+    @include screen-less-than {
       display: none !important;
     }
   }
 
-  .ax-visible-until--#{breakpointProp(id)} {
-    @include screenMoreThan {
+  .ax-visible-until--#{breakpoint-prop(id)} {
+    @include screen-more-than {
       display: none !important;
     }
   }
