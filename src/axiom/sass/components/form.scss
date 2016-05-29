@@ -10,23 +10,20 @@ $form-input-border-radius: $border-radius-base;
 $form-textarea: 200px;
 $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 
-/**
- * Forms
- */
+
+// Form: Base
 .ax-form {
   @include space-block();
 }
 
 
-/**
- * Text input
- */
+// Input: Text and Textarea
 .ax-input__group {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
   @include space-block();
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
 }
 
 .ax-input__button-container {
@@ -38,12 +35,12 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 }
 
 .ax-input__icon {
+  @include transition((color), $transition-time-fast);
+
   position: absolute;
   top: 50%;
   right: $form-input-h-padding;
   transform: translate3d(0, -50%, 0);
-
-  @include transition(( color ), $transition-time-fast);
 }
 
 .ax-input__button {
@@ -55,30 +52,27 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 }
 
 .ax-input__icon-container {
-  position: relative;
   display: flex;
+  position: relative;
   flex-grow: 1;
   flex-shrink: 1;
 }
 
 .ax-input,
-.ax-textarea, {
+.ax-textarea {
+  @include transition((border-color, color), $transition-time-fast);
+
   flex-grow: 1;
   flex-shrink: 1;
-  padding: $form-input-v-padding $form-input-h-padding;
   width: 100%;
   min-width: 0;
-  line-height: inherit;
-  background-color: transparent;
-  border-style: solid;
+  padding: $form-input-v-padding $form-input-h-padding;
   border-width: $form-input-border-width;
+  border-style: solid;
   border-radius: $form-input-border-radius;
+  background-color: transparent;
+  line-height: inherit;
   appearance: none;
-
-  @include transition((
-    border-color,
-    color
-  ), $transition-time-fast);
 
   &:focus {
     outline: none;
@@ -86,9 +80,7 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 }
 
 
-/**
- * Text input colouring
- */
+// Input: Colouring
 @include for-each-scheme {
   $input-border-color: scheme-prop(input-border-color);
   $input-background-color: scheme-prop(input-background-color);
@@ -130,6 +122,7 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
     }
   }
 
+  // Input: Validation
   .ax-input--valid {
     .ax-input,
     .ax-textarea {
@@ -154,22 +147,17 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 }
 
 
-/**
- * Text area
- */
+// Textarea: Base
 .ax-textarea {
   min-height: $form-textarea;
-  background-color: transparent;
-  border-style: solid;
   border-width: $form-input-border-width;
+  border-style: solid;
   border-radius: $border-radius-base;
+  background-color: transparent;
   resize: none;
 }
 
-
-/**
- * Text area colouring
- */
+// Textarea: Colouring
 @include for-each-scheme {
   $input-border-color: scheme-prop(input-border-color);
 
@@ -179,22 +167,20 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 }
 
 
-/**
- * Radio buttons and Check boxes
- */
+// Radion and Check box: Base
 .ax-radio__group,
 .ax-checkbox__group {
+  @include space-block();
+
   display: flex;
   vertical-align: middle;
-
-  @include space-block();
 }
 
 .ax-radio__group--inline,
 .ax-checkbox__group--inline {
-  display: inline-flex;
-
   @include space-inline();
+
+  display: inline-flex;
 }
 
 .ax-radio__group--space,
@@ -210,8 +196,8 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 .ax-radio,
 .ax-checkbox {
   position: absolute;
-  z-index: -1;
   opacity: 0;
+  z-index: -1;
 
   &:disabled {
     + .ax-radio__label,
@@ -236,40 +222,30 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
 
   + .ax-radio__label,
   + .ax-checkbox__label {
+    @include transition((background-color, border-color, color), $transition-time-fast);
+
     display: flex;
     align-items: flex-start;
-    cursor: pointer;
     line-height: $form-checkbox-size;
-
-    @include transition((
-      background-color,
-      border-color,
-      color
-    ), $transition-time-fast);
+    cursor: pointer;
 
     &::before {
+      @include transition((background-color, border-color, color), $transition-time-fast);
+
       display: flex;
       flex: none;
-      justify-content: center;
       align-items: center;
-      height: $form-checkbox-size;
+      justify-content: center;
       width: $form-checkbox-size;
-      border-style: solid;
+      height: $form-checkbox-size;
       border-width: $form-input-border-width;
+      border-style: solid;
       font-size: $font-size-sm;
-
-      @include transition((
-        background-color,
-        border-color,
-        color
-      ), $transition-time-fast);
     }
   }
 }
 
-/**
- * Radio button and check box colouring
- */
+// Radio and Check box: Colouring
 @include for-each-scheme {
   $input-background-color: scheme-prop(input-background-color);
   $input-checked-color: scheme-prop(input-checked-color);
@@ -283,8 +259,8 @@ $form-checkbox-size: $line-height + ($form-input-border-width * 2);
     + .ax-radio__label,
     + .ax-checkbox__label {
       &::before {
-        background-color: $input-background-color;
         border-color: $input-border-color;
+        background-color: $input-background-color;
         color: transparent;
       }
     }

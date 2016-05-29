@@ -37,10 +37,9 @@ export class Docs extends Component {
   }
 
   render() {
-    const { children, navigationState, schemesState, searchState, location } = this.props;
+    const { children, navigationState, searchState, location } = this.props;
     const { navigationItemClick } = this.boundNavigationActions;
     const { activeVersion, versions } = navigationState;
-    const { active: activeScheme } = schemesState;
 
     return (
       <Layout>

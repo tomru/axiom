@@ -1,5 +1,5 @@
 //
-@function _buildTransition($properties, $speed, $delay) {
+@function _build-transition($properties, $speed, $delay) {
   $transitions: ();
 
   @each $property in $properties {
@@ -11,5 +11,5 @@
 
 //
 @mixin transition($properties, $speed: $transition-time-base, $delay: 0ms) {
-  transition: _buildTransition($properties, $speed, $delay);
+  transition: _build-transition($properties, $speed, $delay);
 }

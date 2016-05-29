@@ -2,17 +2,22 @@
 @import './_mixins/scheme';
 @import './_mixins/typography';
 
+
+// sass-lint:disable no-vendor-prefixes
+
 html,
 body {
   font-family: $font-family-body;
   font-size: $font-size-base;
   line-height: $line-height;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: 'kern' 1;
+  -moz-font-feature-settings: 'kern' 1;
 }
+
+// sass-lint:enable no-vendor-prefixes
 
 h1,
 h2,
@@ -48,7 +53,7 @@ h4 { @include heading(h4) }
 h5 { @include heading(h5) }
 
 h1 {
-  margin: $spacing-base 0 $spacing-base;
+  margin: $spacing-base 0;
 }
 
 h2,
@@ -86,8 +91,8 @@ small {
 
 // Links
 a {
-  color: inherit;
   position: relative;
+  color: inherit;
   font-style: inherit;
   text-decoration: inherit;
 
@@ -99,10 +104,11 @@ a {
 }
 
 
+// sass-lint:disable no-qualifying-elements
 a.ax-link {
   // Color links but this will need to be
   // suppressed for things like menu.
-  @include for-each-scheme() {
+  @include for-each-scheme {
     &:not(.ax-link--inherit-color) {
       color: get-color(scheme-prop(primary));
 
@@ -120,6 +126,7 @@ a.ax-link {
     }
   }
 }
+// sass-lint:enable no-qualifying-elements
 
 
 // Alignment Modifiers
@@ -127,8 +134,8 @@ a.ax-link {
 .ax-text--center { text-align: center; }
 .ax-text--right { text-align: right; }
 
-@include for-each-breakpoint() {
-  @include screen-more-than() {
+@include for-each-breakpoint {
+  @include screen-more-than {
     .ax-text--left--#{breakpoint-prop(id)} { text-align: left; }
     .ax-text--center--#{breakpoint-prop(id)} { text-align: center; }
     .ax-text--right--#{breakpoint-prop(id)} { text-align: right; }
@@ -165,13 +172,15 @@ a.ax-link {
 //
 .ax-text--ellipsis {
   display: block;
-  overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 
 // List styling
+// sass-lint:disable no-qualifying-elements
+
 ul,
 ol {
   @include space-block();
@@ -206,7 +215,7 @@ ol.ax-list--aligned {
 ul.ax-list--aligned {
   > li {
     &::before {
-      content: "\2022";
+      content: '\2022';
     }
   }
 
@@ -222,7 +231,7 @@ ol.ax-list--aligned {
     counter-increment: list;
 
     &::before {
-      content: counter(list) ".";
+      content: counter(list) '.';
     }
   }
 }
@@ -242,16 +251,18 @@ ol.ax-list--inline {
 
     &::after {
       margin: 0 0 0 $spacing-sm;
-      content: "|";
+      content: '|';
     }
 
-    &:last-child, {
+    &:last-child {
       padding-right: 0;
 
       &::after {
         margin-left: 0;
-        content: "";
+        content: '';
       }
     }
   }
 }
+
+// sass-lint:enable no-qualifying-elements

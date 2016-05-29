@@ -1,4 +1,5 @@
 @import '../core/mixins';
+@import './_mixins/container';
 @import './_mixins/scheme';
 
 $button-padding-v-sm: 0;
@@ -13,29 +14,31 @@ $button-padding-v-lg: $component-padding-v-base;
 $button-padding-h-lg: $component-padding-h-base;
 $button-font-size-lg: $font-size-base;
 
-/**
- * Standard button styling
- */
+
+// Button: Core
 button {
   margin: 0;
   padding: 0;
+  border: 0;
   outline: 0;
   background: none;
-  border: none;
 }
 
 .ax-button {
-  position: relative;
+  @include space-inline($component-margin-h-sm);
+  @include transition((background-color, border-color, color), $transition-time-fast);
+
   display: inline-block;
-  vertical-align: middle;
+  position: relative;
   border-width: $component-border-width-base;
   border-style: solid;
-  border-color: transparent;
   border-radius: $border-radius-base;
+  border-color: transparent;
   background-color: transparent;
   font-weight: $font-weight-strong;
   text-align: center;
   cursor: pointer;
+  vertical-align: middle;
 
   &:hover {
     cursor: pointer;
@@ -46,15 +49,10 @@ button {
   &[disabled]:active {
     cursor: default;
   }
-
-  @include space-inline($component-margin-h-sm);
-  @include transition(( background-color, border-color, color ), $transition-time-fast);
 }
 
 
-/**
- * Size buttons
- */
+// Button: sizes
 .ax-button--sm {
   padding: $button-padding-v-sm $button-padding-h-sm;
   font-size: $button-font-size-sm;
@@ -70,13 +68,13 @@ button {
   font-size: $button-font-size-lg;
 }
 
-/**
- * Full width buttons
- */
+
+// Button: Full width
 @mixin button-full-width {
+  @include space-block($component-margin-v-sm);
+
   display: block;
   width: 100%;
-  @include space-block($component-margin-v-sm);
 }
 
 .ax-button--full {
@@ -92,9 +90,7 @@ button {
 }
 
 
-/**
- * Button Colours
- */
+// Button: Coloured
 @mixin button-color-filled($color) {
   border-color: get-color($color, 500);
   background-color: get-color($color, 400);
@@ -171,61 +167,47 @@ button {
 }
 
 
-/**
- * Circular buttons
- */
+// Button: Circular
 .ax-button--circular {
   padding: 0;
   border-radius: 50%;
 
   &.ax-button--sm {
-    height: $line-height + ($button-padding-v-sm * 2);
     width: $line-height + ($button-padding-v-sm * 2);
+    height: $line-height + ($button-padding-v-sm * 2);
   }
 
   &.ax-button--md {
-    height: $line-height + ($button-padding-v-md * 2);
     width: $line-height + ($button-padding-v-md * 2);
+    height: $line-height + ($button-padding-v-md * 2);
   }
 
   &.ax-button--lg {
-    height: $line-height + ($button-padding-v-lg * 2);
     width: $line-height + ($button-padding-v-lg * 2);
+    height: $line-height + ($button-padding-v-lg * 2);
   }
 }
 
 
-/**
- * Button icon
- */
+// Button: Icon
 .ax-button__icon {
   margin-right: $component-margin-h-sm;
 }
 
 
-/**
- * Button group
- * Trick to allow buttons to vertically space themselves
- * when stacked when going responsive.
- */
+// Button Group: Base
 .ax-button__group {
   @include space-block($component-margin-v-base);
-
-  &:last-child {
-    margin-bottom: -$component-margin-h-sm;
-  }
-
-  > .ax-button {
-    margin-top: 0;
-    margin-bottom: $component-margin-v-sm ;
-  }
+  @include inline-component-container(ax-button);
 }
 
+
+// Button Group: Joined buttons
 .ax-button__group--joined {
   > .ax-button {
     margin: 0;
-    border-radius: 0;
     border-right-width: 0;
+    border-radius: 0;
 
     &:first-child {
       border-radius: $border-radius-base 0 0 $border-radius-base;

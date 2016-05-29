@@ -5,7 +5,7 @@ import { Avatar } from 'axiom/react';
 import { ButtonGroup, Button } from 'axiom/react';
 import { Card, CardContent, CardList, CardListItem } from 'axiom/react';
 import { Grid, GridCell } from 'axiom/react';
-import { Heading, Link, Paragraph, Strong } from 'axiom/react';
+import { Heading, Paragraph, Strong } from 'axiom/react';
 import { LabelGroup, Label } from 'axiom/react';
 import { Icon } from 'axiom/react';
 import { CheckBox, TextInput } from 'axiom/react';

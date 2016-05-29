@@ -3,23 +3,22 @@
 @import './_mixins/typography';
 @import './_vars/card';
 
-/**
- * Standard card styling
- */
+
+// Card: Base
 .ax-card {
   @include space-block($container-margin-v-base);
 
   &:not(.ax-card--transparent) {
     @include for-each-scheme() {
-      color: scheme-text-color(scheme-prop(card-color));
       background-color: scheme-prop(card-color);
+      color: scheme-text-color(scheme-prop(card-color));
     }
   }
 }
 
 .ax-card__title,
 .ax-card__content,
-.ax-card__footer, {
+.ax-card__footer {
   padding: $card-padding-v $card-padding-h;
 
   + .ax-card__title,
@@ -29,6 +28,8 @@
   }
 }
 
+
+// Card: List
 .ax-card__list {
   margin: 0;
   padding: 0;
@@ -39,30 +40,32 @@
   padding: ($card-padding-v / 2) $card-padding-h;
   border-bottom: $card-border;
 
-  @include for-each-scheme() {
+  @include for-each-scheme {
     @if scheme-has-prop(card-border) {
       border-color: scheme-prop(card-border);
     }
   }
 
-  &:first-child  {
+  &:first-child {
     padding-top: $card-padding-v;
   }
 
-  &:last-child  {
+  &:last-child {
     padding-bottom: $card-padding-v;
-    border-bottom: none;
+    border-bottom: 0;
   }
 }
 
+
+// Card: List clickable item
 .ax-card__list-item--clickable {
   cursor: pointer;
 
   @include for-each-scheme() {
     @if scheme-has-prop(card-border) {
       &:hover {
-        color: scheme-text-color(scheme-prop(card-hover-color));
         background-color: scheme-prop(card-hover-color);
+        color: scheme-text-color(scheme-prop(card-hover-color));
       }
     }
   }

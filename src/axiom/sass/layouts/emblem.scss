@@ -1,6 +1,6 @@
 @import '../core/mixins';
 @import '../components/_mixins/scheme';
-@import './_mixins';
+@import './mixins';
 
 @include for-layout(layout-emblem) {
   .ax-layout--emblem__body {
@@ -12,16 +12,16 @@
   .ax-layout--emblem__container,
   .ax-layout--emblem {
     display: flex;
-    flex-direction: column;
     flex: 1;
+    flex-direction: column;
   }
 
   .ax-layout--emblem__header {
+    @include space-block($page-padding-v);
+
     display: flex;
     flex-direction: column;
     min-height: $logo-vertical-height-sm;
-
-    @include space-block($page-padding-v);
   }
 
   .ax-layout--emblem__nav-container {
@@ -53,10 +53,10 @@
   }
 
   .ax-layout--emblem__footer {
+    @include space-block($page-padding-v);
     padding: $container-padding-v-base $container-padding-h-base;
     text-align: center;
 
-    @include space-block($page-padding-v);
     @include for-each-scheme {
       background-color: layout-prop(footer-background-color);
       color: scheme-text-color(layout-prop(footer-background-color));
@@ -76,9 +76,9 @@
   }
 
   .ax-layout--emblem__content {
+    width: 100%;
     margin: 0 auto;
     padding: 0 $page-padding-h;
-    width: 100%;
 
     @include for-each-breakpoint {
       @include screen-more-than {

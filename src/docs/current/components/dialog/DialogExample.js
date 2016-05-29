@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Button, ButtonGroup } from 'axiom/react';
 import { CardContent } from 'axiom/react';
-import { Icon } from 'axiom/react';
 import { Dialog, DialogBody, DialogFooter, DialogTitle } from 'axiom/react';
 
 export default class DialogExample extends Component {

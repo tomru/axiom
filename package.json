@@ -85,6 +85,7 @@
     "redux-devtools-dock-monitor": "^1.0.1",
     "redux-devtools-log-monitor": "^1.0.1",
     "redux-immutable-state-invariant": "^1.2.2",
+    "sass-lint": "^1.7.0",
     "webpack-dev-server": "1.14.1"
   }
 }

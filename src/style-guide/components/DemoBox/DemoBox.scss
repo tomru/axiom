@@ -1,15 +1,15 @@
-@import "~axiom/sass/core/mixins";
-@import "~axiom/sass/components/_mixins/scheme";
+@import '~axiom/sass/core/mixins';
+@import '~axiom/sass/components/_mixins/scheme';
 
 //
 .dm-demo-box {
   display: flex;
-  padding: $component-padding-v-base $component-padding-h-base;
-  min-height: 50px;
   flex: 1 1 auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 50px;
+  padding: $component-padding-v-base $component-padding-h-base;
   border: $component-border-width-base solid transparent;
   font-size: $font-size-sm;
   text-transform: uppercase;

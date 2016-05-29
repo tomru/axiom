@@ -5,19 +5,19 @@
 }
 
 .ax-tabs__nav {
-  position: relative;
   display: flex;
+  position: relative;
   margin: 0;
   overflow: auto;
   z-index: 0;
 
   &::after {
-    content: "";
     position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: $component-border-width-base;
-    left: 0;
-    bottom: 0;
+    content: '';
     z-index: -1;
 
     @include for-each-scheme {
@@ -27,17 +27,18 @@
 }
 
 .ax-tabs__nav-item {
-  margin: 0 $component-margin-h-sm 0 0;
-  white-space: nowrap;
-  border: $component-border-width-base solid transparent;
-  border-bottom: none;
-  border-radius: $border-radius-base $border-radius-base 0 0;
-
   @include transition((background-color, border-color));
+
+  margin: 0 $component-margin-h-sm 0 0;
+  border: $component-border-width-base solid transparent;
+  border-bottom: 0;
+  border-radius: $border-radius-base $border-radius-base 0 0;
+  white-space: nowrap;
+
   @include for-each-scheme {
+    border-color: scheme-prop(tabs-border-color);
     background-color: scheme-prop(tabs-inactive-background-color);
     color: scheme-text-color(scheme-prop(tabs-inactive-background-color));
-    border-color: scheme-prop(tabs-border-color);
   }
 
   &:hover {
@@ -52,8 +53,8 @@
   }
 }
 
-.ax-tabs__nav-item--active {
-  @include for-each-scheme {
+@include for-each-scheme {
+  .ax-tabs__nav-item--active {
     &,
     &:hover {
       background-color: scheme-prop(tabs-active-background-color);
@@ -64,10 +65,10 @@
 
 .ax-tabs__nav-link {
   display: flex;
-  padding: $component-padding-v-base $component-padding-h-base;
   flex: 0 1 auto;
   align-items: center;
   justify-content: center;
+  padding: $component-padding-v-base $component-padding-h-base;
   font-size: $font-size-md;
   font-weight: $font-weight-strong;
   text-transform: uppercase;

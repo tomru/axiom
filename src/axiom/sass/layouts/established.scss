@@ -16,8 +16,8 @@ $layout-sidebar-width: 240px;
   .ax-layout--established__container,
   .ax-layout--established {
     display: flex;
-    flex-direction: column;
     flex: 1;
+    flex-direction: column;
   }
 
   .ax-layout--established--open {
@@ -29,22 +29,22 @@ $layout-sidebar-width: 240px;
   .ax-layout--established__header {
     display: flex;
     position: fixed;
-    padding: 0 $page-padding-h;
     top: 0;
     left: 0;
-    width: $layout-sidebar-width;
-    height: $layout-header-height-lg;
     flex-direction: column;
     justify-content: center;
-    z-index: $z-index-layout-header;
+    width: $layout-sidebar-width;
+    height: $layout-header-height-lg;
+    padding: 0 $page-padding-h;
     border-right: $component-border-width-base solid transparent;
     border-bottom: $component-border-width-base solid transparent;
     text-align: center;
+    z-index: $z-index-layout-header;
 
     @include screen-less-than($layout-change-point) {
-      height: $layout-header-height-sm;
       width: 100%;
-      border-right: none;
+      height: $layout-header-height-sm;
+      border-right: 0;
       text-align: left;
 
       @include for-each-scheme {
@@ -53,9 +53,9 @@ $layout-sidebar-width: 240px;
     }
 
     @include for-each-scheme {
-      color: scheme-text-color(layout-prop(header-background-color));
-      background-color: get-color(layout-prop(header-background-color));
       border-right-color: layout-prop(sidebar-border-color);
+      background-color: get-color(layout-prop(header-background-color));
+      color: scheme-text-color(layout-prop(header-background-color));
     }
 
     ~ .ax-layout--established__main {
@@ -76,8 +76,8 @@ $layout-sidebar-width: 240px;
     min-height: $logo-vertical-height-sm + $page-padding-v;
 
     @include for-each-scheme {
-      color: scheme-text-color(layout-prop(footer-background-color));
       background-color: get-color(layout-prop(footer-background-color));
+      color: scheme-text-color(layout-prop(footer-background-color));
     }
   }
 
@@ -94,18 +94,18 @@ $layout-sidebar-width: 240px;
   .ax-layout--established__sidebar {
     display: flex;
     position: fixed;
-    flex-direction: column;
     top: $layout-header-height-lg;
-    left: 0;
     bottom: 0;
+    left: 0;
+    flex-direction: column;
     width: $layout-sidebar-width;
     border-right: $component-border-width-base solid transparent;
 
     @include screen-less-than($layout-change-point) {
+      @include transition((transform));
+
       top: $layout-header-height-sm;
       transform: translateX(-100%);
-
-      @include transition((transform));
 
       .ax-layout--established--open & {
         transform: translateX(-0%);
@@ -113,9 +113,9 @@ $layout-sidebar-width: 240px;
     }
 
     @include for-each-scheme {
-      color: scheme-text-color(layout-prop(sidebar-background-color));
-      background-color: get-color(layout-prop(sidebar-background-color));
       border-color: layout-prop(sidebar-border-color);
+      background-color: get-color(layout-prop(sidebar-background-color));
+      color: scheme-text-color(layout-prop(sidebar-background-color));
     }
 
     ~ .ax-layout--established__main,
@@ -123,9 +123,9 @@ $layout-sidebar-width: 240px;
       margin-left: $layout-sidebar-width;
 
       @include screen-less-than($layout-change-point) {
-        margin-left: 0;
-
         @include transition((transform));
+
+        margin-left: 0;
 
         .ax-layout--established--open & {
           transform: translateX($layout-sidebar-width);
@@ -135,12 +135,12 @@ $layout-sidebar-width: 240px;
   }
 
   .ax-layout--established__sidebar-header {
-    padding: $component-padding-v-base $component-padding-h-base;
     flex: 0 1 auto;
+    padding: $component-padding-v-base $component-padding-h-base;
 
     @include for-each-scheme {
-      color: scheme-text-color(layout-prop(sidebar-header-background-color));
       background-color: get-color(layout-prop(sidebar-header-background-color));
+      color: scheme-text-color(layout-prop(sidebar-header-background-color));
     }
   }
 
@@ -149,8 +149,8 @@ $layout-sidebar-width: 240px;
   }
 
   .ax-layout--established__sidebar-footer {
-    padding: $component-padding-v-base $component-padding-h-base;
     flex: 0 1 auto;
+    padding: $component-padding-v-base $component-padding-h-base;
   }
 
   .ax-layout--established__logo {
@@ -180,9 +180,9 @@ $layout-sidebar-width: 240px;
 
   .ax-layout--established__content {
     position: relative;
+    width: 100%;
     margin: 0 auto;
     padding: $page-padding-v $page-padding-h;
-    width: 100%;
 
     @include for-each-breakpoint {
       @include screen-more-than {

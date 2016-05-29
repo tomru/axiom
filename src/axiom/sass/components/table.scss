@@ -3,9 +3,8 @@
 @import './_mixins/icon';
 @import './_mixins/scheme';
 
-/**
- * Standard table
- */
+
+// Table: Base
 .ax-table {
   width: 100%;
   text-align: left;
@@ -14,8 +13,8 @@
   th,
   td {
     padding: $component-padding-v-base $component-padding-h-sm;
-    vertical-align: middle;
     font-weight: normal;
+    vertical-align: middle;
   }
 
   th {
@@ -25,11 +24,9 @@
 }
 
 
-/**
- * Stripy rows
- */
-.ax-table--striped {
-  @include for-each-scheme {
+// Table: Stripey Row
+@include for-each-scheme {
+  .ax-table--striped {
     tbody {
       tr {
         &:nth-child(odd)  { background-color: scheme-prop(table-row-odd-color); }
@@ -40,9 +37,7 @@
 }
 
 
-/**
- * Borders
- */
+// Table: Bordered
 @include for-each-scheme {
   .ax-table--borders,
   .ax-table--borders--v {
@@ -56,30 +51,26 @@
 @include for-each-scheme {
   .ax-table--borders,
   .ax-table--borders--h {
-   tr {
+    tr {
       border-bottom: $component-border-width-base solid scheme-prop(table-border-color);
     }
   }
 }
 
 
-/**
- * Cell alignment depending on format
- */
+// Table: Cell alignment (content dependant)
 .ax-table__cell--number {
   text-align: right;
   white-space: nowrap;
 }
 
 
-/**
- * Sorting
- */
+// Table: Sorting
 .ax-table--sortable {
   .ax-table__sort--asc,
   .ax-table__sort--desc {
-    cursor: pointer;
     white-space: nowrap;
+    cursor: pointer;
 
     &::after {
       margin: 0 0 0 $component-padding-h-sm;

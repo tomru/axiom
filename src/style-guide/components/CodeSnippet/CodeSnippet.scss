@@ -1,11 +1,13 @@
-@import "~axiom/sass/core/mixins";
-@import "~axiom/sass/components/_mixins/scheme";
+@import '~axiom/sass/core/mixins';
+@import '~axiom/sass/components/_mixins/scheme';
 
-pre[class*="language-"] {
+// sass-lint:disable no-qualifying-elements
+
+pre[class*='language-'] {
+  @include space-block();
+
   padding: $component-padding-v-lg $component-padding-h-base;
   border: $component-border-width-base solid get-color($color-grey, 100);
   border-radius: $border-radius-base;
   background-color: get-color($color-grey, 50);
-
-  @include space-block();
 }

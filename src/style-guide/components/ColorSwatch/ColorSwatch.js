@@ -20,7 +20,7 @@ export default class ColorSwatch extends Component {
         <div className={ `dm-color-box dm-color-box--base dm-color--${name}--${colorBaseVariation}` }>
           <Strong textEllipsis={ true }>$color-{ name }</Strong>
           <div className="dm-color-box--base__stats">
-            <Grid responsive={false}>
+            <Grid responsive={ false }>
               <GridCell>
                 { colorBaseVariation }
               </GridCell>
@@ -34,7 +34,7 @@ export default class ColorSwatch extends Component {
 
         { nonAccents.map((variation) =>
           <div className={ `dm-color-box dm-color--${name}--${variation}` } key={ variation }>
-            <Grid responsive={false}>
+            <Grid responsive={ false }>
               <GridCell>
                 { variation }
               </GridCell>
@@ -58,7 +58,7 @@ export default class ColorSwatch extends Component {
 
               return (
                 <div className={ classes } key={ variation }>
-                  <Grid responsive={false}>
+                  <Grid responsive={ false }>
                     <GridCell>
                       { variation }
                     </GridCell>

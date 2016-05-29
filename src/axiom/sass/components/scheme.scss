@@ -1,10 +1,7 @@
 @import '../core/mixins';
 @import './_mixins/scheme';
 
-/**
- * Sets the background colour and
- * text colour for each scheme.
- */
+// Scheme: Background colouring
 @include for-each-scheme {
   background-color: scheme-prop(background-color);
   color: scheme-text-color(scheme-prop(background-color));

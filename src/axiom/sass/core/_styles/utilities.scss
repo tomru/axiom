@@ -1,13 +1,15 @@
 @import '../mixins';
 
+// sass-lint:disable no-important
+
 @include for-each-breakpoint {
-  .ax-hidden-until--#{breakpoint-prop(id)}  {
+  .ax-util--hidden--#{breakpoint-prop(id)}  {
     @include screen-less-than {
       display: none !important;
     }
   }
 
-  .ax-visible-until--#{breakpoint-prop(id)} {
+  .ax-util--visible--#{breakpoint-prop(id)} {
     @include screen-more-than {
       display: none !important;
     }
@@ -15,14 +17,16 @@
 }
 
 //
-// .ax-space--left  { margin-left: $component-margin-h-base !important; }
-// .ax-space--right { margin-right: $component-margin-h-base !important; }
+// .ax-util--space--left  { margin-left: $component-margin-h-base !important; }
+// .ax-util--space--right { margin-right: $component-margin-h-base !important; }
 
 
 //
-.ax-block        { display: block; }
-.ax-inline-block { display: inline-block; }
+.ax-util--block        { display: block; }
+.ax-util--inline-block { display: inline-block; }
 
 
 //
-.ax-contain { position: relative; }
+.ax-util--contain { position: relative; }
+
+// sass-lint:enable no-important

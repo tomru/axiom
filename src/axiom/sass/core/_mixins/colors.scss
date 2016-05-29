@@ -121,6 +121,6 @@ $_color: false;
   @if (map-has-key($color, $prop)) {
     @return map-get($color, $prop);
   } @else {
-    @warn "Color property `#{$prop}` does not exists";
+    @warn 'Color property `#{$prop}` does not exists';
   }
 }

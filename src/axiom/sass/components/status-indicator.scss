@@ -1,5 +1,7 @@
 @import '../core/mixins';
 
+
+// Status Indicator: Base
 .ax-status-indicator {
   @include space-block();
 
@@ -17,14 +19,13 @@
 
   &::after {
     display: inline-block;
-    content: "";
     border-radius: 50%;
+    content: '';
   }
 }
 
-/**
- * Size variations
- */
+
+// Status Indicator: Sizing
 @mixin status-indicator-size($size) {
   font-size: $size;
 
@@ -38,9 +39,8 @@
 .ax-status-indicator--md { @include status-indicator-size($font-size-base) }
 .ax-status-indicator--lg { @include status-indicator-size($font-size-h4) }
 
-/**
- * Color variations
- */
+
+// Status Indicator: Colouring
 @mixin status-indicator-color($color) {
   color: get-color($color, 600);
 

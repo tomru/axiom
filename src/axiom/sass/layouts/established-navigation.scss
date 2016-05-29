@@ -87,8 +87,8 @@
       > .ax-layout--established-nav__list-item--active {
         > .ax-layout--established-nav__link {
           @include for-each-scheme {
-            color: layout-prop(nav-second-item-active-color);
             background-color: layout-prop(nav-second-item-active-background-color);
+            color: layout-prop(nav-second-item-active-color);
           }
         }
       }
@@ -99,8 +99,3 @@
     }
   }
 }
-
-
-
-
-

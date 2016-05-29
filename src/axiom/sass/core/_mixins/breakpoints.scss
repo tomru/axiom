@@ -14,7 +14,7 @@ $_breakpoint: false;
   @if (map-has-key($breakpoint, $prop)) {
     @return map-get($breakpoint, $prop);
   } @else {
-    @warn "Breakpoint property `#{$prop}` does not exists";
+    @warn 'Breakpoint property `#{$prop}` does not exists';
   }
 }
 

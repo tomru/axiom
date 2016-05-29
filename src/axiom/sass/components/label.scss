@@ -1,25 +1,26 @@
 @import '../core/mixins';
+@import './_mixins/container';
 @import './_mixins/scheme';
 
+
+// Label: Base
 .ax-label {
-  position: relative;
+  @include space-inline($component-margin-h-sm);
+
   display: inline-block;
-  vertical-align: middle;
+  position: relative;
   border-width: $component-border-width-base;
   border-style: solid;
-  border-color: transparent;
   border-radius: $border-radius-base;
+  border-color: transparent;
   background-color: transparent;
   font-weight: $font-weight-strong;
   text-align: center;
-
-  @include space-inline($component-margin-h-sm);
+  vertical-align: middle;
 }
 
 
-/**
- * Size labels
- */
+// Label: Sizing
 .ax-label--sm {
   padding: 0 $component-padding-h-sm;
   font-size: $font-size-sm;
@@ -36,13 +37,12 @@
 }
 
 
-/**
- * Full width labels
- */
+// Label: Full width
 @mixin label-full-width {
+  @include space-block($component-margin-v-sm);
+
   display: block;
   width: 100%;
-  @include space-block($component-margin-v-sm);
 }
 
 .ax-label--full {
@@ -58,9 +58,7 @@
 }
 
 
-/**
- * Label Colours
- */
+// Label: Colouring
 @mixin label-color-filled($color) {
   border-color: get-color($color, 300);
   background-color: get-color($color, 50);
@@ -80,28 +78,14 @@
 }
 
 
-/**
- * Label icon
- */
+// Label: Icon
 .ax-label__icon {
   margin-right: $component-margin-h-sm;
 }
 
 
-/**
- * Label group
- * Trick to allow buttons to vertically space themselves
- * when stacked when going responsive.
- */
+// Label Group
 .ax-label__group {
   @include space-block($component-margin-v-base);
-
-  &:last-child {
-    margin-bottom: -$component-margin-h-sm;
-  }
-
-  > .ax-label {
-    margin-top: 0;
-    margin-bottom: $component-margin-v-sm;
-  }
+  @include inline-component-container(ax-label);
 }

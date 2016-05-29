@@ -4,8 +4,8 @@ import { breakpoints } from '../../sass';
 const CLASS_NAMES_SETS = {
   global: (props) => {
     return classnames(
-      breakpointClassName(props.hiddenUntil, ({ id }) => `ax-hidden-until--${id}`),
-      breakpointClassName(props.visibleUntil, ({ id }) => `ax-visible-until--${id}`),
+      breakpointClassName(props.hiddenUntil, ({ id }) => `ax-util--hidden--${id}`),
+      breakpointClassName(props.visibleUntil, ({ id }) => `ax-util--visible--${id}`),
     );
   },
   text: (props) => {

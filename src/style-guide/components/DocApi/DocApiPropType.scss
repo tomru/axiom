@@ -1,4 +1,4 @@
-@import "~axiom/sass/core/mixins";
+@import '~axiom/sass/core/mixins';
 
 .dm-doc-api__pre {
   @include space-block();
@@ -7,6 +7,6 @@
 .dm-doc-api__code {
   border: $component-border-width-base solid get-color($color-grey, 100);
   background-color: get-color($color-grey, 50);
-  white-space: normal;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  white-space: normal;
 }

@@ -13,7 +13,7 @@ $_layout:  false;
   @if (map-has-key($layout-props, $prop)) {
     @return map-get($layout-props, $prop);
   } @else {
-    @error "Layout property `#{$prop}` does not exists";
+    @error 'Layout property `#{$prop}` does not exists';
     @return false;
   }
 }

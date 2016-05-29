@@ -61,9 +61,9 @@ export class Doc extends Component {
                       if (apiDocs.length) {
                         <GridCell shrink={ true }>
                           <DocApiDialogTrigger
-                            apiDocs={ apiDocs }
-                            importDocs={ importDocs }
-                            title={ navItem.name }/>
+                              apiDocs={ apiDocs }
+                              importDocs={ importDocs }
+                              title={ navItem.name } />
                         </GridCell>
                       }
                     }
