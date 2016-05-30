@@ -1,4 +1,4 @@
-import { colorAliases } from 'axiom/sass';
+import { colorAliases } from 'bw-axiom/sass';
 import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
 
 export default {

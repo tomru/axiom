@@ -1,4 +1,4 @@
-import { Dialog, DialogBody, DialogFooter, DialogTitle } from 'axiom/react';
+import { Dialog, DialogBody, DialogFooter, DialogTitle } from 'bw-axiom/react';
 import DialogFullscreen from './DialogFullscreen';
 import DialogSizes from './DialogSizes';
 

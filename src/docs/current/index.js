@@ -20,5 +20,5 @@ export { default as table } from './components/table';
 export { default as tabset } from './components/tabset';
 export { default as typography } from './components/typography';
 
-export { default as emblem } from './layouts/emblem/emblem';
-export { default as established } from './layouts/established';
+// export { default as emblem } from './layouts/emblem/emblem';
+// export { default as established } from './layouts/established';

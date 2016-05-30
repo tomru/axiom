@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
-import { Grid, GridCell } from 'axiom/react';
-import { Icon } from 'axiom/react';
-import { Link, Paragraph } from 'axiom/react';
+import { Grid, GridCell } from 'bw-axiom/react';
+import { Icon } from 'bw-axiom/react';
+import { Link, Paragraph } from 'bw-axiom/react';
 
 export default class IconGrid extends Component {
   static propTypes = {

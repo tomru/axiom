@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Paragraph, Strong } from 'axiom/react';
-import { mediumDate, mediumDateWithTime } from 'axiom/common/formatting-dates';
+import { Paragraph, Strong } from 'bw-axiom/react';
+import { mediumDate, mediumDateWithTime } from 'bw-axiom/common/formatting-dates';
 import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 

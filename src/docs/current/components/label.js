@@ -1,5 +1,5 @@
-import { breakpoints, colorPalette, colorAliases } from 'axiom/sass';
-import { Label, LabelGroup } from 'axiom/react';
+import { breakpoints, colorPalette, colorAliases } from 'bw-axiom/sass';
+import { Label, LabelGroup } from 'bw-axiom/react';
 
 export default {
   id: 'label',

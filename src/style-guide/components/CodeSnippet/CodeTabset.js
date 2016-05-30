@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Tabset, Tab } from 'axiom/react';
+import { Tabset, Tab } from 'bw-axiom/react';
 
 export default class CodeTabset extends Component {
   static propTypes = {

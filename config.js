@@ -34,7 +34,7 @@ export const webpack = {
     __OTUPUT_FOLDER_SASS__: `"${sassOutputFolderName}"`,
   },
   aliases: [
-    createAlias('axiom', paths.axiom),
+    createAlias('bw-axiom', paths.axiom),
     createAlias('docs', paths.docs),
     createAlias('style-guide', paths.styleGuide),
   ],

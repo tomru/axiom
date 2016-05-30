@@ -1,5 +1,5 @@
-import { breakpoints, gridGutters } from 'axiom/sass';
-import { Grid, GridCell } from 'axiom/react';
+import { breakpoints, gridGutters } from 'bw-axiom/sass';
+import { Grid, GridCell } from 'bw-axiom/react';
 import DemoBox from 'style-guide/components/DemoBox/DemoBox';
 
 export default {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardContent } from 'axiom/react';
-import { Heading, Paragraph, Strong } from 'axiom/react';
+import { Card, CardContent } from 'bw-axiom/react';
+import { Heading, Paragraph, Strong } from 'bw-axiom/react';
 
 class Character extends Component {
   render() {

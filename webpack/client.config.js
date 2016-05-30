@@ -17,7 +17,7 @@ export default {
   },
   resolve: {
     alias: {
-      axiom: config.paths.axiom,
+      'bw-axiom': config.paths.axiom,
       'style-guide': config.paths.styleGuide,
     },
   },

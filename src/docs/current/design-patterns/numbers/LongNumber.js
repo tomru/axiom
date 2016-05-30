@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Grid, GridCell } from 'axiom/react';
-import { TextInput } from 'axiom/react';
-import { Heading, Paragraph } from 'axiom/react';
-import { longNumber } from 'axiom/common/formatting-numbers';
+import { Grid, GridCell } from 'bw-axiom/react';
+import { TextInput } from 'bw-axiom/react';
+import { Heading, Paragraph } from 'bw-axiom/react';
+import { longNumber } from 'bw-axiom/common/formatting-numbers';
 import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 

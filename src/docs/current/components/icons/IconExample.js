@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Fuse from 'fuse.js';
-import { Card, CardTitle, CardContent } from 'axiom/react';
-import { TextInput } from 'axiom/react';
-import { Icon } from 'axiom/react';
-import { Link, Paragraph } from 'axiom/react';
+import { Card, CardTitle, CardContent } from 'bw-axiom/react';
+import { TextInput } from 'bw-axiom/react';
+import { Icon } from 'bw-axiom/react';
+import { Link, Paragraph } from 'bw-axiom/react';
 import { debounce } from 'style-guide/utils/function';
 import { iconList, iconCategories } from './utils';
 import IconGrid from './IconGrid';

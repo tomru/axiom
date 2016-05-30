@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { Icon, TextInput } from 'axiom/react';
+import { Icon, TextInput } from 'bw-axiom/react';
 import { debounce } from 'style-guide/utils/function';
 
 export default class SearchInput extends Component {

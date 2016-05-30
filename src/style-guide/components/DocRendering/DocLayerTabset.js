@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Tabset, Tab } from 'axiom/react';
+import { Tabset, Tab } from 'bw-axiom/react';
 import DocLayer from 'style-guide/components/DocRendering/DocLayer';
 
 export default class DocLayerGrid extends Component {

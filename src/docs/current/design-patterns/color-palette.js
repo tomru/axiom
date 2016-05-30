@@ -1,4 +1,4 @@
-import { colorPalette } from 'axiom/sass';
+import { colorPalette } from 'bw-axiom/sass';
 import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
 
 export default {

@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import { CardListItem } from 'axiom/react';
-import { Heading, Italic, Link, Paragraph } from 'axiom/react';
+import { CardListItem } from 'bw-axiom/react';
+import { Heading, Italic, Link, Paragraph } from 'bw-axiom/react';
 
 export default class SearchResult extends Component {
   static propTypes = {

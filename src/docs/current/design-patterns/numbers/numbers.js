@@ -1,4 +1,4 @@
-import * as format from 'axiom/common/formatting-numbers';
+import * as format from 'bw-axiom/common/formatting-numbers';
 import ShortNumber from './ShortNumber';
 import LongNumber from './LongNumber';
 

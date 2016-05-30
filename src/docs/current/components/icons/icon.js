@@ -1,4 +1,4 @@
-import { Icon } from 'axiom/react';
+import { Icon } from 'bw-axiom/react';
 import { iconList } from './utils';
 
 export default {

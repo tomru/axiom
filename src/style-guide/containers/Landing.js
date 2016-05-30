@@ -1,11 +1,11 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
-import { Button, ButtonGroup } from 'axiom/react';
-import { Card, CardTitle, CardContent } from 'axiom/react';
-import { Billboard } from 'axiom/react';
-import { Layout, LayoutMain, LayoutContent, LayoutFooter } from 'axiom/react/layouts/established';
-import { Heading, Strong } from 'axiom/react';
+import { Button, ButtonGroup } from 'bw-axiom/react';
+import { Card, CardTitle, CardContent } from 'bw-axiom/react';
+import { Billboard } from 'bw-axiom/react';
+import { Layout, LayoutMain, LayoutContent, LayoutFooter } from 'bw-axiom/react/layouts/established';
+import { Heading, Strong } from 'bw-axiom/react';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 
 export class Landing extends Component {

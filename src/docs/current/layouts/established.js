@@ -1,5 +1,5 @@
-import { Image } from 'axiom/react';
-import { Layout, LayoutHeader, LayoutSidebar, LayoutMain, LayoutNav, LayoutContent, LayoutFooter } from 'axiom/react/layouts/established';
+import { Image } from 'bw-axiom/react';
+import { Layout, LayoutHeader, LayoutSidebar, LayoutMain, LayoutNav, LayoutContent, LayoutFooter } from 'bw-axiom/react/layouts/established';
 
 export default {
   id: 'established',

@@ -1,4 +1,4 @@
-import * as format from 'axiom/common/formatting-dates';
+import * as format from 'bw-axiom/common/formatting-dates';
 import ShortDate from './ShortDate';
 import MediumDate from './MediumDate';
 import LongDate from './LongDate';

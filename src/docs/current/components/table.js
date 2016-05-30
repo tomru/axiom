@@ -1,5 +1,5 @@
-import { shortNumber } from 'axiom/common';
-import { Table, Thead, Tbody, Tr, Th, Td } from 'axiom/react';
+import { shortNumber } from 'bw-axiom/common';
+import { Table, Thead, Tbody, Tr, Th, Td } from 'bw-axiom/react';
 
 const randomNumber = () => Math.floor(Math.random() * 10 * 100000);
 

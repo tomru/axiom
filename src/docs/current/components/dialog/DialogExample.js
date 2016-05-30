@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import { Button, ButtonGroup } from 'axiom/react';
-import { CardContent } from 'axiom/react';
-import { Dialog, DialogBody, DialogFooter, DialogTitle } from 'axiom/react';
+import { Button, ButtonGroup } from 'bw-axiom/react';
+import { CardContent } from 'bw-axiom/react';
+import { Dialog, DialogBody, DialogFooter, DialogTitle } from 'bw-axiom/react';
 
 export default class DialogExample extends Component {
   static propTypes = {

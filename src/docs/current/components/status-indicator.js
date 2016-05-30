@@ -1,5 +1,5 @@
-import { StatusIndicator } from 'axiom/react';
-import { colorPalette, colorAliases } from 'axiom/sass';
+import { StatusIndicator } from 'bw-axiom/react';
+import { colorPalette, colorAliases } from 'bw-axiom/sass';
 
 export default {
   id: 'status-indicator',

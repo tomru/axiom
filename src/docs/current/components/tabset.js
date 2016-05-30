@@ -1,4 +1,4 @@
-import { Tabset, Tab } from 'axiom/react';
+import { Tabset, Tab } from 'bw-axiom/react';
 
 export default {
   id: 'tabset',

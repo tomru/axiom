@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { LabelGroup, Label } from 'axiom/react';
+import { LabelGroup, Label } from 'bw-axiom/react';
 import { statuses } from 'docs';
 
 export default class DocStatus extends Component {

@@ -1,4 +1,4 @@
-import { breakpointIds, colorPalette, colorAliases } from 'axiom/sass';
+import { breakpointIds, colorPalette, colorAliases } from 'bw-axiom/sass';
 import {
   Heading,
   Italic,
@@ -11,7 +11,7 @@ import {
   Strong,
   Underline,
   Weak,
-} from 'axiom/react';
+} from 'bw-axiom/react';
 
 export default {
   id: 'typography',

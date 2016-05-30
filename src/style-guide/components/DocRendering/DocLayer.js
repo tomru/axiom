@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { BlockContainer } from 'axiom/react';
-import { Heading, Paragraph } from 'axiom/react';
+import { BlockContainer } from 'bw-axiom/react';
+import { Heading, Paragraph } from 'bw-axiom/react';
 import DocLayerCard from 'style-guide/components/DocRendering/DocLayerCard';
 import DocLayerGrid from 'style-guide/components/DocRendering/DocLayerGrid';
 import DocLayerTabset from 'style-guide/components/DocRendering/DocLayerTabset';

@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { ButtonGroup, Button } from 'axiom/react';
+import { ButtonGroup, Button } from 'bw-axiom/react';
 import DocApiDialog from 'style-guide/components/DocApi/DocApiDialog';
 
 export default class DocApiDialogTrigger extends Component {

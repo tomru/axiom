@@ -1,4 +1,4 @@
-import { Avatar } from 'axiom/react';
+import { Avatar } from 'bw-axiom/react';
 
 export default {
   id: 'avatar',

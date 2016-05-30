@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
-import { Avatar } from 'axiom/react';
-import { ButtonGroup, Button } from 'axiom/react';
-import { Card, CardContent, CardList, CardListItem } from 'axiom/react';
-import { Grid, GridCell } from 'axiom/react';
-import { Heading, Paragraph, Strong } from 'axiom/react';
-import { LabelGroup, Label } from 'axiom/react';
-import { Icon } from 'axiom/react';
-import { CheckBox, TextInput } from 'axiom/react';
-import { Layout, LayoutHeader, LayoutNav, LayoutTitle, LayoutMain, LayoutContent, LayoutFooter } from 'axiom/react/layouts/emblem';
-import { longNumber, shortNumber } from 'axiom/common/formatting-numbers';
+import { Avatar } from 'bw-axiom/react';
+import { ButtonGroup, Button } from 'bw-axiom/react';
+import { Card, CardContent, CardList, CardListItem } from 'bw-axiom/react';
+import { Grid, GridCell } from 'bw-axiom/react';
+import { Heading, Paragraph, Strong } from 'bw-axiom/react';
+import { LabelGroup, Label } from 'bw-axiom/react';
+import { Icon } from 'bw-axiom/react';
+import { CheckBox, TextInput } from 'bw-axiom/react';
+import { Layout, LayoutHeader, LayoutNav, LayoutTitle, LayoutMain, LayoutContent, LayoutFooter } from 'bw-axiom/react/layouts/emblem';
+import { longNumber, shortNumber } from 'bw-axiom/common/formatting-numbers';
 
 export class EmblemLayout extends Component {
   render() {

@@ -13,7 +13,7 @@ import {
   LayoutMain,
   LayoutNav,
   LayoutFooter,
-} from 'axiom/react/layouts/established';
+} from 'bw-axiom/react/layouts/established';
 
 export class Docs extends Component {
   static propTypes = {

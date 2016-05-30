@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Button, ButtonGroup } from 'axiom/react';
-import { Dialog } from 'axiom/react';
-import { Link, Paragraph } from 'axiom/react';
+import { Button, ButtonGroup } from 'bw-axiom/react';
+import { Dialog } from 'bw-axiom/react';
+import { Link, Paragraph } from 'bw-axiom/react';
 import DialogExample from './DialogExample';
 import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';

@@ -1,4 +1,4 @@
-import { LogoVertical, LogoHorizontal } from 'axiom/react';
+import { LogoVertical, LogoHorizontal } from 'bw-axiom/react';
 
 export default {
   id: 'branding',

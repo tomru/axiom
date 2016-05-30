@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Grid, GridCell } from 'axiom/react';
+import { Grid, GridCell } from 'bw-axiom/react';
 import DocLayer from 'style-guide/components/DocRendering/DocLayer';
 
 export default class DocLayerGrid extends Component {

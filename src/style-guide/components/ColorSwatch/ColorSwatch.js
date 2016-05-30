@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import { colorAccentBaseVariation, colorBaseVariation } from 'axiom/sass';
-import { Grid, GridCell } from 'axiom/react';
-import { Strong } from 'axiom/react';
+import { colorAccentBaseVariation, colorBaseVariation } from 'bw-axiom/sass';
+import { Grid, GridCell } from 'bw-axiom/react';
+import { Strong } from 'bw-axiom/react';
 
 export default class ColorSwatch extends Component {
   static propTypes = {

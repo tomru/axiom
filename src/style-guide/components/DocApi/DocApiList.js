@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import { CardList, CardListItem } from 'axiom/react';
-import { Grid, GridCell } from 'axiom/react';
-import { LabelGroup, Label } from 'axiom/react';
-import { Heading } from 'axiom/react';
+import { CardList, CardListItem } from 'bw-axiom/react';
+import { Grid, GridCell } from 'bw-axiom/react';
+import { LabelGroup, Label } from 'bw-axiom/react';
+import { Heading } from 'bw-axiom/react';
 import DocApiPropType from 'style-guide/components/DocApi/DocApiPropType';
 
 export default class DocApiList extends Component {

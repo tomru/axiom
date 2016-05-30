@@ -1,5 +1,5 @@
-import { Button, Icon } from 'axiom/react';
-import { Form, CheckBox, RadioButton, TextArea, TextInput } from 'axiom/react';
+import { Button, Icon } from 'bw-axiom/react';
+import { Form, CheckBox, RadioButton, TextArea, TextInput } from 'bw-axiom/react';
 
 export default {
   id: 'form',

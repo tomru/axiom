@@ -1,4 +1,4 @@
-import { schemes } from 'axiom/sass';
+import { schemes } from 'bw-axiom/sass';
 import * as types from 'style-guide/constants/ActionTypes';
 
 export const initialState = {

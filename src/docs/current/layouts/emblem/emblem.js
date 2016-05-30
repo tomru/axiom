@@ -1,7 +1,7 @@
 import { browserHistory } from 'react-router';
-import { Image } from 'axiom/react';
-import { Layout, LayoutHeader, LayoutNav, LayoutTitle, LayoutMain, LayoutContent, LayoutFooter } from 'axiom/react/layouts/emblem';
-import { ButtonGroup, Button } from 'axiom/react';
+import { Image } from 'bw-axiom/react';
+import { Layout, LayoutHeader, LayoutNav, LayoutTitle, LayoutMain, LayoutContent, LayoutFooter } from 'bw-axiom/react/layouts/emblem';
+import { ButtonGroup, Button } from 'bw-axiom/react';
 import EmblemLayout from './EmblemLayout';
 
 export default {

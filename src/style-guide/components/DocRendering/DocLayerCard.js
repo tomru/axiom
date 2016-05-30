@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { Card, CardContent, CardTitle } from 'axiom/react';
-import { Paragraph } from 'axiom/react';
+import { Card, CardContent, CardTitle } from 'bw-axiom/react';
+import { Paragraph } from 'bw-axiom/react';
 import DocLayer from 'style-guide/components/DocRendering/DocLayer';
 import DocStatus from 'style-guide/components/DocRendering/DocStatus';
 

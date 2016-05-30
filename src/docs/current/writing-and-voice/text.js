@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Card, CardContent , CardTitle } from 'axiom/react';
-import { Heading, List, ListItem, Paragraph, Strong } from 'axiom/react';
+import { Card, CardContent , CardTitle } from 'bw-axiom/react';
+import { Heading, List, ListItem, Paragraph, Strong } from 'bw-axiom/react';
 import CardTabset from 'style-guide/components/CodeSnippet/CodeTabset';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
-import { PROP_TYPES_SETS } from 'axiom/react/utils/prop-types';
+import { PROP_TYPES_SETS } from 'bw-axiom/react/utils/prop-types';
 
 class Text extends Component {
   render() {

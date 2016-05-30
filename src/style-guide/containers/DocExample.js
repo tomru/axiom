@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import { LayoutContent } from 'axiom/react/layouts/established';
+import { LayoutContent } from 'bw-axiom/react/layouts/established';
 import DocLayer from 'style-guide/components/DocRendering/DocLayer';
 
 export class DocExample extends Component {

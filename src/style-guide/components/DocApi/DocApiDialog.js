@@ -1,8 +1,8 @@
 import React, { PropTypes, Component } from 'react';
-import { ButtonGroup, Button } from 'axiom/react';
-import { CardContent } from 'axiom/react';
-import { Dialog, DialogBody, DialogFooter, DialogTitle } from 'axiom/react';
-import { Heading } from 'axiom/react';
+import { ButtonGroup, Button } from 'bw-axiom/react';
+import { CardContent } from 'bw-axiom/react';
+import { Dialog, DialogBody, DialogFooter, DialogTitle } from 'bw-axiom/react';
+import { Heading } from 'bw-axiom/react';
 import DocApiList from 'style-guide/components/DocApi/DocApiList';
 import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';

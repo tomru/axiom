@@ -1,5 +1,5 @@
-import { colorPalette, colorAliases } from 'axiom/sass';
-import { Button, ButtonGroup, Icon } from 'axiom/react';
+import { colorPalette, colorAliases } from 'bw-axiom/sass';
+import { Button, ButtonGroup, Icon } from 'bw-axiom/react';
 
 export default {
   id: 'button',

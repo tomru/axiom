@@ -1,10 +1,10 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import { Card, CardContent } from 'axiom/react';
-import { Billboard } from 'axiom/react';
-import { Grid, GridCell } from 'axiom/react';
-import { Heading } from 'axiom/react';
-import { LayoutContent } from 'axiom/react/layouts/established';
+import { Card, CardContent } from 'bw-axiom/react';
+import { Billboard } from 'bw-axiom/react';
+import { Grid, GridCell } from 'bw-axiom/react';
+import { Heading } from 'bw-axiom/react';
+import { LayoutContent } from 'bw-axiom/react/layouts/established';
 import DocApiDialogTrigger from 'style-guide/components/DocApi/DocApiDialogTrigger';
 import { getParentNames } from 'style-guide/utils/navigation';
 import { renderApiDocs } from 'style-guide/utils/rendering/rendering-api';

@@ -1,10 +1,10 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import { Card, CardTitle, CardContent, CardList } from 'axiom/react';
-import { Icon } from 'axiom/react';
-import { Heading } from 'axiom/react';
-import { Indicator } from 'axiom/react';
-import { LayoutContent, LayoutFullHeightContainer } from 'axiom/react/layouts/established';
+import { Card, CardTitle, CardContent, CardList } from 'bw-axiom/react';
+import { Icon } from 'bw-axiom/react';
+import { Heading } from 'bw-axiom/react';
+import { Indicator } from 'bw-axiom/react';
+import { LayoutContent, LayoutFullHeightContainer } from 'bw-axiom/react/layouts/established';
 import SearchResult from 'style-guide/components/DocSearch/SearchResult';
 import { findById } from 'style-guide/utils/navigation';
 
