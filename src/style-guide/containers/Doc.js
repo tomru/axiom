@@ -36,8 +36,8 @@ export class Doc extends Component {
               <CardContent>
                 <Grid vAlign="bottom">
                   <GridCell>
-                    <Heading level={ 4 } textCase="capital">{ markdownRoute[markdownRoute.length - 1] }</Heading>
-                    <Heading level={ 2 } textCase="capital">{ markdownRoute.slice(0, -1).join(' / ') }</Heading>
+                    <Heading level={ 4 } textCase="capital">{ markdownRoute.slice(0, -1).join(' / ') }</Heading>
+                    <Heading level={ 2 } textCase="capital">{ markdownRoute[markdownRoute.length - 1] }</Heading>
                   </GridCell>
                 </Grid>
               </CardContent>
