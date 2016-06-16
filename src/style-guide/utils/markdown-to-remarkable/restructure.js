@@ -1,3 +1,4 @@
+import flattenDeep from 'lodash/flattenDeep';
 import * as tokenTypes from 'style-guide/utils/remarkable-to-react/token-types';
 import { _cardCheck, _cardRule } from './restructure-rules/_card';
 
@@ -8,18 +9,6 @@ const restructureRulesCheckMap = {
 const restructureRules = {
   [tokenTypes.HEADING]: _cardRule,
 };
-
-function flatten(content, flatStructure = []) {
-  return content.reduce((flatStructure, element) => {
-    if (Array.isArray(element)) {
-      return flatten(element, flatStructure);
-    }
-
-    flatStructure.push(element);
-
-    return flatStructure;
-  }, flatStructure);
-}
 
 function hasRestructureRule(element) {
   return element.props &&
@@ -33,7 +22,7 @@ export default function restructure(content) {
   let index = -1;
   let restructureRule;
   const restructured = [];
-  const flatStructure = flatten(content);
+  const flatStructure = flattenDeep(content);
 
   while (++index < flatStructure.length) {
     if ((restructureRule = hasRestructureRule(flatStructure[index]))) {

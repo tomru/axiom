@@ -5,7 +5,7 @@ import { Billboard } from 'bw-axiom/react';
 import { Grid, GridCell } from 'bw-axiom/react';
 import { Heading } from 'bw-axiom/react';
 import { LayoutContent } from 'bw-axiom/react/layouts/established';
-import { render2 } from 'style-guide/utils/markdown-to-remarkable';
+import { render } from 'style-guide/utils/markdown-to-remarkable';
 import { pathToMarkdownRoute, getMarkdownContentFunction } from 'style-guide//utils/markdown-document';
 
 export class Doc extends Component {
@@ -26,7 +26,6 @@ export class Doc extends Component {
 
     const markdownRoute = pathToMarkdownRoute(pathname);
     const markdownContentFunction = getMarkdownContentFunction(markdownRoute);
-    const renderedContent = render2(markdownContentFunction, routeParams, query);
 
     return (
       <div>
@@ -46,7 +45,7 @@ export class Doc extends Component {
         </Billboard>
 
         <LayoutContent>
-          { renderedContent }
+          { render(markdownContentFunction, routeParams, query) }
         </LayoutContent>
       </div>
     );
