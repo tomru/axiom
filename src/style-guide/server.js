@@ -10,10 +10,7 @@ import * as config from '../../config';
 import createStore from './redux/createStore';
 import createRoutes from './redux/createRoutes';
 import { initialState as searchInitialState } from './reducers/search';
-import { initialState as navigationInitialState } from './reducers/navigation';
-import { createNavStructure } from './utils/navigation';
-import { searchRoutesForText } from './utils/search';
-import { versions } from '../docs';
+import { searchDocumentationVersion } from './utils/documentation-search';
 import Html from './components/Html';
 
 try {
@@ -25,23 +22,16 @@ try {
   server.use('/api/search', (req, res) => {
     res.status(200).json({
       version: req.query.v,
-      results: searchRoutesForText(
-        req.query.q,
-        req.query.v,
-      ),
+      results: searchDocumentationVersion(req.query.q, req.query.v),
     });
   });
 
   server.get('*', (req, res) => {
     const initialState = {
-      navigation: {
-        ...navigationInitialState,
-        versions: createNavStructure(versions),
-      },
       search: {
         ...searchInitialState,
-        results: req.query.q ? searchRoutesForText(req.query.q, req.query.v) : [],
-        version: req.query.v || navigationInitialState.activeVersion,
+        results: req.query.q ? searchDocumentationVersion(req.query.q, req.query.v) : [],
+        version: req.query.v,
       },
     };
 

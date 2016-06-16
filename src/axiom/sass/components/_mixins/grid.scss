@@ -56,14 +56,19 @@
 
   @include grid-breakpoint($breakpoint-width) {
     .ax-grid {
-      > .ax-grid__cell--sixth#{$size-class}   { flex: 0 0 (100% / 6); }
-      > .ax-grid__cell--fifth#{$size-class}   { flex: 0 0 (100% / 5); }
-      > .ax-grid__cell--quarter#{$size-class} { flex: 0 0 (100% / 4); }
-      > .ax-grid__cell--third#{$size-class}   { flex: 0 0 (100% / 3); }
-      > .ax-grid__cell--half#{$size-class}    { flex: 0 0 (100% / 2); }
       > .ax-grid__cell--fit#{$size-class}     { flex: 1; }
       > .ax-grid__cell--full#{$size-class}    { flex: 0 0 100%; }
       > .ax-grid__cell--shrink#{$size-class}  { flex: 0 1 auto; }
+
+      @each $grid-width in $grid-widths {
+        $width-id: map-get($grid-width, id);
+        $width-percent: map-get($grid-width, percent);
+
+        > .ax-grid__cell--#{$width-id}#{$size-class} {
+          flex: none;
+          width: $width-percent;
+        }
+      }
 
       &.ax-grid--fit#{$size-class} > .ax-grid__cell {
         flex: 1;

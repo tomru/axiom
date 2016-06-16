@@ -1,8 +1,8 @@
 import * as types from 'style-guide/constants/ActionTypes';
-import { apiSearchRoutes } from 'style-guide/actions/api';
-import { goToSearchPage } from 'style-guide/actions/route';
+import { goToSearchPage } from 'style-guide/actions/routing';
+import fetch from 'style-guide/utils/fetch';
 
-export function searchReceiveSearch({ results, version = 'current' }) {
+export function searchReceiveSearch({ results, version }) {
   return {
     type: types.SEARCH_RECEIVE_SEARCH,
     payload: { results, version },
@@ -17,10 +17,10 @@ export function searchRequestSearch() {
 
 export function searchRoutes(text) {
   return (dispatch) => {
-    dispatch(goToSearchPage(text));
+    goToSearchPage(text);
     dispatch(searchRequestSearch());
 
-    return apiSearchRoutes(text)
-      .then(response => dispatch(searchReceiveSearch(response)));
+    return fetch(`/api/search?q=${text}`)
+      .then((response) => dispatch(searchReceiveSearch(response)));
   };
 }

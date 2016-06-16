@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
 import classnames from 'classnames';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-jsx';
 import 'prismjs/components/prism-scss';
+import { BASH, SCSS, HTML, JSX, JS } from 'style-guide/constants/CodeLanguages';
 import {
   prepareBashSnippet,
   prepareSassSnippet,
@@ -17,11 +17,11 @@ if (__CLIENT__) {
 }
 
 const prepareMap = {
-  bash: prepareBashSnippet,
-  sass: prepareSassSnippet,
-  html: prepareHTMLSnippet,
-  jsx: prepareJSXSnippet,
-  js: prepareJSSnippet,
+  [BASH]: prepareBashSnippet,
+  [SCSS]: prepareSassSnippet,
+  [HTML]: prepareHTMLSnippet,
+  [JSX]: prepareJSXSnippet,
+  [JS]: prepareJSSnippet,
 };
 
 export default class CodeSnippet extends Component {
@@ -30,72 +30,34 @@ export default class CodeSnippet extends Component {
     language: PropTypes.string.isRequired,
   };
 
-  componentWillMount() {
-    this.setCode(this.props);
-  }
-
   componentDidMount() {
     this.highlightElement();
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.setCode(nextProps);
   }
 
   componentDidUpdate() {
     this.highlightElement();
   }
 
-  getStaticMarkup(element, markup = '') {
-    if (!element) {
-      return markup;
-    }
-
-    if (typeof element === 'string') {
-      return element;
-    }
-
-    if (Array.isArray(element)) {
-      return element.reduce((prev, child) => {
-        return `${prev}${this.getStaticMarkup(child)}`;
-      }, markup);
-    }
-
-    return renderToStaticMarkup(element);
-  }
-
-  setCode({ children }) {
-    if (__CLIENT__) {
-      const code = this.getStaticMarkup(children);
-
-      if (code) {
-        this.setState({ code });
-      }
-    }
-  }
-
   highlightElement() {
-    const { language } = this.props;
-
-    if (this.state && this.state.code) {
-      this.refs.code.innerHTML = prepareMap[language](this.state.code);
-      Prism.highlightElement(this.refs.code);
-    }
+    Prism.highlightElement(this.refs.code);
   }
 
   render() {
-    const { language } = this.props;
+    const { children, language } = this.props;
     const classes = classnames({
-      'language-bash': language === 'bash',
-      'language-markup': language === 'html',
-      'language-javascript': language === 'js',
-      'language-jsx': language === 'jsx',
-      'language-scss': language === 'sass',
+      'language-bash': language === BASH,
+      'language-markup': language === HTML,
+      'language-javascript': language === JS,
+      'language-jsx': language === JSX,
+      'language-scss': language === SCSS,
     });
 
     return (
       <pre>
-        <code className={ classes } ref="code" />
+        <code
+            className={ classes }
+            dangerouslySetInnerHTML={ { __html: prepareMap[language](children) } }
+            ref="code" />
       </pre>
     );
   }

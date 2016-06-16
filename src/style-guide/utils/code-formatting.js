@@ -7,7 +7,6 @@ import {
 // Encode all of the HTML characters so it can be displayed.
 function encodeHTML(html) {
   return html
-    .replace(/=""/g, '')
     .replace(/&/g, '&amp;')
     .replace(/"/g, '&quot;')
     .replace(/</g, '&lt;')

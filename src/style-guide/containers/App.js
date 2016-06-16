@@ -1,45 +1,45 @@
 import React, { PropTypes, Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as navigationActions from 'style-guide/actions/navigation';
+import { Layout, LayoutHeader, LayoutSidebar, LayoutSidebarHeader, LayoutSidebarContent, LayoutMain, LayoutNav, LayoutFooter } from 'bw-axiom/react/layouts/established';
+import * as docsActions from 'style-guide/actions/docs';
 import * as searchActions from 'style-guide/actions/search';
-import SearchInput from 'style-guide/components/DocSearch/SearchInput';
-import {
-  Layout,
-  LayoutHeader,
-  LayoutSidebar,
-  LayoutSidebarHeader,
-  LayoutSidebarContent,
-  LayoutMain,
-  LayoutNav,
-  LayoutFooter,
-} from 'bw-axiom/react/layouts/established';
+import SearchInput from 'style-guide/components/Search/SearchInput';
+import { buildNavigationItems } from 'style-guide/utils/documentation-navigation';
 
 export class Docs extends Component {
   static propTypes = {
     children: PropTypes.any,
     dispatch: PropTypes.func.isRequired,
+    docsState: PropTypes.shape({
+      activePath: PropTypes.array.isRequired,
+      openPath: PropTypes.array.isRequired,
+    }).isRequired,
     location: PropTypes.object.isRequired,
-    navigationState: PropTypes.shape({
-      activeVersion: PropTypes.string.isRequired,
-      versions: PropTypes.object.isRequired,
-    }).isRequired,
-    schemesState: PropTypes.shape({
-      active: PropTypes.string.isRequired,
-    }).isRequired,
     searchState: PropTypes.object.isRequired,
   };
 
   componentWillMount() {
     const { dispatch } = this.props;
-    this.boundNavigationActions = bindActionCreators(navigationActions, dispatch);
+    this.boundDocsActions = bindActionCreators(docsActions, dispatch);
     this.boundSearchActions = bindActionCreators(searchActions, dispatch);
   }
 
+  onItemClick({ path }) {
+    const { docsSetOpenPath } = this.boundDocsActions;
+    docsSetOpenPath(path);
+  }
+
   render() {
-    const { children, navigationState, searchState, location } = this.props;
-    const { navigationItemClick } = this.boundNavigationActions;
-    const { activeVersion, versions } = navigationState;
+    const {
+      children,
+      docsState: {
+        activePath,
+        openPath,
+      },
+      location,
+      searchState,
+    } = this.props;
 
     return (
       <Layout>
@@ -56,7 +56,9 @@ export class Docs extends Component {
           </LayoutSidebarHeader>
 
           <LayoutSidebarContent>
-            <LayoutNav items={ versions[activeVersion] } onItemClick={ navigationItemClick } />
+            <LayoutNav
+                items={ buildNavigationItems(activePath, openPath) }
+                onItemClick={ ::this.onItemClick } />
           </LayoutSidebarContent>
         </LayoutSidebar>
 
@@ -71,8 +73,7 @@ export class Docs extends Component {
 
 function select(state) {
   return {
-    navigationState: state.navigation,
-    schemesState: state.schemes,
+    docsState: state.docs,
     searchState: state.search,
   };
 }

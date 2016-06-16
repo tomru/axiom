@@ -20,7 +20,6 @@ export class LayoutNavListItem extends Component {
         to,
         name,
         children,
-        hasChildren,
         isOpen,
         isActive,
       },
@@ -30,6 +29,7 @@ export class LayoutNavListItem extends Component {
       return () => onClick(item);
     }
 
+    const hasChildren = Array.isArray(children) && children.length;
     const classes = classnames(className,
       'ax-layout--established-nav__list-item', {
         'ax-layout--established-nav__list-item--open': hasChildren && isOpen,

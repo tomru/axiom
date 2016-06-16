@@ -31,10 +31,7 @@ export class Button extends Component {
     } = this.props;
 
     const icon = findComponent(children, Icon);
-    const filteredChildren = Children.toArray(children).filter((component) =>
-      component.type !== Icon
-    );
-
+    const filteredChildren = Children.toArray(children).filter((component) => component.type !== Icon);
     const classes = classnames(className,
       'ax-button', {
         [`ax-button--${color}`]: color,

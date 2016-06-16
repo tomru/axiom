@@ -15,6 +15,12 @@ export default {
     path: config.output.path,
     filename: config.output.styleGuide.serverDevJSFilename,
   },
+  resolveLoader: {
+    modulesDirectories: [
+      'node_modules',
+      'utils',
+    ],
+  },
   plugins: [
     ...config.webpack.aliases,
     new webpack.DefinePlugin({
@@ -41,6 +47,12 @@ export default {
       test: /\.js$/,
       loader: 'babel',
       exclude: /node_modules/,
+    }, {
+      test: /\.md$/,
+      loaders: [
+        'babel',
+        'markdown-documentation',
+      ],
     }],
   },
 };

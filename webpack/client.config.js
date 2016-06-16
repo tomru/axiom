@@ -21,11 +21,18 @@ export default {
       'style-guide': config.paths.styleGuide,
     },
   },
+  resolveLoader: {
+    modulesDirectories: [
+      'node_modules',
+      'utils',
+    ],
+  },
   plugins: [
     ...config.webpack.aliases,
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     // TODO: Can't enable this until UglifyJS2 Harmony is released
+    // https://github.com/mishoo/UglifyJS2/issues/448
     // new webpack.optimize.UglifyJsPlugin({
       // compress: {
         // keep_fnames: true,
@@ -71,6 +78,12 @@ export default {
       test: /\.js$/,
       loader: 'babel',
       exclude: /node_modules/,
+    }, {
+      test: /\.md$/,
+      loaders: [
+        'babel',
+        'markdown-documentation',
+      ],
     }],
   },
   sassLoader: {

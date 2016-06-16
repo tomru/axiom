@@ -5,39 +5,28 @@ import { Billboard } from 'bw-axiom/react';
 import { Grid, GridCell } from 'bw-axiom/react';
 import { Heading } from 'bw-axiom/react';
 import { LayoutContent } from 'bw-axiom/react/layouts/established';
-import DocApiDialogTrigger from 'style-guide/components/DocApi/DocApiDialogTrigger';
-import { getParentNames } from 'style-guide/utils/navigation';
-import { renderApiDocs } from 'style-guide/utils/rendering/rendering-api';
-import { renderImports } from 'style-guide/utils/rendering/rendering-imports';
+import { render2 } from 'style-guide/utils/markdown-to-remarkable';
+import { pathToMarkdownRoute, getMarkdownContentFunction } from 'style-guide//utils/markdown-document';
 
 export class Doc extends Component {
   static propTypes = {
-    children: PropTypes.node,
-    navigationState: PropTypes.shape({
-      activeVersion: PropTypes.string.isRequired,
-      versions: PropTypes.object.isRequired,
+    location: PropTypes.shape({
+      query: PropTypes.object.isRequired,
     }).isRequired,
-    route: PropTypes.shape({
-      doc: PropTypes.object.isRequired,
-      navItem: PropTypes.object.isRequired,
+    routeParams: PropTypes.shape({
+      splat: PropTypes.array.isRequired,
     }).isRequired,
   };
 
   render() {
     const {
-      children,
-      navigationState: {
-        activeVersion,
-        versions,
-      },
-      route: {
-        doc,
-        navItem,
-      },
+      routeParams,
+      location: { pathname, query },
     } = this.props;
 
-    const apiDocs = renderApiDocs(doc);
-    const importDocs = renderImports(doc);
+    const markdownRoute = pathToMarkdownRoute(pathname);
+    const markdownContentFunction = getMarkdownContentFunction(markdownRoute);
+    const renderedContent = render2(markdownContentFunction, routeParams, query);
 
     return (
       <div>
@@ -47,44 +36,26 @@ export class Doc extends Component {
               <CardContent>
                 <Grid vAlign="bottom">
                   <GridCell>
-                    <Heading level={ 4 }>{
-                      getParentNames(versions[activeVersion], navItem)
-                        .slice(-1)
-                        .reverse()
-                        .join(' / ')
-                    }</Heading>
-                    <Heading level={ 2 }>{ navItem.name }</Heading>
+                    <Heading level={ 4 } textCase="capital">{ markdownRoute[markdownRoute.length - 1] }</Heading>
+                    <Heading level={ 2 } textCase="capital">{ markdownRoute.slice(0, -1).join(' / ') }</Heading>
                   </GridCell>
-
-                  {
-                    do {
-                      if (apiDocs.length) {
-                        <GridCell shrink={ true }>
-                          <DocApiDialogTrigger
-                              apiDocs={ apiDocs }
-                              importDocs={ importDocs }
-                              title={ navItem.name } />
-                        </GridCell>
-                      }
-                    }
-                  }
                 </Grid>
               </CardContent>
             </Card>
           </LayoutContent>
         </Billboard>
 
-        { children }
+        <LayoutContent>
+          { renderedContent }
+        </LayoutContent>
       </div>
     );
   }
 }
 
 
-function select(state) {
-  return {
-    navigationState: state.navigation,
-  };
+function select() {
+  return {};
 }
 
 export default connect(select)(Doc);
