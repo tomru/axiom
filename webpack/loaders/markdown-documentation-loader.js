@@ -12,7 +12,7 @@ function prepareDoc(content) {
     .reduce((array, line) => {
       if (!inJsx && line.includes('```jsx')) {
         inJsx = true;
-        jsxContent += '(routeParams, queryParams) => { return ';
+        jsxContent += '() => { return ';
       } else if (inJsx) {
         if (line.includes('```')) {
           inJsx = false;
