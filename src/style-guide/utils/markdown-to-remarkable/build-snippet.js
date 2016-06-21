@@ -41,8 +41,8 @@ export default function buildSnippet(element) {
   const snippetContent = extract(element);
 
   if (snippetContent) {
-    const jsxSnippet = reactElementToJsxString(snippetContent, ['className', 'renderSkip']);
-    const htmlSnippet = reactElementToHtmlString(snippetContent, ['className', 'renderSkip']);
+    const jsxSnippet = reactElementToJsxString(snippetContent, ['renderSkip']);
+    const htmlSnippet = reactElementToHtmlString(snippetContent, ['renderSkip']);
 
     if (jsxSnippet || htmlSnippet) {
       content.push('```jsx');
