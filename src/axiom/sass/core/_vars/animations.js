@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   transitionTimeFast: '200ms',
   transitionTimeBase: '400ms',
   transitionTimeSlow: '600ms',

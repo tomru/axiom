@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   scaleMinorSecond: 1.067,
   scaleMajorSecond: 1.125,
   scaleMinorThird: 1.200,

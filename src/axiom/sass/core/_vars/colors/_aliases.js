@@ -1,6 +1,6 @@
 import palette from './_palette';
 
-export default {
+module.exports = {
   colorFeedbackSuccess: palette.colorGreen,
   colorFeedbackInfo: palette.colorBlue,
   colorFeedbackDanger: palette.colorRed,

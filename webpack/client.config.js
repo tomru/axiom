@@ -24,7 +24,7 @@ export default {
   resolveLoader: {
     modulesDirectories: [
       'node_modules',
-      'utils',
+      'webpack/loaders',
     ],
   },
   plugins: [

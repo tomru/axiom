@@ -24,7 +24,7 @@ const breakpoints = [
   { id: 'lg', width: layoutWidthLg },
 ];
 
-export default {
+module.exports = {
   spacingXs,
   spacingSm,
   spacingBase,

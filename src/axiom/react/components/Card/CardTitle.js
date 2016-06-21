@@ -4,7 +4,7 @@ import { enhance, addPropTypes, addClassName } from '../../utils/components';
 import Grid from '../Grid/Grid';
 import GridCell from '../Grid/GridCell';
 
-export default class CardTitle extends Component {
+export class CardTitle extends Component {
   static propTypes = {
     children: { node: true },
     title: { string: true },

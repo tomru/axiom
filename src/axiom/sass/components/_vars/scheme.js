@@ -1,6 +1,6 @@
 import schemeAxiom from './schemes/scheme-axiom';
 
-export default {
+module.exports = {
   schemeAxiom,
   schemes: [
     schemeAxiom,

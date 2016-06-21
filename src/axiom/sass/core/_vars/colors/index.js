@@ -95,7 +95,7 @@ const colorVariations = colors.reduce((acc, { color }) => {
   return acc;
 }, []);
 
-export default {
+module.exports = {
   ...palette,
   ...aliases,
 

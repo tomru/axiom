@@ -9,7 +9,7 @@ const propTypes = {
   size: { oneOf: ['sm', 'md', 'lg'], default: 'md' },
 };
 
-export default class StatusIndicator extends Component {
+export class StatusIndicator extends Component {
   static propTypes = propTypes;
 
   render() {

@@ -9,7 +9,7 @@ import {
 const schemePrimaryColor = colorBlue;
 const schemeAccentColor = colorBlue;
 
-export default {
+module.exports = {
   class: 'scheme-axiom',
   primary: schemePrimaryColor,
   accent: schemeAccentColor,

@@ -1,5 +1,5 @@
 import axiomVars from '../../axiom/sass';
 
-export default {
+module.exports = {
   ...axiomVars,
 };

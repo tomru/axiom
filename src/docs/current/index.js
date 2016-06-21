@@ -1,6 +1,6 @@
 import { V_CURRENT } from 'style-guide/constants/Versions'
 
-export default {
+module.exports = {
   id: V_CURRENT,
   children: [
     {

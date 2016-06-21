@@ -30,7 +30,7 @@ function prepareDoc(content) {
     }, []);
 }
 
-export default function markdownLoader(source, map) {
+module.exports = function markdownLoader(source, map) {
   this.cacheable && this.cacheable();
 
   const importsRegex = /(import[^;]*;)/g;
@@ -41,6 +41,6 @@ export default function markdownLoader(source, map) {
     import React from 'react';
     ${imports.join('\n')}
 
-    export default (routeParams, queryParams) => [${prepareDoc(nonImports)}];
+    module.exports = (routeParams, queryParams) => [${prepareDoc(nonImports)}];
   `, map);
 }

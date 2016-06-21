@@ -7,9 +7,6 @@
         "es2015",
         "stage-0"
       ],
-      "plugins": [
-        "add-module-exports"
-      ],
       "ignore": [
         "/node_modules\//"
       ]
@@ -19,9 +16,6 @@
         "react",
         "es2015",
         "stage-0"
-      ],
-      "plugins": [
-        "add-module-exports"
       ],
       "ignore": [
         "/node_modules\//"

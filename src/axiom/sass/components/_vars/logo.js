@@ -9,7 +9,7 @@ const logoHorizontalHeightSm = 20;
 const logoHorizontalHeightMd = 40;
 const logoHorizontalHeightLg = 60;
 
-export default {
+module.exports = {
   logoVerticalHeightSm: `${logoVerticalHeightSm}px`,
   logoVerticalHeightMd: `${logoVerticalHeightMd}px`,
   logoVerticalHeightLg: `${logoVerticalHeightLg}px`,

@@ -1,7 +1,7 @@
 import core from './core/vars';
 import components from './components/_vars';
 
-export default {
+module.exports = {
   ...core,
   ...components,
 };

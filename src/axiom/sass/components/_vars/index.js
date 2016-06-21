@@ -4,7 +4,7 @@ import logo from './logo';
 import scheme from './scheme';
 import typography from './typography';
 
-export default {
+module.exports = {
   ...dialog,
   ...grid,
   ...logo,

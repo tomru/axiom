@@ -1,6 +1,6 @@
 import vars from '../../core/vars';
 
-export default {
+module.exports = {
   gridChangePoint: vars.layoutWidthSm,
   gridGutters: [
     { id: 'xs', size: vars.spacingXs },

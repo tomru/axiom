@@ -4,7 +4,7 @@ import math from './_vars/math';
 import sizes from './_vars/sizes';
 import zIndex from './_vars/z-index';
 
-export default {
+module.exports = {
   ...animations,
   ...colors,
   ...math,

@@ -25,7 +25,7 @@ const fontSizeH3 =  fontSizeH4 * fontSizeRatio;
 const fontSizeH2 =  fontSizeH3 * fontSizeRatio;
 const fontSizeH1 =  fontSizeH2 * fontSizeRatio;
 
-export default {
+module.exports = {
   fontFamilyBody,
   fontFamilyH1,
   fontFamilyH2,
