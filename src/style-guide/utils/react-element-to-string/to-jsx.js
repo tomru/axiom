@@ -18,6 +18,13 @@ function renderProps(props, withoutProps) {
   }, '');
 }
 
+function getDisplayName(Component) {
+  return Component.__ax_displayName ||
+    Component.name ||
+    Component.displayName ||
+    (typeof Component === 'string' ? Component : 'Component');
+}
+
 export default function reactElementToJsxString(element, withoutProps = []) {
   if (Array.isArray(element)) {
     return element.reduce((string, element) => {
@@ -29,13 +36,14 @@ export default function reactElementToJsxString(element, withoutProps = []) {
     return element;
   }
 
-  const { props, props: { children }, type: { __ax_displayName } } = element;
-  let jsxString = `<${__ax_displayName} ${renderProps(props, withoutProps)}`;
+  const { props, props: { children }, type } = element;
+  const displayName = getDisplayName(type);
+  let jsxString = `<${displayName} ${renderProps(props, withoutProps)}`;
 
   if (children) {
     jsxString += '>';
     jsxString += reactElementToJsxString(children, withoutProps);
-    jsxString += `</${__ax_displayName}>`;
+    jsxString += `</${displayName}>`;
   } else {
     jsxString += ' />';
   }
