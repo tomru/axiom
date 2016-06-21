@@ -6,7 +6,16 @@ import { V_CURRENT } from 'style-guide/constants/Versions';
 import { isReactElement } from 'style-guide/utils/react-elements';
 
 export function markdownRouteToPath(route) {
-  return  `/${routes.DOCS}/${route.join('/')}`;
+  return `/${routes.DOCS}/${route.join('/')}`;
+}
+
+// Needed until React Router 3.0.0 with
+// relative to Link component.
+export function markdownRouteToVersionedPath(route, pathanme) {
+  return markdownRouteToPath([
+    getVersion(pathToMarkdownRoute(pathanme)).id,
+    ...route]
+  );
 }
 
 export function pathToMarkdownRoute(path) {
