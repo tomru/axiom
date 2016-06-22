@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
 import { mergeClassNameSets } from './class-name';
-import { addReactPropTypes, mergePropTypeSets, mapToPropTypes } from './prop-types';
+import { mergePropTypeSets, mapToPropTypes } from './prop-types';
 
 export function findComponent(components, Component) {
   return Children.toArray(components).find(({ type }) => type === Component);
@@ -29,7 +29,7 @@ export function enhance(Component) {
 
 export function addPropTypes(...propSets) {
   return (Component) => {
-    Component.__ax_propTypes = addReactPropTypes(Component.propTypes);
+    Component.__ax_propTypes = Component.propTypes;
     Component.__ax_propTypesSet = mergePropTypeSets(propSets);
     Component.propTypes = mapToPropTypes({
       ...Component.__ax_propTypes,

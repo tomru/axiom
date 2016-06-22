@@ -5,7 +5,7 @@ import { enhance, addPropTypes, addClassName } from '../../utils/components';
 export class CardListItem extends Component {
   static propTypes = {
     children: { node: true },
-    clickable: { boolean: true },
+    clickable: { bool: true },
   };
 
   render() {

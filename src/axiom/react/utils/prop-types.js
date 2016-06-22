@@ -49,13 +49,15 @@ function getPropType(prop) {
   return {};
 }
 
-function createPropType(prop, isRequired) {
+function createPropType(prop) {
+  const { isRequired } = prop;
+  const { type, propType } = getPropType(prop);
   let finalPropType;
-  const { propType, type } = prop;
 
   if (!propType) {
     throw new Error(`No matching PropType found: ${JSON.stringify(prop)}`);
   }
+
   switch (propType) {
   case PropTypes.any:
   case PropTypes.string:
@@ -73,11 +75,11 @@ function createPropType(prop, isRequired) {
     finalPropType = propType(prop[type]);
     break;
   case PropTypes.oneOfType:
-    finalPropType = propType(prop[type].map((p) => createPropType(p, false)));
+    finalPropType = propType(prop[type].map((p) => createPropType(p)));
     break;
   case PropTypes.arrayOf:
   case PropTypes.objectOf:
-    finalPropType = propType(getPropType(prop[type]));
+    finalPropType = propType(createPropType(prop[type]));
     break;
   case PropTypes.shape:
     finalPropType = propType(mapToPropTypes(prop[type]));
@@ -89,28 +91,12 @@ function createPropType(prop, isRequired) {
     : finalPropType;
 }
 
-export function addReactPropTypes(props = {}) {
-  return Object.keys(props).reduce((acc, key) => {
-    const { type, propType } = getPropType(props[key]);
-
-    if (type && propType) {
-      acc[key] = {
-        ...props[key],
-        type,
-        propType,
-      };
-    }
-
-    return acc;
-  }, {});
-}
-
 export function mergePropTypeSets(propSets) {
   return propSets.reduce((acc, set) => {
     if (PROP_TYPES_SETS[set]) {
       return {
         ...acc,
-        ...addReactPropTypes(PROP_TYPES_SETS[set]),
+        ...PROP_TYPES_SETS[set],
       };
     }
 
@@ -120,7 +106,7 @@ export function mergePropTypeSets(propSets) {
 
 export function mapToPropTypes(props) {
   return Object.keys(props).reduce((propTypes, key) => {
-    propTypes[key] = createPropType(props[key], props[key].isRequired);
+    propTypes[key] = createPropType(props[key]);
     return propTypes;
   }, {});
 }

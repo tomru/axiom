@@ -7,7 +7,16 @@ import LayoutNavList from './LayoutNavList';
 export class LayoutNavListItem extends Component {
   static propTypes = {
     className: { string: true },
-    item: { object: true, isRequired: true },
+    item: {
+      shape: {
+        children: { array: true },
+        isOpen: { bool: true, isRequired: true  },
+        isActive: { bool: true, isRequired: true },
+        name: { string: true, isRequired: true },
+        to: { string: true },
+      },
+      isRequired: true,
+    },
     onClick: { func: true },
   };
 
@@ -50,7 +59,7 @@ export class LayoutNavListItem extends Component {
           if (hasChildren) {
             <LayoutNavList
                 isOpen={ isOpen }
-                items={ children.filter(({ name }) => name) }
+                items={ children }
                 onItemClick={ onClick } />
           }
         } }
