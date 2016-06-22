@@ -1,6 +1,6 @@
 ## Axiom - Pattern Library
 
-A consumable library of UI & UX patterns, that can take you from a blank page to production without making any design decisions. Backed by a Style Guide Driven Development approach and a living style guide, documentation does not become a forgotten seperate task and is automated at a level that still has flexiblity. 
+A consumable library of UI & UX patterns, that can take you from a blank page to production withoutwithout having to worry about styling and design details. Backed by a Style Guide Driven Development approach and a living style guide, documentation does not become a forgotten seperate task and is automated at a level that still has flexiblity. 
 
 **Status**: In development, unstable, experimental, hazardous ... other off-putting words 
 
