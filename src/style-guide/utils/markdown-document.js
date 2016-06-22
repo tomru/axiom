@@ -41,6 +41,10 @@ export function getFirstDocumentRoute(version = V_CURRENT, { id, children } = ge
   return [...paths, id];
 }
 
+export function getFirstDocumentPath(version = V_CURRENT) {
+  return markdownRouteToPath(getFirstDocumentRoute(version));
+}
+
 export function getMarkdownContentFunction(route) {
   return route.reduce((level, nextLevelId) => {
     if (Array.isArray(level)) {

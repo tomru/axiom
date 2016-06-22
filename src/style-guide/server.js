@@ -49,7 +49,7 @@ try {
           ${renderToString(
             <Html store={ store }>
               <Provider key="provider" store={ store }>
-                <RouterContext {...renderProps} store={ store } />
+                <RouterContext { ...renderProps } store={ store } />
               </Provider>
             </Html>
           )}

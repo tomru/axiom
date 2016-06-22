@@ -1,6 +1,7 @@
 import { shortNumber } from 'bw-axiom/common';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'bw-axiom/react';
 
+
 # Standard Table
 
 ```jsx
@@ -46,6 +47,7 @@ import { Table, Thead, Tbody, Tr, Th, Td } from 'bw-axiom/react';
 </Table>
 ```
 
+
 # Stripy Table
 ```jsx
 <Table striped={ true }>
@@ -89,6 +91,7 @@ import { Table, Thead, Tbody, Tr, Th, Td } from 'bw-axiom/react';
   </Tbody>
 </Table>
 ```
+
 
 # Bordered Table
 
@@ -223,6 +226,7 @@ import { Table, Thead, Tbody, Tr, Th, Td } from 'bw-axiom/react';
   </Tbody>
 </Table>
 ```
+
 
 # Sortable tables
 ```jsx

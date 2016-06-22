@@ -3,6 +3,7 @@ import { Button, ButtonGroup } from 'bw-axiom/react';
 import { Heading } from 'bw-axiom/react';
 import { Icon } from 'bw-axiom/react';
 
+
 # Colored Buttons
 
 ##### Palette Colors
@@ -140,6 +141,7 @@ Button Group handles spacing buttons that may overflow to a new line. All button
   <Button>A button</Button>
 </ButtonGroup>
 ```
+
 
 # Button Group joined
 

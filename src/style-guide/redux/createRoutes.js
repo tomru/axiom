@@ -1,13 +1,12 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import { Route, IndexRedirect } from 'react-router';
 import { docsRouteEnter } from 'style-guide/actions/docs';
 import * as routes from 'style-guide/constants/Routing';
 import App from 'style-guide/containers/App';
 import Doc from 'style-guide/containers/Doc';
-import Landing from 'style-guide/containers/Landing';
 import SearchResults from 'style-guide/containers/SearchResults';
 import YouAreLost from 'style-guide/containers/YouAreLost';
-import { hasMarkdownContent, pathToMarkdownRoute } from 'style-guide/utils/markdown-document';
+import { getFirstDocumentPath, hasMarkdownContent, pathToMarkdownRoute } from 'style-guide/utils/markdown-document';
 
 function onDocRouteEnter(dispatch) {
   return ({ location: { pathname } }, replace, next) => {
@@ -26,7 +25,7 @@ export default function createRoutes(store) {
 
   return (
     <Route path="/">
-      <IndexRoute component={ Landing } />
+      <IndexRedirect to={ getFirstDocumentPath() } />
       <Route component={ App }>
         <Route component={ SearchResults } path={ routes.SEARCH } />
         <Route component={ YouAreLost } path={ routes.NOT_FOUND } />

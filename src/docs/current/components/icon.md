@@ -1,11 +1,13 @@
 import { Grid, GridCell } from 'bw-axiom/react';
 import { Icon } from 'bw-axiom/react';
 
+
 # Icon - ${queryParams.iconId}
 
 ```jsx
 <Icon name={ queryParams.iconId } size="5x" />
 ```
+
 
 # Icon sizes
 
