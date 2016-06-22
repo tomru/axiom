@@ -7,7 +7,7 @@ import { Table, Thead, Tbody, Tr, Th, Td } from 'bw-axiom/react';
 <Table>
   <Thead>
     <Tr>
-      <Th><span snippetReplace>Lorem</span></Th>
+      <Th>Lorem</Th>
       <Th snippetIgnore isNumber={ true }>Ipsum</Th>
       <Th snippetIgnore isNumber={ true }>Dolar</Th>
       <Th snippetIgnore isNumber={ true }>Sit Amet</Th>
@@ -16,7 +16,7 @@ import { Table, Thead, Tbody, Tr, Th, Td } from 'bw-axiom/react';
 
   <Tbody>
     <Tr>
-      <Td><span snippetReplace>Consectetur adipiscing elit</span></Td>
+      <Td>Consectetur adipiscing elit</Td>
       <Td snippetIgnore isNumber={ true }>{ shortNumber(923741, 2) }</Td>
       <Td snippetIgnore isNumber={ true }>{ shortNumber(238423, 2) }</Td>
       <Td snippetIgnore isNumber={ true }>{ shortNumber(324502, 2) }</Td>
@@ -231,12 +231,8 @@ import { Table, Thead, Tbody, Tr, Th, Td } from 'bw-axiom/react';
     <Tr>
       <Th snippetIgnore>Lorem</Th>
       <Th snippetIgnore isNumber={ true }>Ipsum</Th>
-      <Th isNumber={ true } sorting={ 1 }>
-        <span snippetReplace>Dolar</span>
-      </Th>
-      <Th isNumber={ true } sorting={ -1 }>
-        <span snippetReplace>Sit Amet</span>
-      </Th>
+      <Th isNumber={ true } sorting={ 1 }>Dolar</Th>
+      <Th isNumber={ true } sorting={ -1 }>Sit Amet</Th>
     </Tr>
   </Thead>
 
