@@ -47,7 +47,7 @@ Create a JS Sass variable file.
 // vars-file.js
 import axiomVars from 'bw-axiom/lib/sass';
 
-export default {
+module.exports = {
   ...axiomVars,
 };
 ```
