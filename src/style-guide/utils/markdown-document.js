@@ -63,7 +63,7 @@ export function buildMarkdownContent(contentFn, routeParams, queryParams) {
   return contentFn(routeParams, queryParams).map((element) => {
     return typeof element === 'function'
       ? buildReactElement(element())
-      : element
+      : element;
   });
 }
 

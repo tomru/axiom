@@ -1,8 +1,5 @@
-import {
-  js as beautifyJs,
-  html as beautifyHtml,
-  css as beautifyCSS,
-} from 'js-beautify';
+import { js as beautifyJs, html as beautifyHtml, css as beautifyCSS } from 'js-beautify';
+import { SCSS, HTML, JSX, JS, MARKDOWN } from 'style-guide/constants/CodeLanguages';
 
 // Encode all of the HTML characters so it can be displayed.
 function encodeHTML(html) {
@@ -39,36 +36,52 @@ function formatJsx(jsx) {
   });
 }
 
-function prepareSnippet(snippet, transforms) {
+function transformSnippet(snippet, transforms) {
   return transforms.reduce((transformedContent, transform) => transform(transformedContent), snippet);
 }
 
-export function prepareHTMLSnippet(snippet) {
-  return prepareSnippet(snippet, [
+function prepareHTMLSnippet(snippet) {
+  return transformSnippet(snippet, [
     formatHtml,
     encodeHTML,
   ]);
 }
 
-export function prepareJSXSnippet(snippet) {
-  return prepareSnippet(snippet, [
+function prepareJSXSnippet(snippet) {
+  return transformSnippet(snippet, [
     formatJsx,
     encodeHTML,
   ]);
 }
 
-export function prepareSassSnippet(snippet) {
-  return prepareSnippet(snippet, [
+function prepareSassSnippet(snippet) {
+  return transformSnippet(snippet, [
     formatCss,
   ]);
 }
 
-export function prepareBashSnippet(snippet) {
-  return prepareSnippet(snippet, []);
+function prepareJSSnippet(snippet) {
+  return transformSnippet(snippet, []);
 }
 
-export function prepareJSSnippet(snippet) {
-  return prepareSnippet(snippet, [
-    formatJs,
-  ]);
+function prepateMarkdownSnippet(snippet) {
+  const language = (/^```(\w*)/.exec(snippet) || [])[1] ;
+
+  if (language && prepareMap[language]) {
+    return prepareSnippet(snippet, language);
+  }
+
+  return snippet;
+}
+
+export const prepareMap = {
+  [SCSS]: (prepareSassSnippet),
+  [HTML]: prepareHTMLSnippet,
+  [JSX]: prepareJSXSnippet,
+  [JS]: prepareJSSnippet,
+  [MARKDOWN]: prepateMarkdownSnippet,
+};
+
+export function prepareSnippet(snippet, language) {
+  return prepareMap[language] ? prepareMap[language](snippet) : snippet;
 }

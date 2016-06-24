@@ -49,7 +49,7 @@ export default function renderTree(tokens = []) {
 
 function _blockquote(token, props) {
   return (
-    <blockquote {...props}>
+    <blockquote { ...props }>
       { renderTree(token.children) }
     </blockquote>
   );
@@ -57,7 +57,7 @@ function _blockquote(token, props) {
 
 function _codeInline(token, props) {
   return (
-    <code {...props}>
+    <code { ...props }>
       { token.props.content }
     </code>
   );
@@ -65,15 +65,15 @@ function _codeInline(token, props) {
 
 function _codeBlock(token, props) {
   return (
-    <MarkdownCodeBlock {...props}
-        content={ token.props.content }
+    <MarkdownCodeBlock { ...props }
+        content={ token.props.content.replace(/\\`/g, '`') }
         language={ token.props.params } />
   );
 }
 
 function _heading(token, props) {
   return (
-    <Heading {...props} level={ token.props.hLevel }>
+    <Heading { ...props } level={ token.props.hLevel }>
       { renderTree(token.children) }
     </Heading>
   );
@@ -81,13 +81,13 @@ function _heading(token, props) {
 
 function _hr(token, props) {
   return (
-    <hr {...props} />
+    <hr { ...props } />
   );
 }
 
 function _list(token, props, ordered) {
   return (
-    <List {...props} ordered={ ordered }>
+    <List { ...props } ordered={ ordered }>
       { renderTree(token.children) }
     </List>
   );
@@ -103,7 +103,7 @@ function _listOrdered(token, props) {
 
 function _listItem(token, props) {
   return (
-    <ListItem {...props}>
+    <ListItem { ...props }>
       { renderTree(token.children) }
     </ListItem>
   );
@@ -111,7 +111,7 @@ function _listItem(token, props) {
 
 function _paragraph(token, props) {
   return (
-    <Paragraph {...props}>
+    <Paragraph { ...props }>
       { renderTree(token.children) }
     </Paragraph>
   );
@@ -119,7 +119,7 @@ function _paragraph(token, props) {
 
 function _link(token, props) {
   return (
-    <Link {...props} href={ token.props.href } title={ token.props.title }>
+    <Link { ...props } href={ token.props.href } title={ token.props.title }>
       { renderTree(token.children) }
     </Link>
   );
@@ -127,7 +127,7 @@ function _link(token, props) {
 
 function _image(token, props) {
   return (
-    <Image {...props}
+    <Image { ...props }
         alt={ token.props.alt }
         src={ token.props.src }
         title={ token.props.title } />
@@ -136,7 +136,7 @@ function _image(token, props) {
 
 function _table(token, props) {
   return (
-    <Table {...props}>
+    <Table { ...props }>
       { renderTree(token.children) }
     </Table>
   );
@@ -144,7 +144,7 @@ function _table(token, props) {
 
 function _thead(token, props) {
   return (
-    <Thead {...props}>
+    <Thead { ...props }>
       { renderTree(token.children) }
     </Thead>
   );
@@ -152,7 +152,7 @@ function _thead(token, props) {
 
 function _tbody(token, props) {
   return (
-    <Tbody {...props}>
+    <Tbody { ...props }>
       { renderTree(token.children) }
     </Tbody>
   );
@@ -160,7 +160,7 @@ function _tbody(token, props) {
 
 function _tr(token, props) {
   return (
-    <Tr {...props}>
+    <Tr { ...props }>
       { renderTree(token.children) }
     </Tr>
   );
@@ -168,7 +168,7 @@ function _tr(token, props) {
 
 function _th(token, props) {
   return (
-    <Th {...props}>
+    <Th { ...props }>
       { renderTree(token.children) }
     </Th>
   );
@@ -176,7 +176,7 @@ function _th(token, props) {
 
 function _td(token, props) {
   return (
-    <Td {...props}>
+    <Td { ...props }>
       { renderTree(token.children) }
     </Td>
   );
@@ -184,7 +184,7 @@ function _td(token, props) {
 
 function _strong(token, props) {
   return (
-    <Strong {...props}>
+    <Strong { ...props }>
       { renderTree(token.children) }
     </Strong>
   );
@@ -192,7 +192,7 @@ function _strong(token, props) {
 
 function _em(token, props) {
   return (
-    <Italic {...props}>
+    <Italic { ...props }>
       { renderTree(token.children) }
     </Italic>
   );
@@ -200,7 +200,7 @@ function _em(token, props) {
 
 function _del(token, props) {
   return (
-    <Strike {...props}>
+    <Strike { ...props }>
       { renderTree(token.children) }
     </Strike>
   );
@@ -208,7 +208,7 @@ function _del(token, props) {
 
 function _break(token, props) {
   return (
-    <br {...props } />
+    <br { ...props  } />
   );
 }
 

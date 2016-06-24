@@ -28,9 +28,7 @@ export default class MarkdownCodeBlock extends Component {
     }
 
     return (
-      <CodeTabset>
-        <CodeSnippet language={ language }>{ content }</CodeSnippet>
-      </CodeTabset>
+      <CodeSnippet language={ language }>{ content }</CodeSnippet>
     );
   }
 }

@@ -1,5 +1,10 @@
+const JSX_RENDER_OPEN = '```jsx';
+const JSX_RENDER_CLOSE = '```';
+
 function escape(line) {
   return line
+    .replace(/```jsx:.*/g, '```jsx')
+    .replace(/\\`/g, '\\\\`')
     .replace(/`/g, '\\`');
 }
 
@@ -10,11 +15,11 @@ function prepareDoc(content) {
   return content
     .split('\n')
     .reduce((array, line) => {
-      if (!inJsx && line.includes('```jsx')) {
+      if (!inJsx && line === JSX_RENDER_OPEN) {
         inJsx = true;
         jsxContent += '() => { return ';
       } else if (inJsx) {
-        if (line.includes('```')) {
+        if (line === JSX_RENDER_CLOSE) {
           inJsx = false;
           jsxContent += '}';
           array.push(jsxContent);
@@ -33,14 +38,14 @@ function prepareDoc(content) {
 module.exports = function markdownLoader(source, map) {
   this.cacheable && this.cacheable();
 
-  const importsRegex = /(import[^;]*;)/g;
-  const imports = source.match(importsRegex) || [];
-  const nonImports = source.replace(importsRegex, '');
+  const importsRegex = /^(```imports\n([\s\S]*?)(?=```)```)/;
+  const imports = (importsRegex.exec(source) || [])[2];
+  const content = source.replace(importsRegex, '');
 
   this.callback(null, `
     import React from 'react';
     ${imports.join('\n')}
 
-    module.exports = (routeParams, queryParams) => [${prepareDoc(nonImports)}];
+    module.exports = (routeParams, queryParams) => [${prepareDoc(content)}];
   `, map);
 }
