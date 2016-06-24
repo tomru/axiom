@@ -181,64 +181,12 @@ a.ax-link {
 // List styling
 // sass-lint:disable no-qualifying-elements
 
-ul,
-ol {
+.ax-list {
   @include space-block();
-  padding: 0;
-
-  > li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
 }
 
-ul.ax-list--aligned,
-ol.ax-list--aligned {
-  &,
-  & > ul,
-  & > ol {
-    display: table;
-
-    > li {
-      display: table-row;
-
-      &::before {
-        display: table-cell;
-        padding-right: $spacing-base;
-        text-align: right;
-      }
-    }
-  }
-}
-
-ul.ax-list--aligned {
-  > li {
-    &::before {
-      content: '\2022';
-    }
-  }
-
-  ul {
-    margin: 0;
-  }
-}
-
-ol.ax-list--aligned {
-  counter-reset: list;
-
-  > li {
-    counter-increment: list;
-
-    &::before {
-      content: counter(list) '.';
-    }
-  }
-}
-
-
-ul.ax-list--inline,
-ol.ax-list--inline {
+.ax-list--inline,
+.ax-list--inline {
   display: flex;
   flex-wrap: wrap;
 

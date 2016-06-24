@@ -33,12 +33,12 @@
 .ax-card__list {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 .ax-card__list-item {
   padding: ($card-padding-v / 2) $card-padding-h;
   border-bottom: $card-border;
+  list-style: none;
 
   @include for-each-scheme {
     @if scheme-has-prop(card-border) {

@@ -10,6 +10,15 @@
     padding: 0;
   }
 
+  .ax-layout--established-nav__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .ax-layout--established-nav__list-item {
+    list-style: none;
+  }
+
   .ax-layout--established-nav__link {
     display: block;
     padding: $component-padding-v-base $component-padding-h-base;
