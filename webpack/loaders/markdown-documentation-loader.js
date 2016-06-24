@@ -44,7 +44,7 @@ module.exports = function markdownLoader(source, map) {
 
   this.callback(null, `
     import React from 'react';
-    ${imports.join('\n')}
+    ${imports}
 
     module.exports = (routeParams, queryParams) => [${prepareDoc(content)}];
   `, map);

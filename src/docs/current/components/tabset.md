@@ -1,4 +1,6 @@
+```imports
 import { Tabset, Tab } from 'bw-axiom/react';
+```
 
 
 # Tabset

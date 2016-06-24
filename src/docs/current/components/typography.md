@@ -1,3 +1,4 @@
+```imports
 import { breakpointIds, colorPalette, colorAliases } from 'bw-axiom/sass';
 import {
   Heading,
@@ -12,6 +13,7 @@ import {
   Underline,
   Weak,
 } from 'bw-axiom/react';
+```
 
 
 # Sizing

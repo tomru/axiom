@@ -1,5 +1,7 @@
+```imports
 import { Grid, GridCell } from 'bw-axiom/react';
 import { LogoVertical, LogoHorizontal } from 'bw-axiom/react';
+```
 
 # Vertical logos
 ```jsx

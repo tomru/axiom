@@ -1,5 +1,7 @@
+```imports
 import { Grid, GridCell } from 'bw-axiom/react';
 import { Icon } from 'bw-axiom/react';
+```
 
 
 # Icon - ${queryParams.iconId}

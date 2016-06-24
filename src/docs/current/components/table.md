@@ -1,5 +1,7 @@
+```imports
 import { shortNumber } from 'bw-axiom/common';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'bw-axiom/react';
+```
 
 
 # Standard Table

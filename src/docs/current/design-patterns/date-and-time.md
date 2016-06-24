@@ -1,8 +1,9 @@
+```imports
 import { Paragraph, Strong } from 'bw-axiom/react';
 import { shortDate, shortDateWithTime } from 'bw-axiom/common/formatting-dates';
 import { mediumDate, mediumDateWithTime } from 'bw-axiom/common/formatting-dates';
 import { longDate, longDateWithTime, longDateWithTimezone } from 'bw-axiom/common/formatting-dates';
-
+```
 
 # Short Date
 

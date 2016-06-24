@@ -1,5 +1,7 @@
+```imports
 import { Avatar } from 'bw-axiom/react';
 import { Grid, GridCell } from 'bw-axiom/react';
+```
 
 
 # Sized Avatars

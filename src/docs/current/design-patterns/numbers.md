@@ -1,5 +1,7 @@
+```imports
 import ShortNumber from './numbers/ShortNumber';
 import LongNumber from './numbers/LongNumber';
+```
 
 # Short number
 

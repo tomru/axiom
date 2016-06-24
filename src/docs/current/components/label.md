@@ -1,7 +1,9 @@
+```imports
 import { colorPalette, colorAliases } from 'bw-axiom/sass';
 import { Label, LabelGroup } from 'bw-axiom/react';
 import { Heading } from 'bw-axiom/react';
 import { Icon } from 'bw-axiom/react';
+```
 
 
 # Colored Labels

@@ -1,6 +1,8 @@
+```imports
 import { Heading } from 'bw-axiom/react';
 import { StatusIndicator } from 'bw-axiom/react';
 import { colorPalette, colorAliases } from 'bw-axiom/sass';
+```
 
 
 # Colored Status Indicators

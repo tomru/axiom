@@ -41,27 +41,19 @@ function transformSnippet(snippet, transforms) {
 }
 
 function prepareHTMLSnippet(snippet) {
-  return transformSnippet(snippet, [
-    formatHtml,
-    encodeHTML,
-  ]);
+  return transformSnippet(snippet, [ formatHtml, encodeHTML ]);
 }
 
 function prepareJSXSnippet(snippet) {
-  return transformSnippet(snippet, [
-    formatJsx,
-    encodeHTML,
-  ]);
+  return transformSnippet(snippet, [ formatJsx, encodeHTML ]);
 }
 
 function prepareSassSnippet(snippet) {
-  return transformSnippet(snippet, [
-    formatCss,
-  ]);
+  return transformSnippet(snippet, [ formatCss ]);
 }
 
 function prepareJSSnippet(snippet) {
-  return transformSnippet(snippet, []);
+  return transformSnippet(snippet, [ formatJs]);
 }
 
 function prepateMarkdownSnippet(snippet) {

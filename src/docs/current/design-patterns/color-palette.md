@@ -1,7 +1,8 @@
+```imports
 import { Grid, GridCell } from 'bw-axiom/react';
 import { colorPalette } from 'bw-axiom/sass';
 import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
-
+```
 
 # Color Palette
 
