@@ -3,7 +3,7 @@ import { colorPalette } from 'bw-axiom/sass';
 import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
 
 
-#### Color Palette
+# Color Palette
 
 ```jsx
 colorPalette.map((colors, index) =>

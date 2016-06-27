@@ -1,7 +1,7 @@
 import { Grid, GridCell } from 'bw-axiom/react';
 import { LogoVertical, LogoHorizontal } from 'bw-axiom/react';
 
-#### Vertical logos
+# Vertical logos
 ```jsx
 <Grid snippetIgnore>
   {
@@ -14,7 +14,7 @@ import { LogoVertical, LogoHorizontal } from 'bw-axiom/react';
 </Grid>
 ```
 
-#### Horizontal logos
+# Horizontal logos
 ```jsx
 LogoHorizontal.__ax_propTypes.size.oneOf.map((size) =>
   <LogoHorizontal size={ size } />

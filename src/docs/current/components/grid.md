@@ -2,7 +2,7 @@ import { Grid, GridCell } from 'bw-axiom/react';
 import { breakpoints, gridGutters, gridWidths } from 'bw-axiom/sass';
 import DemoBox from 'style-guide/components/DemoBox/DemoBox';
 
-#### Basic Grid
+# Basic Grid
 
 ```jsx
 <Grid>
@@ -17,7 +17,7 @@ import DemoBox from 'style-guide/components/DemoBox/DemoBox';
 ```
 
 
-#### Gutter modifiers
+# Gutter modifiers
 
 ##### No vertical gutters
 ```jsx
@@ -59,7 +59,7 @@ import DemoBox from 'style-guide/components/DemoBox/DemoBox';
 ```
 
 
-#### Gutter sizing modifiers
+# Gutter sizing modifiers
 
 ```jsx
 gridGutters.map(({ id }) =>
@@ -76,7 +76,7 @@ gridGutters.map(({ id }) =>
 ```
 
 
-#### Responsive suppressor
+# Responsive suppressor
 
 ```jsx
 <Grid responsive={ false }>
@@ -91,7 +91,7 @@ gridGutters.map(({ id }) =>
 ```
 
 
-#### Flex sizing (grid level)
+# Flex sizing (grid level)
 
 ##### Full width
 ```jsx
@@ -120,7 +120,7 @@ gridGutters.map(({ id }) =>
 ```
 
 
-#### Responsive flex sizing (grid level)
+# Responsive flex sizing (grid level)
 
 ##### Full width
 ```jsx
@@ -153,7 +153,7 @@ breakpoints.map(({ id }) =>
 ```
 
 
-#### Flex sizing (cell level)
+# Flex sizing (cell level)
 
 ##### Full width
 ```jsx
@@ -182,7 +182,7 @@ breakpoints.map(({ id }) =>
 ```
 
 
-#### Responsive flex sizing (cell level)
+# Responsive flex sizing (cell level)
 
 ##### Full width
 ```jsx
@@ -211,7 +211,7 @@ breakpoints.map(({ id }) =>
 ```
 
 
-#### Standard base 12 cell sizing
+# Standard base 12 cell sizing
 
 ```jsx
 gridWidths.map(({ id }) =>
@@ -228,7 +228,7 @@ gridWidths.map(({ id }) =>
 ```
 
 
-#### Responsive 12 base cell sizing
+# Responsive 12 base cell sizing
 ```jsx
 gridWidths.map(({ id: gridWidthId }) =>
   breakpoints.map(({ id: breakpointId }) =>
@@ -248,7 +248,7 @@ gridWidths.map(({ id: gridWidthId }) =>
 ```
 
 
-#### Vertical cell alignment modifiers (Grid level)
+# Vertical cell alignment modifiers (Grid level)
 ```jsx
 Grid.__ax_propTypes.vAlign.oneOf.map((vAlign) =>
   <Grid className="dm-demo-container" vAlign={ vAlign }>
@@ -264,7 +264,7 @@ Grid.__ax_propTypes.vAlign.oneOf.map((vAlign) =>
 ```
 
 
-#### Vertical cell alignment modifiers (Cell level)
+# Vertical cell alignment modifiers (Cell level)
 ```jsx
 <Grid className="dm-demo-container" snippetIgnore>
   {
@@ -278,7 +278,7 @@ Grid.__ax_propTypes.vAlign.oneOf.map((vAlign) =>
 ```
 
 
-#### Horizontal cell alignment modifiers
+# Horizontal cell alignment modifiers
 ```jsx
 Grid.__ax_propTypes.hAlign.oneOf.map((hAlign) =>
   <Grid hAlign={ hAlign }>

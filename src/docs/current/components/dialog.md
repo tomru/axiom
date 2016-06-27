@@ -2,7 +2,7 @@ import { Dialog, DialogBody, DialogFooter, DialogTitle } from 'bw-axiom/react';
 import DialogSizes from './dialog/DialogSizes';
 import DialogFullscreen from './dialog/DialogFullscreen';
 
-#### Dialog
+# Dialog
 
 The Dialog component is an interface to the [react-modal](https://github.com/reactjs/react-modal) component. All properties you pass to Dialog will forward to the modal component.
 
@@ -15,7 +15,7 @@ The Dialog component is an interface to the [react-modal](https://github.com/rea
 ```
 
 
-#### Dialog sizes
+# Dialog sizes
 
 ```jsx
 <DialogSizes snippetSkip />
@@ -28,7 +28,7 @@ Dialog.__ax_propTypes.size.oneOf.map((size) =>
 ```
 
 
-#### Full screen dialog
+# Full screen dialog
 
 ```jsx
 <DialogFullscreen snippetSkip />

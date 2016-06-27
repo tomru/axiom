@@ -4,7 +4,7 @@ import { mediumDate, mediumDateWithTime } from 'bw-axiom/common/formatting-dates
 import { longDate, longDateWithTime, longDateWithTimezone } from 'bw-axiom/common/formatting-dates';
 
 
-#### Short Date
+# Short Date
 
 ```jsx
 <Paragraph snippetSkip>
@@ -24,7 +24,7 @@ shortDateWithTime(new Date);
 ```
 
 
-#### Medium date
+# Medium date
 
 ```jsx
 <Paragraph snippetSkip>
@@ -44,7 +44,7 @@ mediumDateWithTime(new Date);
 ```
 
 
-#### Long date
+# Long date
 
 ```jsx
 <Paragraph snippetSkip>

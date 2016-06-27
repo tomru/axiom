@@ -3,7 +3,7 @@ import { Label, LabelGroup } from 'bw-axiom/react';
 import { Heading } from 'bw-axiom/react';
 import { Icon } from 'bw-axiom/react';
 
-#### Colored Labels
+# Colored Labels
 
 ##### Palette Colors
 
@@ -45,7 +45,7 @@ colorAliases.map(({ heading, colors }) => [
 ```
 
 
-#### Label with an Icon
+# Label with an Icon
 ```jsx
 <LabelGroup snippetIgnore>
   <Label size="sm" color="red">
@@ -66,7 +66,7 @@ colorAliases.map(({ heading, colors }) => [
 ```
 
 
-#### Label Group
+# Label Group
 
 Label Group handles spacing labels that may overflow to a new line. All labels should be wrapped inside a label group.
 

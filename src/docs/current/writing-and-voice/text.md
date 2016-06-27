@@ -1,18 +1,14 @@
-import { Grid } from 'bw-axiom/react';
-import { Heading, Paragraph } from 'bw-axiom/react';
-import { PROP_TYPES_SETS } from 'bw-axiom/react/utils/prop-types';
-
-#### Emphasize important words in short help texts
+# Emphasize important words in short help texts
 
 Make **important** words in help texts **bold** so users can skim through them more easily. You can use the utility classes for this. Try to highlight the words that embody the message best.
 
 
-#### Full stops
+# Full stops
 
 We have a simple policy. If it is a sentence, it has full stop. Titles, incomplete sentences, bullet lists or enumerations don't have a full stop.
 
 
-#### Casing Conventions
+# Casing Conventions
 
 Title Casing - not only the first word is capitalized but all (except ‘small’ words like “and”, “to”, “for” or “the”). e.g.: “**C**reate **N**ew **P**roject”.
 
@@ -35,11 +31,3 @@ Sentence casing should be used for:
 * Messages of all sorts (“Please wait…” or longer stuff)
 * Entries in (filter) drop downs
 * Help texts
-
-```jsx 
-PROP_TYPES_SETS.text.textCase.oneOf.map((textCase) => [
-  <Heading level={ 4 } textCase={ textCase } renderSkip>{ textCase }</Heading>,
-  <Paragraph textCase={ textCase } renderSkip>{ textCase }</Paragraph>,
-  <Grid textCase={ textCase } renderSkip>{ textCase }</Grid>,
-])
-```

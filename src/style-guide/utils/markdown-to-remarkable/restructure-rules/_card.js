@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardTitle, CardContent } from 'bw-axiom/react';
 
 export function _cardCheck({ props }) {
-  return props._markdownProps && props._markdownProps.hLevel === 4;
+  return props._markdownProps && props._markdownProps.hLevel === 1;
 }
 
 export function _cardRule(content, index, structure) {

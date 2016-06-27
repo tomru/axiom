@@ -3,7 +3,7 @@ import { Button, ButtonGroup } from 'bw-axiom/react';
 import { Heading } from 'bw-axiom/react';
 import { Icon } from 'bw-axiom/react';
 
-#### Colored Buttons
+# Colored Buttons
 
 ##### Palette Colors
 
@@ -45,7 +45,7 @@ colorAliases.map(({ heading, colors }) => [
 ```
 
 
-#### Outlined
+# Outlined
 
 ```jsx
 <ButtonGroup snippetIgnore>
@@ -60,7 +60,7 @@ colorAliases.map(({ heading, colors }) => [
 ```
 
 
-#### Sizes
+# Sizes
 
 ```jsx
 <ButtonGroup snippetIgnore>
@@ -73,7 +73,7 @@ colorAliases.map(({ heading, colors }) => [
 ```
 
 
-#### Circular 
+# Circular 
 ```jsx
 <ButtonGroup snippetIgnore>
   {
@@ -94,7 +94,7 @@ colorAliases.map(({ heading, colors }) => [
 ```
 
 
-#### Full width
+# Full width
 ```jsx
 <ButtonGroup snippetIgnore>
   {
@@ -108,7 +108,7 @@ colorAliases.map(({ heading, colors }) => [
 ```
 
 
-#### Button with an Icon
+# Button with an Icon
 ```jsx
 <ButtonGroup snippetIgnore>
   <Button size="sm" color="red">
@@ -129,7 +129,7 @@ colorAliases.map(({ heading, colors }) => [
 ```
 
 
-#### Button Group
+# Button Group
 
 Button Group handles spacing buttons that may overflow to a new line. All buttons should be wrapped inside a button group.
 
@@ -141,7 +141,7 @@ Button Group handles spacing buttons that may overflow to a new line. All button
 </ButtonGroup>
 ```
 
-#### Button Group joined
+# Button Group joined
 
 ```jsx
 <ButtonGroup joined={ true }>

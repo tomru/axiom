@@ -13,7 +13,7 @@ import {
   Weak,
 } from 'bw-axiom/react';
 
-#### Sizing
+# Sizing
 
 ```jsx
 [
@@ -28,7 +28,7 @@ import {
 ```
 
 
-#### Weights
+# Weights
 
 ##### Strong
 
@@ -67,7 +67,7 @@ import {
 ```
 
 
-#### Decoration modifiers
+# Decoration modifiers
 ```jsx
 [
   <Paragraph><Italic>This text is italicised</Italic></Paragraph>,
@@ -77,7 +77,7 @@ import {
 ```
 
 
-#### Alignment modifiers
+# Alignment modifiers
 ```jsx
 [
   <Paragraph textLeft={ true }>This text is left aligned</Paragraph>,
@@ -86,7 +86,7 @@ import {
 ]
 ```
 
-#### Alignment modifiers (Responsive)
+# Alignment modifiers (Responsive)
 
 ##### Text left
 ```jsx
@@ -116,7 +116,7 @@ breakpointIds.map((id) =>
 ```
 
 
-#### Case modifiers
+# Case modifiers
 ```jsx
 [
   <Paragraph textCase="upper">
@@ -132,7 +132,7 @@ breakpointIds.map((id) =>
 ```
 
 
-#### Colored text
+# Colored text
 
 ##### Palette Colors
 
@@ -163,7 +163,7 @@ colorAliases.map(({ heading, colors }) => [
 ```
 
 
-#### Links
+# Links
 ```jsx
 [
   <Heading level={ 3 } snippetIgnore>
@@ -176,7 +176,7 @@ colorAliases.map(({ heading, colors }) => [
 ```
 
 
-#### Lists
+# Lists
 
 ##### Ordered List
 ```jsx

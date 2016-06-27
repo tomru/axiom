@@ -1,7 +1,7 @@
 import ShortNumber from './numbers/ShortNumber';
 import LongNumber from './numbers/LongNumber';
 
-#### Short number
+# Short number
 
 ```jsx
 <ShortNumber snippetSkip/>
@@ -11,7 +11,7 @@ import LongNumber from './numbers/LongNumber';
 shortNumber(Number [, Number]);
 ```
 
-#### Long number
+# Long number
 
 ```jsx
 <LongNumber snippetSkip/>

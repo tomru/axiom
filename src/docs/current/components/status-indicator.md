@@ -2,7 +2,7 @@ import { Heading } from 'bw-axiom/react';
 import { StatusIndicator } from 'bw-axiom/react';
 import { colorPalette, colorAliases } from 'bw-axiom/sass';
 
-#### Colored Status Indicators
+# Colored Status Indicators
 
 ##### Palette Colors
 
@@ -34,7 +34,7 @@ colorAliases.map(({ heading, colors }) => [
 ```
 
 
-#### Sizes
+# Sizes
 
 ```jsx
 StatusIndicator.__ax_propTypes.size.oneOf.map((size) =>

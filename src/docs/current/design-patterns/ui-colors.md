@@ -3,7 +3,7 @@ import { Heading } from 'bw-axiom/react';
 import { colorAliases } from 'bw-axiom/sass';
 import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
 
-#### UI Colors
+# UI Colors
 
 ```jsx
 colorAliases.map(({ heading, colors }) =>[

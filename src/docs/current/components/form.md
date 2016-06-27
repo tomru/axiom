@@ -4,7 +4,7 @@ import { Icon } from 'bw-axiom/react';
 import { Form, CheckBox, RadioButton, TextArea, TextInput } from 'bw-axiom/react';
 import { Heading } from 'bw-axiom/react';
 
-#### Text Inputs
+# Text Inputs
 
 ```jsx
 <Grid snippetIgnore>
@@ -36,7 +36,7 @@ import { Heading } from 'bw-axiom/react';
 ```
 
 
-#### Text inputs with additional Components
+# Text inputs with additional Components
 
 ##### Text input win an Icon
 ```jsx
@@ -61,13 +61,13 @@ import { Heading } from 'bw-axiom/react';
 ```
 
 
-#### Text area
+# Text area
 ```jsx
 <TextArea placeholder="Text area" />
 ```
 
 
-#### Check boxes
+# Check boxes
 ```jsx
 [
   <CheckBox>Unchecked check box</CheckBox>,
@@ -77,7 +77,7 @@ import { Heading } from 'bw-axiom/react';
 ```
 
 
-#### Radio Buttons
+# Radio Buttons
 ```jsx
 [
   <RadioButton>Unchecked radio button</RadioButton>,
