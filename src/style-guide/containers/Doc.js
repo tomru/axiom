@@ -13,9 +13,7 @@ export class Doc extends Component {
     location: PropTypes.shape({
       query: PropTypes.object.isRequired,
     }).isRequired,
-    routeParams: PropTypes.shape({
-      splat: PropTypes.array.isRequired,
-    }).isRequired,
+    routeParams: PropTypes.object.isRequired,
   };
 
   render() {

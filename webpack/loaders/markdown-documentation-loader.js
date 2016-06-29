@@ -17,11 +17,9 @@ function prepareDoc(content) {
     .reduce((array, line) => {
       if (!inJsx && line === JSX_RENDER_OPEN) {
         inJsx = true;
-        jsxContent += '() => { return ';
       } else if (inJsx) {
         if (line === JSX_RENDER_CLOSE) {
           inJsx = false;
-          jsxContent += '}';
           array.push(jsxContent);
           jsxContent = '';
         } else {
@@ -35,17 +33,17 @@ function prepareDoc(content) {
     }, []);
 }
 
-module.exports = function markdownLoader(source, map) {
+module.exports = function markdownLoader(source) {
   this.cacheable && this.cacheable();
 
   const importsRegex = /^(```imports\n([\s\S]*?)(?=```)```)/;
   const imports = (importsRegex.exec(source) || [])[2];
   const content = source.replace(importsRegex, '');
 
-  this.callback(null, `
+  return `
     import React from 'react';
     ${imports}
 
     module.exports = (routeParams, queryParams) => [${prepareDoc(content)}];
-  `, map);
+  `;
 }

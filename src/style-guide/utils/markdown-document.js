@@ -3,7 +3,7 @@ import { cloneElement } from 'react';
 import docs from 'docs';
 import * as routes  from 'style-guide/constants/Routing';
 import { V_CURRENT } from 'style-guide/constants/Versions';
-import { isReactElement } from 'style-guide/utils/react-elements';
+import { isReactElement, isReactElements } from 'style-guide/utils/react-elements';
 
 export function markdownRouteToPath(route) {
   return `/${routes.DOCS}/${route.join('/')}`;
@@ -65,8 +65,8 @@ export function hasMarkdownContent(path, route =  pathToMarkdownRoute(path)) {
 
 export function buildMarkdownContent(contentFn, routeParams, queryParams) {
   return contentFn(routeParams, queryParams).map((element) => {
-    return typeof element === 'function'
-      ? buildReactElement(element())
+    return isReactElements(element)
+      ? buildReactElement(element)
       : element;
   });
 }
