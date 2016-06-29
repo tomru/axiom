@@ -3,6 +3,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import autoprefixer from 'autoprefixer';
 import * as config from '../config';
 import { variableImporter } from '../utils/sass';
+import { js, json, yml, styleExtract, fonts, markdown } from './loader.config.js';
 
 export default {
   target: 'web',
@@ -55,36 +56,7 @@ export default {
     }),
   ],
   module:  {
-    loaders: [{
-      test: /\.json$/,
-      loader: 'json',
-    }, {
-      test: /\.yml$/,
-      loader: 'json!yaml',
-    }, {
-      test: /\.(scss|css)$/,
-      loader: ExtractTextPlugin.extract(
-        'style',
-        `css!postcss!sass`,
-      ),
-    }, {
-      test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      loader: 'file-loader?name=fonts/font-awesome.[hash].[ext]',
-      include: [
-        config.nodeModules.fontAwesome,
-      ],
-    }],
-    postLoaders: [{
-      test: /\.js$/,
-      loader: 'babel',
-      exclude: /node_modules/,
-    }, {
-      test: /\.md$/,
-      loaders: [
-        'babel',
-        'markdown-documentation',
-      ],
-    }],
+    loaders: [js, json, yml, styleExtract, fonts, markdown],
   },
   sassLoader: {
     importer: variableImporter(config.paths.sassConfig, 'axiom-vars'),

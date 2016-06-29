@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import webpackConfig from './client.config';
+import { js, json, yml, style, fonts, markdown } from './loader.config.js';
 import * as config from '../config';
 
 export default {
@@ -34,26 +35,6 @@ export default {
   ],
   module: {
     ...webpackConfig.module,
-    loaders: [{
-      test: /\.json$/,
-      loader: 'json',
-    }, {
-      test: /\.yml$/,
-      loader: 'json!yaml',
-    }, {
-      test: /\.(scss|css)$/,
-      loaders: [
-        'style',
-        'css',
-        'postcss',
-        'sass',
-      ],
-    }, {
-      test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      loader: 'file-loader',
-      include: [
-        config.nodeModules.fontAwesome,
-      ],
-    }],
+    loaders: [js, json, yml, style, fonts, markdown],
   },
 };

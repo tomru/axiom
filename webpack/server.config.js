@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import webpackNodeExternals from 'webpack-node-externals';
 import * as config from '../config';
+import { js, json, yml, markdown } from './loader.config.js';
 
 export default {
   target: 'node',
@@ -36,23 +37,6 @@ export default {
   ],
   externals: [webpackNodeExternals()],
   module: {
-    loaders: [{
-      test: /\.json$/,
-      loader: 'json',
-    }, {
-      test: /\.yml$/,
-      loader: 'json!yaml',
-    }],
-    postLoaders: [{
-      test: /\.js$/,
-      loader: 'babel',
-      exclude: /node_modules/,
-    }, {
-      test: /\.md$/,
-      loaders: [
-        'babel',
-        'markdown-documentation',
-      ],
-    }],
+    loaders: [js, json, yml, markdown],
   },
 };
