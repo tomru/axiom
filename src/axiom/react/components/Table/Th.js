@@ -18,7 +18,7 @@ export class Th extends Component {
     });
 
     return (
-      <th {...this.props} className={ classes }>
+      <th { ...this.props } className={ classes }>
         { children }
       </th>
     );

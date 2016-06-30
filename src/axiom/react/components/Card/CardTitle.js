@@ -15,7 +15,7 @@ export class CardTitle extends Component {
     const classes = classnames(className, 'ax-card__title');
 
     return (
-      <div {...this.props} className={ classes }>
+      <div { ...this.props } className={ classes }>
         <Grid vAlign="middle">
           <GridCell>
             <h4>{ title }</h4>

@@ -12,7 +12,7 @@ export class LabelGroup extends Component {
     const classes = classnames(className, 'ax-label__group');
 
     return (
-      <div {...this.props} className={ classes }>
+      <div { ...this.props } className={ classes }>
         { children }
       </div>
     );

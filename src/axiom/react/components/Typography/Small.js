@@ -10,7 +10,7 @@ export class Small extends Component {
     const { children } = this.props;
 
     return (
-      <small {...this.props}>
+      <small { ...this.props }>
         { children }
       </small>
     );

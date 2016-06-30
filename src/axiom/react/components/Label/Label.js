@@ -49,7 +49,7 @@ export class Label extends Component {
     );
 
     return (
-      <span {...blacklist(this.props, ['color'])} className={ classes }>
+      <span { ...blacklist(this.props, ['color']) } className={ classes }>
         { do {
           if (icon) {
             {cloneElement(icon, {

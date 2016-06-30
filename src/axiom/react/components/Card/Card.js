@@ -17,7 +17,7 @@ export class Card extends Component {
     );
 
     return (
-      <div {...this.props} className={ classes }>
+      <div { ...this.props } className={ classes }>
         { children }
       </div>
     );

@@ -30,7 +30,7 @@ export class Table extends Component {
     );
 
     return (
-      <table {...this.props} className={ classes }>
+      <table { ...this.props } className={ classes }>
         { children }
       </table>
     );

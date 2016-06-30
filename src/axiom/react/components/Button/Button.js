@@ -46,7 +46,7 @@ export class Button extends Component {
     );
 
     return (
-      <button {...blacklist(this.props, ['color'])} className={ classes }>
+      <button { ...blacklist(this.props, ['color']) } className={ classes }>
         {
           do {
             if (icon) {

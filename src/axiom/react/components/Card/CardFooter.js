@@ -12,7 +12,7 @@ export class CardFooter extends Component {
     const classes = classnames(className, 'ax-card__footer');
 
     return (
-      <div {...this.props} className={ classes }>
+      <div { ...this.props } className={ classes }>
         { children }
       </div>
     );

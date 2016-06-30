@@ -10,7 +10,7 @@ export class Underline extends Component {
     const { children } = this.props;
 
     return (
-      <u {...this.props}>
+      <u { ...this.props }>
         { children }
       </u>
     );

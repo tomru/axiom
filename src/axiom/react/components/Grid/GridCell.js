@@ -58,7 +58,7 @@ export class GridCell extends Component {
     );
 
     return (
-      <div {...this.props} className={ classes }>
+      <div { ...this.props } className={ classes }>
         { children }
       </div>
     );

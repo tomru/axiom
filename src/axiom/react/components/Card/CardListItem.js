@@ -15,7 +15,7 @@ export class CardListItem extends Component {
     });
 
     return (
-      <li {...this.props} className={ classes }>
+      <li { ...this.props } className={ classes }>
         { children }
       </li>
     );

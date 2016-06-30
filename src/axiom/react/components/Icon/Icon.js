@@ -21,7 +21,7 @@ export class Icon extends Component {
     );
 
     return (
-      <i {...blacklist(this.props, ['name'])} className={ classes } />
+      <i { ...blacklist(this.props, ['name']) } className={ classes } />
     );
   }
 }

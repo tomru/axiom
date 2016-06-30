@@ -22,7 +22,7 @@ export class RadioButton extends Component {
       <label className={ classes }>
         <input className="ax-radio"
             type="radio"
-            {...blacklist(this.props, ['children', 'className'])} />
+            { ...blacklist(this.props, ['children', 'className']) } />
         <span className="ax-radio__label">{ children }</span>
       </label>
     );

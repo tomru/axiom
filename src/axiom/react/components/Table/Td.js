@@ -15,7 +15,7 @@ export class Td extends Component {
     });
 
     return (
-      <td {...this.props} className={ classes }>
+      <td { ...this.props } className={ classes }>
         { children }
       </td>
     );

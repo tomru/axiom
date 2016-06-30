@@ -10,7 +10,7 @@ export class Strike extends Component {
     const { children } = this.props;
 
     return (
-      <del {...this.props}>
+      <del { ...this.props }>
         { children }
       </del>
     );

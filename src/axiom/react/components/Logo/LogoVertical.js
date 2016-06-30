@@ -18,7 +18,7 @@ export class LogoVertical extends Component {
     });
 
     return (
-      <div {...this.props} className={ classes }>
+      <div { ...this.props } className={ classes }>
         <svg height="100%" viewBox="0 0 120 143" width="100%" x="0px" y="0px">
           <g>
             <circle cx="75.9" cy="56.2" fill="#FF8F00" r="6.4"/>

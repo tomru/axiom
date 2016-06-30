@@ -53,7 +53,7 @@ export function addClassName(...classNameSets) {
     return extendClass(Component,
       class Wrapped extends Component {
         render() {
-          return <Component {...this.props}
+          return <Component { ...this.props }
               className={ mergeClassNameSets(this.props, classNameSets) }
               ref="original" />
         }

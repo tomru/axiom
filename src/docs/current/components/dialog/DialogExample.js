@@ -16,7 +16,7 @@ export default class DialogExample extends Component {
 
 
     return (
-      <Dialog {...this.props}>
+      <Dialog { ...this.props }>
         {
           do {
             if (withTitle) {

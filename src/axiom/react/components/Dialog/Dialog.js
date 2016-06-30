@@ -31,7 +31,7 @@ export class Dialog extends Component {
     );
 
     return (
-      <Modal {...this.props}
+      <Modal { ...this.props }
           className={ classes }
           closeTimeoutMS={ parseInt(transitionTimeBase, 10) }
           overlayClassName="ax-dialog__overlay">

@@ -12,7 +12,7 @@ export class CardContent extends Component {
     const classes = classnames(className, 'ax-card__content');
 
     return (
-      <div {...this.props} className={ classes }>
+      <div { ...this.props } className={ classes }>
         { children }
       </div>
     );

@@ -10,7 +10,7 @@ export class ListItem extends Component {
     const { children } = this.props;
 
     return (
-      <li {...this.props}>
+      <li { ...this.props }>
         { children }
       </li>
     );

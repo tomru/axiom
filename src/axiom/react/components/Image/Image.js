@@ -8,7 +8,7 @@ export class Image extends Component {
 
   render() {
     return (
-      <img {...this.props} />
+      <img { ...this.props } />
     );
   }
 }

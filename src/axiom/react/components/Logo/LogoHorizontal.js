@@ -18,7 +18,7 @@ export class LogoHorizontal extends Component {
     });
 
     return (
-      <div {...this.props} className={ classes }>
+      <div { ...this.props } className={ classes }>
         <svg height="100%" viewBox="0 0 349 64" width="100%" x="0px" y="0px">
           <g>
             <g>

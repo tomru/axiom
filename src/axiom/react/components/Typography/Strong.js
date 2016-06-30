@@ -10,7 +10,7 @@ export class Strong extends Component {
     const { children } = this.props;
 
     return (
-      <strong {...this.props}>
+      <strong { ...this.props }>
         { children }
       </strong>
     );

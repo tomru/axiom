@@ -12,7 +12,7 @@ export class Weak extends Component {
     const classes = classnames(className, 'ax-text--weak');
 
     return (
-      <span {...this.props} className={ classes }>
+      <span { ...this.props } className={ classes }>
         { children }
       </span>
     );

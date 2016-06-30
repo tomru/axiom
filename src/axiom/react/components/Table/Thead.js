@@ -10,7 +10,7 @@ export class Thead extends Component {
     const { children } = this.props;
 
     return (
-      <thead {...this.props}>
+      <thead { ...this.props }>
         { children }
       </thead>
     );

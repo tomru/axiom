@@ -12,7 +12,7 @@ export class Form extends Component {
     const classes = classnames(className, 'ax-form');
 
     return (
-      <form {...this.props} className={ classes }>
+      <form { ...this.props } className={ classes }>
         { children }
       </form>
     );

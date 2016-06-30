@@ -31,7 +31,7 @@ export class Avatar extends Component {
     );
 
     return (
-      <img {...this.props} className={ classes } />
+      <img { ...this.props } className={ classes } />
     );
   }
 }

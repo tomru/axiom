@@ -36,7 +36,7 @@ export class Tabset extends Component {
     const classes = classnames(className, 'ax-tabs');
 
     return (
-      <div {...blacklist(this.props, ['children'])} className={ classes }>
+      <div { ...blacklist(this.props, ['children']) } className={ classes }>
         <ul className="ax-tabs__nav">
           { tabTitles.map((title, index) => {
             const tabClassName = classnames('ax-tabs__nav-item', {

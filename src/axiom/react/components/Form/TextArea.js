@@ -14,7 +14,7 @@ export class TextArea extends Component {
       <label className={ classes }>
         <textarea
             className="ax-textarea"
-            {...blacklist(this.props, 'className')} />
+            { ...blacklist(this.props, 'className') } />
       </label>
     );
   }

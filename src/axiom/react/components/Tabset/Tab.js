@@ -12,7 +12,7 @@ export class Tab extends Component {
     const classes = classnames(className, 'ax-tabs__content');
 
     return (
-      <div {...this.props} className={ classes }>
+      <div { ...this.props } className={ classes }>
         { children }
       </div>
     );

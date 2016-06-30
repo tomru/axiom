@@ -39,7 +39,7 @@ export class TextInput extends Component {
         <div className="ax-input__button-container">
           <div className="ax-input__icon-container">
             <input
-                className="ax-input" {...blacklist(this.props, ['children', 'className'])}
+                className="ax-input" { ...blacklist(this.props, ['children', 'className']) }
                 ref="input"  />
 
             { do {

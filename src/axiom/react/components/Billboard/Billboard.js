@@ -42,7 +42,7 @@ export class Billboard extends Component {
     };
 
     return (
-      <div {...this.props} className={ classes } style={ style }>
+      <div { ...this.props } className={ classes } style={ style }>
         { children }
       </div>
     );

@@ -10,7 +10,7 @@ export class Tbody extends Component {
     const { children } = this.props;
 
     return (
-      <tbody {...this.props}>
+      <tbody { ...this.props }>
         { children }
       </tbody>
     );

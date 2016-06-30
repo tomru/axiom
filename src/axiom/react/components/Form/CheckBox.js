@@ -22,7 +22,7 @@ export class CheckBox extends Component {
       <label className={ classes }>
         <input className="ax-checkbox"
             type="checkbox"
-            {...blacklist(this.props, ['children', 'className'])} />
+            { ...blacklist(this.props, ['children', 'className']) } />
         <span className="ax-checkbox__label">{ children }</span>
       </label>
     );

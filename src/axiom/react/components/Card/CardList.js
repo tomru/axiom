@@ -12,7 +12,7 @@ export class CardList extends Component {
     const classes = classnames(className, 'ax-card__list');
 
     return (
-      <ul {...this.props} className={ classes }>
+      <ul { ...this.props } className={ classes }>
         { children }
       </ul>
     );

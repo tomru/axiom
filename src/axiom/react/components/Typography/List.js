@@ -28,14 +28,14 @@ export class List extends Component {
 
     if (ordered === true) {
       return (
-        <ol {...this.props} className={ classes }>
+        <ol { ...this.props } className={ classes }>
           { children }
         </ol>
       );
     }
 
     return (
-      <ul {...this.props} className={ classes }>
+      <ul { ...this.props } className={ classes }>
         { children }
       </ul>
     );

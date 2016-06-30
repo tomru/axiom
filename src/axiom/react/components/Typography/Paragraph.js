@@ -15,7 +15,7 @@ export class Paragraph extends Component {
     });
 
     return (
-      <p {...this.props} className={ classes }>
+      <p { ...this.props } className={ classes }>
         { children }
       </p>
     );

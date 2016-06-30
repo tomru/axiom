@@ -30,14 +30,14 @@ export class Link extends Component {
 
     if (to) {
       return (
-        <RouterLink {...this.props} className={ classes }>
+        <RouterLink { ...this.props } className={ classes }>
           { children }
         </RouterLink>
       );
     }
 
     return (
-      <a {...this.props} className={ classes }>
+      <a { ...this.props } className={ classes }>
         { children }
       </a>
     );

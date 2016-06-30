@@ -12,7 +12,7 @@ export class BlockContainer extends Component {
     const classes = classnames(className, 'ax-container--block');
 
     return (
-      <div {...this.props} className={ classes }>
+      <div { ...this.props } className={ classes }>
         { children }
       </div>
     );
