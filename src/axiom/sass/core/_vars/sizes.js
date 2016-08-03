@@ -1,9 +1,9 @@
 const spacingXs = '3px';
-const spacingSm = '7px';
-const spacingBase = '15px';
-const spacingLg = '30px';
-const spacingXl = '45px';
-const spacingXxl = '60px';
+const spacingSm = '6px';
+const spacingBase = '12px';
+const spacingLg = '24px';
+const spacingXl = '36px';
+const spacingXxl = '48px';
 
 const layoutWidthSm = '768px';
 const layoutWidthMd = '992px';

@@ -9,7 +9,7 @@
   @include space-block($container-margin-v-base);
 
   &:not(.ax-card--transparent) {
-    @include for-each-scheme() {
+    @include for-each-scheme {
       background-color: scheme-prop(card-color);
       color: scheme-text-color(scheme-prop(card-color));
     }
@@ -61,7 +61,7 @@
 .ax-card__list-item--clickable {
   cursor: pointer;
 
-  @include for-each-scheme() {
+  @include for-each-scheme {
     @if scheme-has-prop(card-border) {
       &:hover {
         background-color: scheme-prop(card-hover-color);
