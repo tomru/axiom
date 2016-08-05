@@ -1,0 +1,11 @@
+@import './vars';
+
+.dm-layout__sidebar-header {
+  flex: 0 1 auto;
+  padding: $component-padding-v-base $component-padding-h-base;
+  background-color: $sidebar-header-background-color;
+
+  @include for-each-scheme {
+    color: scheme-text-color($sidebar-header-background-color);
+  }
+}

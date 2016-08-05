@@ -19,7 +19,7 @@
     "start": "NODE_ENV=development BABEL_ENV=development babel-node -e \"require('./scripts/develop').default()\"",
     "prod": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/production').default()\"",
     "prepublish": "npm run clean && npm run prepublish-javascript && npm run prepublish-sass",
-    "prepublish-javascript": "BABEL_ENV=production babel ./src/axiom --out-dir ./lib && babel ./utils --out-dir ./lib/utils",
+    "prepublish-javascript": "BABEL_ENV=production babel ./src --out-dir ./lib && babel ./utils --out-dir ./lib/utils",
     "prepublish-sass": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/prepublish-sass').default()\""
   },
   "dependencies": {

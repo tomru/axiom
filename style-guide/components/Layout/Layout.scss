@@ -1,0 +1,14 @@
+@import '~bw-axiom/design-patterns/layout/mixins';
+@import './vars';
+
+.dm-layout {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.dm-layout--open {
+  @include screen-less-than($layout-change-point) {
+    overflow-x: hidden;
+  }
+}

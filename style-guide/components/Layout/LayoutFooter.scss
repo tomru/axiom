@@ -1,0 +1,30 @@
+@import '~bw-axiom/design-patterns/colors/mixins';
+@import '~bw-axiom/design-patterns/layout/mixins';
+@import '~bw-axiom/design-patterns/schemes/mixins';
+@import './vars';
+
+.dm-layout__footer-container {
+  position: relative;
+  min-height: $logo-vertical-height-sm + $page-padding-v;
+
+  @include for-each-scheme {
+    background-color: $footer-background-color;
+    color: scheme-text-color($footer-background-color);
+  }
+}
+
+.dm-layout__footer {
+  margin: 0 0 0 $logo-vertical-width-sm + $page-padding-h;
+}
+
+.dm-layout__logo {
+  position: absolute;
+  top: 0;
+  width: $logo-vertical-width-sm;
+  height: $logo-vertical-height-sm;
+
+  @include for-each-scheme {
+    background-color: $logo-background-color;
+    color: scheme-text-color($logo-background-color);
+  }
+}
