@@ -1,14 +1,9 @@
+import Prism from 'prismjs';
+import 'prismjs/components/prism-json';
+import 'prismjs/components/prism-jsx';
+import 'prismjs/components/prism-markdown';
+import 'prismjs/components/prism-scss';
 import { js as beautifyJs, html as beautifyHtml, css as beautifyCSS } from 'js-beautify';
-import { SCSS, HTML, JSX, JS, MARKDOWN } from 'style-guide/constants/CodeLanguages';
-
-// Encode all of the HTML characters so it can be displayed.
-function encodeHTML(html) {
-  return html
-    .replace(/&/g, '&amp;')
-    .replace(/"/g, '&quot;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-}
 
 function formatHtml(html) {
   return beautifyHtml(html, {
@@ -41,11 +36,11 @@ function transformSnippet(snippet, transforms) {
 }
 
 function prepareHTMLSnippet(snippet) {
-  return transformSnippet(snippet, [ formatHtml, encodeHTML ]);
+  return transformSnippet(snippet, [ formatHtml ]);
 }
 
 function prepareJSXSnippet(snippet) {
-  return transformSnippet(snippet, [ formatJsx, encodeHTML ]);
+  return transformSnippet(snippet, [ formatJsx ]);
 }
 
 function prepareSassSnippet(snippet) {
@@ -56,24 +51,53 @@ function prepareJSSnippet(snippet) {
   return transformSnippet(snippet, [ formatJs]);
 }
 
-function prepateMarkdownSnippet(snippet) {
+function prepareMarkdownSnippet(snippet) {
   const language = (/^```(\w*)/.exec(snippet) || [])[1] ;
 
   if (language && prepareMap[language]) {
-    return prepareSnippet(snippet, language);
+    return prepareMap[language](snippet);
   }
 
   return snippet;
 }
 
 export const prepareMap = {
-  [SCSS]: (prepareSassSnippet),
-  [HTML]: prepareHTMLSnippet,
-  [JSX]: prepareJSXSnippet,
-  [JS]: prepareJSSnippet,
-  [MARKDOWN]: prepateMarkdownSnippet,
+  html: prepareHTMLSnippet,
+  js: prepareJSSnippet,
+  json: (json) => json,
+  jsx: prepareJSXSnippet,
+  markdown: prepareMarkdownSnippet,
+  scss: prepareSassSnippet,
+};
+
+export const highlightMap = {
+  html: Prism.languages.markup,
+  js: Prism.languages.javascript,
+  json: Prism.languages.json,
+  jsx: Prism.languages.jsx,
+  markdown: Prism.languages.markdown,
+  scss: Prism.languages.scss,
+};
+
+export const classMap = {
+  html: 'language-markup',
+  js: 'language-javascript',
+  json: 'language-json',
+  jsx: 'language-jsx',
+  markdown: 'language-markdown',
+  scss: 'language-scss',
 };
 
 export function prepareSnippet(snippet, language) {
-  return prepareMap[language] ? prepareMap[language](snippet) : snippet;
+  if (!prepareMap[language]) throw Error(`No prepare function available for language '${language}'`);
+  if (!highlightMap[language]) throw Error(`No highlight available for language '${language}'`);
+  if (!classMap[language]) throw Error(`No class available for language '${language}'`);
+
+  return {
+    className: classMap[language],
+    code: Prism.highlight(
+      prepareMap[language](snippet),
+      highlightMap[language],
+    ),
+  };
 }

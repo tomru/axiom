@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { JSX, HTML } from 'style-guide/constants/CodeLanguages';
 import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 
@@ -18,11 +17,11 @@ export default class MarkdownCodeBlock extends Component {
     const { content, language } = this.props;
     const { jsx, html } = getJsxAndHtmlContent(content);
 
-    if (language === JSX && jsx && html) {
+    if (language === 'jsx' && jsx && html) {
       return (
         <CodeTabset>
-          <CodeSnippet language={ JSX }>{ jsx }</CodeSnippet>
-          <CodeSnippet language={ HTML }>{ html }</CodeSnippet>
+          <CodeSnippet language="jsx">{ jsx }</CodeSnippet>
+          <CodeSnippet language="html">{ html }</CodeSnippet>
         </CodeTabset>
       )
     }
