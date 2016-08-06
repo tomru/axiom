@@ -2,11 +2,9 @@ import { isReactElement } from 'style-guide/utils/react-elements';
 
 const PROP_EXCLUDE_LIST = ['children'];
 
-function renderProps(props, withoutProps) {
-  const propsToExclude = withoutProps.concat(PROP_EXCLUDE_LIST);
-
+function renderProps(props) {
   return Object.keys(props).reduce((acc, prop) => {
-    if (!propsToExclude.includes(prop)) {
+    if (!PROP_EXCLUDE_LIST.includes(prop)) {
       const value = typeof props[prop] === 'string'
         ? `"${props[prop]}"`
         : `{ ${props[prop]} }`;
@@ -25,10 +23,10 @@ function getDisplayName(Component) {
     (typeof Component === 'string' ? Component : 'Component');
 }
 
-export default function reactElementToJsxString(element, withoutProps = []) {
+export default function reactElementToJsxString(element) {
   if (Array.isArray(element)) {
     return element.reduce((string, element) => {
-      return string += reactElementToJsxString(element, withoutProps);
+      return string += reactElementToJsxString(element);
     }, '');
   }
 
@@ -38,11 +36,11 @@ export default function reactElementToJsxString(element, withoutProps = []) {
 
   const { props, props: { children }, type } = element;
   const displayName = getDisplayName(type);
-  let jsxString = `<${displayName} ${renderProps(props, withoutProps)}`;
+  let jsxString = `<${displayName} ${renderProps(props)}`;
 
   if (children) {
     jsxString += '>';
-    jsxString += reactElementToJsxString(children, withoutProps);
+    jsxString += reactElementToJsxString(children);
     jsxString += `</${displayName}>`;
   } else {
     jsxString += ' />';

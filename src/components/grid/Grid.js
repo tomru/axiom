@@ -30,6 +30,7 @@ export class Grid extends Component {
       fit,
       vAlign,
       hAlign,
+      ...rest,
     } = this.props;
 
     const classes = classnames(className,
@@ -55,7 +56,7 @@ export class Grid extends Component {
     );
 
     return (
-      <div { ...this.props } className={ classes }>
+      <div { ...rest } className={ classes }>
         { children }
       </div>
     );

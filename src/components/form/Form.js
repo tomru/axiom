@@ -8,11 +8,11 @@ export class Form extends Component {
   };
 
   render() {
-    const { className, children } = this.props;
+    const { className, children, ...rest } = this.props;
     const classes = classnames(className, 'ax-form');
 
     return (
-      <form { ...this.props } className={ classes }>
+      <form { ...rest } className={ classes }>
         { children }
       </form>
     );

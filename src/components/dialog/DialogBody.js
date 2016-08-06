@@ -8,11 +8,11 @@ export class DialogBody extends Component {
   };
 
   render() {
-    const { children, className } = this.props;
+    const { children, className, ...rest } = this.props;
     const classes = classnames(className, 'ax-dialog__body');
 
     return (
-      <div className={ classes }>
+      <div { ...rest } className={ classes }>
         { children }
       </div>
     );

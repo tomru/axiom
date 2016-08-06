@@ -2,7 +2,6 @@ import React, { Component, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 import { findComponent } from '../_utils/components';
-import { blacklist } from '../_utils/props';
 import { breakpointClassName } from '../_utils/class-name';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
 import { colorIds } from '../../design-patterns/colors/_vars';
@@ -29,6 +28,7 @@ export class Button extends Component {
       size = propsTypes.size.default,
       full,
       outlined,
+      ...rest,
     } = this.props;
 
     const icon = findComponent(children, Icon);
@@ -47,7 +47,7 @@ export class Button extends Component {
     );
 
     return (
-      <button { ...blacklist(this.props, ['color']) } className={ classes }>
+      <button { ...rest } className={ classes }>
         {
           do {
             if (icon) {

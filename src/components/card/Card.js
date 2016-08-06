@@ -9,7 +9,7 @@ export class Card extends Component {
   };
 
   render() {
-    const { className, children, transparent } = this.props;
+    const { className, children, transparent, ...rest } = this.props;
     const classes = classnames(className,
       'ax-card', {
         'ax-card--transparent': transparent === true,
@@ -17,7 +17,7 @@ export class Card extends Component {
     );
 
     return (
-      <div { ...this.props } className={ classes }>
+      <div { ...rest } className={ classes }>
         { children }
       </div>
     );

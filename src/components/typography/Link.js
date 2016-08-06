@@ -20,6 +20,7 @@ export class Link extends Component {
       inheritColor,
       noDecoration,
       supressStyle,
+      ...rest,
     } = this.props;
 
     const classes = classnames(className, {
@@ -30,14 +31,14 @@ export class Link extends Component {
 
     if (to) {
       return (
-        <RouterLink { ...this.props } className={ classes }>
+        <RouterLink { ...rest } className={ classes } to={ to }>
           { children }
         </RouterLink>
       );
     }
 
     return (
-      <a { ...this.props } className={ classes }>
+      <a { ...rest } className={ classes }>
         { children }
       </a>
     );

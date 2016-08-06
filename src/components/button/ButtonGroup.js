@@ -9,13 +9,13 @@ export class ButtonGroup extends Component {
   };
 
   render() {
-    const { className, children, joined } = this.props;
+    const { className, children, joined, ...rest } = this.props;
     const classes = classnames(className, 'ax-button__group', {
       'ax-button__group--joined': joined,
     });
 
     return (
-      <div { ...this.props } className={ classes }>
+      <div { ...rest } className={ classes }>
         { children }
       </div>
     );

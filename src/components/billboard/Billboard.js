@@ -24,6 +24,7 @@ export class Billboard extends Component {
       variation = propTypes.variation.default,
       overlay,
       size = propTypes.size.default,
+      ...rest,
     } = this.props;
 
     const classes = classnames(className,
@@ -42,7 +43,7 @@ export class Billboard extends Component {
     };
 
     return (
-      <div { ...this.props } className={ classes } style={ style }>
+      <div { ...rest } className={ classes } style={ style }>
         { children }
       </div>
     );

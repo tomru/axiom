@@ -1,3 +1,4 @@
+import omit from 'lodash/omit';
 import classnames from 'classnames';
 import { breakpoints } from '../../design-patterns/layout/_vars';
 
@@ -49,4 +50,16 @@ export function mergeClassNameSets(props = {}, classNameSets) {
 
 export function breakpointClassName(value, classCb) {
   return addDynamicClass(breakpoints, ({ id }) => value === id, classCb);
+}
+
+export function removeClassNameSetProps(props) {
+  return omit(props, [
+    'hiddenUntil', 'visibleUntil',
+    'textLeft', 'textCenter', 'textRight',
+    'textBold', 'textWeak',
+    'textBreak',
+    'textCase',
+    'textEllipsis',
+    'textColor',
+  ]);
 }

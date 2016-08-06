@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import { mergeClassNameSets } from './class-name';
+import { mergeClassNameSets, removeClassNameSetProps } from './class-name';
 import { mergePropTypeSets, mapToPropTypes } from './prop-types';
 
 export function findComponent(components, Component) {
@@ -53,9 +53,11 @@ export function addClassName(...classNameSets) {
     return extendClass(Component,
       class Wrapped extends Component {
         render() {
-          return <Component { ...this.props }
-              className={ mergeClassNameSets(this.props, classNameSets) }
-              ref="original" />
+          return (
+            <Component { ...removeClassNameSetProps(this.props) }
+                className={ mergeClassNameSets(this.props, classNameSets) }
+                ref="original" />
+          );
         }
       }
     );

@@ -10,7 +10,7 @@ export class Th extends Component {
   };
 
   render() {
-    const { className, children, isNumber, sorting } = this.props;
+    const { className, children, isNumber, sorting, ...rest } = this.props;
     const classes = classnames(className, {
       'ax-table__cell--number': isNumber === true,
       'ax-table__sort--asc': sorting === 1,
@@ -18,7 +18,7 @@ export class Th extends Component {
     });
 
     return (
-      <th { ...this.props } className={ classes }>
+      <th { ...rest } className={ classes }>
         { children }
       </th>
     );

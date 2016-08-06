@@ -8,11 +8,11 @@ export class CardList extends Component {
   };
 
   render() {
-    const { className, children } = this.props;
+    const { className, children, ...rest } = this.props;
     const classes = classnames(className, 'ax-card__list');
 
     return (
-      <ul { ...this.props } className={ classes }>
+      <ul { ...rest } className={ classes }>
         { children }
       </ul>
     );

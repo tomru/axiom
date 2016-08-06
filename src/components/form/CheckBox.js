@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
-import { blacklist } from '../_utils/props';
 
 export class CheckBox extends Component {
   static propTypes = {
@@ -10,7 +9,7 @@ export class CheckBox extends Component {
   };
 
   render() {
-    const { className, children, inline } = this.props;
+    const { className, children, inline, ...rest } = this.props;
     const classes = classnames(className,
       'ax-checkbox__group', {
         'ax-checkbox__group--inline': inline === true,
@@ -20,9 +19,7 @@ export class CheckBox extends Component {
 
     return (
       <label className={ classes }>
-        <input className="ax-checkbox"
-            type="checkbox"
-            { ...blacklist(this.props, ['children', 'className']) } />
+        <input className="ax-checkbox" type="checkbox" { ...rest } />
         <span className="ax-checkbox__label">{ children }</span>
       </label>
     );

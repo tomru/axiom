@@ -33,7 +33,7 @@ function extract(element, topLevel = true) {
       return output;
     }, []);
 
-  return cloneElement(element, null, finalChildren);
+  return cloneElement(element, {}, finalChildren);
 }
 
 export default function buildSnippet(element) {
@@ -41,8 +41,8 @@ export default function buildSnippet(element) {
   const snippetContent = extract(element);
 
   if (snippetContent) {
-    const jsxSnippet = reactElementToJsxString(snippetContent, ['renderSkip']);
-    const htmlSnippet = reactElementToHtmlString(snippetContent, ['renderSkip']);
+    const jsxSnippet = reactElementToJsxString(snippetContent);
+    const htmlSnippet = reactElementToHtmlString(snippetContent);
 
     if (jsxSnippet || htmlSnippet) {
       content.push('```jsx');

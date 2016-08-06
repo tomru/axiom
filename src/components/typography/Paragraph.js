@@ -9,13 +9,13 @@ export class Paragraph extends Component {
   };
 
   render() {
-    const { className, children, space } = this.props;
+    const { className, children, space, ...rest } = this.props;
     const classes = classnames(className, {
       'ax-text--no-space': space === false,
     });
 
     return (
-      <p { ...this.props } className={ classes }>
+      <p { ...rest } className={ classes }>
         { children }
       </p>
     );

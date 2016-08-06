@@ -7,10 +7,10 @@ export class Tr extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
 
     return (
-      <tr { ...this.props }>
+      <tr { ...rest }>
         { children }
       </tr>
     );

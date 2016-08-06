@@ -9,13 +9,13 @@ export class Td extends Component {
   };
 
   render() {
-    const { className, children, isNumber } = this.props;
+    const { className, children, isNumber, ...rest } = this.props;
     const classes = classnames(className, {
       'ax-table__cell--number': isNumber === true,
     });
 
     return (
-      <td { ...this.props } className={ classes }>
+      <td { ...rest } className={ classes }>
         { children }
       </td>
     );

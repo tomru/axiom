@@ -10,7 +10,7 @@ export class LogoHorizontal extends Component {
   static propTypes = propTypes;
 
   render() {
-    const { className, size = propTypes.size.default } = this.props;
+    const { className, size = propTypes.size.default, ...rest } = this.props;
     const classes = classnames(className, 'ax-logo', {
       'ax-logo--horizontal--sm': size === 'sm',
       'ax-logo--horizontal--md': size === 'md',
@@ -18,7 +18,7 @@ export class LogoHorizontal extends Component {
     });
 
     return (
-      <div { ...this.props } className={ classes }>
+      <div { ...rest } className={ classes }>
         <svg height="100%" viewBox="0 0 349 64" width="100%" x="0px" y="0px">
           <g>
             <g>

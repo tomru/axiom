@@ -20,6 +20,7 @@ export class Avatar extends Component {
     const {
       className,
       size = propTypes.size.default,
+      ...rest,
     } = this.props;
 
     const classes = classnames(className,
@@ -31,7 +32,7 @@ export class Avatar extends Component {
     );
 
     return (
-      <img { ...this.props } className={ classes } />
+      <img { ...rest } className={ classes } />
     );
   }
 }

@@ -11,11 +11,11 @@ export class CardTitle extends Component {
   };
 
   render() {
-    const { className, title, children } = this.props;
+    const { className, title, children, ...rest } = this.props;
     const classes = classnames(className, 'ax-card__title');
 
     return (
-      <div { ...this.props } className={ classes }>
+      <div { ...rest } className={ classes }>
         <Grid vAlign="middle">
           <GridCell>
             <h4>{ title }</h4>

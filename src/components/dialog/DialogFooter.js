@@ -9,11 +9,11 @@ export class DialogFooter extends Component {
   };
 
   render() {
-    const { children, className } = this.props;
+    const { children, className, ...rest } = this.props;
     const classes = classnames(className, 'ax-dialog__card-footer');
 
     return (
-      <CardFooter className={ classes }>
+      <CardFooter { ...rest } className={ classes }>
         { children }
       </CardFooter>
     );

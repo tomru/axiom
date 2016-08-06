@@ -7,10 +7,10 @@ export class Underline extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
 
     return (
-      <u { ...this.props }>
+      <u { ...rest }>
         { children }
       </u>
     );

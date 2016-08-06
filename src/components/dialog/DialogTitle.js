@@ -12,11 +12,11 @@ export class DialogTitle extends Component {
   };
 
   render() {
-    const { children, className, onRequestClose } = this.props;
+    const { children, className, onRequestClose, ...rest } = this.props;
     const classes = classnames(className, 'ax-dialog__card-title');
 
     return (
-      <CardTitle className={ classes } title={ children }>
+      <CardTitle { ...rest } className={ classes } title={ children }>
         <Link onClick={ onRequestClose } supressStyle={ true }>
           <Icon name="times" size="lg" />
         </Link>

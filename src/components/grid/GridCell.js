@@ -31,6 +31,7 @@ export class GridCell extends Component {
       fifth,
       sixth,
       vAlign,
+      ...rest,
     } = this.props;
 
     const classes = classnames(className,
@@ -58,7 +59,7 @@ export class GridCell extends Component {
     );
 
     return (
-      <div { ...this.props } className={ classes }>
+      <div { ...rest } className={ classes }>
         { children }
       </div>
     );

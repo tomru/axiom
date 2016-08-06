@@ -9,13 +9,13 @@ export class CardListItem extends Component {
   };
 
   render() {
-    const { className, children, clickable } = this.props;
+    const { className, children, clickable, ...rest } = this.props;
     const classes = classnames(className, 'ax-card__list-item', {
       'ax-card__list-item--clickable': clickable,
     });
 
     return (
-      <li { ...this.props } className={ classes }>
+      <li { ...rest } className={ classes }>
         { children }
       </li>
     );

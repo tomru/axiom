@@ -17,6 +17,7 @@ export class List extends Component {
       ordered,
       inline,
       aligned = !inline,
+      ...rest,
     } = this.props;
 
     const classes = classnames(className,
@@ -28,14 +29,14 @@ export class List extends Component {
 
     if (ordered === true) {
       return (
-        <ol { ...this.props } className={ classes }>
+        <ol { ...rest } className={ classes }>
           { children }
         </ol>
       );
     }
 
     return (
-      <ul { ...this.props } className={ classes }>
+      <ul { ...rest } className={ classes }>
         { children }
       </ul>
     );

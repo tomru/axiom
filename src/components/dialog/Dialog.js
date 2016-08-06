@@ -21,6 +21,7 @@ export class Dialog extends Component {
       className,
       size = propTypes.size.default,
       fullscreen,
+      ...rest,
     } = this.props;
 
     const classes = classnames(className,
@@ -31,7 +32,7 @@ export class Dialog extends Component {
     );
 
     return (
-      <Modal { ...this.props }
+      <Modal { ...rest }
           className={ classes }
           closeTimeoutMS={ parseInt(transitionTimeBase, 10) }
           overlayClassName="ax-dialog__overlay">

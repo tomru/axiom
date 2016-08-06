@@ -7,10 +7,10 @@ export class Thead extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
 
     return (
-      <thead { ...this.props }>
+      <thead { ...rest }>
         { children }
       </thead>
     );

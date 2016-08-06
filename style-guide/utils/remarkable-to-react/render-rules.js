@@ -48,9 +48,9 @@ export default function renderTree(tokens = []) {
   return tokens.reduce((acc, token) => {
     if (renderFnMap[token.type]) {
       acc.push(renderFnMap[token.type](token, {
-        key: uuid.v1(),
-        _markdownType: token.type,
-        _markdownProps: token.props,
+        key: uuid.v4(),
+        'data-markdown-type': token.type,
+        'data-markdown-props': token.props,
       }));
     }
 

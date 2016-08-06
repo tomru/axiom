@@ -5,7 +5,7 @@ import CardTitle from 'bw-axiom/components/card/CardTitle';
 import CardContent from 'bw-axiom/components/card/CardContent';
 
 export function _cardCheck({ props }) {
-  return props._markdownProps && props._markdownProps.hLevel === 1;
+  return props['data-markdown-props'] && props['data-markdown-props'].hLevel === 1;
 }
 
 export function _cardRule(content, index, structure) {

@@ -17,6 +17,7 @@ export class Table extends Component {
       sortable,
       striped,
       borders,
+      ...rest,
     } = this.props;
 
     const classes = classnames(className,
@@ -30,7 +31,7 @@ export class Table extends Component {
     );
 
     return (
-      <table { ...this.props } className={ classes }>
+      <table { ...rest } className={ classes }>
         { children }
       </table>
     );

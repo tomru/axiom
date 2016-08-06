@@ -1,7 +1,6 @@
 import React, { Component, cloneElement } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName, findComponent } from '../_utils/components';
-import { blacklist } from '../_utils/props';
 import Button from '../button/Button';
 import Icon from '../icon/Icon';
 
@@ -24,7 +23,7 @@ export class TextInput extends Component {
   }
 
   render() {
-    const { className, children, valid, invalid, thinking } = this.props;
+    const { className, children, valid, invalid, thinking, ...rest } = this.props;
     const button = findComponent(children, Button);
     const icon = findComponent(children, Icon);
     const classes = classnames(className,
@@ -39,7 +38,7 @@ export class TextInput extends Component {
         <div className="ax-input__button-container">
           <div className="ax-input__icon-container">
             <input
-                className="ax-input" { ...blacklist(this.props, ['children', 'className']) }
+                className="ax-input" { ...rest }
                 ref="input"  />
 
             { do {

@@ -8,11 +8,11 @@ export class Weak extends Component {
   };
 
   render() {
-    const { className, children } = this.props;
+    const { className, children, ...rest } = this.props;
     const classes = classnames(className, 'ax-text--weak');
 
     return (
-      <span { ...this.props } className={ classes }>
+      <span { ...rest } className={ classes }>
         { children }
       </span>
     );

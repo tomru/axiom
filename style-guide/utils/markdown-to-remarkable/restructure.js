@@ -12,10 +12,10 @@ const restructureRules = {
 
 function hasRestructureRule(element) {
   return element.props &&
-         element.props._markdownType &&
-         restructureRulesCheckMap[element.props._markdownType] &&
-         restructureRulesCheckMap[element.props._markdownType](element) &&
-         restructureRules[element.props._markdownType];
+         element.props['data-markdown-type'] &&
+         restructureRulesCheckMap[element.props['data-markdown-type']] &&
+         restructureRulesCheckMap[element.props['data-markdown-type']](element) &&
+         restructureRules[element.props['data-markdown-type']];
 }
 
 export default function restructure(content) {

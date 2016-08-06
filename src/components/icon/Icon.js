@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
-import { blacklist } from '../_utils/props';
 
 export class Icon extends Component {
   static propTypes = {
@@ -11,7 +10,7 @@ export class Icon extends Component {
   };
 
   render() {
-    const { className, name, size, fixedWidth } = this.props;
+    const { className, name, size, fixedWidth, ...rest } = this.props;
     const classes = classnames(className,
       'ax-icon',
       `ax-icon-${name}`, {
@@ -21,7 +20,7 @@ export class Icon extends Component {
     );
 
     return (
-      <i { ...blacklist(this.props, ['name']) } className={ classes } />
+      <i { ...rest } className={ classes } />
     );
   }
 }

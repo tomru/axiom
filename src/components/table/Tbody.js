@@ -7,10 +7,10 @@ export class Tbody extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
 
     return (
-      <tbody { ...this.props }>
+      <tbody { ...rest }>
         { children }
       </tbody>
     );

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
-import { blacklist } from '../_utils/props';
 import Link from '../typography/Link';
 
 export class Tabset extends Component {
@@ -27,7 +26,7 @@ export class Tabset extends Component {
   }
 
   render() {
-    const { className, children } = this.props;
+    const { className, children, ...rest } = this.props;
     const { activeTabIndex } = this.state;
     const isActive = (index) => index === activeTabIndex;
     const tabs = (Array.isArray(children) ? children : [children]).filter((tab) => tab !== undefined);
@@ -36,7 +35,7 @@ export class Tabset extends Component {
     const classes = classnames(className, 'ax-tabs');
 
     return (
-      <div { ...blacklist(this.props, ['children']) } className={ classes }>
+      <div { ...rest } className={ classes }>
         <ul className="ax-tabs__nav">
           { tabTitles.map((title, index) => {
             const tabClassName = classnames('ax-tabs__nav-item', {

@@ -7,10 +7,10 @@ export class ListItem extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
 
     return (
-      <li { ...this.props }>
+      <li { ...rest }>
         { children }
       </li>
     );

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
-import { blacklist } from '../_utils/props';
 
 export class RadioButton extends Component {
   static propTypes = {
@@ -10,7 +9,7 @@ export class RadioButton extends Component {
   };
 
   render() {
-    const { className, children, inline } = this.props;
+    const { className, children, inline, ...rest } = this.props;
     const classes = classnames(className,
       'ax-radio__group', {
         'ax-radio__group--inline': inline === true,
@@ -20,9 +19,7 @@ export class RadioButton extends Component {
 
     return (
       <label className={ classes }>
-        <input className="ax-radio"
-            type="radio"
-            { ...blacklist(this.props, ['children', 'className']) } />
+        <input className="ax-radio" type="radio" { ...rest } />
         <span className="ax-radio__label">{ children }</span>
       </label>
     );

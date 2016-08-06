@@ -7,10 +7,10 @@ export class Italic extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
 
     return (
-      <em { ...this.props }>
+      <em { ...rest }>
         { children }
       </em>
     );

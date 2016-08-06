@@ -7,10 +7,10 @@ export class Small extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
 
     return (
-      <small { ...this.props }>
+      <small { ...rest }>
         { children }
       </small>
     );

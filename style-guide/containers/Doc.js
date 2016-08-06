@@ -8,7 +8,7 @@ import GridCell from 'bw-axiom/components/grid/GridCell';
 import Heading from 'bw-axiom/components/typography/Heading';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
 import { render } from 'style-guide/utils/markdown-to-remarkable';
-import { pathToMarkdownRoute, getMarkdownContentFunction } from 'style-guide//utils/markdown-document';
+import { pathToMarkdownRoute, getMarkdownContentFunction } from 'style-guide/utils/markdown-document';
 
 export class Doc extends Component {
   static propTypes = {
