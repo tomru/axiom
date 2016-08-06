@@ -1,9 +1,13 @@
 @import '../../design-patterns/animations/mixins';
-@import '../../design-patterns/schemes/mixins';
+@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/spacing/mixins';
 
 $tabset-border-width: 1px;
 $tabset-border-radius: 2px;
+$tabset-border-color: get-color($color-grey, 200);
+$tabset-background-color-active: get-color($color-white);
+$tabset-background-color-inactive: get-color($color-grey, 200);
+$tabset-background-color-hover: get-color($color-grey, 100);
 
 .ax-tabs {
   @include space-block();
@@ -23,12 +27,9 @@ $tabset-border-radius: 2px;
     left: 0;
     width: 100%;
     height: $tabset-border-width;
+    background-color: $tabset-border-color;
     content: '';
     z-index: -1;
-
-    @include for-each-scheme {
-      background-color: scheme-prop(tabs-border-color);
-    }
   }
 }
 
@@ -36,23 +37,17 @@ $tabset-border-radius: 2px;
   @include transition((background-color, border-color));
 
   margin: 0 $component-margin-h-sm 0 0;
-  border: $tabset-border-width solid transparent;
+  border: $tabset-border-width solid $tabset-border-color;
   border-bottom: 0;
   border-radius: $tabset-border-radius $tabset-border-radius 0 0;
+  background-color: $tabset-background-color-inactive;
+  color: get-text-color($tabset-background-color-inactive);
   list-style: none;
   white-space: nowrap;
 
-  @include for-each-scheme {
-    border-color: scheme-prop(tabs-border-color);
-    background-color: scheme-prop(tabs-inactive-background-color);
-    color: scheme-text-color(scheme-prop(tabs-inactive-background-color));
-  }
-
   &:hover {
-    @include for-each-scheme {
-      background-color: scheme-prop(tabs-hover-background-color);
-      color: scheme-text-color(scheme-prop(tabs-hover-background-color));
-    }
+    background-color: $tabset-background-color-hover;
+    color: get-text-color($tabset-background-color-hover);
   }
 
   &:last-child {
@@ -60,13 +55,11 @@ $tabset-border-radius: 2px;
   }
 }
 
-@include for-each-scheme {
-  .ax-tabs__nav-item--active {
-    &,
-    &:hover {
-      background-color: scheme-prop(tabs-active-background-color);
-      color: scheme-text-color(scheme-prop(tabs-active-background-color));
-    }
+.ax-tabs__nav-item--active {
+  &,
+  &:hover {
+    background-color: $tabset-background-color-active;
+    color: get-text-color($tabset-background-color-active);
   }
 }
 

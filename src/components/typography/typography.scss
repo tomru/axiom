@@ -1,5 +1,4 @@
 @import '../../design-patterns/layout/mixins';
-@import '../../design-patterns/schemes/mixins';
 @import '../../design-patterns/spacing/mixins';
 @import './mixins';
 
@@ -108,13 +107,11 @@ a {
 a.ax-link {
   // Color links but this will need to be
   // suppressed for things like menu.
-  @include for-each-scheme {
-    &:not(.ax-link--inherit-color) {
-      color: get-color(scheme-prop(primary));
+  &:not(.ax-link--inherit-color) {
+    color: get-color($color-accent);
 
-      &:hover {
-        color: get-color(scheme-prop(primary), 600);
-      }
+    &:hover {
+      color: get-color($color-accent, 600);
     }
   }
 
@@ -162,10 +159,8 @@ a.ax-link {
   }
 }
 
-@include for-each-scheme {
-  .ax-text--primary {
-    color: get-color(scheme-prop(primary), 500);
-  }
+.ax-text--primary {
+  color: get-color($color-accent, 500);
 }
 
 

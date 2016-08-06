@@ -1,7 +1,6 @@
 @import '~bw-axiom/design-patterns/animations/mixins';
 @import '~bw-axiom/design-patterns/colors/mixins';
 @import '~bw-axiom/design-patterns/layout/mixins';
-@import '~bw-axiom/design-patterns/schemes/mixins';
 @import './vars';
 
 .dm-layout__sidebar {
@@ -14,10 +13,7 @@
   width: $sidebar-width;
   border-right: $sidebar-border-width solid $sidebar-border-color;
   background-color: $sidebar-background-color;
-
-  @include for-each-scheme {
-    color: scheme-text-color($sidebar-background-color);
-  }
+  color: get-text-color($sidebar-background-color);
 
   @include screen-less-than($layout-change-point) {
     @include transition((transform));

@@ -1,4 +1,4 @@
-@import '../../design-patterns/schemes/mixins';
+@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/spacing/mixins';
 
 
@@ -6,16 +6,18 @@ $card-padding-v: $container-padding-v-base;
 $card-padding-h: $container-padding-h-base;
 $card-border: 1px solid transparent;
 
+$card-background-color: get-color($color-white);
+$card-background-color-hover: get-color($color-grey, 50);
+$card-border-color: get-color($color-grey, 100);
+
 
 // Card: Base
 .ax-card {
   @include space-block($container-margin-v-base);
 
   &:not(.ax-card--transparent) {
-    @include for-each-scheme {
-      background-color: scheme-prop(card-color);
-      color: scheme-text-color(scheme-prop(card-color));
-    }
+    background-color: $card-background-color;
+    color: get-text-color($card-background-color);
   }
 }
 
@@ -41,13 +43,8 @@ $card-border: 1px solid transparent;
 .ax-card__list-item {
   padding: ($card-padding-v / 2) $card-padding-h;
   border-bottom: $card-border;
+  border-color: $card-border-color;
   list-style: none;
-
-  @include for-each-scheme {
-    @if scheme-has-prop(card-border) {
-      border-color: scheme-prop(card-border);
-    }
-  }
 
   &:first-child {
     padding-top: $card-padding-v;
@@ -64,12 +61,8 @@ $card-border: 1px solid transparent;
 .ax-card__list-item--clickable {
   cursor: pointer;
 
-  @include for-each-scheme {
-    @if scheme-has-prop(card-border) {
-      &:hover {
-        background-color: scheme-prop(card-hover-color);
-        color: scheme-text-color(scheme-prop(card-hover-color));
-      }
-    }
+  &:hover {
+    background-color: $card-background-color-hover;
+    color: get-text-color($card-background-color-hover);
   }
 }

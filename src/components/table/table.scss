@@ -1,10 +1,11 @@
-@import '../../design-patterns/schemes/mixins';
+@import '../../design-patterns/colors/mixins';
 @import '../icon/mixins';
 @import '../icon/vars';
 
-
 $table-border-width: 1px;
-
+$table-border-color: get-color($color-grey, 200);
+$table-row-background-color-odd: get-color($color-grey, 50);
+$table-row-background-color-even: get-color($color-white);
 
 // Table: Base
 .ax-table {
@@ -27,35 +28,29 @@ $table-border-width: 1px;
 
 
 // Table: Stripey Row
-@include for-each-scheme {
-  .ax-table--striped {
-    tbody {
-      tr {
-        &:nth-child(odd)  { background-color: scheme-prop(table-row-odd-color); }
-        &:nth-child(even) { background-color: scheme-prop(table-row-even-color); }
-      }
+.ax-table--striped {
+  tbody {
+    tr {
+      &:nth-child(odd)  { background-color: $table-row-background-color-odd; }
+      &:nth-child(even) { background-color: $table-row-background-color-even; }
     }
   }
 }
 
 
 // Table: Bordered
-@include for-each-scheme {
-  .ax-table--borders,
-  .ax-table--borders--v {
-    th:not(:first-child),
-    td:not(:first-child) {
-      border-left: $table-border-width solid scheme-prop(table-border-color);
-    }
+.ax-table--borders,
+.ax-table--borders--v {
+  th:not(:first-child),
+  td:not(:first-child) {
+    border-left: $table-border-width solid $table-border-color;
   }
 }
 
-@include for-each-scheme {
-  .ax-table--borders,
-  .ax-table--borders--h {
-    tr {
-      border-bottom: $table-border-width solid scheme-prop(table-border-color);
-    }
+.ax-table--borders,
+.ax-table--borders--h {
+  tr {
+    border-bottom: $table-border-width solid $table-border-color;
   }
 }
 

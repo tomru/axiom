@@ -4,7 +4,6 @@
 
 @import '~bw-axiom/design-patterns/animations/animations';
 @import '~bw-axiom/design-patterns/layout/layout';
-@import '~bw-axiom/design-patterns/schemes/scheme';
 @import '~bw-axiom/design-patterns/utilities/utilities';
 
 @import '~bw-axiom/components/avatar/avatar';
@@ -39,6 +38,11 @@
 @import '~style-guide/components/Navigation/Nav';
 @import '~style-guide/components/Navigation/NavList';
 @import '~style-guide/components/Navigation/NavListItem';
+
+body {
+  background-color: get-color($color-grey, 50);
+  color: get-text-color(get-color($color-grey, 50));
+}
 
 body,
 .dm-app-container {

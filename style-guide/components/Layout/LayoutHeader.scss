@@ -1,6 +1,5 @@
 @import '~bw-axiom/design-patterns/colors/mixins';
 @import '~bw-axiom/design-patterns/layout/mixins';
-@import '~bw-axiom/design-patterns/schemes/mixins';
 @import './vars';
 
 .dm-layout__header {
@@ -16,12 +15,9 @@
   border-right: $sidebar-border-width solid $sidebar-border-color;
   border-bottom: $sidebar-border-width solid transparent;
   background-color: $header-background-color;
+  color: get-text-color($header-background-color);
   text-align: center;
   z-index: $z-index-layout-header;
-
-  @include for-each-scheme {
-    color: scheme-text-color($header-background-color);
-  }
 
   @include screen-less-than($layout-change-point) {
     width: 100%;

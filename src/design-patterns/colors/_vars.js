@@ -112,10 +112,11 @@ module.exports = {
   colorAliases,
   colorAliasesFlattened,
 
+  colorAccent: palette.colorBlue,
+  colorTextDark: palette.colorGrey[900],
+  colorTextLight: palette.colorGrey[50],
+
   colors,
   colorVariations,
-  colorIds: [
-    'primary',
-    ...colors.map(({ name }) => name),
-  ],
+  colorIds: colors.map(({ name }) => name),
 };

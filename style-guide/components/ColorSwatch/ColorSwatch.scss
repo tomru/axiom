@@ -1,5 +1,4 @@
 @import '~bw-axiom/design-patterns/colors/mixins';
-@import '~bw-axiom/design-patterns/schemes/mixins';
 
 $color-box-border-radius: 2px;
 
@@ -26,10 +25,8 @@ $color-box-border-radius: 2px;
 @include for-each-color {
   @each $variation, $hex in color-prop(color) {
     .dm-color--#{color-prop(name)}--#{$variation} {
-      @include for-each-scheme {
-        background-color: $hex;
-        color: scheme-text-color($hex);
-      }
+      background-color: $hex;
+      color: get-text-color($hex);
     }
   }
 }

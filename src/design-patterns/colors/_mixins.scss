@@ -80,7 +80,7 @@
     $adjusted: 0;
     $value: $value / 255;
 
-    @if $value < 0.03928 {
+    @if $value < .03928 {
       $value: $value / 12.92;
     } @else {
       $value: ($value + .055) / 1.055;
@@ -90,10 +90,11 @@
     $colors: map-merge($colors, ($name: $value));
   }
 
-  @return
-    (map-get($colors, 'red') * .2126) +
-    (map-get($colors, 'green') * .7152) +
-    (map-get($colors, 'blue') * .0722);
+  @return (
+  ( map-get($colors, 'red') * .2126 ) +
+    ( map-get($colors, 'green') * .7152 ) +
+      ( map-get($colors, 'blue') * .0722 )
+  );
 }
 
 
@@ -104,6 +105,10 @@
   } @else {
     @return $light;
   }
+}
+
+@function get-text-color($color) {
+  @return get-contrasting-color($color, $color-text-light, $color-text-dark);
 }
 
 

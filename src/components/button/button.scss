@@ -1,6 +1,6 @@
 @import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/layout/mixins';
-@import '../../design-patterns/schemes/mixins';
 @import '../../design-patterns/spacing/mixins';
 @import '../containers/mixins';
 
@@ -99,19 +99,19 @@ button {
 @mixin button-color-filled($color) {
   border-color: get-color($color, 500);
   background-color: get-color($color, 400);
-  color: scheme-text-color(get-color($color, 400));
+  color: get-text-color(get-color($color, 400));
 
   &:hover {
     border-color: get-color($color, 600);
     background-color: get-color($color, 500);
-    color: scheme-text-color(get-color($color, 500));
+    color: get-text-color(get-color($color, 500));
   }
 
   &:active,
   &.active {
     border-color: get-color($color, 700);
     background-color: get-color($color, 600);
-    color: scheme-text-color(get-color($color, 600));
+    color: get-text-color(get-color($color, 600));
   }
 
   &[disabled],
@@ -136,7 +136,7 @@ button {
   &.active {
     border-color: get-color($color, 700);
     background-color: get-color($color, 600);
-    color: scheme-text-color(get-color($color, 600));
+    color: get-text-color(get-color($color, 600));
   }
 
   &[disabled],
@@ -147,27 +147,25 @@ button {
   }
 }
 
-@include for-each-scheme {
-  @include for-each-color {
-    .ax-button--#{color-prop(name)} {
-      &:not(.ax-button--outlined) {
-        @include button-color-filled(color-prop(color));
-      }
-
-      &.ax-button--outlined {
-        @include button-color-outlined(color-prop(color));
-      }
-    }
-  }
-
-  .ax-button--primary {
+@include for-each-color {
+  .ax-button--#{color-prop(name)} {
     &:not(.ax-button--outlined) {
-      @include button-color-filled(scheme-prop(primary));
+      @include button-color-filled(color-prop(color));
     }
 
     &.ax-button--outlined {
-      @include button-color-outlined(scheme-prop(primary));
+      @include button-color-outlined(color-prop(color));
     }
+  }
+}
+
+.ax-button--primary {
+  &:not(.ax-button--outlined) {
+    @include button-color-filled($color-accent);
+  }
+
+  &.ax-button--outlined {
+    @include button-color-outlined($color-accent);
   }
 }
 

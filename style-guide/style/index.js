@@ -1,7 +1,6 @@
 import designAnimations from '../../src/design-patterns/animations/_vars';
 import designColors from '../../src/design-patterns/colors/_vars';
 import designLayout from '../../src/design-patterns/layout/_vars';
-import designSchemes from '../../src/design-patterns/schemes/_vars';
 import designSpacing from '../../src/design-patterns/spacing/_vars';
 
 import componentDialog from '../../src/components/dialog/_vars';
@@ -13,7 +12,6 @@ module.exports = {
   ...designAnimations,
   ...designColors,
   ...designLayout,
-  ...designSchemes,
   ...designSpacing,
 
   ...componentDialog,

@@ -1,5 +1,5 @@
+@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/utilities/mixins';
-@import '../../design-patterns/schemes/mixins';
 
 
 // Billboard: Image
@@ -28,10 +28,8 @@
 @include for-each-color {
   @each $variation, $hex in color-prop(color) {
     .ax-billboard--#{color-prop(name)}--#{$variation} {
-      @include for-each-scheme {
-        background-color: $hex;
-        color: scheme-text-color($hex);
-      }
+      background-color: $hex;
+      color: get-text-color($hex);
     }
   }
 }
