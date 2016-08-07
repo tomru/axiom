@@ -29,8 +29,9 @@ export function enhance(Component) {
 
 export function addPropTypes(...propSets) {
   return (Component) => {
-    Component.__ax_propTypes = Component.propTypes;
-    Component.__ax_propTypesSet = mergePropTypeSets(propSets);
+    if (!Component.__ax_propTypes) Component.__ax_propTypes = { ...Component.propTypes };
+    if (!Component.__ax_propTypesSet) Component.__ax_propTypesSet = mergePropTypeSets(propSets);
+
     Component.propTypes = mapToPropTypes({
       ...Component.__ax_propTypes,
       ...Component.__ax_propTypesSet,
