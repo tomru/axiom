@@ -5,7 +5,7 @@ import { addDynamicClass, breakpointClassName } from '../_utils/class-name';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
 import { gridGutters } from './_vars';
 
-if (__CLIENT__) {
+if (__INCLUDE_CSS__) {
   require('./Grid.scss');
 }
 

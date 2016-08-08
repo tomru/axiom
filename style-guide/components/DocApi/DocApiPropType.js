@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-if (__CLIENT__) {
+if (__INCLUDE_CSS__) {
   require('./DocApiPropType.scss');
 }
 

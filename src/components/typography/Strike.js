@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 
+if (__INCLUDE_CSS__) {
+  require('./Strike.scss');
+}
+
 export class Strike extends Component {
   static propTypes = {
     children: { node: true },

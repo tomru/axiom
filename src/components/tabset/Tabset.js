@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 import Link from '../typography/Link';
 
-if (__CLIENT__) {
+if (__INCLUDE_CSS__) {
   require('./Tabset.scss');
 }
 

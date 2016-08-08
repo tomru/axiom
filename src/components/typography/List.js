@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 
+if (__INCLUDE_CSS__) {
+  require('./List.scss');
+}
+
 export class List extends Component {
   static propTypes = {
     aligned: { bool: true },

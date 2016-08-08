@@ -2,21 +2,18 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 
-if (__CLIENT__) {
-  require('./Typography.scss');
+if (__INCLUDE_CSS__) {
+  require('./Heading.scss');
 }
 
 export class Heading extends Component {
   static propTypes = {
     level: { oneOf: [1, 2, 3, 4, 5], isRequired: true },
-    space: { bool: true },
   };
 
   render() {
-    const { className, level, space, ...rest } = this.props;
-    const classes = classnames(className, {
-      'ax-text--no-space': space === false,
-    });
+    const { className, level, ...rest } = this.props;
+    const classes = classnames(className);
 
     switch (level) {
     case 1:

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-if (__CLIENT__) {
+if (__INCLUDE_CSS__) {
   require('./LayoutMain.scss');
 }
 

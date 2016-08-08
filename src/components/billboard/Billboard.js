@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 import { colorIds, colorVariations, colorBaseVariation } from '../../design-patterns/colors/_vars';
 
-if (__CLIENT__) {
+if (__INCLUDE_CSS__) {
   require('./Billboard.scss');
 }
 

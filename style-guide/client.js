@@ -7,7 +7,7 @@ import createStore from './redux/createStore';
 import createRoutes from './redux/createRoutes';
 import createDevTools from './redux/createDevTools';
 
-if (__CLIENT__) {
+if (__INCLUDE_CSS__) {
   require('./client.scss');
 }
 

@@ -1,6 +1,5 @@
 @import '../../design-patterns/spacing/mixins';
 
-// Form: Base
-.ax-form {
+.ax-paragraph {
   @include space-block();
 }

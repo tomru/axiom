@@ -3,6 +3,10 @@ import { Link as RouterLink } from 'react-router';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 
+if (__INCLUDE_CSS__) {
+  require('./Link.scss');
+}
+
 export class Link extends Component {
   static propTypes = {
     children: { node: true },

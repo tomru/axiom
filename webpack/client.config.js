@@ -48,6 +48,7 @@ export default {
       __SERVER__: false,
       __PRODUCTION__: true,
       __DEVELOPMENT__: false,
+      __INCLUDE_CSS__: true,
       'process.env': {
         NODE_ENV: '"production"',
       },

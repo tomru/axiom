@@ -1,3 +1,5 @@
+import { spacingSm, spacingBase } from '../../design-patterns/spacing/_vars';
+
 const scales = {
   scaleMinorSecond: 1.067,
   scaleMajorSecond: 1.125,
@@ -30,11 +32,17 @@ const fontSizeEm = 1; // Em
 
 const lineHeightPx = 22;
 
-const fontSizeH5 =  fontSizeEm;
-const fontSizeH4 =  fontSizeH5 * fontSizeRatio;
-const fontSizeH3 =  fontSizeH4 * fontSizeRatio;
-const fontSizeH2 =  fontSizeH3 * fontSizeRatio;
-const fontSizeH1 =  fontSizeH2 * fontSizeRatio;
+let fontSizeH5 =  fontSizeEm;
+let fontSizeH4 =  fontSizeH5 * fontSizeRatio;
+let fontSizeH3 =  fontSizeH4 * fontSizeRatio;
+let fontSizeH2 =  fontSizeH3 * fontSizeRatio;
+let fontSizeH1 =  fontSizeH2 * fontSizeRatio;
+
+fontSizeH5 = `${fontSizeH5}rem`;
+fontSizeH4 = `${fontSizeH4}rem`;
+fontSizeH3 = `${fontSizeH3}rem`;
+fontSizeH2 = `${fontSizeH2}rem`;
+fontSizeH1 = `${fontSizeH1}rem`;
 
 module.exports = {
   fontFamilyBody,
@@ -47,11 +55,11 @@ module.exports = {
   fontSizeBase: `${fontSizePx}px`,
   fontSizeEm: `${fontSizeEm}rem`,
 
-  fontSizeH5: `${fontSizeH5}rem`,
-  fontSizeH4: `${fontSizeH4}rem`,
-  fontSizeH3: `${fontSizeH3}rem`,
-  fontSizeH2: `${fontSizeH2}rem`,
-  fontSizeH1: `${fontSizeH1}rem`,
+  fontSizeH5,
+  fontSizeH4,
+  fontSizeH3,
+  fontSizeH2,
+  fontSizeH1,
 
   fontSizeMd: '12px',
   fontSizeSm: '11px',
@@ -65,11 +73,11 @@ module.exports = {
   fontWeightStrong: 700,
 
   fontHeadings: {
-    h1: { family: fontFamilyH1, size: `${fontSizeH1}rem` },
-    h2: { family: fontFamilyH2, size: `${fontSizeH2}rem` },
-    h3: { family: fontFamilyH3, size: `${fontSizeH3}rem` },
-    h4: { family: fontFamilyH4, size: `${fontSizeH4}rem` },
-    h5: { family: fontFamilyH5, size: `${fontSizeH5}rem` },
+    h1: { family: fontFamilyH1, size: fontSizeH1, margin: `${spacingBase} 0` },
+    h2: { family: fontFamilyH2, size: fontSizeH2, margin: `${spacingSm} 0 ${spacingSm}` },
+    h3: { family: fontFamilyH3, size: fontSizeH3, margin: `${spacingSm} 0 ${spacingSm}` },
+    h4: { family: fontFamilyH4, size: fontSizeH4, margin: `${spacingSm} 0 ${spacingSm}` },
+    h5: { family: fontFamilyH5, size: fontSizeH5, margin: `${spacingSm} 0 ${spacingSm}` },
   },
 
   fontHeadingFamilies: [

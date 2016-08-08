@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 
+if (__INCLUDE_CSS__) {
+  require('./Underline.scss');
+}
+
 export class Underline extends Component {
   static propTypes = {
     children: { node: true },

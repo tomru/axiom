@@ -6,7 +6,7 @@ import Icon from 'bw-axiom/components/icon/Icon';
 import LogoVertical from 'bw-axiom/components/logo/LogoVertical';
 import LayoutContent from './LayoutContent';
 
-if (__CLIENT__) {
+if (__INCLUDE_CSS__) {
   require('./LayoutFooter.scss');
 }
 

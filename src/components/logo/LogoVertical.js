@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes } from '../_utils/components';
 
-if (__CLIENT__) {
+if (__INCLUDE_CSS__) {
   require('./LogoVertical.scss');
 }
 

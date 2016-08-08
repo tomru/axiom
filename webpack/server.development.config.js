@@ -24,6 +24,7 @@ export default {
       __SERVER__: true,
       __PRODUCTION__: false,
       __DEVELOPMENT__: true,
+      __INCLUDE_CSS__: false,
     }),
   ],
 };

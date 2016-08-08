@@ -4,6 +4,10 @@ import { enhance, addPropTypes, addClassName, findComponent } from '../_utils/co
 import Button from '../button/Button';
 import Icon from '../icon/Icon';
 
+if (__INCLUDE_CSS__) {
+  require('./TextInput.scss');
+}
+
 export class TextInput extends Component {
   static propTypes = {
     children: { node: true },
@@ -28,8 +32,8 @@ export class TextInput extends Component {
     const icon = findComponent(children, Icon);
     const classes = classnames(className,
       'ax-input__group', {
-        'ax-input--valid': valid === true,
-        'ax-input--invalid': invalid === true,
+        'ax-input__group--valid': valid === true,
+        'ax-input__group--invalid': invalid === true,
       }
     );
 

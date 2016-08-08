@@ -5,7 +5,7 @@ import Grid from 'bw-axiom/components/grid/Grid';
 import GridCell from 'bw-axiom/components/grid/GridCell';
 import Strong from 'bw-axiom/components/typography/Strong';
 
-if (__CLIENT__) {
+if (__INCLUDE_CSS__) {
   require('./ColorSwatch.scss');
 }
 

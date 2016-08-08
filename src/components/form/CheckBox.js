@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import ChedioButtox from './ChedioButtox';
+
+if (__INCLUDE_CSS__) {
+  require('./CheckBox.scss');
+}
 
 export class CheckBox extends Component {
-  static propTypes = {
-    children: { node: true },
-    inline: { bool: true },
-  };
-
   render() {
-    const { className, children, inline, ...rest } = this.props;
-    const classes = classnames(className,
-      'ax-checkbox__group', {
-        'ax-checkbox__group--inline': inline === true,
-        'ax-checkbox__group--space': !!children,
-      }
-    );
-
     return (
-      <label className={ classes }>
-        <input className="ax-checkbox" type="checkbox" { ...rest } />
-        <span className="ax-checkbox__label">{ children }</span>
-      </label>
+      <ChedioButtox
+          { ...this.props }
+          inputClassName="ax-checkbox"
+          inputType="checkbox"
+          labelClassName="ax-checkbox__label" />
     );
   }
 }

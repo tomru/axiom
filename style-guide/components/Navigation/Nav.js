@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import NavList from './NavList';
 
-if (__CLIENT__) {
+if (__INCLUDE_CSS__) {
   require('./Nav.scss');
 }
 

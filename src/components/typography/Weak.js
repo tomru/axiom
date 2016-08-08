@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 
+if (__INCLUDE_CSS__) {
+  require('./Weak.scss');
+}
+
 export class Weak extends Component {
   static propTypes = {
     children: { node: true },

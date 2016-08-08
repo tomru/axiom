@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import Link from 'bw-axiom/components/typography/Link';
 import NavList from './NavList';
 
-if (__CLIENT__) {
+if (__INCLUDE_CSS__) {
   require('./NavListItem.scss');
 }
 
