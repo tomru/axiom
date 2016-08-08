@@ -1,6 +1,9 @@
 @import '../../design-patterns/colors/mixins';
+@import '../../design-patterns/colors/_vars.js';
+@import '../../design-patterns/spacing/_vars.js';
 @import '../icon/mixins';
 @import '../icon/vars';
+@import '../typography/_vars.js';
 
 $table-border-width: 1px;
 $table-border-color: get-color($color-grey, 200);

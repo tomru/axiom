@@ -45,9 +45,7 @@ export default class DocApiList extends Component {
               </GridCell>
             </Grid>
 
-            <pre className="dm-doc-api__pre">
-              <DocApiPropType propType={ propTypes[key] } />
-            </pre>
+            <DocApiPropType propType={ propTypes[key] } />
           </CardListItem>
         ) }
       </CardList>

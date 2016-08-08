@@ -5,6 +5,10 @@ import { addDynamicClass, breakpointClassName } from '../_utils/class-name';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
 import { gridGutters } from './_vars';
 
+if (__CLIENT__) {
+  require('./Grid.scss');
+}
+
 export class Grid extends Component {
   static propTypes = {
     children: { node: true, isRequired: true },

@@ -1,3 +1,5 @@
+@import './_vars.js';
+
 //
 @function _build-transition($properties, $speed, $delay) {
   $transitions: ();

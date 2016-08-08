@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import autoprefixer from 'autoprefixer';
 import * as config from '../config';
-import { variableImporter } from '../utils/sass';
+import axiomSassVariableImporter from '../utils/axiom-sass-variable-importer';
 import { js, json, yml, styleExtract, fonts, markdown } from './loader.config.js';
 
 export default {
@@ -26,6 +26,7 @@ export default {
     modulesDirectories: [
       'node_modules',
       'webpack/loaders',
+      'utils',
     ],
   },
   plugins: [
@@ -59,7 +60,9 @@ export default {
     loaders: [js, json, yml, styleExtract, fonts, markdown],
   },
   sassLoader: {
-    importer: variableImporter(config.paths.sassConfig, 'axiom-vars'),
+    importer: [
+      axiomSassVariableImporter(config.webpack.aliases),
+    ],
   },
   postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],
 };

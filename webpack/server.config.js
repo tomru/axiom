@@ -20,6 +20,7 @@ export default {
     modulesDirectories: [
       'node_modules',
       'webpack/loaders',
+      'utils',
     ],
   },
   plugins: [

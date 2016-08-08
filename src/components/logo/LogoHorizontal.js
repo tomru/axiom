@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes } from '../_utils/components';
 
+if (__CLIENT__) {
+  require('./LogoHorizontal.scss');
+}
+
 const propTypes = {
   size: { oneOf: ['sm', 'md', 'lg'], default: 'md' },
 };

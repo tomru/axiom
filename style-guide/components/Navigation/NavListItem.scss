@@ -1,7 +1,9 @@
 @import '~bw-axiom/design-patterns/colors/mixins';
+@import '~bw-axiom/design-patterns/colors/_vars.js';
+@import '~bw-axiom/design-patterns/spacing/_vars.js';
 @import '~bw-axiom/components/icon/mixins';
-
-$color-accent: $color-blue;
+@import '~bw-axiom/components/icon/vars';
+@import '~bw-axiom/components/typography/_vars.js';
 
 $nav-first-level-item-background-color-hover: get-color($color-grey, 50);
 $nav-first-level-item-active-color: get-color($color-accent, A400);

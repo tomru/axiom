@@ -1,6 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
+if (__CLIENT__) {
+  require('./LayoutFullHeightContainer.scss');
+}
+
 export default class LayoutFullHeightContainer extends Component {
   static propTypes = {
     children: PropTypes.node.isRequiried,

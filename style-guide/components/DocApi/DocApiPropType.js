@@ -1,5 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 
+if (__CLIENT__) {
+  require('./DocApiPropType.scss');
+}
+
 function oneOf(list) {
   return `enum(${
     list.map((oneOf) => {
@@ -37,13 +41,15 @@ export default class DocApiPropType extends Component {
     const { propType } = this.props;
 
     return (
-      <code className="dm-doc-api__code">
-        {
-          typeof PROP_TYPE_MAP[propType.type] === 'function'
-            ? PROP_TYPE_MAP[propType.type](propType[propType.type])
-            : PROP_TYPE_MAP[propType.type]
-        }
-      </code>
+      <pre className="dm-doc-api__pre">
+        <code className="dm-doc-api__code">
+          {
+            typeof PROP_TYPE_MAP[propType.type] === 'function'
+              ? PROP_TYPE_MAP[propType.type](propType[propType.type])
+              : PROP_TYPE_MAP[propType.type]
+          }
+        </code>
+      </pre>
     );
   }
 }

@@ -1,3 +1,5 @@
+@import './_vars.js';
+
 @mixin space-inline($vertical: $component-margin-v-base, $horizontal: $vertical) {
   margin: 0 $horizontal $vertical 0;
 

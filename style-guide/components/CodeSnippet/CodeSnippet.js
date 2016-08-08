@@ -3,6 +3,7 @@ import { prepareSnippet } from 'style-guide/utils/code-formatting';
 
 if (__CLIENT__) {
   require('prismjs/themes/prism.css');
+  require('./CodeSnippet.scss');
 }
 
 export default class CodeSnippet extends Component {

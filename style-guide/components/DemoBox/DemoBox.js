@@ -1,6 +1,10 @@
 import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames';
 
+if (__CLIENT__) {
+  require('./DemoBox.scss');
+}
+
 export default class DemoBox extends Component {
   static propTypes = {
     attention: PropTypes.bool,

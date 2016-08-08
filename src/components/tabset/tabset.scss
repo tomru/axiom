@@ -1,6 +1,9 @@
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/colors/mixins';
+@import '../../design-patterns/colors/_vars.js';
 @import '../../design-patterns/spacing/mixins';
+@import '../../design-patterns/spacing/_vars.js';
+@import '../typography/_vars.js';
 
 $tabset-border-width: 1px;
 $tabset-border-radius: 2px;

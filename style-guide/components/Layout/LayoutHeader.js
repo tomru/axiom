@@ -6,6 +6,10 @@ import Icon from 'bw-axiom/components/icon/Icon';
 import Heading from 'bw-axiom/components/typography/Heading';
 import Link from 'bw-axiom/components/typography/Link';
 
+if (__CLIENT__) {
+  require('./LayoutHeader.scss');
+}
+
 export default class LayoutHeader extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,

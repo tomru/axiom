@@ -3,6 +3,10 @@ import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 import { colorIds, colorVariations, colorBaseVariation } from '../../design-patterns/colors/_vars';
 
+if (__CLIENT__) {
+  require('./Billboard.scss');
+}
+
 const propTypes = {
   children: { node: true },
   color: { oneOf: [...colorIds] },

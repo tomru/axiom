@@ -2,6 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import NavListItem from './NavListItem';
 
+if (__CLIENT__) {
+  require('./NavList.scss');
+}
+
 export default class NavList extends Component {
   static propTypes = {
     className: PropTypes.string,

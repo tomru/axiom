@@ -1,5 +1,5 @@
 import path from 'path';
-import { createAlias } from './utils/webpack';
+import Alias from './utils/webpack-alias-plugin';
 import { name, version } from './package.json';
 
 const outputFolderName = 'lib';
@@ -13,6 +13,7 @@ export const paths = {
 };
 
 paths.sassConfig = path.join(paths.styleGuide, 'style', 'index.js');
+paths.sassVariables = path.join(paths.styleGuide, 'style', 'variables.js');
 
 export const webpack = {
   devServerHostname: 'localhost',
@@ -23,8 +24,8 @@ export const webpack = {
     __OUTPUT_DIR__: `"${outputFolderName}"`,
   },
   aliases: [
-    createAlias('bw-axiom', paths.source),
-    createAlias('style-guide', paths.styleGuide),
+    new Alias(/^bw-axiom/, (path) => path.replace(/^bw-axiom(.*)/, `${paths.source}$1`)),
+    new Alias(/^style-guide/, (path) => path.replace(/^style-guide(.*)/, `${paths.styleGuide}$1`)),
   ],
 };
 

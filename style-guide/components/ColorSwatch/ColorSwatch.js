@@ -5,6 +5,10 @@ import Grid from 'bw-axiom/components/grid/Grid';
 import GridCell from 'bw-axiom/components/grid/GridCell';
 import Strong from 'bw-axiom/components/typography/Strong';
 
+if (__CLIENT__) {
+  require('./ColorSwatch.scss');
+}
+
 export default class ColorSwatch extends Component {
   static propTypes = {
     color: PropTypes.object.isRequired,

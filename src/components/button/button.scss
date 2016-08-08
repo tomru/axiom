@@ -1,8 +1,11 @@
 @import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/animations/_vars.js';
 @import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/layout/mixins';
+@import '../../design-patterns/spacing/_vars.js';
 @import '../../design-patterns/spacing/mixins';
-@import '../containers/mixins';
+@import '../typography/_vars.js';
+@import '../button/_vars.js';
 
 $button-padding-v-sm: 0;
 $button-padding-h-sm: $component-padding-h-sm;
@@ -15,10 +18,6 @@ $button-font-size-md: $font-size-md;
 $button-padding-v-lg: $component-padding-v-base;
 $button-padding-h-lg: $component-padding-h-base;
 $button-font-size-lg: $font-size-base;
-
-$button-border-width: 1px;
-$button-border-radius: 2px;
-
 
 // Button: Core
 button {
@@ -195,30 +194,4 @@ button {
 // Button: Icon
 .ax-button__icon {
   margin-right: $component-margin-h-sm;
-}
-
-
-// Button Group: Base
-.ax-button__group {
-  @include space-block($component-margin-v-base);
-  @include inline-component-container(ax-button);
-}
-
-
-// Button Group: Joined buttons
-.ax-button__group--joined {
-  > .ax-button {
-    margin: 0;
-    border-right-width: 0;
-    border-radius: 0;
-
-    &:first-child {
-      border-radius: $button-border-radius 0 0 $button-border-radius;
-    }
-
-    &:last-child {
-      border-right-width: $button-border-width;
-      border-radius: 0 $button-border-radius $button-border-radius 0;
-    }
-  }
 }

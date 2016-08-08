@@ -7,6 +7,10 @@ import { breakpointIds } from '../../design-patterns/layout/_vars';
 import { colorIds } from '../../design-patterns/colors/_vars';
 import Icon from '../icon/Icon';
 
+if (__CLIENT__) {
+  require('./Button.scss');
+}
+
 const propsTypes = {
   children: { node: true },
   circular: { bool: true },

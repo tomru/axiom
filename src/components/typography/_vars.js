@@ -28,6 +28,8 @@ const fontSizeRatio = scales.scaleAugmentedForth;
 const fontSizePx = 14; // PX
 const fontSizeEm = 1; // Em
 
+const lineHeightPx = 22;
+
 const fontSizeH5 =  fontSizeEm;
 const fontSizeH4 =  fontSizeH5 * fontSizeRatio;
 const fontSizeH3 =  fontSizeH4 * fontSizeRatio;
@@ -54,7 +56,8 @@ module.exports = {
   fontSizeMd: '12px',
   fontSizeSm: '11px',
 
-  lineHeight: '22px',
+  lineHeightPx,
+  lineHeight: `${lineHeightPx}px`,
   lineHeightDyn: 1.2,
 
   fontWeightWeak: 300,

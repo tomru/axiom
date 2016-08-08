@@ -6,6 +6,10 @@ import Icon from 'bw-axiom/components/icon/Icon';
 import LogoVertical from 'bw-axiom/components/logo/LogoVertical';
 import LayoutContent from './LayoutContent';
 
+if (__CLIENT__) {
+  require('./LayoutFooter.scss');
+}
+
 export default class LayoutFooter extends Component {
   render() {
     const { className } = this.props;

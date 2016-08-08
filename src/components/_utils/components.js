@@ -2,6 +2,13 @@ import React, { Children } from 'react';
 import { mergeClassNameSets, removeClassNameSetProps } from './class-name';
 import { mergePropTypeSets, mapToPropTypes } from './prop-types';
 
+if (__CLIENT__) {
+  require('normalize.css/normalize.css');
+  require('../../design-patterns/animations/animations.scss');
+  require('../../design-patterns/layout/layout.scss');
+  require('../../design-patterns/utilities/utilities.scss');
+}
+
 export function findComponent(components, Component) {
   return Children.toArray(components).find(({ type }) => type === Component);
 }

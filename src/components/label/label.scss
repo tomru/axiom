@@ -1,6 +1,9 @@
+@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/layout/mixins';
+@import '../../design-patterns/layout/_vars.js';
 @import '../../design-patterns/spacing/mixins';
-@import '../containers/mixins';
+@import '../../design-patterns/spacing/_vars.js';
+@import '../typography/_vars.js';
 
 $label-border-width: 1px;
 $label-border-radius: 2px;
@@ -81,11 +84,4 @@ $label-border-radius: 2px;
 // Label: Icon
 .ax-label__icon {
   margin-right: $component-margin-h-sm;
-}
-
-
-// Label Group
-.ax-label__group {
-  @include space-block($component-margin-v-base);
-  @include inline-component-container(ax-label);
 }

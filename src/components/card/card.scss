@@ -1,6 +1,7 @@
 @import '../../design-patterns/colors/mixins';
+@import '../../design-patterns/colors/_vars.js';
 @import '../../design-patterns/spacing/mixins';
-
+@import '../../design-patterns/spacing/_vars.js';
 
 $card-padding-v: $container-padding-v-base;
 $card-padding-h: $container-padding-h-base;

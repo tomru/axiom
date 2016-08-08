@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 
+if (__CLIENT__) {
+  require('./Typography.scss');
+}
+
 export class Heading extends Component {
   static propTypes = {
     level: { oneOf: [1, 2, 3, 4, 5], isRequired: true },

@@ -6,6 +6,10 @@ import { transitionTimeBase } from '../../design-patterns/animations/_vars';
 import { Card } from '../card/Card';
 import { dialogSizes } from './_vars';
 
+if (__CLIENT__) {
+  require('./Dialog.scss');
+}
+
 const propTypes = {
   children: { node: true, isRequired: true  },
   fullscreen: { bool: true },

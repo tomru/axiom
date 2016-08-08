@@ -1,4 +1,5 @@
 @import '../../design-patterns/layout/mixins';
+@import '../grid/_vars.js';
 
 @function grid-gutter-default() {
   @each $grid-gutter in $grid-gutters {

@@ -1,4 +1,6 @@
 @import '~bw-axiom/design-patterns/colors/mixins';
+@import '~bw-axiom/design-patterns/colors/_vars.js';
+@import '~bw-axiom/design-patterns/spacing/mixins';
 
 .dm-doc-api__pre {
   @include space-block();

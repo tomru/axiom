@@ -64,6 +64,7 @@ function prepareMarkdownSnippet(snippet) {
 export const prepareMap = {
   html: prepareHTMLSnippet,
   js: prepareJSSnippet,
+  javascript: prepareJSSnippet,
   json: (json) => json,
   jsx: prepareJSXSnippet,
   markdown: prepareMarkdownSnippet,
@@ -73,6 +74,7 @@ export const prepareMap = {
 export const highlightMap = {
   html: Prism.languages.markup,
   js: Prism.languages.javascript,
+  javascript: Prism.languages.javascript,
   json: Prism.languages.json,
   jsx: Prism.languages.jsx,
   markdown: Prism.languages.markdown,
@@ -82,6 +84,7 @@ export const highlightMap = {
 export const classMap = {
   html: 'language-markup',
   js: 'language-javascript',
+  javascript: 'language-javascript',
   json: 'language-json',
   jsx: 'language-jsx',
   markdown: 'language-markdown',

@@ -8,7 +8,7 @@ import createRoutes from './redux/createRoutes';
 import createDevTools from './redux/createDevTools';
 
 if (__CLIENT__) {
-  require('./style/index.scss');
+  require('./client.scss');
 }
 
 const DevTools = createDevTools();

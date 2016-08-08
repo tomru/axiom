@@ -1,6 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
+if (__CLIENT__) {
+  require('./LayoutSidebarContent.scss');
+}
+
 export default class LayoutSidebarContent extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,

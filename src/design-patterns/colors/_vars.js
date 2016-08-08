@@ -118,5 +118,8 @@ module.exports = {
 
   colors,
   colorVariations,
-  colorIds: colors.map(({ name }) => name),
+  colorIds: [
+    ...colors.map(({ name }) => name),
+    'primary',
+  ],
 };

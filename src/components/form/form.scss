@@ -1,27 +1,13 @@
 @import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/animations/_vars.js';
 @import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/spacing/mixins';
+@import '../../design-patterns/spacing/_vars.js';
 @import '../icon/mixins';
 @import '../icon/vars';
-
-
-$form-input-v-padding: $component-padding-v-base;
-$form-input-h-padding: $component-padding-h-sm;
-$form-input-border-width: 1px;
-$form-input-border-radius: 2px;
-$form-textarea: 200px;
-$form-checkbox-size: $line-height + ($form-input-border-width * 2);
-
-$input-background-color: get-color($color-white);
-$input-border-color: get-color($color-grey, 300);
-$input-placeholder-color: get-color($color-grey, 400);
-$input-focus-color: get-color($color-accent, A100);
-$input-disabled-color: get-color($color-grey, 100);
-$input-valid-color: get-color($color-green, A400);
-$input-invalid-color: get-color($color-red, A400);
-$input-checked-color: get-color($color-accent, A400);
-
+@import '../form/_vars.js';
+@import '../typography/_vars.js';
 
 // Form: Base
 .ax-form {
@@ -150,7 +136,7 @@ $input-checked-color: get-color($color-accent, A400);
 
 // Textarea: Base
 .ax-textarea {
-  min-height: $form-textarea;
+  min-height: $form-textarea-height;
   border-width: $form-input-border-width;
   border-style: solid;
   border-radius: $form-input-border-radius;

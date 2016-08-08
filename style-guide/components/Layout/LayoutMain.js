@@ -1,6 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
+if (__CLIENT__) {
+  require('./LayoutMain.scss');
+}
+
 export default class LayoutMain extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,

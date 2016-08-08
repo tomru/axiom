@@ -1,6 +1,9 @@
+@import '../../design-patterns/colors/_vars.js';
+@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/spacing/mixins';
-@import './mixins';
+@import '../typography/mixins';
+@import '../typography/_vars.js';
 
 // sass-lint:disable no-vendor-prefixes
 

@@ -3,6 +3,10 @@ import classnames from 'classnames';
 import Link from 'bw-axiom/components/typography/Link';
 import NavList from './NavList';
 
+if (__CLIENT__) {
+  require('./NavListItem.scss');
+}
+
 export default class NavListItem extends Component {
   static propTypes = {
     className: PropTypes.string,

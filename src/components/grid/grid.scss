@@ -1,5 +1,6 @@
 @import '../../design-patterns/layout/mixins';
-@import './mixins';
+@import '../grid/_vars.js';
+@import '../grid/mixins';
 
 
 // Grid: Base
@@ -52,6 +53,7 @@
 
 
 // Grid: Gutter removal
+.ax-grid--gutters-none,
 .ax-grid--gutters-none-v {
   margin-bottom: 0;
 
@@ -60,6 +62,7 @@
   }
 }
 
+.ax-grid--gutters-none,
 .ax-grid--gutters-none-h {
   margin-left: 0;
 
@@ -67,12 +70,6 @@
     padding-left: 0;
   }
 }
-
-.ax-grid--gutters-none {
-  @extend .ax-grid--gutters-none-v;
-  @extend .ax-grid--gutters-none-h;
-}
-
 
 
 // Grid: Grid cell height alignment
