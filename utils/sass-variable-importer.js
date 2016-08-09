@@ -18,6 +18,10 @@ function formatKey(key) {
 }
 
 function formatValue(value) {
+  if (value === null || value === undefined) {
+    throw new Error(`Invalid Sass variable: ${value}`);
+  }
+
   if (typeof value === 'object') {
     if (Array.isArray(value)) {
       return `(${value.map((arrayValue) => {
