@@ -1,6 +1,7 @@
 @import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/spacing/_vars.js';
 @import '../../design-patterns/utilities/mixins';
+@import '../billboard/_vars.js';
 
 
 // Billboard: Image
@@ -20,9 +21,11 @@
 
 
 // Billboard: Sizes
-.ax-billboard--sm { padding: $container-padding-v-sm 0; }
-.ax-billboard--md { padding: $container-padding-v-base 0; }
-.ax-billboard--lg { padding: $container-padding-v-lg 0; }
+@each $billboard-size in $billboard-sizes {
+  .ax-billboard--#{map-get($billboard-size, id)} {
+    padding: map-get($billboard-size, padding-v) 0;
+  }
+}
 
 
 // Billboard: Colours
