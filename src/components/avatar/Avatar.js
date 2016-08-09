@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { avatarSizes } from '../avatar/_vars';
 
 if (__INCLUDE_CSS__) {
   require('./Avatar.scss');
 }
 
+const avatarSizeIds = avatarSizes.map(({ id }) => id);
+const avatarSizeDefaultId = avatarSizes.find((size) => size.default).id;
+
 const propTypes = {
-  size: {
-    oneOf: ['sm', 'md', 'lg'],
-    default: 'md',
-  },
-  src: {
-    string: true,
-    isRequired: true,
-  },
+  size: { oneOf: avatarSizeIds, default: avatarSizeDefaultId },
+  src: { string: true, isRequired: true },
 };
 
 export class Avatar extends Component {
@@ -29,9 +27,7 @@ export class Avatar extends Component {
 
     const classes = classnames(className,
       'ax-avatar', {
-        'ax-avatar--sm': size === 'sm',
-        'ax-avatar--md': size === 'md',
-        'ax-avatar--lg': size === 'lg',
+        [`ax-avatar--${size}`]: size,
       }
     );
 
