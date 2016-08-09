@@ -5,27 +5,21 @@ import { findComponent } from '../_utils/components';
 import { breakpointClassName } from '../_utils/class-name';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
 import { colorIds } from '../../design-patterns/colors/_vars';
+import { labelSizes } from '../label/_vars';
 import Icon from '../icon/Icon';
 
 if (__INCLUDE_CSS__) {
   require('./Label.scss');
 }
 
+const labelSizeIds = labelSizes.map(({ id }) => id);
+const labelSizeDefaultId = labelSizes.find((size) => size.default).id;
+
 const propTypes = {
-  children: {
-    node: true,
-  },
-  color: {
-    oneOf: [...colorIds],
-    default: 'primary',
-  },
-  size: {
-    oneOf: ['sm', 'md', 'lg'],
-    default: 'md',
-  },
-  full: {
-    oneOf: [true, ...breakpointIds],
-  },
+  children: { node: true },
+  color: { oneOf: [...colorIds], default: 'primary' },
+  size: { oneOf: labelSizeIds, default: labelSizeDefaultId },
+  full: { oneOf: [true, ...breakpointIds] },
 };
 
 export class Label extends Component {
@@ -44,10 +38,8 @@ export class Label extends Component {
     const icon = findComponent(children, Icon);
     const classes = classnames(className,
       'ax-label', {
+        [`ax-label--${size}`]: size,
         [`ax-label--${color}`]: color,
-        'ax-label--sm': size === 'sm',
-        'ax-label--md': size === 'md',
-        'ax-label--lg': size === 'lg',
         'ax-label--full': full === true,
       },
       breakpointClassName(full, ({ id }) => `ax-button--full--${id}`),

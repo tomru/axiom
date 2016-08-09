@@ -3,6 +3,7 @@
 @import '../../design-patterns/layout/_vars.js';
 @import '../../design-patterns/spacing/mixins';
 @import '../../design-patterns/spacing/_vars.js';
+@import '../label/_vars.js';
 @import '../typography/_vars.js';
 
 $label-border-width: 1px;
@@ -26,19 +27,11 @@ $label-border-radius: 2px;
 
 
 // Label: Sizing
-.ax-label--sm {
-  padding: 0 $component-padding-h-sm;
-  font-size: $font-size-sm;
-}
-
-.ax-label--md {
-  padding: $component-padding-v-sm $component-padding-h-sm;
-  font-size: $font-size-md;
-}
-
-.ax-label--lg {
-  padding: $component-padding-v-base $component-padding-h-base;
-  font-size: $font-size-base;
+@each $label-size in $label-sizes {
+  .ax-label--#{map-get($label-size, id)} {
+    padding: map-get($label-size, padding-v) map-get($label-size, padding-h);
+    font-size: map-get($label-size, font-size);
+  }
 }
 
 
