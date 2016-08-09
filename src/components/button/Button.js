@@ -5,11 +5,15 @@ import { findComponent } from '../_utils/components';
 import { breakpointClassName } from '../_utils/class-name';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
 import { colorIds } from '../../design-patterns/colors/_vars';
+import { buttonSizes } from '../button/_vars';
 import Icon from '../icon/Icon';
 
 if (__INCLUDE_CSS__) {
   require('./Button.scss');
 }
+
+const buttonSizeIds = buttonSizes.map(({ id }) => id);
+const buttonSizeDefaultId = buttonSizes.find((size) => size.default).id;
 
 const propsTypes = {
   children: { node: true },
@@ -17,7 +21,7 @@ const propsTypes = {
   outlined: { bool: true },
   color: { oneOf: [...colorIds], default: 'primary' },
   full: { oneOf: [true, ...breakpointIds] },
-  size: { oneOf: ['sm', 'md', 'lg'], default: 'md' },
+  size: { oneOf: buttonSizeIds, default: buttonSizeDefaultId },
 };
 
 export class Button extends Component {
@@ -39,12 +43,10 @@ export class Button extends Component {
     const filteredChildren = Children.toArray(children).filter((component) => component.type !== Icon);
     const classes = classnames(className,
       'ax-button', {
+        [`ax-button--${size}`]: size,
         [`ax-button--${color}`]: color,
         'ax-button--outlined': outlined,
         'ax-button--circular': circular,
-        'ax-button--sm': size === 'sm',
-        'ax-button--md': size === 'md',
-        'ax-button--lg': size === 'lg',
         'ax-button--full': full === true,
       },
       breakpointClassName(full, ({ id }) => `ax-button--full--${id}`),

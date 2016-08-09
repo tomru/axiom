@@ -7,18 +7,6 @@
 @import '../typography/_vars.js';
 @import '../button/_vars.js';
 
-$button-padding-v-sm: 0;
-$button-padding-h-sm: $component-padding-h-sm;
-$button-font-size-sm: $font-size-sm;
-
-$button-padding-v-md: $component-padding-v-sm;
-$button-padding-h-md: $component-padding-h-sm;
-$button-font-size-md: $font-size-md;
-
-$button-padding-v-lg: $component-padding-v-base;
-$button-padding-h-lg: $component-padding-h-base;
-$button-font-size-lg: $font-size-base;
-
 // Button: Core
 button {
   margin: 0;
@@ -57,19 +45,11 @@ button {
 
 
 // Button: sizes
-.ax-button--sm {
-  padding: $button-padding-v-sm $button-padding-h-sm;
-  font-size: $button-font-size-sm;
-}
-
-.ax-button--md {
-  padding: $button-padding-v-md $button-padding-h-md;
-  font-size: $button-font-size-md;
-}
-
-.ax-button--lg {
-  padding: $button-padding-v-lg $button-padding-h-lg;
-  font-size: $button-font-size-lg;
+@each $button-size in $button-sizes {
+  .ax-button--#{map-get($button-size, id)} {
+    padding: map-get($button-size, padding-v) map-get($button-size, padding-h);
+    font-size: map-get($button-size, font-size);
+  }
 }
 
 
@@ -174,19 +154,11 @@ button {
   padding: 0;
   border-radius: 50%;
 
-  &.ax-button--sm {
-    width: $line-height + ($button-padding-v-sm * 2);
-    height: $line-height + ($button-padding-v-sm * 2);
-  }
-
-  &.ax-button--md {
-    width: $line-height + ($button-padding-v-md * 2);
-    height: $line-height + ($button-padding-v-md * 2);
-  }
-
-  &.ax-button--lg {
-    width: $line-height + ($button-padding-v-lg * 2);
-    height: $line-height + ($button-padding-v-lg * 2);
+  @each $button-size in $button-sizes {
+    &.ax-button--#{map-get($button-size, id)} {
+      width: $line-height + (map-get($button-size, padding-v) * 2);
+      height: $line-height + (map-get($button-size, padding-v) * 2);
+    }
   }
 }
 
