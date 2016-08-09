@@ -20,6 +20,7 @@ export default {
     modulesDirectories: [
       'node_modules',
       'webpack/loaders',
+      'utils',
     ],
   },
   plugins: [
@@ -30,6 +31,7 @@ export default {
       __SERVER__: true,
       __PRODUCTION__: true,
       __DEVELOPMENT__: false,
+      __INCLUDE_CSS__: false,
       'process.env': {
         NODE_ENV: '"production"',
       },

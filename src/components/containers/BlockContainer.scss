@@ -1,0 +1,7 @@
+@import '../../design-patterns/spacing/mixins';
+
+
+// Container: Block
+.ax-container--block {
+  @include space-block();
+}

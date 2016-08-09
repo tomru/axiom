@@ -1,0 +1,16 @@
+@import '../form/_vars.js';
+
+// Textarea: Base
+.ax-textarea {
+  min-height: $form-textarea-height;
+  border-width: $form-input-border-width;
+  border-style: solid;
+  border-radius: $form-input-border-radius;
+  background-color: transparent;
+  resize: none;
+}
+
+// Textarea: Colouring
+.ax-textarea {
+  border-color: $input-border-color;
+}

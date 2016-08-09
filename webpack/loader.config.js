@@ -3,7 +3,10 @@ import * as config from '../config';
 
 export const js = {
   test: /\.js$/,
-  loader: 'babel',
+  loaders: [
+    'babel',
+    `sass-variable-override?location=${config.paths.sassVariables}`,
+  ],
   exclude: /node_modules/,
 };
 

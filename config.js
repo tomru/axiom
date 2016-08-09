@@ -1,26 +1,19 @@
 import path from 'path';
-import { createAlias } from './utils/webpack';
+import Alias from './utils/webpack-alias-plugin';
 import { name, version } from './package.json';
 
 const outputFolderName = 'lib';
-const commonOututFolderName = 'common';
-const reactOutputFolderName = 'react';
-const sassOutputFolderName = 'sass';
 
 export const paths = {
   nodeModules: path.resolve(__dirname, 'node_modules'),
   output: path.resolve(__dirname, outputFolderName),
   source: path.resolve(__dirname, 'src'),
   static: path.resolve(__dirname, 'static'),
+  styleGuide: path.resolve(__dirname, 'style-guide'),
 };
 
-paths.axiom = path.join(paths.source, 'axiom');
-paths.axiomSass = path.join(paths.axiom, sassOutputFolderName);
-paths.axiomReact = path.join(paths.axiom, reactOutputFolderName);
-
-paths.docs = path.join(paths.source, 'docs');
-paths.styleGuide = path.join(paths.source, 'style-guide');
 paths.sassConfig = path.join(paths.styleGuide, 'style', 'index.js');
+paths.sassVariables = path.join(paths.styleGuide, 'style', 'variables.js');
 
 export const webpack = {
   devServerHostname: 'localhost',
@@ -29,14 +22,10 @@ export const webpack = {
     __PACKAGE_NAME__: `"${name}"`,
     __VERSION__: `"${version}"`,
     __OUTPUT_DIR__: `"${outputFolderName}"`,
-    __OUTPUT_FOLDER_COMMON__: `"${commonOututFolderName}"`,
-    __OUTPUT_FOLDER_REACT__: `"${reactOutputFolderName}"`,
-    __OTUPUT_FOLDER_SASS__: `"${sassOutputFolderName}"`,
   },
   aliases: [
-    createAlias('bw-axiom', paths.axiom),
-    createAlias('docs', paths.docs),
-    createAlias('style-guide', paths.styleGuide),
+    new Alias(/^bw-axiom/, (path) => path.replace(/^bw-axiom(.*)/, `${paths.source}$1`)),
+    new Alias(/^style-guide/, (path) => path.replace(/^style-guide(.*)/, `${paths.styleGuide}$1`)),
   ],
 };
 
