@@ -2,7 +2,6 @@ import React, { Component, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 import { findComponent } from '../_utils/components';
-import { breakpointClassName } from '../_utils/class-name';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
 import { colorIds } from '../../design-patterns/colors/_vars';
 import { buttonSizes } from '../button/_vars';
@@ -48,8 +47,8 @@ export class Button extends Component {
         'ax-button--outlined': outlined,
         'ax-button--circular': circular,
         'ax-button--full': full === true,
+        [`ax-button--full--${full}`]: full && full !== true,
       },
-      breakpointClassName(full, ({ id }) => `ax-button--full--${id}`),
     );
 
     return (

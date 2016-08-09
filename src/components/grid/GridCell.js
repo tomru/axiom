@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
-import { breakpointClassName } from '../_utils/class-name';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
 
 export class GridCell extends Component {
@@ -47,15 +46,15 @@ export class GridCell extends Component {
         'ax-grid__cell--quarter': quarter === true,
         'ax-grid__cell--fifth': fifth === true,
         'ax-grid__cell--sixth': sixth === true,
+        [`ax-grid__cell--full--${full}`]: full && full !== true,
+        [`ax-grid__cell--fit--${fit}`]: fit && fit !== true,
+        [`ax-grid__cell--shrink--${shrink}`]: shrink && shrink !== true,
+        [`ax-grid__cell--half--${half}`]: half && half !== true,
+        [`ax-grid__cell--third--${third}`]: third && third !== true,
+        [`ax-grid__cell--quarter--${quarter}`]: quarter && quarter !== true,
+        [`ax-grid__cell--fifth--${fifth}`]: fifth && fifth !== true,
+        [`ax-grid__cell--sixth--${sixth}`]: sixth && sixth !== true,
       },
-      breakpointClassName(full,  ({ id }) => `ax-grid__cell--full--${id}`),
-      breakpointClassName(fit,  ({ id }) => `ax-grid__cell--fit--${id}`),
-      breakpointClassName(shrink,  ({ id }) => `ax-grid__cell--shrink--${id}`),
-      breakpointClassName(half,  ({ id }) => `ax-grid__cell--half--${id}`),
-      breakpointClassName(third,  ({ id }) => `ax-grid__cell--third--${id}`),
-      breakpointClassName(quarter,  ({ id }) => `ax-grid__cell--quarter--${id}`),
-      breakpointClassName(fifth,  ({ id }) => `ax-grid__cell--fifth--${id}`),
-      breakpointClassName(sixth,  ({ id }) => `ax-grid__cell--sixth--${id}`),
     );
 
     return (

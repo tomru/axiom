@@ -2,7 +2,6 @@ import React, { Component, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 import { findComponent } from '../_utils/components';
-import { breakpointClassName } from '../_utils/class-name';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
 import { colorIds } from '../../design-patterns/colors/_vars';
 import { labelSizes } from '../label/_vars';
@@ -41,8 +40,8 @@ export class Label extends Component {
         [`ax-label--${size}`]: size,
         [`ax-label--${color}`]: color,
         'ax-label--full': full === true,
+        [`ax-button--full--${full}`]: full & full !== true,
       },
-      breakpointClassName(full, ({ id }) => `ax-button--full--${id}`),
     );
 
     return (

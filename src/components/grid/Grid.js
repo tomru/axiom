@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
-import { addDynamicClass, breakpointClassName } from '../_utils/class-name';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
 import { gridGutters } from './_vars';
 
@@ -43,8 +42,11 @@ export class Grid extends Component {
         'ax-grid--gutters-none': gutters === false,
         'ax-grid--gutters-none-v': vGutters === false,
         'ax-grid--gutters-none-h': hGutters === false,
+        [`ax-grid--gutters--${gutters}`]: gutters,
         'ax-grid--full': full === true,
+        [`ax-grid--full--${full}`]: full && full !== true,
         'ax-grid--fit': fit === true,
+        [`ax-grid--fit--${fit}`]: fit && fit !== true,
         'ax-grid--top': vAlign === 'top',
         'ax-grid--middle': vAlign === 'middle',
         'ax-grid--bottom': vAlign === 'bottom',
@@ -54,9 +56,6 @@ export class Grid extends Component {
         'ax-grid--around': hAlign === 'around',
         'ax-grid--between': hAlign === 'between',
       },
-      addDynamicClass(gridGutters, ({ id }) => gutters === id, ({ id }) => `ax-grid--gutters--${id}`),
-      breakpointClassName(full, ({ id }) => `ax-grid--full--${id}`),
-      breakpointClassName(fit, ({ id }) => `ax-grid--fit--${id}`),
     );
 
     return (
