@@ -1,24 +1,19 @@
 @import '~bw-axiom/design-patterns/colors/mixins';
 @import '~bw-axiom/design-patterns/spacing/_vars.js';
-@import '~bw-axiom/components/logo/_vars.js';
 @import './vars';
 
 .dm-layout__footer-container {
   position: relative;
-  min-height: $logo-vertical-height-sm + $page-padding-v;
+  padding: 0 $container-padding-h-base $container-padding-v-base;
   background-color: $footer-background-color;
   color: get-text-color($footer-background-color);
 }
 
 .dm-layout__footer {
-  margin: 0 0 0 $logo-vertical-width-sm + $page-padding-h;
+  padding: $container-padding-v-base 0 0;
 }
 
 .dm-layout__logo {
-  position: absolute;
-  top: 0;
-  width: $logo-vertical-width-sm;
-  height: $logo-vertical-height-sm;
   background-color: $logo-background-color;
   color: get-text-color($logo-background-color);
 }

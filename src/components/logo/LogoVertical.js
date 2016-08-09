@@ -1,29 +1,18 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
 import { enhance, addPropTypes } from '../_utils/components';
-
-if (__INCLUDE_CSS__) {
-  require('./LogoVertical.scss');
-}
-
-const propTypes = {
-  size: { oneOf: ['sm', 'md', 'lg'], default: 'md' },
-};
+import Logo from '../logo/Logo';
 
 export class LogoVertical extends Component {
-  static propTypes = propTypes;
+  static propTypes = {};
 
   render() {
-    const { className, size = propTypes.size.default, ...rest } = this.props;
-    const classes = classnames(className, 'ax-logo', {
-      'ax-logo--vertical--sm': size === 'sm',
-      'ax-logo--vertical--md': size === 'md',
-      'ax-logo--vertical--lg': size === 'lg',
-    });
+    const { ...rest } = this.props;
+    const viewBoxWidth = 120;
+    const viewBoxHeight = 143;
 
     return (
-      <div { ...rest } className={ classes }>
-        <svg height="100%" viewBox="0 0 120 143" width="100%" x="0px" y="0px">
+      <Logo { ...rest } viewBoxHeight={ viewBoxHeight } viewBoxWidth={ viewBoxWidth }>
+        <svg height="100%" viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` } width="100%" x="0px" y="0px">
           <g>
             <circle cx="75.9" cy="56.2" fill="#FF8F00" r="6.4"/>
             <circle cx="57.4" cy="59.7" fill="#F46B00" r="9.8"/>
@@ -52,7 +41,7 @@ export class LogoVertical extends Component {
             </g>
           </g>
         </svg>
-      </div>
+      </Logo>
     );
   }
 }

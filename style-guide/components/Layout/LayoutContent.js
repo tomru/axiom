@@ -8,11 +8,14 @@ if (__INCLUDE_CSS__) {
 export default class LayoutContent extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    padded: PropTypes.bool,
   };
 
   render() {
-    const { children, className } = this.props;
-    const classes = classnames(className, 'dm-layout__content');
+    const { children, className, padded } = this.props;
+    const classes = classnames(className, 'dm-layout__content', {
+      'dm-layout__content--padded': padded,
+    });
 
     return (
       <div className={ classes }>

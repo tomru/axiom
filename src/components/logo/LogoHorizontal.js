@@ -1,29 +1,18 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
 import { enhance, addPropTypes } from '../_utils/components';
+import Logo from '../logo/Logo';
 
-if (__INCLUDE_CSS__) {
-  require('./LogoHorizontal.scss');
-}
-
-const propTypes = {
-  size: { oneOf: ['sm', 'md', 'lg'], default: 'md' },
-};
-
-export class LogoHorizontal extends Component {
-  static propTypes = propTypes;
+export class LogoVertical extends Component {
+  static propTypes = {};
 
   render() {
-    const { className, size = propTypes.size.default, ...rest } = this.props;
-    const classes = classnames(className, 'ax-logo', {
-      'ax-logo--horizontal--sm': size === 'sm',
-      'ax-logo--horizontal--md': size === 'md',
-      'ax-logo--horizontal--lg': size === 'lg',
-    });
+    const { ...rest } = this.props;
+    const viewBoxWidth = 349;
+    const viewBoxHeight = 64;
 
     return (
-      <div { ...rest } className={ classes }>
-        <svg height="100%" viewBox="0 0 349 64" width="100%" x="0px" y="0px">
+      <Logo { ...rest } viewBoxHeight={ viewBoxHeight } viewBoxWidth={ viewBoxWidth }>
+        <svg height="100%" viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` } width="100%" x="0px" y="0px">
           <g>
             <g>
               <ellipse cx="50.7388235" cy="26.624" fill="#FF8F00" rx="5.42117647" ry="5.46133333"></ellipse>
@@ -54,11 +43,11 @@ export class LogoHorizontal extends Component {
             </g>
           </g>
         </svg>
-      </div>
+      </Logo>
     );
   }
 }
 
-export default enhance(LogoHorizontal)(
+export default enhance(LogoVertical)(
   addPropTypes(),
 );

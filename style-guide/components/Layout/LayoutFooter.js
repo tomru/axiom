@@ -28,21 +28,27 @@ export default class LayoutFooter extends Component {
     return (
       <div className={ classes }>
         <LayoutContent>
-          <div className="dm-layout__logo">
-            <LogoVertical size="sm" />
-          </div>
+          <Grid gutters="lg" responsive={ false }>
+            <GridCell shrink={ true }>
+              <div className="dm-layout__logo">
+                <LogoVertical height={ 120 } />
+              </div>
+            </GridCell>
 
-          <div className="dm-layout__footer">
-            <Grid hAlign="left" responsive={ false }>
-              { socials.map((social, index) =>
-                <GridCell key={ index } shrink={ true }>
-                  <Icon name={ social.icon } size="lg" />
-                </GridCell>
-              ) }
-            </Grid>
+            <GridCell>
+              <div className="dm-layout__footer">
+                <Grid hAlign="left" responsive={ false }>
+                  { socials.map((social, index) =>
+                    <GridCell key={ index } shrink={ true }>
+                      <Icon name={ social.icon } size="lg" />
+                    </GridCell>
+                  ) }
+                </Grid>
 
-            <p>Copyright © 2016 Brandwatch. All Rights Reserved.</p>
-          </div>
+                <p>Copyright © 2016 Brandwatch. All Rights Reserved.</p>
+              </div>
+            </GridCell>
+          </Grid>
         </LayoutContent>
       </div>
     );

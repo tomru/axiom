@@ -44,7 +44,7 @@ export class Doc extends Component {
           </LayoutContent>
         </Billboard>
 
-        <LayoutContent>
+        <LayoutContent padded={ true }>
           { render(markdownContentFunction, routeParams, query) }
         </LayoutContent>
       </div>
