@@ -55,11 +55,8 @@
 
 // Dialog: Sizes
 @each $dialog-size in $dialog-sizes {
-  $dialog-id: map-get($dialog-size, id);
-  $dialog-width: map-get($dialog-size, width);
-
-  .ax-dialog--#{$dialog-id} {
-    max-width: $dialog-width;
+  .ax-dialog--#{map-get($dialog-size, id)} {
+    max-width: map-get($dialog-size, width);
   }
 }
 

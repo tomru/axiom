@@ -10,10 +10,13 @@ if (__INCLUDE_CSS__) {
   require('./Dialog.scss');
 }
 
+const dialogSizeIds = dialogSizes.map(({ id }) => id);
+const dialogSizeDefaultId = dialogSizes.find((size) => size.default).id;
+
 const propTypes = {
   children: { node: true, isRequired: true  },
   fullscreen: { bool: true },
-  size: { oneOf: [...dialogSizes.map(({ id }) => id)], default: 'sm' },
+  size: { oneOf: dialogSizeIds, default: dialogSizeDefaultId },
 };
 
 export class Dialog extends Component {
