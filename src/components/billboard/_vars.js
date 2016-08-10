@@ -1,9 +1,7 @@
-import * as spacing from '../../design-patterns/spacing/_vars';
-
 module.exports = {
   billboardSizes: [
-    { id: 'sm', paddingV: spacing.containerPaddingVSm },
-    { id: 'md', paddingV: spacing.containerPaddingVBase, default: true },
-    { id: 'lg', paddingV: spacing.containerPaddingVLg },
+    { id: 'small', minHeight: '120px' },
+    { id: 'medium', minHeight: '180px', default: true },
+    { id: 'large', minHeight: '240px' },
   ],
 };

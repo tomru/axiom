@@ -50,7 +50,7 @@ export class Billboard extends Component {
 
     return (
       <div { ...rest } className={ classes } style={ style }>
-        { children }
+        <div className="ax-billboard__content">{ children }</div>
       </div>
     );
   }

@@ -25,6 +25,7 @@ module.exports = [
     id: 'components',
     children: [
       { id: 'avatar', children: require('bw-axiom/components/avatar/avatar.md') },
+      { id: 'billboard', children: require('bw-axiom/components/billboard/billboard.md') },
       { id: 'button', children: require('bw-axiom/components/button/button.md') },
       { id: 'dialog', children: require('bw-axiom/components/dialog/dialog.md') },
       { id: 'form', children: require('bw-axiom/components/form/form.md') },
