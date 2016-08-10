@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import Modal from 'react-modal';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
-import { transitionTimeBase } from '../../design-patterns/animations/_vars';
 import { Card } from '../card/Card';
-import { dialogSizes } from './_vars';
+import { dialogSizes, dialogAnimationDuration } from './_vars';
 
 if (__INCLUDE_CSS__) {
   require('./Dialog.scss');
@@ -41,7 +40,7 @@ export class Dialog extends Component {
     return (
       <Modal { ...rest }
           className={ classes }
-          closeTimeoutMS={ parseInt(transitionTimeBase, 10) }
+          closeTimeoutMS={ parseInt(dialogAnimationDuration, 10) }
           overlayClassName="ax-dialog__overlay">
         <Card className="ax-dialog__card">
           { children }
