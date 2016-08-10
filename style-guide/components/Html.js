@@ -20,7 +20,7 @@ export default class Html extends Component {
           <meta charSet="utf-8" />
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
-          { /*<link rel="shortcut icon" href="/favicon.ico" />*/ }
+          <link href="/favicon.ico" rel="shortcut icon" />
           { __PRODUCTION__ && <link href={ `/${config.output.folderName}/${config.output.styleGuide.clientProdCSSFilename}` } rel="stylesheet" /> }
         </head>
 
