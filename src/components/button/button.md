@@ -115,17 +115,17 @@ colorAliases.map(({ heading, colors }) => [
 # Button with an Icon
 ```jsx
 <ButtonGroup snippetIgnore>
-  <Button size="sm" color="red">
+  <Button size="small" color="red">
     Small
     <Icon name="trash" />
   </Button>
 
-  <Button size="md" color="yellow">
+  <Button size="medium" color="yellow">
     Regular
     <Icon name="warning" />
   </Button>
 
-  <Button size="lg" color="green">
+  <Button size="large" color="green">
     Large
     <Icon name="check" />
   </Button>
@@ -150,13 +150,13 @@ Button Group handles spacing buttons that may overflow to a new line. All button
 
 ```jsx
 <ButtonGroup joined={ true }>
-  <Button size="lg" color="lime" snippetReplace>
+  <Button size="large" color="lime" snippetReplace>
     <Icon name="pencil" />
   </Button>
-  <Button size="lg" color="light-green" snippetReplace>
+  <Button size="large" color="light-green" snippetReplace>
     A button
   </Button>
-  <Button size="lg" color="green" snippetReplace>
+  <Button size="large" color="green" snippetReplace>
     <Icon name="floppy-o" />
   </Button>
 </ButtonGroup>

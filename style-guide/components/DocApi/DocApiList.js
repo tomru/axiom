@@ -29,16 +29,16 @@ export default class DocApiList extends Component {
                 <LabelGroup key="labels">
                   { do {
                     if (propTypes[key].default) {
-                      <Label color="green" size="sm">
+                      <Label color="green" size="small">
                         Defaults: { propTypes[key].default }
                       </Label>
                     }
                   } }
                   { do {
                     if (propTypes[key].isRequired) {
-                      <Label color="red" size="sm">Required</Label>
+                      <Label color="red" size="small">Required</Label>
                     } else {
-                      <Label color="blue" size="sm">Optional</Label>
+                      <Label color="blue" size="small">Optional</Label>
                     }
                   } }
                 </LabelGroup>

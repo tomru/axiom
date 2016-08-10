@@ -7,7 +7,7 @@ import Icon from './Icon';
 # Icon - ${queryParams.iconId}
 
 ```jsx
-<Icon name={ queryParams.iconId } size="5x" />
+<Icon name={ queryParams.iconId } size="xxxlarge" />
 ```
 
 

@@ -5,18 +5,18 @@ module.exports = {
   buttonBorderWidth: '1px',
   buttonBorderRadius: '2px',
   buttonSizes: [{
-    id: 'sm',
+    id: 'small',
     paddingV: 0,
     paddingH: spacing.componentPaddingHSm,
     fontSize: fontSizeSm,
   }, {
-    id: 'md',
+    id: 'medium',
     paddingV: spacing.componentPaddingVSm,
     paddingH: spacing.componentPaddingHSm,
     fontSize: fontSizeMd,
     default: true,
   }, {
-    id: 'lg',
+    id: 'large',
     paddingV: spacing.componentPaddingVBase,
     paddingH: spacing.componentPaddingHBase,
     fontSize: fontSizeBase,

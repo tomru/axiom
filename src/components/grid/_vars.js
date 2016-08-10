@@ -4,12 +4,12 @@ import { spacingXs, spacingSm, spacingBase, spacingLg, spacingXl, spacingXxl } f
 module.exports = {
   gridChangePoint: layoutWidthSm,
   gridGutters: [
-    { id: 'xs', size: spacingXs },
-    { id: 'sm', size: spacingSm },
-    { id: 'base', size: spacingBase, default: true },
-    { id: 'lg', size: spacingLg },
-    { id: 'xl', size: spacingXl },
-    { id: 'xxl', size: spacingXxl },
+    { id: 'xsmall', size: spacingXs },
+    { id: 'small', size: spacingSm },
+    { id: 'medium', size: spacingBase, default: true },
+    { id: 'large', size: spacingLg },
+    { id: 'xlarge', size: spacingXl },
+    { id: 'xxlarge', size: spacingXxl },
   ],
   gridWidths: [
     { id: 'half', percent: `${100 / 2}%` },

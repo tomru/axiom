@@ -51,7 +51,7 @@ export class TextInput extends Component {
                   { cloneElement(icon, {
                     className: classnames({ 'ax-icon-spin': thinking }),
                     name: this.getIcon(icon.props.name),
-                    size: 'lg',
+                    size: 'medium',
                   }) }
                 </div>
               }

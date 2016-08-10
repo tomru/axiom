@@ -25,7 +25,7 @@ export default class DocApiDialog extends Component {
     const importDocKeys = Object.keys(importDocs).filter((key) => importDocs[key]);
 
     return (
-      <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="lg">
+      <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="large">
         <DialogTitle onRequestClose={ onRequestClose }>
           { `API Docs - ${title}` }
         </DialogTitle>

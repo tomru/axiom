@@ -28,7 +28,7 @@ export default class LayoutFooter extends Component {
     return (
       <div className={ classes }>
         <LayoutContent padded={ true }>
-          <Grid gutters="lg" responsive={ false }>
+          <Grid gutters="large" responsive={ false }>
             <GridCell shrink={ true }>
               <div className="dm-layout__logo">
                 <LogoVertical height={ 120 } />
@@ -40,7 +40,7 @@ export default class LayoutFooter extends Component {
                 <Grid hAlign="left" responsive={ false }>
                   { socials.map((social, index) =>
                     <GridCell key={ index } shrink={ true }>
-                      <Icon name={ social.icon } size="lg" />
+                      <Icon name={ social.icon } size="medium" />
                     </GridCell>
                   ) }
                 </Grid>

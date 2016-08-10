@@ -18,7 +18,7 @@ export class DialogTitle extends Component {
     return (
       <CardTitle { ...rest } className={ classes } title={ children }>
         <Link onClick={ onRequestClose } supressStyle={ true }>
-          <Icon name="times" size="lg" />
+          <Icon name="times" size="medium" />
         </Link>
       </CardTitle>
     );

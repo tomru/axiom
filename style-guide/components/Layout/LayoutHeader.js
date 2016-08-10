@@ -27,17 +27,17 @@ export default class LayoutHeader extends Component {
     return (
       <header className={ classes }>
         <Grid responsive={ false } vAlign="middle">
-          <GridCell visibleUntil="sm">
+          <GridCell visibleUntil="small">
             <Heading level={ 3 }>{ children }</Heading>
           </GridCell>
 
-          <GridCell hiddenUntil="sm">
+          <GridCell hiddenUntil="small">
             <Heading level={ 2 }>{ children }</Heading>
           </GridCell>
 
-          <GridCell shrink={ true } visibleUntil="sm">
+          <GridCell shrink={ true } visibleUntil="small">
             <Link inheritColor={ true } noDecoration={ true } onClick={ toggleSidebar } >
-              <Icon name="bars" size="lg" />
+              <Icon name="bars" size="medium" />
             </Link>
           </GridCell>
         </Grid>

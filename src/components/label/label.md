@@ -52,17 +52,17 @@ colorAliases.map(({ heading, colors }) => [
 # Label with an Icon
 ```jsx
 <LabelGroup snippetIgnore>
-  <Label size="sm" color="red">
+  <Label size="small" color="red">
     Small
     <Icon name="trash" />
   </Label>
 
-  <Label size="md" color="yellow">
+  <Label size="medium" color="yellow">
     Regular
     <Icon name="warning" />
   </Label>
 
-  <Label size="lg" color="green">
+  <Label size="large" color="green">
     Large
     <Icon name="check" />
   </Label>

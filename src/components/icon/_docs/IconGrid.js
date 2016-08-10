@@ -17,7 +17,7 @@ export default class IconGrid extends Component {
     return (
       <Grid>
         { icons.map(({ id, name }, index) =>
-          <GridCell half="sm" key={ index } quarter="lg" third="md">
+          <GridCell half="small" key={ index } quarter="large" third="medium">
             <Link inheritColor={ true } title={ name } to={ markdownRouteToPath(['components', `icon?iconId=${id}`]) }>
               <Grid responsive={ false }>
                 <GridCell shrink={ true }>

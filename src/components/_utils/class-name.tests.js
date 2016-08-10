@@ -5,11 +5,11 @@ describe('components: utils : class-name', () => {
   describe('class merging', () => {
     describe('global class set', () => {
       it('can add the hidden class', () => {
-        assert.equal(mergeClassNameSets({ hiddenUntil: 'sm' }, ['global']), 'ax-hidden-until--sm');
+        assert.equal(mergeClassNameSets({ hiddenUntil: 'small' }, ['global']), 'ax-hidden-until--small');
       });
 
       it('can add the visible class', () => {
-        assert.equal(mergeClassNameSets({ visibleUntil: 'sm' }, ['global']), 'ax-visible-until--sm');
+        assert.equal(mergeClassNameSets({ visibleUntil: 'small' }, ['global']), 'ax-visible-until--small');
       });
     });
 
@@ -20,7 +20,7 @@ describe('components: utils : class-name', () => {
         });
 
         it('can add the responsive class', () => {
-          assert.equal(mergeClassNameSets({ textLeft: 'sm' }, ['text']), 'ax-text--left--sm');
+          assert.equal(mergeClassNameSets({ textLeft: 'small' }, ['text']), 'ax-text--left--small');
         });
       });
 
@@ -30,7 +30,7 @@ describe('components: utils : class-name', () => {
         });
 
         it('can add the responsive class', () => {
-          assert.equal(mergeClassNameSets({ textCenter: 'sm' }, ['text']), 'ax-text--center--sm');
+          assert.equal(mergeClassNameSets({ textCenter: 'small' }, ['text']), 'ax-text--center--small');
         });
       });
 
@@ -40,7 +40,7 @@ describe('components: utils : class-name', () => {
         });
 
         it('can add the responsive class', () => {
-          assert.equal(mergeClassNameSets({ textRight: 'sm' }, ['text']), 'ax-text--right--sm');
+          assert.equal(mergeClassNameSets({ textRight: 'small' }, ['text']), 'ax-text--right--small');
         });
       });
 
@@ -89,20 +89,20 @@ describe('components: utils : class-name', () => {
 
     describe('merge class sets', () => {
       const testProps = {
-        hiddenUntil: 'sm',
+        hiddenUntil: 'small',
         textLeft: true,
       };
 
       it('ignores props if request set is not given', () => {
         assert(mergeClassNameSets(testProps, ['text']).includes('ax-text--left'));
-        assert(!mergeClassNameSets(testProps, ['text']).includes('ax-hidden-until--sm'));
+        assert(!mergeClassNameSets(testProps, ['text']).includes('ax-hidden-until--small'));
 
         assert(!mergeClassNameSets(testProps, ['global']).includes('ax-text--left'));
-        assert(mergeClassNameSets(testProps, ['global']).includes('ax-hidden-until--sm'));
+        assert(mergeClassNameSets(testProps, ['global']).includes('ax-hidden-until--small'));
       });
 
       it('it can add multiple classes from multiple sets', () => {
-        assert(mergeClassNameSets(testProps, ['text', 'global']).includes('ax-hidden-until--sm'));
+        assert(mergeClassNameSets(testProps, ['text', 'global']).includes('ax-hidden-until--small'));
         assert(mergeClassNameSets(testProps, ['text', 'global']).includes('ax-text--left'));
       });
     });

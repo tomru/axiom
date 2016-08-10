@@ -3,9 +3,9 @@ const layoutWidthMd = '992px';
 const layoutWidthLg = '1200px';
 
 const breakpoints = [
-  { id: 'sm', width: layoutWidthSm },
-  { id: 'md', width: layoutWidthMd },
-  { id: 'lg', width: layoutWidthLg },
+  { id: 'small', width: layoutWidthSm },
+  { id: 'medium', width: layoutWidthMd },
+  { id: 'large', width: layoutWidthLg },
 ];
 
 module.exports = {
