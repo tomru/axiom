@@ -1,7 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import Card from 'bw-axiom/components/card/Card';
-import CardContent from 'bw-axiom/components/card/CardContent';
 import Billboard from 'bw-axiom/components/billboard/Billboard';
 import Grid from 'bw-axiom/components/grid/Grid';
 import GridCell from 'bw-axiom/components/grid/GridCell';
@@ -30,17 +28,13 @@ export class Doc extends Component {
     return (
       <div>
         <Billboard color="blue-grey" image="/assets/axiom-bg.jpg" overlay={ true }>
-          <LayoutContent>
-            <Card transparent={ true }>
-              <CardContent>
-                <Grid vAlign="bottom">
-                  <GridCell>
-                    <Heading level={ 4 } textCase="capital">{ markdownRoute.slice(0, -1).join(' / ') }</Heading>
-                    <Heading level={ 2 } textCase="capital">{ markdownRoute[markdownRoute.length - 1] }</Heading>
-                  </GridCell>
-                </Grid>
-              </CardContent>
-            </Card>
+          <LayoutContent padded={ true }>
+            <Grid vAlign="bottom">
+              <GridCell>
+                <Heading level={ 4 } textCase="capital">{ markdownRoute.slice(0, -1).join(' / ') }</Heading>
+                <Heading level={ 2 } textCase="capital">{ markdownRoute[markdownRoute.length - 1] }</Heading>
+              </GridCell>
+            </Grid>
           </LayoutContent>
         </Billboard>
 

@@ -7,6 +7,7 @@ import CardList from 'bw-axiom/components/card/CardList';
 import CardListItem from 'bw-axiom/components/card/CardListItem';
 import Icon from 'bw-axiom/components/icon/Icon';
 import Heading from 'bw-axiom/components/typography/Heading';
+import Paragraph from 'bw-axiom/components/typography/Paragraph';
 import Italic from 'bw-axiom/components/typography/Italic';
 import Link from 'bw-axiom/components/typography/Link'
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
@@ -43,7 +44,7 @@ export class SearchResults extends Component {
           <LayoutContent>
             <Card transparent={ true }>
               <CardContent textCenter={ true }>
-                <Icon name="binoculars" size="5x" />
+                <Paragraph><Icon name="binoculars" size="xxxlarge" /></Paragraph>
                 <Heading level={ 4 }>There's no results, but don't give up keep looking.</Heading>
               </CardContent>
             </Card>

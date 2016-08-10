@@ -1,8 +1,10 @@
 @import '~bw-axiom/design-patterns/colors/mixins';
 @import '~bw-axiom/design-patterns/spacing/_vars.js';
+@import '~bw-axiom/design-patterns/spacing/mixins';
 @import './vars';
 
 .dm-layout__footer-container {
+  @include space-block($container-margin-v-base);
   position: relative;
   padding: 0 $container-padding-h-base $container-padding-v-base;
   background-color: $footer-background-color;

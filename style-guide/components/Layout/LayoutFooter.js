@@ -27,7 +27,7 @@ export default class LayoutFooter extends Component {
 
     return (
       <div className={ classes }>
-        <LayoutContent>
+        <LayoutContent padded={ true }>
           <Grid gutters="lg" responsive={ false }>
             <GridCell shrink={ true }>
               <div className="dm-layout__logo">

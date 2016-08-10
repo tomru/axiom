@@ -7,7 +7,7 @@
 
 // Billboard: Base
 .ax-billboard {
-  @include space-block();
+  @include space-block($container-margin-v-base);
   display: flex;
   flex-direction: column;
   justify-content: center;
