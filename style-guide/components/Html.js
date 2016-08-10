@@ -16,7 +16,6 @@ export default class Html extends Component {
       <html lang="en-us">
         <head>
           <title>Brandwatch | Axiom</title>
-          <base href="/" />
           <meta charSet="utf-8" />
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
