@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, IndexRedirect } from 'react-router';
-import { docsRouteEnter } from 'style-guide/actions/docs';
+import { navigationRouteEnter } from 'style-guide/actions/navigation';
 import * as routes from 'style-guide/constants/Routing';
 import App from 'style-guide/containers/App';
 import Doc from 'style-guide/containers/Doc';
@@ -11,7 +11,7 @@ import { getFirstDocumentPath, hasMarkdownContent, pathToMarkdownRoute } from 's
 function onDocRouteEnter(dispatch) {
   return ({ location: { pathname } }, replace, next) => {
     if (hasMarkdownContent(pathname)) {
-      dispatch(docsRouteEnter(pathToMarkdownRoute(pathname)));
+      dispatch(navigationRouteEnter(pathToMarkdownRoute(pathname)));
     } else {
       replace({ pathname: `/${routes.NOT_FOUND}` });
     }

@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import humanize from 'humanize-string';
 import Billboard from 'bw-axiom/components/billboard/Billboard';
 import Grid from 'bw-axiom/components/grid/Grid';
 import GridCell from 'bw-axiom/components/grid/GridCell';
@@ -27,12 +28,12 @@ export class Doc extends Component {
 
     return (
       <div>
-        <Billboard color="blue-grey" image="/assets/axiom-bg.jpg" overlay={ true }>
+        <Billboard color="blue-grey" image="/assets/axiom-bg.jpg" overlay={ true } size="large">
           <LayoutContent padded={ true }>
             <Grid vAlign="bottom">
               <GridCell>
-                <Heading level={ 4 } textCase="capital">{ markdownRoute.slice(0, -1).join(' / ') }</Heading>
-                <Heading level={ 2 } textCase="capital">{ markdownRoute[markdownRoute.length - 1] }</Heading>
+                <Heading level={ 4 } textCase="capital">{ humanize(markdownRoute.slice(0, -1).join(' / ')) }</Heading>
+                <Heading level={ 2 } textCase="capital">{ humanize(markdownRoute[markdownRoute.length - 1]) }</Heading>
               </GridCell>
             </Grid>
           </LayoutContent>

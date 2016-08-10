@@ -60,7 +60,7 @@ export class SearchResults extends Component {
           <CardList>
             { results.map(({ to, name }, index) =>
               <CardListItem key={ index }>
-                <Heading level={ 5 } space={ false }>
+                <Heading level={ 5 }>
                   <Link to={ to }>
                     { name } - <Italic textWeak={ true }>{ to }</Italic>
                   </Link>

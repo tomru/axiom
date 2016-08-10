@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as docsActions from 'style-guide/actions/docs';
+import * as navigationActions from 'style-guide/actions/navigation';
 import * as searchActions from 'style-guide/actions/search';
 import Layout from 'style-guide/components/Layout/Layout';
 import LayoutHeader from 'style-guide/components/Layout/LayoutHeader';
@@ -18,29 +18,29 @@ export class App extends Component {
   static propTypes = {
     children: PropTypes.any,
     dispatch: PropTypes.func.isRequired,
-    docsState: PropTypes.shape({
+    location: PropTypes.object.isRequired,
+    navigationState: PropTypes.shape({
       activePath: PropTypes.array.isRequired,
       openPath: PropTypes.array.isRequired,
     }).isRequired,
-    location: PropTypes.object.isRequired,
     searchState: PropTypes.object.isRequired,
   };
 
   componentWillMount() {
     const { dispatch } = this.props;
-    this.boundDocsActions = bindActionCreators(docsActions, dispatch);
+    this.boundNavigationActions = bindActionCreators(navigationActions, dispatch);
     this.boundSearchActions = bindActionCreators(searchActions, dispatch);
   }
 
   onItemClick({ path }) {
-    const { docsSetOpenPath } = this.boundDocsActions;
-    docsSetOpenPath(path);
+    const { navigationSetOpenPath } = this.boundNavigationActions;
+    navigationSetOpenPath(path);
   }
 
   render() {
     const {
       children,
-      docsState: {
+      navigationState: {
         activePath,
         openPath,
       },
@@ -80,7 +80,7 @@ export class App extends Component {
 
 function select(state) {
   return {
-    docsState: state.docs,
+    navigationState: state.navigation,
     searchState: state.search,
   };
 }

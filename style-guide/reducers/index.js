@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import docs from './docs';
+import navigation from './navigation';
 import search from './search';
 
 const rootReducer = combineReducers({
   routing: routerReducer,
-  docs,
+  navigation,
   search,
 });
 

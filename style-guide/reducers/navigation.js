@@ -7,14 +7,14 @@ export const initialState = {
   visible: false,
 };
 
-export default function docsReducer(state = initialState, action) {
+export default function navigation(state = initialState, action) {
   switch (action.type) {
-  case types.DOCS_SET_ACTIVE_PATH:
+  case types.NAVIGATION_SET_ACTIVE_PATH:
     return {
       ...state,
       activePath: action.payload.path,
     };
-  case types.DOCS_SET_OPEN_PATH:
+  case types.NAVIGATION_SET_OPEN_PATH:
     return {
       ...state,
       openPath: action.payload.path,
