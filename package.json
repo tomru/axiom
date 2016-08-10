@@ -21,7 +21,8 @@
     "prod": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/production').default()\"",
     "prepublish": "npm run clean && npm run prepublish-javascript && npm run prepublish-sass",
     "prepublish-javascript": "BABEL_ENV=production babel ./src --out-dir ./lib && babel ./utils --out-dir ./lib/utils",
-    "prepublish-sass": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/prepublish-sass').default()\""
+    "prepublish-sass": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/prepublish-sass').default()\"",
+    "test": "mocha $( find ./src ./utils ./style-guide -name '*.tests.js') ${exeparams[@]}"
   },
   "dependencies": {
     "autoprefixer": "^6.4.0",
@@ -51,6 +52,7 @@
     "css-loader": "^0.23.1",
     "decamelize": "^1.2.0",
     "del": "^2.2.0",
+    "enzyme": "^2.4.1",
     "eslint": "^3.2.2",
     "eslint-plugin-react": "^6.0.0",
     "express": "^4.13.4",
@@ -63,9 +65,11 @@
     "humanize-string": "^1.0.1",
     "isomorphic-fetch": "^2.2.1",
     "js-beautify": "^1.6.2",
+    "jsdom": "^9.4.1",
     "json-loader": "0.5.4",
     "loader-utils": "^0.2.14",
     "lodash": "^4.14.1",
+    "mocha": "^3.0.2",
     "node-sass": "^3.8.0",
     "postcss-loader": "^0.9.1",
     "prismjs": "^1.4.1",
@@ -82,6 +86,7 @@
     "sass-lint": "^1.8.2",
     "sass-loader": "^3.1.2",
     "serialize-javascript": "^1.1.2",
+    "sinon": "^1.17.5",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "uuid": "^2.0.1",

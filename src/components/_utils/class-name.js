@@ -4,8 +4,8 @@ import classnames from 'classnames';
 const CLASS_NAMES_SETS = {
   global: (props) => {
     return classnames({
-      [`ax-util--hidden--${props.hiddenUntil}`]: props.hiddenUntil,
-      [`ax-util--visible--${props.visibleUntil}`]: props.visibleUntil,
+      [`ax-hidden-until--${props.hiddenUntil}`]: props.hiddenUntil,
+      [`ax-visible-until--${props.visibleUntil}`]: props.visibleUntil,
     });
   },
   text: (props) => {
@@ -30,15 +30,7 @@ const CLASS_NAMES_SETS = {
   },
 };
 
-export function addDynamicClass(array, predicate, classCb) {
-  const element = array.find(predicate);
-
-  if (element) {
-    return classCb(element);
-  }
-}
-
-export function mergeClassNameSets(props = {}, classNameSets) {
+export function mergeClassNameSets(props = {}, classNameSets = []) {
   return classnames(
     props.className,
     ...classNameSets.map((set) => CLASS_NAMES_SETS[set](props)),
