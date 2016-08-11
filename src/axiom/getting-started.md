@@ -5,7 +5,7 @@ If you're on the current popular stack train (React, Redux, Webpack etc...) then
 
 # Getting started with the Pattern Library in an existing App
 
-###### Add the dependency to your `package.json` file *(for the moment this needs to be done via the git link)*.
+##### Add the dependency to your `package.json` file *(for the moment this needs to be done via the git link)*.
 
 ```json
 {
@@ -15,7 +15,7 @@ If you're on the current popular stack train (React, Redux, Webpack etc...) then
 }
 ```
 
-### Setup
+# Sass setup
 
 #### Variables
 

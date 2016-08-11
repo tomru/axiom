@@ -6,6 +6,7 @@ import CardTitle from '../../card/CardTitle';
 import CardContent from '../../card/CardContent';
 import TextInput from '../../form/TextInput';
 import Link from '../../typography/Link';
+import Heading from '../../typography/Heading';
 import Paragraph from '../../typography/Paragraph';
 import Icon from '../Icon';
 import IconGrid from './IconGrid';
@@ -65,7 +66,9 @@ export default class IconsList extends Component {
         { do {
           if (search) {
             <Card>
-              <CardTitle title={ `Search for "${search}"` } />
+              <CardTitle>
+                <Heading level={ 4 }>Search for { search }</Heading>
+              </CardTitle>
               <CardContent>
                 { do {
                   if (foundIcons.length) {

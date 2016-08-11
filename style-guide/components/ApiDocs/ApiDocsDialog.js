@@ -25,8 +25,9 @@ export default class ApiDocsDialog extends Component {
     return (
       <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="large">
         <DialogTitle onRequestClose={ onRequestClose }>
-          { `API Docs - ${title}` }
+          <Heading level={ 4 }>API Docs - { title }</Heading>
         </DialogTitle>
+
         <DialogBody>
           <CardContent>
             <CodeTabset>

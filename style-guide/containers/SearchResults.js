@@ -56,7 +56,10 @@ export class SearchResults extends Component {
     return (
       <LayoutContent>
         <Card>
-          <CardTitle title="Search Results" />
+          <CardTitle>
+            <Heading level={ 4 }>Search Results</Heading>
+          </CardTitle>
+
           <CardList>
             { results.map(({ to, name }, index) =>
               <CardListItem key={ index }>

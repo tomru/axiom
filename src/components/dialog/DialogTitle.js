@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 import CardTitle from '../card/CardTitle';
+import Grid from '../grid/Grid';
+import GridCell from '../grid/GridCell';
 import Icon from '../icon/Icon';
 import Link from '../typography/Link';
 
@@ -16,10 +18,18 @@ export class DialogTitle extends Component {
     const classes = classnames(className, 'ax-dialog__card-title');
 
     return (
-      <CardTitle { ...rest } className={ classes } title={ children }>
-        <Link onClick={ onRequestClose } supressStyle={ true }>
-          <Icon name="times" size="medium" />
-        </Link>
+      <CardTitle { ...rest } className={ classes }>
+        <Grid responsive={ false }>
+          <GridCell>
+            { children }
+          </GridCell>
+
+          <GridCell shrink={ true }>
+            <Link onClick={ onRequestClose } supressStyle={ true }>
+              <Icon name="times" size="medium" />
+            </Link>
+          </GridCell>
+        </Grid>
       </CardTitle>
     );
   }

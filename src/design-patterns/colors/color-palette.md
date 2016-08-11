@@ -8,11 +8,11 @@ import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
 # Color Palette
 
 ```jsx
-colorPalette.map((colors, index) =>
-  <Grid key={ index } snippetSkip>
+colorPalette.map((colors) =>
+  <Grid snippetSkip>
     {
-      colors.map(({ name, color }, index) =>
-        <GridCell key={ index }>
+      colors.map(({ name, color }) =>
+        <GridCell>
           <ColorSwatch name={ name } color={ color } />
         </GridCell>
       )
