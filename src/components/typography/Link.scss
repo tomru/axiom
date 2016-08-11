@@ -22,10 +22,10 @@ a.ax-link {
   // Color links but this will need to be
   // suppressed for things like menu.
   &:not(.ax-link--inherit-color) {
-    color: get-color($color-accent);
+    color: get-color($color-primary);
 
     &:hover {
-      color: get-color($color-accent, 600);
+      color: get-color($color-primary, 600);
     }
   }
 

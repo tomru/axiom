@@ -140,11 +140,11 @@ button {
 
 .ax-button--primary {
   &:not(.ax-button--outlined) {
-    @include button-color-filled($color-accent);
+    @include button-color-filled($color-primary);
   }
 
   &.ax-button--outlined {
-    @include button-color-outlined($color-accent);
+    @include button-color-outlined($color-primary);
   }
 }
 

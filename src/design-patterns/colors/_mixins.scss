@@ -45,11 +45,6 @@
 }
 
 //
-@function get-accent-color($color-set, $variation: $color-accent-base-variation) {
-  @return get-color($color-set, $variation);
-}
-
-//
 @function get-color-set($color) {
   @if (type-of($color-set) == map) {
     @return $color;

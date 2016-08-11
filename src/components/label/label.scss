@@ -70,7 +70,7 @@ $label-border-radius: 2px;
 }
 
 .ax-label--primary {
-  @include label-color-filled($color-accent);
+  @include label-color-filled($color-primary);
 }
 
 

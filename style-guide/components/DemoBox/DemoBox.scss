@@ -12,17 +12,17 @@
   justify-content: center;
   min-height: 50px;
   padding: $component-padding-v-base $component-padding-h-base;
-  border: 1px solid get-color($color-accent, 100);
-  background-color: get-color($color-accent, 50);
-  color: get-text-color(get-color($color-accent, 50));
+  border: 1px solid get-color($color-primary, 100);
+  background-color: get-color($color-primary, 50);
+  color: get-text-color(get-color($color-primary, 50));
   font-size: $font-size-sm;
   text-transform: uppercase;
 }
 
 .dm-demo-box--attention {
-  border-color: get-color($color-accent, 500);
-  background-color: get-color($color-accent, 300);
-  color: get-text-color(get-color($color-accent, 300));
+  border-color: get-color($color-primary, 500);
+  background-color: get-color($color-primary, 300);
+  color: get-text-color(get-color($color-primary, 300));
 }
 
 .dm-demo-container {

@@ -1,4 +1,4 @@
-import { colorWhite, colorGrey, colorAccent, colorGreen, colorRed } from '../../design-patterns/colors/_vars';
+import { colorWhite, colorGrey, colorPrimary, colorGreen, colorRed } from '../../design-patterns/colors/_vars';
 import { componentPaddingVBase, componentPaddingHSm } from '../../design-patterns/spacing/_vars';
 import { lineHeightPx } from '../typography/_vars';
 
@@ -15,9 +15,9 @@ module.exports = {
   inputBackgroundColor: colorWhite['_'],
   inputBorderColor: colorGrey[300],
   inputPlaceholderColor: colorGrey[400],
-  inputFocusColor: colorAccent['A100'],
+  inputFocusColor: colorPrimary['A100'],
   inputDisabledColor: colorGrey[100],
   inputValidColor: colorGreen['A400'],
   inputInvalidColor: colorRed['A400'],
-  inputCheckedColor: colorAccent['A400'],
+  inputCheckedColor: colorPrimary['A400'],
 };

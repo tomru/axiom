@@ -6,10 +6,10 @@
 @import '~bw-axiom/components/typography/_vars.js';
 
 $nav-first-level-item-background-color-hover: get-color($color-grey, 50);
-$nav-first-level-item-active-color: get-color($color-accent, A400);
+$nav-first-level-item-active-color: get-color($color-primary, A400);
 $nav-first-level-item-active-background-color: get-color($color-grey, 50);
 $nav-second-level-item-background-color-hover: get-color($color-grey, 100);
-$nav-second-level-item-active-color: get-color($color-accent, A400);
+$nav-second-level-item-active-color: get-color($color-primary, A400);
 $nav-second-level-item-active-background-color: get-color($color-grey, 100);
 
 .dm-nav__list-item {
