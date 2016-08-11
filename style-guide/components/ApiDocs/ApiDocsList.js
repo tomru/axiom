@@ -6,9 +6,9 @@ import GridCell from 'bw-axiom/components/grid/GridCell';
 import Label from 'bw-axiom/components/label/Label';
 import LabelGroup from 'bw-axiom/components/label/LabelGroup';
 import Heading from 'bw-axiom/components/typography/Heading';
-import DocApiPropType from 'style-guide/components/DocApi/DocApiPropType';
+import ApiDocsPropType from 'style-guide/components/ApiDocs/ApiDocsPropType';
 
-export default class DocApiList extends Component {
+export default class ApiDocsList extends Component {
   static propTypes = {
     propTypes: PropTypes.object.isRequired,
   };
@@ -45,7 +45,7 @@ export default class DocApiList extends Component {
               </GridCell>
             </Grid>
 
-            <DocApiPropType propType={ propTypes[key] } />
+            <ApiDocsPropType propType={ propTypes[key] } />
           </CardListItem>
         ) }
       </CardList>

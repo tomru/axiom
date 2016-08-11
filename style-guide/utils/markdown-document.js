@@ -1,4 +1,3 @@
-import uuid from 'uuid';
 import { cloneElement } from 'react';
 import docStructure from 'style-guide/constants/DocStructure';
 import * as routes  from 'style-guide/constants/Routing';
@@ -35,18 +34,26 @@ export function getFirstDocumentPath() {
   return markdownRouteToPath(getFirstDocumentRoute());
 }
 
-export function getMarkdownContentFunction(route) {
-  return route.reduce((level, nextLevelId) => {
-    if (Array.isArray(level)) {
-      const nextLevel = level.find(({ id }) => id === nextLevelId);
-
-      if (nextLevel) {
-        return nextLevel.children;
-      }
-    }
-
-    return null;
+function getMarkdownContent(route) {
+  return route.reduce((level = [], nextLevelId) => {
+    return (Array.isArray(level) ? level : level.children)
+      .find(({ id }) => id === nextLevelId);
   }, getDocs());
+}
+
+export function getMarkdownContentFunction(route) {
+  return (getMarkdownContent(route) || {}).children;
+}
+
+export function getMarkdownImports(route) {
+  const { imports, importsLocation } = (getMarkdownContent(route) || {});
+
+  if (imports && importsLocation) {
+    return {
+      components: imports,
+      location: importsLocation,
+    };
+  }
 }
 
 export function hasMarkdownContent(path, route =  pathToMarkdownRoute(path)) {
@@ -74,6 +81,5 @@ function buildReactElement(element) {
     return element;
   }
 
-
-  return cloneElement(element, { key: uuid.v4() }, buildReactElement(element.props.children));
+  return cloneElement(element, {}, buildReactElement(element.props.children));
 }

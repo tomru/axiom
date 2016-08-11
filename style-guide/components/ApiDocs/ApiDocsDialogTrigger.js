@@ -1,12 +1,14 @@
 import React, { PropTypes, Component } from 'react';
 import ButtonGroup from 'bw-axiom/components/button/ButtonGroup';
 import Button from 'bw-axiom/components/button/Button';
-import DocApiDialog from 'style-guide/components/DocApi/DocApiDialog';
+import ApiDocsDialog from 'style-guide/components/ApiDocs/ApiDocsDialog';
 
 export default class DocApiDialogTrigger extends Component {
   static propTypes = {
-    apiDocs: PropTypes.array.isRequired,
-    importDocs: PropTypes.object.isRequired,
+    imports: PropTypes.shape({
+      components: PropTypes.array.isRequired,
+      location: PropTypes.string.isRequired,
+    }).isRequired,
     title: PropTypes.string.isRequired,
   };
 
@@ -23,17 +25,18 @@ export default class DocApiDialogTrigger extends Component {
   }
 
   render() {
-    const { apiDocs, importDocs, title } = this.props;
+    const { imports, title } = this.props;
     const { isOpen } = this.state;
+    const { components, location } = imports;
 
     return (
       <ButtonGroup>
         <Button onClick={ ::this.openDialog } size="large">
           View API Docs
-          <DocApiDialog
-              apiDocs={ apiDocs }
-              importDocs={ importDocs }
+          <ApiDocsDialog
+              components={ components }
               isOpen={ isOpen }
+              location={ location }
               onRequestClose={ ::this.closeDialog }
               title={ title } />
         </Button>

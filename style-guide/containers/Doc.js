@@ -6,8 +6,9 @@ import Grid from 'bw-axiom/components/grid/Grid';
 import GridCell from 'bw-axiom/components/grid/GridCell';
 import Heading from 'bw-axiom/components/typography/Heading';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
+import ApiDocsDialogTrigger from 'style-guide/components/ApiDocs/ApiDocsDialogTrigger';
 import { render } from 'style-guide/utils/markdown-to-remarkable';
-import { pathToMarkdownRoute, getMarkdownContentFunction } from 'style-guide/utils/markdown-document';
+import { pathToMarkdownRoute, getMarkdownContentFunction, getMarkdownImports } from 'style-guide/utils/markdown-document';
 
 export class Doc extends Component {
   static propTypes = {
@@ -25,6 +26,7 @@ export class Doc extends Component {
 
     const markdownRoute = pathToMarkdownRoute(pathname);
     const markdownContentFunction = getMarkdownContentFunction(markdownRoute);
+    const markdownImports = getMarkdownImports(markdownRoute);
 
     return (
       <div>
@@ -35,6 +37,12 @@ export class Doc extends Component {
                 <Heading level={ 4 } textCase="capital">{ humanize(markdownRoute.slice(0, -1).join(' / ')) }</Heading>
                 <Heading level={ 2 } textCase="capital">{ humanize(markdownRoute[markdownRoute.length - 1]) }</Heading>
               </GridCell>
+
+              { do { if (markdownImports) {
+                <GridCell shrink={ true }>
+                  <ApiDocsDialogTrigger imports={ markdownImports } />
+                </GridCell>
+              } } }
             </Grid>
           </LayoutContent>
         </Billboard>

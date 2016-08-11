@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 if (__INCLUDE_CSS__) {
-  require('./DocApiPropType.scss');
+  require('./ApiDocsPropType.scss');
 }
 
 function oneOf(list) {
@@ -32,21 +32,30 @@ const PROP_TYPE_MAP = {
   oneOfType: () => {},
 };
 
-export default class DocApiPropType extends Component {
+function getPropType(prop) {
+  for (let key in prop) {
+    if (PROP_TYPE_MAP[key]) {
+      return key;
+    }
+  }
+}
+
+export default class ApiDocsPropType extends Component {
   static propTypes = {
     propType: PropTypes.object.isRequired,
   };
 
   render()  {
     const { propType } = this.props;
+    const type = getPropType(propType);
 
     return (
       <pre className="dm-doc-api__pre">
         <code className="dm-doc-api__code">
           {
-            typeof PROP_TYPE_MAP[propType.type] === 'function'
-              ? PROP_TYPE_MAP[propType.type](propType[propType.type])
-              : PROP_TYPE_MAP[propType.type]
+            typeof PROP_TYPE_MAP[type] === 'function'
+              ?  PROP_TYPE_MAP[type](propType[type])
+              : PROP_TYPE_MAP[type]
           }
         </code>
       </pre>
