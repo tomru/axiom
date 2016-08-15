@@ -108,6 +108,14 @@ module.exports = [
         ],
       },
       {
+        id: 'select',
+        children: require('bw-axiom/components/select/select.md'),
+        importsLocation: 'bw-axiom/components/select',
+        imports: [
+          require('bw-axiom/components/select/Select').default,
+        ],
+      },
+      {
         id: 'table',
         children: require('bw-axiom/components/table/table.md'),
         importsLocation: 'bw-axiom/components/table',
