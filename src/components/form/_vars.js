@@ -1,12 +1,12 @@
 import { colorWhite, colorGrey, colorPrimary, colorGreen, colorRed } from '../../design-patterns/colors/_vars';
-import { componentPaddingVBase, componentPaddingHSm } from '../../design-patterns/spacing/_vars';
+import { componentPaddingVBase, componentPaddingHBase } from '../../design-patterns/spacing/_vars';
 import { lineHeightPx } from '../typography/_vars';
 
 const formInputBorderWidth = 1;
 
 module.exports = {
   formInputVPadding: componentPaddingVBase,
-  formInputHPadding: componentPaddingHSm,
+  formInputHPadding: componentPaddingHBase,
   formInputBorderWidth: `${formInputBorderWidth}px`,
   formInputBorderRadius: '2px',
   formTextareaHeight: '200px',
