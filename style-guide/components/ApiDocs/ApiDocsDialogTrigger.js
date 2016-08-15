@@ -9,7 +9,6 @@ export default class DocApiDialogTrigger extends Component {
       components: PropTypes.array.isRequired,
       location: PropTypes.string.isRequired,
     }).isRequired,
-    title: PropTypes.string.isRequired,
   };
 
   componentWillMount() {
@@ -25,7 +24,7 @@ export default class DocApiDialogTrigger extends Component {
   }
 
   render() {
-    const { imports, title } = this.props;
+    const { imports } = this.props;
     const { isOpen } = this.state;
     const { components, location } = imports;
 
@@ -37,8 +36,7 @@ export default class DocApiDialogTrigger extends Component {
               components={ components }
               isOpen={ isOpen }
               location={ location }
-              onRequestClose={ ::this.closeDialog }
-              title={ title } />
+              onRequestClose={ ::this.closeDialog } />
         </Button>
       </ButtonGroup>
     );

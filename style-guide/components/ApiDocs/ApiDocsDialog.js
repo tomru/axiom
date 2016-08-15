@@ -16,16 +16,15 @@ export default class ApiDocsDialog extends Component {
     components: PropTypes.array.isRequired,
     isOpen: PropTypes.bool.isRequired,
     location: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
     onRequestClose: PropTypes.func.isRequired,
   };
 
   render() {
-    const { components, location, isOpen, onRequestClose, title } = this.props;
+    const { components, location, isOpen, onRequestClose } = this.props;
     return (
       <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="large">
         <DialogTitle onRequestClose={ onRequestClose }>
-          <Heading level={ 4 }>API Docs - { title }</Heading>
+          <Heading level={ 4 }>API Docs</Heading>
         </DialogTitle>
 
         <DialogBody>

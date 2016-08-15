@@ -28,9 +28,9 @@ export default class ApiDocsList extends Component {
               <GridCell shrink={ true }>
                 <LabelGroup key="labels">
                   { do {
-                    if (propTypes[key].default) {
+                    if (propTypes[key].default !== undefined) {
                       <Label color="green" size="small">
-                        Defaults: { propTypes[key].default }
+                        Defaults: { JSON.stringify(propTypes[key].default) }
                       </Label>
                     }
                   } }

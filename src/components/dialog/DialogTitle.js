@@ -9,7 +9,7 @@ import Link from '../typography/Link';
 
 export class DialogTitle extends Component {
   static propTypes = {
-    children: { string: true, isRequired: true },
+    children: { node: true, isRequired: true },
     onRequestClose: { func: true, isRequired: true },
   };
 
