@@ -35,7 +35,7 @@ export class ChedioButtox extends Component {
 
     return (
       <label className={ classes }>
-        <input className={ classnames('ax-chedio-buttox', inputClassName) } type={ inputType } { ...rest } />
+        <input { ...rest } className={ classnames('ax-chedio-buttox', inputClassName) } type={ inputType } />
         <span className={ classnames('ax-chedio-buttox__label', labelClassName) }>
           { children }
         </span>
