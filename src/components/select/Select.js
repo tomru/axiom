@@ -33,6 +33,7 @@ const propTypes = {
   items: { array: true, isRequired: true },
   maxHeight: { number: true, default: 200 },
   multiselect: { bool: true, default: false },
+  noItemsText: { string: true },
   selection: { any: true },
   onClose: { func: true },
   onOpen: { func: true },
@@ -56,6 +57,7 @@ export class Select extends Component {
       displayValue = (item) => item,
       identifier = (item) => item,
       inputDisplayValue = defaultInputDisplayValue,
+      noItemsText = 'No items to select',
       onOpen = () => {},
       onClose = () => {},
       ...rest,
@@ -66,6 +68,7 @@ export class Select extends Component {
       displayValue,
       identifier,
       inputDisplayValue,
+      noItemsText,
       onOpen,
       onClose,
     };
@@ -186,7 +189,7 @@ export class Select extends Component {
 
   render() {
     const { isOpen, scrollToActiveIndex } = this.state;
-    const { maxHeight, ...rest } = this.getProps();
+    const { maxHeight, noItemsText, ...rest } = this.getProps();
     const items = buildSelectableItems(this.getProps(), this.state);
     const classes = classnames('ax-select', {
       'ax-select--open': isOpen,
@@ -212,6 +215,7 @@ export class Select extends Component {
             isOpen={ isOpen }
             items={ items }
             maxHeight={ maxHeight }
+            noItemsText={ noItemsText }
             onItemClick={ ::this.handleItemClick }
             onItemHover={ ::this.setActiveIndex }
             scrollToActiveIndex={ scrollToActiveIndex } />
