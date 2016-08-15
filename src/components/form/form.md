@@ -84,6 +84,15 @@ import Heading from '../typography/Heading';
 ]
 ```
 
+# Check boxes (Inline)
+```jsx
+[
+  <CheckBox inline={ true }>Check box</CheckBox>,
+  <CheckBox inline={ true }>Check box</CheckBox>,
+  <CheckBox inline={ true }>Check box</CheckBox>,
+]
+```
+
 
 # Radio Buttons
 ```jsx
@@ -93,3 +102,13 @@ import Heading from '../typography/Heading';
   <RadioButton disabled={ true }>Disabled radio button</RadioButton>,
 ]
 ```
+
+# Radio Buttons (Inline)
+```jsx
+[
+  <RadioButton name="radio-inline" inline={ true }>Radio button</RadioButton>,
+  <RadioButton name="radio-inline" inline={ true }>Radio button</RadioButton>,
+  <RadioButton name="radio-inline" inline={ true }>Radio button</RadioButton>,
+]
+```
+

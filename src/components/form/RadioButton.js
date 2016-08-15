@@ -7,6 +7,11 @@ if (__INCLUDE_CSS__) {
 }
 
 export class RadioButton extends Component {
+  static propTypes = {
+    children: { node: true },
+    inline: { bool: true },
+  };
+
   render() {
     return (
       <ChedioButtox

@@ -49,7 +49,7 @@ export function addPropTypes(...propSets) {
   }
 }
 
-function extendClass(Component, Wrapped) {
+export function extendClass(Component, Wrapped) {
   for (let staticProp in Component) {
     Wrapped[staticProp] = Component[staticProp];
   }
