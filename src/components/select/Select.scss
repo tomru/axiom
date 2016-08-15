@@ -1,5 +1,5 @@
 @import '../../design-patterns/spacing/mixins';
-@import '../select/_vars.js';
+@import '../../components/_vars.js';
 
 .ax-select {
   @include space-block();

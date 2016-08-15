@@ -7,5 +7,4 @@ module.exports = {
     { id: 'large', width: '800px' },
   ],
   dialogAnimationDuration: transitionTimeBase,
-  zIndexDialog: 900,
 }
