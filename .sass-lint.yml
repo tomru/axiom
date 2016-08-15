@@ -1,5 +1,7 @@
 files:
-  include: 'src/**/*.s+(a|c)ss'
+  include:
+    - 'src/**/*.scss'
+    - 'style-guide/**/*.scss'
 options:
   formatter: stylish
   merge-default-rules: false
