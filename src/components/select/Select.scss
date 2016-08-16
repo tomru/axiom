@@ -1,0 +1,15 @@
+@import '../../design-patterns/spacing/mixins';
+@import '../../components/_vars.js';
+
+.ax-select {
+  @include space-block();
+  position: relative;
+  outline: none;
+}
+
+.ax-select--open {
+  .ax-select__input {
+    z-index: $z-index-select + 1;
+  }
+}
+

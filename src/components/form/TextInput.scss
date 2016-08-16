@@ -61,15 +61,17 @@
   position: relative;
   flex-grow: 1;
   flex-shrink: 1;
+  align-items: center;
+  border: $form-input-border-width solid $input-border-color;
+  border-style: solid;
+  border-radius: $form-input-border-radius;
+  background-color: $input-background-color;
 }
 
 .ax-input__icon {
   @include transition((color), $transition-time-fast);
 
-  position: absolute;
-  top: 50%;
-  right: $form-input-h-padding;
-  transform: translate3d(0, -50%, 0);
+  padding: 0 $form-input-h-padding 0 0;
   color: $input-placeholder-color;
 
   .ax-input:focus + & {
@@ -87,12 +89,11 @@
   width: 100%;
   min-width: 0;
   padding: $form-input-v-padding $form-input-h-padding;
-  border: $form-input-border-width solid $input-border-color;
-  border-style: solid;
-  border-radius: $form-input-border-radius;
-  background-color: $input-background-color;
+  border: 0;
+  background-color: transparent;
   color: get-text-color($input-background-color);
   line-height: inherit;
+  text-overflow: ellipsis;
   appearance: none;
 
   &::placeholder {
