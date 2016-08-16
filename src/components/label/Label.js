@@ -35,26 +35,25 @@ export class Label extends Component {
     } = this.props;
 
     const icon = findComponent(children, Icon);
+    const filteredChildren = Children.toArray(children).filter((component) => component.type !== Icon);
     const classes = classnames(className,
       'ax-label', {
         [`ax-label--${size}`]: size,
         [`ax-label--${color}`]: color,
         'ax-label--full': full === true,
-        [`ax-button--full--${full}`]: full & full !== true,
+        [`ax-label--full--${full}`]: full & full !== true,
       },
     );
 
     return (
       <span { ...rest } className={ classes }>
-        { do {
-          if (icon) {
-            {cloneElement(icon, {
-              className: 'ax-label__icon',
-            })}
-          }
-        } }
+        { do { if (icon) {
+          cloneElement(icon, {
+            className: 'ax-label__icon',
+          })
+        } } }
 
-        { Children.toArray(children).filter((component) => component.type !== Icon) }
+        { filteredChildren }
       </span>
     );
   }

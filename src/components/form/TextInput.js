@@ -53,25 +53,21 @@ export class TextInput extends Component {
                 ref="input"
                 type="text"  />
 
-            { do {
-              if (icon) {
-                <div className="ax-input__icon">
-                  { cloneElement(icon, {
-                    className: classnames({ 'ax-icon-spin': thinking }),
-                    name: this.getIcon(icon.props.name),
-                  }) }
-                </div>
-              }
-            } }
+            { do { if (icon) {
+              <div className="ax-input__icon">
+                { cloneElement(icon, {
+                  className: classnames({ 'ax-icon-spin': thinking }),
+                  name: this.getIcon(icon.props.name),
+                }) }
+              </div>
+            } } }
           </div>
 
-          { do {
-            if (button) {
-              cloneElement(button, {
-                className: 'ax-input__button',
-              })
-            }
-          } }
+          { do { if (button) {
+            cloneElement(button, {
+              className: 'ax-input__button',
+            })
+          } } }
         </div>
       </label>
     );

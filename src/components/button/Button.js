@@ -53,19 +53,13 @@ export class Button extends Component {
 
     return (
       <button { ...rest } className={ classes }>
-        {
-          do {
-            if (icon) {
-              {
-                cloneElement(icon, {
-                  className: classnames({
-                    'ax-button__icon': filteredChildren.length,
-                  }),
-                })
-              }
-            }
-          }
-        }
+        { do { if (icon) {
+          cloneElement(icon, {
+            className: classnames({
+              'ax-button__icon': filteredChildren.length,
+            }),
+          })
+        } } }
 
         { filteredChildren }
       </button>
