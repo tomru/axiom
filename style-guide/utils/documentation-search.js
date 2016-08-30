@@ -33,5 +33,5 @@ function buildSearchObjects(docs, searchObjects = [], path = []) {
 }
 
 export function searchDocumentation(query) {
-  return buildFuse(buildSearchObjects(getDocs())).search(query)
+  return buildFuse(buildSearchObjects(getDocs())).search(query);
 }

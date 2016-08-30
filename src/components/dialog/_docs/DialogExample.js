@@ -26,7 +26,7 @@ export default class DialogExample extends Component {
             if (withTitle) {
               <DialogTitle onRequestClose={ onRequestClose }>
                 Dialog Title
-              </DialogTitle>
+              </DialogTitle>;
             }
           }
         }
@@ -83,7 +83,7 @@ export default class DialogExample extends Component {
                 <ButtonGroup>
                   <Button onClick={ onRequestClose }>Done</Button>
                 </ButtonGroup>
-              </DialogFooter>
+              </DialogFooter>;
             }
           }
         }

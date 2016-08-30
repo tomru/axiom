@@ -11,7 +11,7 @@ const scales = {
   scaleGoldenRatio: 1.618,
 };
 
-const fontHelvetica = `(Helvetica, Arial, sans-serif)`;
+const fontHelvetica = '(Helvetica, Arial, sans-serif)';
 const fontRobotoThin = `(Roboto-Thin, ${fontHelvetica})`;
 const fontRobotoLight = `(Roboto-Light, ${fontHelvetica})`;
 const fontRobotoRegular = `(Roboto-Regular, ${fontHelvetica})`;
@@ -87,4 +87,4 @@ module.exports = {
     fontRobotoMedium,
     fontRobotoBold,
   ],
-}
+};

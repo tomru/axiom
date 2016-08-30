@@ -6,10 +6,10 @@ const FORMAT_MAP = {
   long: 'ddd, DD MMM YYYY',
   time: 'HH:kk',
   timezone: '(UTCZ)',
-}
+};
 
 function formatDate(date, format) {
-  return moment(date).format(format)
+  return moment(date).format(format);
 }
 
 export function shortDate(date) {

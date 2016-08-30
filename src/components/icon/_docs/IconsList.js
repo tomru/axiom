@@ -72,11 +72,11 @@ export default class IconsList extends Component {
               <CardContent>
                 { do {
                   if (foundIcons.length) {
-                    <IconGrid icons={ foundIcons } />
+                    <IconGrid icons={ foundIcons } />;
                   } else {
                     <Paragraph textCenter={ true }>
                       Sorry no icons found matching "{ search }"
-                    </Paragraph>
+                    </Paragraph>;
                   }
                 } }
               </CardContent>
@@ -88,7 +88,7 @@ export default class IconsList extends Component {
                   </Link>
                 </Paragraph>
               </CardContent>
-            </Card>
+            </Card>;
           } else {
             {Object.keys(iconCategories).map((category, index) =>
               <Card key={ index }>
@@ -97,7 +97,7 @@ export default class IconsList extends Component {
                   <IconGrid icons={ iconCategories[category] } />
                 </CardContent>
               </Card>
-            )}
+            );}
           }
         } }
       </div>

@@ -50,7 +50,7 @@ export class Label extends Component {
         { do { if (icon) {
           cloneElement(icon, {
             className: 'ax-label__icon',
-          })
+          });
         } } }
 
         { filteredChildren }

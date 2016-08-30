@@ -17,15 +17,15 @@ export class Heading extends Component {
 
     switch (level) {
     case 1:
-      return <h1 { ...rest } className={ classes } />
+      return <h1 { ...rest } className={ classes } />;
     case 2:
-      return <h2 { ...rest } className={ classes } />
+      return <h2 { ...rest } className={ classes } />;
     case 3:
-      return <h3 { ...rest } className={ classes } />
+      return <h3 { ...rest } className={ classes } />;
     case 4:
-      return <h4 { ...rest } className={ classes } />
+      return <h4 { ...rest } className={ classes } />;
     case 5:
-      return <h5 { ...rest } className={ classes } />
+      return <h5 { ...rest } className={ classes } />;
     default:
       return null;
     }

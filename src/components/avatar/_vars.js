@@ -4,4 +4,4 @@ module.exports = {
     { id: 'medium', size: '60px', default: true },
     { id: 'large', size: '90px' },
   ],
-}
+};

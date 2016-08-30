@@ -9,7 +9,7 @@ import Icon from 'bw-axiom/components/icon/Icon';
 import Heading from 'bw-axiom/components/typography/Heading';
 import Paragraph from 'bw-axiom/components/typography/Paragraph';
 import Italic from 'bw-axiom/components/typography/Italic';
-import Link from 'bw-axiom/components/typography/Link'
+import Link from 'bw-axiom/components/typography/Link';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
 import LayoutFullHeightContainer from 'style-guide/components/Layout/LayoutFullHeightContainer';
 

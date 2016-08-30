@@ -60,7 +60,7 @@ export default class NavListItem extends Component {
             <NavList
                 isOpen={ isOpen }
                 items={ children }
-                onItemClick={ onClick } />
+                onItemClick={ onClick } />;
           }
         } }
       </li>

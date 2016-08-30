@@ -9,7 +9,7 @@ function getJsxAndHtmlContent(content) {
   return {
     jsx: matches && matches[1],
     html: matches && matches[2],
-  }
+  };
 }
 
 export default class MarkdownCodeBlock extends Component {
@@ -23,7 +23,7 @@ export default class MarkdownCodeBlock extends Component {
           <CodeSnippet language="jsx">{ jsx }</CodeSnippet>
           <CodeSnippet language="html">{ html }</CodeSnippet>
         </CodeTabset>
-      )
+      );
     }
 
     return (

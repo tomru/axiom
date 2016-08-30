@@ -41,7 +41,7 @@ export class Doc extends Component {
               { do { if (markdownImports) {
                 <GridCell shrink={ true }>
                   <ApiDocsDialogTrigger imports={ markdownImports } />
-                </GridCell>
+                </GridCell>;
               } } }
             </Grid>
           </LayoutContent>

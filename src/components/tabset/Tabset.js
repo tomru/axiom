@@ -32,10 +32,9 @@ export class Tabset extends Component {
   render() {
     const { className, children, ...rest } = this.props;
     const { activeTabIndex } = this.state;
-    const isActive = (index) => index === activeTabIndex;
     const tabs = (Array.isArray(children) ? children : [children]).filter((tab) => tab !== undefined);
     const tabTitles = tabs.map(({ props: { title } }) => title);
-    const activeTab = tabs.find((tab, index) => isActive(index));
+    const activeTab = tabs.find((tab, index) => index === activeTabIndex);
     const classes = classnames(className, 'ax-tabs');
 
     return (
@@ -43,7 +42,7 @@ export class Tabset extends Component {
         <ul className="ax-tabs__nav">
           { tabTitles.map((title, index) => {
             const tabClassName = classnames('ax-tabs__nav-item', {
-              'ax-tabs__nav-item--active': isActive(index),
+              'ax-tabs__nav-item--active': (index) => index === activeTabIndex,
             });
 
             return (

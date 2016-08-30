@@ -7,4 +7,4 @@ module.exports = {
     { id: 'large', width: '800px' },
   ],
   dialogAnimationDuration: transitionTimeBase,
-}
+};

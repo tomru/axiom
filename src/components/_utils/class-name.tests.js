@@ -125,7 +125,7 @@ describe('components: utils : class-name', () => {
         textColor: true,
       }), {
         foo: 'bar',
-      })
+      });
     });
   });
 });

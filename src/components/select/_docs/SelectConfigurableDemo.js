@@ -18,7 +18,7 @@ export default class SelectConfigurableDemo extends Component {
       maxHeight: 200,
       multiselect: false,
       initialSelection: true,
-    })
+    });
   }
 
   toggleMultiselect() {

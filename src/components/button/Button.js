@@ -58,7 +58,7 @@ export class Button extends Component {
             className: classnames({
               'ax-button__icon': filteredChildren.length,
             }),
-          })
+          });
         } } }
 
         { filteredChildren }

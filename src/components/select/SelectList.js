@@ -40,7 +40,7 @@ export default class SelectList extends Component {
         { do { if (items.length === 0) {
           <SelectListItem>
             { noItemsText }
-          </SelectListItem>
+          </SelectListItem>;
         } else {
           items.map((item, index) =>
             <SelectListItemOption
@@ -50,7 +50,7 @@ export default class SelectList extends Component {
                 onClick={ onItemClick }
                 onHover={ onItemHover }
                 scrollToActiveIndex={ scrollToActiveIndex } />
-          )
+          );
         } } }
 
 

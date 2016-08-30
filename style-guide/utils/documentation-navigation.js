@@ -15,11 +15,11 @@ function buildNavigationItem({ children, hidden, id }, activePath, openPath, par
     children: navigationItemChildren,
     isOpen: thisPath.join() === openPath.slice(0, thisPath.length).join(),
     isActive: thisPath.join() === activePath.slice(0, thisPath.length).join(),
-  }
+  };
 }
 
 export function buildNavigationItems(activePath, openPath) {
   return getDocs().map((item) => {
-    return buildNavigationItem(item, activePath, openPath)
+    return buildNavigationItem(item, activePath, openPath);
   });
 }

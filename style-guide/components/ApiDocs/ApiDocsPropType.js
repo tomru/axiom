@@ -33,7 +33,7 @@ const PROP_TYPE_MAP = {
 };
 
 function getPropType(prop) {
-  for (let key in prop) {
+  for (const key in prop) {
     if (PROP_TYPE_MAP[key]) {
       return key;
     }

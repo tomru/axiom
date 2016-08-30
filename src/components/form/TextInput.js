@@ -42,7 +42,7 @@ export class TextInput extends Component {
     return (
       <label className={ classes }>
         { do { if (label) {
-          <Heading level={ 5 }>{ label }</Heading>
+          <Heading level={ 5 }>{ label }</Heading>;
         } } }
 
         <div className="ax-input__button-container">
@@ -59,14 +59,14 @@ export class TextInput extends Component {
                   className: classnames({ 'ax-icon-spin': thinking }),
                   name: this.getIcon(icon.props.name),
                 }) }
-              </div>
+              </div>;
             } } }
           </div>
 
           { do { if (button) {
             cloneElement(button, {
               className: 'ax-input__button',
-            })
+            });
           } } }
         </div>
       </label>

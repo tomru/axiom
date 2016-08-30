@@ -31,14 +31,14 @@ export default class ApiDocsList extends Component {
                     if (propTypes[key].default !== undefined) {
                       <Label color="green" size="small">
                         Defaults: { JSON.stringify(propTypes[key].default) }
-                      </Label>
+                      </Label>;
                     }
                   } }
                   { do {
                     if (propTypes[key].isRequired) {
-                      <Label color="red" size="small">Required</Label>
+                      <Label color="red" size="small">Required</Label>;
                     } else {
-                      <Label color="blue" size="small">Optional</Label>
+                      <Label color="blue" size="small">Optional</Label>;
                     }
                   } }
                 </LabelGroup>

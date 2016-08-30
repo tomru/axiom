@@ -27,9 +27,9 @@ export class ChedioButtox extends Component {
     } = this.props;
 
     const classes = classnames(className,
-      `ax-chedio-buttox__group`, {
-        [`ax-chedio-buttox__group--inline`]: inline === true,
-        [`ax-chedio-buttox__group--space`]: !!children,
+      'ax-chedio-buttox__group', {
+        ['ax-chedio-buttox__group--inline']: inline === true,
+        ['ax-chedio-buttox__group--space']: !!children,
       }
     );
 

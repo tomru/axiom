@@ -38,7 +38,7 @@ export const PROP_TYPES_SETS = {
 };
 
 function getPropType(prop) {
-  for (let key in prop) {
+  for (const key in prop) {
     if (PROP_TYPE_MAP[key]) {
       return {
         type: key,
