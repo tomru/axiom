@@ -16,7 +16,13 @@ export class TextInput extends Component {
     label: { string: true },
     thinking: { bool: true },
     valid: { bool: true },
+    onBlur: { func: true },
+    onFocus: { func: true },
   };
+
+  componentWillMount() {
+    this.setState({ hasFocus: false });
+  }
 
   getIcon(defaultIcon) {
     const { valid, invalid, thinking } = this.props;
@@ -28,12 +34,26 @@ export class TextInput extends Component {
     return defaultIcon;
   }
 
+  handleOnBlur() {
+    const { onBlur = () => {} } = this.props;
+    this.setState({ hasFocus: false });
+    onBlur(...arguments);
+  }
+
+  handleOnFocus() {
+    const { onFocus = () => {} } = this.props;
+    this.setState({ hasFocus: true });
+    onFocus(...arguments);
+  }
+
   render() {
     const { className, children, valid, invalid, label, thinking, ...rest } = this.props;
+    const { hasFocus } = this.state;
     const button = findComponent(children, Button);
     const icon = findComponent(children, Icon);
     const classes = classnames(className,
       'ax-input__group', {
+        'ax-input__group--focus': hasFocus,
         'ax-input__group--valid': valid === true,
         'ax-input__group--invalid': invalid === true,
       }
@@ -50,6 +70,8 @@ export class TextInput extends Component {
             <input
                 { ...rest }
                 className="ax-input"
+                onBlur={ ::this.handleOnBlur }
+                onFocus={ ::this.handleOnFocus }
                 ref="input"
                 type="text"  />
 
