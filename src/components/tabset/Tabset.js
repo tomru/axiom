@@ -42,7 +42,7 @@ export class Tabset extends Component {
         <ul className="ax-tabs__nav">
           { tabTitles.map((title, index) => {
             const tabClassName = classnames('ax-tabs__nav-item', {
-              'ax-tabs__nav-item--active': (index) => index === activeTabIndex,
+              'ax-tabs__nav-item--active': index === activeTabIndex,
             });
 
             return (
