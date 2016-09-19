@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 
 if (__INCLUDE_CSS__) {
-  require('./BockContainer.scss');
+  require('./BlockContainer.scss');
 }
 
 export class BlockContainer extends Component {
