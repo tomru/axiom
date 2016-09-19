@@ -4,6 +4,7 @@
 // correctly and not break the vertical flow when stacked when going responsive.
 
 @mixin inline-component-container($component, $component-space: $component-margin-h-sm) {
+  &,
   &:last-child {
     margin-bottom: -$component-space;
   }
