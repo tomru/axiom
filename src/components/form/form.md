@@ -5,7 +5,9 @@ import GridCell from '../grid/GridCell';
 import Icon from '../icon/Icon';
 import Form from './Form';
 import CheckBox from './CheckBox';
+import CheckBoxGroup from './CheckBoxGroup';
 import RadioButton from './RadioButton';
+import RadioButtonGroup from './RadioButtonGroup';
 import TextArea from './TextArea';
 import TextInput from './TextInput';
 import Heading from '../typography/Heading';
@@ -77,38 +79,38 @@ import Heading from '../typography/Heading';
 
 # Check boxes
 ```jsx
-[
-  <CheckBox>Unchecked check box</CheckBox>,
-  <CheckBox defaultChecked={ true }>Checked check box</CheckBox>,
-  <CheckBox disabled={ true }>Disabled check box</CheckBox>,
-]
+<CheckBoxGroup>
+  <CheckBox>Unchecked check box</CheckBox>
+  <CheckBox defaultChecked={ true }>Checked check box</CheckBox>
+  <CheckBox disabled={ true }>Disabled check box</CheckBox>
+</CheckBoxGroup>
 ```
 
 # Check boxes (Inline)
 ```jsx
-[
-  <CheckBox inline={ true }>Check box</CheckBox>,
-  <CheckBox inline={ true }>Check box</CheckBox>,
-  <CheckBox inline={ true }>Check box</CheckBox>,
-]
+<CheckBoxGroup inline={ true }>
+  <CheckBox>Check box</CheckBox>
+  <CheckBox>Check box</CheckBox>
+  <CheckBox>Check box</CheckBox>
+</CheckBoxGroup>
 ```
 
 
 # Radio Buttons
 ```jsx
-[
-  <RadioButton>Unchecked radio button</RadioButton>,
-  <RadioButton defaultChecked={ true }>Checked radio button</RadioButton>,
-  <RadioButton disabled={ true }>Disabled radio button</RadioButton>,
-]
+<RadioButtonGroup>
+  <RadioButton>Unchecked radio button</RadioButton>
+  <RadioButton defaultChecked={ true }>Checked radio button</RadioButton>
+  <RadioButton disabled={ true }>Disabled radio button</RadioButton>
+</RadioButtonGroup>
 ```
 
 # Radio Buttons (Inline)
 ```jsx
-[
-  <RadioButton name="radio-inline" inline={ true }>Radio button</RadioButton>,
-  <RadioButton name="radio-inline" inline={ true }>Radio button</RadioButton>,
-  <RadioButton name="radio-inline" inline={ true }>Radio button</RadioButton>,
-]
+<RadioButtonGroup inline={ true }>
+  <RadioButton name="radio-inline">Radio button</RadioButton>
+  <RadioButton name="radio-inline">Radio button</RadioButton>
+  <RadioButton name="radio-inline">Radio button</RadioButton>
+</RadioButtonGroup>
 ```
 

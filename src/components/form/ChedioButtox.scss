@@ -8,20 +8,14 @@
 @import '../typography/_vars.js';
 
 
-.ax-chedio-buttox__group {
+.ax-chedio-buttox__container {
   @include space-block();
 
   display: flex;
   vertical-align: middle;
 }
 
-.ax-chedio-buttox__group--inline {
-  @include space-inline();
-
-  display: inline-flex;
-}
-
-.ax-chedio-buttox__group--space {
+.ax-chedio-buttox__container--space {
   .ax-chedio-buttox__label {
     &::before {
       margin: 0 $component-margin-h-sm 0 0;

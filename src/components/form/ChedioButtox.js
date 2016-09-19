@@ -9,7 +9,6 @@ if (__INCLUDE_CSS__) {
 export class ChedioButtox extends Component {
   static propTypes = {
     children: { node: true },
-    inline: { bool: true },
     inputClassName: { string: true },
     inputType: { string: true, isRequired: true },
     labelClassName: { string: true },
@@ -19,7 +18,6 @@ export class ChedioButtox extends Component {
     const {
       className,
       children,
-      inline,
       inputClassName,
       inputType,
       labelClassName,
@@ -27,9 +25,8 @@ export class ChedioButtox extends Component {
     } = this.props;
 
     const classes = classnames(className,
-      'ax-chedio-buttox__group', {
-        ['ax-chedio-buttox__group--inline']: inline === true,
-        ['ax-chedio-buttox__group--space']: !!children,
+      'ax-chedio-buttox__container', {
+        ['ax-chedio-buttox__container--space']: !!children,
       }
     );
 
