@@ -13,7 +13,8 @@
 // Button Group: Joined buttons
 .ax-button__group--joined {
   > .ax-button {
-    margin: 0;
+    margin-right: 0;
+    margin-left: 0;
     border-right-width: 0;
     border-radius: 0;
 
