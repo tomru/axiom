@@ -7,6 +7,10 @@
   outline: none;
 }
 
+.ax-select__input {
+  margin: 0;
+}
+
 .ax-select--open {
   .ax-select__input {
     z-index: $z-index-select + 1;
