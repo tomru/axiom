@@ -7,12 +7,12 @@ import GridCell from 'bw-axiom/components/grid/GridCell';
 import Heading from 'bw-axiom/components/typography/Heading';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
 import ApiDocsDialogTrigger from 'style-guide/components/ApiDocs/ApiDocsDialogTrigger';
-import { render } from 'style-guide/utils/markdown-to-remarkable';
-import { pathToMarkdownRoute, getMarkdownContentFunction, getMarkdownImports } from 'style-guide/utils/markdown-document';
+import { getPathData, pathToRoute } from 'style-guide/utils/examples';
 
 export class Doc extends Component {
   static propTypes = {
     location: PropTypes.shape({
+      pathname: PropTypes.string.isRequired,
       query: PropTypes.object.isRequired,
     }).isRequired,
     routeParams: PropTypes.object.isRequired,
@@ -21,12 +21,14 @@ export class Doc extends Component {
   render() {
     const {
       routeParams,
-      location: { pathname, query },
+      location: {
+        pathname,
+        query: queryParams,
+      },
     } = this.props;
 
-    const markdownRoute = pathToMarkdownRoute(pathname);
-    const markdownContentFunction = getMarkdownContentFunction(markdownRoute);
-    const markdownImports = getMarkdownImports(markdownRoute);
+    const route = pathToRoute(pathname);
+    const { examples, title, location, components } = getPathData(pathname);
 
     return (
       <div>
@@ -34,13 +36,13 @@ export class Doc extends Component {
           <LayoutContent padded={ true }>
             <Grid vAlign="bottom">
               <GridCell>
-                <Heading level={ 4 } textCase="capital">{ humanize(markdownRoute.slice(0, -1).join(' / ')) }</Heading>
-                <Heading level={ 2 } textCase="capital">{ humanize(markdownRoute[markdownRoute.length - 1]) }</Heading>
+                <Heading level={ 4 } textCase="capital">{ humanize(route.slice(0, -1).join(' / ')) }</Heading>
+                <Heading level={ 2 } textCase="capital">{ title }</Heading>
               </GridCell>
 
-              { do { if (markdownImports) {
+              { do { if (location && components) {
                 <GridCell shrink={ true }>
-                  <ApiDocsDialogTrigger imports={ markdownImports } />
+                  <ApiDocsDialogTrigger imports={ { location, components } } />
                 </GridCell>;
               } } }
             </Grid>
@@ -48,7 +50,12 @@ export class Doc extends Component {
         </Billboard>
 
         <LayoutContent padded={ true }>
-          { render(markdownContentFunction, routeParams, query) }
+          { examples.map((Example, index) =>
+            <Example
+                key={ index }
+                queryParams={ queryParams }
+                routeParams={ routeParams } />
+          ) }
         </LayoutContent>
       </div>
     );
