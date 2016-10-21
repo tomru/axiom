@@ -1,12 +1,13 @@
 /* eslint-disable no-console */
-import webpack from 'webpack';
-import webpackConfig from '../webpack/client.config';
+const webpack = require('webpack');
+const webpackConfig = require('../webpack/server.config');
+const isCalledDirectly = require('./isCalledDirectly');
 
-export default function buildClient() {
+function buildServer() {
   return new Promise((resolve, reject) => {
     const compiler = webpack(webpackConfig);
 
-    console.log('Ax:: Build Client [1/2]');
+    console.log('Ax:: Build Server [1/2]');
 
     compiler.run((error, stats) => {
       if (error) {
@@ -23,9 +24,15 @@ export default function buildClient() {
         chunkModules: false,
       }));
 
-      console.log('Ax:: Build Client [2/2]');
+      console.log('Ax:: Build Server [2/2]');
 
       resolve();
     });
   });
 }
+
+if (isCalledDirectly(__dirname, 'buildServer')) {
+  buildServer();
+}
+
+module.exports = buildServer;
