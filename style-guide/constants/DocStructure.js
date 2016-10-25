@@ -2,7 +2,7 @@ module.exports = [{
   id: 'axiom',
   name: 'Axiom',
   children: [
-    require('bw-axiom/axiom/getting-started'),
+    require('bw-axiom/axiom/getting-started/example'),
   ],
 }, {
   id: 'design-patterns',
