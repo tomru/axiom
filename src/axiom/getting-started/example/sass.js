@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Heading from '../../components/typography/Heading';
-import Link from '../../components/typography/Link';
-import Paragraph from '../../components/typography/Paragraph';
+import Heading from '../../../components/typography/Heading';
+import Link from '../../../components/typography/Link';
+import Paragraph from '../../../components/typography/Paragraph';
 import Example from 'style-guide/components/Example/Example';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 
