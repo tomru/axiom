@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import classnames from 'classnames';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./Strong.scss');
@@ -11,17 +13,15 @@ export class Strong extends Component {
   };
 
   render() {
-    const { children, ...rest } = this.props;
+    const { children, className, ...rest } = this.props;
+    const classes = classnames(className, 'ax-text--strong');
 
     return (
-      <strong { ...rest }>
+      <Base { ...rest } Component="strong" className={ classes }>
         { children }
-      </strong>
+      </Base>
     );
   }
 }
 
-export default enhance(Strong)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Strong)(addPropTypes());

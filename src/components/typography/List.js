@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./List.scss');
@@ -21,9 +22,10 @@ export class List extends Component {
       ordered,
       inline,
       aligned = !inline,
-      ...rest,
+      ...rest
     } = this.props;
 
+    const tag = ordered ? 'ol' : 'ul';
     const classes = classnames(className,
       'ax-list', {
         'ax-list--aligned': aligned === true,
@@ -31,23 +33,12 @@ export class List extends Component {
       }
     );
 
-    if (ordered === true) {
-      return (
-        <ol { ...rest } className={ classes }>
-          { children }
-        </ol>
-      );
-    }
-
     return (
-      <ul { ...rest } className={ classes }>
+      <Base { ...rest } Component={ tag } className={ classes }>
         { children }
-      </ul>
+      </Base>
     );
   }
 }
 
-export default enhance(List)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(List)(addPropTypes());

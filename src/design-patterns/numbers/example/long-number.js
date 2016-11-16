@@ -31,18 +31,19 @@ export default class LongNumber extends Component {
       <Example name="Long number">
         <Grid>
           <GridCell>
-            <Heading level={ 5 }>Number to format</Heading>
             <TextInput
                 defaultValue={ number }
+                label="Number to format"
                 onChange={ ::this.updateNumber } />
-            <Heading level={ 5 }>Precision (decimals)</Heading>
+
             <TextInput
                 defaultValue={ precision }
+                label="Precision (decimals)"
                 onChange={ ::this.updatePrecision } />
           </GridCell>
 
           <GridCell>
-            <Heading level={ 5 }>Formatted number</Heading>
+            <Heading>Formatted number</Heading>
             <Paragraph>{ longNumber(number, precision) }</Paragraph>
           </GridCell>
         </Grid>

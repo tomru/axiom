@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import Modal from 'react-modal';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
-import { Card } from '../card/Card';
-import { dialogSizes, dialogAnimationDuration } from './_vars';
+import { enhance, addPropTypes } from '../_utils/components';
+import Modal from '../modal/Modal';
+import { dialogSizes } from './_vars';
 
 if (__INCLUDE_CSS__) {
   require('./Dialog.scss');
@@ -27,30 +26,24 @@ export class Dialog extends Component {
       className,
       size = propTypes.size.default,
       fullscreen,
-      ...rest,
+      ...rest
     } = this.props;
 
     const classes = classnames(className,
       'ax-dialog', {
         'ax-dialog--fullscreen': fullscreen,
-        [`ax-dialog--${size}`]: size,
+        [`ax-dialog--${size}`]: !fullscreen && size,
       },
     );
 
     return (
-      <Modal { ...rest }
-          className={ classes }
-          closeTimeoutMS={ parseInt(dialogAnimationDuration, 10) }
-          overlayClassName="ax-dialog__overlay">
-        <Card className="ax-dialog__card">
+      <Modal { ...rest }>
+        <div className={ classes }>
           { children }
-        </Card>
+        </div>
       </Modal>
     );
   }
 }
 
-export default enhance(Dialog)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Dialog)(addPropTypes());
