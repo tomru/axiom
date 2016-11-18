@@ -9,6 +9,7 @@ const paths = {
   output: path.resolve(__dirname, outputFolderName),
   source: path.resolve(__dirname, 'src'),
   static: path.resolve(__dirname, 'static'),
+  docs: path.resolve(__dirname, 'docs'),
   styleGuide: path.resolve(__dirname, 'style-guide'),
 };
 
@@ -48,12 +49,16 @@ const output = {
     serverDevJSFilename: 'style-guide.server.js',
     serverProdJSFilename: 'style-guide.server.js',
   },
+  docs: {
+    jsFilename: 'static.js',
+  },
 };
 
 const entries = {
   styleGuide: {
     client: path.join(paths.styleGuide, 'client.js'),
     server: path.join(paths.styleGuide, 'server.js'),
+    static: path.join(paths.styleGuide, 'static.js'),
   },
 };
 

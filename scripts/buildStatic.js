@@ -1,13 +1,15 @@
 /* eslint-disable no-console */
+const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
-const webpackConfig = require('../webpack/server.config');
-const isCalledDirectly = require('./isCalledDirectly');
+const webpackConfig = require('../webpack/static.config');
+const config = require('../config');
 
-function buildServer() {
+function buildStatic() {
   return new Promise((resolve, reject) => {
     const compiler = webpack(webpackConfig);
 
-    console.log('Ax:: Build Server [1/2]');
+    console.log('Ax:: Build Static [1/2]');
 
     compiler.run((error, stats) => {
       if (error) {
@@ -24,15 +26,13 @@ function buildServer() {
         chunkModules: false,
       }));
 
-      console.log('Ax:: Build Server [2/2]');
+      console.log('Ax:: Build Static [2/2]');
+
+      fs.unlinkSync(path.resolve(config.paths.docs, config.output.docs.jsFilename));
 
       resolve();
     });
   });
 }
 
-if (isCalledDirectly(__dirname, 'buildServer')) {
-  buildServer();
-}
-
-module.exports = buildServer;
+module.exports = buildStatic;

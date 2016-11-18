@@ -1,20 +1,20 @@
 import docStructure from 'style-guide/constants/DocStructure';
-import * as routes  from 'style-guide/constants/Routing';
 
 export function getStructure() {
   return docStructure;
 }
 
 export function routeToPath(route) {
-  return `/${routes.DOCS}/${route.join('/')}`;
+  return `/${route.join('/')}`;
 }
 
 export function pathToRoute(path) {
-  const matchRegex = new RegExp(`^\/?${routes.DOCS}\/([\\s\\S]*)`);
+  // ToDo maybe the RegEx is not needed any more?
+  const matchRegex = new RegExp('^\/?([\\s\\S]*)');
   const match = path.match(matchRegex);
 
   if (match) {
-    return match[1].split('/');
+    return match[1].replace(/\/$/g, '').split('/');
   }
 
   return null;

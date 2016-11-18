@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
 import ExampleHeader from 'style-guide/components/Example/ExampleHeader';
 import { getPathData, pathToRoute } from 'style-guide/utils/examples';
+import { getFirstPath } from 'style-guide/utils/examples';
 
 if (__INCLUDE_CSS__) {
   require('./Doc.scss');
@@ -26,8 +27,13 @@ export class Doc extends Component {
       },
     } = this.props;
 
-    const route = pathToRoute(pathname);
-    const { examples, title, location, components } = getPathData(pathname);
+    let tempPath = pathname;
+    if (tempPath === '/') {
+      tempPath = getFirstPath();
+    }
+
+    const route = pathToRoute(tempPath);
+    const { examples, title, location, components } = getPathData(tempPath);
 
     return (
       <div className="dm-doc">
