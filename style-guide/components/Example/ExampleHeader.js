@@ -9,26 +9,20 @@ import ApiDocsDialogTrigger from 'style-guide/components/ApiDocs/ApiDocsDialogTr
 import ExampleBox from './ExampleBox';
 
 function shouldShowApiDocs(components) {
-  return Array.isArray(components) && components.some(({ __ax_propTypes }) =>
-    isPlainObject(__ax_propTypes)
-  );
+  return isPlainObject(components) && Object.keys(components).length > 0;
 }
 
 export default class ExampleHeader extends Component {
   static propTypes = {
-    components: PropTypes.array,
-    location: PropTypes.string,
-    title: PropTypes.string.isRequired,
-    trail: PropTypes.array.isRequired,
+    components: PropTypes.object,
+    path: PropTypes.string,
   };
 
   render() {
-    const {
-      components,
-      location,
-      title,
-      trail,
-    } = this.props;
+    const { components, path } = this.props;
+    const route = path.match(/([a-z-]+)/g);
+    const title = route[route.length - 1];
+    const trail = route.slice(0, -1);
 
     return (
       <ExampleBox>
@@ -36,13 +30,13 @@ export default class ExampleHeader extends Component {
           <GridCell>
             <Heading style="title" textCase="capital">{ humanize(trail.join(' / ')) }</Heading>
             <Heading style="display" textCase="capital">
-              <Weak>{ title }</Weak>
+              <Weak>{ humanize(title) }</Weak>
             </Heading>
           </GridCell>
 
           { do { if (shouldShowApiDocs(components)) {
             <GridCell shrink={ true }>
-              <ApiDocsDialogTrigger imports={ { location, components } } />
+              <ApiDocsDialogTrigger imports={ { path, components } } />
             </GridCell>;
           } } }
         </Grid>

@@ -1,13 +1,4 @@
-export const title = 'Grid';
-export const id ='grid';
-export const location = 'bw-axiom/components/grid';
-
-export const components = [
-  require('../Grid').default,
-  require('../GridCell').default,
-];
-
-export const examples = [
+module.exports = [
   require('./base').default,
   require('./gutter-suppression').default,
   require('./gutter-sizing').default,
@@ -16,8 +7,7 @@ export const examples = [
   require('./flex-widths-grid-responsive').default,
   require('./flex-widths-cell').default,
   require('./flex-widths-cell-responsive').default,
-  require('./base-12-widths').default,
-  require('./base-12-widths-responsive').default,
+  require('./percentage-widths').default,
   require('./alignment-grid').default,
   require('./alignment-grid-cell').default,
 ];

@@ -1,8 +1,6 @@
 @import '~bw-axiom/design-patterns/colors/_vars.js';
 @import '~bw-axiom/design-patterns/spacing/_vars.js';
-@import '~bw-axiom/components/icon/mixins';
-@import '~bw-axiom/components/icon/vars';
-@import '~bw-axiom/components/typography/_vars.js';
+@import '~bw-axiom/components/typography/vars';
 
 $nav-first-level-item-background-color-hover: $color-grey-0;
 $nav-first-level-item-active-color: $color-primary-1;
@@ -18,24 +16,8 @@ $nav-second-level-item-active-background-color: $color-grey-1;
 .dm-nav__link {
   display: block;
   padding: $component-padding-sm $page-padding-h;
-  font-family: $font-family-medium;
   font-size: $font-size-md;
-
-  .dm-nav__list-item--has-submenu > &::after {
-    @include icon($fa-var-chevron-right);
-
-    position: absolute;
-    top: 50%;
-    right: $component-padding-sm;
-    transform: translate3d(0, -50%, 0);
-    font-size: $font-size-sm;
-  }
-
-  .dm-nav__list-item--open > &::after {
-    @include icon($fa-var-chevron-down);
-
-    font-size: $font-size-sm;
-  }
+  font-weight: $font-weight-bold;
 }
 
 // First level

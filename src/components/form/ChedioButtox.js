@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./ChedioButtox.scss');
 }
 
-export class ChedioButtox extends Component {
+export default class ChedioButtox extends Component {
   static propTypes = {
-    children: { node: true },
-    inputClassName: { string: true },
-    inputType: { string: true, isRequired: true },
-    labelClassName: { string: true },
+    children: PropTypes.node,
+    indicatorClassName: PropTypes.string,
+    inputClassName: PropTypes.string,
+    inputType: PropTypes.string.isRequired,
   };
 
   render() {
@@ -21,7 +20,7 @@ export class ChedioButtox extends Component {
       children,
       inputClassName,
       inputType,
-      labelClassName,
+      indicatorClassName,
       ...rest
     } = this.props;
 
@@ -34,12 +33,9 @@ export class ChedioButtox extends Component {
     return (
       <Base Component="label" className={ classes }>
         <input { ...rest } className={ classnames('ax-chedio-buttox', inputClassName) } type={ inputType } />
-        <span className={ classnames('ax-chedio-buttox__label', labelClassName) }>
-          { children }
-        </span>
+        <span className={ classnames('ax-chedio-buttox__indicator', indicatorClassName) } />
+        <span className="ax-chedio-buttox__label">{ children }</span>
       </Base>
     );
   }
 }
-
-export default enhance(ChedioButtox)(addPropTypes());

@@ -1,8 +1,8 @@
 import React, { PropTypes, Component } from 'react';
+import Examples from 'style-guide/constants/Examples';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
 import ExampleHeader from 'style-guide/components/Example/ExampleHeader';
-import { getPathData, pathToRoute } from 'style-guide/utils/examples';
-import { getFirstPath } from 'style-guide/utils/examples';
+import { getFirstPath, getPathData } from 'style-guide/utils/structure';
 
 if (__INCLUDE_CSS__) {
   require('./Doc.scss');
@@ -17,6 +17,15 @@ export default class Doc extends Component {
     routeParams: PropTypes.object.isRequired,
   };
 
+  shouldComponentUpdate(nextProps) {
+    const { location } = this.props;
+    const { pathname } = location;
+    const { location: nextLocation } = nextProps;
+    const { pathname: nextPathname } = nextLocation;
+
+    return nextPathname !== pathname;
+  }
+
   render() {
     const {
       routeParams,
@@ -26,13 +35,8 @@ export default class Doc extends Component {
       },
     } = this.props;
 
-    let tempPath = pathname;
-    if (tempPath === '/') {
-      tempPath = getFirstPath();
-    }
-
-    const route = pathToRoute(tempPath);
-    const { examples, title, location, components } = getPathData(tempPath);
+    const { path, components = [] } = getPathData(pathname === '/' ? getFirstPath() : pathname);
+    const examples = Examples[path];
 
     return (
       <div className="dm-doc">
@@ -40,9 +44,7 @@ export default class Doc extends Component {
           <LayoutContent>
             <ExampleHeader
                 components={ components }
-                location={ location }
-                title={ title }
-                trail={ route.slice(0, -1) } />
+                path={ path } />
           </LayoutContent>
         </div>
 
@@ -50,6 +52,7 @@ export default class Doc extends Component {
           <LayoutContent>
             { examples.map((Example, index) =>
               <Example
+                  components={ components }
                   key={ index }
                   queryParams={ queryParams }
                   routeParams={ routeParams } />
