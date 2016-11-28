@@ -22,9 +22,9 @@ export default class IconExample extends Component {
 
     return (
       <Example name="Icons">
-        <Grid snippetIgnore={ true }>
+        <Grid>
           { name.values.map((name) =>
-            <GridCell key={ name }  snippetIgnore={ true } width={ 25 }>
+            <GridCell key={ name } width={ 25 }>
               <Grid responsive={ false }>
                 <GridCell shrink={ true }>
                   <Icon name={ name } />
