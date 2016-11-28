@@ -22,16 +22,14 @@
     background-color: transparent;
   }
 
-  &:hover {
+  &:hover:not(:checked):not(:disabled) {
     + .ax-radio__indicator::before {
       background-color: $input-placeholder-color;
     }
   }
 
   &:focus {
-    + .ax-radio__indicator::before {
-      background-color: $input-focus-color;
-    }
+    background-color: $input-focus-color;
   }
 
   &:checked {
@@ -40,9 +38,9 @@
     }
   }
 
-  &:disabled {
+  &:disabled:checked {
     + .ax-radio__indicator::before {
-      background-color: transparent;
+      background-color: $input-placeholder-color;
     }
   }
 }

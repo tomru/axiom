@@ -25,16 +25,14 @@
     border-color: transparent;
   }
 
-  &:hover {
+  &:hover:not(:checked):not(:disabled) {
     + .ax-checkbox__indicator::before {
       border-color: $input-placeholder-color;
     }
   }
 
   &:focus {
-    + .ax-checkbox__indicator::before {
-      border-color: $input-focus-color;
-    }
+    border-color: $input-focus-color;
   }
 
   &:checked {
@@ -43,9 +41,9 @@
     }
   }
 
-  &:disabled {
+  &:disabled:checked {
     + .ax-checkbox__indicator::before {
-      border-color: transparent;
+      border-color: $input-placeholder-color;
     }
   }
 }
