@@ -89,18 +89,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	if (typeof document !== 'undefined') {
-	  (0, _reactDom.render)(_react2.default.createElement(_reactRouter.Router, { history: _reactRouter.browserHistory, routes: _routes2.default }), document.getElementById('react-root'));
+	  var browserHistory = (0, _reactRouter.useRouterHistory)(_history.createBrowserHistory)({
+	    basename: ('/axiom') || '/'
+	  });
+
+	  (0, _reactDom.render)(_react2.default.createElement(_reactRouter.Router, { history: browserHistory, routes: _routes2.default }), document.getElementById('react-root'));
 	}
 
 	exports.default = function (locals, callback) {
-	  var history = (0, _history.createMemoryHistory)({ basename: (/axiom) || '/' });
+	  var history = (0, _history.createMemoryHistory)({ basename: ('/axiom') || '/' });
 	  var location = history.createLocation(locals.path);
 
 	  (0, _reactRouter.match)({ routes: _routes2.default, location: location }, function (error, redirectLocation, renderProps) {
 	    callback(null, (0, _index2.default)({
 	      htmlWebpackPlugin: {
 	        options: {
-	          basename: (/axiom) || '/',
+	          basename: ('/axiom') || '/',
 	          stylesheet: '/assets/bundle.css',
 	          script: '/assets/bundle.js',
 	          html: (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps))
