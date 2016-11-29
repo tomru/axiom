@@ -921,12 +921,11 @@ a.ax-link.ax-link--disabled:hover {
 .dm-nav {
   margin: 0;
   padding: 0; }
-.ax-paragraph {
-  margin: 6px 0; }
-  .ax-paragraph:first-child {
-    margin-top: 0; }
-  .ax-paragraph:last-child {
-    margin-bottom: 0; }
+img {
+  max-width: 100%; }
+.ax-avatar {
+  display: block;
+  border-radius: 50%; }
 .dm-example-box {
   margin: 12px 0;
   padding: 24px 24px; }
@@ -1117,11 +1116,12 @@ pre[class*='language-'] {
   .ax-tabset__menu:last-child,
   .ax-tabset__content:last-child {
     margin-bottom: 0; }
-img {
-  max-width: 100%; }
-.ax-avatar {
-  display: block;
-  border-radius: 50%; }
+.ax-paragraph {
+  margin: 6px 0; }
+  .ax-paragraph:first-child {
+    margin-top: 0; }
+  .ax-paragraph:last-child {
+    margin-bottom: 0; }
 .ax-button__group {
   margin: 12px 0; }
   .ax-button__group:first-child {
