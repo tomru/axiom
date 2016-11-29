@@ -35585,11 +35585,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      var navigationItems = (0, _navigation.buildNavigationItems)(activePath, openPath);
 
-	      if (false) {
-	        [{ id: 'labs', path: '/labs' }].forEach(function (item) {
-	          return navigationItems.push((0, _navigation.buildNavigationItem)(activePath, openPath, item));
-	        });
-	      }
+	      // if (__DEVELOPMENT__) {
+	      [{ id: 'labs', path: '/labs' }].forEach(function (item) {
+	        return navigationItems.push((0, _navigation.buildNavigationItem)(activePath, openPath, item));
+	      });
+	      // }
 
 	      return _react2.default.createElement(
 	        _Layout2.default,
