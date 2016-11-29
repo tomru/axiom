@@ -89,7 +89,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	if (typeof document !== 'undefined') {
-	  var browserHistory = (0, _reactRouter.useRouterHistory)(_history.createBrowserHistory)({
+	  var browserHistory = (0, _reactRouter.useRouterHistory)(_history.createHistory)({
 	    basename: ('http://BrandwatchLtd.github.io/axiom/') || '/'
 	  });
 
@@ -79048,13 +79048,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	((__t = ( htmlWebpackPlugin.options.stylesheet )) == null ? '' : __t) +
 	'" rel="stylesheet">\n    ';
 	 } ;
-	__p += '\n  </head>\n  <body>\n    <div class="dm-app-container" id="react-root">\n      ';
+	__p += '\n  </head>\n  <body>\n    <div class="dm-app-container" id="react-root">';
 	 if (htmlWebpackPlugin.options.html) { ;
-	__p += '\n        ' +
-	((__t = ( htmlWebpackPlugin.options.html )) == null ? '' : __t) +
-	'\n      ';
+	__p +=
+	((__t = ( htmlWebpackPlugin.options.html )) == null ? '' : __t);
 	 } ;
-	__p += '\n    </div>\n\n    ';
+	__p += '</div>\n\n    ';
 	 if (htmlWebpackPlugin.options.script) { ;
 	__p += '\n      <script src="' +
 	((__t = ( htmlWebpackPlugin.options.script )) == null ? '' : __t) +
