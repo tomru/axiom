@@ -100,7 +100,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    callback(null, (0, _index2.default)({
 	      htmlWebpackPlugin: {
 	        options: {
-	          base: '/axiom',
+	          base: 'http://brandwatchltd.github.io/axiom/',
 	          stylesheet: 'assets/bundle.css',
 	          script: 'assets/bundle.js',
 	          html: (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps))
