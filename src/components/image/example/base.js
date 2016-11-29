@@ -8,7 +8,7 @@ export default class ImageExample extends Component {
     return (
       <Example name="Base Image">
         <Snippet>
-          <Image src="/assets/axiom-bg.jpg" />
+          <Image src="assets/axiom-bg.jpg" />
         </Snippet>
       </Example>
     );

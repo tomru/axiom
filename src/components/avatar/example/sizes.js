@@ -12,15 +12,15 @@ export default class AvatarExample extends Component {
         <Snippet>
           <Grid snippetIgnore={ true } vAlign="bottom">
             <GridCell shrink={ true } snippetIgnore={ true }>
-              <Avatar size={ 40 } src="/assets/avatar.png" />
+              <Avatar size={ 40 } src="assets/avatar.png" />
             </GridCell>
 
             <GridCell shrink={ true } snippetIgnore={ true }>
-              <Avatar size={ 80 } src="/assets/avatar.png" />
+              <Avatar size={ 80 } src="assets/avatar.png" />
             </GridCell>
 
             <GridCell shrink={ true } snippetIgnore={ true }>
-              <Avatar size={ 120 } src="/assets/avatar.png" />
+              <Avatar size={ 120 } src="assets/avatar.png" />
             </GridCell>
           </Grid>
         </Snippet>

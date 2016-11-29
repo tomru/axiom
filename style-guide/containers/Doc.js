@@ -35,7 +35,11 @@ export default class Doc extends Component {
       },
     } = this.props;
 
-    const { path, components = [] } = getPathData(pathname === '/' ? getFirstPath() : pathname);
+    const normalisedPath = pathname.replace(__BASENAME__, '/');
+    const { path, components = [] } = getPathData(normalisedPath === '/'
+      ? getFirstPath()
+      : normalisedPath);
+
     const examples = Examples[path];
 
     return (

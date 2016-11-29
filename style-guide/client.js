@@ -8,8 +8,6 @@ if (__INCLUDE_CSS__) {
   require('./client.scss');
 }
 
-if (typeof document !== 'undefined') {
-  render((
-    <Router history={ browserHistory } routes={ routes } />
-  ), document.getElementById('react-root'));
-}
+render((
+  <Router history={ browserHistory } routes={ routes } />
+), document.getElementById('react-root'));
