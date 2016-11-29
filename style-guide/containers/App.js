@@ -4,7 +4,7 @@ import LayoutHeader from 'style-guide/components/Layout/LayoutHeader';
 import LayoutSidebar from 'style-guide/components/Layout/LayoutSidebar';
 import LayoutMain from 'style-guide/components/Layout/LayoutMain';
 import Nav from 'style-guide/components/Navigation/Nav';
-import { buildNavigationItems } from 'style-guide/utils/navigation';
+import { buildNavigationItems, normalisePathname } from 'style-guide/utils/navigation';
 
 export default class App extends Component {
   static propTypes = {
@@ -18,7 +18,7 @@ export default class App extends Component {
     const { location } = this.props;
     const { pathname } = location;
 
-    this.updateActiveRouteState(pathname);
+    this.updateActiveRouteState(normalisePathname(pathname));
   }
 
   componentWillUpdate(nextProps) {
@@ -28,7 +28,7 @@ export default class App extends Component {
     const { pathname: nextPathname } = nextLocation;
 
     if (nextPathname !== pathname) {
-      this.updateActiveRouteState(nextPathname);
+      this.updateActiveRouteState(normalisePathname(nextPathname));
     }
   }
 

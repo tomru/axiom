@@ -1,5 +1,11 @@
 import humanize from 'humanize-string';
-import { getStructure } from 'style-guide/utils/structure';
+import { getFirstPath, getStructure } from 'style-guide/utils/structure';
+
+export function normalisePathname(pathname) {
+  return `/${(pathname === '/' ? getFirstPath() : pathname)
+    .replace(__BASENAME__, '/')
+    .replace(/^\/|\/$/, '')}`;
+}
 
 export function buildNavigationItems(activePath, openPath, structure = getStructure(), items = []) {
   if (Array.isArray(structure)) {

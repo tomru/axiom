@@ -13,7 +13,7 @@ if (__INCLUDE_CSS__) {
 
 if (typeof document !== 'undefined') {
   const browserHistory = useRouterHistory(createHistory)({
-    basename: __BASENAME__ || '/',
+    basename: __BASENAME__,
   });
 
   render((
@@ -22,14 +22,14 @@ if (typeof document !== 'undefined') {
 }
 
 export default (locals, callback) => {
-  const history = createMemoryHistory({ basename: __BASENAME__ || '/' });
+  const history = createMemoryHistory({ basename: __BASENAME__ });
   const location = history.createLocation(locals.path);
 
   match({ routes, location }, (error, redirectLocation, renderProps) => {
     callback(null, template({
       htmlWebpackPlugin: {
         options: {
-          basename: __BASENAME__ || '/',
+          basename: __BASENAME__,
           stylesheet: 'assets/bundle.css',
           script: 'assets/bundle.js',
           html: renderToString(<RouterContext { ...renderProps } />),

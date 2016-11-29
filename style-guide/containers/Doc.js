@@ -2,7 +2,8 @@ import React, { PropTypes, Component } from 'react';
 import Examples from 'style-guide/constants/Examples';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
 import ExampleHeader from 'style-guide/components/Example/ExampleHeader';
-import { getFirstPath, getPathData } from 'style-guide/utils/structure';
+import { normalisePathname } from 'style-guide/utils/navigation';
+import { getPathData } from 'style-guide/utils/structure';
 
 if (__INCLUDE_CSS__) {
   require('./Doc.scss');
@@ -35,11 +36,8 @@ export default class Doc extends Component {
       },
     } = this.props;
 
-    const normalisedPath = pathname.replace(__BASENAME__, '/');
-    const { path, components = [] } = getPathData(normalisedPath === '/'
-      ? getFirstPath()
-      : normalisedPath);
-
+    const normalisedPath = normalisePathname(pathname);
+    const { path, components = [] } = getPathData(normalisedPath);
     const examples = Examples[path];
 
     return (

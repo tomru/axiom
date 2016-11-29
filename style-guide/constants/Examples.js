@@ -1,5 +1,4 @@
 module.exports = {
-  '/axiom/getting-started': require('../../src/axiom/getting-started/example'),
   '/components/avatar': require('../../src/components/avatar/example'),
   '/components/base': require('../../src/components/base/example'),
   '/components/button': require('../../src/components/button/example'),
