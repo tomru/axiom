@@ -93,15 +93,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	exports.default = function (locals, callback) {
-	  var history = (0, _history.createMemoryHistory)();
+	  var history = (0, _history.createMemoryHistory)({ basename: (/axiom) || '/' });
 	  var location = history.createLocation(locals.path);
 
 	  (0, _reactRouter.match)({ routes: _routes2.default, location: location }, function (error, redirectLocation, renderProps) {
 	    callback(null, (0, _index2.default)({
 	      htmlWebpackPlugin: {
 	        options: {
-	          stylesheet: '/axiom/assets/bundle.css',
-	          script: '/axiom/assets/bundle.js',
+	          basename: (/axiom) || '/',
+	          stylesheet: '/assets/bundle.css',
+	          script: '/assets/bundle.js',
 	          html: (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps))
 	        }
 	      }
@@ -79031,7 +79032,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	var __t, __p = '', __j = Array.prototype.join;
 	function print() { __p += __j.call(arguments, '') }
 	with (obj) {
-	__p += '<!DOCTYPE html>\n<html lang="en-us">\n  <head>\n    <title>Brandwatch | Axiom</title>\n    <meta charSet="utf-8" />\n    <meta content="IE=edge" httpEquiv="X-UA-Compatible" />\n    <meta content="width=device-width, initial-scale=1" name="viewport" />\n    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">\n    <link href="/assets/favicon.ico" rel="shortcut icon" />\n    ';
+	__p += '<!DOCTYPE html>\n<html lang="en-us">\n  <head>\n    ';
+	 if (htmlWebpackPlugin.options.basename) { ;
+	__p += '\n      <base href="' +
+	((__t = ( htmlWebpackPlugin.options.basename )) == null ? '' : __t) +
+	'">\n    ';
+	 } ;
+	__p += '\n    <meta charSet="utf-8" />\n    <meta content="IE=edge" httpEquiv="X-UA-Compatible" />\n    <meta content="width=device-width, initial-scale=1" name="viewport" />\n    <title>Brandwatch | Axiom</title>\n    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">\n    <link href="/assets/favicon.ico" rel="shortcut icon" />\n    ';
 	 if (htmlWebpackPlugin.options.stylesheet) { ;
 	__p += '\n      <link href="' +
 	((__t = ( htmlWebpackPlugin.options.stylesheet )) == null ? '' : __t) +
