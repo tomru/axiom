@@ -37205,11 +37205,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	      var normalisedPath = (0, _navigation.normalisePathname)(pathname);
+	      var pathData = (0, _structure.getPathData)(normalisedPath);
 
-	      var _getPathData = (0, _structure.getPathData)(normalisedPath),
-	          path = _getPathData.path,
-	          _getPathData$componen = _getPathData.components,
-	          components = _getPathData$componen === undefined ? [] : _getPathData$componen;
+	      if (!pathData) {
+	        return null;
+	      }
+
+	      var path = pathData.path,
+	          _pathData$components = pathData.components,
+	          components = _pathData$components === undefined ? [] : _pathData$components;
 
 	      var examples = _Examples2.default[path];
 
