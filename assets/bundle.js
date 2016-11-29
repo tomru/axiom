@@ -78,14 +78,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _routes2 = _interopRequireDefault(_routes);
 
-	var _index = __webpack_require__(1044);
+	var _index = __webpack_require__(1046);
 
 	var _index2 = _interopRequireDefault(_index);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	if (true) {
-	  __webpack_require__(1045);
+	  __webpack_require__(1047);
 	}
 
 	if (typeof document !== 'undefined') {
@@ -35460,6 +35460,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Doc2 = _interopRequireDefault(_Doc);
 
+	var _Labs = __webpack_require__(1044);
+
+	var _Labs2 = _interopRequireDefault(_Labs);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createElement(
@@ -35469,7 +35473,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _reactRouter.Route,
 	    { component: _App2.default },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Doc2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { component: _Doc2.default, path: '**/*' })
+	    _react2.default.createElement(_reactRouter.Route, { component: _Doc2.default, path: '**/*' }),
+	    _react2.default.createElement(_reactRouter.Route, { component: _Labs2.default, path: '/labs' })
 	  )
 	);
 
@@ -35553,9 +35558,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'onItemClick',
 	    value: function onItemClick(_ref) {
-	      var path = _ref.path;
+	      var path = _ref.path,
+	          children = _ref.children;
 
 	      this.setState({ openPath: path });
+
+	      if (!children) {
+	        this.setState({ activePath: path });
+	      }
 	    }
 	  }, {
 	    key: 'updateActiveRouteState',
@@ -35573,6 +35583,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	          activePath = _state.activePath,
 	          openPath = _state.openPath;
 
+	      var navigationItems = (0, _navigation.buildNavigationItems)(activePath, openPath);
+
+	      if (false) {
+	        [{ id: 'labs', path: '/labs' }].forEach(function (item) {
+	          return navigationItems.push((0, _navigation.buildNavigationItem)(activePath, openPath, item));
+	        });
+	      }
 
 	      return _react2.default.createElement(
 	        _Layout2.default,
@@ -35586,7 +35603,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _LayoutSidebar2.default,
 	          null,
 	          _react2.default.createElement(_Nav2.default, {
-	            items: (0, _navigation.buildNavigationItems)(activePath, openPath),
+	            items: navigationItems,
 	            onItemClick: this.onItemClick.bind(this) })
 	        ),
 	        _react2.default.createElement(
@@ -36967,6 +36984,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	exports.normalisePathname = normalisePathname;
+	exports.buildNavigationItem = buildNavigationItem;
 	exports.buildNavigationItems = buildNavigationItems;
 
 	var _humanizeString = __webpack_require__(568);
@@ -36981,6 +36999,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return '/' + (pathname === '/' ? (0, _structure.getFirstPath)() : pathname).replace(('/axiom/'), '/').replace(/^\/|\/$/, '');
 	}
 
+	function buildNavigationItem(activePath, openPath, structure) {
+	  return {
+	    id: structure.id,
+	    name: (0, _humanizeString2.default)(structure.id),
+	    path: structure.path,
+	    to: structure.children ? null : structure.path,
+	    isOpen: openPath.includes(structure.path),
+	    isActive: structure.path === activePath,
+	    children: Array.isArray(structure.children) ? buildNavigationItems(activePath, openPath, structure.children) : null
+	  };
+	}
+
 	function buildNavigationItems(activePath, openPath) {
 	  var structure = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (0, _structure.getStructure)();
 	  var items = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
@@ -36990,15 +37020,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return buildNavigationItems(activePath, openPath, structure, items);
 	    });
 	  } else if (structure.hasExamples || Array.isArray(structure.children)) {
-	    items.push({
-	      id: structure.id,
-	      name: (0, _humanizeString2.default)(structure.id),
-	      to: structure.children ? null : structure.path,
-	      path: structure.path,
-	      isOpen: openPath.includes(structure.path),
-	      isActive: structure.path === activePath,
-	      children: Array.isArray(structure.children) ? buildNavigationItems(activePath, openPath, structure.children) : null
-	    });
+	    items.push(buildNavigationItem(activePath, openPath, structure));
 	  }
 
 	  return items;
@@ -78801,6 +78823,550 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 1044 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(542);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _Avatar = __webpack_require__(575);
+
+	var _Avatar2 = _interopRequireDefault(_Avatar);
+
+	var _Button = __webpack_require__(734);
+
+	var _Button2 = _interopRequireDefault(_Button);
+
+	var _ButtonGroup = __webpack_require__(732);
+
+	var _ButtonGroup2 = _interopRequireDefault(_ButtonGroup);
+
+	var _Grid = __webpack_require__(545);
+
+	var _Grid2 = _interopRequireDefault(_Grid);
+
+	var _GridCell = __webpack_require__(549);
+
+	var _GridCell2 = _interopRequireDefault(_GridCell);
+
+	var _Icon = __webpack_require__(550);
+
+	var _Icon2 = _interopRequireDefault(_Icon);
+
+	var _Heading = __webpack_require__(552);
+
+	var _Heading2 = _interopRequireDefault(_Heading);
+
+	var _Link = __webpack_require__(554);
+
+	var _Link2 = _interopRequireDefault(_Link);
+
+	var _Paragraph = __webpack_require__(728);
+
+	var _Paragraph2 = _interopRequireDefault(_Paragraph);
+
+	var _TextInput = __webpack_require__(778);
+
+	var _TextInput2 = _interopRequireDefault(_TextInput);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	if (true) {
+	  __webpack_require__(1045);
+	}
+
+	var Labs = function (_Component) {
+	  _inherits(Labs, _Component);
+
+	  function Labs() {
+	    _classCallCheck(this, Labs);
+
+	    return _possibleConstructorReturn(this, (Labs.__proto__ || Object.getPrototypeOf(Labs)).apply(this, arguments));
+	  }
+
+	  _createClass(Labs, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.setState({
+	        activeMenuItem: 0,
+	        activeAreaItem: 0,
+	        isPanelVisible: false
+	      });
+	    }
+	  }, {
+	    key: 'setActiveMenuItem',
+	    value: function setActiveMenuItem(activeMenuItem, activeAreaItem, isPanelVisible) {
+	      this.setState({ activeMenuItem: activeMenuItem, activeAreaItem: activeAreaItem, isPanelVisible: isPanelVisible });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      var _state = this.state,
+	          activeMenuItem = _state.activeMenuItem,
+	          activeAreaItem = _state.activeAreaItem,
+	          isPanelVisible = _state.isPanelVisible;
+
+	      var panelClasses = (0, _classnames2.default)('ax-toolbar__panel', {
+	        'ax-toolbar__panel--visible': isPanelVisible
+	      });
+
+	      var areaClasses = (0, _classnames2.default)('ax-toolbar__area', {
+	        'ax-toolbar__area--shifted': isPanelVisible
+	      });
+
+	      function itemClasses(index) {
+	        return (0, _classnames2.default)('ax-toolbar__list-item', {
+	          'ax-toolbar__list-item--active': index === activeMenuItem
+	        });
+	      }
+
+	      var areaContent = [_react2.default.createElement(
+	        'div',
+	        { style: { width: '100%', maxWidth: '900px', margin: '0 auto' } },
+	        _react2.default.createElement(
+	          _Heading2.default,
+	          { style: 'display', textCenter: true },
+	          'Discover'
+	        ),
+	        _react2.default.createElement(
+	          _Grid2.default,
+	          { gutters: 'large', textCenter: true },
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            null,
+	            _react2.default.createElement(_Avatar2.default, { size: 120, src: 'assets/avatar.png' }),
+	            _react2.default.createElement(
+	              _Heading2.default,
+	              null,
+	              'Discover'
+	            ),
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non arcu odio. Maecenas non ligula vulputate, pretium lorem auctor, mollis arcu. Ut ex felis, rutrum sed magna sed, iaculis maximus nibh.'
+	            ),
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              _react2.default.createElement(
+	                _Link2.default,
+	                { onClick: function onClick() {
+	                    return _this2.setActiveMenuItem(1, 1, true);
+	                  } },
+	                'Show me'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            null,
+	            _react2.default.createElement(_Avatar2.default, { size: 120, src: 'assets/avatar.png' }),
+	            _react2.default.createElement(
+	              _Heading2.default,
+	              null,
+	              'Discover'
+	            ),
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non arcu odio. Maecenas non ligula vulputate, pretium lorem auctor, mollis arcu. Ut ex felis, rutrum sed magna sed, iaculis maximus nibh.'
+	            ),
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              _react2.default.createElement(
+	                _Link2.default,
+	                { onClick: function onClick() {
+	                    return _this2.setActiveMenuItem(1, 1, true);
+	                  } },
+	                'Show me'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            null,
+	            _react2.default.createElement(_Avatar2.default, { size: 120, src: 'assets/avatar.png' }),
+	            _react2.default.createElement(
+	              _Heading2.default,
+	              null,
+	              'Discover'
+	            ),
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non arcu odio. Maecenas non ligula vulputate, pretium lorem auctor, mollis arcu. Ut ex felis, rutrum sed magna sed, iaculis maximus nibh.'
+	            ),
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              _react2.default.createElement(
+	                _Link2.default,
+	                { onClick: function onClick() {
+	                    return _this2.setActiveMenuItem(1, 1, true);
+	                  } },
+	                'Show me'
+	              )
+	            )
+	          )
+	        )
+	      ), _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          _Grid2.default,
+	          { vAlign: 'middle' },
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(_Avatar2.default, { size: 80, src: 'assets/avatar.png' })
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            null,
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non arcu odio. Maecenas non ligula vulputate, pretium lorem auctor, mollis arcu. Ut ex felis, rutrum sed magna sed, iaculis maximus nibh.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(
+	              _Button2.default,
+	              { circular: true, style: 'secondary' },
+	              _react2.default.createElement(_Icon2.default, { name: 'ellipsis' })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _Grid2.default,
+	          { vAlign: 'middle' },
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(_Avatar2.default, { size: 80, src: 'assets/avatar.png' })
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            null,
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non arcu odio. Maecenas non ligula vulputate, pretium lorem auctor, mollis arcu. Ut ex felis, rutrum sed magna sed, iaculis maximus nibh.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(
+	              _Button2.default,
+	              { circular: true, style: 'secondary' },
+	              _react2.default.createElement(_Icon2.default, { name: 'ellipsis' })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _Grid2.default,
+	          { vAlign: 'middle' },
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(_Avatar2.default, { size: 80, src: 'assets/avatar.png' })
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            null,
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non arcu odio. Maecenas non ligula vulputate, pretium lorem auctor, mollis arcu. Ut ex felis, rutrum sed magna sed, iaculis maximus nibh.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(
+	              _Button2.default,
+	              { circular: true, style: 'secondary' },
+	              _react2.default.createElement(_Icon2.default, { name: 'ellipsis' })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _Grid2.default,
+	          { vAlign: 'middle' },
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(_Avatar2.default, { size: 80, src: 'assets/avatar.png' })
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            null,
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non arcu odio. Maecenas non ligula vulputate, pretium lorem auctor, mollis arcu. Ut ex felis, rutrum sed magna sed, iaculis maximus nibh.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(
+	              _Button2.default,
+	              { circular: true, style: 'secondary' },
+	              _react2.default.createElement(_Icon2.default, { name: 'ellipsis' })
+	            )
+	          )
+	        )
+	      )];
+
+	      var toolboxContent = [_react2.default.createElement('div', null), _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          _TextInput2.default,
+	          { label: 'Filter' },
+	          _react2.default.createElement(
+	            _Button2.default,
+	            null,
+	            'OR'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _TextInput2.default,
+	          { label: 'Filter' },
+	          _react2.default.createElement(
+	            _Button2.default,
+	            null,
+	            'OR'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _TextInput2.default,
+	          { label: 'Filter' },
+	          _react2.default.createElement(
+	            _Button2.default,
+	            null,
+	            'OR'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _TextInput2.default,
+	          { label: 'Filter' },
+	          _react2.default.createElement(
+	            _Button2.default,
+	            null,
+	            'OR'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _TextInput2.default,
+	          { label: 'Filter' },
+	          _react2.default.createElement(
+	            _Button2.default,
+	            null,
+	            'OR'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _ButtonGroup2.default,
+	          null,
+	          _react2.default.createElement(
+	            _Button2.default,
+	            null,
+	            'Search'
+	          )
+	        )
+	      ), _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          _Grid2.default,
+	          { vAlign: 'middle' },
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(_Avatar2.default, { size: 50, src: 'assets/avatar.png' })
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            null,
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(
+	              _Button2.default,
+	              { onClick: function onClick() {
+	                  return _this2.setActiveMenuItem(1, 1, true);
+	                } },
+	              'Load'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _Grid2.default,
+	          { vAlign: 'middle' },
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(_Avatar2.default, { size: 50, src: 'assets/avatar.png' })
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            null,
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(
+	              _Button2.default,
+	              { onClick: function onClick() {
+	                  return _this2.setActiveMenuItem(1, 1, true);
+	                } },
+	              'Load'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _Grid2.default,
+	          { vAlign: 'middle' },
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(_Avatar2.default, { size: 50, src: 'assets/avatar.png' })
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            null,
+	            _react2.default.createElement(
+	              _Paragraph2.default,
+	              null,
+	              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _GridCell2.default,
+	            { shrink: true },
+	            _react2.default.createElement(
+	              _Button2.default,
+	              { onClick: function onClick() {
+	                  return _this2.setActiveMenuItem(1, 1, true);
+	                } },
+	              'Load'
+	            )
+	          )
+	        )
+	      )];
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'dm-labs' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'dm-labs__canvas' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'ax-toolbar' },
+	            _react2.default.createElement(
+	              'ul',
+	              { className: 'ax-toolbar__list' },
+	              _react2.default.createElement(
+	                'li',
+	                { className: itemClasses(0) },
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'ax-toolbar__link', onClick: function onClick() {
+	                      return _this2.setActiveMenuItem(0, 0, false);
+	                    } },
+	                  _react2.default.createElement(_Icon2.default, { name: 'ellipsis', size: 'large' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: itemClasses(1) },
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'ax-toolbar__link', onClick: function onClick() {
+	                      return _this2.setActiveMenuItem(1, 1, true);
+	                    } },
+	                  _react2.default.createElement(_Icon2.default, { name: 'ellipsis', size: 'large' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: itemClasses(2) },
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'ax-toolbar__link', onClick: function onClick() {
+	                      return _this2.setActiveMenuItem(2, activeAreaItem, true);
+	                    } },
+	                  _react2.default.createElement(_Icon2.default, { name: 'ellipsis', size: 'large' })
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: panelClasses },
+	              toolboxContent[activeMenuItem]
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: areaClasses },
+	              areaContent[activeAreaItem]
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Labs;
+	}(_react.Component);
+
+	exports.default = Labs;
+
+/***/ },
+/* 1045 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 1046 */
 /***/ function(module, exports) {
 
 	module.exports = function (obj) {
@@ -78838,7 +79404,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 1045 */
+/* 1047 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
