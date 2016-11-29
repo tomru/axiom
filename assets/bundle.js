@@ -90,21 +90,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	if (typeof document !== 'undefined') {
 	  var browserHistory = (0, _reactRouter.useRouterHistory)(_history.createHistory)({
-	    basename: ('/axiom/') || '/'
+	    basename: ('/axiom/')
 	  });
 
 	  (0, _reactDom.render)(_react2.default.createElement(_reactRouter.Router, { history: browserHistory, routes: _routes2.default }), document.getElementById('react-root'));
 	}
 
 	exports.default = function (locals, callback) {
-	  var history = (0, _history.createMemoryHistory)({ basename: ('/axiom/') || '/' });
+	  var history = (0, _history.createMemoryHistory)({ basename: ('/axiom/') });
 	  var location = history.createLocation(locals.path);
 
 	  (0, _reactRouter.match)({ routes: _routes2.default, location: location }, function (error, redirectLocation, renderProps) {
 	    callback(null, (0, _index2.default)({
 	      htmlWebpackPlugin: {
 	        options: {
-	          basename: ('/axiom/') || '/',
+	          basename: ('/axiom/'),
 	          stylesheet: 'assets/bundle.css',
 	          script: 'assets/bundle.js',
 	          html: (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps))
@@ -35547,7 +35547,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	      if (nextPathname !== pathname) {
-	        this.updateActiveRouteState(nextPathname);
+	        this.updateActiveRouteState((0, _navigation.normalisePathname)(nextPathname));
 	      }
 	    }
 	  }, {
@@ -36966,6 +36966,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.normalisePathname = normalisePathname;
 	exports.buildNavigationItems = buildNavigationItems;
 
 	var _humanizeString = __webpack_require__(568);
@@ -36975,6 +36976,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _structure = __webpack_require__(570);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function normalisePathname(pathname) {
+	  return pathname.replace(('/axiom/'), '/');
+	}
 
 	function buildNavigationItems(activePath, openPath) {
 	  var structure = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (0, _structure.getStructure)();
@@ -37131,6 +37136,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _ExampleHeader2 = _interopRequireDefault(_ExampleHeader);
 
+	var _navigation = __webpack_require__(567);
+
 	var _structure = __webpack_require__(570);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -37175,7 +37182,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          queryParams = _props$location.query;
 
 
-	      var normalisedPath = pathname.replace(('/axiom/'), '/');
+	      var normalisedPath = (0, _navigation.normalisePathname)(pathname);
 
 	      var _getPathData = (0, _structure.getPathData)(normalisedPath === '/' ? (0, _structure.getFirstPath)() : normalisedPath),
 	          path = _getPathData.path,
