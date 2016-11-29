@@ -37182,9 +37182,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	          queryParams = _props$location.query;
 
 
-	      var normalisedPath = (0, _navigation.normalisePathname)(pathname);
+	      var normalisedPath = (0, _navigation.normalisePathname)(pathname) || (0, _structure.getFirstPath)();
 
-	      var _getPathData = (0, _structure.getPathData)(normalisedPath === '/' ? (0, _structure.getFirstPath)() : normalisedPath),
+	      var _getPathData = (0, _structure.getPathData)(normalisedPath),
 	          path = _getPathData.path,
 	          _getPathData$componen = _getPathData.components,
 	          components = _getPathData$componen === undefined ? [] : _getPathData$componen;
