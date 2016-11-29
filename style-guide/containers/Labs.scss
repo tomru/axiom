@@ -1,0 +1,17 @@
+@import '~bw-axiom/design-patterns/colors/_vars.js';
+
+.dm-labs {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: (
+    repeating-linear-gradient(0deg, transparent, transparent 10px, $color-grey-2 1px, transparent 11px),
+    repeating-linear-gradient(90deg, transparent, transparent 10px, $color-grey-2 1px, transparent 11px)
+  );
+}

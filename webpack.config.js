@@ -39,12 +39,14 @@ module.exports = {
     ...aliases,
     new HtmlWebpackPlugin({
       template: './style-guide/index.ejs',
+      basename: '/',
     }),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       __INCLUDE_CSS__: true,
       __STRUCTURE__: JSON.stringify(structureGenerator()),
       __BASENAME__: '"/"',
+      __DEVELOPMENT__: true,
     }),
   ],
   resolve: {

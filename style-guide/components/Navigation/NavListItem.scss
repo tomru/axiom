@@ -2,13 +2,6 @@
 @import '~bw-axiom/design-patterns/spacing/_vars.js';
 @import '~bw-axiom/components/typography/vars';
 
-$nav-first-level-item-background-color-hover: $color-grey-0;
-$nav-first-level-item-active-color: $color-primary-1;
-$nav-first-level-item-active-background-color: $color-grey-0;
-$nav-second-level-item-background-color-hover: $color-grey-1;
-$nav-second-level-item-active-color: $color-primary-1;
-$nav-second-level-item-active-background-color: $color-grey-1;
-
 .dm-nav__list-item {
   list-style: none;
 }
@@ -20,25 +13,14 @@ $nav-second-level-item-active-background-color: $color-grey-1;
   font-weight: $font-weight-bold;
 }
 
-// First level
-.dm-nav {
-  > .dm-nav__list {
-    > .dm-nav__list-item:not(.dm-nav__list-item--active) {
-      > .dm-nav__link:hover {
-        background-color: $nav-first-level-item-background-color-hover;
-      }
-    }
-
-    > .dm-nav__list-item--active {
-      > .dm-nav__link {
-        color: $nav-first-level-item-active-color;
-      }
-    }
-
-    > .dm-nav__list-item--open {
-      background-color: $nav-first-level-item-active-background-color;
-    }
+.dm-nav__list-item--active {
+  > .dm-nav__link {
+    color: $color-primary-1;
   }
+}
+
+.dm-nav__list-item--open {
+  background-color: $color-grey-0;
 }
 
 // Second level
@@ -47,20 +29,6 @@ $nav-second-level-item-active-background-color: $color-grey-1;
     > .dm-nav__list-item {
       > .dm-nav__link {
         padding-left: $page-padding-h * 2;
-      }
-    }
-
-    > .dm-nav__list-item:not(.dm-nav__list-item--active) {
-      > .dm-nav__link:hover {
-        background-color: $nav-second-level-item-background-color-hover;
-      }
-    }
-
-
-    > .dm-nav__list-item--active {
-      > .dm-nav__link {
-        background-color: $nav-second-level-item-active-background-color;
-        color: $nav-second-level-item-active-color;
       }
     }
   }

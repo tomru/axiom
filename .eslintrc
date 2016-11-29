@@ -12,6 +12,7 @@
     "__INCLUDE_CSS__": true,
     "__STRUCTURE__": true,
     "__BASENAME__": true,
+    "__DEVELOPMENT__": true,
     "document": true,
     "window": true,
     "Promise": true,

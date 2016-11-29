@@ -4,7 +4,7 @@ import LayoutHeader from 'style-guide/components/Layout/LayoutHeader';
 import LayoutSidebar from 'style-guide/components/Layout/LayoutSidebar';
 import LayoutMain from 'style-guide/components/Layout/LayoutMain';
 import Nav from 'style-guide/components/Navigation/Nav';
-import { buildNavigationItems, normalisePathname } from 'style-guide/utils/navigation';
+import { buildNavigationItem, buildNavigationItems, normalisePathname } from 'style-guide/utils/navigation';
 
 export default class App extends Component {
   static propTypes = {
@@ -32,8 +32,12 @@ export default class App extends Component {
     }
   }
 
-  onItemClick({ path }) {
+  onItemClick({ path, children }) {
     this.setState({ openPath: path });
+
+    if (!children) {
+      this.setState({ activePath: path });
+    }
   }
 
   updateActiveRouteState(pathname) {
@@ -46,6 +50,12 @@ export default class App extends Component {
   render() {
     const { children } = this.props;
     const { activePath, openPath } = this.state;
+    const navigationItems = buildNavigationItems(activePath, openPath);
+
+    if (__DEVELOPMENT__) {
+      [{ id: 'labs', path: '/labs' }]
+        .forEach((item) => navigationItems.push(buildNavigationItem(activePath, openPath, item)));
+    }
 
     return (
       <Layout>
@@ -55,7 +65,7 @@ export default class App extends Component {
 
         <LayoutSidebar>
           <Nav
-              items={ buildNavigationItems(activePath, openPath) }
+              items={ navigationItems }
               onItemClick={ ::this.onItemClick } />
         </LayoutSidebar>
 

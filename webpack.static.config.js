@@ -53,6 +53,7 @@ module.exports = {
       __INCLUDE_CSS__: true,
       __STRUCTURE__: JSON.stringify(structureGenerator()),
       __BASENAME__: process.env.BASENAME_ENV || '"/"',
+      __DEVELOPMENT__: false,
     }),
   ],
   resolve: {
