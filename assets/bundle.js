@@ -37175,7 +37175,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          queryParams = _props$location.query;
 
 
-	      var normalisedPath = path.replace(('/axiom/'), '/');
+	      var normalisedPath = pathname.replace(('/axiom/'), '/');
 
 	      var _getPathData = (0, _structure.getPathData)(normalisedPath === '/' ? (0, _structure.getFirstPath)() : normalisedPath),
 	          path = _getPathData.path,
