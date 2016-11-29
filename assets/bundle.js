@@ -105,8 +105,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      htmlWebpackPlugin: {
 	        options: {
 	          basename: ('http://BrandwatchLtd.github.io/axiom/') || '/',
-	          stylesheet: '/assets/bundle.css',
-	          script: '/assets/bundle.js',
+	          stylesheet: 'assets/bundle.css',
+	          script: 'assets/bundle.js',
 	          html: (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps))
 	        }
 	      }
