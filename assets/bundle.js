@@ -35535,7 +35535,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var pathname = location.pathname;
 
 
-	      this.updateActiveRouteState(pathname);
+	      this.updateActiveRouteState((0, _navigation.normalisePathname)(pathname));
 	    }
 	  }, {
 	    key: 'componentWillUpdate',
