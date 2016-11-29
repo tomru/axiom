@@ -100,7 +100,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    callback(null, (0, _index2.default)({
 	      htmlWebpackPlugin: {
 	        options: {
-	          base: '/axiom',
 	          stylesheet: 'assets/bundle.css',
 	          script: 'assets/bundle.js',
 	          html: (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps))
@@ -79032,13 +79031,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var __t, __p = '', __j = Array.prototype.join;
 	function print() { __p += __j.call(arguments, '') }
 	with (obj) {
-	__p += '<!DOCTYPE html>\n<html lang="en-us">\n  <head>\n    ';
-	 if (htmlWebpackPlugin.options.base) { ;
-	__p += '\n      <base href="' +
-	((__t = ( htmlWebpackPlugin.options.base )) == null ? '' : __t) +
-	'">\n    ';
-	 } ;
-	__p += '\n    <title>Brandwatch | Axiom</title>\n    <meta charSet="utf-8" />\n    <meta content="IE=edge" httpEquiv="X-UA-Compatible" />\n    <meta content="width=device-width, initial-scale=1" name="viewport" />\n    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">\n    <link href="/assets/favicon.ico" rel="shortcut icon" />\n    ';
+	__p += '<!DOCTYPE html>\n<html lang="en-us">\n  <head>\n    <title>Brandwatch | Axiom</title>\n    <meta charSet="utf-8" />\n    <meta content="IE=edge" httpEquiv="X-UA-Compatible" />\n    <meta content="width=device-width, initial-scale=1" name="viewport" />\n    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">\n    <link href="/assets/favicon.ico" rel="shortcut icon" />\n    ';
 	 if (htmlWebpackPlugin.options.stylesheet) { ;
 	__p += '\n      <link href="' +
 	((__t = ( htmlWebpackPlugin.options.stylesheet )) == null ? '' : __t) +
