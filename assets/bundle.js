@@ -36978,7 +36978,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function normalisePathname(pathname) {
-	  return pathname.replace(('/axiom/'), '/');
+	  return pathname.replace(('/axiom/'), '/').replace(/\/$/, '');
 	}
 
 	function buildNavigationItems(activePath, openPath) {
