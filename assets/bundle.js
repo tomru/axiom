@@ -90,21 +90,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	if (typeof document !== 'undefined') {
 	  var browserHistory = (0, _reactRouter.useRouterHistory)(_history.createHistory)({
-	    basename: ('http://BrandwatchLtd.github.io/axiom/') || '/'
+	    basename: ('/axiom/') || '/'
 	  });
 
 	  (0, _reactDom.render)(_react2.default.createElement(_reactRouter.Router, { history: browserHistory, routes: _routes2.default }), document.getElementById('react-root'));
 	}
 
 	exports.default = function (locals, callback) {
-	  var history = (0, _history.createMemoryHistory)({ basename: ('http://BrandwatchLtd.github.io/axiom/') || '/' });
+	  var history = (0, _history.createMemoryHistory)({ basename: ('/axiom/') || '/' });
 	  var location = history.createLocation(locals.path);
 
 	  (0, _reactRouter.match)({ routes: _routes2.default, location: location }, function (error, redirectLocation, renderProps) {
 	    callback(null, (0, _index2.default)({
 	      htmlWebpackPlugin: {
 	        options: {
-	          basename: ('http://BrandwatchLtd.github.io/axiom/') || '/',
+	          basename: ('/axiom/') || '/',
 	          stylesheet: 'assets/bundle.css',
 	          script: 'assets/bundle.js',
 	          html: (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps))
@@ -37174,7 +37174,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          pathname = _props$location.pathname,
 	          queryParams = _props$location.query;
 
-	      var _getPathData = (0, _structure.getPathData)(pathname === '/' ? (0, _structure.getFirstPath)() : pathname),
+
+	      var normalisedPath = path.replace(('/axiom/'), '/');
+
+	      var _getPathData = (0, _structure.getPathData)(normalisedPath === '/' ? (0, _structure.getFirstPath)() : normalisedPath),
 	          path = _getPathData.path,
 	          _getPathData$componen = _getPathData.components,
 	          components = _getPathData$componen === undefined ? [] : _getPathData$componen;
@@ -48595,17 +48598,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _react2.default.createElement(
 	              _GridCell2.default,
 	              { shrink: true, snippetIgnore: true },
-	              _react2.default.createElement(_Avatar2.default, { size: 40, src: '/assets/avatar.png' })
+	              _react2.default.createElement(_Avatar2.default, { size: 40, src: 'assets/avatar.png' })
 	            ),
 	            _react2.default.createElement(
 	              _GridCell2.default,
 	              { shrink: true, snippetIgnore: true },
-	              _react2.default.createElement(_Avatar2.default, { size: 80, src: '/assets/avatar.png' })
+	              _react2.default.createElement(_Avatar2.default, { size: 80, src: 'assets/avatar.png' })
 	            ),
 	            _react2.default.createElement(
 	              _GridCell2.default,
 	              { shrink: true, snippetIgnore: true },
-	              _react2.default.createElement(_Avatar2.default, { size: 120, src: '/assets/avatar.png' })
+	              _react2.default.createElement(_Avatar2.default, { size: 120, src: 'assets/avatar.png' })
 	            )
 	          )
 	        )
@@ -55724,7 +55727,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2.default.createElement(
 	          _Snippet2.default,
 	          null,
-	          _react2.default.createElement(_Image2.default, { src: '/assets/axiom-bg.jpg' })
+	          _react2.default.createElement(_Image2.default, { src: 'assets/axiom-bg.jpg' })
 	        )
 	      );
 	    }
