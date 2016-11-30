@@ -8,11 +8,8 @@ export default (
   <Route path="/">
     <Route component={ App }>
       <IndexRoute component={ Doc } />
+      <Route component={ Labs } path="labs" />
       <Route component={ Doc } path="**/*" />
-
-      { do { if (__DEVELOPMENT__) {
-        <Route component={ Labs } path="/labs" />;
-      } } }
     </Route>
   </Route>
 );

@@ -52,10 +52,8 @@ export default class App extends Component {
     const { activePath, openPath } = this.state;
     const navigationItems = buildNavigationItems(activePath, openPath);
 
-    if (__DEVELOPMENT__) {
-      [{ id: 'labs', path: '/labs' }]
-        .forEach((item) => navigationItems.push(buildNavigationItem(activePath, openPath, item)));
-    }
+    [{ id: 'labs', path: '/labs' }]
+      .forEach((item) => navigationItems.push(buildNavigationItem(activePath, openPath, item)));
 
     return (
       <Layout>
