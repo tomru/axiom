@@ -35473,8 +35473,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _reactRouter.Route,
 	    { component: _App2.default },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Doc2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { component: _Doc2.default, path: '**/*' }),
-	    _react2.default.createElement(_reactRouter.Route, { component: _Labs2.default, path: '/labs' })
+	    _react2.default.createElement(_reactRouter.Route, { component: _Labs2.default, path: '/labs' }),
+	    _react2.default.createElement(_reactRouter.Route, { component: _Doc2.default, path: '**/*' })
 	  )
 	);
 
