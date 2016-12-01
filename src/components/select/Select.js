@@ -201,7 +201,7 @@ export default class Select extends Component {
             value={ this.getInputDisplayValue() }>
 
           { do { if (!isOpen) {
-            <Icon name="chevron-down" />
+            <Icon name="chevron-down" />;
           } } }
         </TextInput>
 
