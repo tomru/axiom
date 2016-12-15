@@ -11,7 +11,6 @@ A consumable library of UI & UX patterns, that can take you from a blank page to
 ```bash
 git clone git@github.com:BrandwatchLtd/axiom.git
 cd axiom 
-npm install
-npm start # Development
-npm run prod # Production
+yarn install
+yarn start
 ```
