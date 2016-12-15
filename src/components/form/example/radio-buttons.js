@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import Heading from '../../typography/Heading';
-import RadioButton from '../RadioButton';
-import RadioButtonGroup from '../RadioButtonGroup';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
+import { Example, Snippet } from 'style-guide';
+import { Heading, RadioButton, RadioButtonGroup } from 'bw-axiom';
 
 export default class FormExample extends Component {
   render() {
@@ -14,7 +11,9 @@ export default class FormExample extends Component {
             <RadioButton>Unchecked Radio button</RadioButton>
             <RadioButton defaultChecked={ true }>Checked Radio button</RadioButton>
             <RadioButton disabled={ true }>Disabled Radio button</RadioButton>
-            <RadioButton defaultChecked={ true } disabled={ true }>Disabled checked Radio button</RadioButton>
+            <RadioButton defaultChecked={ true } disabled={ true }>
+              Disabled checked Radio button
+            </RadioButton>
           </RadioButtonGroup>
         </Snippet>
 

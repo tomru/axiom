@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import TextArea from '../TextArea';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
+import { Example, Snippet } from 'style-guide';
+import { TextArea } from 'bw-axiom';
 
 export default class FormExample extends Component {
   render() {

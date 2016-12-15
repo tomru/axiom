@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import Dialog from '../Dialog';
-import DialogHeader from '../DialogHeader';
-import DialogBody from '../DialogBody';
-import DialogFooter from '../DialogFooter';
-import Paragraph from '../../typography/Paragraph';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
+import { Example, Snippet } from 'style-guide';
+import { Dialog, DialogHeader, DialogBody, DialogFooter, Paragraph } from 'bw-axiom';
 
 export default class DialogExample extends Component {
   render() {
     return (
       <Example name="Dialog">
         <Paragraph>
-          The Dialog component is an interface to the [react-modal](https://github.com/reactjs/react-modal) component. All properties you pass to Dialog will forward to the modal component.
+          The Dialog component is an interface to the
+          [react-modal](https://github.com/reactjs/react-modal) component. All
+          properties you pass to Dialog will forward to the modal component.
         </Paragraph>
 
         <Snippet>

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import Avatar from '../Avatar';
-import Grid from '../../grid/Grid';
-import GridCell from '../../grid/GridCell';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
+import { Example, Snippet } from 'style-guide';
+import { Avatar, Grid, GridCell } from 'bw-axiom';
 
 export default class AvatarExample extends Component {
   render() {

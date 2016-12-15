@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import LabelGroup from '../LabelGroup';
-import Label from '../Label';
-import Heading from '../../typography/Heading';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
+import { Example, Snippet } from 'style-guide';
+import { Heading, Label, LabelGroup } from 'bw-axiom';
 
 export default class LabelExample extends Component {
   static propTypes = {

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import Paragraph from '../../../components/typography/Paragraph';
-import Strong from '../../../components/typography/Strong';
-import { shortDate, shortDateWithTime } from '../date-and-time';
-import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
-import Example from 'style-guide/components/Example/Example';
+import { CodeSnippet, Example } from 'style-guide';
+import { Paragraph, Strong, shortDate, shortDateWithTime } from 'bw-axiom';
 
 export default class DateExample extends Component {
   render() {

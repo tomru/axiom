@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import Button from '../../button/Button';
-import ButtonGroup from '../../button/ButtonGroup';
-import Dialog from '../Dialog';
+import { Example, Snippet } from 'style-guide';
+import { ButtonGroup, Button, Dialog } from 'bw-axiom';
 import DialogDemo from './DialogDemo';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class DialogSizes extends Component {
   static propTypes = {

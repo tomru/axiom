@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import CheckBox from '../CheckBox';
-import CheckBoxGroup from '../CheckBoxGroup';
-import Heading from '../../typography/Heading';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
+import { Example, Snippet } from 'style-guide';
+import { CheckBox, CheckBoxGroup, Heading } from 'bw-axiom';
 
 export default class FormExample extends Component {
   render() {
@@ -14,7 +11,9 @@ export default class FormExample extends Component {
             <CheckBox>Unchecked check box</CheckBox>
             <CheckBox defaultChecked={ true }>Checked check box</CheckBox>
             <CheckBox disabled={ true }>Disabled check box</CheckBox>
-            <CheckBox defaultChecked={ true } disabled={ true }>Disabled checked check box</CheckBox>
+            <CheckBox defaultChecked={ true } disabled={ true }>
+              Disabled checked check box
+            </CheckBox>
           </CheckBoxGroup>
         </Snippet>
 

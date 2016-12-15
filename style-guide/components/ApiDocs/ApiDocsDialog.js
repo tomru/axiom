@@ -1,14 +1,15 @@
 import React, { PropTypes, Component } from 'react';
-import ButtonGroup from 'bw-axiom/components/button/ButtonGroup';
-import Button from 'bw-axiom/components/button/Button';
-import Dialog from 'bw-axiom/components/dialog/Dialog';
-import DialogBody from 'bw-axiom/components/dialog/DialogBody';
-import DialogFooter from 'bw-axiom/components/dialog/DialogFooter';
-import DialogHeader from 'bw-axiom/components/dialog/DialogHeader';
-import Heading from 'bw-axiom/components/typography/Heading';
-import ApiDocsList from 'style-guide/components/ApiDocs/ApiDocsList';
-import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
-import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
+import {
+  ButtonGroup,
+  Button,
+  Dialog,
+  DialogBody,
+  DialogFooter,
+  DialogHeader,
+  Heading,
+} from 'bw-axiom';
+import { CodeSnippet, CodeTabset } from '../CodeSnippet';
+import ApiDocsList from './ApiDocsList';
 
 export default class ApiDocsDialog extends Component {
   static propTypes = {
@@ -19,10 +20,10 @@ export default class ApiDocsDialog extends Component {
   };
 
   render() {
-    const { components, path, isOpen, onRequestClose } = this.props;
+    const { components, isOpen, onRequestClose } = this.props;
 
     return (
-      <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="large">
+      <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="medium">
         <DialogHeader onRequestClose={ onRequestClose }>
           <Heading style="title">API Docs</Heading>
         </DialogHeader>
@@ -30,9 +31,7 @@ export default class ApiDocsDialog extends Component {
         <DialogBody>
           <CodeTabset>
             <CodeSnippet language="js">
-              { Object.keys(components).map((displayName) =>
-                `import ${displayName} from 'bw-axiom${path}/${displayName}';`
-              ).join('\n') }
+              {`import { ${Object.keys(components).join(', ')} } from 'bw-axiom';`}
             </CodeSnippet>
           </CodeTabset>
 

@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import Grid from '../Grid';
-import GridCell from '../GridCell';
-import DemoBox from 'style-guide/components/DemoBox/DemoBox';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
+import { DemoBox, Example, Snippet } from 'style-guide';
+import { Grid, GridCell } from 'bw-axiom';
 
 export default class GridExample extends Component {
   static propTypes = {

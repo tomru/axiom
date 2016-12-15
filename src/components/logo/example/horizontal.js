@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import LogoHorizontal from '../LogoHorizontal';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
+import { Example, Snippet } from 'style-guide';
+import { LogoHorizontal } from 'bw-axiom';
 
 export default class LogoExample extends Component {
   render() {

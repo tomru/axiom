@@ -1,11 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import Grid from '../../grid/Grid';
-import GridCell from '../../grid/GridCell';
-import Icon from '../Icon';
-import Paragraph from '../../typography/Paragraph';
-import Heading from '../../typography/Heading';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
+import { Example, Snippet } from 'style-guide';
+import { Grid, GridCell, Heading, Icon, Paragraph } from 'bw-axiom';
 
 export default class IconExample extends Component {
   static propTypes = {
