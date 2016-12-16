@@ -90,21 +90,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	if (typeof document !== 'undefined') {
 	  var browserHistory = (0, _reactRouter.useRouterHistory)(_history.createHistory)({
-	    basename: ('/axiom/')
+	    basename: ("/")
 	  });
 
 	  (0, _reactDom.render)(_react2.default.createElement(_reactRouter.Router, { history: browserHistory, routes: _routes2.default }), document.getElementById('react-root'));
 	}
 
 	exports.default = function (locals, callback) {
-	  var history = (0, _history.createMemoryHistory)({ basename: ('/axiom/') });
+	  var history = (0, _history.createMemoryHistory)({ basename: ("/") });
 	  var location = history.createLocation(locals.path);
 
 	  (0, _reactRouter.match)({ routes: _routes2.default, location: location }, function (error, redirectLocation, renderProps) {
 	    callback(null, (0, _index2.default)({
 	      htmlWebpackPlugin: {
 	        options: {
-	          basename: ('/axiom/'),
+	          basename: ("/"),
 	          stylesheet: 'assets/bundle.css',
 	          script: 'assets/bundle.js',
 	          html: (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps))
@@ -35632,7 +35632,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function normalisePathname(pathname) {
-	  return '/' + (pathname === '/' ? (0, _structure.getFirstPath)() : pathname).replace(('/axiom/'), '/').replace(/^\/|\/$/, '');
+	  return '/' + (pathname === '/' ? (0, _structure.getFirstPath)() : pathname).replace(("/"), '/').replace(/^\/|\/$/, '');
 	}
 
 	function buildNavigationItem(activePath, openPath, structure) {
