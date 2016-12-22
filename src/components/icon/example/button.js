@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { Label, LabelGroup } from 'bw-axiom';
+import { Grid, GridCell, IconButton, Icon } from 'bw-axiom';
 
-export default class LabelExample extends Component {
+export default class ButtonExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      Label: PropTypes.shape({
+      IconButton: PropTypes.shape({
         size: PropTypes.shape({
           values: PropTypes.array.isRequired,
         }).isRequired,
@@ -15,18 +15,20 @@ export default class LabelExample extends Component {
 
   render() {
     const { components } = this.props;
-    const { Label: { size } } = components;
+    const { IconButton: { size } } = components;
 
     return (
-      <Example name="Label sizes">
+      <Example name="Icon buttons">
         <Snippet>
-          <LabelGroup snippetIgnore={ true }>
+          <Grid shrink={ true } snippetIgnore={ true }>
             { size.values.map((size) =>
-              <Label key={ size } size={ size }>
-                Label ({ size.toUpperCase() })
-              </Label>
+              <GridCell key={ size }>
+                <IconButton size={ size }>
+                  <Icon name="ellipsis" />
+                </IconButton>
+              </GridCell>
             ) }
-          </LabelGroup>
+          </Grid>
         </Snippet>
       </Example>
     );
