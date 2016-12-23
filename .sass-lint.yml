@@ -159,4 +159,4 @@ rules:
     - 1
     - allow-leading-underscore: true
       convention: hyphenatedlowercase
-  zero-unit: 1
+  zero-unit: 0

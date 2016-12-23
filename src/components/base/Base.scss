@@ -3,20 +3,46 @@
 @import '../../design-patterns/colors/vars';
 @import '../../design-patterns/colors/colors';
 @import '../../design-patterns/layout/mixins';
-@import '../../design-patterns/layout/layout';
-@import '../../design-patterns/utilities/utilities';
 @import '../typography/vars';
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  box-sizing: border-box;
+}
+
 
 // sass-lint:disable no-vendor-prefixes
 html,
 body {
   font-family: $font-family-body;
   font-size: $font-size-body;
-  line-height: $line-height-body-px;
+  line-height: $line-height-body;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 // sass-lint:enable no-vendor-prefixes
+
+// sass-lint:disable no-important
+@include for-each-breakpoint {
+  .ax-hidden-until--#{breakpoint-prop(id)}  {
+    @include screen-less-than {
+      display: none !important;
+    }
+  }
+
+  .ax-visible-until--#{breakpoint-prop(id)} {
+    @include screen-more-than {
+      display: none !important;
+    }
+  }
+}
+// sass-lint:enable no-important
 
 // Alignment Modifiers
 .ax-text--left { text-align: left; }
