@@ -23,9 +23,9 @@ export default class IconButton extends Component {
     });
 
     const sizeMap = {
-      'small': 10,
-      'medium': 14,
-      'large': 28,
+      'small': 14,
+      'medium': 20,
+      'large': 36,
     };
 
     return (

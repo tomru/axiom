@@ -8,7 +8,8 @@
   @include space-inline();
   @include transition((background-color, border-color, color), $transition-time-fast);
 
-  border: $component-border-width solid $color-context-component-border;
+  padding: 0;
+  border: 0px solid $color-context-component-border;
   border-style: solid;
   border-radius: 50%;
   color: $color-context-subtle-text;
@@ -27,6 +28,20 @@
   }
 }
 
-.ax-icon-button--small  { padding: $component-padding-sm; }
-.ax-icon-button--medium { padding: $component-padding-md; }
-.ax-icon-button--large  { padding: $component-padding-lg; }
+.ax-icon-button--small {
+  width: 24px;
+  height: 24px;
+  border-width: 1px;
+}
+
+.ax-icon-button--medium {
+  width: 48px;
+  height: 48px;
+  border-width: 1px;
+}
+
+.ax-icon-button--large {
+  width: 72px;
+  height: 72px;
+  border-width: 2px;
+}
