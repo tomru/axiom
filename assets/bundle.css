@@ -1901,7 +1901,6 @@ textarea {
   border-right: 1px solid #F2F0F9;
   background-color: #FFFFFF;
   color: #48464F;
-  overflow: auto;
   z-index: 400; }
   @media (max-width: 767px) {
     .dm-layout__sidebar {
@@ -1924,6 +1923,16 @@ textarea {
         .dm-layout--open .dm-layout__sidebar ~ .dm-layout__main, .dm-layout--open
         .dm-layout__sidebar ~ .dm-layout__footer-container {
           transform: translateX(240px); } }
+
+.dm-layout__sidebar-body {
+  -ms-flex: 1 1 0%;
+      flex: 1 1 0%;
+  overflow: auto; }
+
+.dm-layout__sidebar-footer {
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+  padding: 24px 24px; }
 .dm-layout__main {
   display: -ms-flexbox;
   display: flex;
