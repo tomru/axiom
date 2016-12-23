@@ -38,29 +38,6 @@ export default class MenuExample extends Component {
               Lorem ipsum
             </MenuItem>
           </Menu>
-
-          <Menu size="large">
-            <MenuItem
-                active={ activeIndex === 0 }
-                disabled={ disabledIndex === 0 }
-                onClick={ () => this.setState({ activeIndex: 0 }) }>
-              Lorem ipsum
-            </MenuItem>
-
-            <MenuItem
-                active={ activeIndex === 1 }
-                disabled={ disabledIndex === 1 }
-                onClick={ () => this.setState({ activeIndex: 1 }) }>
-              Lorem ipsum
-            </MenuItem>
-
-            <MenuItem
-                active={ activeIndex === 2 }
-                disabled={ disabledIndex === 2 }
-                onClick={ () => this.setState({ activeIndex: 2 }) }>
-              Lorem ipsum
-            </MenuItem>
-          </Menu>
         </Snippet>
       </Example>
     );
