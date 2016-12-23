@@ -8,19 +8,14 @@
 @import '../typography/vars';
 
 // sass-lint:disable no-vendor-prefixes
-
 html,
 body {
   font-family: $font-family-body;
   font-size: $font-size-body;
   line-height: $line-height-body-px;
   -webkit-font-smoothing: antialiased;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: 'kern' 1;
-  -moz-font-feature-settings: 'kern' 1;
+  -moz-osx-font-smoothing: grayscale;
 }
-
 // sass-lint:enable no-vendor-prefixes
 
 // Alignment Modifiers
