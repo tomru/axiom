@@ -5,6 +5,8 @@
 @import '../../design-patterns/spacing/vars';
 @import '../../design-patterns/spacing/mixins';
 @import '../typography/vars';
+@import '../typography/mixins';
+@import './vars';
 
 // Button: Core
 button {
@@ -13,7 +15,7 @@ button {
   border: 0;
   outline: 0;
   background: none;
-  line-height: inherit;
+  line-height: initial;
   cursor: pointer;
 }
 
@@ -23,13 +25,12 @@ button {
 
   display: inline-block;
   position: relative;
-  border-width: $component-border-width;
+  border-width: $button-border-width;
   border-style: solid;
-  border-radius: $component-border-radius;
+  border-radius: $button-border-radius;
   border-color: transparent;
   background-color: transparent;
   font-weight: $font-weight-bold;
-  letter-spacing: $letter-spacing-small;
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
@@ -112,14 +113,22 @@ button {
   &[disabled] { color: $color-context-disabled-text; }
 }
 
+
+
 // Button: sizes
 .ax-button--small {
-  padding: $component-padding-sm $component-padding-lg;
-  font-size: $font-size-small;
+  padding: $button-small-vertical-padding $button-small-horizontal-padding;
+  font-size: $button-small-font-size;
+}
+
+.ax-button--medium {
+  padding: $button-medium-vertical-padding $button-medium-horizontal-padding;
+  font-size: $button-medium-font-size;
 }
 
 .ax-button--large {
-  padding: $component-padding-lg;
+  padding: $button-large-vertical-padding $button-large-horizontal-padding;
+  font-size: $button-large-font-size;
 }
 
 // Button: Icon

@@ -15,13 +15,13 @@ export default class Button extends Component {
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
-    size: PropTypes.oneOf(['small', 'large']),
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
     style: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   };
 
   static defaultProps ={
     style: 'primary',
-    size: 'small',
+    size: 'medium',
   };
 
   render() {

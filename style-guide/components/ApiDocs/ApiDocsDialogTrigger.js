@@ -29,7 +29,7 @@ export default class DocApiDialogTrigger extends Component {
 
     return (
       <ButtonGroup>
-        <Button onClick={ ::this.openDialog } size="large">
+        <Button onClick={ ::this.openDialog }>
           View API Docs
           <ApiDocsDialog
               components={ components }
