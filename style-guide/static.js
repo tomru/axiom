@@ -30,8 +30,8 @@ export default (locals, callback) => {
       htmlWebpackPlugin: {
         options: {
           basename: __BASENAME__,
-          stylesheet: 'assets/bundle.css',
-          script: 'assets/bundle.js',
+          stylesheet: 'assets/bundle.min.css',
+          script: 'assets/bundle.min.js',
           html: renderToString(<RouterContext { ...renderProps } />),
         },
       },

@@ -24,25 +24,38 @@ module.exports = {
       loaders: ['ejs'],
     }, {
       test: /\.s?css$/,
-      loader: ExtractTextPlugin.extract('style', 'css!postcss!sass'),
+      loader: ExtractTextPlugin.extract('style', 'css?minimize!postcss!sass'),
     }],
   },
   output: {
-    filename: './assets/bundle.js',
+    filename: './assets/bundle.min.js',
     path: './static/',
     publicPath: '/',
     libraryTarget: 'umd',
   },
   plugins: [
     new CleanWebpackPlugin(['static']),
-    new ExtractTextPlugin('./assets/bundle.css', { allChunks: true }),
+    new ExtractTextPlugin('./assets/bundle.min.css', { allChunks: true }),
     new CopyWebpackPlugin([{ from: './style-guide/assets', to: './assets' }]),
     new StaticSiteGeneratorPlugin('main', structureGenerator.extractPaths()),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      mangle: {
+        keep_fnames: true,
+      },
+    }),
     new webpack.DefinePlugin({
       __INCLUDE_CSS__: true,
       __STRUCTURE__: JSON.stringify(structureGenerator()),
       __BASENAME__: process.env.BASENAME_ENV || '"/"',
       __DEVELOPMENT__: false,
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
     }),
   ],
   resolve: {
@@ -51,5 +64,7 @@ module.exports = {
       'style-guide': path.resolve(__dirname, 'style-guide/components'),
     },
   },
-  postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],
+  postcss: () => [
+    autoprefixer({ browsers: ['last 2 versions'] }),
+  ],
 };
