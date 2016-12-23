@@ -1935,6 +1935,21 @@ textarea {
   @media (max-width: 767px) {
     .dm-layout__header ~ .dm-layout__main {
       margin-top: 50px; } }
+.dm-nav__list-item {
+  list-style: none; }
+
+.dm-nav__link {
+  display: block;
+  padding: 6px 24px; }
+
+.dm-nav__list-item--active > .dm-nav__link {
+  color: #1F8DC3; }
+
+.dm-nav__list-item--open {
+  margin-bottom: 12px; }
+
+.dm-nav > .dm-nav__list > .dm-nav__list-item > .dm-nav__list > .dm-nav__list-item > .dm-nav__link {
+  padding-left: 33px; }
 .dm-nav__list {
   margin: 0;
   padding: 0; }
