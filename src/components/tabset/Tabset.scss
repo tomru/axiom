@@ -1,10 +1,69 @@
+@import '../../design-patterns/animations/vars';
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/colors/vars';
+@import '../../design-patterns/spacing/vars';
 @import '../../design-patterns/spacing/mixins';
 
 .ax-tabset {
   @include space-block($container-margin-sm);
 }
 
-.ax-tabset__menu,
+.ax-tabset__list {
+  @include space-block();
+
+  display: flex;
+  padding: 0;
+
+  &::after {
+    flex: 1 1 auto;
+    border-bottom: 1px solid $color-context-component-border;
+    content: '';
+  }
+}
+
+.ax-tabset__list-item {
+  @include transition((border-color, background-color, color), $transition-time-fast);
+
+  position: relative;
+  margin: 0 $container-margin-sm 0 0;
+  border: 1px solid transparent;
+  border-radius: 3px 3px 0 0;
+  border-bottom-color: $color-context-component-border;
+  background-color: fade-out($color-ui-dark-1, 0.80);
+  list-style: none;
+
+  &::after {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    width: $container-margin-sm;
+    transform: translateX(100%);
+    border-bottom: 1px solid $color-context-component-border;
+    content: '';
+  }
+
+  &:not(.ax-tabset__list-item--disabled):hover {
+    color: $color-ui-primary-1;
+  }
+}
+
+.ax-tabset__list-item--active {
+  border-color: $color-context-component-border;
+  border-bottom-color: transparent;
+  background-color: $color-ui-white;
+}
+
+.ax-tabset__list-item--disabled {
+  border-bottom-color: $color-context-component-border;
+  background-color: $color-context-disabled-background;
+  color: $color-context-disabled-text;
+}
+
+.ax-tabset__button {
+  padding: $component-padding-md $component-padding-lg;
+  color: inherit;
+}
+
 .ax-tabset__content {
   @include space-block();
 }

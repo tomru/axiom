@@ -1,7 +1,6 @@
 import React, { Component, Children, PropTypes, cloneElement } from 'react';
 import omit from 'lodash/omit';
 import Base from '../base/Base';
-import Menu from '../menu/Menu';
 import Tab from './Tab';
 
 if (__INCLUDE_CSS__) {
@@ -43,9 +42,9 @@ export default class Tabset extends Component {
 
     return (
       <Base { ...omit(rest, ['activeTabIndex']) } className="ax-tabset">
-        <Menu>
+        <ul className="ax-tabset__list">
           { tabs }
-        </Menu>
+        </ul>
 
         <div className="ax-tabset__content">
           { activeTabContent }

@@ -16,7 +16,18 @@ button {
   outline: 0;
   background: none;
   line-height: initial;
+  text-transform: inherit;
   cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    cursor: default;
+  }
 }
 
 .ax-button {
@@ -34,16 +45,6 @@ button {
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &[disabled],
-  &[disabled]:hover,
-  &[disabled]:active {
-    cursor: default;
-  }
 }
 
 

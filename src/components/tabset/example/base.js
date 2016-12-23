@@ -30,6 +30,16 @@ export default class TabSetExample extends Component {
               mauris, imperdiet vel elit eu, laoreet efficitur mi. In quam magna,
               euismod id venenatis et, egestas nec risus.
             </Tab>
+
+            <Tab disabled={ true } title="I'm Disabled!">
+              Aenean tristique aliquam purus scelerisque dignissim. Fusce a purus
+              lorem. Mauris blandit dui pharetra, auctor ipsum sed, pellentesque
+              dui. Donec dictum arcu non aliquam efficitur. Sed consequat rutrum
+              gravida. Nam massa enim, dignissim quis sollicitudin ac, tincidunt
+              nec ligula. Donec vitae nisl id nunc dictum lobortis. Vivamus neque
+              mauris, imperdiet vel elit eu, laoreet efficitur mi. In quam magna,
+              euismod id venenatis et, egestas nec risus.
+            </Tab>
           </Tabset>
         </Snippet>
       </Example>
