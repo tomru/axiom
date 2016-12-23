@@ -824,7 +824,7 @@ button {
   border-color: #1F8DC3; }
 
 .ax-checkbox:disabled:checked + .ax-checkbox__indicator::before {
-  border-color: rgba(72, 70, 79, 0.3); }
+  border-color: rgba(72, 70, 79, 0.2); }
 .ax-chedio-buttox__group {
   margin: 12px 0; }
   .ax-chedio-buttox__group:first-child {
@@ -1556,7 +1556,7 @@ a.ax-link:not(.ax-link--inherit-color) {
   background-color: transparent; }
 
 .ax-radio:hover:not(:checked):not(:disabled) + .ax-radio__indicator::before {
-  background-color: rgba(72, 70, 79, 0.3); }
+  background-color: rgba(72, 70, 79, 0.2); }
 
 .ax-radio:focus {
   background-color: rgba(31, 141, 195, 0.5); }
@@ -1565,7 +1565,7 @@ a.ax-link:not(.ax-link--inherit-color) {
   background-color: #1F8DC3; }
 
 .ax-radio:disabled:checked + .ax-radio__indicator::before {
-  background-color: rgba(72, 70, 79, 0.3); }
+  background-color: rgba(72, 70, 79, 0.2); }
 .ax-text--strong {
   font-weight: 700; }
 input,
@@ -1687,6 +1687,14 @@ textarea {
 .ax-input__container--translucent {
   border-color: transparent;
   background-color: rgba(255, 255, 255, 0.15); }
+  .ax-input__container--translucent .ax-input::-webkit-input-placeholder {
+    color: rgba(242, 240, 249, 0.6); }
+  .ax-input__container--translucent .ax-input::-moz-placeholder {
+    color: rgba(242, 240, 249, 0.6); }
+  .ax-input__container--translucent .ax-input:-ms-input-placeholder {
+    color: rgba(242, 240, 249, 0.6); }
+  .ax-input__container--translucent .ax-input::placeholder {
+    color: rgba(242, 240, 249, 0.6); }
 .ax-select__list-item {
   display: block;
   padding: 6px;
@@ -1927,21 +1935,6 @@ textarea {
   @media (max-width: 767px) {
     .dm-layout__header ~ .dm-layout__main {
       margin-top: 50px; } }
-.dm-nav__list-item {
-  list-style: none; }
-
-.dm-nav__link {
-  display: block;
-  padding: 6px 24px; }
-
-.dm-nav__list-item--active > .dm-nav__link {
-  color: #1F8DC3; }
-
-.dm-nav__list-item--open {
-  margin-bottom: 12px; }
-
-.dm-nav > .dm-nav__list > .dm-nav__list-item > .dm-nav__list > .dm-nav__list-item > .dm-nav__link {
-  padding-left: 33px; }
 .dm-nav__list {
   margin: 0;
   padding: 0; }
