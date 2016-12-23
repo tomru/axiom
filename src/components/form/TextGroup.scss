@@ -6,7 +6,7 @@ textarea {
   width: 100%;
   min-width: 0;
   color: inherit;
-  line-height: inherit;
+  line-height: initial;
   appearance: none;
 
   &::placeholder {

@@ -3,8 +3,8 @@
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/spacing/vars';
 @import '../../design-patterns/spacing/mixins';
-@import '../form/vars';
 @import '../typography/vars';
+@import './vars';
 
 .ax-input__container {
   @include transition((border-color), $transition-time-fast);
@@ -13,9 +13,9 @@
   position: relative;
   flex: 1 1 auto;
   align-items: center;
-  border: $component-border-width solid $color-context-component-border;
+  border: $input-border-width solid $color-context-component-border;
   border-style: solid;
-  border-radius: $component-border-radius;
+  border-radius: $input-border-radius;
   background-color: $input-background-color;
   font-size: $font-size-small;
 }
@@ -37,10 +37,6 @@
       color: $input-invalid-color;
     }
   }
-}
-
-.ax-input__icon {
-  padding: 0 $input-padding-horizontal 0 0;
 }
 
 // Input
@@ -90,13 +86,23 @@
 // Sizing
 .ax-input__container--small {
   .ax-input {
-    padding: $input-padding-vertical-small $input-padding-horizontal;
+    padding: $input-small-vertical-padding $input-small-horizontal-padding;
+    font-size: $input-small-font-size;
+  }
+
+  .ax-input__icon {
+    padding: 0 $input-small-horizontal-padding 0 0;
   }
 }
 
 .ax-input__container--large {
   .ax-input {
-    padding: $input-padding-vertical-large $input-padding-horizontal;
+    padding: $input-large-vertical-padding $input-large-horizontal-padding;
+    font-size: $input-large-font-size;
+  }
+
+  .ax-input__icon {
+    padding: 0 $input-large-horizontal-padding 0 0;
   }
 }
 

@@ -6,9 +6,9 @@
 .ax-textarea {
   @include transition((border-color), $transition-time-fast);
 
-  padding: $input-padding-vertical-small $input-padding-horizontal;
+  padding: $input-small-vertical-padding $input-small-horizontal-padding;
   border: $input-border-width solid $input-border-color;
-  border-radius: $component-border-radius;
+  border-radius: $input-border-radius;
   background-color: $input-background-color;
   resize: none;
 

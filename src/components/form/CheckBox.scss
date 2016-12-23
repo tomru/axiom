@@ -1,22 +1,20 @@
 @import '../../design-patterns/spacing/vars';
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/animations/vars';
-@import '../form/vars';
+@import './vars';
 
 .ax-checkbox__indicator {
-  border-radius: $component-border-radius;
-
   &::before {
     @include transition((border-color), $transition-time-fast);
 
     position: absolute;
-    top: 30%;
-    right: 20%;
-    bottom: 40%;
-    left: 20%;
+    top: floor($input-checkbox-size / 4);
+    right: floor($input-checkbox-size / 5);
+    bottom: floor($input-checkbox-size / 2.5);
+    left: floor($input-checkbox-size / 5);
     transform: rotate(-45deg);
-    border-bottom: 3px solid;
-    border-left: 3px solid;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
   }
 }
 
