@@ -6,7 +6,7 @@ import CardContent from './CardContent';
 export default class CardExample extends Component {
   render() {
     return (
-      <Example name="Basic Card">
+      <Example name="List of Cards">
         <Snippet>
           <CardList>
             <CardListItem>

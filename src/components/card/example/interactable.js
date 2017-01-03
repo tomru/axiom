@@ -12,7 +12,7 @@ export default class CardExample extends Component {
     const { active } = this.state;
 
     return (
-      <Example name="Basic Card">
+      <Example name="Interactable and active list of Cards">
         <Snippet>
           <CardList>
             <CardListItem
