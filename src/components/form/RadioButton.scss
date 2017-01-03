@@ -3,6 +3,8 @@
 @import '../form/vars';
 
 .ax-radio__indicator {
+  border-radius: 50%;
+
   &::before {
     @include transition((background-color), $transition-time-fast);
 

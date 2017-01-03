@@ -8,10 +8,10 @@ export default class FormExample extends Component {
       <Example name="RadioButtons">
         <Snippet>
           <RadioButtonGroup>
-            <RadioButton>Unchecked Radio button</RadioButton>
-            <RadioButton defaultChecked={ true }>Checked Radio button</RadioButton>
-            <RadioButton disabled={ true }>Disabled Radio button</RadioButton>
-            <RadioButton defaultChecked={ true } disabled={ true }>
+            <RadioButton name="radio1">Unchecked Radio button</RadioButton>
+            <RadioButton defaultChecked={ true } name="radio1">Checked Radio button</RadioButton>
+            <RadioButton disabled={ true } name="radio1">Disabled Radio button</RadioButton>
+            <RadioButton defaultChecked={ true } disabled={ true } name="radio2">
               Disabled checked Radio button
             </RadioButton>
           </RadioButtonGroup>
@@ -20,9 +20,9 @@ export default class FormExample extends Component {
         <Heading>Inline RadioButtons</Heading>
         <Snippet>
           <RadioButtonGroup inline={ true }>
-            <RadioButton>Radio button</RadioButton>
-            <RadioButton>Radio button</RadioButton>
-            <RadioButton>Radio button</RadioButton>
+            <RadioButton name="radio3">Radio button</RadioButton>
+            <RadioButton name="radio3">Radio button</RadioButton>
+            <RadioButton name="radio3">Radio button</RadioButton>
           </RadioButtonGroup>
         </Snippet>
       </Example>

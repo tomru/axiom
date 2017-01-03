@@ -4,6 +4,8 @@
 @import './vars';
 
 .ax-checkbox__indicator {
+  border-radius: $input-border-radius;
+
   &::before {
     @include transition((border-color), $transition-time-fast);
 
