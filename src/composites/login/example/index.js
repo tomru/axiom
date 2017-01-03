@@ -21,6 +21,7 @@ class LoginExample extends Component {
             <Login
                 application="Audiences"
                 backgroundImage="assets/axiom-bg.jpg"
+                error="Sorry but we don't recognise your username and password combination. Please check your details and try again."
                 onSubmit={ ::this.handleSubmit }
                 textLight={ true } />
           </div>

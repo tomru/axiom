@@ -8,6 +8,7 @@ import TextInput from '../../components/form/TextInput';
 import Link from '../../components/typography/Link';
 import Paragraph from '../../components/typography/Paragraph';
 import Heading from '../../components/typography/Heading';
+import Strong from '../../components/typography/Strong';
 import Weak from '../../components/typography/Weak';
 
 if (__INCLUDE_CSS__) {
@@ -18,6 +19,7 @@ export default class Login extends Component {
   static propTypes = {
     application: PropTypes.string.isRequired,
     backgroundImage: PropTypes.string.isRequired,
+    error: PropTypes.string,
     onSubmit: PropTypes.func.isRequired,
   };
 
@@ -45,7 +47,7 @@ export default class Login extends Component {
   }
 
   render() {
-    const { application, backgroundImage, ...rest } = this.props;
+    const { application, backgroundImage, error, ...rest } = this.props;
     const { username, password } = this.state;
     const style = { backgroundImage: `url(${backgroundImage})` };
 
@@ -85,6 +87,12 @@ export default class Login extends Component {
                     type="submit">Login</Button>
               </ButtonGroup>
             </Form>
+
+            { do { if (error) {
+              <Paragraph textInvalid={ true }>
+                <Strong>{ error }</Strong>
+              </Paragraph>;
+            } } }
           </div>
         </div>
 
