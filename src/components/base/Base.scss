@@ -69,9 +69,11 @@ body {
 .ax-text--break-all  { white-space: initial; word-break: break-all; }
 .ax-text--break-word { white-space: initial; word-wrap: break-word; }
 
-.ax-text--light  { color: $color-ui-light-1; } // Revisit
-.ax-text--subtle { color: $color-context-subtle-text; }
-.ax-text--dark   { color: $color-context-standard-text; }
+.ax-text--light   { color: $color-ui-light-1; } // Revisit
+.ax-text--subtle  { color: $color-context-subtle-text; }
+.ax-text--dark    { color: $color-context-standard-text; }
+.ax-text--valid   { color: $color-ui-valid; }
+.ax-text--invalid { color: $color-ui-invalid; }
 
 //
 .ax-text--ellipsis {
