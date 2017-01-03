@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import Icon from '../icon/Icon';
+import { Icon } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./DockItem.scss');

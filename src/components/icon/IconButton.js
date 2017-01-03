@@ -1,6 +1,6 @@
 import React, { Component, PropTypes, cloneElement } from 'react';
 import classnames from 'classnames';
-import Base from '../base/Base';
+import { Base } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./IconButton.scss');

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import Image from '../image/Image';
+import { Image } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./Avatar.scss');

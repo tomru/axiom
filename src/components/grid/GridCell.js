@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import Base from '../base/Base';
+import { Base } from 'bw-axiom';
 
 export default class GridCell extends Component {
   static propTypes = {

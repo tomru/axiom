@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { findComponent } from '../../utils';
+import { TextInputIcon, findComponent } from 'bw-axiom';
 import TextGroup from './TextGroup';
-import TextInputIcon from './TextInputIcon';
 
 if (__INCLUDE_CSS__) {
   require('./TextInput.scss');

@@ -1,6 +1,6 @@
 import React from 'react';
-import Grid from './Grid';
 import renderer from 'react-test-renderer';
+import { Grid } from 'bw-axiom';
 
 function getComponent(props = {}) {
   return renderer.create(

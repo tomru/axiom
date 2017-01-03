@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Base from '../base/Base';
+import { Base } from 'bw-axiom';
 
 export default class ListItem extends Component {
   static propTypes = {

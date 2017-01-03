@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Icon from '../icon/Icon';
+import { Icon } from 'bw-axiom';
 
 export default class ButtonIcon extends Component {
   static propTypes = {

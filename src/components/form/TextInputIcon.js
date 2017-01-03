@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Icon from '../icon/Icon';
-import Link from '../typography/Link';
+import { Icon, Link } from 'bw-axiom';
 
 export default class TextInputIcon extends Component {
   static propTypes = {

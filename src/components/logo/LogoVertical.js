@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Logo from '../logo/Logo';
+import Logo from './Logo';
 
 export default class LogoVertical extends Component {
   static propTypes = {

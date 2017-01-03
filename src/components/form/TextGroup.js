@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import Strong from '../typography/Strong';
-import Base from '../base/Base';
+import { Base, Strong } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./TextGroup.scss');

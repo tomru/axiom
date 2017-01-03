@@ -1,8 +1,6 @@
 import React, { Children, Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import Base from '../base/Base';
-import { findComponent } from '../../utils';
-import LabelIcon from './LabelIcon';
+import { Base, LabelIcon, findComponent } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./Label.scss');

@@ -1,10 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import Base from '../base/Base';
-import Grid from '../grid/Grid';
-import GridCell from '../grid/GridCell';
-import Icon from '../icon/Icon';
-import Link from '../typography/Link';
+import { Base, Grid, GridCell, Icon, Link  } from 'bw-axiom';
 
 export default class DialogHeader extends Component {
   static propTypes = {

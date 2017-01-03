@@ -1,6 +1,7 @@
 {
   "moduleNameMapper": {
-    "^.+\\.(scss|css|less)$": "<rootDir>/test/__mocks__/styleMock.js"
+    "^.+\\.(scss|css|less)$": "<rootDir>/test/__mocks__/styleMock.js",
+    "^bw-axiom$": "<rootDir>/src/index.js"
   },
   "moduleFileExtensions": ["js"],
   "moduleDirectories": ["node_modules"],

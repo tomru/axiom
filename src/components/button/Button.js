@@ -1,8 +1,6 @@
 import React, { Component, Children, PropTypes } from 'react';
 import classnames from 'classnames';
-import { findComponent } from '../../utils';
-import Base from '../base/Base';
-import ButtonIcon from './ButtonIcon';
+import { Base, ButtonIcon, findComponent } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./Button.scss');

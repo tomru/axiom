@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import Base from '../base/Base';
-import Small from '../typography/Small';
-import Strong from '../typography/Strong';
+import { Base, Small, Strong } from 'bw-axiom';
 
 export default class Tab extends Component {
   static propTypes = {

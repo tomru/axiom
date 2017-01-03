@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ReactModal from 'react-modal';
-import { getCSSVar } from '../../utils';
+import { getCSSVar } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./Modal.scss');

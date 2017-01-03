@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Base } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./HorizontalRule.scss');
@@ -7,7 +8,7 @@ if (__INCLUDE_CSS__) {
 export default class HorizontalRule extends Component {
   render() {
     return (
-      <hr className="ax-horizontal-rule" />
+      <Base Component="hr" className="ax-horizontal-rule" />
     );
   }
 }

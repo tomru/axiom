@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Base from '../base/Base';
+import { Base } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('../image/Image.scss');

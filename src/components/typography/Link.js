@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link as RouterLink } from 'react-router';
 import classnames from 'classnames';
-import Base from '../base/Base';
+import { Base } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./Link.scss');

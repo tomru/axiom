@@ -1,15 +1,17 @@
 import React, { Component, PropTypes } from 'react';
-import Base from '../../components/base/Base';
-import LogoVertical from '../../components/logo/LogoVertical';
-import Button from '../../components/button/Button';
-import ButtonGroup from '../../components/button/ButtonGroup';
-import Form from '../../components/form/Form';
-import TextInput from '../../components/form/TextInput';
-import Link from '../../components/typography/Link';
-import Paragraph from '../../components/typography/Paragraph';
-import Heading from '../../components/typography/Heading';
-import Strong from '../../components/typography/Strong';
-import Weak from '../../components/typography/Weak';
+import {
+  Base,
+  LogoVertical,
+  Button,
+  ButtonGroup,
+  Form,
+  TextInput,
+  Link,
+  Paragraph,
+  Heading,
+  Strong,
+  Weak,
+} from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./Login.scss');

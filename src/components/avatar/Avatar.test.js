@@ -1,6 +1,6 @@
 import React from 'react';
-import Avatar from './Avatar';
 import renderer from 'react-test-renderer';
+import { Avatar } from 'bw-axiom';
 
 function getComponent(props = {}) {
   return renderer.create(
