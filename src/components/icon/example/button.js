@@ -22,7 +22,7 @@ export default class ButtonExample extends Component {
         <Snippet>
           <Grid shrink={ true } snippetIgnore={ true }>
             { size.values.map((size) =>
-              <GridCell key={ size }>
+              <GridCell key={ size } snippetIgnore={ true }>
                 <IconButton size={ size }>
                   <Icon name="ellipsis" />
                 </IconButton>
