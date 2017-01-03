@@ -21,10 +21,6 @@ export function filterRender(component) {
     return component;
   }
 
-  if (component.props.renderSkip) {
-    return undefined;
-  }
-
   const type = component.type;
   const children = filterRender(component.props.children);
   const props = {
@@ -67,7 +63,7 @@ export function filterSnippet(component, topLevel = true) {
   const children = filterSnippet(component.props.children, false);
   const props = {
     key: v4(),
-    ...omit(component.props, ['snippetIgnore', 'snippetReplace', 'renderSkip', 'snippetSkip']),
+    ...omit(component.props, ['snippetIgnore', 'snippetReplace', 'snippetSkip']),
   };
 
   return createElement(type, props, children);

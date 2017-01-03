@@ -79,8 +79,8 @@ export default class PlatformExample extends Component {
           </Platform>
         </div>
 
-        <Snippet>
-          <Platform consoleWidth={ 420 } renderSkip={ true }>
+        <Snippet renderSkip={ true }>
+          <Platform consoleWidth={ 420 }>
             <Dock>
               <DockItem active={ true } icon="ellipsis">DockItem</DockItem>
             </Dock>

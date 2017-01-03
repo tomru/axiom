@@ -9,6 +9,7 @@ module.exports = {
   '/components/icon': require('../../src/components/icon/example'),
   '/components/image': require('../../src/components/image/example'),
   '/components/label': require('../../src/components/label/example'),
+  '/components/list': require('../../src/components/list/example'),
   '/components/logo': require('../../src/components/logo/example'),
   '/components/menu': require('../../src/components/menu/example'),
   '/components/platform': require('../../src/components/platform/example'),

@@ -55,9 +55,9 @@ export default class DialogSizes extends Component {
           ) }
         </ButtonGroup>
 
-        <Snippet>
+        <Snippet renderSkip={ true }>
           { size.values.map((size) =>
-            <Dialog key={ size } renderSkip={ true } size={ size }>...</Dialog>
+            <Dialog key={ size } size={ size }>...</Dialog>
           ) }
         </Snippet>
       </Example>

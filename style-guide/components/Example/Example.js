@@ -20,7 +20,7 @@ export default class Example extends Component {
       <ExampleBox>
         <Heading style="title">{ name }</Heading>
         { Children.toArray(children).reduce((children, child) => {
-          if (child.type === Snippet) {
+          if (child.type === Snippet && !child.props.renderSkip) {
             children.push(filterRender(child.props.children));
           }
 

@@ -12,8 +12,8 @@ export default class DialogExample extends Component {
           properties you pass to Dialog will forward to the modal component.
         </Paragraph>
 
-        <Snippet>
-          <Dialog renderSkip={ true }>
+        <Snippet renderSkip={ true }>
+          <Dialog>
             <DialogHeader onRequestClose={ Function }>...</DialogHeader>
             <DialogBody>...</DialogBody>
             <DialogFooter>...</DialogFooter>

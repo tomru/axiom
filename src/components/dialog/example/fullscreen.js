@@ -31,8 +31,8 @@ export default class DialogExample extends Component {
           </Button>
         </ButtonGroup>
 
-        <Snippet>
-          <Dialog fullScreen={ true } renderSkip={ true }>...</Dialog>
+        <Snippet renderSkip={ true }>
+          <Dialog fullScreen={ true }>...</Dialog>
         </Snippet>
       </Example>
     );
