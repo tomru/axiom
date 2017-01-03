@@ -1,0 +1,23 @@
+@import '../../design-patterns/colors/vars';
+@import '../../design-patterns/spacing/vars';
+@import '../../design-patterns/spacing/mixins';
+
+// List styling
+.ax-list {
+  @include space-block();
+}
+
+.ax-list--inline,
+.ax-list--inline {
+  padding: 0;
+  list-style: none;
+
+  .ax-list__item {
+    display: inline;
+    padding: 0 $component-padding-sm;
+    border-right: 1px solid $color-context-component-border;
+
+    &:first-child { padding-left: 0; }
+    &:last-child  { padding-right: 0; }
+  }
+}

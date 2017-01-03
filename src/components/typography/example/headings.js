@@ -62,11 +62,11 @@ export default class TypeExample extends Component {
 
         <HorizontalRule />
 
-        <Snippet>
-          <Heading renderSkip={ true } style="display">... <Weak>...</Weak></Heading>
-          <Heading renderSkip={ true } style="headline">...</Heading>
-          <Heading renderSkip={ true } style="title">... <Strong>...</Strong></Heading>
-          <Heading renderSkip={ true } style="large">... <Strong>...</Strong></Heading>
+        <Snippet renderSkip={ true }>
+          <Heading style="display">... <Weak>...</Weak></Heading>
+          <Heading style="headline">...</Heading>
+          <Heading style="title">... <Strong>...</Strong></Heading>
+          <Heading style="large">... <Strong>...</Strong></Heading>
         </Snippet>
       </Example>
     );

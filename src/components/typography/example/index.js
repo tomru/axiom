@@ -5,5 +5,4 @@ module.exports = [
   require('./case').default,
   require('./colors').default,
   require('./links').default,
-  require('./lists').default,
 ];
