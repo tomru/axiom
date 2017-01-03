@@ -1,32 +1,19 @@
-import numbro from 'numbro';
-
-const NUMBER_SEPARATOR = '\u2009';
+export const NUMBER_SEPARATOR = '\u2009';
 
 function isInvalidNumber(number) {
-  return (isNaN(parseFloat(number)) || !isFinite(number));
+  return isNaN(parseFloat(number)) || !isFinite(number);
 }
 
-function decimals(precision) {
-  return (new Array(
-    isInvalidNumber(precision) ? 0 : Math.max(0, Math.min(20, parseInt(precision, 10)))
-  )).fill('0').join('');
+function isInvalidPrecision(precision) {
+  return isNaN(parseInt(precision)) && precision % 1 === 0 && precision >= 0 && precision <= 20;
 }
 
-function withDecimals(format, precision) {
-  const decimal = decimals(precision);
-
-  return decimal ? `${format}.[${decimal}]` : format;
-}
-
-export function shortNumber(number, precision = 0) {
-  if (isInvalidNumber(number)) {
-    return '-';
+function toFixed(number, precision) {
+  if (!isInvalidPrecision(precision)) {
+    number = number.toFixed(precision);
   }
 
-  return numbro(number)
-    .format(`${withDecimals('0,0', precision)}a`)
-    .replace(/,/g, NUMBER_SEPARATOR)
-    .toUpperCase();
+  return number.toString().replace(/\.0+$|(\.[0-9]*[1-9])0+$/, '$1');
 }
 
 export function longNumber(number, precision = 0) {
@@ -34,8 +21,32 @@ export function longNumber(number, precision = 0) {
     return '-';
   }
 
-  return numbro(number)
-    .format(`${withDecimals('0,0', precision)}`)
-    .replace(/,/g, NUMBER_SEPARATOR)
-    .toUpperCase();
+  const [ integer, fraction ] = toFixed(number, precision).split('.');
+  const formatted = integer.replace(/(\d)(?=(\d{3})+(?!\d))/g, `$1${NUMBER_SEPARATOR}`);
+
+  return fraction ? `${formatted}.${fraction}` : formatted;
+}
+
+export function shortNumber(number, precision = 0) {
+  const threshold = 9999;
+  const metricPrefixes = [
+    { n: 1E12, prefix: 'trillion' },
+    { n: 1E9, prefix: 'billion' },
+    { n: 1E6, prefix: 'million' },
+    { n: 1E3, prefix: 'thousand' },
+  ];
+
+  if (isInvalidNumber(number)) {
+    return '-';
+  }
+
+  if (number <= threshold) {
+    return longNumber(number, precision);
+  }
+
+  for (let i = 0; i < metricPrefixes.length; i++) {
+    if (number >= metricPrefixes[i].n) {
+      return `${toFixed(number / metricPrefixes[i].n, precision)} ${metricPrefixes[i].prefix}`;
+    }
+  }
 }

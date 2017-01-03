@@ -31,13 +31,11 @@
     "classnames": "^2.2.1",
     "moment": "^2.14.1",
     "normalize.css": "^4.2.0",
-    "numbro": "^1.9.2",
-    "react": "^15.4.1",
     "react-modal": "^1.4.0",
     "react-router": "2.6.1"
   },
   "peerDependencies": {
-    "react": "^15.4.0"
+    "react": "^15.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
