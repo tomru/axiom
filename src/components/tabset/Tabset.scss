@@ -4,6 +4,11 @@
 @import '../../design-patterns/spacing/vars';
 @import '../../design-patterns/spacing/mixins';
 
+$tabset-tab-spacing: $component-padding-md;
+
+$tabset-tab-small-vertical-padding: $component-padding-md;
+$tabset-tab-large-vertical-padding: $component-padding-lg;
+
 .ax-tabset {
   @include space-block($container-margin-sm);
 }
@@ -12,6 +17,7 @@
   @include space-block();
 
   display: flex;
+  align-items: flex-end;
   padding: 0;
 
   &::after {
@@ -25,10 +31,9 @@
   @include transition((border-color, background-color, color), $transition-time-fast);
 
   position: relative;
-  margin: 0 $container-margin-sm 0 0;
+  margin: 0 $tabset-tab-spacing 0 0;
   border: 1px solid transparent;
   border-radius: 3px 3px 0 0;
-  border-bottom-color: $color-context-component-border;
   background-color: fade-out($color-ui-dark-1, 0.80);
   list-style: none;
 
@@ -36,7 +41,7 @@
     position: absolute;
     right: -1px;
     bottom: -1px;
-    width: $container-margin-sm;
+    width: $tabset-tab-spacing;
     transform: translateX(100%);
     border-bottom: 1px solid $color-context-component-border;
     content: '';
@@ -60,10 +65,38 @@
 }
 
 .ax-tabset__button {
-  padding: $component-padding-md $component-padding-lg;
+  padding-right: $component-padding-lg;
+  padding-left: $component-padding-lg;
   color: inherit;
 }
 
 .ax-tabset__content {
   @include space-block();
+}
+
+// Tab sizing
+.ax-tabset__list-item--small {
+  .ax-tabset__button {
+    padding-top: $tabset-tab-small-vertical-padding;
+    padding-bottom: $tabset-tab-small-vertical-padding;
+  }
+
+  &:not(.ax-tabset__list-item--active) {
+    .ax-tabset__button {
+      padding-top: $tabset-tab-small-vertical-padding - 1px;
+    }
+  }
+}
+
+.ax-tabset__list-item--large {
+  .ax-tabset__button {
+    padding-top: $tabset-tab-large-vertical-padding;
+    padding-bottom: $tabset-tab-large-vertical-padding;
+  }
+
+  &:not(.ax-tabset__list-item--active) {
+    .ax-tabset__button {
+      padding-top: $tabset-tab-large-vertical-padding - 1px;
+    }
+  }
 }

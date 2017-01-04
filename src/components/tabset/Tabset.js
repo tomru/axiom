@@ -10,6 +10,11 @@ export default class Tabset extends Component {
   static propTypes = {
     activeTabIndex: PropTypes.number,
     children: PropTypes.node,
+    size: PropTypes.oneOf(['small', 'large']),
+  };
+
+  static defaultProps = {
+    size: 'small',
   };
 
   componentWillMount() {
@@ -29,7 +34,7 @@ export default class Tabset extends Component {
   }
 
   render() {
-    const { children, ...rest } = this.props;
+    const { children, size, ...rest } = this.props;
     const { activeTabIndex } = this.state;
     const activeTabContent = Children.toArray(children)[activeTabIndex].props.children;
     const tabs = Children.toArray(children)
@@ -37,6 +42,7 @@ export default class Tabset extends Component {
       .map((child, index) => cloneElement(child, {
         active: index === activeTabIndex,
         onClick: () => this.activateTab(index),
+        size,
       }));
 
     return (
