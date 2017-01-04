@@ -6,14 +6,18 @@ $font-weight-regular: 400;
 $font-weight-medium:  500;
 $font-weight-bold:    700;
 
-$font-size-heading-display:  3.1rem;
-$font-size-heading-headline: 1.7rem;
-$font-size-heading-title:    1.4rem;
-$font-size-heading-large:    1.3rem;
+$font-size-heading-display:  3.092rem;
+$font-size-heading-headline: 1.622rem;
+$font-size-heading-title:    1.274rem;
+$font-size-heading-large:    1.085rem;
 
 $font-size-body:  13px;
-$font-size-small: 0.93rem;
+$font-size-small: 0.923rem;
 
-$line-height-body:    1.4;
-$line-height-heading: 1.2;
-$line-height-small:   1.1;
+$line-height-body:    1.53846rem;
+$line-height-small:   $line-height-body;
+
+$line-height-heading-large: $line-height-body;
+$line-height-heading-title: $line-height-body;
+$line-height-heading-headline: 2rem;
+$line-height-heading-display: 3.53846rem;

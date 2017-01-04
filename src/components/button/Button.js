@@ -1,4 +1,4 @@
-import React, { Component, Children, PropTypes } from 'react';
+import React, { Component, Children, PropTypes, cloneElement } from 'react';
 import classnames from 'classnames';
 import { Base, ButtonIcon, findComponent } from 'bw-axiom';
 
@@ -47,7 +47,10 @@ export default class Button extends Component {
 
     return (
       <Base Component="button" { ...rest } className={ classes }>
-        { icon }
+        { do { if (icon) {
+          cloneElement(icon, { size });
+        } } }
+
         { filteredChildren }
       </Base>
     );

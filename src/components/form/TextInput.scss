@@ -88,6 +88,7 @@
   .ax-input {
     padding: $input-small-vertical-padding $input-small-horizontal-padding;
     font-size: $input-small-font-size;
+    line-height: $input-small-line-height;
   }
 
   .ax-input__icon {
@@ -99,6 +100,9 @@
   .ax-input {
     padding: $input-large-vertical-padding $input-large-horizontal-padding;
     font-size: $input-large-font-size;
+    // BUG: Currently Webkit decides this line-height is too small and explicitly
+    // overrides it and sets a minimum.
+    line-height: $input-large-line-height;
   }
 
   .ax-input__icon {

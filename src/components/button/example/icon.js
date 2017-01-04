@@ -23,7 +23,7 @@ export default class ButtonExample extends Component {
           <ButtonGroup snippetIgnore={ true }>
             { size.values.map((size) =>
               <Button key={ size } size={ size }>
-                Button ({ size.toUpperCase() })
+                Button { size.toUpperCase() }
                 <ButtonIcon name="twitter" />
               </Button>
             ) }
