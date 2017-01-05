@@ -5,9 +5,9 @@
 // sass-lint:disable no-qualifying-elements
 
 pre[class*='language-'] {
-  @include space-block($container-margin-sm);
+  @include space-block();
 
-  padding: $container-padding-sm;
+  padding: $component-padding-md;
   border-radius: $component-border-radius;
   background-color: $color-ui-light-2;
 }

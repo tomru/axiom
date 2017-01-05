@@ -1,13 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import {
-  ButtonGroup,
-  Button,
-  Dialog,
-  DialogBody,
-  DialogFooter,
-  DialogHeader,
-  Heading,
-} from 'bw-axiom';
+import { Dialog, DialogBody, DialogHeader, Heading } from 'bw-axiom';
 import { CodeSnippet, CodeTabset } from '../CodeSnippet';
 import ApiDocsList from './ApiDocsList';
 
@@ -44,11 +36,6 @@ export default class ApiDocsDialog extends Component {
                     props={ components[displayName] } />
           ) }
         </DialogBody>
-        <DialogFooter>
-          <ButtonGroup>
-            <Button onClick={ onRequestClose }>Close</Button>
-          </ButtonGroup>
-        </DialogFooter>
       </Dialog>
     );
   }

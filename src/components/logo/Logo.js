@@ -2,6 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
 
+if (__INCLUDE_CSS__) {
+  require('./Logo.scss');
+}
+
 export default class LogoVertical extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,

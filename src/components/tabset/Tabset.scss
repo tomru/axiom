@@ -10,7 +10,7 @@ $tabset-tab-small-vertical-padding: $component-padding-md;
 $tabset-tab-large-vertical-padding: $component-padding-lg;
 
 .ax-tabset {
-  @include space-block($container-margin-sm);
+  @include space-block();
 }
 
 .ax-tabset__list {

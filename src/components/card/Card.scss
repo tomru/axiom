@@ -3,3 +3,7 @@
 .ax-card {
   padding: $container-padding-lg;
 }
+
+.ax-card--compact {
+  padding: $container-padding-sm 0;
+}

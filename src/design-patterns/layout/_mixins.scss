@@ -23,7 +23,7 @@ $_breakpoint: false;
 /// Screen less than
 /// @param {Number} $max - Breakpoint
 @mixin screen-less-than($max: breakpoint-prop(width)) {
-  @media (max-width: $max - 1px) {
+  @media (max-width: $max) {
     @content;
   }
 }

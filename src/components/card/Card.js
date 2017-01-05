@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classnames from 'classnames';
 import { Base } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
@@ -8,13 +9,17 @@ if (__INCLUDE_CSS__) {
 export default class Card extends Component {
   static propTypes = {
     children: PropTypes.node,
+    compact: PropTypes.bool,
   };
 
   render() {
-    const { children } = this.props;
+    const { children, compact } = this.props;
+    const classes = classnames('ax-card', {
+      'ax-card--compact': compact,
+    });
 
     return (
-      <Base className="ax-card">
+      <Base className={ classes }>
         { children }
       </Base>
     );

@@ -1,10 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { Heading } from 'bw-axiom';
+import { CardList, CardListItem, Heading } from 'bw-axiom';
 import ApiDocsProp from './ApiDocsProp';
-
-if (__INCLUDE_CSS__) {
-  require('./ApiDocsList.scss');
-}
 
 export default class ApiDocsList extends Component {
   static propTypes = {
@@ -16,17 +12,17 @@ export default class ApiDocsList extends Component {
     const { componentName, props } = this.props;
 
     return (
-      <div className="dm-api-docs-list">
+      <CardList>
         <Heading key="heading" style="title">{ componentName }</Heading>
 
         { Object.keys(props).sort().map((prop, index) =>
-          <div className="dm-api-docs-list__item" key={ index }>
+          <CardListItem key={ index }>
             <ApiDocsProp
                 propData={ props[prop] }
                 propName={ prop } />
-          </div>
+          </CardListItem>
         ) }
-      </div>
+      </CardList>
     );
   }
 }

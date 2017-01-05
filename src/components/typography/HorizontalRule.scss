@@ -3,7 +3,7 @@
 @import '../../design-patterns/spacing/mixins';
 
 .ax-horizontal-rule {
-  @include space-block($component-margin-lg);
+  @include space-block();
 
   border-top: $component-border-width solid $color-context-component-border;
   border-right: 0;

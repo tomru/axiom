@@ -1,5 +1,14 @@
 import React, { Component, PropTypes } from 'react';
-import { Grid, GridCell, Label, LabelGroup, Italic, Paragraph, Strong } from 'bw-axiom';
+import {
+  Card,
+  Grid,
+  GridCell,
+  Label,
+  LabelGroup,
+  Italic,
+  Paragraph,
+  Strong,
+} from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./ApiDocsProp.scss');
@@ -45,9 +54,10 @@ export default class ApiDocsProp extends Component {
   render()  {
     const { propData, propName } = this.props;
     const { defaultValue, description, required, type } = propData;
+    const hasDefault = defaultValue !== undefined;
 
     return (
-      <div className="dm-api-docs-prop">
+      <Card compact={ true }>
         <Grid>
           <GridCell>
             <Paragraph><Strong>{ propName }</Strong></Paragraph>
@@ -57,24 +67,26 @@ export default class ApiDocsProp extends Component {
             } } }
           </GridCell>
 
-          <GridCell shrink={ true }>
-            <LabelGroup>
-              { do {
-                if (defaultValue !== undefined) {
-                  <Label color="grey" size="small">
-                    Default: <Italic>{ defaultValue.computed
-                      ? 'Computed'
-                      : JSON.stringify(defaultValue.value)
-                    }</Italic>
-                  </Label>;
-                }
-              } }
+          { do { if (hasDefault || required) {
+            <GridCell shrink={ true }>
+              <LabelGroup>
+                { do {
+                  if (hasDefault) {
+                    <Label color="grey" size="small">
+                      Default: <Italic>{ defaultValue.computed
+                        ? 'Computed'
+                        : JSON.stringify(defaultValue.value)
+                      }</Italic>
+                    </Label>;
+                  }
+                } }
 
-              { do { if (required) {
-                <Label color="invalid" size="small">Required</Label>;
-              } } }
-            </LabelGroup>
-          </GridCell>
+                { do { if (required) {
+                  <Label color="invalid" size="small">Required</Label>;
+                } } }
+              </LabelGroup>
+            </GridCell>;
+          } } }
         </Grid>
 
         <pre className="dm-doc-api__pre">
@@ -82,7 +94,7 @@ export default class ApiDocsProp extends Component {
             { resolvePropType(type) }
           </code>
         </pre>
-      </div>
+      </Card>
     );
   }
 }

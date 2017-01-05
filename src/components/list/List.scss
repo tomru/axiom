@@ -14,10 +14,16 @@
 
   .ax-list__item {
     display: inline;
-    padding: 0 $component-padding-sm;
+    padding: 0 $component-padding-md;
     border-right: 1px solid $color-context-component-border;
 
-    &:first-child { padding-left: 0; }
-    &:last-child  { padding-right: 0; }
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child  {
+      padding-right: 0;
+      border-right-width: 0;
+    }
   }
 }

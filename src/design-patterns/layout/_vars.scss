@@ -1,7 +1,7 @@
-$layout-width-xs: 450px;
-$layout-width-sm: 768px;
-$layout-width-md: 992px;
-$layout-width-lg: 1200px;
+$layout-width-xs: 28.125rem;
+$layout-width-sm: 48rem;
+$layout-width-md: 62rem;
+$layout-width-lg: 75rem;
 
 $breakpoints: (
   ( id: 'small', width: $layout-width-sm ),

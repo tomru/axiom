@@ -3,5 +3,5 @@
 
 // Form: Base
 .ax-form {
-  @include space-block($container-margin-sm);
+  @include space-block();
 }

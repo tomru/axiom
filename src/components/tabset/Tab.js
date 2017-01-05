@@ -6,7 +6,7 @@ export default class Tab extends Component {
   static propTypes = {
     active: PropTypes.bool,
     disabled: PropTypes.bool,
-    size: PropTypes.oneOf(['small', 'large']).required,
+    size: PropTypes.string,
     title: PropTypes.node,
   };
 

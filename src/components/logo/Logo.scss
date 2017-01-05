@@ -1,8 +1,7 @@
 @import '../../design-patterns/spacing/mixins';
 
-.ax-card-list {
+.ax-logo {
   @include space-block();
 
-  padding: 0;
-  list-style: none;
+  max-width: 100%;
 }

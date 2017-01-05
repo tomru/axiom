@@ -1,2 +1,4 @@
-$platform-dock-size: 60px;
+@import '../../design-patterns/spacing/vars';
+
+$platform-dock-size: $spacing-grid-size * 16;
 

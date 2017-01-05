@@ -2,7 +2,7 @@
 @import '~bw-axiom/design-patterns/spacing/vars';
 
 .dm-example-box {
-  @include space-block($container-margin-sm);
+  @include space-block();
 
   padding: $page-padding-v $page-padding-h;
 }

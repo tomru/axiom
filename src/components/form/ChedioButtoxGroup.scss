@@ -5,14 +5,14 @@
 
 // Button Group: Base
 .ax-chedio-buttox__group {
-  @include space-block($container-margin-sm);
+  @include space-block();
 }
 
 .ax-chedio-buttox__group--inline {
   @include inline-component-container(ax-chedio-buttox__container, $component-margin-sm);
 
   .ax-chedio-buttox__container {
-    @include space-inline($component-margin-sm);
+    @include space-inline();
 
     display: inline-flex;
   }
