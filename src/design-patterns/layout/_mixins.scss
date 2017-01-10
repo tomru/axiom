@@ -1,6 +1,5 @@
 @import '../layout/vars';
 
-///
 $_breakpoint: false;
 
 @mixin for-each-breakpoint() {
@@ -20,29 +19,22 @@ $_breakpoint: false;
   }
 }
 
-/// Screen less than
-/// @param {Number} $max - Breakpoint
 @mixin screen-less-than($max: breakpoint-prop(width)) {
-  @media (max-width: $max) {
+  @media (max-width: $max - 0.0625rem) {
     @content;
   }
 }
 
-
-/// Screen more than
-/// @param {Number} $min - Breakpoint
 @mixin screen-more-than($min: breakpoint-prop(width)) {
   @media (min-width: $min) {
     @content;
   }
 }
 
-///
 @function breakpoint-first() {
   @return nth($breakpoints, 1);
 }
 
-///
 @function breakpoint-last() {
   @return nth($breakpoints, length($breakpoints));
 }
