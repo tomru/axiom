@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { Link, Strong } from 'bw-axiom';
+import { Link as RouterLink } from 'react-router';
+import { Strong } from 'bw-axiom';
 import NavList from './NavList';
 
 if (__INCLUDE_CSS__) {
@@ -49,13 +50,15 @@ export default class NavListItem extends Component {
 
     return (
       <li className={ classes }>
-        <Link
-            className="dm-nav__link"
-            onClick={ createOnItemClickHandler() }
-            supressStyle={ true }
-            to={ to }>
-          <Strong>{ name }</Strong>
-        </Link>
+        { do { if (to) {
+          <RouterLink className="dm-nav__link" to={ to }>
+            <Strong>{ name }</Strong>
+          </RouterLink>;
+        } else {
+          <a className="dm-nav__link" onClick={ createOnItemClickHandler() }>
+            <Strong>{ name }</Strong>
+          </a>;
+        } } }
 
         { do {
           if (hasChildren) {

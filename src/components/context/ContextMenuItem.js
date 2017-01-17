@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Base, Link } from 'bw-axiom';
+import { Base } from 'bw-axiom';
 
 export default class ContextMenuItem extends Component {
   static propTypes = {
@@ -11,9 +11,9 @@ export default class ContextMenuItem extends Component {
 
     return (
       <Base Component="li" className="ax-context-menu__item">
-        <Link { ...rest } className="ax-context-menu__item-link" supressStyle={ true }>
+        <a { ...rest } className="ax-context-menu__item-link">
           { children }
-        </Link>
+        </a>
       </Base>
     );
   }

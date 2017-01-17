@@ -32,8 +32,7 @@
     "classnames": "^2.2.1",
     "moment": "^2.14.1",
     "normalize.css": "^4.2.0",
-    "react-modal": "^1.4.0",
-    "react-router": "2.6.1"
+    "react-modal": "^1.4.0"
   },
   "peerDependencies": {
     "react": "^15.4.1"
@@ -73,6 +72,7 @@
     "react-docgen": "^2.12.1",
     "react-dom": "^15.4.1",
     "react-element-to-jsx-string": "^6.0.0",
+    "react-router": "2.6.1",
     "react-test-renderer": "^15.4.1",
     "sass-lint": "^1.10.0",
     "sass-loader": "^3.1.2",
