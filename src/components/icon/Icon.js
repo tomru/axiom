@@ -67,14 +67,14 @@ export default class Icon extends Component {
 
   render() {
     const { name, size, ...rest } = this.props;
+    const style = { width: size, height: size };
 
     return (
       <Base { ...rest }
           Component="svg"
           className="ax-icon"
-          height={ size }
-          viewBox="0 0 14 14"
-          width={ size }>
+          style={ style }
+          viewBox="0 0 14 14">
         { ICON_NAME_MAP[name] }
       </Base>
     );
