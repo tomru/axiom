@@ -9,7 +9,6 @@ import {
   CheckBox,
   Grid,
   GridCell,
-  Heading,
   Italic,
   Label,
   LabelGroup,
@@ -17,134 +16,55 @@ import {
   Strong,
   Paragraph,
   TextInput,
+  mediumDateWithTime,
+  Login,
 } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./Labs.scss');
 }
 
+const DATA = [
+  {
+    date: '2017-01-19T18:06:44.708Z',
+    status: 'Success',
+    project: 'bw‑dev‑cloud‑platform0',
+    env: 'Production',
+    username: 'Andy Hume',
+    description: 'Updates remaining configs to new DNS/IP format',
+    ref: '333f593',
+  },
+  {
+    date: '2017-01-19T12:49:44.708Z',
+    status: 'Failed',
+    project: 'bw‑dev‑cloud‑analytics0',
+    env: 'Stage',
+    username: 'Chris Skilton',
+    description: 'pipeline(s) triggered by deploy-hook (gclouder/prod-analytics0) [ZWFjYTRh]',
+    ref: 'de6c67e',
+  },
+  {
+    date: '2017-01-19T12:24:44.708Z',
+    status: 'Success',
+    project: 'bw‑prod-vizia0',
+    env: 'Production',
+    username: 'Andy Hume',
+    description: 'Adds tokens. DNS/IP to stage Gemfile Gemfile.lock Guardfile README.md assets bin ci conf lib spec test0 Updates static_ips config format',
+    ref: 'fd3a7c4',
+  },
+];
+
+const APPLICATIONS = [
+  'Audiences', 'Axiom', 'Analytics', 'Viza', 'GCP',
+];
+
 export default class Labs extends Component {
   render() {
     return (
       <div className="dm-labs">
-        <div className="dm-labs__canvas">
-          <TextInput placeholder="Search..." size="large" />
+        <div className="dm-labs__canvas" style={ { minHeight: 590, width: 800 } }>
 
-          <CheckBoxGroup inline={ true }>
-            <CheckBox defaultChecked={ true }>Audiences</CheckBox>
-            <CheckBox defaultChecked={ true }>Axiom</CheckBox>
-            <CheckBox defaultChecked={ true }>Frontend</CheckBox>
-            <CheckBox defaultChecked={ true }>Vizia</CheckBox>
-          </CheckBoxGroup>
 
-          <CardList>
-            <CardListItem onClick={ () => {} }>
-              <Card>
-                <Grid gutters="large" vAlign="middle">
-                  <GridCell>
-                    <Grid>
-                      <GridCell>
-                        <Heading>
-                          <Strong>monkey patch for testing ipaddresses </Strong>
-                          <Link>(596b758...)</Link>
-                        </Heading>
-                      </GridCell>
-
-                      <GridCell shrink={ true }>
-                        <LabelGroup>
-                          <Label>Production</Label>
-                          <Label color="valid">Success</Label>
-                        </LabelGroup>
-                      </GridCell>
-                    </Grid>
-
-                    <Grid textSubtle={ true }>
-                      <GridCell>
-                        <Paragraph><Italic>Rob Wilson</Italic></Paragraph>
-                      </GridCell>
-
-                      <GridCell shrink={ true }>
-                        <Paragraph>11:32 Thu 5th Jan</Paragraph>
-                      </GridCell>
-                    </Grid>
-                  </GridCell>
-                </Grid>
-              </Card>
-            </CardListItem>
-
-            <CardListItem onClick={ () => {} }>
-              <Card>
-                <Grid gutters="large" vAlign="middle">
-                  <GridCell>
-                    <Grid>
-                      <GridCell>
-                        <Heading>
-                          <Strong>monkey patch for testing ipaddresses </Strong>
-                          <Link>(596b758...)</Link>
-                        </Heading>
-                      </GridCell>
-
-                      <GridCell shrink={ true }>
-                        <LabelGroup>
-                          <Label>Development</Label>
-                          <Label color="invalid">Failed</Label>
-                        </LabelGroup>
-                      </GridCell>
-                    </Grid>
-
-                    <Grid textSubtle={ true }>
-                      <GridCell>
-                        <Paragraph><Italic>Rob Wilson</Italic></Paragraph>
-                      </GridCell>
-
-                      <GridCell shrink={ true }>
-                        <Paragraph>11:32 Thu 5th Jan</Paragraph>
-                      </GridCell>
-                    </Grid>
-                  </GridCell>
-                </Grid>
-              </Card>
-            </CardListItem>
-
-            <CardListItem onClick={ () => {} }>
-              <Card>
-                <Grid gutters="large" vAlign="middle">
-                  <GridCell>
-                    <Grid>
-                      <GridCell>
-                        <Heading>
-                          <Strong>monkey patch for testing ipaddresses </Strong>
-                          <Link>(596b758...)</Link>
-                        </Heading>
-                      </GridCell>
-
-                      <GridCell shrink={ true }>
-                        <LabelGroup>
-                          <Label>Production</Label>
-                          <Label color="valid">Success</Label>
-                        </LabelGroup>
-                      </GridCell>
-                    </Grid>
-
-                    <Grid textSubtle={ true }>
-                      <GridCell>
-                        <Paragraph><Italic>Rob Wilson</Italic></Paragraph>
-                      </GridCell>
-
-                      <GridCell shrink={ true }>
-                        <Paragraph>11:32 Thu 5th Jan</Paragraph>
-                      </GridCell>
-                    </Grid>
-                  </GridCell>
-                </Grid>
-              </Card>
-            </CardListItem>
-          </CardList>
-
-          <ButtonGroup textCenter={ true }>
-            <Button style="secondary">Previous</Button>
-            <Button style="secondary">Next</Button>
-          </ButtonGroup>
 
         </div>
       </div>
