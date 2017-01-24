@@ -14,6 +14,7 @@ export default class Position extends Component {
     isVisible: PropTypes.bool.isRequired,
     offset: PropTypes.oneOf(['start', 'middle', 'end']),
     position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    onMaskClick: PropTypes.func,
   };
 
   static defaultProps = {
@@ -102,16 +103,22 @@ export default class Position extends Component {
   }
 
   renderContent() {
-    const { children } = this.props;
+    const { children, onMaskClick } = this.props;
     const { placement } = this.state;
     const [ position, offset ] = placementToPosition(placement);
 
     return (
-      <div className="ax-position">
-        { cloneElement(findComponent(children, PositionContent), {
-          position,
-          offset,
-        }) }
+      <div>
+        <div className="ax-position">
+          { cloneElement(findComponent(children, PositionContent), {
+            position,
+            offset,
+          }) }
+        </div>
+
+        { do { if (onMaskClick) {
+          <div className="ax-position__mask" onClick={ onMaskClick } />;
+        } } }
       </div>
     );
   }
@@ -121,7 +128,9 @@ export default class Position extends Component {
       this,
       this.renderContent(),
       this._reactRootNode,
-      () => this._content = this._reactRootNode.firstElementChild
+      () => {
+        this._content = this._reactRootNode.firstElementChild.firstElementChild;
+      }
     );
   }
 
