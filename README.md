@@ -1,6 +1,7 @@
 ## Axiom - Pattern Library
 
 [![Build Status](https://travis-ci.com/BrandwatchLtd/axiom.svg?token=1ejoq3JpxReLqRyzfSo2&branch=master)](https://travis-ci.com/BrandwatchLtd/axiom)
+[![npm version](https://badge.fury.io/js/bw-axiom.svg)](https://badge.fury.io/js/bw-axiom)
 
 A consumable library of Brandwatch UI & UX patterns. 
 
