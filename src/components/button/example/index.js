@@ -4,4 +4,5 @@ module.exports = [
   require('./full-width').default,
   require('./icon').default,
   require('./group').default,
+  require('./joined').default,
 ];

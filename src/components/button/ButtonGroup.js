@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classnames from 'classnames';
 import { Base } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
@@ -8,13 +9,17 @@ if (__INCLUDE_CSS__) {
 export default class ButtonGroup extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    joined: PropTypes.bool,
   };
 
   render() {
-    const { children, ...rest } = this.props;
+    const { children, joined, ...rest } = this.props;
+    const classes = classnames('ax-button__group', {
+      'ax-button__group--joined': joined,
+    });
 
     return (
-      <Base { ...rest } className="ax-button__group">
+      <Base { ...rest } className={ classes }>
         { children }
       </Base>
     );
