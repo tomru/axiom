@@ -25,7 +25,7 @@
     "prepublish": "rm -rf ./lib && yarn prepublish-js && yarn prepublish-sass",
     "prepublish-js": "NODE_ENV=production BABEL_ENV=production babel ./src --ignore example,*.test.js --out-dir ./lib",
     "prepublish-sass": "rsync -a --prune-empty-dirs --include '*/' --include '*.scss' --exclude '*' ./src/* ./lib",
-    "semantic-release": "semantic-release pre && yarn publish && semantic-release post",
+    "semantic-release": "semantic-release pre && npm run publish && semantic-release post",
     "start": "webpack-dev-server --port 4000 --inline --hot --history-api-fallback --content-base style-guide/",
     "test": "NODE_ENV=production BABEL_ENV=production jest --config .jest.json"
   },
