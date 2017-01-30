@@ -1,6 +1,6 @@
 exports[`ContextBox renders bottom 1`] = `
 <div
-  className="ax-context-box ax-context-box--bottom ax-context-box--padded"
+  className="ax-context-box ax-context-box--bottom ax-context-box--padding-large ax-theme--light"
   style={
     Object {
       "width": "14.5rem",
@@ -14,7 +14,7 @@ exports[`ContextBox renders bottom 1`] = `
 
 exports[`ContextBox renders custom width 1`] = `
 <div
-  className="ax-context-box ax-context-box--top ax-context-box--padded"
+  className="ax-context-box ax-context-box--top ax-context-box--padding-large ax-theme--light"
   style={
     Object {
       "width": "20rem",
@@ -28,7 +28,49 @@ exports[`ContextBox renders custom width 1`] = `
 
 exports[`ContextBox renders left 1`] = `
 <div
-  className="ax-context-box ax-context-box--left ax-context-box--padded"
+  className="ax-context-box ax-context-box--left ax-context-box--padding-large ax-theme--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }>
+  Lorem ipsum
+  <span
+    className="ax-context-box__arrow" />
+</div>
+`;
+
+exports[`ContextBox renders padding large 1`] = `
+<div
+  className="ax-context-box ax-context-box--top ax-context-box--padding-large ax-theme--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }>
+  Lorem ipsum
+  <span
+    className="ax-context-box__arrow" />
+</div>
+`;
+
+exports[`ContextBox renders padding none 1`] = `
+<div
+  className="ax-context-box ax-context-box--top ax-context-box--padding-none ax-theme--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }>
+  Lorem ipsum
+  <span
+    className="ax-context-box__arrow" />
+</div>
+`;
+
+exports[`ContextBox renders padding small 1`] = `
+<div
+  className="ax-context-box ax-context-box--top ax-context-box--padding-small ax-theme--light"
   style={
     Object {
       "width": "14.5rem",
@@ -42,7 +84,7 @@ exports[`ContextBox renders left 1`] = `
 
 exports[`ContextBox renders right 1`] = `
 <div
-  className="ax-context-box ax-context-box--right ax-context-box--padded"
+  className="ax-context-box ax-context-box--right ax-context-box--padding-large ax-theme--light"
   style={
     Object {
       "width": "14.5rem",
@@ -56,21 +98,7 @@ exports[`ContextBox renders right 1`] = `
 
 exports[`ContextBox renders top 1`] = `
 <div
-  className="ax-context-box ax-context-box--top ax-context-box--padded"
-  style={
-    Object {
-      "width": "14.5rem",
-    }
-  }>
-  Lorem ipsum
-  <span
-    className="ax-context-box__arrow" />
-</div>
-`;
-
-exports[`ContextBox renders unpadded 1`] = `
-<div
-  className="ax-context-box ax-context-box--top"
+  className="ax-context-box ax-context-box--top ax-context-box--padding-large ax-theme--light"
   style={
     Object {
       "width": "14.5rem",
@@ -84,7 +112,7 @@ exports[`ContextBox renders unpadded 1`] = `
 
 exports[`ContextBox renders with defaultProps 1`] = `
 <div
-  className="ax-context-box ax-context-box--top ax-context-box--padded"
+  className="ax-context-box ax-context-box--top ax-context-box--padding-large ax-theme--light"
   style={
     Object {
       "width": "14.5rem",

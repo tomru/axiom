@@ -6,8 +6,6 @@ $context-box-tip-size: $spacing-grid-size * 3;
 $context-box-tip-space: $spacing-grid-size * 2;
 
 .ax-context-box {
-  @include theme-light;
-
   position: relative;
   background-color: var(--color-context-background);
   color: var(--color-context-text);
@@ -34,7 +32,11 @@ $context-box-tip-space: $spacing-grid-size * 2;
   padding-right: $context-box-tip-space;
 }
 
-.ax-context-box--padded {
+.ax-context-box--padding-small {
+  padding: $container-padding-sm;
+}
+
+.ax-context-box--padding-large {
   padding: $container-padding-lg;
 }
 

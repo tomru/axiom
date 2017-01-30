@@ -14,7 +14,7 @@ export default class ContextMenu extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <ContextBox { ...rest } padded={ false }>
+      <ContextBox { ...rest } padding="none">
         <ul className="ax-context-menu">
           { children }
         </ul>

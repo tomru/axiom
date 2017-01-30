@@ -1,6 +1,6 @@
 exports[`ContextMenu renders custom width 1`] = `
 <div
-  className="ax-context-box ax-context-box--top-middle"
+  className="ax-context-box ax-context-box--top ax-context-box--padding-none ax-theme--light"
   style={
     Object {
       "width": "20rem",
@@ -16,12 +16,14 @@ exports[`ContextMenu renders custom width 1`] = `
       </a>
     </li>
   </ul>
+  <span
+    className="ax-context-box__arrow" />
 </div>
 `;
 
 exports[`ContextMenu renders with defaultProps 1`] = `
 <div
-  className="ax-context-box ax-context-box--top-middle"
+  className="ax-context-box ax-context-box--top ax-context-box--padding-none ax-theme--light"
   style={
     Object {
       "width": "14.5rem",
@@ -37,5 +39,7 @@ exports[`ContextMenu renders with defaultProps 1`] = `
       </a>
     </li>
   </ul>
+  <span
+    className="ax-context-box__arrow" />
 </div>
 `;

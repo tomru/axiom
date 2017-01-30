@@ -10,26 +10,29 @@ export default class ContextBox extends Component {
   static propTypes = {
     arrowRef: PropTypes.func,
     children: PropTypes.node,
-    padded: PropTypes.bool,
+    padding: PropTypes.oneOf(['none', 'small', 'large']),
     position: PropTypes.oneOf(['top', 'bottom', 'right', 'left']),
+    theme: PropTypes.string,
     width: PropTypes.string,
   };
 
   static defaultProps = {
-    padded: true,
+    padding: 'large',
     position: 'top',
+    theme: 'light',
     width: '14.5rem',
   };
 
   render() {
-    const { arrowRef, children, padded, position, width, ...rest } = this.props;
+    const { arrowRef, children, position, padding, theme, width, ...rest } = this.props;
     const style = { width };
-    const classes = classnames('ax-context-box',  `ax-context-box--${position}`, {
-      'ax-context-box--padded': padded,
-    });
+    const classes = classnames('ax-context-box',
+      `ax-context-box--${position}`,
+      `ax-context-box--padding-${padding}`,
+    );
 
     return (
-      <Base { ...rest } className={ classes } style={ style }>
+      <Base { ...rest } className={ classes } style={ style } theme={ theme }>
         { children }
 
         <span
