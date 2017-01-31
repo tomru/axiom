@@ -8,27 +8,33 @@ if (__INCLUDE_CSS__) {
 
 export default class ContextBox extends Component {
   static propTypes = {
+    arrowRef: PropTypes.func,
     children: PropTypes.node,
-    offset: PropTypes.oneOf(['start', 'middle', 'end']),
     padded: PropTypes.bool,
     position: PropTypes.oneOf(['top', 'bottom', 'right', 'left']),
+    width: PropTypes.string,
   };
 
   static defaultProps = {
-    offset: 'middle',
     padded: true,
     position: 'top',
+    width: '14.5rem',
   };
 
   render() {
-    const { children, offset, padded, position, ...rest } = this.props;
-    const classes = classnames('ax-context-box',  `ax-context-box--${position}-${offset}`, {
+    const { arrowRef, children, padded, position, width, ...rest } = this.props;
+    const style = { width };
+    const classes = classnames('ax-context-box',  `ax-context-box--${position}`, {
       'ax-context-box--padded': padded,
     });
 
     return (
-      <Base { ...rest } className={ classes }>
+      <Base { ...rest } className={ classes } style={ style }>
         { children }
+
+        <span
+            className="ax-context-box__arrow"
+            ref={ arrowRef } />
       </Base>
     );
   }

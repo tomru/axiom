@@ -14,7 +14,7 @@ export default class DropdownExample extends Component {
     return (
       <Example name="Dropdown with IconButton">
         <Snippet>
-          <Dropdown position="right">
+          <Dropdown offset="start" position="right">
             <DropdownButton>
               <IconButton name="ellipsis" />
             </DropdownButton>

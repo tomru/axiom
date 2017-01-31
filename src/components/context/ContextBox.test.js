@@ -17,80 +17,38 @@ describe('ContextBox', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders top start', () => {
-    const component = getComponent({ position: 'top', offset: 'start' });
+  it('renders top', () => {
+    const component = getComponent({ position: 'top' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders top middle', () => {
-    const component = getComponent({ position: 'top', offset: 'middle' });
+  it('renders right', () => {
+    const component = getComponent({ position: 'right' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders top end', () => {
-    const component = getComponent({ position: 'top', offset: 'end' });
+  it('renders bottom', () => {
+    const component = getComponent({ position: 'bottom' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders right start', () => {
-    const component = getComponent({ position: 'right', offset: 'start' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders right middle', () => {
-    const component = getComponent({ position: 'right', offset: 'middle' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders right end', () => {
-    const component = getComponent({ position: 'right', offset: 'end' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders bottom start', () => {
-    const component = getComponent({ position: 'bottom', offset: 'start' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders bottom middle', () => {
-    const component = getComponent({ position: 'bottom', offset: 'middle' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders bottom end', () => {
-    const component = getComponent({ position: 'bottom', offset: 'end' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders left start', () => {
-    const component = getComponent({ position: 'left', offset: 'start' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders left middle', () => {
-    const component = getComponent({ position: 'left', offset: 'middle' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders left end', () => {
-    const component = getComponent({ position: 'left', offset: 'end' });
+  it('renders left', () => {
+    const component = getComponent({ position: 'left' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders unpadded', () => {
     const component = getComponent({ padded: false });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders custom width', () => {
+    const component = getComponent({ width: '20rem' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

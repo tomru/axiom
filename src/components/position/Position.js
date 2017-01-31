@@ -8,6 +8,8 @@ if (__INCLUDE_CSS__) {
   require('./Position.scss');
 }
 
+/* eslint-disable react/no-find-dom-node */
+
 export default class Position extends Component {
   static propTypes = {
     children: PropTypes.array.isRequired,
@@ -22,12 +24,12 @@ export default class Position extends Component {
     position: 'top',
   }
 
-  componentWillMount() {
-    const { position, offset } = this.props;
+  constructor(props) {
+    super(props);
 
-    this.setState({
-      placement: positionToPlacement(position, offset),
-    });
+    this.state = {
+      placement: positionToPlacement(props.position, props.offset),
+    };
   }
 
   componentDidMount() {
@@ -39,7 +41,7 @@ export default class Position extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { isVisible } = this.props;
+    const { isVisible, position, offset } = this.props;
 
     if (isVisible !== prevProps.isVisible) {
       if (isVisible) {
@@ -49,8 +51,8 @@ export default class Position extends Component {
       }
     } else if (isVisible) {
       this.renderSubtree();
-      this._popper.destroy();
-      this.createPopper();
+      this._popper.options.placement = positionToPlacement(position, offset);
+      this._popper.update();
     }
   }
 
@@ -78,17 +80,28 @@ export default class Position extends Component {
     const { placement: statePlacement } = this.state;
 
     this._popper = new popperJS(this._target, this._content, {
-      onCreate: ({ placement }) => placement !== statePlacement &&
-        this.setState({ placement }),
-      onUpdate: ({ placement }) => placement !== statePlacement &&
-        this.setState({ placement }),
+      onCreate: ::this.handlePlacementChange,
+      onUpdate: ::this.handlePlacementChange,
       placement: statePlacement,
       modifiers: {
+        arrow: {
+          element: this._arrow,
+        },
         flip: {
           behavior: getPlacementFlipOrder(statePlacement),
         },
+        inner: { enabled: false },
+        offset: { enabled: false },
       },
     });
+  }
+
+  handlePlacementChange({ placement }) {
+    const { placement: statePlacement } = this.state;
+
+    if (statePlacement !== placement) {
+      this.setState({ placement });
+    }
   }
 
   destroy() {
@@ -105,15 +118,17 @@ export default class Position extends Component {
   renderContent() {
     const { children, onMaskClick } = this.props;
     const { placement } = this.state;
-    const [ position, offset ] = placementToPosition(placement);
+    const [ position ] = placementToPosition(placement);
 
     return (
       <div>
         <div className="ax-position">
-          { cloneElement(findComponent(children, PositionContent), {
-            position,
-            offset,
-          }) }
+          {
+            cloneElement(findComponent(children, PositionContent), {
+              arrowRef: (arrow) => this._arrow = ReactDOM.findDOMNode(arrow),
+              position,
+            })
+          }
         </div>
 
         { do { if (onMaskClick) {
@@ -137,10 +152,8 @@ export default class Position extends Component {
   render() {
     const { children } = this.props;
 
-    /* eslint-disable react/no-find-dom-node */
     return cloneElement(findComponent(children, PositionTarget), {
       ref: (target) => this._target = ReactDOM.findDOMNode(target),
     });
-    /* eslint-enable react/no-find-dom-node */
   }
 }

@@ -8,16 +8,13 @@ export function placementToPosition(placement) {
 }
 
 export function getPlacementFlipOrder(placement) {
-  return [
-    'top', 'top-start', 'top-end',
-    'right', 'right-start', 'right-end',
-    'bottom', 'bottom-start', 'bottom-end',
-    'left', 'left-start', 'left-end',
-  ].reduce((o, p) => {
-    if (p !== placement) {
-      o.unshift(p);
-    }
+  const [primary] = placementToPosition(placement);
+  const [secondary, tertiary, quaternary] = {
+    top: ['right', 'bottom', 'left'],
+    right: ['bottom', 'left', 'top'],
+    bottom: ['left', 'top', 'right'],
+    left: ['top', 'right', 'bottom'],
+  }[primary];
 
-    return o;
-  }, [placement]);
+  return [ primary, secondary, tertiary, quaternary ];
 }

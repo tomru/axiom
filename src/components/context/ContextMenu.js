@@ -8,19 +8,13 @@ if (__INCLUDE_CSS__) {
 export default class ContextMenu extends Component {
   static propTypes = {
     children: PropTypes.node,
-    width: PropTypes.string,
-  };
-
-  static defaultProps = {
-    width: '14.5rem',
   };
 
   render() {
-    const { children, width, ...rest } = this.props;
-    const style = { width };
+    const { children, ...rest } = this.props;
 
     return (
-      <ContextBox { ...rest } padded={ false } style={ style }>
+      <ContextBox { ...rest } padded={ false }>
         <ul className="ax-context-menu">
           { children }
         </ul>
