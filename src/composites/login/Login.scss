@@ -8,6 +8,7 @@ $logo-flag-padding: $spacing-grid-size * 4;
 
 .ax-login {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   height: 100%;
   padding: 0 $page-padding-h;
