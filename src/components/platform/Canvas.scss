@@ -6,7 +6,8 @@
 .ax-platform__canvas {
   @include transition((transform), $transition-time-slow);
 
-  flex: 1 1 auto;
+  flex: 1 1 0%;
+  height: 0;
   margin-left: $platform-dock-size;
   overflow: auto;
 }
