@@ -1,6 +1,7 @@
 exports[`Image renders with defaultProps 1`] = `
 <img
   className=""
+  onError={undefined}
   src="/image.png" />
 `;
 
@@ -8,6 +9,7 @@ exports[`Image renders with extra props 1`] = `
 <img
   alt="Lorem"
   className=""
+  onError={undefined}
   src="/image.png"
   title="Lorem" />
 `;
