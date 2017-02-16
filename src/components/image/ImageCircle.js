@@ -24,7 +24,7 @@ export default class ImageCircle extends Component {
     return (
       <Base className={ classes } style={ style }>
         <div className="ax-image-circle__image">
-          <Image { ...rest } style={ style } />
+          <Image { ...rest } />
         </div>
 
         { do { if (overlayIconName) {
