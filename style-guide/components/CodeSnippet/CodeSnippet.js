@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { prepareSnippet } from '../../utils/code-formatting';
 
 if (__INCLUDE_CSS__) {
-  require('prismjs/themes/prism.css');
   require('./CodeSnippet.scss');
 }
 
