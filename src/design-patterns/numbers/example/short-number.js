@@ -42,7 +42,11 @@ export default class ShortNumber extends Component {
           </GridCell>
         </Grid>
 
-        <CodeSnippet language="js">shortNumber(Number [, Number]);</CodeSnippet>
+        <CodeSnippet language="js">{`
+          import { shortNumber } from 'bw-axiom';
+
+          shortNumber(Number [, Number]);
+        `}</CodeSnippet>
       </Example>
     );
   }

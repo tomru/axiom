@@ -42,7 +42,11 @@ export default class LongNumber extends Component {
           </GridCell>
         </Grid>
 
-        <CodeSnippet language="js">LongNumber(Number [, Number]);</CodeSnippet>
+        <CodeSnippet language="js">{`
+          import { longNumber } from 'bw-axiom';
+
+          longNumber(Number [, Number]);
+        `}</CodeSnippet>
       </Example>
     );
   }
