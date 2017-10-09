@@ -7,6 +7,7 @@ import './Console.css';
 export default class Console extends Component {
   static propTypes = {
     children: PropTypes.node,
+    isDockless: PropTypes.bool,
     isVisible: PropTypes.bool,
   };
 
@@ -15,11 +16,12 @@ export default class Console extends Component {
   };
 
   render() {
-    const { children, isVisible, ...rest } = this.props;
+    const { children, isDockless, isVisible, ...rest } = this.props;
     const { consoleWidth } = this.context;
     const style = { width: consoleWidth };
     const classes = classnames('ax-platform__console', {
-      'ax-platform__console--visible': isVisible,
+      'ax-platform__console--visible': isVisible && !isDockless,
+      'ax-platform__console--visible-without-dock': isDockless && isVisible,
     });
 
     return (

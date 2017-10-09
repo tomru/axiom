@@ -17,3 +17,7 @@
 .ax-platform__console--visible {
   transform: translateX(var(--cmp-platform-dock-size));
 }
+
+.ax-platform__console--visible-without-dock {
+  transform: none;
+}
