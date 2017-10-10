@@ -7,23 +7,29 @@ import './Canvas.css';
 export default class Canvas extends Component {
   static propTypes = {
     children: PropTypes.node,
-    isDockless: PropTypes.bool,
+    hasDock: PropTypes.bool,
     isShifted: PropTypes.bool,
+    shiftDirection: PropTypes.oneOf(['left', 'right']),
   };
+
+  static defaultProps = {
+    hasDock: true,
+    shiftDirection: 'right',
+  }
 
   static contextTypes = {
     consoleWidth: PropTypes.string.isRequired,
   };
 
   render() {
-    const { children, isDockless, isShifted, ...rest } = this.props;
+    const { children, hasDock, isShifted, shiftDirection, ...rest } = this.props;
     const { consoleWidth } = this.context;
     const style = {
       marginRight: isShifted && consoleWidth,
-      transform: isShifted && `translateX(${consoleWidth})`,
+      transform: isShifted && shiftDirection !== 'left' && `translateX(${consoleWidth})`,
     };
     const classes = classnames('ax-platform__canvas', {
-      'ax-platform__canvas--no-dock': isDockless,
+      'ax-platform__canvas--no-dock': !hasDock,
     });
 
     return (
