@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/eslint-config-axiom",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Brandwatch Axiom - eslint config",
   "main": "dist/index.js",
   "license": "UNLICENSED",
