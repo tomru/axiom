@@ -17,6 +17,7 @@ npm config set "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}"
 
 yarn build:packages
 
+git checkout master
 npx lerna publish --conventional-commits --yes
 
 # Workaround https://github.com/travis-ci/travis-ci/issues/8082
