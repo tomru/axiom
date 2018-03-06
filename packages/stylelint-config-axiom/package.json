@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/stylelint-config-axiom",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Brandwatch Axiom - stylelint config",
   "main": "dist/index.js",
   "license": "UNLICENSED",
