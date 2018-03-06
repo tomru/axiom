@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
+if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
+    exit 0
+fi
+
 curl ci-utils.bwcom.io/gcloud/install | bash
 curl ci-utils.bwcom.io/gcloud/auth | bash
 
