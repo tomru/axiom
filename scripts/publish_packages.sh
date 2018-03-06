@@ -9,6 +9,8 @@ ssh-add github_deploy_key
 git config --global user.email "ci@brandwatch.com"
 git config --global user.name "Brandwatch (via TravisCI)"
 
+yarn build:packages
+
 npx lerna publish --conventional-commits --yes
 
 # Workaround https://github.com/travis-ci/travis-ci/issues/8082

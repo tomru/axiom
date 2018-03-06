@@ -9,7 +9,6 @@ before_script:
 script:
 - yarn lint
 - yarn ci:test
-- yarn build:packages
 after_success:
 - npm config set "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}"
 deploy:
