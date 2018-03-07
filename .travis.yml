@@ -13,7 +13,7 @@ script:
 - yarn lint
 - yarn ci:test
 after_success:
-- bash scripts/publish_packages.sh
+# - bash scripts/publish_packages.sh
 - bash scripts/publish_site.sh
 env:
   global:
