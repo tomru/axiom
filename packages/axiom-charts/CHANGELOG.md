@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@0.2.0...@brandwatch/axiom-charts@1.0.0) (2018-03-07)
+
+
+### Features
+
+* **Bar:** Add barLabel property ([9d943db](https://github.com/HHogg/axiom/commit/9d943db))
+* **BarChart:** BarChart API changed to allow absolute values ([8eb1f4a](https://github.com/HHogg/axiom/commit/8eb1f4a))
+* **ChartTableRows:** Mark prop xAxisLabels as required ([5b7e795](https://github.com/HHogg/axiom/commit/5b7e795))
+* **DotPlotChart:** Add dotPlotLabel property ([f6aeed5](https://github.com/HHogg/axiom/commit/f6aeed5))
+* **DotPlotChart:** DotPlotChart API changed to allow absolute values ([3c569f1](https://github.com/HHogg/axiom/commit/3c569f1))
+
+
+### BREAKING CHANGES
+
+* **DotPlotChart:** * Added `upper` prop on DotPlotChart
+* Added `lower` prop on DotPlotChart
+
+To retain the previous behaviour of values between 0–100 you have to pass `lower=0` and `upper=100`
+* **BarChart:** * Added `upper` prop on BarChart
+* Added `lower` prop on BarChart
+
+To retain the previous behaviour of values between 0–100 you have to pass `lower=0` and `upper=100`
+
+
+
+
 <a name="0.2.0"></a>
 ## [0.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@0.01.0...@brandwatch/axiom-charts@0.2.0) (2018-03-06)
 
