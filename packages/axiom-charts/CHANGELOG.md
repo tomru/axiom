@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.0.1...@brandwatch/axiom-charts@1.0.2) (2018-03-07)
+
+
+### Bug Fixes
+
+* **BarChart:** Retain focused state when Contextual component opens ([da20f49](https://github.com/HHogg/axiom/commit/da20f49))
+* **DotPlotChart:** Retain focused state when Contextual component is opened ([3c36c93](https://github.com/HHogg/axiom/commit/3c36c93))
+
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.0.0...@brandwatch/axiom-charts@1.0.1) (2018-03-07)
 
