@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.2.0...@brandwatch/axiom-components@0.2.1) (2018-03-07)
+
+
+### Bug Fixes
+
+* **Dependecy:** Added missing [@brandwatch](https://github.com/brandwatch)/axiom-automation-testing dependency ([1e23ca6](https://github.com/HHogg/axiom/commit/1e23ca6))
+
+
+
+
 <a name="0.2.0"></a>
 ## [0.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.1.0...@brandwatch/axiom-components@0.2.0) (2018-03-06)
 
