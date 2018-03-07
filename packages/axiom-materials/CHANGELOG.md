@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.0"></a>
+## [0.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@0.1.0...@brandwatch/axiom-materials@0.2.0) (2018-03-06)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-materials
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@0.0.3...@brandwatch/axiom-materials@0.1.0) (2018-03-06)
 
