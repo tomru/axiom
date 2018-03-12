@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@0.2.0...@brandwatch/axiom-materials@0.3.0) (2018-03-12)
+
+
+### Features
+
+* **Package:** Added new babel-plugin-axiom-imports (modified version of old babel-plugin-axiom) ([851f2f9](https://github.com/HHogg/axiom/commit/851f2f9))
+
+
+
+
 <a name="0.2.0"></a>
 ## [0.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@0.1.0...@brandwatch/axiom-materials@0.2.0) (2018-03-06)
 

@@ -59,6 +59,10 @@ export default class Resources extends Component {
                 name="axiom-utils" />
 
             <PackageRow
+                description="An Axiom specific babel plugin that transforms and removes unused Axiom exports."
+                name="babel-plugin-axiom-imports" />
+
+            <PackageRow
                 description="An Axiom specific babel plugin that inlines, optimises and recolours SVGs for Brandwatch applications."
                 name="babel-plugin-transform-svg-axiom" />
           </PackagesTable>
