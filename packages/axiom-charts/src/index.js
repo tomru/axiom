@@ -20,3 +20,4 @@ export { default as MirroredColumnChart } from './ColumnChart/MirroredColumnChar
 export { default as SparkLine } from './SparkLine/SparkLine';
 export { default as Word } from './WordCloud/Word';
 export { default as WordCloud } from './WordCloud/WordCloud';
+export { default as axisUtils } from './utils/axisUtils';
