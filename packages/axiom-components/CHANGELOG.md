@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.5"></a>
+## [0.2.5](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.2.4...@brandwatch/axiom-components@0.2.5) (2018-03-21)
+
+
+### Bug Fixes
+
+* **ChedioButtox:** adds disabled styling to Chedio labels ([6106e95](https://github.com/HHogg/axiom/commit/6106e95))
+
+
+
+
 <a name="0.2.4"></a>
 ## [0.2.4](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.2.3...@brandwatch/axiom-components@0.2.4) (2018-03-15)
 

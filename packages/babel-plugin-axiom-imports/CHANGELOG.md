@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/HHogg/axiom/compare/@brandwatch/babel-plugin-axiom-imports@0.1.1...@brandwatch/babel-plugin-axiom-imports@0.1.2) (2018-03-21)
+
+
+### Bug Fixes
+
+* **Defaults:** Fixed transforming identifiers when used as a argument default. ([afb0aeb](https://github.com/HHogg/axiom/commit/afb0aeb))
+
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/HHogg/axiom/compare/@brandwatch/babel-plugin-axiom-imports@0.1.0...@brandwatch/babel-plugin-axiom-imports@0.1.1) (2018-03-13)
 
