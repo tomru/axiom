@@ -36,7 +36,6 @@
 .ax-text--color-disabled { color: var(--color-theme-text--disabled); }
 .ax-text--color-subtle { color: var(--color-theme-text--subtle); }
 .ax-text--color-twitter { color: var(--color-social-twitter); }
-.ax-text--color-twitter-blue { color: var(--color-social-twitter); }
 .ax-text--color-facebook { color: var(--color-social-facebook); }
 .ax-text--color-instagram { color: var(--color-social-instagram); }
 .ax-text--color-tiny-clanger { color: var(--color-product-tiny-clanger); }

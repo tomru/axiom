@@ -158,7 +158,5 @@
   --color-social-twitter: rgb(29, 161, 242);
   --color-social-facebook: rgb(59, 89, 152);
   --color-social-instagram: rgb(183, 71, 146);
-
-  --color-external-twitter-blue: var(--color-social-twitter);
 }
 /* stylelint-enable */

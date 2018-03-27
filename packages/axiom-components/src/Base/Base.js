@@ -56,7 +56,6 @@ export default class Base extends Component {
       'disabled',
       'subtle',
       'twitter',
-      'twitter-blue',
       'facebook',
       'instagram',
       'tiny-clanger',
