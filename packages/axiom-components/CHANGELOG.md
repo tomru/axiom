@@ -3,7 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="0.3.0"></a>
+      <a name="1.0.0"></a>
+# [1.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.3.0...@brandwatch/axiom-components@1.0.0) (2018-03-27)
+
+
+### Bug Fixes
+
+* **Colours:** Design changes to colours and shadows. ([42f73c2](https://github.com/HHogg/axiom/commit/42f73c2))
+* **Modal:** Themed overlay colours for Modals (Dialogs and anything else using overlayed Portals) ([c81a989](https://github.com/HHogg/axiom/commit/c81a989))
+* **UI Colours:** Updated UI colours for optional shaded backgrounds and translucent hover and active colours ([21841be](https://github.com/HHogg/axiom/commit/21841be))
+
+
+### Features
+
+* **Card:** Improved shadow, border and shade design pattern. ([806d5dc](https://github.com/HHogg/axiom/commit/806d5dc))
+* **Platform:** Added ability for a shade choice ([59e39b8](https://github.com/HHogg/axiom/commit/59e39b8))
+
+
+### BREAKING CHANGES
+
+* **Colours:**   * CSS variable names changes:
+  --opacity-shadow is now --opacity-shadow--light
+  --color-theme-day-shadow is now --color-theme-day-shadow--light
+  --color-theme-night-shadow is now --color-theme-night-shadow--light
+  --color-theme-shadow is now --color-theme-shadow--light
+  --color-external-twitter-blue is now --color-social-twitter
+* `color` prop has been removed from Card and replaced for `shade` prop.
+* `elevation` prop has been removed from Card and replaced for a `shadow` flag.
+* `twitter-blue` value for `textColor` is now just `twitter`.
+* **Modal:** Modal component `withOverlay` flag has been removed. It is implied from the `overlayShddow` prop. `withOverlay={ false }` would need chaning to `overlayShadow={ null }`.
+* **Card:** * `color` prop has been removed from Card and replaced for `shade` prop.
+* `elevation` prop has been removed from Card and replaced for a `shadow` flag.
+
+
+
+
+      <a name="0.3.0"></a>
 # [0.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.2.5...@brandwatch/axiom-components@0.3.0) (2018-03-27)
 
 

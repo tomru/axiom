@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-documentation-viewer@0.0.12...@brandwatch/axiom-documentation-viewer@0.1.0) (2018-03-27)
+
+
+### Bug Fixes
+
+* **Themeing:** Inherit from application theme ([2d2655b](https://github.com/HHogg/axiom/commit/2d2655b))
+* **UI Colours:** Updated UI colours for optional shaded backgrounds and translucent hover and active colours ([21841be](https://github.com/HHogg/axiom/commit/21841be))
+
+
+### Features
+
+* **Card:** Improved shadow, border and shade design pattern. ([806d5dc](https://github.com/HHogg/axiom/commit/806d5dc))
+
+
+### BREAKING CHANGES
+
+* **Card:** * `color` prop has been removed from Card and replaced for `shade` prop.
+* `elevation` prop has been removed from Card and replaced for a `shadow` flag.
+
+
+
+
 <a name="0.0.12"></a>
 ## [0.0.12](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-documentation-viewer@0.0.11...@brandwatch/axiom-documentation-viewer@0.0.12) (2018-03-27)
 
