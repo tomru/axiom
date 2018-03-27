@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="1.0.1"></a>
+## [1.0.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.0.0...@brandwatch/axiom-components@1.0.1) (2018-03-27)
+
+
+### Bug Fixes
+
+* **Select:** Only add onClear 'X' when an onClear is given ([5c608c1](https://github.com/HHogg/axiom/commit/5c608c1))
+
+
+
+
       <a name="1.0.0"></a>
 # [1.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.3.0...@brandwatch/axiom-components@1.0.0) (2018-03-27)
 
@@ -23,11 +34,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### BREAKING CHANGES
 
 * **Colours:**   * CSS variable names changes:
-  --opacity-shadow is now --opacity-shadow--light
-  --color-theme-day-shadow is now --color-theme-day-shadow--light
-  --color-theme-night-shadow is now --color-theme-night-shadow--light
-  --color-theme-shadow is now --color-theme-shadow--light
-  --color-external-twitter-blue is now --color-social-twitter
+--opacity-shadow is now --opacity-shadow--light
+--color-theme-day-shadow is now --color-theme-day-shadow--light
+--color-theme-night-shadow is now --color-theme-night-shadow--light
+--color-theme-shadow is now --color-theme-shadow--light
+--color-external-twitter-blue is now --color-social-twitter
 * `color` prop has been removed from Card and replaced for `shade` prop.
 * `elevation` prop has been removed from Card and replaced for a `shadow` flag.
 * `twitter-blue` value for `textColor` is now just `twitter`.
@@ -38,7 +49,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="0.3.0"></a>
+    <a name="0.3.0"></a>
 # [0.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.2.5...@brandwatch/axiom-components@0.3.0) (2018-03-27)
 
 

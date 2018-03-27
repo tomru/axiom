@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.2"></a>
+## [1.3.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.3.1...@brandwatch/axiom-charts@1.3.2) (2018-03-27)
+
+
+### Bug Fixes
+
+* **BarChart:** hover only when BarChart displays multiple values ([f49a585](https://github.com/HHogg/axiom/commit/f49a585))
+
+
+
+
 <a name="1.3.1"></a>
 ## [1.3.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.3.0...@brandwatch/axiom-charts@1.3.1) (2018-03-27)
 
