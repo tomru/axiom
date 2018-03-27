@@ -10,7 +10,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Bug Fixes
 
 * **DotPlot:** Incorrectly faded Benchmarking and Difference lines ([2688fdc](https://github.com/HHogg/axiom/commit/2688fdc))
-
+* **BarChart:** Do not break labels with (thin)spaces
+* **axisUtils.getAxisUpper:** rounds to same order of magnitude instead of next
 
 ### Features
 
