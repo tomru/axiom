@@ -31,6 +31,9 @@ export default class DataPoint extends Component {
       'sentiment-positive',
       'sentiment-negative',
       'sentiment-neutral',
+      'social-twitter',
+      'social-facebook',
+      'social-instagram',
     ]).isRequired,
     /** SKIP */
     r: PropTypes.number,

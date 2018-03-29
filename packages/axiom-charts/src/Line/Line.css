@@ -80,3 +80,6 @@
 .ax-line--sentiment-positive { color: var(--color-sentiment-positive); }
 .ax-line--sentiment-negative { color: var(--color-sentiment-negative); }
 .ax-line--sentiment-neutral { color: var(--color-sentiment-neutral); }
+.ax-line--social-twitter { color: var(--color-social-twitter); }
+.ax-line--social-facebook { color: var(--color-social-facebook); }
+.ax-line--social-instagram { color: var(--color-social-instagram); }

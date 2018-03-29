@@ -41,6 +41,9 @@
 .ax-data-point--sentiment-positive { color: var(--color-sentiment-positive); }
 .ax-data-point--sentiment-negative { color: var(--color-sentiment-negative); }
 .ax-data-point--sentiment-neutral { color: var(--color-sentiment-neutral); }
+.ax-data-point--social-twitter { color: var(--color-social-twitter); }
+.ax-data-point--social-facebook { color: var(--color-social-facebook); }
+.ax-data-point--social-instagram { color: var(--color-social-instagram); }
 
 .ax-data-points--clickable {
   cursor: pointer;
@@ -68,6 +71,9 @@
     & .ax-data-point--sentiment-positive { color: var(--color-sentiment-positive--hover); }
     & .ax-data-point--sentiment-negative { color: var(--color-sentiment-negative--hover); }
     & .ax-data-point--sentiment-neutral { color: var(--color-sentiment-neutral--hover); }
+    & .ax-data-point--social-twitter { color: var(--color-social-twitter--hover); }
+    & .ax-data-point--social-facebook { color: var(--color-social-facebook--hover); }
+    & .ax-data-point--social-instagram { color: var(--color-social-instagram--hover); }
   }
 
   &:active {
@@ -93,5 +99,8 @@
     & .ax-data-point--sentiment-positive { color: var(--color-sentiment-positive--active); }
     & .ax-data-point--sentiment-negative { color: var(--color-sentiment-negative--active); }
     & .ax-data-point--sentiment-neutral { color: var(--color-sentiment-neutral--active); }
+    & .ax-data-point--social-twitter { color: var(--color-social-twitter--active); }
+    & .ax-data-point--social-facebook { color: var(--color-social-facebook--active); }
+    & .ax-data-point--social-instagram { color: var(--color-social-instagram--active); }
   }
 }

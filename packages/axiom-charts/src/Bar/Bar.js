@@ -30,6 +30,9 @@ export default class Bar extends Component {
       'sentiment-positive',
       'sentiment-negative',
       'sentiment-neutral',
+      'social-twitter',
+      'social-facebook',
+      'social-instagram',
     ]).isRequired,
     /** When true the bar is faded */
     isFaded: PropTypes.bool,
