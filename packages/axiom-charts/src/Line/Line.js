@@ -47,6 +47,9 @@ export default class Line extends Component {
       'sentiment-positive',
       'sentiment-negative',
       'sentiment-neutral',
+      'social-twitter',
+      'social-facebook',
+      'social-instagram',
     ]).isRequired,
     /** Dash length */
     dasharray: PropTypes.string,

@@ -43,6 +43,9 @@ export default class LinePoint extends Component {
       'sentiment-positive',
       'sentiment-negative',
       'sentiment-neutral',
+      'social-twitter',
+      'social-facebook',
+      'social-instagram',
     ]).isRequired,
     /** Applies hover state, useful to retain hover styling. */
     hover: PropTypes.bool,

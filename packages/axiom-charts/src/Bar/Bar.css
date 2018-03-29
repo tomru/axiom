@@ -52,6 +52,9 @@
   &.ax-bars__bar-rect--sentiment-positive { background-color: var(--color-sentiment-positive); }
   &.ax-bars__bar-rect--sentiment-negative { background-color: var(--color-sentiment-negative); }
   &.ax-bars__bar-rect--sentiment-neutral { background-color: var(--color-sentiment-neutral); }
+  &.ax-bars__bar-rect--social-twitter { background-color: var(--color-social-twitter); }
+  &.ax-bars__bar-rect--social-facebook { background-color: var(--color-social-facebook); }
+  &.ax-bars__bar-rect--social-instagram { background-color: var(--color-social-instagram); }
 }
 
 .ax-bars__bar--clickable {
@@ -170,6 +173,21 @@
     &.ax-bars__bar-rect--sentiment-neutral {
       &:hover { background-color: var(--color-sentiment-neutral--hover); }
       &:active { background-color: var(--color-sentiment-neutral--active); }
+    }
+
+    &.ax-bars__bar-rect--social-twitter {
+      &:hover { background-color: var(--color-social-twitter--hover); }
+      &:active { background-color: var(--color-social-twitter--active); }
+    }
+
+    &.ax-bars__bar-rect--social-facebook {
+      &:hover { background-color: var(--color-social-facebook--hover); }
+      &:active { background-color: var(--color-social-facebook--active); }
+    }
+
+    &.ax-bars__bar-rect--social-instagram {
+      &:hover { background-color: var(--color-social-instagram--hover); }
+      &:active { background-color: var(--color-social-instagram--active); }
     }
   }
 }
