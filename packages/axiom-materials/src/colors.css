@@ -155,6 +155,10 @@
   --color-sentiment-positive: rgb(76, 161, 90);
   --color-sentiment-positive--hover: rgb(90, 173, 104);
 
+  --color-sentiment-neutral--active: var(--color-product-deep-thought--active);
+  --color-sentiment-neutral: var(--color-product-deep-thought);
+  --color-sentiment-neutral--hover: var(--color-product-deep-thought--hover);
+
   --color-social-twitter: rgb(29, 161, 242);
   --color-social-facebook: rgb(59, 89, 152);
   --color-social-instagram: rgb(183, 71, 146);
