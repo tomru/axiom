@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="1.2.3"></a>
+## [1.2.3](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.2...@brandwatch/axiom-components@1.2.3) (2018-04-06)
+
+
+### Bug Fixes
+
+* **Enzyme:** Moves enzyme-to-json to a top level dev dependency ([85dcfb5](https://github.com/HHogg/axiom/commit/85dcfb5))
+
+
+
+
       <a name="1.2.2"></a>
 ## [1.2.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.1...@brandwatch/axiom-components@1.2.2) (2018-04-06)
 
@@ -18,7 +29,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="1.2.1"></a>
+    <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.0...@brandwatch/axiom-components@1.2.1) (2018-04-05)
 
 
@@ -29,7 +40,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="1.2.0"></a>
+<a name="1.2.0"></a>
 # [1.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.1.0...@brandwatch/axiom-components@1.2.0) (2018-04-05)
 
 
