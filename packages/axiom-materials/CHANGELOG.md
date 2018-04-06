@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="1.2.0"></a>
+      <a name="1.2.1"></a>
+## [1.2.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.2.0...@brandwatch/axiom-materials@1.2.1) (2018-04-06)
+
+
+### Bug Fixes
+
+* **Position:** Offset variable not on scope for preprocessing ([6ac7908](https://github.com/HHogg/axiom/commit/6ac7908))
+
+
+
+
+      <a name="1.2.0"></a>
 # [1.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.1.0...@brandwatch/axiom-materials@1.2.0) (2018-04-05)
 
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="1.1.0"></a>
+  <a name="1.1.0"></a>
 # [1.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.0.0...@brandwatch/axiom-materials@1.1.0) (2018-03-29)
 
 
@@ -30,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="1.0.0"></a>
+<a name="1.0.0"></a>
 # [1.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@0.4.0...@brandwatch/axiom-materials@1.0.0) (2018-03-27)
 
 

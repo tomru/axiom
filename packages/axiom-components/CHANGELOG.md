@@ -3,7 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="1.2.1"></a>
+      <a name="1.2.2"></a>
+## [1.2.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.1...@brandwatch/axiom-components@1.2.2) (2018-04-06)
+
+
+### Bug Fixes
+
+* **Card:** Apply the same hover state when a card has focus ([bc4f338](https://github.com/HHogg/axiom/commit/bc4f338))
+* **Dropdown:** Open dropdown when DropdownTarget has focus ([3e7854b](https://github.com/HHogg/axiom/commit/3e7854b))
+* **Link:** Apply hover states when Links are focused ([a60cd4c](https://github.com/HHogg/axiom/commit/a60cd4c))
+* **Position:** Offset variable not on scope for preprocessing ([6ac7908](https://github.com/HHogg/axiom/commit/6ac7908))
+* **Position:** Reduces offset when arrow is not used ([f61116c](https://github.com/HHogg/axiom/commit/f61116c))
+
+
+
+
+      <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.0...@brandwatch/axiom-components@1.2.1) (2018-04-05)
 
 
@@ -14,7 +29,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="1.2.0"></a>
+  <a name="1.2.0"></a>
 # [1.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.1.0...@brandwatch/axiom-components@1.2.0) (2018-04-05)
 
 
@@ -25,7 +40,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="1.1.0"></a>
+<a name="1.1.0"></a>
 # [1.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.0.2...@brandwatch/axiom-components@1.1.0) (2018-03-29)
 
 
