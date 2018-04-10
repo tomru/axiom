@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="1.4.1"></a>
+## [1.4.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.4.0...@brandwatch/axiom-components@1.4.1) (2018-04-10)
+
+
+### Bug Fixes
+
+* **Badge:** pass through onClick property ([0122b5d](https://github.com/HHogg/axiom/commit/0122b5d))
+* **Candytar:** Only the user defined product colour set are supported colours ([5883a82](https://github.com/HHogg/axiom/commit/5883a82))
+* **Dropdown:** Allow whole menu item to be selectable for multiselect options ([469585d](https://github.com/HHogg/axiom/commit/469585d))
+* **Dropdown:** Switch from index and children approach to DOM focusing. ([f51feda](https://github.com/HHogg/axiom/commit/f51feda))
+
+
+
+
       <a name="1.4.0"></a>
 # [1.4.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.3.0...@brandwatch/axiom-components@1.4.0) (2018-04-09)
 
@@ -14,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="1.3.0"></a>
+    <a name="1.3.0"></a>
 # [1.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.3...@brandwatch/axiom-components@1.3.0) (2018-04-09)
 
 
@@ -30,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="1.2.3"></a>
+<a name="1.2.3"></a>
 ## [1.2.3](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.2...@brandwatch/axiom-components@1.2.3) (2018-04-06)
 
 
