@@ -3,7 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="1.4.1"></a>
+    <a name="1.5.0"></a>
+# [1.5.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.4.1...@brandwatch/axiom-components@1.5.0) (2018-04-16)
+
+
+### Bug Fixes
+
+* **Select:** Pass onRequest callbacks to Dropdown ([5fafbfd](https://github.com/HHogg/axiom/commit/5fafbfd))
+
+
+### Features
+
+* **AlertDropdown:** Adds a new AlertDropdown component ([c0fbe08](https://github.com/HHogg/axiom/commit/c0fbe08))
+* **Context:** Adds support for "color" property ([66f6bc1](https://github.com/HHogg/axiom/commit/66f6bc1))
+* **LineChart:** Added onPointClick action to the LineChart ([c80c1d1](https://github.com/HHogg/axiom/commit/c80c1d1))
+* **Transition:** Add new Transition component ([e5c21dc](https://github.com/HHogg/axiom/commit/e5c21dc))
+
+
+
+
+    <a name="1.4.1"></a>
 ## [1.4.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.4.0...@brandwatch/axiom-components@1.4.1) (2018-04-10)
 
 
@@ -17,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="1.4.0"></a>
+  <a name="1.4.0"></a>
 # [1.4.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.3.0...@brandwatch/axiom-components@1.4.0) (2018-04-09)
 
 
@@ -28,7 +47,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="1.3.0"></a>
+<a name="1.3.0"></a>
 # [1.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.3...@brandwatch/axiom-components@1.3.0) (2018-04-09)
 
 
