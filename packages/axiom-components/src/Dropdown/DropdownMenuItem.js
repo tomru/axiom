@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import omit from 'lodash.omit';
 import ContextMenuItem from '../Context/ContextMenuItem';
 
@@ -17,6 +17,20 @@ export default class DropdownMenuItem extends Component {
     multiSelect: PropTypes.bool,
     /** Click handler  */
     onClick: PropTypes.func,
+    /**
+     * When the parent is selected, this DropdownMenu is displayed as selected
+     * and disabled.
+     */
+    parentSelected: PropTypes.bool,
+    /**
+     * If the DropdownMenuItem is selected. This is ignored if the parent is
+     * selected.
+     */
+    selected: PropTypes.bool,
+    /**
+     * An array of DropdownMenuItem.
+     */
+    subMenuItems: PropTypes.arrayOf(PropTypes.instanceOf(this.constructor)),
   };
 
   static contextTypes = {
@@ -30,23 +44,37 @@ export default class DropdownMenuItem extends Component {
 
   handleClick(event) {
     const { closeDropdown } = this.context;
-    const { multiSelect, keepOpen, onClick } = this.props;
+    const { multiSelect, keepOpen, onClick, parentSelected } = this.props;
 
     if (closeDropdown && !multiSelect && !keepOpen) closeDropdown();
 
-    if (onClick) onClick(event);
+    if (!parentSelected && onClick) onClick(event);
   }
 
   render() {
-    const { children, ...rest } = this.props;
+    const { children, subMenuItems, selected, parentSelected, ...rest } = this.props;
 
     return (
-      <ContextMenuItem
-          { ...omit(rest, ['keepOpen']) }
-          onClick={ this.handleClick }
-          tabIndex="0">
-        { children }
-      </ContextMenuItem>
+      <Fragment>
+        <ContextMenuItem
+            disabled={ parentSelected }
+            selected={ parentSelected || (!parentSelected && selected) }
+            { ...omit(rest, ['keepOpen']) }
+            onClick={ this.handleClick }
+            tabIndex="0" >
+          { children }
+        </ContextMenuItem>
+        { subMenuItems && (
+          <div className="ax-context-submenu">
+            {
+              subMenuItems.map((subMenuItem, index) => React.cloneElement(subMenuItem, {
+                key: index,
+                parentSelected: selected || parentSelected,
+              }))
+            }
+          </div>
+        ) }
+      </Fragment>
     );
   }
 }
