@@ -3,7 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="1.5.0"></a>
+      <a name="2.0.0"></a>
+# [2.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.5.0...@brandwatch/axiom-components@2.0.0) (2018-04-18)
+
+
+### Bug Fixes
+
+* **Transition:** Slide into correct direction on initial change ([2ea8b93](https://github.com/HHogg/axiom/commit/2ea8b93))
+
+
+### Features
+
+* **Components:** Added Separator component and removed HorizontalRule. See breaking changes. ([a67c25e](https://github.com/HHogg/axiom/commit/a67c25e))
+
+
+### BREAKING CHANGES
+
+* **Components:** The HorizontalRule component got replaced by the Separator component which is
+identical to the HorizontalRule component with the addition of a direction property which can
+either be horizontal (default) or vertical
+
+
+
+
+      <a name="1.5.0"></a>
 # [1.5.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.4.1...@brandwatch/axiom-components@1.5.0) (2018-04-16)
 
 
@@ -22,7 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="1.4.1"></a>
+  <a name="1.4.1"></a>
 ## [1.4.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.4.0...@brandwatch/axiom-components@1.4.1) (2018-04-10)
 
 
@@ -36,7 +59,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="1.4.0"></a>
+<a name="1.4.0"></a>
 # [1.4.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.3.0...@brandwatch/axiom-components@1.4.0) (2018-04-09)
 
 
