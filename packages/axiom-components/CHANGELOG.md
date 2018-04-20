@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="2.1.0"></a>
+# [2.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.0.0...@brandwatch/axiom-components@2.1.0) (2018-04-20)
+
+
+### Bug Fixes
+
+* **Context:** Separator placement on scrollable areas ([3aa7121](https://github.com/HHogg/axiom/commit/3aa7121))
+
+
+### Features
+
+* **ContextContent:** Added extra padding props to control horizontal and vertical padding ([b60c023](https://github.com/HHogg/axiom/commit/b60c023))
+* **ContextMenuItem:** Add icon prop to specify menu item icon ([1a0b13f](https://github.com/HHogg/axiom/commit/1a0b13f))
+* **Dropdown:** Added DropdownHeader and DropdownFooter components ([de3ae7a](https://github.com/HHogg/axiom/commit/de3ae7a))
+
+
+
+
       <a name="2.0.0"></a>
 # [2.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.5.0...@brandwatch/axiom-components@2.0.0) (2018-04-18)
 
@@ -26,7 +44,7 @@ either be horizontal (default) or vertical
 
 
 
-      <a name="1.5.0"></a>
+    <a name="1.5.0"></a>
 # [1.5.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.4.1...@brandwatch/axiom-components@1.5.0) (2018-04-16)
 
 
@@ -45,7 +63,7 @@ either be horizontal (default) or vertical
 
 
 
-  <a name="1.4.1"></a>
+<a name="1.4.1"></a>
 ## [1.4.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.4.0...@brandwatch/axiom-components@1.4.1) (2018-04-10)
 
 
