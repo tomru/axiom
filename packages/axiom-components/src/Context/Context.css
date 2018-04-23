@@ -166,3 +166,11 @@
   flex: 0 0 auto;
   margin-left: var(--spacing-grid-size--x2);
 }
+
+.ax-context-menu .ax-context-menu{
+  padding: 0;
+
+  & .ax-context-menu__item {
+    padding-left: calc(var(--spacing-grid-size) * 12);
+  }
+}

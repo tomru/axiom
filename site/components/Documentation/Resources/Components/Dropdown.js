@@ -148,6 +148,20 @@ export default class Documentation extends Component {
                           selected={ multiSelection.indexOf('Option 2') >= 0 }>
                         Option 2
                       </DropdownMenuItem>
+                      <DropdownMenu>
+                        <DropdownMenuItem
+                            multiSelect
+                            onClick={ () => this.handleMultiSelection('Option 2.1') }
+                            selected={ multiSelection.indexOf('Option 2.1') >= 0 }>
+                          Option 2.1
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                            multiSelect
+                            onClick={ () => this.handleMultiSelection('Option 2.2') }
+                            selected={ multiSelection.indexOf('Option 2.2') >= 0 }>
+                          Option 2.2
+                        </DropdownMenuItem>
+                      </DropdownMenu>
                     </DropdownMenu>
 
                     <DropdownMenu>
