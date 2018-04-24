@@ -3,7 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="2.1.0"></a>
+    <a name="2.2.0"></a>
+# [2.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.1.0...@brandwatch/axiom-components@2.2.0) (2018-04-24)
+
+
+### Bug Fixes
+
+* **Context:** Scroll when using the menu or content components as scroll containers ([6f84cf5](https://github.com/HHogg/axiom/commit/6f84cf5))
+
+
+### Features
+
+* **Dropdown:** add support for single level submenus ([5b468ae](https://github.com/HHogg/axiom/commit/5b468ae))
+* **DropdownSource:** Pass closeDropdown as prop to DropdownSource component ([f5982de](https://github.com/HHogg/axiom/commit/f5982de))
+* **Icon:** Added new 'at', 'exlcude' and 'line-graph' icons and updated 'home' icon ([5330b3c](https://github.com/HHogg/axiom/commit/5330b3c))
+
+
+
+
+    <a name="2.1.0"></a>
 # [2.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.0.0...@brandwatch/axiom-components@2.1.0) (2018-04-20)
 
 
@@ -21,7 +39,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="2.0.0"></a>
+  <a name="2.0.0"></a>
 # [2.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.5.0...@brandwatch/axiom-components@2.0.0) (2018-04-18)
 
 
@@ -44,7 +62,7 @@ either be horizontal (default) or vertical
 
 
 
-    <a name="1.5.0"></a>
+<a name="1.5.0"></a>
 # [1.5.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.4.1...@brandwatch/axiom-components@1.5.0) (2018-04-16)
 
 
