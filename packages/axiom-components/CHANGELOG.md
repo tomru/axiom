@@ -3,7 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="2.2.0"></a>
+      <a name="2.3.0"></a>
+# [2.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.2.0...@brandwatch/axiom-components@2.3.0) (2018-04-30)
+
+
+### Bug Fixes
+
+* **ContextMenuItem:** Pass down indeterminate property to checkbox ([f936420](https://github.com/HHogg/axiom/commit/f936420))
+
+
+### Features
+
+* **Card:** Added CardImages component to support multiple images ([dcaca3c](https://github.com/HHogg/axiom/commit/dcaca3c))
+* **CheckBox:** Added indeterminate property ([bae92cd](https://github.com/HHogg/axiom/commit/bae92cd))
+* **InlineValidation:** Added InlineValidation component ([a3ee488](https://github.com/HHogg/axiom/commit/a3ee488))
+
+
+
+
+      <a name="2.2.0"></a>
 # [2.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.1.0...@brandwatch/axiom-components@2.2.0) (2018-04-24)
 
 
@@ -21,7 +39,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="2.1.0"></a>
+  <a name="2.1.0"></a>
 # [2.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.0.0...@brandwatch/axiom-components@2.1.0) (2018-04-20)
 
 
@@ -39,7 +57,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="2.0.0"></a>
+<a name="2.0.0"></a>
 # [2.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.5.0...@brandwatch/axiom-components@2.0.0) (2018-04-18)
 
 
