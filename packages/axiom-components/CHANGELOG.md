@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="2.4.0"></a>
+# [2.4.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.3.0...@brandwatch/axiom-components@2.4.0) (2018-05-02)
+
+
+### Bug Fixes
+
+* **Dropdown:** do not render separator after sub menus ([0aac496](https://github.com/HHogg/axiom/commit/0aac496)), closes [#539](https://github.com/HHogg/axiom/issues/539)
+
+
+### Features
+
+* **Image:** Add 'ratios' prop to allow image grid height to be configurable. ([58d2be8](https://github.com/HHogg/axiom/commit/58d2be8))
+* **TableRow:** adds hasBorder property to table row to render TableRows ([ed2155e](https://github.com/HHogg/axiom/commit/ed2155e))
+
+
+
+
       <a name="2.3.0"></a>
 # [2.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.2.0...@brandwatch/axiom-components@2.3.0) (2018-04-30)
 
@@ -21,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="2.2.0"></a>
+    <a name="2.2.0"></a>
 # [2.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.1.0...@brandwatch/axiom-components@2.2.0) (2018-04-24)
 
 
@@ -39,7 +56,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="2.1.0"></a>
+<a name="2.1.0"></a>
 # [2.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.0.0...@brandwatch/axiom-components@2.1.0) (2018-04-20)
 
 
