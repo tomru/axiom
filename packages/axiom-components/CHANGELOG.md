@@ -3,7 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="2.4.0"></a>
+    <a name="2.4.1"></a>
+## [2.4.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.4.0...@brandwatch/axiom-components@2.4.1) (2018-05-03)
+
+
+### Bug Fixes
+
+* **Checkbox:** ensure Checkbox is always a controlled component ([0cb4b95](https://github.com/HHogg/axiom/commit/0cb4b95))
+* **Dropdown:** Omit onRequestCloseDropdown from reaching DropdownContext ([2f047fa](https://github.com/HHogg/axiom/commit/2f047fa))
+
+
+
+
+    <a name="2.4.0"></a>
 # [2.4.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.3.0...@brandwatch/axiom-components@2.4.0) (2018-05-02)
 
 
@@ -20,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="2.3.0"></a>
+  <a name="2.3.0"></a>
 # [2.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.2.0...@brandwatch/axiom-components@2.3.0) (2018-04-30)
 
 
@@ -38,7 +50,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="2.2.0"></a>
+<a name="2.2.0"></a>
 # [2.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.1.0...@brandwatch/axiom-components@2.2.0) (2018-04-24)
 
 
