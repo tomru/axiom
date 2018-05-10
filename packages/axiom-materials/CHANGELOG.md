@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="1.3.0"></a>
+# [1.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.2.1...@brandwatch/axiom-materials@1.3.0) (2018-05-10)
+
+
+### Features
+
+* **Card:** Adds small and medium border radius options ([69b737e](https://github.com/HHogg/axiom/commit/69b737e))
+
+
+
+
       <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.2.0...@brandwatch/axiom-materials@1.2.1) (2018-04-06)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="1.2.0"></a>
+    <a name="1.2.0"></a>
 # [1.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.1.0...@brandwatch/axiom-materials@1.2.0) (2018-04-05)
 
 
@@ -25,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="1.1.0"></a>
+<a name="1.1.0"></a>
 # [1.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.0.0...@brandwatch/axiom-materials@1.1.0) (2018-03-29)
 
 

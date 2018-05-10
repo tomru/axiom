@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.7.6...@brandwatch/axiom-charts@1.8.0) (2018-05-10)
+
+
+### Features
+
+* **Bar:** Add new prop fillMode ([a0b1c8b](https://github.com/HHogg/axiom/commit/a0b1c8b))
+
+
+
+
 <a name="1.7.6"></a>
 ## [1.7.6](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.7.5...@brandwatch/axiom-charts@1.7.6) (2018-05-03)
 
