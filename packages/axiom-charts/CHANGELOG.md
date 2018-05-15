@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.8.0...@brandwatch/axiom-charts@1.9.0) (2018-05-15)
+
+
+### Bug Fixes
+
+* **BarChart:** Do not highlight all bars with same color if there is only one bar per row ([1a6ac5f](https://github.com/HHogg/axiom/commit/1a6ac5f))
+
+
+### Features
+
+* **BarChart:** Add new prop showDifferenceArea ([557b6f4](https://github.com/HHogg/axiom/commit/557b6f4))
+* **BarChart:** Add new prop stretch ([ecbb8ba](https://github.com/HHogg/axiom/commit/ecbb8ba))
+
+
+
+
 <a name="1.8.0"></a>
 # [1.8.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.7.6...@brandwatch/axiom-charts@1.8.0) (2018-05-10)
 

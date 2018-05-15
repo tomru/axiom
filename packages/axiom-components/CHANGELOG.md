@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="2.5.1"></a>
+## [2.5.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.5.0...@brandwatch/axiom-components@2.5.1) (2018-05-15)
+
+
+### Bug Fixes
+
+* **Button:** Active state being applied when clicking on svg element ([0f45b94](https://github.com/HHogg/axiom/commit/0f45b94))
+* **Tab:** Only add as a title if the title is a string ([b1d24be](https://github.com/HHogg/axiom/commit/b1d24be))
+
+
+
+
       <a name="2.5.0"></a>
 # [2.5.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.4.1...@brandwatch/axiom-components@2.5.0) (2018-05-10)
 
@@ -14,7 +26,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="2.4.1"></a>
+    <a name="2.4.1"></a>
 ## [2.4.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.4.0...@brandwatch/axiom-components@2.4.1) (2018-05-03)
 
 
@@ -26,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="2.4.0"></a>
+<a name="2.4.0"></a>
 # [2.4.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.3.0...@brandwatch/axiom-components@2.4.0) (2018-05-02)
 
 
