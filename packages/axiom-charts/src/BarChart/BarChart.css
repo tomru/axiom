@@ -57,10 +57,10 @@
 
 .ax-bar-chart__bar-container .ax-bar-chart__bar-label {
   position: absolute;
-  top: 0;
-  align-self: center;
+  top: 50%;
   margin-right: calc(var(--cmp-chart-label-width) * -1);
   padding-left: var(--cmp-chart-label-margin);
+  transform: translateY(-50%);
   line-height: var(--cmp-chart-label-line-height);
   transition: opacity var(--transition-time-base) var(--transition-function);
 }
