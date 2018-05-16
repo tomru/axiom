@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.9.0...@brandwatch/axiom-charts@2.0.0) (2018-05-16)
+
+
+### Bug Fixes
+
+* **BarChart:** Fix hover when BarChart has just single values ([7d69883](https://github.com/HHogg/axiom/commit/7d69883))
+
+
+### Features
+
+* **BarChart:** Added tooltips to BarChart bars and benchmark line ([56e8b51](https://github.com/HHogg/axiom/commit/56e8b51))
+* **BarChart:** Changed xAxisLabel property to be a method that returns an array of labels ([f612a87](https://github.com/HHogg/axiom/commit/f612a87))
+* **DotPlotChart:** Changed xAxisLabel property to be a method that returns an array of labels ([f8959be](https://github.com/HHogg/axiom/commit/f8959be))
+* **LineChart:** Changed xAxisLabel property to be a method that returns an array of labels ([477fe90](https://github.com/HHogg/axiom/commit/477fe90))
+
+
+### BREAKING CHANGES
+
+* **LineChart:** The LineChart now only accepts a method for the xAxisLabel property instead of an array. The method receives a "lower" and an "upper" argument and expects an array to be returned.
+* **DotPlotChart:** The DotPlotChart now only accepts a method for the xAxisLabel property instead of an array. The method receives a "lower" and an "upper" argument and expects an array to be returned.
+* **BarChart:** The BarChart now only accepts a method for the xAxisLabel property instead of an array. The method receives a "lower" and an "upper" argument and expects an array to be returned.
+
+
+
+
 <a name="1.9.0"></a>
 # [1.9.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.8.0...@brandwatch/axiom-charts@1.9.0) (2018-05-15)
 
