@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="2.5.1"></a>
+    <a name="2.5.2"></a>
+## [2.5.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.5.1...@brandwatch/axiom-components@2.5.2) (2018-05-17)
+
+
+### Bug Fixes
+
+* **TextInput:** Ensuring native input events are passed through correctly. ([25e370d](https://github.com/HHogg/axiom/commit/25e370d))
+
+
+
+
+    <a name="2.5.1"></a>
 ## [2.5.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.5.0...@brandwatch/axiom-components@2.5.1) (2018-05-15)
 
 
@@ -15,7 +26,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="2.5.0"></a>
+  <a name="2.5.0"></a>
 # [2.5.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.4.1...@brandwatch/axiom-components@2.5.0) (2018-05-10)
 
 
@@ -26,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="2.4.1"></a>
+<a name="2.4.1"></a>
 ## [2.4.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.4.0...@brandwatch/axiom-components@2.4.1) (2018-05-03)
 
 
