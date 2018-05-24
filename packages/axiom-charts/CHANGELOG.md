@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.2"></a>
+## [2.1.2](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-charts@2.1.1...@brandwatch/axiom-charts@2.1.2) (2018-05-24)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
 <a name="2.1.1"></a>
 ## [2.1.1](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-charts@2.1.0...@brandwatch/axiom-charts@2.1.1) (2018-05-24)
 

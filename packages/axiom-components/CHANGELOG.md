@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="2.6.1"></a>
+## [2.6.1](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@2.6.0...@brandwatch/axiom-components@2.6.1) (2018-05-24)
+
+
+### Bug Fixes
+
+* **TableCell:** makes TableCell paddings adjustable correctly ([16c824a](https://github.com/pmsorhaindo/axiom/commit/16c824a))
+
+
+
+
       <a name="2.6.0"></a>
 # [2.6.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@2.5.2...@brandwatch/axiom-components@2.6.0) (2018-05-24)
 
@@ -20,7 +31,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="2.5.2"></a>
+    <a name="2.5.2"></a>
 ## [2.5.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.5.1...@brandwatch/axiom-components@2.5.2) (2018-05-17)
 
 
@@ -31,7 +42,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="2.5.1"></a>
+<a name="2.5.1"></a>
 ## [2.5.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.5.0...@brandwatch/axiom-components@2.5.1) (2018-05-15)
 
 
