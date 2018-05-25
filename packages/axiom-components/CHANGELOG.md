@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="2.6.1"></a>
+    <a name="2.6.2"></a>
+## [2.6.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.6.1...@brandwatch/axiom-components@2.6.2) (2018-05-25)
+
+
+### Bug Fixes
+
+* **TableCell:** removes typo causing proptype warnings ([9aa808e](https://github.com/HHogg/axiom/commit/9aa808e))
+
+
+
+
+    <a name="2.6.1"></a>
 ## [2.6.1](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@2.6.0...@brandwatch/axiom-components@2.6.1) (2018-05-24)
 
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="2.6.0"></a>
+  <a name="2.6.0"></a>
 # [2.6.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@2.5.2...@brandwatch/axiom-components@2.6.0) (2018-05-24)
 
 
@@ -31,7 +42,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="2.5.2"></a>
+<a name="2.5.2"></a>
 ## [2.5.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.5.1...@brandwatch/axiom-components@2.5.2) (2018-05-17)
 
 
