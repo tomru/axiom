@@ -3,7 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="2.6.2"></a>
+      <a name="2.7.0"></a>
+# [2.7.0](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.6.2...@brandwatch/axiom-components@2.7.0) (2018-06-01)
+
+
+### Features
+
+* **Table:** Adds ability to override text color ([1bc94fc](https://github.com/thatguynamedandy/axiom/commit/1bc94fc))
+* **TableCell:** Adds additional large verticalPadding option ([6fc36da](https://github.com/thatguynamedandy/axiom/commit/6fc36da))
+* **Typography:** Adds standard body color for overrides ([0e15c13](https://github.com/thatguynamedandy/axiom/commit/0e15c13))
+
+
+
+
+      <a name="2.6.2"></a>
 ## [2.6.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.6.1...@brandwatch/axiom-components@2.6.2) (2018-05-25)
 
 
@@ -14,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="2.6.1"></a>
+  <a name="2.6.1"></a>
 ## [2.6.1](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@2.6.0...@brandwatch/axiom-components@2.6.1) (2018-05-24)
 
 
@@ -25,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="2.6.0"></a>
+<a name="2.6.0"></a>
 # [2.6.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@2.5.2...@brandwatch/axiom-components@2.6.0) (2018-05-24)
 
 
