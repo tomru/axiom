@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.3.2"></a>
+## [2.3.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@2.3.1...@brandwatch/axiom-charts@2.3.2) (2018-06-04)
+
+
+### Bug Fixes
+
+* **BarChart:** Corrected where row visibility handler is added so feature is off by default ([b662415](https://github.com/HHogg/axiom/commit/b662415))
+
+
+
+
 <a name="2.3.1"></a>
 ## [2.3.1](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-charts@2.3.0...@brandwatch/axiom-charts@2.3.1) (2018-06-01)
 
