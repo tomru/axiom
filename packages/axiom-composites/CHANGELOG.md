@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.0.40"></a>
+## [0.0.40](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-composites@0.0.39...@brandwatch/axiom-composites@0.0.40) (2018-06-14)
+
+
+### Bug Fixes
+
+* **UserMenu:** Allow UserMenu positioning to be configurable ([509c333](https://github.com/HHogg/axiom/commit/509c333))
+
+
+
+
 <a name="0.0.39"></a>
 ## [0.0.39](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-composites@0.0.38...@brandwatch/axiom-composites@0.0.39) (2018-06-12)
 

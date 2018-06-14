@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.28"></a>
+## [0.1.28](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-documentation-viewer@0.1.27...@brandwatch/axiom-documentation-viewer@0.1.28) (2018-06-14)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-documentation-viewer
+
 <a name="0.1.27"></a>
 ## [0.1.27](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-documentation-viewer@0.1.26...@brandwatch/axiom-documentation-viewer@0.1.27) (2018-06-12)
 
