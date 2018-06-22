@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.0.41"></a>
+## [0.0.41](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-composites@0.0.40...@brandwatch/axiom-composites@0.0.41) (2018-06-22)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-composites
+
 <a name="0.0.40"></a>
 ## [0.0.40](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-composites@0.0.39...@brandwatch/axiom-composites@0.0.40) (2018-06-14)
 

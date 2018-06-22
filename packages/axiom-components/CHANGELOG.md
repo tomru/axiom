@@ -3,7 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="2.8.0"></a>
+    <a name="2.9.0"></a>
+# [2.9.0](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.8.0...@brandwatch/axiom-components@2.9.0) (2018-06-22)
+
+
+### Features
+
+* **Dropdown:** Add option to change cursor on text input ([05a5828](https://github.com/thatguynamedandy/axiom/commit/05a5828))
+* **Dropdown:** Remove dropdown mask ([2667cdd](https://github.com/thatguynamedandy/axiom/commit/2667cdd))
+* **Tooltip:** Adds boolean delay option ([117fbf5](https://github.com/thatguynamedandy/axiom/commit/117fbf5))
+
+
+
+
+    <a name="2.8.0"></a>
 # [2.8.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.7.3...@brandwatch/axiom-components@2.8.0) (2018-06-14)
 
 
@@ -19,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="2.7.3"></a>
+  <a name="2.7.3"></a>
 ## [2.7.3](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.7.2...@brandwatch/axiom-components@2.7.3) (2018-06-12)
 
 
@@ -31,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="2.7.2"></a>
+<a name="2.7.2"></a>
 ## [2.7.2](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.7.1...@brandwatch/axiom-components@2.7.2) (2018-06-11)
 
 
