@@ -13,6 +13,9 @@ ssh-add github_deploy_key
 git config --global user.email "ci@brandwatch.com"
 git config --global user.name "Brandwatch (via TravisCI)"
 
+ssh git@github.com
+
+exit 0
 npm config set "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}"
 
 yarn build:packages
