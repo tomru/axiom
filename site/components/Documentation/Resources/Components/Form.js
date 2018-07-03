@@ -7,10 +7,12 @@ import {
   RadioButton,
   RadioButtonGroup,
   TextArea,
+  TextIcon,
   TextInput,
   TextInputButton,
   TextInputIcon,
   InlineValidation,
+  Strong,
   UsageHint,
 } from '@brandwatch/axiom-components';
 import {
@@ -29,7 +31,7 @@ export default class Documentation extends Component {
               <TextInput
                   onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
                   placeholder="Write in me"
-                  size="medium" />
+                  size="medium"/>
             </DocumentationShowCase>
           </GridCell>
 
@@ -47,6 +49,16 @@ export default class Documentation extends Component {
         </Grid>
 
         <Grid>
+          <GridCell>
+            <DocumentationShowCase centered>
+              <TextInput
+                  label="Lorem Ipsum"
+                  onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
+                  placeholder="Write in me"
+                  size="medium"
+                  usageHint="This is a usage hint" />
+            </DocumentationShowCase>
+          </GridCell>
           <GridCell>
             <DocumentationShowCase centered>
               <InlineValidation message="There seems to be something wrong with your input">
@@ -68,7 +80,10 @@ export default class Documentation extends Component {
         ] } />
 
         <DocumentationShowCase>
-          <TextArea placeholder="Write in me" />
+          <TextArea
+              label="Lorem ipsum"
+              placeholder="Write in me"
+              usageHint="This is a usage hint" />
         </DocumentationShowCase>
 
         <DocumentationApi components={ [
@@ -106,7 +121,9 @@ export default class Documentation extends Component {
         ] } />
 
         <DocumentationShowCase>
-          <UsageHint usageHint="Lorem ipsum dolor sit amet" />
+          <UsageHint>
+            <TextIcon name="clock" /> Lorem ipsum <Strong>dolor sit amet</Strong>
+          </UsageHint>
         </DocumentationShowCase>
 
         <DocumentationApi components={ [
