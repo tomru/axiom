@@ -143,5 +143,6 @@ export { default as TooltipSource } from './Tooltip/TooltipSource';
 export { default as TooltipTarget } from './Tooltip/TooltipTarget';
 export { default as Transition } from './Transition/Transition';
 export { default as Underline } from './Typography/Underline';
+export { default as UsageHint } from './UsageHint/UsageHint';
 export { default as Validate } from './Validation/Validate';
 export { default as Validation } from './Validation/Validation';

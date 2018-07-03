@@ -41,6 +41,7 @@ import Toolbar from './Components/Toolbar';
 import Tooltip from './Components/Tooltip';
 import Transition from './Components/Transition';
 import Typography from './Components/Typography';
+import UsageHint from './Components/UsageHint';
 import Validation from './Components/Validation';
 
 export default class Documentation extends Component {
@@ -211,6 +212,10 @@ export default class Documentation extends Component {
             id: 'typography',
             name: 'Typography',
             Component: Typography,
+          }, {
+            id: 'usagehint',
+            name: 'UsageHint',
+            Component: UsageHint,
           }, {
             id: 'validation',
             name: 'Validation',
