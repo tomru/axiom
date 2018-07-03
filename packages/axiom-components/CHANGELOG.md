@@ -3,7 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="2.12.0"></a>
+      <a name="3.0.0"></a>
+# [3.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.12.0...@brandwatch/axiom-components@3.0.0) (2018-07-03)
+
+
+### Features
+
+* **Dialog:** Added width as a prop to Dialog ([dbc60a8](https://github.com/HHogg/axiom/commit/dbc60a8))
+
+
+### BREAKING CHANGES
+
+* **Dialog:** Dialog components size property has been removed. See docs for use with new width property. To retain the same widths as before set the widths like below
+size="small" -> width="20rem"
+size="medium" -> width="37.5rem"
+size="large" -> width="50rem"
+
+
+
+
+      <a name="2.12.0"></a>
 # [2.12.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.11.0...@brandwatch/axiom-components@2.12.0) (2018-07-03)
 
 
@@ -14,7 +33,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="2.11.0"></a>
+  <a name="2.11.0"></a>
 # [2.11.0](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.10.0...@brandwatch/axiom-components@2.11.0) (2018-07-02)
 
 
@@ -30,7 +49,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="2.10.0"></a>
+<a name="2.10.0"></a>
 # [2.10.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-components@2.9.0...@brandwatch/axiom-components@2.10.0) (2018-06-29)
 
 
