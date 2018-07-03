@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="2.11.0"></a>
+    <a name="2.12.0"></a>
+# [2.12.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.11.0...@brandwatch/axiom-components@2.12.0) (2018-07-03)
+
+
+### Features
+
+* **StatusBadge:** Added new StatusBadge component ([a04bcbc](https://github.com/HHogg/axiom/commit/a04bcbc))
+
+
+
+
+    <a name="2.11.0"></a>
 # [2.11.0](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.10.0...@brandwatch/axiom-components@2.11.0) (2018-07-02)
 
 
@@ -19,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="2.10.0"></a>
+  <a name="2.10.0"></a>
 # [2.10.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-components@2.9.0...@brandwatch/axiom-components@2.10.0) (2018-06-29)
 
 
@@ -36,7 +47,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="2.9.0"></a>
+<a name="2.9.0"></a>
 # [2.9.0](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.8.0...@brandwatch/axiom-components@2.9.0) (2018-06-22)
 
 
