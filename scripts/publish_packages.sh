@@ -21,12 +21,15 @@ fi
 git config --global user.email "ci@brandwatch.com"
 git config --global user.name "Brandwatch (via TravisCI)"
 
+# travis sets origin to https. Let set up a second remote for ssh
+git add remote upstream git@github.com:BrandwatchLtd/axiom.git
+
 npm config set "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}"
 
 yarn build:packages
 
 git checkout master
-npx lerna publish --conventional-commits --yes
+npx lerna publish --conventional-commits --yes --git-remote upstream
 
 # Workaround https://github.com/travis-ci/travis-ci/issues/8082
 ssh-agent -k
