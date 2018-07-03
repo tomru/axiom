@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="3.1.0"></a>
+# [3.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@3.0.0...@brandwatch/axiom-components@3.1.0) (2018-07-03)
+
+
+### Features
+
+* **Modal:** Close Modal by pressing Esc ([7162446](https://github.com/HHogg/axiom/commit/7162446))
+
+
+
+
       <a name="3.0.0"></a>
 # [3.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.12.0...@brandwatch/axiom-components@3.0.0) (2018-07-03)
 
@@ -22,7 +33,7 @@ size="large" -> width="50rem"
 
 
 
-      <a name="2.12.0"></a>
+    <a name="2.12.0"></a>
 # [2.12.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.11.0...@brandwatch/axiom-components@2.12.0) (2018-07-03)
 
 
@@ -33,7 +44,7 @@ size="large" -> width="50rem"
 
 
 
-  <a name="2.11.0"></a>
+<a name="2.11.0"></a>
 # [2.11.0](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.10.0...@brandwatch/axiom-components@2.11.0) (2018-07-02)
 
 

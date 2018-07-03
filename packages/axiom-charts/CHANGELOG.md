@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.4.4"></a>
+## [2.4.4](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@2.4.3...@brandwatch/axiom-charts@2.4.4) (2018-07-03)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
 <a name="2.4.3"></a>
 ## [2.4.3](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@2.4.2...@brandwatch/axiom-charts@2.4.3) (2018-07-03)
 
