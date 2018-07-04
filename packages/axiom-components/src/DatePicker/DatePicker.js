@@ -24,6 +24,12 @@ export default class DatePicker extends Component {
     onCancel: PropTypes.func,
     /** Callback for when a date or range has been selected */
     onSelect: PropTypes.func.isRequired,
+    /** Ranges Quick Selections. Default is Today, 7D, 14D, 1M, 2M */
+    rangeQuickSelections: PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.string,
+      days: PropTypes.number,
+      month: PropTypes.number,
+    })),
     /** Whether a date range can be selected */
     rangeSelect: PropTypes.bool,
     /** A single date that appears selected */
@@ -39,6 +45,28 @@ export default class DatePicker extends Component {
   static defaultProps = {
     view: 'single',
     rangeSelect: false,
+    rangeQuickSelections: [
+      {
+        label: 'Today',
+        days: 0,
+      },
+      {
+        label: '7D',
+        days: 7,
+      },
+      {
+        label: '14D',
+        days: 14,
+      },
+      {
+        label: '1M',
+        months: 1,
+      },
+      {
+        label: '2M',
+        months: 2,
+      },
+    ],
   };
 
   render() {

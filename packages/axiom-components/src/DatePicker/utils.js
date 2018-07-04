@@ -1,7 +1,7 @@
 import {
-  addDays,
+  addDays as dateFnsAddDays,
   addMonths as dateFnsAddMonths,
-  endOfDay,
+  endOfDay as dateFnsEndOfDay,
   endOfMonth,
   format,
   getDay,
@@ -11,6 +11,7 @@ import {
   isSameDay as dateFnsIsSameDay,
   isSameMonth as dateFnsIsSameMonth,
   setHours,
+  startOfDay as dateFnsStartOfDay,
   startOfMonth,
 } from 'date-fns';
 
@@ -24,7 +25,7 @@ export const buildMonthGrid = (date) => {
   }
 
   for (let i = 0; i < getDaysInMonth(startMonth); i++) {
-    grid.push(addDays(startMonth, i));
+    grid.push(dateFnsAddDays(startMonth, i));
   }
 
   return grid.reduce((w, n, i) => {
@@ -33,22 +34,25 @@ export const buildMonthGrid = (date) => {
   }, []);
 };
 
+export const addDays = (date, days) => date && dateFnsAddDays(date, days);
 export const addMonths = (date, months) => date && dateFnsAddMonths(date, months);
 export const dateOrNow = (date) => setHours(date ? new Date(date) : new Date(), 12);
 export const getDayNumber = (date) => format(date, 'D');
 export const getMonthName = (date) => format(date, 'MMMM');
 export const getYearNumber = (date) => format(date, 'YYYY');
+export const startOfDay = date => date && dateFnsStartOfDay(date);
+export const endOfDay = date => date && dateFnsEndOfDay(date);
 
 export const isAfterDay = (aDate, bDate) =>
   !!bDate && isAfter(
-    endOfDay(aDate),
-    endOfDay(bDate),
+    dateFnsEndOfDay(aDate),
+    dateFnsEndOfDay(bDate),
   );
 
 export const isBeforeDay = (aDate, bDate) =>
   !!bDate && isBefore(
-    endOfDay(aDate),
-    endOfDay(bDate),
+    dateFnsEndOfDay(aDate),
+    dateFnsEndOfDay(bDate),
   );
 
 export const isBetweenDate = (date, aDate, bDate) =>

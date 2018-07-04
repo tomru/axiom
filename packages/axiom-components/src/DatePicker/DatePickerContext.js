@@ -7,12 +7,17 @@ import GridCell from '../Grid/GridCell';
 import DatePickerControls from './DatePickerControls';
 import DatePickerHeaderControl from './DatePickerHeaderControl';
 import DatePickerViewMonth from './DatePickerViewMonth';
+import DatePickerQuickSelection from './DatePickerQuickSelection';
+import Separator from '../Separator/Separator';
 import {
+  addDays,
   addMonths,
   dateOrNow,
   isAfterDay,
   isBeforeDay,
   isSameMonth,
+  startOfDay,
+  endOfDay,
   orderDates,
 } from './utils';
 import './DatePicker.css';
@@ -25,6 +30,7 @@ export default class DatePickerContext extends Component {
     onApply: PropTypes.func,
     onCancel: PropTypes.func,
     onSelect: PropTypes.func.isRequired,
+    rangeQuickSelections: PropTypes.array,
     rangeSelect: PropTypes.bool,
     selectedDate: PropTypes.instanceOf(Date),
     selectedEndDate: PropTypes.instanceOf(Date),
@@ -105,6 +111,39 @@ export default class DatePickerContext extends Component {
     });
   }
 
+  handleRangeQuickSelection(data) {
+    const {
+      onSelect,
+      rangeSelect,
+    } = this.props;
+
+    if (!rangeSelect) {
+      return;
+    }
+
+    const { days, months } = data;
+    let dateStart = startOfDay(new Date());
+    const dateEnd = (days || months) && endOfDay(new Date());
+
+    if (days) {
+      dateStart = addDays(dateStart, -days);
+    }
+
+    if (months) {
+      dateStart = addMonths(dateStart, -months);
+    }
+
+    this.setState({
+      activeStartDate: dateStart,
+      activeEndDate: dateEnd || addMonths(dateStart, 1),
+    });
+
+    return onSelect({
+      dateStart,
+      dateEnd,
+    });
+  }
+
   render() {
     const {
       activeEndDate,
@@ -115,6 +154,7 @@ export default class DatePickerContext extends Component {
       earliestSelectableDate,
       latestSelectableDate,
       rangeSelect,
+      rangeQuickSelections,
       selectedDate,
       selectedEndDate,
       selectedStartDate,
@@ -128,6 +168,7 @@ export default class DatePickerContext extends Component {
     const [ earliestDate, latestDate ] = orderDates(earliestSelectableDate, latestSelectableDate);
 
     const isDoubeView = view === 'double';
+    const showRangeQuickSelection = isDoubeView && rangeSelect && rangeQuickSelections && rangeQuickSelections.length;
 
     return (
       <DropdownContext { ...rest }>
@@ -173,9 +214,17 @@ export default class DatePickerContext extends Component {
               </GridCell>
             ) }
           </Grid>
-        </DropdownContent>
-
-        <DropdownContent>
+          { showRangeQuickSelection ? (
+            <Grid verticalAlign="middle">
+              <GridCell><Separator /></GridCell>
+              <GridCell none>
+                <DatePickerQuickSelection
+                    onRangeQuickSelection={ data => this.handleRangeQuickSelection(data) }
+                    rangeQuickSelections={ rangeQuickSelections } />
+              </GridCell>
+              <GridCell><Separator /></GridCell>
+            </Grid>
+          ) : <Separator /> }
           <DatePickerControls
               onApply={ onApply }
               onCancel={ onCancel }

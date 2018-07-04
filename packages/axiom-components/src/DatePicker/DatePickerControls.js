@@ -47,7 +47,7 @@ export default class DatePickerControls extends Component {
     } = this.props;
 
     return (
-      <Grid responsive={ false } space="x1">
+      <Grid responsive={ false }>
         { view === 'double' && (
           <GridCell>
             { rangeSelect && selectedStartDate && mediumDate(selectedStartDate) }
