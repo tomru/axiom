@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import DropdownContent from '../Dropdown/DropdownContent';
 import DropdownContext from '../Dropdown/DropdownContext';
 import Grid from '../Grid/Grid';
@@ -7,6 +7,8 @@ import GridCell from '../Grid/GridCell';
 import DatePickerControls from './DatePickerControls';
 import DatePickerHeaderControl from './DatePickerHeaderControl';
 import DatePickerViewMonth from './DatePickerViewMonth';
+import DatePickerRangeSelection from './DatePickerRangeSelection';
+import Separator from '../Separator/Separator';
 import {
   addMonths,
   dateOrNow,
@@ -26,8 +28,15 @@ export default class DatePickerContext extends Component {
     onCancel: PropTypes.func,
     onSelect: PropTypes.func.isRequired,
     rangeSelect: PropTypes.bool,
+    rangeSelections: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        range: PropTypes.string.isRequired,
+      }),
+    ),
     selectedDate: PropTypes.instanceOf(Date),
     selectedEndDate: PropTypes.instanceOf(Date),
+    selectedRange: PropTypes.string,
     selectedStartDate: PropTypes.instanceOf(Date),
     view: PropTypes.string,
   };
@@ -57,6 +66,22 @@ export default class DatePickerContext extends Component {
       activeStartDate,
       activeEndDate,
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    const { selectedStartDate, selectedEndDate, rangeSelect, view } = this.props;
+
+    if (selectedStartDate !== prevProps.selectedStartDate) {
+      this.setState({ activeStartDate: selectedStartDate });
+    }
+
+    if (rangeSelect && view === 'double' && selectedEndDate !== prevProps.selectedEndDate) {
+      if (isSameMonth(selectedStartDate, selectedEndDate)) {
+        this.setState({ activeEndDate: addMonths(selectedEndDate, 1) });
+      } else {
+        this.setState({ activeEndDate: selectedEndDate });
+      }
+    }
   }
 
   handleActiveStartDateChange(direction) {
@@ -105,6 +130,15 @@ export default class DatePickerContext extends Component {
     });
   }
 
+  handleRangeSelection(range) {
+    const {
+      onSelect,
+      rangeSelect,
+    } = this.props;
+
+    rangeSelect && onSelect({ range });
+  }
+
   render() {
     const {
       activeEndDate,
@@ -115,8 +149,10 @@ export default class DatePickerContext extends Component {
       earliestSelectableDate,
       latestSelectableDate,
       rangeSelect,
+      rangeSelections,
       selectedDate,
       selectedEndDate,
+      selectedRange,
       selectedStartDate,
       onApply,
       onCancel,
@@ -127,7 +163,46 @@ export default class DatePickerContext extends Component {
     const [ startDate, endDate ] = orderDates(selectedStartDate, selectedEndDate);
     const [ earliestDate, latestDate ] = orderDates(earliestSelectableDate, latestSelectableDate);
 
-    const isDoubeView = view === 'double';
+    const isDoubleView = view === 'double';
+    const showRangeSelection = rangeSelect && rangeSelections && rangeSelections.length;
+
+    const rangeSelection = showRangeSelection && (isDoubleView ? (
+      <Fragment>
+        <Grid hiddenUntil="small" verticalAlign="middle">
+          <GridCell><Separator /></GridCell>
+          <GridCell none>
+            <DatePickerRangeSelection
+                onRangeSelection={ range => this.handleRangeSelection(range) }
+                rangeSelections={ rangeSelections }
+                selectedRange={ selectedRange } />
+          </GridCell>
+          <GridCell><Separator /></GridCell>
+        </Grid>
+        <Grid horizontalAlign="middle" responsive={ false } visibleUntil="small">
+          <GridCell shrink>
+            <DatePickerRangeSelection
+                onRangeSelection={ range => this.handleRangeSelection(range) }
+                rangeSelections={ rangeSelections }
+                selectedRange={ selectedRange } />
+          </GridCell>
+          <GridCell full>
+            <Separator />
+          </GridCell>
+        </Grid>
+      </Fragment>
+    ) : (
+      <Grid horizontalAlign="middle" responsive={ false }>
+        <GridCell shrink>
+          <DatePickerRangeSelection
+              onRangeSelection={ range => this.handleRangeSelection(range) }
+              rangeSelections={ rangeSelections }
+              selectedRange={ selectedRange } />
+        </GridCell>
+        <GridCell full>
+          <Separator />
+        </GridCell>
+      </Grid>
+    ));
 
     return (
       <DropdownContext { ...rest }>
@@ -137,7 +212,7 @@ export default class DatePickerContext extends Component {
               <DatePickerHeaderControl
                   date={ activeStartDate }
                   earliestSelectableDate={ earliestDate }
-                  latestSelectableDate={ isDoubeView
+                  latestSelectableDate={ isDoubleView
                     ? addMonths(activeEndDate, -1)
                     : latestDate }
                   onNext={ () => this.handleActiveStartDateChange(1) }
@@ -153,7 +228,7 @@ export default class DatePickerContext extends Component {
                   selectedStartDate={ rangeSelect ? startDate : undefined } />
             </GridCell>
 
-            { isDoubeView && (
+            { isDoubleView && (
               <GridCell hiddenUntil="small">
                 <DatePickerHeaderControl
                     date={ activeEndDate }
@@ -173,9 +248,7 @@ export default class DatePickerContext extends Component {
               </GridCell>
             ) }
           </Grid>
-        </DropdownContent>
-
-        <DropdownContent>
+          { rangeSelection }
           <DatePickerControls
               onApply={ onApply }
               onCancel={ onCancel }
