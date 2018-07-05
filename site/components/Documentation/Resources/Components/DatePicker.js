@@ -43,7 +43,7 @@ export default class Documentation extends Component {
 
           <GridCell>
             <DocumentationShowCase centered>
-              <DatePicker onSelect={ (setValue, getValue, { date, dateStart, dateEnd }) => {
+              <DatePicker rangeSelect view="double" onSelect={ (setValue, getValue, { date, dateStart, dateEnd }) => {
                 setValue('DatePicker', 'selectedDate', date);
                 setValue('DatePicker', 'selectedEndDate', dateEnd);
                 setValue('DatePicker', 'selectedStartDate', dateStart);
