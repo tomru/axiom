@@ -3,7 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="3.1.1"></a>
+      <a name="4.0.0"></a>
+# [4.0.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@3.1.1...@brandwatch/axiom-components@4.0.0) (2018-07-05)
+
+
+### Features
+
+* **Dropdown:** Set show arrow to true in Dropdown and Position component ([27b06b7](https://github.com/BrandwatchLtd/axiom/commit/27b06b7))
+
+
+### BREAKING CHANGES
+
+* **Dropdown:** arrows will now be hidden be default
+
+
+
+
+      <a name="3.1.1"></a>
 ## [3.1.1](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@3.1.0...@brandwatch/axiom-components@3.1.1) (2018-07-05)
 
 
@@ -11,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @brandwatch/axiom-components
 
-    <a name="3.1.0"></a>
+  <a name="3.1.0"></a>
 # [3.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@3.0.0...@brandwatch/axiom-components@3.1.0) (2018-07-03)
 
 
@@ -22,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="3.0.0"></a>
+<a name="3.0.0"></a>
 # [3.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.12.0...@brandwatch/axiom-components@3.0.0) (2018-07-03)
 
 

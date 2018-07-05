@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-charts@2.4.5...@brandwatch/axiom-charts@3.0.0) (2018-07-05)
+
+
+### Features
+
+* **Dropdown:** Set show arrow to true in Dropdown and Position component ([27b06b7](https://github.com/BrandwatchLtd/axiom/commit/27b06b7))
+
+
+### BREAKING CHANGES
+
+* **Dropdown:** arrows will now be hidden be default
+
+
+
+
 <a name="2.4.5"></a>
 ## [2.4.5](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-charts@2.4.4...@brandwatch/axiom-charts@2.4.5) (2018-07-05)
 
