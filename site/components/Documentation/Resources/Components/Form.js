@@ -7,13 +7,10 @@ import {
   RadioButton,
   RadioButtonGroup,
   TextArea,
-  TextIcon,
   TextInput,
   TextInputButton,
   TextInputIcon,
   InlineValidation,
-  Strong,
-  UsageHint,
 } from '@brandwatch/axiom-components';
 import {
   DocumentationApi,
@@ -118,16 +115,6 @@ export default class Documentation extends Component {
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/CheckBoxGroup'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/RadioButton'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/RadioButtonGroup'),
-        ] } />
-
-        <DocumentationShowCase>
-          <UsageHint>
-            <TextIcon name="clock" /> Lorem ipsum <Strong>dolor sit amet</Strong>
-          </UsageHint>
-        </DocumentationShowCase>
-
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/UsageHint'),
         ] } />
       </DocumentationContent>
     );
