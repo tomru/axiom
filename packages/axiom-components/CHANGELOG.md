@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.3.0"></a>
+# [4.3.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.2.1...@brandwatch/axiom-components@4.3.0) (2018-07-11)
+
+
+### Features
+
+* **Slider:** Added slider component ([7874a1c](https://github.com/BrandwatchLtd/axiom/commit/7874a1c))
+
+
+
+
       <a name="4.2.1"></a>
 ## [4.2.1](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.2.0...@brandwatch/axiom-components@4.2.1) (2018-07-11)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.2.0"></a>
+    <a name="4.2.0"></a>
 # [4.2.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.1.0...@brandwatch/axiom-components@4.2.0) (2018-07-06)
 
 
@@ -32,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.1.0"></a>
+<a name="4.1.0"></a>
 # [4.1.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.0.0...@brandwatch/axiom-components@4.1.0) (2018-07-05)
 
 
