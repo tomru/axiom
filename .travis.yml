@@ -15,8 +15,8 @@ script:
 - yarn lint
 - yarn ci:test
 - yarn build:site
-after_success:
 - bash scripts/publish_packages.sh
+after_success:
 - bash scripts/publish_site.sh
 env:
   global:
