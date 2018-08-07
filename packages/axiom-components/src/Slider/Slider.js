@@ -73,7 +73,7 @@ export default class Slider extends Component {
   handleMouseUp() {
     this.setState({ isDragging: false });
     document.removeEventListener('mousemove', this.handleMouseMove);
-    document.addEventListener('mouseup', this.handleMouseUp);
+    document.removeEventListener('mouseup', this.handleMouseUp);
   }
 
   handleBlur() {
