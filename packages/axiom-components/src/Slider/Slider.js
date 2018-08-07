@@ -19,6 +19,8 @@ export default class Slider extends Component {
     min: PropTypes.number.isRequired,
     /** Called when the sliders value changes */
     onChange: PropTypes.func.isRequired,
+    /** Called when the slider is let go */
+    onSlideEnd: PropTypes.func,
     /** Size of the slider */
     size: PropTypes.oneOf(['small', 'medium']),
     /** Configures the increments of the slide */
@@ -51,6 +53,16 @@ export default class Slider extends Component {
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.handleMouseUp = this.handleMouseUp.bind(this);
+    this.getValue = this.getValue.bind(this);
+  }
+
+  getValue(clientX) {
+    const { max, min, step } = this.props;
+
+    const posAsPercentage = Math.max(0, Math.min((clientX - this.posMin) / (this.posMax - this.posMin), 100));
+    const value = step * Math.round(posAsPercentage * (max - min) / step);
+
+    return Math.max(min, Math.min(value, max));
   }
 
   componentWillUnmount() {
@@ -70,8 +82,14 @@ export default class Slider extends Component {
     document.addEventListener('mouseup', this.handleMouseUp);
   }
 
-  handleMouseUp() {
+  handleMouseUp(event) {
+
+    const { onSlideEnd } = this.props;
+    const { clientX } = event;
+
     this.setState({ isDragging: false });
+    onSlideEnd && onSlideEnd(this.getValue(clientX));
+
     document.removeEventListener('mousemove', this.handleMouseMove);
     document.removeEventListener('mouseup', this.handleMouseUp);
   }
@@ -85,13 +103,10 @@ export default class Slider extends Component {
   }
 
   handleMouseMove(event) {
-    const { max, min, onChange, step } = this.props;
+    const { onChange } = this.props;
     const { clientX } = event;
-    const posAsPercentage = Math.max(0, Math.min((clientX - this.posMin) / (this.posMax - this.posMin), 100));
-    const value = step * Math.round(posAsPercentage * (max - min) / step);
-    const valueInRange = Math.max(min, Math.min(value, max));
 
-    onChange(valueInRange);
+    onChange(this.getValue(clientX));
   }
 
   handleKeyDown(event) {
