@@ -5,7 +5,7 @@
     "build:site": "NODE_ENV=production BABEL_ENV=static webpack --config webpack.static.config.js",
     "ci:setup": "NODE_ENV=production BABEL_ENV=production bash ./scripts/ci_setup.sh",
     "ci:test": "TZ=utc jest ./packages/**/dist --config .jest.ci.json",
-    "lint": "yarn run lint:js && yarn run lint:css",
+    "lint": "npm run lint:js && npm run lint:css",
     "lint:css": "stylelint 'packages/**/*.css' 'site/**/*.css'",
     "lint:js": "eslint --config .eslintrc packages site",
     "lint:commits": "./scripts/validate_commit_messages.sh",

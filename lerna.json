@@ -5,10 +5,9 @@
       "message": "chore(release): Updated release notes and package versions."
     }
   },
-  "npmClient": "yarn",
+  "npmClient": "npm",
   "packages": [
     "packages/*"
   ],
-  "useWorkspaces": true,
   "version": "independent"
 }
