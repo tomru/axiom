@@ -7,7 +7,11 @@ import './Icon.css';
 const ICON_NAME_MAP = {
   'annotate': require('./svgs/annotate.svg'),
   'arrow-down': require('./svgs/arrow-down.svg'),
+  'arrow-down-left': require('./svgs/arrow-down-left.svg'),
+  'arrow-down-right': require('./svgs/arrow-down-right.svg'),
   'arrow-up': require('./svgs/arrow-up.svg'),
+  'arrow-up-left': require('./svgs/arrow-up-left.svg'),
+  'arrow-up-right': require('./svgs/arrow-up-right.svg'),
   'at': require('./svgs/at.svg'),
   'bar-chart': require('./svgs/bar-chart.svg'),
   'benchmark': require('./svgs/benchmark.svg'),
@@ -99,7 +103,11 @@ export default class Icon extends Component {
     name: PropTypes.oneOf([
       'annotate',
       'arrow-down',
+      'arrow-down-left',
+      'arrow-down-right',
       'arrow-up',
+      'arrow-up-left',
+      'arrow-up-right',
       'at',
       'bar-chart',
       'benchmark',
