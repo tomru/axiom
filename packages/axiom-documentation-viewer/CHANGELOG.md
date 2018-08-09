@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.47"></a>
+## [0.1.47](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-documentation-viewer@0.1.46...@brandwatch/axiom-documentation-viewer@0.1.47) (2018-08-09)
+
+
+### Bug Fixes
+
+* **DocumentationShowCase:** Configuration dropdown arrow ([130a6dc](https://github.com/HHogg/axiom/commit/130a6dc))
+
+
+
+
 <a name="0.1.46"></a>
 ## [0.1.46](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-documentation-viewer@0.1.45...@brandwatch/axiom-documentation-viewer@0.1.46) (2018-08-02)
 

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@3.0.10...@brandwatch/axiom-charts@3.1.0) (2018-08-09)
+
+
+### Bug Fixes
+
+* **BarChart:** fix mouseleave before mouse is out of chart row ([18f6548](https://github.com/HHogg/axiom/commit/18f6548))
+
+
+### Features
+
+* **BarChart:** highlight row when mouse is anywhere inside the row ([9419758](https://github.com/HHogg/axiom/commit/9419758))
+* **DataPoint:** Added support for subtle and overlay-light colors ([9c3ce0c](https://github.com/HHogg/axiom/commit/9c3ce0c))
+* **RadarChart:** Added RadarChart ([517969f](https://github.com/HHogg/axiom/commit/517969f))
+
+
+
+
 <a name="3.0.10"></a>
 ## [3.0.10](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@3.0.9...@brandwatch/axiom-charts@3.0.10) (2018-08-02)
 

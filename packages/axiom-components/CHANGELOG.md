@@ -3,7 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="4.8.1"></a>
+    <a name="4.9.0"></a>
+# [4.9.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.8.1...@brandwatch/axiom-components@4.9.0) (2018-08-09)
+
+
+### Bug Fixes
+
+* **Card:** Fixes issue with image grids in Safari ([cda36ea](https://github.com/HHogg/axiom/commit/cda36ea))
+* **Context:** Readds back in the divider. Regression from [#622](https://github.com/HHogg/axiom/issues/622) ([f8ad6f1](https://github.com/HHogg/axiom/commit/f8ad6f1))
+* **InputWrapper:** Using 'node' prop-type for label prop in InputWrapper. ([e1fba91](https://github.com/HHogg/axiom/commit/e1fba91))
+* **Slider:** fix issue where slider called handleMouseUp exponentially. ([c8ccc49](https://github.com/HHogg/axiom/commit/c8ccc49))
+
+
+### Features
+
+* **Dialog:** Configurable 'padding' prop ([315afe8](https://github.com/HHogg/axiom/commit/315afe8))
+* **Icons:** Add new icons ([75790b4](https://github.com/HHogg/axiom/commit/75790b4))
+* **Slider:** add onSlideEnd implementers can work with handleMouseUp ([57def41](https://github.com/HHogg/axiom/commit/57def41))
+
+
+
+
+    <a name="4.8.1"></a>
 ## [4.8.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.8.0...@brandwatch/axiom-components@4.8.1) (2018-08-02)
 
 
@@ -17,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.8.0"></a>
+  <a name="4.8.0"></a>
 # [4.8.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@4.7.0...@brandwatch/axiom-components@4.8.0) (2018-07-23)
 
 
@@ -28,7 +49,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.7.0"></a>
+<a name="4.7.0"></a>
 # [4.7.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@4.5.0...@brandwatch/axiom-components@4.7.0) (2018-07-19)
 
 
