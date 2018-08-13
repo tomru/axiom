@@ -44,8 +44,13 @@
 }
 
 .ax-context-content--padding-horizontal-small {
-  padding-right: var(--cmp-context-padding-small);
-  padding-left: var(--cmp-context-padding-small);
+  padding-right: var(--cmp-context-padding-horizontal-small);
+  padding-left: var(--cmp-context-padding-horizontal-small);
+}
+
+.ax-context-content--padding-horizontal-medium {
+  padding-right: var(--cmp-context-padding-medium);
+  padding-left: var(--cmp-context-padding-medium);
 }
 
 .ax-context-content--padding-horizontal-large {
@@ -59,8 +64,13 @@
 }
 
 .ax-context-content--padding-vertical-small {
-  padding-top: var(--cmp-context-padding-small);
-  padding-bottom: var(--cmp-context-padding-small);
+  padding-top: var(--cmp-context-padding-vertical-small);
+  padding-bottom: var(--cmp-context-padding-vertical-small);
+}
+
+.ax-context-content--padding-vertical-medium {
+  padding-top: var(--cmp-context-padding-medium);
+  padding-bottom: var(--cmp-context-padding-medium);
 }
 
 .ax-context-content--padding-vertical-large {
@@ -75,9 +85,9 @@
   border-top: var(--component-border-width) solid var(--color-theme-border);
 }
 
-.ax-context-content--padding-horizontal-small::before {
-  right: var(--cmp-context-padding-small);
-  left: var(--cmp-context-padding-small);
+.ax-context-content--padding-horizontal-medium::before {
+  right: var(--cmp-context-padding-medium);
+  left: var(--cmp-context-padding-medium);
 }
 
 .ax-context-content--padding-horizontal-none::before,
