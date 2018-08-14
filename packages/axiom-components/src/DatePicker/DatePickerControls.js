@@ -49,7 +49,7 @@ export default class DatePickerControls extends Component {
     return (
       <Grid horizontalAlign="end" responsive={ false }>
         { view === 'double' && (
-          <GridCell>
+          <GridCell hiddenUntil="small">
             { rangeSelect && selectedStartDate && mediumDate(selectedStartDate) }
             { rangeSelect && selectedEndDate && ` – ${mediumDate(selectedEndDate)}` }
             { !rangeSelect && selectedDate && mediumDate(selectedDate) }
