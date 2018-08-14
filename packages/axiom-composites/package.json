@@ -3,6 +3,7 @@
   "version": "0.0.59",
   "description": "Brandwatch Axiom - Composites",
   "main": "dist/index.js",
+  "module": "esm/index.js",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"

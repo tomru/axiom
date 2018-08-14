@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "Brandwatch Axiom - Localization",
   "main": "dist/index.js",
+  "module": "esm/index.js",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"

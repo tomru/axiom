@@ -3,6 +3,7 @@
   "version": "1.4.1",
   "description": "Brandwatch Axiom - Materials",
   "main": "dist/index.js",
+  "module": "esm/index.js",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"

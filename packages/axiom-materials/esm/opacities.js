@@ -1,0 +1,14 @@
+export var opacityTextSubtle = 0.75;
+export var opacityTextDisabled = 0.3;
+export var opacityBackgroundOverlayModal = 0.9;
+export var opacityBackgroundOverlayHeavy = 0.75;
+export var opacityBackgroundOverlayLight = 0.3;
+export var opacityBackgroundSubtle = 0.15;
+export var opacityBackgroundActive = 0.08;
+export var opacityBackgroundDisabled = 0.05;
+export var opacityBackgroundHover = 0.04;
+export var opacityBorder = 0.2;
+export var opacityShadow = 0.1;
+export var opacityInputBorderFocused = 0.5;
+export var opacityInputBorderValid = 0.4;
+export var opacityInputBorderInvalid = 0.25;

@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "description": "Brandwatch Axiom - stylelint config",
   "main": "dist/index.js",
+  "module": "esm/index.js",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
