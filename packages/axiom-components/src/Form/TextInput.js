@@ -27,6 +27,8 @@ export default class TextInput extends Component {
     label: PropTypes.string,
     /** Handler for when the input field is blurred */
     onBlur: PropTypes.func,
+    /** Handler for changing the input field */
+    onChange: PropTypes.func,
     /** Handler for requesting to clear the input field */
     onClear: PropTypes.func,
     /** Handler for when the input field is focused */
