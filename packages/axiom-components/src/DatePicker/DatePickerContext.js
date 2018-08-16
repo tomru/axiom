@@ -166,7 +166,7 @@ export default class DatePickerContext extends Component {
     const isDoubleView = view === 'double';
     const showRangeSelection = rangeSelect && rangeSelections && rangeSelections.length;
 
-    const rangeSelection = showRangeSelection && (isDoubleView ? (
+    const rangeSelection = (showRangeSelection && isDoubleView) ? (
       <Fragment>
         <Grid hiddenUntil="small" verticalAlign="middle">
           <GridCell><Separator /></GridCell>
@@ -202,7 +202,7 @@ export default class DatePickerContext extends Component {
           <Separator />
         </GridCell>
       </Grid>
-    ));
+    );
 
     return (
       <DropdownContext { ...rest }>
