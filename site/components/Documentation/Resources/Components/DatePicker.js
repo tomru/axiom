@@ -45,7 +45,7 @@ export default class Documentation extends Component {
   handleSelect({ date, dateEnd, dateStart, range }) {
     if (range) {
       const end = DateTime.local().endOf('day');
-      dateEnd = end.toJSDate(),
+      dateEnd = end.toJSDate();
       dateStart = end.minus(Duration.fromISO(range)).plus(1, 'microsecond').toJSDate();
     }
 
