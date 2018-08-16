@@ -4,6 +4,7 @@
   "description": "Brandwatch Axiom - Automation testing",
   "main": "dist/index.js",
   "module": "esm/index.js",
+  "sideEffects": false,
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"

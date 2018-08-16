@@ -4,6 +4,7 @@
   "description": "Brandwatch Axiom - Utils",
   "main": "dist/index.js",
   "module": "esm/index.js",
+  "sideEffects": false,
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
