@@ -28,10 +28,22 @@
 
 .ax-chart-layout__x-labels {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: var(--spacing-grid-size--x3);
   grid-row-start: 2;
   grid-column-start: 3;
+}
+
+.ax-chart-layout__x-label {
+  position: relative;
+}
+
+.ax-chart-layout__x-label-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 
 .ax-chart-layout__x-title,
