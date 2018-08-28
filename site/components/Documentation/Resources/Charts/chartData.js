@@ -181,15 +181,25 @@ export const lineChartKey = [{
 }, {
   color: 'giant-leap',
   label: 'Blog',
-  style: 'dashed',
+  style: 'solid',
+}, {
+  color: 'social-twitter',
+  label: 'Twitter',
+  style: 'solid',
 }];
 
+function getRandomArray(lower, upper, length) {
+  return Array(length).fill(null).map((_, i) => Math.abs(Math.sin(i / (upper - lower))) * Math.random() * (upper - lower) + lower);
+}
 export const lineChartData = [{
   label: 'Forum',
-  values: [14, 18, 15, 14, 13, 12, 21, 17, 23, 18, 17, 9, 16, 7, 2, 8, 12, 11, 15, 9, 6, 7, 8, 7, 14, 7, 7],
+  values: getRandomArray(0, 20, 356 * 4),
 }, {
   label: 'Blog',
-  values: [7, 7, 14, 7, 8, 7, 6, 9, 15, 11, 12, 8, 2, 7, 16, 9, 17, 18, 23, 17, 21, 12, 13, 14, 15, 18, 14],
+  values: getRandomArray(10, 30, 356 * 4),
+}, {
+  label: 'Twitter',
+  values: getRandomArray(10, 40, 356 * 4),
 }];
 
 export const sparkLineBenchmark = 10;
