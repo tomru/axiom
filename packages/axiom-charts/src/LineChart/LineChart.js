@@ -171,22 +171,6 @@ export default class LineChart extends Component {
                       height={ height }
                       lower={ finalLower }
                       upper={ finalUpper }>
-                    { values.map((_, index) =>
-                      <LinePoint
-                          DropdownContext={ DropdownContext }
-                          TooltipContext={ TooltipContext }
-                          color={ labelMap[label].color }
-                          hover={ selectedIndex === index && selectedLabel === label }
-                          index={ index }
-                          key={ index }
-                          label={ label }
-                          onClick={ onPointClick }
-                          onDropdownClose={ () => this.handleDropdownClose() }
-                          onDropdownOpen={ () => this.handleDropdownOpen(index, label) }
-                          onMouseEnter={ () => this.handleMouseEnter(index, label) }
-                          onMouseLeave={ () => this.handleMouseLeave() }
-                          size=".5rem" />
-                    ) }
                   </Line>
                 </div>
               )) }
