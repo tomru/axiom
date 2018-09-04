@@ -3,7 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="4.13.0"></a>
+    <a name="4.14.0"></a>
+# [4.14.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.13.0...@brandwatch/axiom-components@4.14.0) (2018-09-04)
+
+
+### Bug Fixes
+
+* **DatePicker:** align buttons to the right ([82ebfae](https://github.com/HHogg/axiom/commit/82ebfae))
+
+
+### Features
+
+* **DatePicker:** add quick selection ([73d7c1f](https://github.com/HHogg/axiom/commit/73d7c1f))
+* **Toggle:** Adds layout prop to Toggle component ([91e80b7](https://github.com/HHogg/axiom/commit/91e80b7))
+
+
+
+
+    <a name="4.13.0"></a>
 # [4.13.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.12.1...@brandwatch/axiom-components@4.13.0) (2018-08-30)
 
 
@@ -14,7 +31,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.12.1"></a>
+  <a name="4.12.1"></a>
 ## [4.12.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.12.0...@brandwatch/axiom-components@4.12.1) (2018-08-29)
 
 
@@ -25,7 +42,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.12.0"></a>
+<a name="4.12.0"></a>
 # [4.12.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.11.0...@brandwatch/axiom-components@4.12.0) (2018-08-28)
 
 

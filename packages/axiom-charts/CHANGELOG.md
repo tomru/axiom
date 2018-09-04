@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@3.1.5...@brandwatch/axiom-charts@4.0.0) (2018-09-04)
+
+
+### Bug Fixes
+
+* **LineChart:** make precise mode work also on xAxisLabels ([61bceaa](https://github.com/HHogg/axiom/commit/61bceaa))
+* **LineChart:** use the same range [0, 100] for y and x axis positioning ([101312e](https://github.com/HHogg/axiom/commit/101312e))
+
+
+### Code Refactoring
+
+* **LineChart:** change xAxisLabels to take an array ([8d074a4](https://github.com/HHogg/axiom/commit/8d074a4))
+
+
+### BREAKING CHANGES
+
+* **LineChart:** Previously `xAxisLabels` was changed to a function, to
+be able to access `lower` and `upper`. This does not make sense on the
+xAxis as `lower` and `upper` are just used for the yAxis. Taking a
+simple array, like `yAxisLabels` again.
+
+
+
+
 <a name="3.1.5"></a>
 ## [3.1.5](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@3.1.4...@brandwatch/axiom-charts@3.1.5) (2018-08-30)
 
