@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@4.0.2...@brandwatch/axiom-charts@4.1.0) (2018-09-11)
+
+
+### Features
+
+* **SparkLine:** Make linepoint size configurable ([4d7506a](https://github.com/HHogg/axiom/commit/4d7506a))
+
+
+
+
 <a name="4.0.2"></a>
 ## [4.0.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@4.0.1...@brandwatch/axiom-charts@4.0.2) (2018-09-10)
 
