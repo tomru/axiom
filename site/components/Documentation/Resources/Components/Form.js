@@ -29,6 +29,10 @@ export default class Documentation extends Component {
                   onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
                   placeholder="Write in me"
                   size="medium"/>
+              <TextInput
+                  onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
+                  placeholder="Write in me"
+                  size="medium"/>
             </DocumentationShowCase>
           </GridCell>
 
@@ -70,7 +74,6 @@ export default class Documentation extends Component {
           </GridCell>
         </Grid>
 
-
         <DocumentationApi components={ [
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/TextInput'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/TextInputButton'),
@@ -78,6 +81,10 @@ export default class Documentation extends Component {
         ] } />
 
         <DocumentationShowCase>
+          <TextArea
+              label="Lorem ipsum"
+              placeholder="Write in me"
+              usageHint="This is a usage hint" />
           <TextArea
               label="Lorem ipsum"
               placeholder="Write in me"

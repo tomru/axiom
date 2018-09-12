@@ -2,7 +2,7 @@
 
 exports[`Select renders with a selected value 1`] = `
 <div
-  className="ax-input__container"
+  className="ax-input__container ax-space--x4"
 >
   <label
     className="ax-input__wrapper ax-space--x4"
@@ -46,7 +46,7 @@ exports[`Select renders with a selected value 1`] = `
 
 exports[`Select renders with defaultProps 1`] = `
 <div
-  className="ax-input__container"
+  className="ax-input__container ax-space--x4"
 >
   <label
     className="ax-input__wrapper ax-space--x4"
