@@ -69,6 +69,7 @@ export default class TextInput extends Component {
 
   static defaultProps = {
     size: 'medium',
+    space: 'x4',
     type: 'text',
   };
 
@@ -131,7 +132,7 @@ export default class TextInput extends Component {
           required={ required }
           value={ value }>
         { (isValid) =>
-          <div className="ax-input__container">
+          <Base className="ax-input__container" space={ space }>
             <InputWrapper
                 disabled={ disabled }
                 hasFocus={ hasFocus }
@@ -140,7 +141,6 @@ export default class TextInput extends Component {
                 isValid={ isValid }
                 label={ label }
                 size={ size }
-                space={ space }
                 style={ style }
                 usageHint={ usageHint }
                 usageHintPosition={ usageHintPosition }
@@ -169,7 +169,7 @@ export default class TextInput extends Component {
               }
             </InputWrapper>
             { button }
-          </div>
+          </Base>
         }
       </Validate>
     );
