@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="4.14.3"></a>
+      <a name="4.14.4"></a>
+## [4.14.4](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.3...@brandwatch/axiom-components@4.14.4) (2018-09-13)
+
+
+### Bug Fixes
+
+* **TextInput:** move spacing from input wrapper to input container ([44c190c](https://github.com/HHogg/axiom/commit/44c190c))
+
+
+
+
+      <a name="4.14.3"></a>
 ## [4.14.3](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.2...@brandwatch/axiom-components@4.14.3) (2018-09-11)
 
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.14.2"></a>
+  <a name="4.14.2"></a>
 ## [4.14.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.1...@brandwatch/axiom-components@4.14.2) (2018-09-10)
 
 
@@ -25,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.14.1"></a>
+<a name="4.14.1"></a>
 ## [4.14.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.0...@brandwatch/axiom-components@4.14.1) (2018-09-06)
 
 
