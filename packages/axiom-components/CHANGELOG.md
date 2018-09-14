@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.15.0"></a>
+# [4.15.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-components@4.11.0...@brandwatch/axiom-components@4.15.0) (2018-09-14)
+
+
+### Bug Fixes
+
+* **Badge:** Remove incorrect flex end alignment to allow text alignment ([c112cb7](https://github.com/lpoulter/axiom/commit/c112cb7))
+* **card:** remove unused color prop ([3d3c9d7](https://github.com/lpoulter/axiom/commit/3d3c9d7))
+* **DatePicker:** align buttons to the right ([82ebfae](https://github.com/lpoulter/axiom/commit/82ebfae))
+* **Dialog:** Fixes an issue where multiple dialogs conflict. ([d4043a9](https://github.com/lpoulter/axiom/commit/d4043a9))
+* **Dropdown:** Implement native style hover and focus ([950536e](https://github.com/lpoulter/axiom/commit/950536e))
+* **Slider:** Fix onSlideEnd being unrecognised ([ae7537e](https://github.com/lpoulter/axiom/commit/ae7537e))
+* **TextInput:** Fix input growing to available space ([380ca98](https://github.com/lpoulter/axiom/commit/380ca98))
+* **TextInput:** move spacing from input wrapper to input container ([44c190c](https://github.com/lpoulter/axiom/commit/44c190c))
+
+
+### Features
+
+* **card:** add shade prop to card content ([61e9480](https://github.com/lpoulter/axiom/commit/61e9480))
+* **DatePicker:** add quick selection ([73d7c1f](https://github.com/lpoulter/axiom/commit/73d7c1f))
+* **Grid:** Add support for className property ([84ff757](https://github.com/lpoulter/axiom/commit/84ff757))
+* **Grid:** Added direction property to control direction of grid ([9bfb1db](https://github.com/lpoulter/axiom/commit/9bfb1db))
+* **GridCell:** Add support for className property ([9f938bc](https://github.com/lpoulter/axiom/commit/9f938bc))
+* **Icon:** adds new lock icon ([8c021a1](https://github.com/lpoulter/axiom/commit/8c021a1))
+* **Reveal:** Added option to remove the contents of Reveal when it is collapsed ([8084b94](https://github.com/lpoulter/axiom/commit/8084b94))
+* **Toggle:** Adds layout prop to Toggle component ([91e80b7](https://github.com/lpoulter/axiom/commit/91e80b7))
+
+
+
+
       <a name="4.14.4"></a>
 ## [4.14.4](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.3...@brandwatch/axiom-components@4.14.4) (2018-09-13)
 
@@ -14,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.14.3"></a>
+    <a name="4.14.3"></a>
 ## [4.14.3](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.2...@brandwatch/axiom-components@4.14.3) (2018-09-11)
 
 
@@ -25,7 +55,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.14.2"></a>
+<a name="4.14.2"></a>
 ## [4.14.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.1...@brandwatch/axiom-components@4.14.2) (2018-09-10)
 
 

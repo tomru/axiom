@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.2"></a>
+## [0.2.2](https://github.com/lpoulter/axiom/compare/@brandwatch/babel-plugin-axiom-imports@0.2.0...@brandwatch/babel-plugin-axiom-imports@0.2.2) (2018-09-14)
+
+
+### Bug Fixes
+
+* **babel-plugin-axiom-imports:** Member expression literals transform ([2658ce8](https://github.com/lpoulter/axiom/commit/2658ce8))
+
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://github.com/HHogg/axiom/compare/@brandwatch/babel-plugin-axiom-imports@0.2.0...@brandwatch/babel-plugin-axiom-imports@0.2.1) (2018-08-29)
 

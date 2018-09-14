@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-charts@3.1.2...@brandwatch/axiom-charts@5.0.0) (2018-09-14)
+
+
+### Bug Fixes
+
+* **LineChart:** make precise mode work also on xAxisLabels ([61bceaa](https://github.com/lpoulter/axiom/commit/61bceaa))
+* **LineChart:** use the same range [0, 100] for y and x axis positioning ([101312e](https://github.com/lpoulter/axiom/commit/101312e))
+
+
+### Code Refactoring
+
+* **LineChart:** change xAxisLabels to take an array ([8d074a4](https://github.com/lpoulter/axiom/commit/8d074a4))
+
+
+### Features
+
+* **SparkLine:** Make linepoint size configurable ([4d7506a](https://github.com/lpoulter/axiom/commit/4d7506a))
+
+
+### BREAKING CHANGES
+
+* **LineChart:** Previously `xAxisLabels` was changed to a function, to
+be able to access `lower` and `upper`. This does not make sense on the
+xAxis as `lower` and `upper` are just used for the yAxis. Taking a
+simple array, like `yAxisLabels` again.
+
+
+
+
 <a name="4.1.1"></a>
 ## [4.1.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@4.1.0...@brandwatch/axiom-charts@4.1.1) (2018-09-13)
 
