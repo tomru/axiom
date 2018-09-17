@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.1"></a>
+## [5.0.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@5.0.0...@brandwatch/axiom-charts@5.0.1) (2018-09-17)
+
+
+### Bug Fixes
+
+* **LineChart:** Labels breaking onto multiple lines ([aa11150](https://github.com/HHogg/axiom/commit/aa11150))
+* **LineChart:** Missing color from LinPoint component propTypes ([9ae833f](https://github.com/HHogg/axiom/commit/9ae833f))
+
+
+
+
 <a name="5.0.0"></a>
 # [5.0.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-charts@3.1.2...@brandwatch/axiom-charts@5.0.0) (2018-09-14)
 
