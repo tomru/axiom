@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="4.15.0"></a>
+    <a name="4.15.1"></a>
+## [4.15.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.15.0...@brandwatch/axiom-components@4.15.1) (2018-09-18)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-components
+
+    <a name="4.15.0"></a>
 # [4.15.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-components@4.11.0...@brandwatch/axiom-components@4.15.0) (2018-09-14)
 
 
@@ -33,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.14.4"></a>
+  <a name="4.14.4"></a>
 ## [4.14.4](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.3...@brandwatch/axiom-components@4.14.4) (2018-09-13)
 
 
@@ -44,7 +52,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.14.3"></a>
+<a name="4.14.3"></a>
 ## [4.14.3](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.2...@brandwatch/axiom-components@4.14.3) (2018-09-11)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.2"></a>
+## [5.0.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@5.0.1...@brandwatch/axiom-charts@5.0.2) (2018-09-18)
+
+
+### Bug Fixes
+
+* **LineChart:** Allow array of strings for xAxisLabels ([b643b0d](https://github.com/HHogg/axiom/commit/b643b0d))
+* **SparkLine:** When there is no difference in values ([e9a5fd2](https://github.com/HHogg/axiom/commit/e9a5fd2))
+
+
+
+
 <a name="5.0.1"></a>
 ## [5.0.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@5.0.0...@brandwatch/axiom-charts@5.0.1) (2018-09-17)
 
