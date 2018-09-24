@@ -3,7 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="4.15.1"></a>
+      <a name="4.15.2"></a>
+## [4.15.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.15.1...@brandwatch/axiom-components@4.15.2) (2018-09-24)
+
+
+### Bug Fixes
+
+* **Table:** Vertical cell padding and medium value missing ([9513492](https://github.com/HHogg/axiom/commit/9513492))
+* **TextInput:** Add ability to focus TextInput in axiom. ([8f93d3b](https://github.com/HHogg/axiom/commit/8f93d3b))
+
+
+
+
+      <a name="4.15.1"></a>
 ## [4.15.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.15.0...@brandwatch/axiom-components@4.15.1) (2018-09-18)
 
 
@@ -11,7 +23,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @brandwatch/axiom-components
 
-    <a name="4.15.0"></a>
+  <a name="4.15.0"></a>
 # [4.15.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-components@4.11.0...@brandwatch/axiom-components@4.15.0) (2018-09-14)
 
 
@@ -41,7 +53,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.14.4"></a>
+<a name="4.14.4"></a>
 ## [4.14.4](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.3...@brandwatch/axiom-components@4.14.4) (2018-09-13)
 
 
