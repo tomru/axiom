@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.16.0"></a>
+# [4.16.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.15.2...@brandwatch/axiom-components@4.16.0) (2018-10-02)
+
+
+### Features
+
+* **Position:** Add targetElement property that acts as a general target element ([803ded0](https://github.com/tomru/axiom/commit/803ded0))
+
+
+
+
       <a name="4.15.2"></a>
 ## [4.15.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.15.1...@brandwatch/axiom-components@4.15.2) (2018-09-24)
 
@@ -15,7 +26,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.15.1"></a>
+    <a name="4.15.1"></a>
 ## [4.15.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.15.0...@brandwatch/axiom-components@4.15.1) (2018-09-18)
 
 
@@ -23,7 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @brandwatch/axiom-components
 
-  <a name="4.15.0"></a>
+<a name="4.15.0"></a>
 # [4.15.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-components@4.11.0...@brandwatch/axiom-components@4.15.0) (2018-09-14)
 
 
