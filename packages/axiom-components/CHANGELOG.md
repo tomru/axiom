@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="5.0.0"></a>
+# [5.0.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-components@4.18.0...@brandwatch/axiom-components@5.0.0) (2018-10-19)
+
+
+### Features
+
+* **ContextMenuItem:** ensure onClick event doesn't trigger three times ([da05146](https://github.com/Binarytales/axiom/commit/da05146))
+* **Icons:** Adding new icons ([4b71243](https://github.com/Binarytales/axiom/commit/4b71243))
+
+
+### BREAKING CHANGES
+
+* **ContextMenuItem:** ContextMenuItem's onClick event now stops Propagation.
+You will need to ensure that any onClick's passed through to a DropdownMenuItem or ContextMenuItem still function as expected. If you accounted for the onClick event triggering three times, you may need to change that
+
+
+
+
       <a name="4.18.0"></a>
 # [4.18.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.17.0...@brandwatch/axiom-components@4.18.0) (2018-10-16)
 
@@ -14,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.17.0"></a>
+    <a name="4.17.0"></a>
 # [4.17.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.16.0...@brandwatch/axiom-components@4.17.0) (2018-10-08)
 
 
@@ -25,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.16.0"></a>
+<a name="4.16.0"></a>
 # [4.16.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.15.2...@brandwatch/axiom-components@4.16.0) (2018-10-02)
 
 
