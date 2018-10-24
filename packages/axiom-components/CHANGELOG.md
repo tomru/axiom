@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="5.0.0"></a>
+    <a name="5.1.0"></a>
+# [5.1.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.0.0...@brandwatch/axiom-components@5.1.0) (2018-10-24)
+
+
+### Features
+
+* **TextInput:** Add "number" option to type prop. ([d25939f](https://github.com/tomru/axiom/commit/d25939f))
+
+
+
+
+    <a name="5.0.0"></a>
 # [5.0.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-components@4.18.0...@brandwatch/axiom-components@5.0.0) (2018-10-19)
 
 
@@ -21,7 +32,7 @@ You will need to ensure that any onClick's passed through to a DropdownMenuItem 
 
 
 
-      <a name="4.18.0"></a>
+  <a name="4.18.0"></a>
 # [4.18.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.17.0...@brandwatch/axiom-components@4.18.0) (2018-10-16)
 
 
@@ -32,7 +43,7 @@ You will need to ensure that any onClick's passed through to a DropdownMenuItem 
 
 
 
-    <a name="4.17.0"></a>
+<a name="4.17.0"></a>
 # [4.17.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.16.0...@brandwatch/axiom-components@4.17.0) (2018-10-08)
 
 
