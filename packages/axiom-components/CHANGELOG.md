@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="5.1.0"></a>
+      <a name="5.2.0"></a>
+# [5.2.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.1.0...@brandwatch/axiom-components@5.2.0) (2018-10-25)
+
+
+### Features
+
+* **Icons:** Add switch icon ([3ee0355](https://github.com/tomru/axiom/commit/3ee0355))
+
+
+
+
+      <a name="5.1.0"></a>
 # [5.1.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.0.0...@brandwatch/axiom-components@5.1.0) (2018-10-24)
 
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="5.0.0"></a>
+  <a name="5.0.0"></a>
 # [5.0.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-components@4.18.0...@brandwatch/axiom-components@5.0.0) (2018-10-19)
 
 
@@ -32,7 +43,7 @@ You will need to ensure that any onClick's passed through to a DropdownMenuItem 
 
 
 
-  <a name="4.18.0"></a>
+<a name="4.18.0"></a>
 # [4.18.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.17.0...@brandwatch/axiom-components@4.18.0) (2018-10-16)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="1.11.0"></a>
+# [1.11.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-materials@1.10.0...@brandwatch/axiom-materials@1.11.0) (2018-10-25)
+
+
+### Features
+
+* **Icons:** Add switch icon ([3ee0355](https://github.com/tomru/axiom/commit/3ee0355))
+
+
+
+
       <a name="1.10.0"></a>
 # [1.10.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-materials@1.9.0...@brandwatch/axiom-materials@1.10.0) (2018-10-19)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="1.9.0"></a>
+    <a name="1.9.0"></a>
 # [1.9.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-materials@1.8.0...@brandwatch/axiom-materials@1.9.0) (2018-10-16)
 
 
@@ -25,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="1.8.0"></a>
+<a name="1.8.0"></a>
 # [1.8.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.7.0...@brandwatch/axiom-materials@1.8.0) (2018-09-18)
 
 
