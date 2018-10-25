@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="5.3.0"></a>
+# [5.3.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.2.0...@brandwatch/axiom-components@5.3.0) (2018-10-25)
+
+
+### Bug Fixes
+
+* **Platform:** Only call onConsoleClose if it is provided ([0363caf](https://github.com/tomru/axiom/commit/0363caf))
+
+
+### Features
+
+* **Base:** Enable "sentiment-positive/negative/neutral" as textColor ([f2d5722](https://github.com/tomru/axiom/commit/f2d5722))
+
+
+
+
       <a name="5.2.0"></a>
 # [5.2.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.1.0...@brandwatch/axiom-components@5.2.0) (2018-10-25)
 
@@ -14,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="5.1.0"></a>
+    <a name="5.1.0"></a>
 # [5.1.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.0.0...@brandwatch/axiom-components@5.1.0) (2018-10-24)
 
 
@@ -25,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="5.0.0"></a>
+<a name="5.0.0"></a>
 # [5.0.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-components@4.18.0...@brandwatch/axiom-components@5.0.0) (2018-10-19)
 
 
