@@ -10,6 +10,7 @@ export { default as AlertDropdownHeader } from './AlertDropdown/AlertDropdownHea
 export { default as AlertDropdownSource } from './AlertDropdown/AlertDropdownSource';
 export { default as AlertDropdownTarget } from './AlertDropdown/AlertDropdownTarget';
 export { default as AlertIcon } from './AlertIcon/AlertIcon';
+export { default as Animation } from './Animation/Animation';
 export { default as Animicon } from './Icon/Animicon';
 export { default as Avatar } from './Avatar/Avatar';
 export { default as Badge } from './Badge/Badge';
