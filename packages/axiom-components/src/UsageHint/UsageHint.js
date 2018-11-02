@@ -15,6 +15,8 @@ export default class UsageHint extends PureComponent {
     children: PropTypes.node,
     position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
     showArrow: PropTypes.bool,
+    /** Total width of the usageHint dropdown context */
+    width: PropTypes.string,
   };
 
   static defaultProps = {
@@ -24,6 +26,7 @@ export default class UsageHint extends PureComponent {
   render() {
     const {
       children,
+      width,
       ...rest
     } = this.props;
 
@@ -35,7 +38,7 @@ export default class UsageHint extends PureComponent {
           </Link>
         </DropdownTarget>
         <DropdownSource>
-          <DropdownContext>
+          <DropdownContext width={ width }>
             <DropdownContent>
               { children }
             </DropdownContent>
