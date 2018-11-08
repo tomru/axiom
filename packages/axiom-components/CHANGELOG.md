@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.4.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-components@5.3.0...@brandwatch/axiom-components@5.4.0) (2018-11-08)
+
+
+### Bug Fixes
+
+* **TextInput:** Fix text input size in IE11 ([1c68146](https://github.com/Binarytales/axiom/commit/1c68146))
+
+
+### Features
+
+* **Ghost:** Adds ghost card ([5a20294](https://github.com/Binarytales/axiom/commit/5a20294))
+
+
+
+
+
       <a name="5.3.0"></a>
 # [5.3.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.2.0...@brandwatch/axiom-components@5.3.0) (2018-10-25)
 
