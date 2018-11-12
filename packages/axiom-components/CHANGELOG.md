@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.5.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-components@5.4.0...@brandwatch/axiom-components@5.5.0) (2018-11-12)
+
+
+### Features
+
+* **UsageHint:** Consume width on dropdown context. ([219b7f3](https://github.com/Binarytales/axiom/commit/219b7f3))
+
+
+
+
+
 # [5.4.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-components@5.3.0...@brandwatch/axiom-components@5.4.0) (2018-11-08)
 
 

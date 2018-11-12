@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.81](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-composites@0.0.80...@brandwatch/axiom-composites@0.0.81) (2018-11-12)
+
+**Note:** Version bump only for package @brandwatch/axiom-composites
+
+
+
+
+
 ## [0.0.80](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-composites@0.0.79...@brandwatch/axiom-composites@0.0.80) (2018-11-08)
 
 **Note:** Version bump only for package @brandwatch/axiom-composites
