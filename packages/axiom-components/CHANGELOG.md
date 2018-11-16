@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.6.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-components@5.5.0...@brandwatch/axiom-components@5.6.0) (2018-11-16)
+
+
+### Features
+
+* **Base:** Added color ui-accent as textColor ([4ae7091](https://github.com/lpoulter/axiom/commit/4ae7091))
+
+
+
+
+
 # [5.5.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-components@5.4.0...@brandwatch/axiom-components@5.5.0) (2018-11-12)
 
 
