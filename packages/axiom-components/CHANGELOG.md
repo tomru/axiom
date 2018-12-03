@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.9.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-components@5.8.0...@brandwatch/axiom-components@5.9.0) (2018-12-03)
+
+
+### Features
+
+* **Transition:** Adding overflow hidden in y-direction ([2ffe3f0](https://github.com/Binarytales/axiom/commit/2ffe3f0))
+
+
+
+
+
 # [5.8.0](https://github.com/larister/axiom/compare/@brandwatch/axiom-components@5.6.0...@brandwatch/axiom-components@5.8.0) (2018-12-03)
 
 
