@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.10.1](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-components@5.10.0...@brandwatch/axiom-components@5.10.1) (2018-12-18)
+
+
+### Bug Fixes
+
+* **Validate:** Make validation on form element dynamic ([dce6382](https://github.com/lpoulter/axiom/commit/dce6382))
+* **Validate:** Test lifecycle method calls registerValidator ([e901fbc](https://github.com/lpoulter/axiom/commit/e901fbc))
+
+
+
+
+
 # [5.10.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.9.2...@brandwatch/axiom-components@5.10.0) (2018-12-18)
 
 
