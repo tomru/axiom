@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.10.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.9.2...@brandwatch/axiom-components@5.10.0) (2018-12-18)
+
+
+### Features
+
+* **DropdownMenu:** allow paddingVertical to be configurable ([0b54727](https://github.com/tomru/axiom/commit/0b54727))
+
+
+
+
+
 ## [5.9.2](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.9.1...@brandwatch/axiom-components@5.9.2) (2018-12-13)
 
 
