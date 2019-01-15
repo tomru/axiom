@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-charts@5.0.20...@brandwatch/axiom-charts@5.1.0) (2019-01-15)
+
+
+### Features
+
+* **DataPoint:** Added ui colors (warning, success, error) to DataPoint ([5afc6ce](https://github.com/tomru/axiom/commit/5afc6ce))
+
+
+
+
+
 ## [5.0.20](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-charts@5.0.19...@brandwatch/axiom-charts@5.0.20) (2018-12-18)
 
 **Note:** Version bump only for package @brandwatch/axiom-charts
