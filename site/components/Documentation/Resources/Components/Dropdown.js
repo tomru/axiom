@@ -17,6 +17,7 @@ import {
   IconButton,
   Link,
   Paragraph,
+  EllipsisTooltip,
   TextIcon,
   TextInput,
   TextInputIcon,
@@ -230,24 +231,26 @@ export default class Documentation extends Component {
                     </DropdownHeader>
 
                     <DropdownMenu hasFullSeparator maxHeight="15rem">
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
-                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>Lorem ipsum</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>Lorem ipsum dolor sit amet, ius id utinam oportere</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>Pri primis fabulas et.</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>Usu ipsum vocibus an</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>graece apeirian iracundia ea pri ea singulis</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>fugit tantas virtute at pri</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More short things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More short things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More short things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More ver long long long things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More ver long long long things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More ver long long long things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More ver long long long things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More ver long long long things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More ver long long long things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More ver long long long things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More ver long long long things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More ver long long long things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More ver long long long things</EllipsisTooltip></DropdownMenuItem>
+                      <DropdownMenuItem multiSelect><EllipsisTooltip>More ver long long long things</EllipsisTooltip></DropdownMenuItem>
                     </DropdownMenu>
 
                     <DropdownFooter>
