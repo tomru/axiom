@@ -18,11 +18,13 @@ export default class EllipsisTooltip extends Component {
     children: PropTypes.node,
     delay: PropTypes.bool,
     theme: PropTypes.oneOf(['day', 'night']),
+    width: PropTypes.string,
   };
 
   static defaultProps = {
     delay: true,
     theme: 'night',
+    width: 'auto',
   }
 
   constructor(props) {
@@ -49,7 +51,7 @@ export default class EllipsisTooltip extends Component {
   }
 
   render() {
-    const { children, delay, theme, ...rest } = this.props;
+    const { children, delay, width, theme, ...rest } = this.props;
     const { hasEllipsis } = this.state;
 
     if (!hasEllipsis) {
@@ -67,7 +69,7 @@ export default class EllipsisTooltip extends Component {
             { children }
           </Base>
         </TooltipTarget>
-        <TooltipSource theme={ theme } >
+        <TooltipSource theme={ theme } width={ width }>
           <TooltipContext>
             <TooltipContent>
               { children }
