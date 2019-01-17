@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.11.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.10.1...@brandwatch/axiom-components@5.11.0) (2019-01-17)
+
+
+### Bug Fixes
+
+* **ContextMenuItem:** hide x overflow ([9bbc58b](https://github.com/tomru/axiom/commit/9bbc58b))
+
+
+### Features
+
+* **EllipsisTooltip:** added EllipsisTooltip that shows a tooltip when the content is clipped ([c684c04](https://github.com/tomru/axiom/commit/c684c04))
+
+
+
+
+
 ## [5.10.1](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-components@5.10.0...@brandwatch/axiom-components@5.10.1) (2018-12-18)
 
 
