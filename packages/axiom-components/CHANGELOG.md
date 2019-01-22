@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.11.1](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.11.0...@brandwatch/axiom-components@5.11.1) (2019-01-22)
+
+
+### Bug Fixes
+
+* **ContextMenuItem:** mouse events do not fire in firefox ([7590b94](https://github.com/tomru/axiom/commit/7590b94))
+
+
+
+
+
 # [5.11.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.10.1...@brandwatch/axiom-components@5.11.0) (2019-01-17)
 
 
