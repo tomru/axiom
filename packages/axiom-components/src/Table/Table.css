@@ -119,6 +119,7 @@
   color: var(--color-theme-text--subtle);
   font-weight: var(--font-weight-bold);
   white-space: nowrap;
+  vertical-align: bottom;
   transition: color var(--transition-time-base) var(--transition-function);
 }
 
