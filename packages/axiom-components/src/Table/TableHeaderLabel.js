@@ -8,11 +8,11 @@ export default class TableHeaderLabel extends Component {
   static propTypes = {
     /** Table header label */
     children: PropTypes.node,
-    /** Expands table column */
+    /** Expands table column (Incompatible with 'width') */
     grow: PropTypes.bool,
     /** Makes label clickable */
     onClick: PropTypes.func,
-    /** Shrinks table column */
+    /** Shrinks table column (Incompatible with 'width') */
     shrink: PropTypes.bool,
     /** Selects the column and sets the sort direction */
     sortDirection: PropTypes.oneOf(['ascending', 'descending']),
@@ -21,6 +21,8 @@ export default class TableHeaderLabel extends Component {
     sortable: PropTypes.bool,
     /** Set text-align */
     textAlign: PropTypes.oneOf(['left', 'right']),
+    /** Set percentage column width (Incompatible with 'grow' and 'shink') */
+    width: PropTypes.number,
   };
 
   static defaultProps = {
@@ -37,6 +39,7 @@ export default class TableHeaderLabel extends Component {
       sortDirection,
       textAlign,
       sortable,
+      width,
       ...rest
     } = this.props;
 
@@ -44,19 +47,22 @@ export default class TableHeaderLabel extends Component {
       'ax-table__header-label',
       `ax-table__header-label--align-${textAlign}`,
       {
-        'ax-table__header-label--grow': grow,
+        'ax-table__header-label--grow': grow && !width,
         'ax-table__header-label--selected': sortDirection !== undefined,
-        'ax-table__header-label--shrink': shrink,
+        'ax-table__header-label--shrink': shrink && !width,
       }
     );
 
+    const styles = width && {
+      width: `${Math.max(0, Math.min(width, 100))}%`,
+    };
+
     return (
-      <Base { ...rest } Component="th" className={ className }>
+      <Base { ...rest } Component="th" className={ className } style={ styles }>
         <button
             className="ax-table__header-button"
             disabled={ !onClick }
             onClick={ onClick }>
-
           { children }
 
           { sortable && ( <TextIcon

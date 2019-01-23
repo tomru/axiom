@@ -42,4 +42,22 @@ describe('TableHeaderLabel', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with width', () => {
+    const component = getComponent({ width: 20 });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('width overrides grow', () => {
+    const component = getComponent({ width: 20, grow: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('width overrides shrink', () => {
+    const component = getComponent({ width: 20, shrink: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
