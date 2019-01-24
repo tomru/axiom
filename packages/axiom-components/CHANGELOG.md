@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.12.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-components@5.11.1...@brandwatch/axiom-components@5.12.0) (2019-01-24)
+
+
+### Bug Fixes
+
+* **TableHeaderLabel:** Fixed empty header alignment ([e1011a5](https://github.com/Binarytales/axiom/commit/e1011a5))
+
+
+### Features
+
+* **TableHeaderLabel:** Allow variable column width ([7bd805b](https://github.com/Binarytales/axiom/commit/7bd805b))
+
+
+
+
+
 ## [5.11.1](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.11.0...@brandwatch/axiom-components@5.11.1) (2019-01-22)
 
 
