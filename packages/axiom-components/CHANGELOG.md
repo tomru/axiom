@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.13.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.12.0...@brandwatch/axiom-components@5.13.0) (2019-01-29)
+
+
+### Bug Fixes
+
+* **Tip:** add missing ampersand ([c31f088](https://github.com/tomru/axiom/commit/c31f088))
+
+
+### Features
+
+* **Icons:** Adding Log Icon ([ceb2646](https://github.com/tomru/axiom/commit/ceb2646))
+
+
+
+
+
 # [5.12.0](https://github.com/Binarytales/axiom/compare/@brandwatch/axiom-components@5.11.1...@brandwatch/axiom-components@5.12.0) (2019-01-24)
 
 
