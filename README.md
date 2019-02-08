@@ -1,3 +1,9 @@
+<b>⚠️ NOTICE:</b> For the time being, you are probably looking for `axiom-react`: https://github.com/Binarytales/axiom-react
+
+If you have forked this repository we recommend updating your remotes or even removing your fork and reforking the `axiom-react` repository.
+
+Bug fixes will need to be replicated across both repositories until we have publishing from this now _private_ repository set up correctly. If you have any problems as a result of this change please seek help in [#axiom-contrib on Slack](https://brandwatch.slack.com/messages/C4D4UEJRH)
+
 <p align="center">
   <a href="https://axiom.brandwatch.com/">
     <img alt="axiom" src="./site/assets/axiom-text.png" height="50" width="177">
