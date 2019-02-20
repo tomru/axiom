@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-components",
-  "version": "5.14.0",
+  "version": "5.15.0",
   "description": "Brandwatch Axiom - Components",
   "main": "dist/index.js",
   "license": "UNLICENSED",
@@ -8,10 +8,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@brandwatch/axiom-automation-testing": "^0.0.7",
-    "@brandwatch/axiom-formatting": "^0.0.5",
-    "@brandwatch/axiom-materials": "^1.12.0",
-    "@brandwatch/axiom-utils": "^0.1.18",
+    "@brandwatch/axiom-automation-testing": "^0.0.8",
+    "@brandwatch/axiom-formatting": "^0.0.6",
+    "@brandwatch/axiom-materials": "^1.12.1",
+    "@brandwatch/axiom-utils": "^0.1.19",
     "classnames": "^2.2.6",
     "element-closest": "^2.0.2",
     "lodash.omit": "^4.5.0",

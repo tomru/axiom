@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/tomru/axiom/compare/@brandwatch/babel-plugin-axiom-imports@0.2.3...@brandwatch/babel-plugin-axiom-imports@0.2.4) (2019-02-20)
+
+**Note:** Version bump only for package @brandwatch/babel-plugin-axiom-imports
+
+
+
+
+
 ## [0.2.3](https://github.com/larister/axiom/compare/@brandwatch/babel-plugin-axiom-imports@0.2.2...@brandwatch/babel-plugin-axiom-imports@0.2.3) (2018-12-03)
 
 **Note:** Version bump only for package @brandwatch/babel-plugin-axiom-imports

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.8](https://github.com/tomru/axiom/compare/@brandwatch/axiom-automation-testing@0.0.7...@brandwatch/axiom-automation-testing@0.0.8) (2019-02-20)
+
+**Note:** Version bump only for package @brandwatch/axiom-automation-testing
+
+
+
+
+
 ## [0.0.7](https://github.com/larister/axiom/compare/@brandwatch/axiom-automation-testing@0.0.6...@brandwatch/axiom-automation-testing@0.0.7) (2018-12-03)
 
 **Note:** Version bump only for package @brandwatch/axiom-automation-testing

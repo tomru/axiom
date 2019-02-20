@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.15.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.13.0...@brandwatch/axiom-components@5.15.0) (2019-02-20)
+
+
+### Bug Fixes
+
+* **ContextMenuItem:** hide all overflow, not only overflow-x ([326c13e](https://github.com/tomru/axiom/commit/326c13e))
+* **ContextMenuItem:** revert "mouse events do not fire in firefox" ([503970b](https://github.com/tomru/axiom/commit/503970b))
+
+
+### Features
+
+* Experimental animation components ([1e53f63](https://github.com/tomru/axiom/commit/1e53f63))
+* **TextInputIcon:** Allow setting iconColor for TextInputIcon ([38fbd46](https://github.com/tomru/axiom/commit/38fbd46))
+
+
+
+
+
 # [5.14.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@5.13.0...@brandwatch/axiom-components@5.14.0) (2019-02-11)
 
 
