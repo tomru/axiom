@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.15.1](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-components@5.15.0...@brandwatch/axiom-components@5.15.1) (2019-03-06)
+
+**Note:** Version bump only for package @brandwatch/axiom-components
+
+
+
+
+
 # [5.15.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.13.0...@brandwatch/axiom-components@5.15.0) (2019-02-20)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.2](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-materials@1.12.1...@brandwatch/axiom-materials@1.12.2) (2019-03-06)
+
+
+### Bug Fixes
+
+* **color:** Fix active/default/hover Warning color ([c5fa125](https://github.com/Binarytales/axiom-react/commit/c5fa125))
+
+
+
+
+
 ## [1.12.1](https://github.com/tomru/axiom/compare/@brandwatch/axiom-materials@1.12.0...@brandwatch/axiom-materials@1.12.1) (2019-02-20)
 
 **Note:** Version bump only for package @brandwatch/axiom-materials
