@@ -20,6 +20,7 @@ import Dropdown from './Components/Dropdown';
 import DurationPicker from './Components/DurationPicker';
 import Editable from './Components/Editable';
 import EllipsisTooltip from './Components/EllipsisTooltip';
+import Flag from './Components/Flag';
 import Form from './Components/Form';
 import CardGraphic from './Components/CardGraphic';
 import Grid from './Components/Grid';
@@ -138,6 +139,10 @@ export default class Documentation extends Component {
             id: 'ellispsistooltip',
             name: 'EllipsisTooltip',
             Component: EllipsisTooltip,
+          }, {
+            id: 'flag',
+            name: 'Flag',
+            Component: Flag,
           }, {
             id: 'form',
             name: 'Form',
