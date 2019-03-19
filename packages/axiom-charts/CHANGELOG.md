@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.8](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-charts@5.1.7...@brandwatch/axiom-charts@5.1.8) (2019-03-19)
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+
+
+
+
 ## [5.1.7](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-charts@5.1.6...@brandwatch/axiom-charts@5.1.7) (2019-03-06)
 
 **Note:** Version bump only for package @brandwatch/axiom-charts

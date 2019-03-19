@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.16.0](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-components@5.15.1...@brandwatch/axiom-components@5.16.0) (2019-03-19)
+
+
+### Bug Fixes
+
+* DurationPicker spreads current state when setting new state ([bf6ec85](https://github.com/Binarytales/axiom-react/commit/bf6ec85))
+* updates DurationPicker snapshot ([fc1cd69](https://github.com/Binarytales/axiom-react/commit/fc1cd69))
+
+
+### Features
+
+* Adds DurationPicker component ([1caf9df](https://github.com/Binarytales/axiom-react/commit/1caf9df))
+* adds onBlur handler to DurationPicker ([e4e9be6](https://github.com/Binarytales/axiom-react/commit/e4e9be6))
+
+
+
+
+
 ## [5.15.1](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-components@5.15.0...@brandwatch/axiom-components@5.15.1) (2019-03-06)
 
 **Note:** Version bump only for package @brandwatch/axiom-components

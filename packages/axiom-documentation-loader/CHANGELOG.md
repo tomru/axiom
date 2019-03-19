@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-documentation-loader@0.0.5...@brandwatch/axiom-documentation-loader@0.1.0) (2019-03-19)
+
+
+### Features
+
+* Adds DurationPicker component ([1caf9df](https://github.com/Binarytales/axiom-react/commit/1caf9df))
+
+
+
+
+
 ## [0.0.5](https://github.com/tomru/axiom/compare/@brandwatch/axiom-documentation-loader@0.0.4...@brandwatch/axiom-documentation-loader@0.0.5) (2019-02-20)
 
 **Note:** Version bump only for package @brandwatch/axiom-documentation-loader
