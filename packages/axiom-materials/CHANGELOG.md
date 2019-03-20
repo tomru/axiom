@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-materials@1.12.2...@brandwatch/axiom-materials@1.13.0) (2019-03-20)
+
+
+### Features
+
+* **flags:** adds flag processing build script ([a644bad](https://github.com/tomru/axiom/commit/a644bad))
+* **Icon:** add iris icon ([069e64a](https://github.com/tomru/axiom/commit/069e64a))
+
+
+
+
+
 ## [1.12.2](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-materials@1.12.1...@brandwatch/axiom-materials@1.12.2) (2019-03-06)
 
 

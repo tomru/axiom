@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.17.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.16.0...@brandwatch/axiom-components@5.17.0) (2019-03-20)
+
+
+### Bug Fixes
+
+* adds assetsUrl prop to Flag component to resolve locally and netlify preview ([91d5791](https://github.com/tomru/axiom/commit/91d5791))
+
+
+### Features
+
+* **ContextMenuItem:** Added "paddingVertical" property ([dd6de13](https://github.com/tomru/axiom/commit/dd6de13))
+* **Icon:** add iris icon ([069e64a](https://github.com/tomru/axiom/commit/069e64a))
+* **Icon:** add support for custom width/height ([8eb684f](https://github.com/tomru/axiom/commit/8eb684f))
+
+
+
+
+
 # [5.16.0](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-components@5.15.1...@brandwatch/axiom-components@5.16.0) (2019-03-19)
 
 
