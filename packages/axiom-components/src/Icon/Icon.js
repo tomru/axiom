@@ -62,6 +62,7 @@ export default class Icon extends Component {
       'format-title',
       'format-underline',
       'grid',
+      'growth',
       'hamburger',
       'heart',
       'home',
