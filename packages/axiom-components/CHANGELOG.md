@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.18.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@5.18.0...@brandwatch/axiom-components@5.18.1) (2019-03-22)
+
+**Note:** Version bump only for package @brandwatch/axiom-components
+
+
+
+
+
 # [5.18.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@5.17.0...@brandwatch/axiom-components@5.18.0) (2019-03-22)
 
 
