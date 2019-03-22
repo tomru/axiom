@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-materials",
-  "version": "1.14.2",
+  "version": "1.14.3",
   "description": "Brandwatch Axiom - Materials",
   "main": "dist/index.js",
   "license": "UNLICENSED",
