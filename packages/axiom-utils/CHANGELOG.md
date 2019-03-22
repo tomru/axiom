@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.24](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-utils@0.1.23...@brandwatch/axiom-utils@0.1.24) (2019-03-22)
+
+**Note:** Version bump only for package @brandwatch/axiom-utils
+
+
+
+
+
 ## [0.1.23](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-utils@0.1.22...@brandwatch/axiom-utils@0.1.23) (2019-03-22)
 
 **Note:** Version bump only for package @brandwatch/axiom-utils
