@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.13.0...@brandwatch/axiom-materials@1.14.0) (2019-03-22)
+
+
+### Bug Fixes
+
+* **Icons:** Updating filter icon ([30027e2](https://github.com/BrandwatchLtd/axiom-react/commit/30027e2))
+
+
+### Features
+
+* **Icons:** Adding Growth icon ([76af837](https://github.com/BrandwatchLtd/axiom-react/commit/76af837))
+
+
+
+
+
 # [1.13.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-materials@1.12.2...@brandwatch/axiom-materials@1.13.0) (2019-03-20)
 
 

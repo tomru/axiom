@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.18.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@5.17.0...@brandwatch/axiom-components@5.18.0) (2019-03-22)
+
+
+### Bug Fixes
+
+* amends style of duration picker and passes rest props to child elements ([ff50724](https://github.com/BrandwatchLtd/axiom-react/commit/ff50724))
+
+
+### Features
+
+* **Icons:** Adding Growth icon ([76af837](https://github.com/BrandwatchLtd/axiom-react/commit/76af837))
+
+
+
+
+
 # [5.17.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@5.16.0...@brandwatch/axiom-components@5.17.0) (2019-03-20)
 
 
