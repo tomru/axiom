@@ -96,7 +96,10 @@ export default class Documentation extends Component {
                     <DropdownContext>
                       <DropdownMenu>
                         <DropdownMenuItem>
-                          Lorem ipsum
+                          <Grid>
+                            <GridCell>Grid with gutter</GridCell>
+                            <GridCell>is too big</GridCell>
+                          </Grid>
                         </DropdownMenuItem>
 
                         <DropdownMenuItem>
