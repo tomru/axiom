@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.19.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@5.18.4...@brandwatch/axiom-components@5.19.0) (2019-04-15)
+
+
+### Bug Fixes
+
+* throw error when focusedHandleIndex is unknown ([541fd6d](https://github.com/tomru/axiom-react/commit/541fd6d))
+
+
+### Features
+
+* **Checkbox/Radio:** change style of selected and active ([9c89250](https://github.com/tomru/axiom-react/commit/9c89250))
+* **Range:** add balance marker option ([03a226f](https://github.com/tomru/axiom-react/commit/03a226f))
+* **Range:** add new slider Range ([e46f0a6](https://github.com/tomru/axiom-react/commit/e46f0a6))
+* **Range:** No crossover ([a32f0c3](https://github.com/tomru/axiom-react/commit/a32f0c3))
+
+
+
+
+
 ## [5.18.4](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@5.18.3...@brandwatch/axiom-components@5.18.4) (2019-03-29)
 
 **Note:** Version bump only for package @brandwatch/axiom-components
