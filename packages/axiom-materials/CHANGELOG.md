@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-materials@1.14.3...@brandwatch/axiom-materials@1.15.0) (2019-04-25)
+
+
+### Features
+
+* **Icons:** Adding Input icon ([c7f937f](https://github.com/tomru/axiom-react/commit/c7f937f))
+
+
+
+
+
 ## [1.14.3](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.14.2...@brandwatch/axiom-materials@1.14.3) (2019-03-22)
 
 **Note:** Version bump only for package @brandwatch/axiom-materials

@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.20.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@5.19.0...@brandwatch/axiom-components@5.20.0) (2019-04-25)
+
+
+### Bug Fixes
+
+* **Handle:** support withTooltip option ([fbaf5e5](https://github.com/tomru/axiom-react/commit/fbaf5e5))
+* **Range:** case where handles are on the same value and the wrong one is picked ([004ef95](https://github.com/tomru/axiom-react/commit/004ef95))
+* **Range:** don't mutate array prop ([49d18fa](https://github.com/tomru/axiom-react/commit/49d18fa))
+* **Range:** ensure bound values are rounded ([1879ba3](https://github.com/tomru/axiom-react/commit/1879ba3))
+* **Slider/Range:** clean DOM ([159ed2b](https://github.com/tomru/axiom-react/commit/159ed2b))
+* **Slider/Range:** support min option different from 0 ([c52cb82](https://github.com/tomru/axiom-react/commit/c52cb82))
+* update snapshots ([5a791c3](https://github.com/tomru/axiom-react/commit/5a791c3))
+
+
+### Features
+
+* **Icons:** Adding Input icon ([c7f937f](https://github.com/tomru/axiom-react/commit/c7f937f))
+* **ToolTip:** allow light and dark colours to be manually selected ([e74f7c1](https://github.com/tomru/axiom-react/commit/e74f7c1))
+
+
+
+
+
 # [5.19.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@5.18.4...@brandwatch/axiom-components@5.19.0) (2019-04-15)
 
 
