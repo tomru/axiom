@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.21.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@5.20.0...@brandwatch/axiom-components@5.21.0) (2019-04-29)
+
+
+### Bug Fixes
+
+* **Slider/Range:** add margins so that the component width includes the handles on both ends ([8252a9c](https://github.com/tomru/axiom-react/commit/8252a9c))
+
+
+### Features
+
+* **Chip:** Added Chip and ChipList components ([3dbf2b2](https://github.com/tomru/axiom-react/commit/3dbf2b2))
+* **Chip:** removed colored chips + sped up transitions on chiplist based on design review ([91f0356](https://github.com/tomru/axiom-react/commit/91f0356))
+* **Chip:** removed console errors + fixed metric color + removed floats ([73ee808](https://github.com/tomru/axiom-react/commit/73ee808))
+
+
+
+
+
 # [5.20.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@5.19.0...@brandwatch/axiom-components@5.20.0) (2019-04-25)
 
 
