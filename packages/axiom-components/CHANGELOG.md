@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.22.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@5.21.0...@brandwatch/axiom-components@5.22.0) (2019-05-10)
+
+
+### Features
+
+* **Context:** add className support to Context components ([aa6be10](https://github.com/BrandwatchLtd/axiom-react/commit/aa6be10))
+* **Dialog:** Add Dialog prop "closeOnOverlayClick" keeps dialog open when clicking on mask ([afe0e71](https://github.com/BrandwatchLtd/axiom-react/commit/afe0e71))
+
+
+
+
+
 # [5.21.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@5.20.0...@brandwatch/axiom-components@5.21.0) (2019-04-29)
 
 
