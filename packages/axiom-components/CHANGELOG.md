@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.23.0](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-components@5.22.1...@brandwatch/axiom-components@5.23.0) (2019-05-14)
+
+
+### Features
+
+* **TextInputIcon:** Add tooltip for TextInputIcon ([8984867](https://github.com/Binarytales/axiom-react/commit/8984867))
+
+
+
+
+
 ## [5.22.1](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@5.22.0...@brandwatch/axiom-components@5.22.1) (2019-05-14)
 
 **Note:** Version bump only for package @brandwatch/axiom-components
