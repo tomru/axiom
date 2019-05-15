@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.23.1](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-components@5.23.0...@brandwatch/axiom-components@5.23.1) (2019-05-15)
+
+
+### Bug Fixes
+
+* **TextInputIcon:** Allow passing TooltipContext instead of TooltipContent as tooltip ([602a11d](https://github.com/Binarytales/axiom-react/commit/602a11d))
+
+
+
+
+
 # [5.23.0](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-components@5.22.1...@brandwatch/axiom-components@5.23.0) (2019-05-14)
 
 
