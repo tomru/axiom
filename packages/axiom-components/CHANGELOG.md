@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.24.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@5.23.2...@brandwatch/axiom-components@5.24.0) (2019-06-03)
+
+
+### Features
+
+* **TextInput:** Adds ablity to display form labels inline ([c3b457e](https://github.com/BrandwatchLtd/axiom-react/commit/c3b457e))
+
+
+
+
+
 ## [5.23.2](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@5.23.1...@brandwatch/axiom-components@5.23.2) (2019-05-22)
 
 
