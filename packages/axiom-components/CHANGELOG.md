@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@5.24.0...@brandwatch/axiom-components@6.0.0) (2019-06-05)
+
+
+### Bug Fixes
+
+* **DatePicker:** fix and rename initalDate to calendarOpenDate ([a3f807e](https://github.com/BrandwatchLtd/axiom-react/commit/a3f807e))
+
+
+### Features
+
+* **Dialog:** Add classname prop to Dialog components ([f7ba906](https://github.com/BrandwatchLtd/axiom-react/commit/f7ba906))
+
+
+### BREAKING CHANGES
+
+* **DatePicker:** to make it clearer what `initialDate` is for,
+rename it to `calendarOpenDate`.
+
+
+
+
+
 # [5.24.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@5.23.2...@brandwatch/axiom-components@5.24.0) (2019-06-03)
 
 
