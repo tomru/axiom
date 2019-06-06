@@ -10,9 +10,9 @@ import {
   opacityBorder,
 } from './opacities';
 
-export const uiCarbon = { r: 72, g: 70, b: 77 };
-export const uiCarbonDark = { r: 57, g: 55, b: 62 };
-export const uiCarbonDarker = { r: 48, g: 45, b: 53 };
+export const uiCarbon = { r: 63, g: 63, b: 63 };
+export const uiCarbonDark = { r: 53, g: 53, b: 53 };
+export const uiCarbonDarker = { r: 43, g: 43, b: 43 };
 
 export const uiWhiteNoiseDarker = { r: 227, g: 225, b: 232 };
 export const uiWhiteNoiseDark = { r: 237, g: 235, b: 242 };
