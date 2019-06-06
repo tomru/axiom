@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.0.0...@brandwatch/axiom-components@6.1.0) (2019-06-06)
+
+
+### Features
+
+* **DatePicker:** Exporting DatePickerSelection to use DatePicker without Dropdown ([e11cd7f](https://github.com/tomru/axiom-react/commit/e11cd7f))
+
+
+
+
+
 # [6.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@5.24.0...@brandwatch/axiom-components@6.0.0) (2019-06-05)
 
 
