@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@6.1.0...@brandwatch/axiom-components@6.1.1) (2019-06-07)
+
+
+### Bug Fixes
+
+* **InputWrapper:** Apply margin to hint when label is inline ([628250c](https://github.com/BrandwatchLtd/axiom-react/commit/628250c))
+* **Position:** Fixes the margin depending on where the arrow is shown ([4913c45](https://github.com/BrandwatchLtd/axiom-react/commit/4913c45))
+
+
+
+
+
 # [6.1.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.0.0...@brandwatch/axiom-components@6.1.0) (2019-06-06)
 
 
