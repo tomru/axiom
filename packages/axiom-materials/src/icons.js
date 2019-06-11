@@ -93,6 +93,7 @@ export default {
   'triangle-up': require('./icon_svgs/triangle-up.svg'),
   'twitter': require('./icon_svgs/twitter.svg'),
   'unlock': require('./icon_svgs/unlock.svg'),
+  'user': require('./icon_svgs/user.svg'),
   'warning': require('./icon_svgs/warning.svg'),
   'warning-circle': require('./icon_svgs/warning-circle.svg'),
 };

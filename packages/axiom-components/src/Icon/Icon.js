@@ -112,6 +112,7 @@ export default class Icon extends Component {
       'triangle-up',
       'twitter',
       'unlock',
+      'user',
       'warning',
       'warning-circle',
     ]).isRequired,
