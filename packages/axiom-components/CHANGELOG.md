@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.2.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@6.1.1...@brandwatch/axiom-components@6.2.0) (2019-06-12)
+
+
+### Features
+
+* **Icon:** Adding user icon ([71f123d](https://github.com/BrandwatchLtd/axiom-react/commit/71f123d))
+
+
+
+
+
 ## [6.1.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@6.1.0...@brandwatch/axiom-components@6.1.1) (2019-06-07)
 
 
