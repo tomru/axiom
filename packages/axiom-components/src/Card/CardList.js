@@ -7,6 +7,8 @@ export default class CardList extends Component {
   static propTypes = {
     /** Cards to be inserted in the CardList */
     children: PropTypes.node.isRequired,
+    /** Class name to be appended to the element */
+    className: PropTypes.string,
     /** Style of the list */
     style: PropTypes.oneOf(['divided', 'seamless', 'separate']),
   };
@@ -26,9 +28,9 @@ export default class CardList extends Component {
   }
 
   render() {
-    const { children, style, ...rest } = this.props;
+    const { children, className, style, ...rest } = this.props;
     const classes = classnames('ax-card-list',
-      `ax-card-list--${style}`,
+      `ax-card-list--${style}`, className
     );
 
     return (
