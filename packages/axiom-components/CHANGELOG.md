@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.3.0](https://github.com/bwilson-bw/axiom/compare/@brandwatch/axiom-components@6.2.0...@brandwatch/axiom-components@6.3.0) (2019-06-13)
+
+
+### Features
+
+* **CardComponents:** Add className props ([459198b](https://github.com/bwilson-bw/axiom/commit/459198b))
+* **CardList:** Add classname prop ([b1539db](https://github.com/bwilson-bw/axiom/commit/b1539db))
+
+
+
+
+
 # [6.2.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@6.1.1...@brandwatch/axiom-components@6.2.0) (2019-06-12)
 
 
