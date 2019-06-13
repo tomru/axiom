@@ -6,7 +6,9 @@ import CardImage from './CardImage';
 
 export default class CardImages extends Component {
   static propTypes = {
-    /**
+    /** Class name to be appended to the element */
+    className: PropTypes.string,
+     /**
      * Aspect ratios for the height of the container depending on how many
      * images should be shown
      */
@@ -20,12 +22,12 @@ export default class CardImages extends Component {
   };
 
   render() {
-    const { ratios, srcs, ...rest } = this.props;
+    const { className, ratios, srcs, ...rest } = this.props;
     const ratio = ratios[srcs.length - 1];
     const style = { paddingBottom: ratio };
     const classes = classnames('ax-card__images', `ax-card__images--${srcs.length}`, {
       'ax-card__images--ratio': ratio,
-    });
+    }, className );
 
     return (
       <Base { ...rest } className={ classes } style={ style }>

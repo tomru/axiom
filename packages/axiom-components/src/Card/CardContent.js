@@ -7,6 +7,8 @@ export default class CardContent extends Component {
   static propTypes = {
     /** Content to be inserted inside the Card */
     children: PropTypes.node.isRequired,
+    /** Class name to be appended to the element */
+    className: PropTypes.string,
     /** Indent the separator */
     separatorIndented: PropTypes.bool,
     /** Style of the separator */
@@ -23,13 +25,13 @@ export default class CardContent extends Component {
   }
 
   render() {
-    const { children, separatorIndented, separatorStyle, shade, size, ...rest } = this.props;
+    const { children, className, separatorIndented, separatorStyle, shade, size, ...rest } = this.props;
     const classes = classnames('ax-card__content',
       `ax-card__content--separator-${separatorStyle}`,
       `ax-card__content--size-${size}`, {
         [`ax-card__content--${shade}`]: shade,
         'ax-card__content--separator-indented': separatorIndented,
-      }
+      }, className
     );
 
     return (
