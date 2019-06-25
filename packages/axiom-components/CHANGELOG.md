@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.1](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-components@6.3.0...@brandwatch/axiom-components@6.3.1) (2019-06-25)
+
+
+### Bug Fixes
+
+* **lint:** fix linting ([ecdc173](https://github.com/Binarytales/axiom-react/commit/ecdc173))
+* **lint:** more lint fixing ([9768030](https://github.com/Binarytales/axiom-react/commit/9768030))
+
+
+
+
+
 # [6.3.0](https://github.com/bwilson-bw/axiom/compare/@brandwatch/axiom-components@6.2.0...@brandwatch/axiom-components@6.3.0) (2019-06-13)
 
 
