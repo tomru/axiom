@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.2](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.3.1...@brandwatch/axiom-components@6.3.2) (2019-07-11)
+
+
+### Bug Fixes
+
+* Allow functions as ref props ([617e7eb](https://github.com/tomru/axiom-react/commit/617e7eb))
+* **Range:** range sliders crossing over on mouse up ([e0c669f](https://github.com/tomru/axiom-react/commit/e0c669f))
+* tests ([511937a](https://github.com/tomru/axiom-react/commit/511937a))
+
+
+
+
+
 ## [6.3.1](https://github.com/Binarytales/axiom-react/compare/@brandwatch/axiom-components@6.3.0...@brandwatch/axiom-components@6.3.1) (2019-06-25)
 
 

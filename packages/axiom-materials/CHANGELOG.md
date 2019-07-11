@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-materials@1.17.0...@brandwatch/axiom-materials@1.18.0) (2019-07-11)
+
+
+### Features
+
+* **colorUtils:** added colorUtils with rgb2hex converter ([e8f039f](https://github.com/tomru/axiom-react/commit/e8f039f))
+
+
+
+
+
 # [1.17.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.16.1...@brandwatch/axiom-materials@1.17.0) (2019-06-12)
 
 
