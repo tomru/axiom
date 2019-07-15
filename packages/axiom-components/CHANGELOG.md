@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.4](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.3.3...@brandwatch/axiom-components@6.3.4) (2019-07-15)
+
+
+### Bug Fixes
+
+* **DropdownContext:** ensure ref value is not null ([22b1d1a](https://github.com/tomru/axiom-react/commit/22b1d1a))
+
+
+
+
+
 ## [6.3.3](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.3.2...@brandwatch/axiom-components@6.3.3) (2019-07-15)
 
 
