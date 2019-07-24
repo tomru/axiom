@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.18.1...@brandwatch/axiom-materials@1.19.0) (2019-07-24)
+
+
+### Features
+
+* **color:** update social colors ([00b3c71](https://github.com/BrandwatchLtd/axiom-react/commit/00b3c71))
+
+
+
+
+
 ## [1.18.1](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-materials@1.18.0...@brandwatch/axiom-materials@1.18.1) (2019-07-15)
 
 **Note:** Version bump only for package @brandwatch/axiom-materials
