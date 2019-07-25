@@ -54,7 +54,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "jsdom": "^14.0",
-    "lerna": "^3.4.1",
+    "lerna": "^3.16.4",
     "lodash.chunk": "^4.2.0",
     "lodash.flatten": "^4.4.0",
     "lodash.maxby": "^4.6.0",
