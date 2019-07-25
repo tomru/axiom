@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.19.0...@brandwatch/axiom-materials@1.20.0) (2019-07-25)
+
+
+### Features
+
+* **colors:** Add Brand color set to documentation ([37df62b](https://github.com/BrandwatchLtd/axiom-react/commit/37df62b))
+* **colors:** Update exsisting colors ([3321389](https://github.com/BrandwatchLtd/axiom-react/commit/3321389))
+
+
+
+
+
 # [1.19.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.18.1...@brandwatch/axiom-materials@1.19.0) (2019-07-24)
 
 

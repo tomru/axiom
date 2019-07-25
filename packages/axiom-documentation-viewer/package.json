@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-documentation-viewer",
-  "version": "0.2.26",
+  "version": "0.2.27",
   "description": "Brandwatch Axiom - Documentation Viewer",
   "main": "dist/index.js",
   "license": "UNLICENSED",
@@ -8,8 +8,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@brandwatch/axiom-components": "^6.4.0",
-    "@brandwatch/axiom-materials": "^1.19.0",
+    "@brandwatch/axiom-components": "^6.4.1",
+    "@brandwatch/axiom-materials": "^1.20.0",
     "brace": "^0.10.0",
     "classnames": "^2.2.1",
     "js-beautify": "^1.7.4",
