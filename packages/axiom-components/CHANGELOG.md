@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.5.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.3.5...@brandwatch/axiom-components@6.5.0) (2019-07-25)
+
+
+### Bug Fixes
+
+* **Button:** add dummy class to button for a version change ([3d0de09](https://github.com/tomru/axiom-react/commit/3d0de09))
+
+
+### Features
+
+* **Button:** add className to Button ([a8cd133](https://github.com/tomru/axiom-react/commit/a8cd133))
+
+
+
+
+
 # [6.4.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@6.3.5...@brandwatch/axiom-components@6.4.0) (2019-07-25)
 
 
