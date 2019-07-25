@@ -66,6 +66,7 @@ export default class Button extends Component {
     const childrenArray = Children.toArray(children);
     const iconOnly = childrenArray.length === 1 && isComponent(childrenArray[0], ButtonIconRef);
     const classes = classnames('ax-button',
+      'ax-button--dummy-change',
       `ax-button--${color}`,
       `ax-button--${style}`,
       `ax-button--${shape}-${size}`, {
