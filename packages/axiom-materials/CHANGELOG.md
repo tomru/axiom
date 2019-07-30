@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.20.1](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-materials@1.20.0...@brandwatch/axiom-materials@1.20.1) (2019-07-30)
+
+
+### Bug Fixes
+
+* **colors:** Use correct Crash course for brand color ([a503b82](https://github.com/tomru/axiom-react/commit/a503b82))
+
+
+
+
+
 # [1.20.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.19.0...@brandwatch/axiom-materials@1.20.0) (2019-07-25)
 
 
