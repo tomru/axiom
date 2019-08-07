@@ -98,6 +98,7 @@ export default class Icon extends Component {
       'reports',
       'retweet',
       'ring',
+      'settings',
       'share',
       'star',
       'sun',

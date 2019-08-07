@@ -79,6 +79,7 @@ export default {
   'reports': require('./icon_svgs/reports.svg'),
   'retweet': require('./icon_svgs/retweet.svg'),
   'ring': require('./icon_svgs/ring.svg'),
+  'settings': require('./icon_svgs/settings.svg'),
   'share': require('./icon_svgs/share.svg'),
   'star': require('./icon_svgs/star.svg'),
   'sun': require('./icon_svgs/sun.svg'),
