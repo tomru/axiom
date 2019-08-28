@@ -169,8 +169,7 @@
 
 .ax-context-menu__item:focus {
   outline: 0;
-  background-color: var(--color-ui-accent--hover);
-  color: var(--color-ui-white-noise);
+  background-color: var(--color-theme-background--active);
   cursor: pointer;
 }
 
