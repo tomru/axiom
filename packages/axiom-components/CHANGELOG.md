@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.5.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@6.4.2...@brandwatch/axiom-components@6.5.0) (2019-09-02)
+
+
+### Bug Fixes
+
+* **animicon:** Changed Cross animation ([55602de](https://github.com/BrandwatchLtd/axiom-react/commit/55602de))
+* **Chip:** remove dash before var ([19aa0c2](https://github.com/BrandwatchLtd/axiom-react/commit/19aa0c2))
+* **Chip:** remove margin left for metric  ([d9ec74c](https://github.com/BrandwatchLtd/axiom-react/commit/d9ec74c))
+* removed unused class ([5736fd3](https://github.com/BrandwatchLtd/axiom-react/commit/5736fd3))
+* **DatePickerContext:** the date range label shows the correct start date ([53ddcaa](https://github.com/BrandwatchLtd/axiom-react/commit/53ddcaa))
+
+
+### Features
+
+* **Dropdown/Select:** Changed selected color to grey ([51c4721](https://github.com/BrandwatchLtd/axiom-react/commit/51c4721))
+* **EllipsisTooltip:** Adds color prop to TooltipContext in EllipsisTooltip ([92571ad](https://github.com/BrandwatchLtd/axiom-react/commit/92571ad))
+* added Typescript information ([aff2c05](https://github.com/BrandwatchLtd/axiom-react/commit/aff2c05))
+* **Icon:** Adding settings icon ([93d4617](https://github.com/BrandwatchLtd/axiom-react/commit/93d4617))
+
+
+### Reverts
+
+* removed typescript comments ([facd4ea](https://github.com/BrandwatchLtd/axiom-react/commit/facd4ea))
+
+
+
+
+
 ## [6.4.2](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.4.1...@brandwatch/axiom-components@6.4.2) (2019-07-30)
 
 **Note:** Version bump only for package @brandwatch/axiom-components

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.20.1...@brandwatch/axiom-materials@1.21.0) (2019-09-02)
+
+
+### Bug Fixes
+
+* removed unused class ([5736fd3](https://github.com/BrandwatchLtd/axiom-react/commit/5736fd3))
+* **animicon:** Changed Cross animation ([55602de](https://github.com/BrandwatchLtd/axiom-react/commit/55602de))
+
+
+### Features
+
+* **Icon:** Adding settings icon ([93d4617](https://github.com/BrandwatchLtd/axiom-react/commit/93d4617))
+
+
+
+
+
 ## [1.20.1](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-materials@1.20.0...@brandwatch/axiom-materials@1.20.1) (2019-07-30)
 
 
