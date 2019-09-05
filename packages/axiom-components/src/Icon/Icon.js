@@ -45,6 +45,7 @@ export default class Icon extends Component {
       'dot-outline',
       'double-chevron-left',
       'double-chevron-right',
+      'drag',
       'duplicate',
       'ellipsis',
       'email',
