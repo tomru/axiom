@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.6.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.4.2...@brandwatch/axiom-components@6.6.0) (2019-09-06)
+
+
+### Bug Fixes
+
+* **animicon:** Changed Cross animation ([55602de](https://github.com/tomru/axiom-react/commit/55602de))
+* removed unused class ([5736fd3](https://github.com/tomru/axiom-react/commit/5736fd3))
+* **Chip:** remove dash before var ([19aa0c2](https://github.com/tomru/axiom-react/commit/19aa0c2))
+* **Chip:** remove margin left for metric  ([d9ec74c](https://github.com/tomru/axiom-react/commit/d9ec74c))
+* **DatePickerContext:** the date range label shows the correct start date ([53ddcaa](https://github.com/tomru/axiom-react/commit/53ddcaa))
+
+
+### Features
+
+* added Typescript information ([aff2c05](https://github.com/tomru/axiom-react/commit/aff2c05))
+* **Dropdown/Select:** Changed selected color to grey ([51c4721](https://github.com/tomru/axiom-react/commit/51c4721))
+* **EllipsisTooltip:** Adds color prop to TooltipContext in EllipsisTooltip ([92571ad](https://github.com/tomru/axiom-react/commit/92571ad))
+* **Icon:** add drag handle icon ([86fc69a](https://github.com/tomru/axiom-react/commit/86fc69a))
+* **Icon:** Adding settings icon ([93d4617](https://github.com/tomru/axiom-react/commit/93d4617))
+
+
+### Reverts
+
+* removed typescript comments ([facd4ea](https://github.com/tomru/axiom-react/commit/facd4ea))
+
+
+
+
+
 # [6.5.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@6.4.2...@brandwatch/axiom-components@6.5.0) (2019-09-02)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.22.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-materials@1.21.0...@brandwatch/axiom-materials@1.22.0) (2019-09-06)
+
+
+### Features
+
+* **Icon:** add drag handle icon ([86fc69a](https://github.com/tomru/axiom-react/commit/86fc69a))
+
+
+
+
+
 # [1.21.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.20.1...@brandwatch/axiom-materials@1.21.0) (2019-09-02)
 
 
