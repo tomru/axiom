@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.7.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.6.0...@brandwatch/axiom-components@6.7.0) (2019-09-16)
+
+
+### Features
+
+* **handle:** Add size to slider handles. ([88875d2](https://github.com/tomru/axiom-react/commit/88875d2))
+* **ProgressButton:** added flex to content wrapper ([65f89a8](https://github.com/tomru/axiom-react/commit/65f89a8))
+* **Range:** Add resizeObserver polyfill ([28d4e3f](https://github.com/tomru/axiom-react/commit/28d4e3f))
+* **Range:** Add resizeObserver to Range. ([5cb9ee6](https://github.com/tomru/axiom-react/commit/5cb9ee6))
+* **Range:** Add responsiveness to the slider with Range. ([203a5ad](https://github.com/tomru/axiom-react/commit/203a5ad))
+
+
+
+
+
 # [6.6.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.4.2...@brandwatch/axiom-components@6.6.0) (2019-09-06)
 
 
