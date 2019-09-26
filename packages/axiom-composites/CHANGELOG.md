@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.130](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-composites@0.0.129...@brandwatch/axiom-composites@0.0.130) (2019-09-26)
+
+**Note:** Version bump only for package @brandwatch/axiom-composites
+
+
+
+
+
 ## [0.0.129](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-composites@0.0.128...@brandwatch/axiom-composites@0.0.129) (2019-09-16)
 
 **Note:** Version bump only for package @brandwatch/axiom-composites

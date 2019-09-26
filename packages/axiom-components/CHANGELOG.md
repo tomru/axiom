@@ -3,6 +3,59 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.7.0...@brandwatch/axiom-components@7.0.0) (2019-09-26)
+
+
+### Features
+
+* **TextInput:** Removed condition preventing "clear" icon AND input icon ([7171a32](https://github.com/tomru/axiom-react/commit/7171a32))
+
+
+### BREAKING CHANGES
+
+* **TextInput:** This is going to cause some design "glitches" where a TextInput
+is used with the "onClear" property AND a TextInputIcon as a child WITHOUT the
+"align" property being set to "left".
+
+The following code examples are affected:
+
+TextInputIcon with no "align" property:
+In this case previously the "TextInputIcon" wouldn't be visible but with this
+change is going to be visible and aligned on the right.
+```js
+<TextInput onClear={ () => {} }>
+  <TextInputIcon name="magnify-glass" />
+</TextInput>
+```
+
+You can fix this by adding the "align" property to the TextInputIcon
+```js
+<TextInput onClear={ () => {} }>
+  <TextInputIcon name="magnify-glass" align="left" />
+</TextInput>
+```
+
+Another affected example would be this:
+Same as in the previous example the "TextInputIcon" wouldn't be visible but with
+this change it would be visible and aligned on the right.
+```js
+<TextInput onClear={ () => {} }>
+  <TextInputIcon name="magnify-glass" align="right" />
+</TextInput>
+```
+
+Same as before you can fix this by changing the "align" property on the
+"TextInputIcon" to "left":
+```js
+<TextInput onClear={ () => {} }>
+  <TextInputIcon name="magnify-glass" align="left" />
+</TextInput>
+```
+
+
+
+
+
 # [6.7.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.6.0...@brandwatch/axiom-components@6.7.0) (2019-09-16)
 
 
