@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-composites@0.0.130...@brandwatch/axiom-composites@0.1.0) (2019-10-07)
+
+
+### Features
+
+* **UserMenu:** using initials prop for candytar component  ([68843ab](https://github.com/tomru/axiom-react/commit/68843ab))
+
+
+
+
+
 ## [0.0.130](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-composites@0.0.129...@brandwatch/axiom-composites@0.0.130) (2019-09-26)
 
 **Note:** Version bump only for package @brandwatch/axiom-composites

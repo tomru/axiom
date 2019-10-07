@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-charts@5.1.41...@brandwatch/axiom-charts@5.2.0) (2019-10-07)
+
+
+### Features
+
+* **Bars:** Add reddit, tumblr and youtube colors ([3bd57fa](https://github.com/tomru/axiom-react/commit/3bd57fa))
+
+
+
+
+
 ## [5.1.41](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-charts@5.1.40...@brandwatch/axiom-charts@5.1.41) (2019-09-26)
 
 **Note:** Version bump only for package @brandwatch/axiom-charts

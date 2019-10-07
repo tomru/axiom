@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@7.0.0...@brandwatch/axiom-components@7.1.0) (2019-10-07)
+
+
+### Features
+
+* **Candytar:** accepting and showing a user’s initials  ([8742cc1](https://github.com/tomru/axiom-react/commit/8742cc1))
+
+
+
+
+
 # [7.0.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@6.7.0...@brandwatch/axiom-components@7.0.0) (2019-09-26)
 
 
