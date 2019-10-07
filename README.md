@@ -13,6 +13,36 @@
   <a href="https://www.npmjs.com/package/@brandwatch/axiom-materials"><img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@brandwatch/axiom-materials.svg?style=flat-square"></a>
 </p>
 
+### Getting started
+
+The best way to consume Axiom-React is with the `npm` package.
+
+First install which part of Axiom you need - Refer to the [Packages table](#Packages) for more information about what is within each package.
+
+#### Adding the button component
+
+```
+npm i @brandwatch/axiom-components --save
+```
+
+```
+import { Button } from '@brandwatch/axiom-components';
+```
+
+You can now use the button component - To see how this can be styled and configured see [Button](https://axiom.brandwatch.com/docs/packages/axiom-components/button)
+
+```
+<Button style="primary">
+  Primary
+</Button>
+```
+
+#### Set a theme
+
+Axiom needs to run in one of two [themes](https://axiom.brandwatch.com/docs/packages/axiom-materials/themes), day or night.
+
+The class of `ax-theme--day` or `ax-theme--night` should be applied to either `<html>`, `<body>`, or an app encompassing `<div>`
+
 ### Packages
 
 This is the monorepo for Axiom packages.
