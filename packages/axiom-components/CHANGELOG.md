@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@7.1.0...@brandwatch/axiom-components@8.0.0) (2019-10-14)
+
+
+### Features
+
+* **Dialog:** Adds new large and fullscreen options. ([d1ea837](https://github.com/tomru/axiom-react/commit/d1ea837))
+* **Table:** Add option align text by centre in TableCell and TableHeaderLabel ([6c95811](https://github.com/tomru/axiom-react/commit/6c95811))
+
+
+### BREAKING CHANGES
+
+* **Dialog:** Usage of the fullscreen property on the Dialog component will now have no effect. You can recreate the prevouis fullscreen mode by passing `size=large` e.g.
+```
+<Dialog size="large" />
+```
+Size fullscreen will remove the padding prevouisly found in fullscreen mode.
+
+
+
+
+
 # [7.1.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-components@7.0.0...@brandwatch/axiom-components@7.1.0) (2019-10-07)
 
 
