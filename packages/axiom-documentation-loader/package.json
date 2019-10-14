@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "license": "UNLICENSED",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "lodash.isplainobject": "^4.0.6",

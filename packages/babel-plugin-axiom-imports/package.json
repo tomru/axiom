@@ -5,7 +5,8 @@
   "main": "dist/babel-plugin-axiom-imports.js",
   "license": "UNLICENSED",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "babylon": "^6.18.0"
