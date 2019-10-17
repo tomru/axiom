@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.1](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-materials@1.22.0...@brandwatch/axiom-materials@1.22.1) (2019-10-17)
+
+
+### Bug Fixes
+
+* **colors:** fix white noise color in color.js ([87a0957](https://github.com/tomru/axiom-react/commit/87a0957))
+
+
+
+
+
 # [1.22.0](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-materials@1.21.0...@brandwatch/axiom-materials@1.22.0) (2019-09-06)
 
 
