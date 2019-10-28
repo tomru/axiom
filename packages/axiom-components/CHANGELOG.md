@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.3.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@8.2.0...@brandwatch/axiom-components@8.3.0) (2019-10-28)
+
+
+### Features
+
+* **Validation:** Add "showArrow" property to InlineValidation component ([f767029](https://github.com/BrandwatchLtd/axiom-react/commit/f767029))
+
+
+
+
+
 # [8.2.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@8.1.0...@brandwatch/axiom-components@8.2.0) (2019-10-23)
 
 
