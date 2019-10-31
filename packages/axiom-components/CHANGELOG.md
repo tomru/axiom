@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.4.0](https://github.com/MariamBashir/axiom/compare/@brandwatch/axiom-components@8.3.0...@brandwatch/axiom-components@8.4.0) (2019-10-31)
+
+
+### Features
+
+* **Icon:** adding filter-line icon ([d89ed66](https://github.com/MariamBashir/axiom/commit/d89ed66))
+
+
+
+
+
 # [8.3.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@8.2.0...@brandwatch/axiom-components@8.3.0) (2019-10-28)
 
 

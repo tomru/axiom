@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://github.com/MariamBashir/axiom/compare/@brandwatch/axiom-materials@1.22.1...@brandwatch/axiom-materials@1.23.0) (2019-10-31)
+
+
+### Bug Fixes
+
+* **Icon:** Runs instagram.svg and filter-line.svg through imageoptim ([95305fe](https://github.com/MariamBashir/axiom/commit/95305fe))
+
+
+### Features
+
+* **Icon:** adding filter-line icon ([d89ed66](https://github.com/MariamBashir/axiom/commit/d89ed66))
+
+
+
+
+
 ## [1.22.1](https://github.com/tomru/axiom-react/compare/@brandwatch/axiom-materials@1.22.0...@brandwatch/axiom-materials@1.22.1) (2019-10-17)
 
 
