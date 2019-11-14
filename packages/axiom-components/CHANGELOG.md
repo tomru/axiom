@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.4.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@8.4.0...@brandwatch/axiom-components@8.4.1) (2019-11-14)
+
+
+### Bug Fixes
+
+* fix issue where popper would completely freeze the browser tab ([410a25b](https://github.com/BrandwatchLtd/axiom-react/commit/410a25b))
+
+
+
+
+
 # [8.4.0](https://github.com/MariamBashir/axiom/compare/@brandwatch/axiom-components@8.3.0...@brandwatch/axiom-components@8.4.0) (2019-10-31)
 
 
