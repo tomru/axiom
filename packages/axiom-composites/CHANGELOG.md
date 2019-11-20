@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-composites@0.1.7...@brandwatch/axiom-composites@0.1.8) (2019-11-20)
+
+
+### Bug Fixes
+
+* **Validate:** Reverts: Update docs example to use a dymanic required ([e79b8c1](https://github.com/BrandwatchLtd/axiom-react/commit/e79b8c1))
+
+
+
+
+
 ## [0.1.7](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-composites@0.1.6...@brandwatch/axiom-composites@0.1.7) (2019-11-18)
 
 **Note:** Version bump only for package @brandwatch/axiom-composites
