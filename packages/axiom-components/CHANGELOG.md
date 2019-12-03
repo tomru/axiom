@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.5.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@8.4.2...@brandwatch/axiom-components@8.5.0) (2019-12-03)
+
+
+### Bug Fixes
+
+* **Candytar:** Initals baseline aligment ([d282361](https://github.com/BrandwatchLtd/axiom-react/commit/d282361))
+
+
+### Features
+
+* **Table:** added ability to specify space prop ([1833b2d](https://github.com/BrandwatchLtd/axiom-react/commit/1833b2d))
+
+
+
+
+
 ## [8.4.2](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@8.4.1...@brandwatch/axiom-components@8.4.2) (2019-11-18)
 
 
