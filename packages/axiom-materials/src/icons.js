@@ -26,6 +26,7 @@ export default {
   'dot-outline': require('./icon_svgs/dot-outline.svg'),
   'double-chevron-left': require('./icon_svgs/double-chevron-left.svg'),
   'double-chevron-right': require('./icon_svgs/double-chevron-right.svg'),
+  'download': require('./icon_svgs/download.svg'),
   'drag': require('./icon_svgs/drag.svg'),
   'duplicate': require('./icon_svgs/duplicate.svg'),
   'ellipsis': require('./icon_svgs/ellipsis.svg'),
