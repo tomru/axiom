@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.24.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.23.0...@brandwatch/axiom-materials@1.24.0) (2020-01-14)
+
+
+### Features
+
+* **Icon:** Add download icon ([f91b5fb](https://github.com/BrandwatchLtd/axiom-react/commit/f91b5fb))
+
+
+
+
+
 # [1.23.0](https://github.com/MariamBashir/axiom/compare/@brandwatch/axiom-materials@1.22.1...@brandwatch/axiom-materials@1.23.0) (2019-10-31)
 
 

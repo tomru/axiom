@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.6.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@8.5.0...@brandwatch/axiom-components@8.6.0) (2020-01-14)
+
+
+### Bug Fixes
+
+* **Candytar:** baseline alignment for initials  ([fe2a08d](https://github.com/BrandwatchLtd/axiom-react/commit/fe2a08d))
+
+
+### Features
+
+* **Icon:** Add download icon ([f91b5fb](https://github.com/BrandwatchLtd/axiom-react/commit/f91b5fb))
+* **Table:** Allow classname to be passed to Table Components ([bc836c5](https://github.com/BrandwatchLtd/axiom-react/commit/bc836c5))
+
+
+
+
+
 # [8.5.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@8.4.2...@brandwatch/axiom-components@8.5.0) (2019-12-03)
 
 
