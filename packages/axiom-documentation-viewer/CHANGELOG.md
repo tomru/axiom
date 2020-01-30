@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.45](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-documentation-viewer@0.2.44...@brandwatch/axiom-documentation-viewer@0.2.45) (2020-01-30)
+
+**Note:** Version bump only for package @brandwatch/axiom-documentation-viewer
+
+
+
+
+
 ## [0.2.44](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-documentation-viewer@0.2.43...@brandwatch/axiom-documentation-viewer@0.2.44) (2020-01-17)
 
 **Note:** Version bump only for package @brandwatch/axiom-documentation-viewer

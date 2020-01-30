@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.25.0...@brandwatch/axiom-materials@1.26.0) (2020-01-30)
+
+
+### Features
+
+* **Icons:** Add new icons ([adb247d](https://github.com/BrandwatchLtd/axiom-react/commit/adb247d))
+
+
+
+
+
 # [1.25.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.23.0...@brandwatch/axiom-materials@1.25.0) (2020-01-14)
 
 
