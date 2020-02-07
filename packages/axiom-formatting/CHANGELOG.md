@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.8](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-formatting@0.0.6...@brandwatch/axiom-formatting@0.0.8) (2020-02-07)
+
+
+### Bug Fixes
+
+* formatDate now has optional timezone param ([97a5d0b](https://github.com/BrandwatchLtd/axiom-react/commit/97a5d0b))
+* updates luxon to fix chrome 80 bug ([0ed3b94](https://github.com/BrandwatchLtd/axiom-react/commit/0ed3b94))
+
+
+
+
+
 ## [0.0.7](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-formatting@0.0.6...@brandwatch/axiom-formatting@0.0.7) (2019-03-29)
 
 **Note:** Version bump only for package @brandwatch/axiom-formatting

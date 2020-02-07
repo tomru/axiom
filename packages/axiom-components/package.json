@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-components",
-  "version": "8.8.0",
+  "version": "8.8.1",
   "description": "Brandwatch Axiom - Components",
   "main": "dist/index.js",
   "sideEffects": [
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@brandwatch/axiom-automation-testing": "^0.0.8",
-    "@brandwatch/axiom-formatting": "^0.0.7",
+    "@brandwatch/axiom-formatting": "^0.0.8",
     "@brandwatch/axiom-materials": "^1.26.0",
     "@brandwatch/axiom-utils": "^0.1.41",
     "classnames": "^2.2.6",
