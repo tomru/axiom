@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-automation-testing",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Brandwatch Axiom - Automation testing",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

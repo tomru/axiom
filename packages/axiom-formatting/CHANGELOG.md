@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-formatting@0.0.8...@brandwatch/axiom-formatting@0.0.9) (2020-02-14)
+
+**Note:** Version bump only for package @brandwatch/axiom-formatting
+
+
+
+
+
 ## [0.0.8](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-formatting@0.0.6...@brandwatch/axiom-formatting@0.0.8) (2020-02-07)
 
 
