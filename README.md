@@ -84,6 +84,19 @@ yarn start
 
 ### Contributing
 
-Please checkout the [CONTRIBUTING.md](./CONTRIBUTING.md) but basically we use the conventional commit format (google it) to handle automatic publishing, check tests and add them where appropriate and check linting.
-
 Styleguide driven development is crucial. Most changes should be visble and replicable through the style guide and, where appropriate, through design review.
+
+##### Commits
+
+Commits use the [https://github.com/conventional-changelog-archived-repos/conventional-changelog-angular/blob/master/convention.mdconventional][commit format from angular]. Optionally you can create commits in the appropriate form by running:
+
+```shell script
+npx git-cz
+```
+
+and then following the CLI instructions to compose the message.
+
+#####
+Please also checkout the [CONTRIBUTING.md]
+
+
