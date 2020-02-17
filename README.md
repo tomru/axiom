@@ -1,9 +1,3 @@
-<b>⚠️ NOTICE:</b> For the time being, you are probably looking for `axiom-react`: https://github.com/Binarytales/axiom-react
-
-If you have forked this repository we recommend updating your remotes or even removing your fork and reforking the `axiom-react` repository.
-
-Bug fixes will need to be replicated across both repositories until we have publishing from this now _private_ repository set up correctly. If you have any problems as a result of this change please seek help in [#axiom-contrib on Slack](https://brandwatch.slack.com/messages/C4D4UEJRH)
-
 <p align="center">
   <a href="https://axiom.brandwatch.com/">
     <img alt="axiom" src="./site/assets/axiom-text.png" height="50" width="177">
@@ -86,6 +80,9 @@ yarn start
 
 Styleguide driven development is crucial. Most changes should be visble and replicable through the style guide and, where appropriate, through design review.
 
+Please feel free to seek help on our [#axiom-clinic channel on Slack](https://brandwatch.slack.com/messages/C4D4UEJRH)
+Please also checkout the [CONTRIBUTING.md](CONTRIBUTING.md)
+
 ##### Commits
 
 Commits use the [https://github.com/conventional-changelog-archived-repos/conventional-changelog-angular/blob/master/convention.mdconventional][commit format from angular]. Optionally you can create commits in the appropriate form by running:
@@ -96,7 +93,5 @@ npx git-cz
 
 and then following the CLI instructions to compose the message.
 
-#####
-Please also checkout the [CONTRIBUTING.md]
 
 
