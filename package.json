@@ -15,7 +15,9 @@
     "publish:site": "bash ./scripts/publish_site.sh",
     "start": "bash ./scripts/start_development.sh",
     "postinstall": "lerna run prepublish && lerna run prepare",
-    "test": "TZ=utc BABEL_ENV=test jest ./packages --config .jest.json"
+    "test": "TZ=utc BABEL_ENV=test jest ./packages --config .jest.json",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "workspaces": [
     "packages/*"
@@ -29,6 +31,7 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/react": "^6.0.0-alpha.14",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^9.0.0",
     "babel-jest": "^23.4.2",
@@ -78,5 +81,6 @@
     "validate-commit": "^3.4.0",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
-  }
+  },
+  "dependencies": {}
 }
