@@ -2,6 +2,13 @@
 
 ## Code
 
+### Storybook
+Axiom comes with [Storybook](https://storybook.js.org/docs/basics/writing-stories/) which provides an environment to test new components and changes in. Storybook can also be used to document components. 
+
+To get started run `yarn storybook`.
+If you want to add a new story create a file with the `.stories.js` extension.
+
+### Commits
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ### Linting & Tests
