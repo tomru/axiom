@@ -16,7 +16,7 @@
     "start": "bash ./scripts/start_development.sh",
     "postinstall": "lerna run prepublish && lerna run prepare",
     "test": "TZ=utc BABEL_ENV=test jest ./packages --config .jest.json",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "bash ./scripts/start_storybook.sh",
     "build-storybook": "build-storybook"
   },
   "workspaces": [
