@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.26.4](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.26.3...@brandwatch/axiom-materials@1.26.4) (2020-03-05)
+
+**Note:** Version bump only for package @brandwatch/axiom-materials
+
+
+
+
+
 ## [1.26.3](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.26.1...@brandwatch/axiom-materials@1.26.3) (2020-02-15)
 
 **Note:** Version bump only for package @brandwatch/axiom-materials

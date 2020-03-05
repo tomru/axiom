@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@8.8.4...@brandwatch/axiom-components@9.0.0) (2020-03-05)
+
+
+### Bug Fixes
+
+* missed adding new icon to icon prop ([1b62940](https://github.com/BrandwatchLtd/axiom-react/commit/1b62940))
+
+
+### Code Refactoring
+
+* 💡 Removes AlertDropdown from axiom-components ([62f7e52](https://github.com/BrandwatchLtd/axiom-react/commit/62f7e52))
+* 💡 Removes CardGraphic from axiom-components ([6b197e1](https://github.com/BrandwatchLtd/axiom-react/commit/6b197e1))
+
+
+### Features
+
+* 🎸 Classnames ([bcb3504](https://github.com/BrandwatchLtd/axiom-react/commit/bcb3504))
+* 🎸 Storybook ([8e75699](https://github.com/BrandwatchLtd/axiom-react/commit/8e75699))
+
+
+### BREAKING CHANGES
+
+* 🧨 CardGraphic is no longer supported
+* 🧨 AlertDropdown is no longer supported
+
+
+
+
+
 ## [8.8.4](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@8.8.2...@brandwatch/axiom-components@8.8.4) (2020-02-15)
 
 **Note:** Version bump only for package @brandwatch/axiom-components
