@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-composites",
-  "version": "0.1.17",
+  "version": "1.0.0-alpha.0",
   "description": "Brandwatch Axiom - Composites",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@brandwatch/axiom-automation-testing": "^0.0.9",
-    "@brandwatch/axiom-components": "^9.0.0",
+    "@brandwatch/axiom-components": "^10.0.0-alpha.0",
     "@brandwatch/axiom-localization": "^0.0.6",
     "@brandwatch/axiom-utils": "^0.1.44",
     "lodash.omit": "^4.5.0",
