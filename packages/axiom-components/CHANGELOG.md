@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@10.0.0-alpha.0...@brandwatch/axiom-components@10.0.0) (2020-04-02)
+
+**Note:** Version bump only for package @brandwatch/axiom-components
+
+
+
+
+
 # [9.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@8.8.4...@brandwatch/axiom-components@9.0.0) (2020-03-05)
 
 
