@@ -60,3 +60,15 @@ export function Default() {
     </React.Fragment>
   );
 }
+
+export function Complete() {
+  return <Progress complete />;
+}
+
+export function Percent() {
+  return <ProgressFinite percent={50} />;
+}
+
+export function Infinite() {
+  return <ProgressInfinite />;
+}
