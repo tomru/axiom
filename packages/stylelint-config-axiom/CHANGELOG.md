@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/stylelint-config-axiom@0.2.3...@brandwatch/stylelint-config-axiom@0.2.4) (2020-04-06)
+
+**Note:** Version bump only for package @brandwatch/stylelint-config-axiom
+
+
+
+
+
 ## [0.2.3](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/stylelint-config-axiom@0.2.2...@brandwatch/stylelint-config-axiom@0.2.3) (2020-02-14)
 
 **Note:** Version bump only for package @brandwatch/stylelint-config-axiom

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@10.0.0...@brandwatch/axiom-components@10.1.0) (2020-04-06)
+
+
+### Features
+
+* **ColorPicker:** add withEmpty prop for clearing selection ([2f548d1](https://github.com/BrandwatchLtd/axiom-react/commit/2f548d1))
+
+
+
+
+
 # [10.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@10.0.0-alpha.0...@brandwatch/axiom-components@10.0.0) (2020-04-02)
 
 **Note:** Version bump only for package @brandwatch/axiom-components

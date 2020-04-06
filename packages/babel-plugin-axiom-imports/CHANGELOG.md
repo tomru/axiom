@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.8](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/babel-plugin-axiom-imports@0.2.7...@brandwatch/babel-plugin-axiom-imports@0.2.8) (2020-04-06)
+
+**Note:** Version bump only for package @brandwatch/babel-plugin-axiom-imports
+
+
+
+
+
 ## [0.2.7](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/babel-plugin-axiom-imports@0.2.6...@brandwatch/babel-plugin-axiom-imports@0.2.7) (2020-04-02)
 
 **Note:** Version bump only for package @brandwatch/babel-plugin-axiom-imports

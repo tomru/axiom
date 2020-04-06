@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/babel-plugin-transform-svg-axiom",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Brandwatch Axiom - Babel plugin to inline SVG files",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
