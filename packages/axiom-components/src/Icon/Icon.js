@@ -119,6 +119,7 @@ export default class Icon extends Component {
       "triangle-right",
       "triangle-up",
       "twitter",
+      "twitter-mono",
       "unlock",
       "user",
       "warning",
