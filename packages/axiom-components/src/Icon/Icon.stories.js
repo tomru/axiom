@@ -89,3 +89,12 @@ export function SocialMono() {
     </Grid>
   );
 }
+
+SocialMono.story = {
+  parameters: {
+    docs: {
+      storyDescription:
+        "Mono Icons will fill with the color of their parent. This can be useful when the color needs to change to provide contrast.",
+    },
+  },
+};

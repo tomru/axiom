@@ -107,3 +107,19 @@ export function Joined() {
     </ButtonGroup>
   );
 }
+
+export function IconInButton() {
+  return (
+    <Button>
+      <ButtonIcon name="twitter-mono" /> Authenticate
+    </Button>
+  );
+}
+IconInButton.story = {
+  parameters: {
+    docs: {
+      storyDescription:
+        "Mono Icons will fill with the color of their parent. This can be useful when the color needs to change to provide contrast to a parent like in this Button.",
+    },
+  },
+};
