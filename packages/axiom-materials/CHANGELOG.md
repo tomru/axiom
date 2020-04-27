@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.27.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.26.6...@brandwatch/axiom-materials@1.27.0) (2020-04-27)
+
+
+### Features
+
+* **Icons:** Add extra social icons ([4cccbdc](https://github.com/BrandwatchLtd/axiom-react/commit/4cccbdc))
+
+
+
+
+
 ## [1.26.6](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.26.5...@brandwatch/axiom-materials@1.26.6) (2020-04-06)
 
 **Note:** Version bump only for package @brandwatch/axiom-materials

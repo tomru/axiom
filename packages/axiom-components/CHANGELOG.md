@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.2.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@10.1.0...@brandwatch/axiom-components@10.2.0) (2020-04-27)
+
+
+### Bug Fixes
+
+* **Slider:** Fix vertical alignment for the thumb in small slider ([7c13a5f](https://github.com/BrandwatchLtd/axiom-react/commit/7c13a5f))
+
+
+### Features
+
+* **Icons:** Add extra social icons ([4cccbdc](https://github.com/BrandwatchLtd/axiom-react/commit/4cccbdc))
+
+
+
+
+
 # [10.1.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@10.0.0...@brandwatch/axiom-components@10.1.0) (2020-04-06)
 
 
