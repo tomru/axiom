@@ -29,6 +29,8 @@ export function Style() {
   );
 }
 
+Style.story = { args: { label: "Hello Button" } };
+
 export function Size() {
   return (
     <ButtonGroup>

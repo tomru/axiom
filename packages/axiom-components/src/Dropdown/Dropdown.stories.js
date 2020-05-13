@@ -33,7 +33,8 @@ export default {
   decorators: [withKnobs],
 };
 
-export function MenuDropdown() {
+export function MenuDropdown(props) {
+  console.log("props", props);
   return (
     <Dropdown showArrow>
       <DropdownTarget>
@@ -54,6 +55,8 @@ export function MenuDropdown() {
     </Dropdown>
   );
 }
+
+MenuDropdown.story = { args: { label: "Hello Button" } };
 
 export function CustomDropdown() {
   return (
@@ -86,11 +89,11 @@ const items = Array.from({ length: 5 }, (_, index) => ({
   value: `${index}`,
 }));
 
-export function DropdownWithState() {
+export function DropdownWithState(props) {
   const [selectedValue, setSelectedValue] = useState("");
 
   return (
-    <Dropdown>
+    <Dropdown {...props}>
       <DropdownTarget>
         <TextInput
           isTarget
