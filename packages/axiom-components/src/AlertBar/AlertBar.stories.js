@@ -6,8 +6,14 @@ export default {
   component: AlertBar,
 };
 
+export function Example(props) {
+  return <AlertBar {...props} />;
+}
+
+Example.story = { args: { children: "Alert Bar" } };
+
 export function Info() {
-  return <AlertBar>Info AlertBar</AlertBar>;
+  return <AlertBar type="info">Success AlertBar</AlertBar>;
 }
 
 export function Success() {

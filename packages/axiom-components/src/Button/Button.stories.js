@@ -10,7 +10,13 @@ export default {
   subcomponents: { ButtonGroup, ButtonIcon, ProgressButton },
 };
 
-export function Style() {
+export function Example(props) {
+  return <Button {...props} />;
+}
+
+Example.story = { args: { children: "Button" } };
+
+export function Variant() {
   return (
     <ButtonGroup space="x2">
       <Button size="small" variant="primary">
