@@ -31,7 +31,6 @@ export const globalArgTypes = {
 
 addParameters({
   options: {
-    initialActive: "addons",
     theme: axiomTheme,
     storySort: {
       method: "alphabetical",
