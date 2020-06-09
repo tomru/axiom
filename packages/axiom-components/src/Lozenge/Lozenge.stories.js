@@ -9,13 +9,15 @@ export default {
   component: Lozenge,
 };
 
-export function Default(props) {
-  return <Lozenge {...props}>Default Lozenge</Lozenge>;
+export function Default({ children, size, color, status }) {
+  return (
+    <Lozenge size={size} color={color} status={status}>
+      {children}
+    </Lozenge>
+  );
 }
 
-Default.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
-};
+Default.story = { args: { children: "Lozenge" } };
 
 export function StatusLozenges() {
   return (
