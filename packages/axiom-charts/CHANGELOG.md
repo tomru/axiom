@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.7](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-charts@6.0.6...@brandwatch/axiom-charts@6.0.7) (2020-06-16)
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+
+
+
+
 ## [6.0.6](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-charts@6.0.4...@brandwatch/axiom-charts@6.0.6) (2020-06-08)
 
 **Note:** Version bump only for package @brandwatch/axiom-charts
