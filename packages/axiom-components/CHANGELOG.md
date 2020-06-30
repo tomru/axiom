@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.2.2](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.2.1...@brandwatch/axiom-components@11.2.2) (2020-06-30)
+
+
+### Bug Fixes
+
+* **CheckBox:** Account for element border-box in svg sizing ([b894b46](https://github.com/BrandwatchLtd/axiom-react/commit/b894b4615d52984ca0cc5b1bcf80bea39a3055a1))
+* **CheckBox:** Update snaphots ([aafdda0](https://github.com/BrandwatchLtd/axiom-react/commit/aafdda04306d44184122e011623110c83bea62c1))
+* card story typo ([cb753d8](https://github.com/BrandwatchLtd/axiom-react/commit/cb753d865d1a430da57f43b87a901e9b200eff94))
+
+
+
+
+
 ## [11.2.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.2.0...@brandwatch/axiom-components@11.2.1) (2020-06-16)
 
 **Note:** Version bump only for package @brandwatch/axiom-components
