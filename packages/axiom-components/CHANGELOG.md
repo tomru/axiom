@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.3.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.2.2...@brandwatch/axiom-components@11.3.0) (2020-07-22)
+
+
+### Bug Fixes
+
+* **EllipsisTooltip:** support y overflow ([ca06c6b](https://github.com/BrandwatchLtd/axiom-react/commit/ca06c6b279bd3a6c3510c7ec3a752d347ac89a5d))
+* **TableHeaderLabel:** Prevent shrink of sort indicator on header wrap ([6c11008](https://github.com/BrandwatchLtd/axiom-react/commit/6c110085b4436ec748b4cd708da65869b2752ed9))
+
+
+### Features
+
+* **TableHeaderLabel:** Allow wrapping table header labels ([3cedf7c](https://github.com/BrandwatchLtd/axiom-react/commit/3cedf7c4db372c51be76fad01503b40193efadf1))
+* 🎸 Checkbox & Radio Buttons, make lable text selectable ([0977224](https://github.com/BrandwatchLtd/axiom-react/commit/0977224715d26e4369685c6fb8dce978f1d73e75))
+
+
+
+
+
 ## [11.2.2](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.2.1...@brandwatch/axiom-components@11.2.2) (2020-06-30)
 
 
