@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.3.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.3.0...@brandwatch/axiom-components@11.3.1) (2020-07-27)
+
+
+### Bug Fixes
+
+* keep original values if transformed values or step not finite ([8dc4f91](https://github.com/BrandwatchLtd/axiom-react/commit/8dc4f9115e6e6de373437d2e6b8058c8011f533d))
+
+
+
+
+
 # [11.3.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.2.2...@brandwatch/axiom-components@11.3.0) (2020-07-22)
 
 
