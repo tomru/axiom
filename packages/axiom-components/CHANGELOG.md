@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.3.2](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.3.1...@brandwatch/axiom-components@11.3.2) (2020-07-29)
+
+
+### Bug Fixes
+
+* 🐛 Checkbox indeterminate style ([6e00d76](https://github.com/BrandwatchLtd/axiom-react/commit/6e00d7681522cb5a19c7668202ae00c3786dbc32))
+* 🐛 When checkbox is disabled show correct checked state ([014f59c](https://github.com/BrandwatchLtd/axiom-react/commit/014f59c8f78ed9f01ff2406fced1a0496c1fb0ef))
+
+
+
+
+
 ## [11.3.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.3.0...@brandwatch/axiom-components@11.3.1) (2020-07-27)
 
 
