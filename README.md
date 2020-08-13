@@ -77,6 +77,7 @@ yarn start
 
 ### Contributing
 
+Note: Please don't use a fork as PR preview builds won't work.
 Styleguide driven development is crucial. Most changes should be visble and replicable through the style guide and, where appropriate, through design review.
 
 Please feel free to seek help on our [#axiom-clinic channel on Slack](https://brandwatch.slack.com/messages/C4D4UEJRH)
