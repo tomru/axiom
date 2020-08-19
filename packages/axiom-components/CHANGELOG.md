@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.5.0...@brandwatch/axiom-components@12.0.0) (2020-08-19)
+
+
+### Bug Fixes
+
+* **EditableLine:** Call onChange on every change ([ff41897](https://github.com/BrandwatchLtd/axiom-react/commit/ff418971a788461d35394fa35172c842a8888706))
+
+
+### Features
+
+* 🎸 Adds Tiny size AlertIcon ([2087707](https://github.com/BrandwatchLtd/axiom-react/commit/208770711a8abfbfa4771fd5ac24455a4d3cac97))
+
+
+### BREAKING CHANGES
+
+* **EditableLine:** onChange of the EditableLine component is called on every change to the input now and receives the original event as an argument.
+
+
+
+
+
 # [11.5.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.4.0...@brandwatch/axiom-components@11.5.0) (2020-08-18)
 
 

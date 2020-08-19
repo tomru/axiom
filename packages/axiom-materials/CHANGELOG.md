@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.30.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.29.0...@brandwatch/axiom-materials@1.30.0) (2020-08-19)
+
+
+### Features
+
+* 🎸 Adds Tiny size AlertIcon ([2087707](https://github.com/BrandwatchLtd/axiom-react/commit/208770711a8abfbfa4771fd5ac24455a4d3cac97))
+* 🎸 Provide a js export for typography values ([925ae17](https://github.com/BrandwatchLtd/axiom-react/commit/925ae17af4d9efe8def26ad878a26431f291627e)), closes [#944](https://github.com/BrandwatchLtd/axiom-react/issues/944)
+
+
+
+
+
 # [1.29.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.28.0...@brandwatch/axiom-materials@1.29.0) (2020-08-18)
 
 
