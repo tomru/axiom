@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.1.0...@brandwatch/axiom-components@12.1.1) (2020-08-28)
+
+
+### Bug Fixes
+
+* editable text sets value on input, adds minimum width for hit area ([63377e0](https://github.com/BrandwatchLtd/axiom-react/commit/63377e06f06d023c38908afa8de9cbfdc83e2735))
+
+
+
+
+
 # [12.1.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.0.0...@brandwatch/axiom-components@12.1.0) (2020-08-28)
 
 
