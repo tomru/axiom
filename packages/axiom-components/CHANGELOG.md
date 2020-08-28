@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.1.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.0.0...@brandwatch/axiom-components@12.1.0) (2020-08-28)
+
+
+### Features
+
+* **Icons:** Add arrow left and right ([7bc0341](https://github.com/BrandwatchLtd/axiom-react/commit/7bc0341bb06805bdb08bf3d1e2437840c2a9ae9f))
+
+
+
+
+
 # [12.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.5.0...@brandwatch/axiom-components@12.0.0) (2020-08-19)
 
 
