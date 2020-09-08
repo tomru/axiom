@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.2](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.1.1...@brandwatch/axiom-components@12.1.2) (2020-09-08)
+
+
+### Bug Fixes
+
+* adds required fields to TextInputIconWrapper ([d7535b8](https://github.com/BrandwatchLtd/axiom-react/commit/d7535b84dd04a8ceb635c5ec834c64f63dae2c50))
+* removes redundant prop from DurationPicker ([a740e95](https://github.com/BrandwatchLtd/axiom-react/commit/a740e95326d1d25db3ddb9ee25bf9418b817bd75))
+
+
+
+
+
 ## [12.1.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.1.0...@brandwatch/axiom-components@12.1.1) (2020-08-28)
 
 
