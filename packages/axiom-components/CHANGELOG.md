@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.4](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.1.2...@brandwatch/axiom-components@12.1.4) (2020-09-15)
+
+
+### Bug Fixes
+
+* **TextInput:** Use error colors for invalid states, even if focused ([9819a25](https://github.com/BrandwatchLtd/axiom-react/commit/9819a25779c1e3bb05eea35bc8455fbf05b6b5c4))
+
+
+
+
+
 ## [12.1.3](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.1.2...@brandwatch/axiom-components@12.1.3) (2020-09-15)
 
 
