@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.5](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.1.4...@brandwatch/axiom-components@12.1.5) (2020-09-15)
+
+
+### Bug Fixes
+
+* 🐛 Ensure onRequestClose is passed to dialog header ([00d003b](https://github.com/BrandwatchLtd/axiom-react/commit/00d003bfed6a505973f15dc9795c485936d7340b))
+
+
+
+
+
 ## [12.1.4](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.1.2...@brandwatch/axiom-components@12.1.4) (2020-09-15)
 
 
