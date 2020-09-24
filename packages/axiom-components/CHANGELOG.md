@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.2.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.1.5...@brandwatch/axiom-components@12.2.0) (2020-09-24)
+
+
+### Features
+
+* 🎸 Animated Logo ([e4afa2b](https://github.com/BrandwatchLtd/axiom-react/commit/e4afa2b6ddba57705706ef95e9a0da863d0a4462))
+
+
+
+
+
 ## [12.1.5](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.1.4...@brandwatch/axiom-components@12.1.5) (2020-09-15)
 
 
