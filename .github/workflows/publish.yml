@@ -1,25 +1,21 @@
-name: Publish to NPM
+name: Publish to Npm
 on: workflow_dispatch
 jobs:
   publish-to-npm:
     runs-on: ubuntu-latest
     steps:
-
     - name: Fetch repo code
     - uses: actions/checkout@v2
       with:
         fetch-depth: "0"
-
     - name: Test and Build
     - run: yarn install --frozen-lockfile
     - run: yarn test
     - run: yarn build:packages
-
     - name: Configure git credentials
       uses: OleksiyRudenko/gha-git-credentials@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-
     - name: Publish New Version and Release
     - run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > ~/.npmrc
     - run: npx lerna updated -l
