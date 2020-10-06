@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.2.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.2.0...@brandwatch/axiom-components@12.2.1) (2020-10-06)
+
+
+### Bug Fixes
+
+* 🐛 Remove legacy context API from TextInput/Button ([e1def80](https://github.com/BrandwatchLtd/axiom-react/commit/e1def80c80524ab93913f8792375fc14c6f8284d))
+
+
+
+
+
 # [12.2.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.1.5...@brandwatch/axiom-components@12.2.0) (2020-09-24)
 
 
