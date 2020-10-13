@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.3.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.2.1...@brandwatch/axiom-components@12.3.0) (2020-10-13)
+
+
+### Features
+
+* 🎸 Pass Popper Modifiers to Position ([54664e3](https://github.com/BrandwatchLtd/axiom-react/commit/54664e3a28a9488fb952a551bf4d319f80e058fc))
+
+
+
+
+
 ## [12.2.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.2.0...@brandwatch/axiom-components@12.2.1) (2020-10-06)
 
 
