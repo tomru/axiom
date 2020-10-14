@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.3.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.3.0...@brandwatch/axiom-components@12.3.1) (2020-10-14)
+
+
+### Bug Fixes
+
+* Increase specificity for table header wrapping ([586c1fb](https://github.com/BrandwatchLtd/axiom-react/commit/586c1fb190db9fd5625adeba348903678a325ea7))
+
+
+
+
+
 # [12.3.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.2.1...@brandwatch/axiom-components@12.3.0) (2020-10-13)
 
 
