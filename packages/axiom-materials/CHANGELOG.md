@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.32.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.31.0...@brandwatch/axiom-materials@1.32.0) (2020-11-16)
+
+
+### Features
+
+* adding vk social icon ([9b0819c](https://github.com/BrandwatchLtd/axiom-react/commit/9b0819c93cce48488d4b2e0f251c824d895d33ef))
+
+
+
+
+
 # [1.31.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.30.0...@brandwatch/axiom-materials@1.31.0) (2020-08-28)
 
 
