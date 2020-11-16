@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.3.2](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.3.1...@brandwatch/axiom-components@12.3.2) (2020-11-16)
+
+
+### Bug Fixes
+
+* 🐛 Update unselected tab text color to be subtle ([c4034f8](https://github.com/BrandwatchLtd/axiom-react/commit/c4034f804bebad86f7c18a2c314dfae4f7e9d186))
+
+
+
+
+
 ## [12.3.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.3.0...@brandwatch/axiom-components@12.3.1) (2020-10-14)
 
 
