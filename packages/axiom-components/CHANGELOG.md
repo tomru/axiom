@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.5.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.5.0...@brandwatch/axiom-components@12.5.1) (2020-11-17)
+
+
+### Bug Fixes
+
+* **axiom-components:** animated logo data bg colour ([c23c82e](https://github.com/BrandwatchLtd/axiom-react/commit/c23c82ee90f36ca2fe0dbeff00eb9ab02f6e8966))
+
+
+
+
+
 # [12.5.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.4.0...@brandwatch/axiom-components@12.5.0) (2020-11-17)
 
 
