@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.5.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.4.0...@brandwatch/axiom-components@12.5.0) (2020-11-17)
+
+
+### Features
+
+* **axiom-components:** add data logo to animated logo component ([96bc993](https://github.com/BrandwatchLtd/axiom-react/commit/96bc993191cd62aa95e8479626676dc9108da73f))
+
+
+
+
+
 # [12.4.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.3.2...@brandwatch/axiom-components@12.4.0) (2020-11-16)
 
 
