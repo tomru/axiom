@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.6.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.5.2...@brandwatch/axiom-components@12.6.0) (2020-11-19)
+
+
+### Bug Fixes
+
+* linting error ([4db8d60](https://github.com/BrandwatchLtd/axiom-react/commit/4db8d608c09af248770749a83894f0591d18d99c))
+
+
+### Features
+
+* **Icon:** Add feedback icon ([4c2f5cb](https://github.com/BrandwatchLtd/axiom-react/commit/4c2f5cb01d08ece5fad33d5bf449c2e68970e60d))
+
+
+
+
+
 ## [12.5.2](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.5.1...@brandwatch/axiom-components@12.5.2) (2020-11-17)
 
 
