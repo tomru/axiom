@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.7.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.6.0...@brandwatch/axiom-components@12.7.0) (2020-11-20)
+
+
+### Features
+
+* 🎸 Add color prop to Icon ([5973bcf](https://github.com/BrandwatchLtd/axiom-react/commit/5973bcf27b4989ae30d979f214d1615d9ba7bfe7))
+
+
+
+
+
 # [12.6.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.5.2...@brandwatch/axiom-components@12.6.0) (2020-11-19)
 
 
