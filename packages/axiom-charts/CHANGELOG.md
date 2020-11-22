@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-charts@6.0.32...@brandwatch/axiom-charts@7.0.0) (2020-11-22)
+
+
+### chore
+
+* 🤖 set React as a peer dependency ([79b1033](https://github.com/BrandwatchLtd/axiom-react/commit/79b10331fe5cdf492a081830f3538db3dec96c8c))
+
+
+### BREAKING CHANGES
+
+* 🧨 React must now be decleared as a separate dependency.
+
+
+
+
+
 ## [6.0.32](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-charts@6.0.31...@brandwatch/axiom-charts@6.0.32) (2020-11-20)
 
 **Note:** Version bump only for package @brandwatch/axiom-charts
