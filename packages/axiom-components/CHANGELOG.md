@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.0.0...@brandwatch/axiom-components@13.0.1) (2020-11-22)
+
+
+### Bug Fixes
+
+* 🐛 Dialog -pass onOverlayClick to Model ([baad36b](https://github.com/BrandwatchLtd/axiom-react/commit/baad36bdff5bac2f6464f5991b7af27e7e982502))
+
+
+
+
+
 # [13.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.7.0...@brandwatch/axiom-components@13.0.0) (2020-11-22)
 
 
