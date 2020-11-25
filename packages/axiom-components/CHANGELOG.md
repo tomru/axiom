@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.1.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.0.1...@brandwatch/axiom-components@13.1.0) (2020-11-25)
+
+
+### Bug Fixes
+
+* 🐛 add accessibility role to modal ([6594300](https://github.com/BrandwatchLtd/axiom-react/commit/65943008e97a98f67ce46b3d500e2732ed52ba1b))
+
+
+### Features
+
+* **Chips:** addressing comments ([768f30e](https://github.com/BrandwatchLtd/axiom-react/commit/768f30e3065e1e9853a8cf025474d51618159526))
+* **Chips:** updating design ([1ee6f66](https://github.com/BrandwatchLtd/axiom-react/commit/1ee6f660a9e0a68bbea8cc33d05f373c70e25345))
+
+
+
+
+
 ## [13.0.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.0.0...@brandwatch/axiom-components@13.0.1) (2020-11-22)
 
 

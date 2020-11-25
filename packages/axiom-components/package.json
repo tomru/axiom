@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-components",
-  "version": "13.0.1",
+  "version": "13.1.0",
   "description": "Brandwatch Axiom - Components",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -16,7 +16,7 @@
     "@brandwatch/axiom-automation-testing": "^0.0.11",
     "@brandwatch/axiom-formatting": "^0.0.11",
     "@brandwatch/axiom-materials": "^1.33.1",
-    "@brandwatch/axiom-utils": "^1.0.0",
+    "@brandwatch/axiom-utils": "^1.0.1",
     "@popperjs/core": "^2.1.1",
     "classnames": "^2.2.6",
     "element-closest": "^2.0.2",
