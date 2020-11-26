@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.2.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.1.0...@brandwatch/axiom-components@13.2.0) (2020-11-26)
+
+
+### Features
+
+* 🎸 Add aria-checked property to checkboxes ([ca35545](https://github.com/BrandwatchLtd/axiom-react/commit/ca355458315e29d5fc702d7c7e6e639a13df7f64))
+
+
+
+
+
 # [13.1.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.0.1...@brandwatch/axiom-components@13.1.0) (2020-11-25)
 
 
