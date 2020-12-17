@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.2.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.2.0...@brandwatch/axiom-components@13.2.1) (2020-12-17)
+
+
+### Bug Fixes
+
+* 🐛 Only captalise the first letter of the first word ([b23a6dd](https://github.com/BrandwatchLtd/axiom-react/commit/b23a6ddd680c2996346d665289039d0d1d5d1a36))
+
+
+
+
+
 # [13.2.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.1.0...@brandwatch/axiom-components@13.2.0) (2020-11-26)
 
 
