@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.3.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.2.1...@brandwatch/axiom-components@13.3.0) (2021-01-05)
+
+
+### Features
+
+* add topics wheel svg pictogram ([408994e](https://github.com/BrandwatchLtd/axiom-react/commit/408994e2648b5afea75b5ba50fdf85f2ea0d4808))
+
+
+
+
+
 ## [13.2.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.2.0...@brandwatch/axiom-components@13.2.1) (2020-12-17)
 
 
