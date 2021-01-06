@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.3.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.3.0...@brandwatch/axiom-components@13.3.1) (2021-01-06)
+
+
+### Bug Fixes
+
+* fill colour on topics-wheel pictogram svg ([8bc009b](https://github.com/BrandwatchLtd/axiom-react/commit/8bc009bc93dcf5ac527ac1b1a507085b26e12d3a))
+
+
+
+
+
 # [13.3.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.2.1...@brandwatch/axiom-components@13.3.0) (2021-01-05)
 
 
