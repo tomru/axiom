@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.4.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.3.1...@brandwatch/axiom-components@13.4.0) (2021-01-07)
+
+
+### Features
+
+* add copy icon to axiom-materials/components ([179fa73](https://github.com/BrandwatchLtd/axiom-react/commit/179fa737a27d48c93feb344931001a101cf17357))
+
+
+
+
+
 ## [13.3.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.3.0...@brandwatch/axiom-components@13.3.1) (2021-01-06)
 
 
