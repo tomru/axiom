@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.4.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.4.0...@brandwatch/axiom-components@13.4.1) (2021-02-09)
+
+
+### Performance Improvements
+
+* **Icon:** Optimizes our icon svgs ([2588d62](https://github.com/BrandwatchLtd/axiom-react/commit/2588d624ee9067d9bafce157e75072f4aa120c44))
+
+
+
+
+
 # [13.4.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.3.1...@brandwatch/axiom-components@13.4.0) (2021-01-07)
 
 

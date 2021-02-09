@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.8](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-charts@7.0.7...@brandwatch/axiom-charts@7.0.8) (2021-02-09)
+
+
+### Performance Improvements
+
+* **Icon:** Optimizes our icon svgs ([2588d62](https://github.com/BrandwatchLtd/axiom-react/commit/2588d624ee9067d9bafce157e75072f4aa120c44))
+
+
+
+
+
 ## [7.0.7](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-charts@7.0.6...@brandwatch/axiom-charts@7.0.7) (2021-01-07)
 
 **Note:** Version bump only for package @brandwatch/axiom-charts
