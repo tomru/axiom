@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.5.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.4.1...@brandwatch/axiom-components@13.5.0) (2021-02-16)
+
+
+### Features
+
+* **Pictogram:** Adds social-panels svg ([2ba94b3](https://github.com/BrandwatchLtd/axiom-react/commit/2ba94b3b93962cc7044f35ca8454382fbab090d1))
+* **UsageHint:** Enables changing padding and adds new icon ([5a64ee4](https://github.com/BrandwatchLtd/axiom-react/commit/5a64ee4089d00800f26c50455f9fe9c20f504bef))
+
+
+### Performance Improvements
+
+* **Pictogram:** Optimises pictogram svgs ([8b67918](https://github.com/BrandwatchLtd/axiom-react/commit/8b67918876efbb3e65da3f05c5851f9ae6ef1132))
+
+
+
+
+
 ## [13.4.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.4.0...@brandwatch/axiom-components@13.4.1) (2021-02-09)
 
 
