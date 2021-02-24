@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.6.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.5.0...@brandwatch/axiom-components@13.6.0) (2021-02-24)
+
+
+### Features
+
+* default duration picker selected unit to days if valid ([af5ce9d](https://github.com/BrandwatchLtd/axiom-react/commit/af5ce9d2444448f3902dc5402e08c136588f24d0))
+* **chip:** Allow setting className on a Chip component ([e75992a](https://github.com/BrandwatchLtd/axiom-react/commit/e75992a73a3de6346a38eaeaab8d9de962af9d94))
+
+
+
+
+
 # [13.5.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.4.1...@brandwatch/axiom-components@13.5.0) (2021-02-16)
 
 
