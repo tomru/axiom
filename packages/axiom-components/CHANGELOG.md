@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.6.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.6.0...@brandwatch/axiom-components@13.6.1) (2021-02-25)
+
+
+### Bug Fixes
+
+* default selected duration unit when empty selected value ([8a92305](https://github.com/BrandwatchLtd/axiom-react/commit/8a92305865d07fd1f5322bd81105add9706332ce))
+
+
+
+
+
 # [13.6.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.5.0...@brandwatch/axiom-components@13.6.0) (2021-02-24)
 
 
