@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.7.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.6.1...@brandwatch/axiom-components@13.7.0) (2021-03-25)
+
+
+### Bug Fixes
+
+* 🐛 Update css and class names to handle disabled table headers ([70caf38](https://github.com/BrandwatchLtd/axiom-react/commit/70caf382b5fa0fa6ed87cb2c218a6d773698aa10))
+* 🐛 Update snapshots ([ab3d978](https://github.com/BrandwatchLtd/axiom-react/commit/ab3d9784815522ee9a2d9cf5c7a1e75ec7ee8bb2))
+
+
+### Features
+
+* **axiom-components:** add tiny option for progress components ([725a927](https://github.com/BrandwatchLtd/axiom-react/commit/725a927edabe021ce309c66b47d8ee762c468c87))
+
+
+
+
+
 ## [13.6.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.6.0...@brandwatch/axiom-components@13.6.1) (2021-02-25)
 
 
